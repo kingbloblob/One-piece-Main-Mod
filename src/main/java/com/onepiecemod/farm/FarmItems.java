@@ -181,6 +181,10 @@ public final class FarmItems {
 		public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> lines, TooltipFlag flag) {
 			super.appendHoverText(stack, context, display, lines, flag);
 			lines.accept(Component.literal("Grows best on " + crop.homeName).withStyle(ChatFormatting.GREEN));
+			com.onepiecemod.season.Season loves = com.onepiecemod.season.Seasons.favourite(crop.id);
+			if (loves != null) {
+				lines.accept(Component.literal("Loves " + loves.title.toLowerCase() + ": grows 50% faster then").withStyle(loves.color));
+			}
 			lines.accept(Component.literal("Slow anywhere else. Bank it in a Seed Vault.").withStyle(ChatFormatting.DARK_GRAY));
 		}
 	}

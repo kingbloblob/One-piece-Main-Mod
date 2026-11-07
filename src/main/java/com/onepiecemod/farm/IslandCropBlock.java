@@ -57,8 +57,17 @@ public class IslandCropBlock extends CropBlock {
 	protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
 		// Four stages instead of wheat's eight, so skip half the ticks at home and five in six abroad.
 		int chance = crop.isHome(level, pos) ? 2 : 6;
-		if (random.nextInt(chance) == 0) {
-			super.randomTick(state, level, pos, random);
+		if (random.nextInt(chance) != 0) {
+			return;
+		}
+		// Seasons: slow outdoors in winter, quick in spring and in the crop's favourite season (see season.Seasons).
+		int ticks = com.onepiecemod.season.Seasons.growthTicks(level, pos, crop.id, random);
+		for (int i = 0; i < ticks; i++) {
+			BlockState now = i == 0 ? state : level.getBlockState(pos);
+			if (now.getBlock() != this) {
+				return;
+			}
+			super.randomTick(now, level, pos, random);
 		}
 	}
 

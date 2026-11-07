@@ -7,6 +7,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
@@ -14,6 +15,7 @@ import net.minecraft.server.level.ParticleStatus;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.Vec3;
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -51,6 +53,9 @@ public class WeatherVisuals {
 			long time = level.getGameTime();
 			Vec3 eye = client.player.position();
 			for (SeaEvent event : SeaEventSync.CLIENT_EVENTS) {
+				event.advance(time); // The Great Cyclone drifts: move this game's copy along with the server's.
+			}
+			for (SeaEvent event : SeaEventSync.CLIENT_EVENTS) {
 				if (event.distance(eye.x, eye.z) > VIEW_DISTANCE + event.radius) {
 					continue;
 				}
@@ -62,6 +67,8 @@ public class WeatherVisuals {
 					wave(level, event, time, 7);
 				} else if (event.type == SeaEventType.WATERSPOUT) {
 					waterspout(level, event, time);
+				} else if (event.type == SeaEventType.CYCLONE) {
+					cyclone(level, event, time, eye);
 				}
 			}
 			if (SeaEventSync.CLIENT_EVENTS.isEmpty()) {
@@ -188,6 +195,135 @@ public class WeatherVisuals {
 		for (int i = 0; i < 4; i++) {
 			spawn(level, ParticleTypes.FALLING_WATER, base.x + (random.nextDouble() - 0.5) * 16, sea + 20 + random.nextDouble() * 8,
 					base.z + (random.nextDouble() - 0.5) * 16, 0, 0, 0);
+		}
+	}
+
+	// ---- Great Cyclone: a giant tornado. A twisting funnel from the sea up into a spinning black cloud ceiling,
+	// a skirt of spray and wreckage at its foot, and rain bands whipping around it. ----
+
+	private static final double FUNNEL_HEIGHT = 80;
+	private static final ParticleOptions[] FUNNEL = {
+			new DustParticleOptions(0x1E2126, 4.0f), new DustParticleOptions(0x2E333A, 4.0f),
+			new DustParticleOptions(0x434A52, 4.0f), new DustParticleOptions(0x5C636B, 3.5f)};
+	private static final ParticleOptions[] FUNNEL_FOOT = {
+			new DustParticleOptions(0x6E7378, 4.0f), new DustParticleOptions(0x8A9096, 4.0f), new DustParticleOptions(0x9FB4C2, 3.5f)};
+	private static final ParticleOptions[] CEILING = {
+			new DustParticleOptions(0x16191D, 4.0f), new DustParticleOptions(0x22262B, 4.0f), new DustParticleOptions(0x30353C, 4.0f)};
+	private static final ParticleOptions[] DEBRIS = {
+			new BlockParticleOption(ParticleTypes.BLOCK, Blocks.OAK_PLANKS.defaultBlockState()),
+			new BlockParticleOption(ParticleTypes.BLOCK, Blocks.SPRUCE_PLANKS.defaultBlockState()),
+			new BlockParticleOption(ParticleTypes.BLOCK, Blocks.KELP_PLANT.defaultBlockState()),
+			new BlockParticleOption(ParticleTypes.BLOCK, Blocks.WATER.defaultBlockState())};
+
+	private static void cyclone(ClientLevel level, SeaEvent event, long time, Vec3 eye) {
+		RandomSource random = level.getRandom();
+		double sea = level.getSeaLevel();
+		boolean active = event.isActive(time);
+		double top = sea + FUNNEL_HEIGHT;
+		double turn = time * 0.09;
+
+		// The cloud ceiling: a huge dark disk that turns slowly, with spiral bands. During the warning it gathers first.
+		// Minecraft draws at most about 16,000 particles at once, so they go where they show: a ceiling 70 blocks
+		// around the funnel (the rain darkens the rest), and the funnel itself.
+		int ceiling = 0; // the cloud ceiling is drawn by CycloneRenderer now
+		double ceilingRadius = active ? 70 : 45;
+		for (int i = 0; i < ceiling; i++) {
+			double r = Math.sqrt(random.nextDouble()) * ceilingRadius;
+			// Two spiral arms: particles crowd along them, so the disk looks like it's swirling.
+			double arm = random.nextBoolean() ? 0 : Math.PI;
+			double angle = arm + r * 0.045 - time * 0.012 + (random.nextDouble() - 0.5) * 1.4;
+			double h = top - 4 + random.nextDouble() * 10 - r * 0.04;
+			spawnLong(level, CEILING[random.nextInt(CEILING.length)], event.x + Math.cos(angle) * r, h, event.z + Math.sin(angle) * r,
+					-Math.sin(angle) * 0.08, 0, Math.cos(angle) * 0.08, 40);
+		}
+
+		// The funnel: thin at the sea, wide at the clouds, swaying and leaning with the storm's drift.
+		// During the warning only the top shows, reaching down out of the clouds.
+		double bottom = active ? sea : sea + FUNNEL_HEIGHT * 0.55;
+		int funnel = active ? 350 : 120;
+		Vec3 drift = event.direction();
+		for (int i = 0; i < funnel; i++) {
+			double up = random.nextDouble();
+			double h = bottom + up * (top - bottom);
+			double u = (h - sea) / FUNNEL_HEIGHT;
+			// More particles where the funnel is wider, so it looks equally solid all the way up.
+			if (random.nextDouble() > 0.12 + 0.88 * Math.pow(u, 2.4)) {
+				continue;
+			}
+			double radius = 3 + 24 * Math.pow(u, 2.4) + (random.nextDouble() - 0.5) * (1.5 + u * 3);
+			double angle = random.nextDouble() * Mth.TWO_PI;
+			Vec3 c = funnelCenter(event, time, u, drift);
+			double x = c.x + Math.cos(angle) * radius;
+			double z = c.z + Math.sin(angle) * radius;
+			// Fast spin at the bottom, slower at the top, and everything rising.
+			double speed = 0.9 - u * 0.5;
+			ParticleOptions dust = u < 0.12 ? FUNNEL_FOOT[random.nextInt(FUNNEL_FOOT.length)] : FUNNEL[Math.min(3, (int) (u * 3 + random.nextInt(2)))];
+			spawnLong(level, dust, x, h, z, -Math.sin(angle) * speed, 0.12 + (1 - u) * 0.1, Math.cos(angle) * speed, 14);
+		}
+		if (!active) {
+			return;
+		}
+
+		// The foot: a churning skirt of spray and wreckage thrown around and up into the funnel.
+		Vec3 foot = funnelCenter(event, time, 0, drift);
+		for (int i = 0; i < 70; i++) {
+			double angle = random.nextDouble() * Mth.TWO_PI;
+			double r = 4 + random.nextDouble() * 12;
+			double vx = -Math.sin(angle) * 0.8 - Math.cos(angle) * 0.15;
+			double vz = Math.cos(angle) * 0.8 - Math.sin(angle) * 0.15;
+			ParticleOptions what = random.nextFloat() < 0.4f ? FOAM : random.nextFloat() < 0.5f ? ParticleTypes.CLOUD : ParticleTypes.SPLASH;
+			spawn(level, what, foot.x + Math.cos(angle) * r, sea + 0.3 + random.nextDouble() * 6, foot.z + Math.sin(angle) * r, vx, 0.25, vz);
+		}
+		for (int i = 0; i < 14; i++) {
+			// Planks, kelp and seawater flying around the funnel, high up.
+			double u = random.nextDouble() * 0.6;
+			Vec3 c = funnelCenter(event, time, u, drift);
+			double angle = turn * 3 + random.nextDouble() * Mth.TWO_PI;
+			double r = 5 + 24 * Math.pow(u, 2.4) + random.nextDouble() * 3;
+			spawn(level, DEBRIS[random.nextInt(DEBRIS.length)], c.x + Math.cos(angle) * r, sea + u * FUNNEL_HEIGHT, c.z + Math.sin(angle) * r,
+					-Math.sin(angle) * 1.2, 0.4, Math.cos(angle) * 1.2);
+		}
+
+		// Near the player: spray flying in the wind, and low scud clouds racing around the storm.
+		double d = event.distance(eye.x, eye.z);
+		if (d > event.radius + 20) {
+			return;
+		}
+		Vec3 inward = new Vec3(event.x - eye.x, 0, event.z - eye.z).normalize();
+		Vec3 around = new Vec3(-inward.z, 0, inward.x);
+		for (int i = 0; i < 30; i++) {
+			double x = eye.x + (random.nextDouble() - 0.5) * 40;
+			double z = eye.z + (random.nextDouble() - 0.5) * 40;
+			spawn(level, random.nextFloat() < 0.5f ? FOAM : ParticleTypes.SPLASH, x, sea + 0.4 + random.nextDouble() * 2, z,
+					around.x * 0.9, 0.1, around.z * 0.9);
+		}
+		for (int i = 0; i < 10; i++) {
+			spawn(level, FUNNEL[2 + random.nextInt(2)], eye.x + (random.nextDouble() - 0.5) * 70, sea + 20 + random.nextDouble() * 20,
+					eye.z + (random.nextDouble() - 0.5) * 70, around.x * 0.8, 0, around.z * 0.8);
+		}
+	}
+
+	/** Where the funnel's middle is at this height (0 = the sea, 1 = the cloud ceiling): it snakes and leans. */
+	static Vec3 funnelCenter(SeaEvent event, long time, double u, Vec3 drift) {
+		double sway = Math.sin(time / 70.0 + u * 2.6 + event.id) * 7 * u;
+		double sway2 = Math.cos(time / 53.0 + u * 1.9) * 4 * u;
+		// The bottom trails behind the top, like a real tornado being dragged along.
+		double lean = -12 * u * u;
+		return new Vec3(event.x + drift.x * lean - drift.z * sway + drift.x * sway2, 0,
+				event.z + drift.z * lean + drift.x * sway + drift.z * sway2);
+	}
+
+	/** Like spawn, but lets the particle live longer (for the slow cloud ceiling, which needs fewer, longer particles). */
+	private static void spawnLong(ClientLevel level, ParticleOptions particle, double x, double y, double z, double vx, double vy, double vz, int life) {
+		Minecraft client = Minecraft.getInstance();
+		ParticleStatus setting = client.options.particles().get();
+		if (setting == ParticleStatus.MINIMAL ? level.getRandom().nextInt(4) != 0
+				: setting == ParticleStatus.DECREASED && level.getRandom().nextBoolean()) {
+			return;
+		}
+		Particle made = client.particleEngine.createParticle(particle, x, y, z, vx, vy, vz);
+		if (made != null) {
+			made.setLifetime(life);
 		}
 	}
 

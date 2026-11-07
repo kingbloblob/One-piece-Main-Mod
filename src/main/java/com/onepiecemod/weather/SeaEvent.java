@@ -23,10 +23,17 @@ public class SeaEvent {
 	/** Waterspout: how close to the funnel you get caught, in blocks. */
 	public static final double SPOUT_RADIUS = 7;
 
+	/** Great Cyclone: how wide the tornado's funnel is where it touches the sea, in blocks. */
+	public static final double FUNNEL_RADIUS = 9;
+
 	public final int id;
 	public final SeaEventType type;
-	public final double x;
-	public final double z;
+	/** Where the event started. Most events stay there; a drifting one (the Great Cyclone) moves on from it. */
+	public final double originX;
+	public final double originZ;
+	/** Where its middle is right now (see advance). */
+	public double x;
+	public double z;
 	public final float radius;
 	/** The warning lasts until this time, then the event really starts. */
 	public final long startTime;
@@ -38,17 +45,39 @@ public class SeaEvent {
 	final Set<UUID> told = new HashSet<>();
 	final Set<UUID> toldStart = new HashSet<>();
 	final Set<UUID> hitByWave = new HashSet<>();
+	final Set<UUID> reachedFunnel = new HashSet<>();
 	boolean started;
 
 	public SeaEvent(int id, SeaEventType type, double x, double z, float radius, long startTime, long endTime, float angle) {
 		this.id = id;
 		this.type = type;
+		this.originX = x;
+		this.originZ = z;
 		this.x = x;
 		this.z = z;
 		this.radius = radius;
 		this.startTime = startTime;
 		this.endTime = endTime;
 		this.angle = angle;
+	}
+
+	/**
+	 * Moves a drifting event's middle to where it is at this time. It sits still during the warning, then drifts along its
+	 * angle. Same sums on the server and every player's game, so both agree where the storm is.
+	 */
+	public void advance(long time) {
+		if (type.drift <= 0) {
+			return;
+		}
+		double travelled = Math.max(0, time - startTime) * type.drift;
+		Vec3 dir = direction();
+		x = originX + dir.x * travelled;
+		z = originZ + dir.z * travelled;
+	}
+
+	/** Great Cyclone: true inside the funnel itself. */
+	public boolean inFunnel(double px, double pz) {
+		return type == SeaEventType.CYCLONE && distance(px, pz) <= FUNNEL_RADIUS;
 	}
 
 	public boolean isActive(long time) {
@@ -96,8 +125,8 @@ public class SeaEvent {
 	public void write(FriendlyByteBuf buf) {
 		buf.writeVarInt(id);
 		buf.writeVarInt(type.ordinal());
-		buf.writeDouble(x);
-		buf.writeDouble(z);
+		buf.writeDouble(originX);
+		buf.writeDouble(originZ);
 		buf.writeFloat(radius);
 		buf.writeLong(startTime);
 		buf.writeLong(endTime);

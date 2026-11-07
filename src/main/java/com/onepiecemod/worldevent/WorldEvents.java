@@ -29,6 +29,7 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
  *  - EmperorTerritories: the Four Emperors' waters, and how each Emperor feels about you.
  *  - Reverie: the kings' meeting at Mary Geoise every few days, and what they decide.
  *  - WorldNews: the headlines all of this makes.
+ *  - RareEvents: rare big events every few days (surprise Buster Calls, meteor showers, treasure convoys, armadas, cyclones).
  *  - IslandEvents: short island events (gang raids, Thriller Bark zombies, kneeling for a Celestial Dragon, washed-up supplies).
  * Players: /island (trouble here, standing with each Emperor), /tribute. Operators: /worldevent ...
  * OnePieceMod calls initialize() once, after ship combat and NPCs (fleets steer after ship combat's captains).
@@ -54,10 +55,12 @@ public class WorldEvents {
 			EmperorTerritories.tick(server);
 			Reverie.tick(server);
 			IslandEvents.tick(server);
+			RareEvents.tick(server);
 		});
 		ServerLifecycleEvents.SERVER_STOPPING.register(server -> {
 			IslandBusterCall.stopAll();
 			IslandEvents.stopAll();
+			RareEvents.stopAll();
 			Ruins.save(server);
 			IslandTrouble.save(server);
 			Ruins.unload();
@@ -189,6 +192,7 @@ public class WorldEvents {
 									.suggests((context, builder) -> SharedSuggestionProvider.suggest(IslandEvents.ids(), builder))
 									.executes(context -> reply(context.getSource(), IslandEvents.startById(context.getSource().getPlayerOrException(),
 											StringArgumentType.getString(context, "id")), "Island event started."))))
+					.then(RareEvents.command())
 					.then(Commands.literal("news").executes(context -> {
 						for (String line : WorldNews.recent(context.getSource().getServer(), 8)) {
 							context.getSource().sendSuccess(() -> Component.literal(line).withStyle(ChatFormatting.GRAY), false);

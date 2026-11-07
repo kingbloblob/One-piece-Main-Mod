@@ -21,6 +21,9 @@ public class LocalStorm {
 
 	private static long cachedTick = Long.MIN_VALUE;
 	private static float cached;
+	private static float cachedThunder;
+	/** A tornado needs light behind it to be seen: under a Great Cyclone the sky only darkens this much. */
+	private static final float CYCLONE_DARKNESS = 0.3f;
 
 	private LocalStorm() {
 	}
@@ -30,6 +33,7 @@ public class LocalStorm {
 		Minecraft minecraft = Minecraft.getInstance();
 		LocalPlayer player = minecraft.player;
 		if (player == null || minecraft.level == null || SeaEventSync.CLIENT_EVENTS.isEmpty()) {
+			cachedThunder = 0;
 			return 0;
 		}
 		long time = minecraft.level.getGameTime();
@@ -37,17 +41,30 @@ public class LocalStorm {
 			return cached;
 		}
 		float best = 0;
+		float thunder = 0;
 		for (SeaEvent event : SeaEventSync.CLIENT_EVENTS) {
-			if (event.type != SeaEventType.STORM && event.type != SeaEventType.HAILSTORM || !event.isActive(time)) {
+			boolean cyclone = event.type == SeaEventType.CYCLONE;
+			if (event.type != SeaEventType.STORM && event.type != SeaEventType.HAILSTORM && !cyclone || !event.isActive(time)) {
 				continue;
 			}
 			double inTime = Math.min(time - event.startTime, event.endTime - time) / FADE_TICKS;
-			double past = event.distance(player.getX(), player.getZ()) - event.radius;
-			double inSpace = 1 - past / EDGE;
-			best = Math.max(best, (float) Mth.clamp(Math.min(inTime, inSpace), 0, 1));
+			double distance = event.distance(player.getX(), player.getZ());
+			double past = distance - event.radius;
+			// A cyclone's black wall is seen from twice as far away.
+			double inSpace = 1 - past / (cyclone ? EDGE * 2 : EDGE);
+			float here = (float) Mth.clamp(Math.min(inTime, inSpace), 0, 1);
+			best = Math.max(best, here);
+			thunder = Math.max(thunder, cyclone ? here * CYCLONE_DARKNESS : here);
 		}
 		cachedTick = time;
 		cached = best;
+		cachedThunder = thunder;
 		return best;
+	}
+
+	/** How dark and thundery the sky looks: like strength, but a Great Cyclone keeps the sky lighter so its funnel shows. */
+	public static float thunder() {
+		strength();
+		return cachedThunder;
 	}
 }

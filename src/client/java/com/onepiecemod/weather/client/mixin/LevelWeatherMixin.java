@@ -26,7 +26,7 @@ public abstract class LevelWeatherMixin {
 	@Inject(method = "getThunderLevel", at = @At("RETURN"), cancellable = true)
 	private void onepiece$stormThunder(float partialTick, CallbackInfoReturnable<Float> cir) {
 		if ((Object) this instanceof ClientLevel) {
-			float storm = LocalStorm.strength();
+			float storm = LocalStorm.thunder();
 			if (storm > cir.getReturnValueF()) {
 				cir.setReturnValue(storm);
 			}

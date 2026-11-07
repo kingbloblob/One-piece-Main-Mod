@@ -15,6 +15,7 @@ public class SeaForces {
 	// ---- Tune these to make events stronger or weaker ----
 	/** How hard storm winds shove a ship sideways, in blocks per tick at full gust. */
 	public static final double STORM_PUSH = 0.07;
+	public static final double CYCLONE_PUSH = 0.08;
 	/** How hard a whirlpool drags a ship toward its middle, at the very middle. */
 	public static final double WHIRLPOOL_PULL = 0.11;
 	/** How fast a whirlpool spins a ship around, at the very middle. */
@@ -36,7 +37,7 @@ public class SeaForces {
 		double wind = 1.0;
 		for (SeaEvent event : events(level)) {
 			if (event.isActive(time) && event.isInside(pos.getX() + 0.5, pos.getZ() + 0.5)) {
-				wind *= event.type.wind;
+				wind *= event.inFunnel(pos.getX() + 0.5, pos.getZ() + 0.5) ? 0.4 : event.type.wind;
 			}
 		}
 		return wind;
@@ -62,6 +63,24 @@ public class SeaForces {
 					return Vec3.ZERO;
 				}
 				return event.direction().scale(STORM_PUSH * event.gust(time));
+			}
+			case CYCLONE -> {
+				double distance = event.distance(x, z);
+				if (distance > event.radius || distance < 0.01) {
+					return Vec3.ZERO;
+				}
+				// Winds circle the funnel, the closer the stronger, and the whole storm carries you along as it drifts.
+				Vec3 inward = new Vec3((event.x - x) / distance, 0, (event.z - z) / distance);
+				Vec3 around = new Vec3(-inward.z, 0, inward.x);
+				double strength = CYCLONE_PUSH * event.gust(time) * (1.2 - 0.6 * distance / event.radius);
+				Vec3 push = around.scale(strength).add(inward.scale(strength * 0.2)).add(event.direction().scale(event.type.drift * 0.8));
+				double near = SeaEvent.FUNNEL_RADIUS * 3;
+				if (distance < near) {
+					// Close to the funnel it sucks you in and whirls you round. In the funnel itself it flings you back out.
+					double pull = 1 - distance / near;
+					push = push.add(around.scale(0.12 * pull)).add(inward.scale(distance < SeaEvent.FUNNEL_RADIUS ? -0.08 : 0.05 * pull));
+				}
+				return push;
 			}
 			case WHIRLPOOL -> {
 				double distance = event.distance(x, z);

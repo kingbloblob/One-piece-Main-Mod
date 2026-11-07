@@ -560,5 +560,13 @@
   "advancements.onepiece.wonders.sea_king_tow.title": "Kuja Style",
   "advancements.onepiece.wonders.sea_king_tow.description": "Harness a Sea King (or Momoo) to your ship",
   "advancements.onepiece.wonders.legendary_partner.title": "Partners for Life",
-  "advancements.onepiece.wonders.legendary_partner.description": "Reach bond level 10 with a pet"
+  "advancements.onepiece.wonders.legendary_partner.description": "Reach bond level 10 with a pet",
+  "advancements.onepiece.journey.cyclone.title": "Into the Black Wall",
+  "advancements.onepiece.journey.cyclone.description": "Be caught in a Great Cyclone",
+  "advancements.onepiece.journey.eye_of_the_storm.title": "Into the Funnel",
+  "advancements.onepiece.journey.eye_of_the_storm.description": "Sail right into the funnel of a Great Cyclone",
+  "advancements.onepiece.journey.cyclone_survivor.title": "Rode It Out",
+  "advancements.onepiece.journey.cyclone_survivor.description": "Still be in a Great Cyclone's path when it blows over",
+  "advancements.onepiece.journey.falling_star.title": "Falling Stars",
+  "advancements.onepiece.journey.falling_star.description": "Witness one of Admiral Fujitora's meteor showers"
 }

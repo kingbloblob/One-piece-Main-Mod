@@ -58,7 +58,12 @@ public enum SeaEventType {
 			"Black clouds are piling up and the air turns cold. That's hail weather!",
 			"HAIL! Chunks of ice as big as cannonballs! Get under a roof or wear a helmet!",
 			"The hail stops. The deck is covered in melting ice.",
-			90, 100, 0.9);
+			90, 100, 0.9),
+	CYCLONE("cyclone", "Great Cyclone", ChatFormatting.DARK_PURPLE,
+			"The horizon has gone black from end to end. A GREAT CYCLONE is crossing the sea toward you!",
+			"The Great Cyclone hits! A tornado as tall as the sky, winds that spin ships around, lightning on every mast. Keep away from the funnel!",
+			"The Great Cyclone rolls away over the horizon.",
+			120, 300, 1.7, 0.05);
 
 	public final String id;
 	public final String title;
@@ -69,9 +74,16 @@ public enum SeaEventType {
 	public final float radius;
 	public final int seconds;
 	public final double wind;
+	/** How fast the whole event moves along its angle once it starts, in blocks per tick (0 = it stays put). */
+	public final double drift;
 
 	SeaEventType(String id, String title, ChatFormatting color, String warning, String startMessage, String endMessage,
 			float radius, int seconds, double wind) {
+		this(id, title, color, warning, startMessage, endMessage, radius, seconds, wind, 0);
+	}
+
+	SeaEventType(String id, String title, ChatFormatting color, String warning, String startMessage, String endMessage,
+			float radius, int seconds, double wind, double drift) {
 		this.id = id;
 		this.title = title;
 		this.color = color;
@@ -81,6 +93,7 @@ public enum SeaEventType {
 		this.radius = radius;
 		this.seconds = seconds;
 		this.wind = wind;
+		this.drift = drift;
 	}
 
 	public static SeaEventType byId(String id) {

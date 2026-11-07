@@ -63,7 +63,7 @@ public class WeatherFeature {
 		ServerPlayer player = context.getSource().getPlayerOrException();
 		SeaEventType type = SeaEventType.byId(StringArgumentType.getString(context, "type"));
 		if (type == null) {
-			context.getSource().sendFailure(Component.literal("Unknown event. Try: storm, whirlpool, aqua_laguna, calm_belt_ambush, blizzard, heat_wave, florian_mist"));
+			context.getSource().sendFailure(Component.literal("Unknown event. Try: storm, whirlpool, aqua_laguna, calm_belt_ambush, blizzard, heat_wave, florian_mist, waterspout, rogue_wave, hailstorm, cyclone"));
 			return 0;
 		}
 		String problem = SeaEvents.start((ServerLevel) player.level(), type, player);

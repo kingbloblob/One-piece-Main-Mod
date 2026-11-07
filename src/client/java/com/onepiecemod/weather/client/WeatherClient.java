@@ -13,6 +13,7 @@ public class WeatherClient {
 		ClientPlayNetworking.registerGlobalReceiver(SeaEventSync.SeaEventsPayload.TYPE,
 				(payload, context) -> SeaEventSync.CLIENT_EVENTS = payload.events());
 		WeatherVisuals.initialize();
+		CycloneRenderer.initialize();
 		ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> SeaEventSync.CLIENT_EVENTS = List.of());
 	}
 }
