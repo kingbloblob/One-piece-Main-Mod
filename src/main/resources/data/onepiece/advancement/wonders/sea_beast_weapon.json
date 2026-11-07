@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:beast_weapon_core"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.sea_beast_weapon.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.sea_beast_weapon.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/root"
+}

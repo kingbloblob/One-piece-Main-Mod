@@ -1,7 +1,7 @@
 """Paints the extra body-style parts (horns, whiskers, frills, toad eyes, armour...) onto every Sea King texture.
 
 Run:  python3 -I gen_sea_king_styles.py [source dir, default ../..]
-Edits textures/entity/sea_king/sea_king_0..6.png in place: only the area from y=96 down, which the base
+Edits textures/entity/sea_king/sea_king_0..6.png (7 and 8 are made by gen_mecha_sea_kings.py) in place: only the area from y=96 down, which the base
 serpent model doesn't use. Colours come from each texture's own body and fin colours, so every colour
 variant (and boss recolour) gets matching parts. The UV spots must match SeaKingModel.createBodyLayer(int).
 """
@@ -78,7 +78,7 @@ def paint(img):
 
 
 for name in sorted(os.listdir(DIR)):
-    if name.startswith("sea_king_") and name.endswith(".png"):
+    if name.startswith("sea_king_") and name.endswith(".png") and name not in ("sea_king_7.png", "sea_king_8.png"):
         path = os.path.join(DIR, name)
         img = Image.open(path).convert("RGBA")
         paint(img)

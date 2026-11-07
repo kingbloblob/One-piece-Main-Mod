@@ -27,7 +27,7 @@ import com.onepiecemod.OnePieceMod;
 public class SeaKingModel extends EntityModel<SeaKingRenderer.State> {
 	public static final ModelLayerLocation LAYER = new ModelLayerLocation(OnePieceMod.id("sea_king"), "main");
 	/** One model per body style (SeaKingEntity.STYLES). Style 0 uses LAYER. */
-	public static final ModelLayerLocation[] LAYERS = new ModelLayerLocation[com.onepiecemod.sea.SeaKingEntity.STYLES];
+	public static final ModelLayerLocation[] LAYERS = new ModelLayerLocation[com.onepiecemod.sea.SeaKingEntity.MODEL_STYLES];
 
 	static {
 		LAYERS[0] = LAYER;
@@ -41,6 +41,8 @@ public class SeaKingModel extends EntityModel<SeaKingRenderer.State> {
 	private final ModelPart head;
 	private final ModelPart jaw;
 	private final ModelPart[] segments = new ModelPart[SEGMENTS];
+	/** The Mecha-Shark (style 6) gets a bigger, blunter head. */
+	private final boolean shark;
 	// Keyframe animations (Minecraft's own system): a lunging bite and a flinch when hit.
 	private final KeyframeAnimation bite;
 	private final KeyframeAnimation flinch;
@@ -55,6 +57,7 @@ public class SeaKingModel extends EntityModel<SeaKingRenderer.State> {
 			segments[i] = parent.getChild("segment" + i);
 			parent = segments[i];
 		}
+		this.shark = segments[0].hasChild("dorsal");
 		this.bite = new Keyframes(0.6f)
 				.rot("jaw", 0, 0, 0, 0).rot("jaw", 0.15f, 55, 0, 0).rot("jaw", 0.28f, -5, 0, 0).rot("jaw", 0.6f, 0, 0, 0)
 				.rot("head", 0, 0, 0, 0).rot("head", 0.15f, -18, 0, 0).rot("head", 0.28f, 10, 0, 0).rot("head", 0.6f, 0, 0, 0)
@@ -77,6 +80,9 @@ public class SeaKingModel extends EntityModel<SeaKingRenderer.State> {
 	 * Body styles seen in the show. They all share the serpent body, head and jaw (so they animate the same) and add parts:
 	 * 0 serpent, 1 horned (bull-like), 2 whiskered (catfish), 3 frilled (dragon-like, like the Lord of the Coast),
 	 * 4 toad-headed (bulging eyes, fat cheeks, front legs), 5 armoured (plates along the back).
+	 * Two more are only for the Egghead sea bosses (never rolled for wild ones), with their own textures (sea_king_7/8.png,
+	 * tools/sea_kings/gen_mecha_sea_kings.py): 6 Mecha-Shark (thick shark body, tall dorsal fin, pectoral fins, crescent tail),
+	 * 7 Sea Beast Weapon (Lilith's cyborg Sea King: steel back plates, a cannon on its head, laser pods, a red visor).
 	 * The extra parts use the bottom of the texture (y 96 and down); tools/sea_kings/gen_sea_king_styles.py paints them.
 	 */
 	public static LayerDefinition createBodyLayer(int style) {
@@ -84,13 +90,15 @@ public class SeaKingModel extends EntityModel<SeaKingRenderer.State> {
 		PartDefinition root = mesh.getRoot();
 		PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.0f, 16.0f, 8.0f));
 
-		PartDefinition head = body.addOrReplaceChild("head", CubeListBuilder.create()
-						.texOffs(0, 0).addBox(-5.0f, -5.0f, -10.0f, 10, 8, 10) // skull
-						.texOffs(40, 0).addBox(-4.0f, -3.0f, -18.0f, 8, 4, 8) // upper snout
-						.texOffs(104, 0).addBox(-0.5f, -10.0f, -9.0f, 1, 5, 8) // crest on top of the head
-						.texOffs(0, 90).addBox(-3.5f, 1.0f, -17.0f, 1, 2, 1) // fangs
-						.texOffs(0, 90).addBox(2.5f, 1.0f, -17.0f, 1, 2, 1),
-				PartPose.ZERO);
+		CubeListBuilder headCubes = CubeListBuilder.create()
+				.texOffs(0, 0).addBox(-5.0f, -5.0f, -10.0f, 10, 8, 10) // skull
+				.texOffs(40, 0).addBox(-4.0f, -3.0f, -18.0f, 8, 4, 8) // upper snout
+				.texOffs(0, 90).addBox(-3.5f, 1.0f, -17.0f, 1, 2, 1) // fangs
+				.texOffs(0, 90).addBox(2.5f, 1.0f, -17.0f, 1, 2, 1);
+		if (style != 6) {
+			headCubes.texOffs(104, 0).addBox(-0.5f, -10.0f, -9.0f, 1, 5, 8); // crest on top of the head (not on a shark)
+		}
+		PartDefinition head = body.addOrReplaceChild("head", headCubes, PartPose.ZERO);
 		head.addOrReplaceChild("jaw", CubeListBuilder.create()
 						.texOffs(72, 0).addBox(-4.0f, 0.0f, -8.0f, 8, 3, 8),
 				PartPose.offset(0.0f, 1.0f, -10.0f)); // Hinged at the back, so it swings open.
@@ -103,15 +111,31 @@ public class SeaKingModel extends EntityModel<SeaKingRenderer.State> {
 		for (int i = 0; i < SEGMENTS; i++) {
 			float width = sizes[i][0];
 			float height = sizes[i][1];
+			boolean shark = style == 6;
 			CubeListBuilder cubes = CubeListBuilder.create()
-					.texOffs(uvs[i][0], uvs[i][1]).addBox(-width / 2, -height / 2, 0.0f, (int) width, (int) height, 12)
-					.texOffs(56, 62).addBox(-0.5f, -height / 2 - 3.0f, 2.0f, 1, 3, 8); // fin along the back
-			if (i == 0) {
+					.texOffs(uvs[i][0], uvs[i][1]).addBox(-width / 2, -height / 2, 0.0f, (int) width, (int) height, 12);
+			if (!shark) {
+				cubes.texOffs(56, 62).addBox(-0.5f, -height / 2 - 3.0f, 2.0f, 1, 3, 8); // fin along the back
+			}
+			if (shark && i == 0) {
+				cubes.texOffs(0, 96).addBox(-5.5f, -5.0f, 0.0f, 11, 10, 12); // a shark's thick chest
+			} else if (shark && i == 1) {
+				cubes.texOffs(46, 96).addBox(-5.0f, -4.5f, 0.0f, 10, 9, 12);
+			}
+			if (style == 7) {
+				cubes.texOffs(0, 96).addBox(-3.0f, -height / 2 - 3.0f, 1.0f, 6, 3, 10); // steel plate
+				if (i == 0) {
+					cubes.texOffs(0, 110).addBox(width / 2, -2.0f, 3.0f, 2, 2, 6); // laser pods
+					cubes.texOffs(0, 110).mirror().addBox(-width / 2 - 2.0f, -2.0f, 3.0f, 2, 2, 6);
+					cubes.mirror(false);
+				}
+			}
+			if (i == 0 && !shark) {
 				// Two flippers near the front.
 				cubes.texOffs(76, 62).addBox(width / 2, 2.0f, 2.0f, 8, 1, 6);
 				cubes.texOffs(76, 62).mirror().addBox(-width / 2 - 8.0f, 2.0f, 2.0f, 8, 1, 6);
 			}
-			if (i == SEGMENTS - 1) {
+			if (i == SEGMENTS - 1 && !shark) {
 				cubes.texOffs(36, 62).mirror(false).addBox(-0.5f, -6.0f, 8.0f, 1, 12, 8); // tail fin
 			}
 			if (style == 3) {
@@ -130,6 +154,22 @@ public class SeaKingModel extends EntityModel<SeaKingRenderer.State> {
 			}
 			// The first segment starts at the back of the head, the others at the end of the one before.
 			parent = parent.addOrReplaceChild("segment" + i, cubes, PartPose.offset(0.0f, 0.0f, i == 0 ? 0.0f : 12.0f));
+			if (shark && i == 0) {
+				// The tall dorsal fin, leaning back, and two big pectoral fins drooping out to the sides.
+				parent.addOrReplaceChild("dorsal", CubeListBuilder.create().texOffs(90, 96).addBox(-0.5f, -14.0f, 0.0f, 1, 14, 10),
+						PartPose.offsetAndRotation(0.0f, -4.5f, 1.0f, -0.45f, 0.0f, 0.0f));
+				parent.addOrReplaceChild("pectoral_right", CubeListBuilder.create().texOffs(0, 118).addBox(0.0f, 0.0f, 0.0f, 12, 1, 8),
+						PartPose.offsetAndRotation(5.0f, 3.0f, 1.0f, 0.0f, -0.3f, 0.45f));
+				parent.addOrReplaceChild("pectoral_left", CubeListBuilder.create().texOffs(0, 118).mirror().addBox(-12.0f, 0.0f, 0.0f, 12, 1, 8),
+						PartPose.offsetAndRotation(-5.0f, 3.0f, 1.0f, 0.0f, 0.3f, -0.45f));
+			}
+			if (shark && i == SEGMENTS - 1) {
+				// A crescent tail: a long upper lobe and a short lower one.
+				parent.addOrReplaceChild("tail_upper", CubeListBuilder.create().texOffs(112, 96).addBox(-0.5f, -16.0f, 0.0f, 1, 16, 6),
+						PartPose.offsetAndRotation(0.0f, -1.0f, 10.0f, -0.75f, 0.0f, 0.0f));
+				parent.addOrReplaceChild("tail_lower", CubeListBuilder.create().texOffs(58, 117).addBox(-0.5f, 0.0f, 0.0f, 1, 7, 4),
+						PartPose.offsetAndRotation(0.0f, 1.0f, 10.0f, 0.6f, 0.0f, 0.0f));
+			}
 		}
 
 		return LayerDefinition.create(mesh, 128, 128);
@@ -173,6 +213,15 @@ public class SeaKingModel extends EntityModel<SeaKingRenderer.State> {
 							PartPose.offset(side * 5.0f, 0.0f, -5.0f));
 				}
 			}
+			case 6 -> // Mecha-Shark: a red visor over its eyes.
+					head.addOrReplaceChild("visor", CubeListBuilder.create().texOffs(68, 118).addBox(-5.0f, -4.0f, -10.6f, 10, 1, 1), PartPose.ZERO);
+			case 7 -> { // Sea Beast Weapon: a cannon bolted to its head and a red visor.
+				head.addOrReplaceChild("cannon", CubeListBuilder.create()
+								.texOffs(58, 96).addBox(-2.5f, -8.0f, -8.0f, 5, 3, 5)
+								.texOffs(32, 96).addBox(-1.5f, -10.0f, -17.0f, 3, 3, 10),
+						PartPose.ZERO);
+				head.addOrReplaceChild("visor", CubeListBuilder.create().texOffs(78, 96).addBox(-5.0f, -4.0f, -10.6f, 10, 1, 1), PartPose.ZERO);
+			}
 			default -> {
 			}
 		}
@@ -188,6 +237,11 @@ public class SeaKingModel extends EntityModel<SeaKingRenderer.State> {
 		body.xRot = state.xRot * Mth.DEG_TO_RAD; // Tilt up or down while diving or rising.
 		head.yRot = state.yRot * Mth.DEG_TO_RAD * 0.5f;
 		head.xRot = Mth.sin(time * 0.08f) * 0.05f;
+		if (shark) {
+			head.xScale = 1.3f;
+			head.yScale = 1.3f;
+			head.zScale = 1.15f;
+		}
 		// Jaws hang a little open, and gape wide when it's hunting someone.
 		jaw.xRot = (state.aggressive ? 0.55f : 0.12f) + Mth.sin(time * 0.15f) * 0.08f;
 

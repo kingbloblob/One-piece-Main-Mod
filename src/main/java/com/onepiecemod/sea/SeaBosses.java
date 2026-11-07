@@ -64,12 +64,16 @@ import com.onepiecemod.util.Motion;
  *  - Ancient Sea King (New World): one of the oldest Sea Kings, the kind that answered Poseidon's call.
  *    (Its 1000 health is close to Minecraft's 1024 cap, so it gets its toughness from armor instead.)
  *
+ * Two more guard the waters around Egghead (sea = null: no lure calls them, see EggheadWaters):
+ *  - Mecha-Shark: Vegapunk's robot shark, the one that attacks the Thousand Sunny as it reaches Egghead.
+ *  - Sea Beast Weapon: one of Lilith's cyborg Sea Kings. Fires lasers and missiles and calls its cyborg brood.
+ *
  * How to meet one: a Sea Lord Lure thrown over deep water calls the boss of the sea you're in, and now and then
  * a wild Sea King turns out to be the boss itself (SeaKingSpawner). Bosses can't be tamed.
  * Ops can test with /seaboss summon <id>. Anyone can see their record with /seaboss.
  */
 public final class SeaBosses {
-	public enum Move { TIDAL_WAVE, WHIRLPOOL, DIVE_LUNGE, ROAR, BROOD, FOG }
+	public enum Move { TIDAL_WAVE, WHIRLPOOL, DIVE_LUNGE, ROAR, BROOD, FOG, LASER, MISSILES }
 
 	/** One boss. variant = which sea_king_<n>.png texture it wears. bounty = how much it raises your bounty the first time. */
 	public record Boss(String id, String name, CalmBelt.Sea sea, int variant, double health, double damage, double armor, double scale,
@@ -96,6 +100,19 @@ public final class SeaBosses {
 				List.of(Move.TIDAL_WAVE, Move.WHIRLPOOL, Move.DIVE_LUNGE, Move.ROAR, Move.BROOD), true,
 				"An Ancient Sea King surfaces, older than the World Government itself. It does not answer to you.",
 				"The Ancient Sea King calls the deep to war!"));
+		add(new Boss("mecha_shark", "Mecha-Shark", null, 7, 700, 26, 14, 1.2,
+				3000, 60_000_000L, "mecha_shark_fin", List.of(Move.DIVE_LUNGE, Move.MISSILES, Move.TIDAL_WAVE), true,
+				"A steel fin cuts through the waves. Vegapunk's Mecha-Shark guards the way to Egghead!",
+				"The Mecha-Shark's eyes flash red. WARNING: COMBAT MODE."));
+		add(new Boss("sea_beast_weapon", "Sea Beast Weapon", null, 8, 900, 28, 16, 1.5,
+				4000, 80_000_000L, "beast_weapon_core", List.of(Move.LASER, Move.MISSILES, Move.BROOD, Move.LASER, Move.ROAR), false,
+				"Steel plates and a cannon bolted to its head... one of Lilith's Sea Beast Weapons patrols Egghead's waters!",
+				"The Sea Beast Weapon's cannon glows white-hot!"));
+	}
+
+	/** The four bosses of the seas (the lure calls them, and beating all four makes you a Sea King Slayer). */
+	public static List<Boss> seaBosses() {
+		return BOSSES.values().stream().filter(boss -> boss.sea() != null).toList();
 	}
 
 	private static void add(Boss boss) {
@@ -118,6 +135,8 @@ public final class SeaBosses {
 	public static final Item PHANTOM_SCALE = trophy("phantom_scale", Rarity.RARE);
 	public static final Item BEHEMOTH_HORN = trophy("behemoth_horn", Rarity.EPIC);
 	public static final Item ANCIENT_SEA_KING_FANG = trophy("ancient_sea_king_fang", Rarity.EPIC);
+	public static final Item MECHA_SHARK_FIN = trophy("mecha_shark_fin", Rarity.EPIC);
+	public static final Item BEAST_WEAPON_CORE = trophy("beast_weapon_core", Rarity.EPIC);
 
 	private static Item trophy(String name, Rarity rarity) {
 		return register(name, Item::new, new Item.Properties().stacksTo(16).rarity(rarity));
@@ -133,6 +152,8 @@ public final class SeaBosses {
 			case "coast_lord_fang" -> COAST_LORD_FANG;
 			case "phantom_scale" -> PHANTOM_SCALE;
 			case "behemoth_horn" -> BEHEMOTH_HORN;
+			case "mecha_shark_fin" -> MECHA_SHARK_FIN;
+			case "beast_weapon_core" -> BEAST_WEAPON_CORE;
 			default -> ANCIENT_SEA_KING_FANG;
 		};
 	}
@@ -145,6 +166,7 @@ public final class SeaBosses {
 		final Vec3 at;
 		int ticks;
 		UUID grabbed;
+		List<Vec3> spots;
 
 		Pending(Move move, Vec3 at, int ticks) {
 			this.move = move;
@@ -166,7 +188,10 @@ public final class SeaBosses {
 			output.accept(PHANTOM_SCALE);
 			output.accept(BEHEMOTH_HORN);
 			output.accept(ANCIENT_SEA_KING_FANG);
+			output.accept(MECHA_SHARK_FIN);
+			output.accept(BEAST_WEAPON_CORE);
 		});
+		EggheadWaters.initialize();
 		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> dispatcher.register(
 				Commands.literal("seaboss")
 						.executes(context -> {
@@ -234,6 +259,8 @@ public final class SeaBosses {
 			case "florian_phantom" -> 2;
 			case "calm_belt_behemoth" -> 1;
 			case "ancient_sea_king" -> 5;
+			case "mecha_shark" -> 6;
+			case "sea_beast_weapon" -> 7;
 			default -> king.getStyle();
 		});
 		king.addTag(BOSS_TAG);
@@ -297,6 +324,20 @@ public final class SeaBosses {
 			case WHIRLPOOL -> {
 				PENDING.put(king.getUUID(), new Pending(Move.WHIRLPOOL, king.position(), 100));
 				warn(king, "The water starts to spin. Get out of the whirlpool!");
+			}
+			case LASER -> {
+				// Aims where you are now; a line of sparks shows where the beam will go. Step off the line.
+				Vec3 from = mouth(king);
+				Vec3 dir = target.getEyePosition().subtract(from).normalize();
+				Pending laser = new Pending(Move.LASER, from.add(dir.scale(40)), 30);
+				PENDING.put(king.getUUID(), laser);
+				level.playSound(null, king.blockPosition(), SoundEvents.BEACON_POWER_SELECT, SoundSource.HOSTILE, 4.0f, 0.5f);
+				warn(king, "Its cannon is charging a laser. Get off the red line!");
+			}
+			case MISSILES -> {
+				PENDING.put(king.getUUID(), new Pending(Move.MISSILES, target.position(), 40));
+				level.playSound(null, king.blockPosition(), SoundEvents.DISPENSER_LAUNCH, SoundSource.HOSTILE, 4.0f, 0.5f);
+				warn(king, "Missiles! Watch for the red circles!");
 			}
 			case DIVE_LUNGE -> {
 				BlockPos spot = BlockPos.containing(target.position());
@@ -374,6 +415,47 @@ public final class SeaBosses {
 					level.playSound(null, king.blockPosition(), SoundEvents.PHANTOM_SWOOP, SoundSource.HOSTILE, 4.0f, 0.5f);
 				}
 			}
+			case LASER -> {
+				Vec3 from = mouth(king);
+				if (pending.ticks > 0 && pending.ticks % 3 == 0) {
+					line(level, from, pending.at, pending.ticks <= 10 ? 0xFFFF55 : 0xFF3030, 0.8f);
+				}
+				if (pending.ticks <= 0) {
+					laser(king, level, from, pending.at);
+				}
+			}
+			case MISSILES -> {
+				if (pending.ticks == 39) {
+					// Five spots around where you stood: one right on it.
+					RandomSource random = king.getRandom();
+					pending.spots = new ArrayList<>();
+					pending.spots.add(pending.at);
+					for (int i = 0; i < 4; i++) {
+						pending.spots.add(pending.at.add(random.nextGaussian() * 5, 0, random.nextGaussian() * 5));
+					}
+				}
+				if (pending.spots != null && pending.ticks % 5 == 0) {
+					for (Vec3 spot : pending.spots) {
+						BossStrikes.ring(level, spot, 3.0, pending.ticks <= 15 ? 0xFFFF55 : 0xFF3030);
+					}
+				}
+				if (pending.ticks <= 0 && pending.spots != null) {
+					for (Vec3 spot : pending.spots) {
+						level.sendParticles(ParticleTypes.EXPLOSION_EMITTER, spot.x, spot.y + 0.5, spot.z, 1, 0, 0, 0, 0);
+						level.sendParticles(ParticleTypes.SPLASH, spot.x, spot.y + 0.5, spot.z, 40, 1.5, 0.5, 1.5, 0.4);
+						level.playSound(null, spot.x, spot.y, spot.z, SoundEvents.GENERIC_EXPLODE.value(), SoundSource.HOSTILE, 2.0f, 0.9f);
+						for (ServerPlayer player : level.getEntitiesOfClass(ServerPlayer.class, new net.minecraft.world.phys.AABB(spot, spot).inflate(3, 4, 3))) {
+							if (hits(king, player)) {
+								player.hurtServer(level, king.damageSources().explosion(king, king), (float) king.getAttributeValue(Attributes.ATTACK_DAMAGE) * 0.55f);
+								knockOff(player);
+								Vec3 away = player.position().subtract(spot).multiply(1, 0, 1).normalize().scale(0.8);
+								player.setDeltaMovement(away.x, 0.6, away.z);
+								Motion.sync(player);
+							}
+						}
+					}
+				}
+			}
 			default -> pending.ticks = 0;
 		}
 		if (pending.ticks <= 0) {
@@ -391,6 +473,45 @@ public final class SeaBosses {
 			Vec3 away = player.position().subtract(king.position()).multiply(1, 0, 1).normalize().scale(1.6);
 			player.setDeltaMovement(away.x, 0.7, away.z);
 			Motion.sync(player);
+		}
+	}
+
+	/** Where a beam leaves its head (the cannon / the mouth). */
+	private static Vec3 mouth(SeaKingEntity king) {
+		return king.position().add(0, king.getBbHeight() * 0.6, 0).add(Vec3.directionFromRotation(0, king.getYHeadRot()).scale(king.getBbWidth() * 0.6));
+	}
+
+	private static void line(ServerLevel level, Vec3 from, Vec3 to, int color, float size) {
+		Vec3 step = to.subtract(from);
+		int count = (int) Math.max(1, step.length());
+		net.minecraft.core.particles.DustParticleOptions dust = new net.minecraft.core.particles.DustParticleOptions(color, size * 2);
+		for (int i = 0; i <= count; i++) {
+			Vec3 at = from.add(step.scale(i / (double) count));
+			level.sendParticles(dust, at.x, at.y, at.z, 1, 0.05, 0.05, 0.05, 0);
+		}
+	}
+
+	/** The laser fires down the line it showed: anyone within 2 blocks of it is burned and knocked back. */
+	private static void laser(SeaKingEntity king, ServerLevel level, Vec3 from, Vec3 to) {
+		level.playSound(null, from.x, from.y, from.z, SoundEvents.WARDEN_SONIC_BOOM, SoundSource.HOSTILE, 4.0f, 1.2f);
+		Vec3 step = to.subtract(from);
+		int count = (int) step.length();
+		for (int i = 0; i <= count; i += 2) {
+			Vec3 at = from.add(step.scale(i / (double) count));
+			level.sendParticles(ParticleTypes.END_ROD, at.x, at.y, at.z, 3, 0.2, 0.2, 0.2, 0.01);
+		}
+		level.sendParticles(ParticleTypes.EXPLOSION, to.x, to.y, to.z, 3, 1, 1, 1, 0);
+		for (ServerPlayer player : players(king, 44)) {
+			Vec3 p = player.position().add(0, player.getBbHeight() / 2, 0);
+			double t = Math.max(0, Math.min(1, p.subtract(from).dot(step) / step.lengthSqr()));
+			if (p.distanceTo(from.add(step.scale(t))) < 2.0) {
+				player.hurtServer(level, king.damageSources().mobAttack(king), (float) king.getAttributeValue(Attributes.ATTACK_DAMAGE) * 1.1f);
+				player.igniteForSeconds(4);
+				knockOff(player);
+				Vec3 push = step.normalize().scale(1.2);
+				player.setDeltaMovement(push.x, 0.5, push.z);
+				Motion.sync(player);
+			}
 		}
 	}
 
@@ -422,13 +543,18 @@ public final class SeaBosses {
 				if (minion.getAttribute(Attributes.SCALE) != null) {
 					minion.getAttribute(Attributes.SCALE).setBaseValue(0.6); // its brood: young ones, still bigger than a boat
 				}
+				if ("sea_beast_weapon".equals(king.getSeaBoss())) {
+					// Lilith's fleet: cyborg Sea Kings like the big one.
+					minion.setLook(8, 7);
+					minion.setCustomName(Component.literal("Cyborg Sea King"));
+				}
 				minion.setTarget(king.getTarget());
 				level.addFreshEntity(minion);
 				made++;
 			}
 		}
 		if (made > 0) {
-			warn(king, "More Sea Kings rise from the deep!");
+			warn(king, "sea_beast_weapon".equals(king.getSeaBoss()) ? "More of Lilith's cyborg Sea Kings close in!" : "More Sea Kings rise from the deep!");
 		}
 	}
 
@@ -503,12 +629,18 @@ public final class SeaBosses {
 		if (random.nextFloat() < 0.5f) {
 			drop(king, level, new ItemStack(Items.HEART_OF_THE_SEA));
 		}
-		float fruitChance = boss.sea() == CalmBelt.Sea.NEW_WORLD ? 0.25f : 0.06f;
+		if (boss.sea() == null) {
+			// Egghead's guards are half machine: they drop Vegapunk tech too.
+			drop(king, level, new ItemStack(com.onepiecemod.vegapunk.VegapunkItems.VEGAPUNK_CHIP, 1 + random.nextInt(2)));
+			drop(king, level, new ItemStack(com.onepiecemod.vegapunk.VegapunkItems.LASER_CORE, 1));
+		}
+		float fruitChance = boss.sea() == CalmBelt.Sea.NEW_WORLD || boss.sea() == null ? 0.25f : 0.06f;
 		if (random.nextFloat() < fruitChance && !ModItems.DEVIL_FRUITS.isEmpty()) {
 			List<Item> fruits = List.copyOf(ModItems.DEVIL_FRUITS.values());
 			drop(king, level, new ItemStack(fruits.get(random.nextInt(fruits.size()))));
 		}
 		for (ServerPlayer player : credit) {
+			EggheadWaters.onBeaten(player, boss);
 			List<String> beaten = player.getAttachedOrElse(DEFEATED, List.of());
 			boolean first = !beaten.contains(boss.id());
 			int berries = first ? boss.berries() : boss.berries() * 2 / 5;
@@ -522,7 +654,7 @@ public final class SeaBosses {
 				player.sendSystemMessage(Component.literal("You defeated the " + boss.name() + "! (" + updated.size() + "/" + BOSSES.size()
 						+ " sea bosses) The tale will be told in every port.").withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD));
 				com.onepiecemod.advancement.AdvancementFeature.grant(player, "wonders/" + boss.id());
-				if (updated.size() >= BOSSES.size()) {
+				if (boss.sea() != null && seaBosses().stream().allMatch(sea -> updated.contains(sea.id()))) {
 					com.onepiecemod.advancement.AdvancementFeature.grant(player, "wonders/sea_king_slayer");
 					player.sendSystemMessage(Component.literal("Every sea's monster has fallen to you. Even Sea Kings will steer clear of your ship.")
 							.withStyle(ChatFormatting.LIGHT_PURPLE));
@@ -538,9 +670,10 @@ public final class SeaBosses {
 		player.sendSystemMessage(Component.literal("Sea King bosses beaten: " + beaten.size() + "/" + BOSSES.size()).withStyle(ChatFormatting.GOLD));
 		for (Boss boss : BOSSES.values()) {
 			boolean done = beaten.contains(boss.id());
-			player.sendSystemMessage(Component.literal((done ? " [x] " : " [ ] ") + boss.name() + " - " + boss.sea().title())
+			player.sendSystemMessage(Component.literal((done ? " [x] " : " [ ] ") + boss.name() + " - " + (boss.sea() == null ? "Egghead's waters" : boss.sea().title()))
 					.withStyle(done ? ChatFormatting.GREEN : ChatFormatting.GRAY));
 		}
+		player.sendSystemMessage(Component.literal("The Mecha-Shark and Lilith's Sea Beast Weapon guard the sea around Egghead.").withStyle(ChatFormatting.DARK_AQUA));
 		player.sendSystemMessage(Component.literal("Throw a Sea Lord Lure over deep water to call the boss of the sea you're in.").withStyle(ChatFormatting.DARK_AQUA));
 	}
 
