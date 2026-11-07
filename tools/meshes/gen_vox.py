@@ -340,8 +340,8 @@ def imu_beast():
     LINE = hexc('#2a2a32')
     v.bone('body', 'root', (0, 2.2, 0))
     v.bone('head', 'body', (0, 4.5, 0))
-    v.bone('arm_r', 'body', (0.75, 4.2, 0))
-    v.bone('arm_l', 'body', (-0.75, 4.2, 0))
+    v.bone('arm_r', 'body', (0.75, 3.7, 0))
+    v.bone('arm_l', 'body', (-0.75, 3.7, 0))
     v.bone('wing_r', 'body', (0.4, 4.1, 0.55))
     v.bone('wing_l', 'body', (-0.4, 4.1, 0.55))
     v.bone('halo', 'body', (0, 6.6, 0.45))
@@ -361,7 +361,7 @@ def imu_beast():
         v.anim(b, 'roar', 'z', 20 * s)
 
     # big white cloak with thin dark stripes, sharp wide shoulders, open down the front over a black body
-    rings = [(0.0, 1.6, 0.8, 0.85), (1.5, 1.45, 0.72, 0.8), (3.2, 1.45, 0.66, 0.75), (4.3, 1.8, 0.62, 0.7), (4.65, 1.85, 0.55, 0.6), (4.85, 1.0, 0.45, 0.5), (5.0, 0.45, 0.3, 0.35)]
+    rings = [(0.0, 1.6, 0.8, 0.85), (1.5, 1.45, 0.72, 0.8), (2.8, 1.45, 0.66, 0.75), (3.6, 1.8, 0.62, 0.7), (3.9, 1.85, 0.55, 0.6), (4.05, 1.0, 0.45, 0.5), (4.2, 0.45, 0.3, 0.35)]
 
     def open_w(y):
         return 0.9 - min(max(y, 0), 4.6) / 4.6 * 0.5
@@ -376,7 +376,7 @@ def imu_beast():
     loft(v, 'body', rings, cloak_c)
     # pointed shoulder tips
     for s in SIDES:
-        v.box('body', sx((1.75, 4.45, -0.35), s) if s > 0 else (-2.1, 4.45, -0.35), (2.1, 4.65, 0.4) if s > 0 else (-1.75, 4.65, 0.4), WHITE)
+        v.box('body', sx((1.75, 3.7, -0.35), s) if s > 0 else (-2.1, 3.7, -0.35), (2.1, 3.9, 0.4) if s > 0 else (-1.75, 3.9, 0.4), WHITE)
     # the column of white dots down the black front
     for i in range(14):
         y = 2.2 + i * 0.2
@@ -396,20 +396,30 @@ def imu_beast():
             return WHITE if r > 0.2 else BLACK
         return None
     v.box('body', (0.05, 1.35, -2), (0.75, 2.05, 0), ring_eye, mode='paint')
-    # long white veil of hair falling from the head over the shoulders, ragged at the bottom
+    # black neck from the cloak collar up to the head
+    v.box('body', (-0.15, 3.9, -0.55), (0.15, 4.9, -0.2), BLACK)
+    # long white hair: strands start at the crown, sweep out over the shoulders and fall straight down
+    # in front of the cloak to a ragged edge, leaving the black face and the dotted front free
     rnd = random.Random(11)
+    HAIR, HAIR2 = hexc('#f4f3ee'), hexc('#cfcdc5')
     for s in SIDES:
-        for c in range(4, 10):
-            x = s * (c * 0.1 + 0.05)
-            bottom = 2.6 + rnd.uniform(0, 0.45) + (c - 4) * 0.05
-            col = LINE if c == 6 else WHITE
-            z0 = -0.95
-            v.box('body', (x - 0.04, bottom, z0), (x + 0.04, 5.6 - (c - 4) * 0.05, z0 + 0.2), col)
-        # the veil's outer edge wraps back round the side of the head
-        v.box('body', sx((0.85, 3.0, -0.75), s) if s > 0 else (-0.95, 3.0, -0.75), (0.95, 5.2, -0.1) if s > 0 else (-0.85, 5.2, -0.1), WHITE)
+        for c in range(12):
+            x0 = s * (0.22 + c * 0.02)
+            xs = s * (0.42 + c * 0.085)
+            bottom = 2.2 + rnd.uniform(0, 0.5) + c * 0.04
+            z = -0.92 + c * 0.012
+            ph = rnd.uniform(0, 6.3)
+            pts = [V([x0, 6.0 - c * 0.02, -0.62]), V([(x0 + xs) * 0.55, 5.75, z + 0.05]), V([xs, 4.9, z])]
+            for k in range(1, 6):
+                y = 4.9 - (4.9 - bottom) * k / 5
+                pts.append(V([xs + s * 0.03 * math.sin(ph + k * 1.3), y, z - 0.02 * math.sin(ph + k)]))
+            col = HAIR2 if c % 4 == 3 else HAIR
+            v.tube('body', pts, [0.07] * (len(pts) - 1) + [0.03], col, per=3)
+        # a thick mass of hair at the back so it reads as one mane from the side
+        v.box('body', sx((0.45, 2.6, -0.75), s) if s > 0 else (-1.5, 2.6, -0.75), (1.5, 4.9, -0.35) if s > 0 else (-0.45, 4.9, -0.35), HAIR)
     # black sleeves coming out of the cloak, black gloves with a white eye ring at the wrist
     for s, b, wr in ((1, 'arm_r', V([0.25, 3.15, -1.0])), (-1, 'arm_l', V([-0.25, 2.95, -1.0]))):
-        sh, el = sx((0.55, 4.3, -0.2), s), sx((0.8, 3.5, -0.7), s)
+        sh, el = sx((0.55, 3.7, -0.2), s), sx((0.85, 3.3, -0.7), s)
         v.tube(b, [sh, el, wr], [0.22, 0.2, 0.17], BLACK, per=4)
         v.ball(b, wr + V([-s * 0.05, 0, -0.08]), (0.17, 0.15, 0.17), BLACK)
         v.ball(b, wr + V([s * 0.12, 0.0, -0.05]), (0.1, 0.16, 0.16), WHITE, mode='paint')
@@ -426,7 +436,7 @@ def imu_beast():
     # small narrow black head with a neck, a face like the chapter image: almond eyes, a scar down his
     # left eye, a thin smile, a pointed goatee, and the light catching the right side of his face
     v.box('head', (-0.12, 4.8, -0.5), (0.12, 5.2, -0.2), BLACK)
-    v.ball('head', (0, 5.3, -0.75), (0.4, 0.6, 0.4), BLACK)
+    v.ball('head', (0, 5.3, -0.78), (0.33, 0.58, 0.4), BLACK)
     LIT = hexc('#cfccc4')
     SCAR = glow('#ffffff')
 
@@ -444,26 +454,18 @@ def imu_beast():
             return glow('#e8e6e0')
         if 0.12 < abs(x) < 0.17 and 5.0 < y < 5.05:
             return glow('#e8e6e0')
-        if x < -0.26 and y > 4.9:
+        if x < -0.22 and y > 4.9:
             return LIT
         return None
-    v.ball('head', (0, 5.3, -0.75), (0.41, 0.61, 0.41), face, mode='paint')
+    v.ball('head', (0, 5.3, -0.78), (0.34, 0.59, 0.41), face, mode='paint')
     v.tube('head', [V([0, 4.85, -1.02]), V([0, 4.55, -1.08]), V([0.02, 4.25, -1.05])], [0.11, 0.07, 0.0], hexc('#3a3844'), per=4)
-    # white helmet over the top of the head; the horns grow out of its sides
+    # white hood behind and around the black face; the horns come out of its sides
     HELM = hexc('#ecebe6')
-    HELM2 = hexc('#c9c6be')
-    helm_c = lambda p, u: HELM2 if p[1] < 5.52 else HELM
-    v.ball('head', (0, 5.6, -0.72), (0.48, 0.45, 0.46), helm_c, cut=('y', 1, 5.47))
-    v.ball('head', (0, 5.9, -0.72), (0.36, 0.22, 0.36), helm_c)  # crown, where the flame rises
+    v.ball('head', (0, 5.5, -0.6), (0.44, 0.7, 0.4), HELM)
+    # thin crescent horns, open at the top and tilted forward so the tips lean towards the viewer
     for s in SIDES:
-        v.ball('head', (0.38 * s, 5.75, -0.68), (0.2, 0.3, 0.26), helm_c)  # side plates that become the horn roots
-        v.ball('head', (0.42 * s, 5.35, -0.7), (0.08, 0.18, 0.2), helm_c)  # cheek guards down the sides of the face
-    # huge black crescent horns, open at the top, rising out of the helmet
-    for s in SIDES:
-        hp = [V([0.38 * s, 5.8, -0.68]), V([0.85 * s, 5.9, -0.5]), V([1.4 * s, 6.25, -0.4]), V([1.7 * s, 6.9, -0.4]), V([1.6 * s, 7.55, -0.4]), V([1.3 * s, 8.0, -0.4])]
-        v.tube('head', hp, [0.22, 0.27, 0.26, 0.2, 0.12, 0.04], BLACK, per=5)
-        # white collar where each horn leaves the helmet
-        v.tube('head', [V([0.5 * s, 5.82, -0.64]), V([0.62 * s, 5.85, -0.58])], 0.3, helm_c, smooth=False)
+        hp = [V([0.36 * s, 5.85, -0.65]), V([0.85 * s, 5.85, -0.6]), V([1.35 * s, 6.15, -0.7]), V([1.6 * s, 6.8, -0.95]), V([1.5 * s, 7.45, -1.25]), V([1.2 * s, 7.9, -1.5])]
+        v.tube('head', hp, [0.13, 0.17, 0.16, 0.12, 0.07, 0.02], BLACK, per=5)
     # white flame above the head, between the horns
     for k in range(3):
         ph = k * 2.1
@@ -472,7 +474,24 @@ def imu_beast():
     # ring of eyes behind him
     hcen = V([0, 6.6, 0.45])
     ring = [hcen + V([math.sin(a) * 3.0, math.cos(a) * 3.0, 0]) for a in np.linspace(0, 2 * math.pi, 57)]
-    v.tube('halo', ring, 0.17, hexc('#2a2733'), per=1, smooth=False)
+    # the ring is a band of black fire: a thin core with flame tongues licking outwards (and a few inwards)
+    FIRE, FIRE2 = hexc('#0b0a10'), hexc('#2a2338')
+    v.tube('halo', ring, 0.2, FIRE, per=1, smooth=False)
+    rng = np.random.default_rng(1198)
+    for layer, (n, lmin, lmax, base, col) in enumerate([(30, 0.7, 1.25, 0.3, FIRE2), (40, 0.4, 0.8, 0.24, FIRE), (24, 0.15, 0.35, 0.16, FIRE)]):
+        for i in range(n):
+            a = 2 * math.pi * (i + 0.5 * layer) / n + rng.uniform(-0.05, 0.05)
+            out = -1 if layer == 2 else 1             # the smallest licks point inwards
+            ln = rng.uniform(lmin, lmax)
+            ph = rng.uniform(0, 6.3)
+            pts = []
+            for t in np.linspace(0, 1, 9):
+                r = 3.0 + out * ln * t
+                # S-shaped wobble that grows towards the tip, like a flickering flame
+                b = a + (0.09 * math.sin(ph + t * 7.5) * t + 0.08 * t * t) / r * 3.0
+                pts.append(hcen + V([math.sin(b) * r, math.cos(b) * r, 0.05 * math.sin(ph + t * 5) - 0.02 * layer]))
+            rad = [base * (1 - t) ** 0.8 + 0.01 for t in np.linspace(0, 1, 9)]
+            v.tube('halo', pts, rad, col, per=1)
     for i in range(12):
         a = 2 * math.pi * (i + 0.5) / 12
         c = hcen + V([math.sin(a) * 3.0, math.cos(a) * 3.0, -0.2])
