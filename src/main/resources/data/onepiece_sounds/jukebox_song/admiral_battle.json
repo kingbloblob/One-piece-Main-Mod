@@ -1,0 +1,8 @@
+{
+  "sound_event": "onepiece_sounds:music.admiral_battle",
+  "description": {
+    "translate": "jukebox_song.onepiece_sounds.admiral_battle"
+  },
+  "length_in_seconds": 54.9,
+  "comparator_output": 9
+}

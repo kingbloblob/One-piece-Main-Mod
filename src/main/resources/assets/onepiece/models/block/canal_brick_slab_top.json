@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "onepiece:block/canal_bricks",
+    "side": "onepiece:block/canal_bricks",
+    "top": "onepiece:block/canal_bricks"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "B",
+    "B",
+    "R"
+  ],
+  "key": {
+    "B": "minecraft:polished_blackstone",
+    "R": "onepiece:rope_coil"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:mooring_bollard"
+  }
+}

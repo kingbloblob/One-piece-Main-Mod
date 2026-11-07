@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "onepiece:volcanic_ash",
+    "onepiece:grave_soil",
+    "onepiece:jungle_loam",
+    "onepiece:permafrost"
+  ]
+}

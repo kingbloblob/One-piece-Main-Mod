@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "T T",
+    "TWT"
+  ],
+  "key": {
+    "T": "minecraft:terracotta",
+    "W": "minecraft:water_bucket"
+  },
+  "result": {
+    "count": 2,
+    "id": "onepiece:clay_water_jar"
+  }
+}

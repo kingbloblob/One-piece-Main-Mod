@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "onepiece:block/kuri_pampas_bottom"
+    },
+    "half=upper": {
+      "model": "onepiece:block/kuri_pampas_top"
+    }
+  }
+}

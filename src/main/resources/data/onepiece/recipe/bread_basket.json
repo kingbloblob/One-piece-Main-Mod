@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:bread",
+    "minecraft:bread",
+    "minecraft:wheat"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:bread_basket"
+  }
+}

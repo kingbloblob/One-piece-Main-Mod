@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:sea_prism_pickaxe"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.sea_prism_tools.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.sea_prism_tools.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:sea_prism_pickaxe"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/sea_prism_vein",
+  "rewards": {
+    "experience": 300
+  }
+}

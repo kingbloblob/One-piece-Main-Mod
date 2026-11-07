@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "onepiece:block/gloom_slab"
+    },
+    "type=double": {
+      "model": "onepiece:block/gloom_planks"
+    },
+    "type=top": {
+      "model": "onepiece:block/gloom_slab_top"
+    }
+  }
+}

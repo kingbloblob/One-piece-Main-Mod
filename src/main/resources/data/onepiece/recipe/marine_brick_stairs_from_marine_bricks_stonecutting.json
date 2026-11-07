@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "onepiece:marine_bricks",
+  "result": {
+    "id": "onepiece:marine_brick_stairs",
+    "count": 1
+  }
+}

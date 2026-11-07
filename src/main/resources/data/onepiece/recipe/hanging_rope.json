@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "S",
+    "S",
+    "S"
+  ],
+  "key": {
+    "S": "minecraft:string"
+  },
+  "result": {
+    "count": 3,
+    "id": "onepiece:hanging_rope"
+  }
+}

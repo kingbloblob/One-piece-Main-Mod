@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "onepiece:block/gloom_planks",
+    "side": "onepiece:block/gloom_planks",
+    "top": "onepiece:block/gloom_planks"
+  }
+}

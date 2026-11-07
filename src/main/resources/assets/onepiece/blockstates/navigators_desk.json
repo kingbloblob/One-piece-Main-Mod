@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/navigators_desk"
+    },
+    "facing=east": {
+      "model": "onepiece:block/navigators_desk",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/navigators_desk",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/navigators_desk",
+      "y": 270
+    }
+  }
+}

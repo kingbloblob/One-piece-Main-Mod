@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:sake"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.sake.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.sake.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "onepiece:sake"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:pirate/meat"
+}

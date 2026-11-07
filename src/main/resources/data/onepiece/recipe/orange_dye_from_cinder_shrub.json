@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:cinder_shrub"
+  ],
+  "result": {
+    "id": "minecraft:orange_dye",
+    "count": 2
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:prison_bars"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.impel_down_escape.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.impel_down_escape.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/amazon_lily"
+}

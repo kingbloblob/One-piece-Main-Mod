@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "I",
+    "W",
+    "W"
+  ],
+  "key": {
+    "I": "minecraft:stick",
+    "W": "minecraft:white_wool"
+  },
+  "result": {
+    "count": 2,
+    "id": "onepiece:white_curtain"
+  }
+}

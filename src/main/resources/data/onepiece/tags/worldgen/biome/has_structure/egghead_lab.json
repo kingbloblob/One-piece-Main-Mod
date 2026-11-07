@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "onepiece:egghead",
+    "minecraft:snowy_plains",
+    "minecraft:plains",
+    "#minecraft:is_beach"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "D D"
+  ],
+  "key": {
+    "S": "onepiece:wano_lacquer_slab",
+    "D": "minecraft:dark_oak_fence"
+  },
+  "result": {
+    "count": 2,
+    "id": "onepiece:engawa_bench"
+  }
+}

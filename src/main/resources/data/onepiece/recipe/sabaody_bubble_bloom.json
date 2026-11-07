@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:dandelion",
+    "minecraft:light_blue_dye"
+  ],
+  "result": {
+    "id": "onepiece:sabaody_bubble_bloom",
+    "count": 2
+  }
+}

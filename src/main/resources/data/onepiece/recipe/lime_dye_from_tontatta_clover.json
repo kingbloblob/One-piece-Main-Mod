@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:tontatta_clover"
+  ],
+  "result": {
+    "id": "minecraft:lime_dye",
+    "count": 1
+  }
+}

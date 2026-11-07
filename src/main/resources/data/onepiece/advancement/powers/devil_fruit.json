@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:gomu_gomu_no_mi"
+    },
+    "title": {
+      "translate": "advancements.onepiece.powers.devil_fruit.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.powers.devil_fruit.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:powers/root"
+}

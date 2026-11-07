@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "W",
+    "Q",
+    "Q"
+  ],
+  "key": {
+    "W": "minecraft:red_carpet",
+    "Q": "minecraft:quartz_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:display_pedestal"
+  }
+}

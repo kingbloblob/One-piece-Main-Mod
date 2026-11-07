@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/wano_tansu"
+    },
+    "facing=east": {
+      "model": "onepiece:block/wano_tansu",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/wano_tansu",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/wano_tansu",
+      "y": 270
+    }
+  }
+}

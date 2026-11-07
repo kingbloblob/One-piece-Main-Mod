@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "wooden_pressure_plate",
+  "key": {
+    "#": "onepiece:gloom_planks"
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "id": "onepiece:gloom_pressure_plate"
+  }
+}

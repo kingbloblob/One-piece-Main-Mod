@@ -1,0 +1,16 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:foosha_village",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:concentric_rings",
+    "distance": 10,
+    "spread": 12,
+    "count": 12,
+    "preferred_biomes": "#onepiece:has_structure/foosha_village",
+    "salt": 1408172061
+  }
+}

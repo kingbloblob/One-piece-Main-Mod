@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "com.onepiecemod.anim.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"LivingEntityRendererAnimMixin",
+		"HumanoidModelAnimMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

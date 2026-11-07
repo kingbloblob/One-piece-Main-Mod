@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:figurehead_sunny"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.dream_ship.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.dream_ship.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:pirate/home_ship"
+}

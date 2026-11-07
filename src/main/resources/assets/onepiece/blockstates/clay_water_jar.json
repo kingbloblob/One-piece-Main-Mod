@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/clay_water_jar"
+    },
+    "facing=east": {
+      "model": "onepiece:block/clay_water_jar",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/clay_water_jar",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/clay_water_jar",
+      "y": 270
+    }
+  }
+}

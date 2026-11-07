@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:stone",
+    "X": "minecraft:blue_dye"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:wano_roof_tiles"
+  }
+}

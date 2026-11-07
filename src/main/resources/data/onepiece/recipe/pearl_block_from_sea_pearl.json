@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": "onepiece:sea_pearl"
+  },
+  "result": {
+    "count": 4,
+    "id": "onepiece:pearl_block"
+  }
+}

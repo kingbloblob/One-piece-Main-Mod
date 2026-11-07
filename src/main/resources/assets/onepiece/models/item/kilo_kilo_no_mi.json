@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "onepiece:item/kilo_kilo_no_mi"
+  }
+}

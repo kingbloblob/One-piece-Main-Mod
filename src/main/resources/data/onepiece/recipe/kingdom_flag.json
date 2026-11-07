@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": "minecraft:gold_block",
+    "J": "onepiece:jolly_roger",
+    "D": "minecraft:diamond",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "GJG",
+    "DSD",
+    " S "
+  ],
+  "result": {
+    "id": "onepiece:kingdom_flag"
+  }
+}

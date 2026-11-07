@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:snake_pepper"
+  ],
+  "result": {
+    "count": 2,
+    "id": "onepiece:snake_pepper_seeds"
+  }
+}

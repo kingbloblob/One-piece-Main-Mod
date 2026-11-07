@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:netherrack_replace_blobs",
+  "radius": {
+    "type": "minecraft:uniform",
+    "min_inclusive": 1,
+    "max_inclusive": 2
+  },
+  "state": "minecraft:crying_obsidian",
+  "target": "minecraft:end_stone"
+}

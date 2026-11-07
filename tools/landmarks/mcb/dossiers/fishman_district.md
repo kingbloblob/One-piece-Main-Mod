@@ -1,0 +1,5 @@
+# Fish-Man District - dossier (batch 10)
+Sources: WebSearch snippets (Fish-Man Island arc recaps, Hody Jones pages); fandom blocked.
+- The Fish-Man District is the poor, lawless quarter of Fish-Man Island where outcasts and the New Fish-Man Pirates (Hody Jones, Energy Steroids) gathered. Queen Otohime is remembered by the island.
+- Ryugu Palace (batch 1-4) already has the island bubble; this is a separate smaller bubble site.
+Design brief: 150 site, seafloor (OCEAN_FLOOR_WG), sea floor y 0. Crater sloping to y -24; bubble (mcreef.bubble_dome, r 54, top y 10, coral ribs) sunk in it; crater flooded explicitly (unset cells above y 0 are the world sea). Inside: mud/prismarine/coral slum houses (house_module, lower toward the glass), ring wall + gate, dojo, tavern, hideout with steroid crates, Otohime memorial, market. Outside: coral clusters, kelp (top <= y 12), fish ribbons, manta, jellyfish (all full blocks: no waterloggables outside). Airlock: glass tube from the gate to the crater rim ending in a door (doors keep water out).

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "onepiece:shoji_screen",
+    "onepiece:shoji_screen",
+    "onepiece:shoji_screen"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:folding_screen"
+  }
+}

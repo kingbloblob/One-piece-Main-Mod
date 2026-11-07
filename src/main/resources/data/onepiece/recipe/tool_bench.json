@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:crafting_table",
+    "minecraft:iron_ingot",
+    "minecraft:stick"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:tool_bench"
+  }
+}

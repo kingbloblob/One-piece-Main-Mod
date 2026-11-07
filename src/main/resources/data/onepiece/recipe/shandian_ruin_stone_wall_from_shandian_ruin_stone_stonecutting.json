@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "onepiece:shandian_ruin_stone",
+  "result": {
+    "id": "onepiece:shandian_ruin_stone_wall",
+    "count": 1
+  }
+}

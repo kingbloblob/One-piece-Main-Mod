@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "#minecraft:planks",
+    "X": "minecraft:paper",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "PPP",
+    "PXP",
+    "S S"
+  ],
+  "result": {
+    "id": "onepiece:recruitment_board"
+  }
+}

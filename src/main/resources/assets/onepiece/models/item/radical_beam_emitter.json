@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "onepiece:item/radical_beam_emitter"
+  }
+}

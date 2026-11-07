@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:ember_ash"
+  ],
+  "result": {
+    "id": "minecraft:gray_dye",
+    "count": 1
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "type": "onepiece:deep_trench",
+  "biomes": "#onepiece:has_structure/deep_trench",
+  "step": "raw_generation",
+  "terrain_adaptation": "none",
+  "spawn_overrides": {
+    "water_creature": {
+      "bounding_box": "full",
+      "spawns": [
+        {
+          "type": "onepiece:kraken",
+          "count": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 1,
+            "max_inclusive": 1
+          },
+          "weight": 2
+        },
+        {
+          "type": "onepiece:megalo",
+          "count": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 1,
+            "max_inclusive": 2
+          },
+          "weight": 3
+        },
+        {
+          "type": "minecraft:squid",
+          "count": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 2,
+            "max_inclusive": 4
+          },
+          "weight": 4
+        }
+      ]
+    },
+    "underground_water_creature": {
+      "bounding_box": "full",
+      "spawns": [
+        {
+          "type": "minecraft:glow_squid",
+          "count": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 2,
+            "max_inclusive": 4
+          },
+          "weight": 10
+        }
+      ]
+    }
+  }
+}

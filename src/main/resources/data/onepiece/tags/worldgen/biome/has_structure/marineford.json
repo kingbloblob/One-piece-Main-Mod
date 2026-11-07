@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:is_beach",
+    "minecraft:plains",
+    "onepiece:east_blue",
+    "minecraft:savanna",
+    "onepiece:marineford"
+  ]
+}

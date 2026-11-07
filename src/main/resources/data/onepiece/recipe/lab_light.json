@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " # ",
+    "#X#",
+    " # "
+  ],
+  "key": {
+    "#": "onepiece:lab_panel",
+    "X": "minecraft:glowstone_dust"
+  },
+  "result": {
+    "count": 4,
+    "id": "onepiece:lab_light"
+  }
+}

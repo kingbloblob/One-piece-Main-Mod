@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": {"model": "onepiece:block/wall_wanted_poster"},
+    "facing=east": {"model": "onepiece:block/wall_wanted_poster", "y": 90},
+    "facing=south": {"model": "onepiece:block/wall_wanted_poster", "y": 180},
+    "facing=west": {"model": "onepiece:block/wall_wanted_poster", "y": 270}
+  }
+}

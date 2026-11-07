@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/bonsai"
+    },
+    "facing=east": {
+      "model": "onepiece:block/bonsai",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/bonsai",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/bonsai",
+      "y": 270
+    }
+  }
+}

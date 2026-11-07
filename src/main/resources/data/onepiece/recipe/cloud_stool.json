@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " C ",
+    "C C"
+  ],
+  "key": {
+    "C": "onepiece:island_cloud"
+  },
+  "result": {
+    "count": 2,
+    "id": "onepiece:cloud_stool"
+  }
+}

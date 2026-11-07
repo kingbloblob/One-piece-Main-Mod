@@ -1,0 +1,20 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:baratie",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:arlong_park",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "onepiece:ring_spread",
+    "spacing": 32,
+    "separation": 12,
+    "salt": 1408172022,
+    "min_distance": 0,
+    "max_distance": 1800
+  }
+}

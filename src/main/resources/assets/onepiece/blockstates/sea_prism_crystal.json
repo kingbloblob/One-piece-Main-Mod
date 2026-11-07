@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "onepiece:block/sea_prism_crystal",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "onepiece:block/sea_prism_crystal",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "onepiece:block/sea_prism_crystal",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/sea_prism_crystal",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "onepiece:block/sea_prism_crystal"
+    },
+    "facing=west": {
+      "model": "onepiece:block/sea_prism_crystal",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "onepiece:scorched_stone",
+  "result": {
+    "id": "onepiece:scorched_stone_wall",
+    "count": 1
+  }
+}

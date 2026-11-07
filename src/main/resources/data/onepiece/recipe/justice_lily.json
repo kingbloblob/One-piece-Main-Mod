@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:dandelion",
+    "minecraft:white_dye"
+  ],
+  "result": {
+    "id": "onepiece:justice_lily",
+    "count": 2
+  }
+}

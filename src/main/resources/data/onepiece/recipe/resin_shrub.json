@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bush",
+    "minecraft:light_blue_dye"
+  ],
+  "result": {
+    "id": "onepiece:resin_shrub",
+    "count": 2
+  }
+}

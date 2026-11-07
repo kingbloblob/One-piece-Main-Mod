@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "S",
+    "C",
+    "P"
+  ],
+  "key": {
+    "S": "minecraft:dark_oak_slab",
+    "C": "minecraft:chest",
+    "P": "minecraft:dark_oak_planks"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:dark_oak_nightstand"
+  }
+}

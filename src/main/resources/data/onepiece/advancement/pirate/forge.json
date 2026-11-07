@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:swordsmith_forge"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.forge.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.forge.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:swordsmith_forge"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:pirate/seastone"
+}

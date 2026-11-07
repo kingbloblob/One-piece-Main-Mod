@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "onepiece:block/upper_yard_reed_bottom"
+  }
+}

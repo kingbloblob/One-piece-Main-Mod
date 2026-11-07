@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "onepiece:block/sea_train_booth_front",
+    "side": "minecraft:block/dark_oak_planks",
+    "top": "minecraft:block/dark_oak_planks",
+    "bottom": "minecraft:block/smooth_stone"
+  }
+}

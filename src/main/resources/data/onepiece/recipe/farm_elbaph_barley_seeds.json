@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:elbaph_barley"
+  ],
+  "result": {
+    "count": 2,
+    "id": "onepiece:elbaph_barley_seeds"
+  }
+}

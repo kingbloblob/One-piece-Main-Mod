@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:blue_orchid",
+    "minecraft:snowball"
+  ],
+  "result": {
+    "id": "onepiece:frost_bloom",
+    "count": 2
+  }
+}

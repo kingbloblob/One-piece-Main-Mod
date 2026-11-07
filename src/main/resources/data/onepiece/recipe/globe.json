@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:map",
+    "minecraft:gold_nugget",
+    "minecraft:dark_oak_slab"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:globe"
+  }
+}

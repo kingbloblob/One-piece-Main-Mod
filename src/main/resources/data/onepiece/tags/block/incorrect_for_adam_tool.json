@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:needs_diamond_tool",
+    "#onepiece:needs_seastone_tool",
+    "#onepiece:needs_sea_prism_tool"
+  ]
+}

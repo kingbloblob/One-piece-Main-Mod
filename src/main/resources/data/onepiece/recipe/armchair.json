@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "W  ",
+    "WWW",
+    "P P"
+  ],
+  "key": {
+    "W": "minecraft:red_wool",
+    "P": "minecraft:dark_oak_planks"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:armchair"
+  }
+}

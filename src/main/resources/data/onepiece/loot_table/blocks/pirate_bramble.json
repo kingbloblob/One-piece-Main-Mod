@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "onepiece:pirate_bramble",
+          "condition": {
+            "type": "minecraft:match_block",
+            "blocks": "onepiece:pirate_bramble",
+            "state": {
+              "half": "lower"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "random_sequence": "onepiece:blocks/pirate_bramble"
+}

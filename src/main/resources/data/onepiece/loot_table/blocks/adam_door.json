@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "condition": {
+            "type": "minecraft:match_block",
+            "blocks": "onepiece:adam_door",
+            "state": {
+              "half": "lower"
+            }
+          },
+          "name": "onepiece:adam_door"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "onepiece:blocks/adam_door"
+}

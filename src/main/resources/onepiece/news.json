@@ -1,0 +1,132 @@
+{
+  "_help": "Text for the News Coo paper, the wall Wanted Posters and Den Den Mushi calls (package com.onepiecemod.news). world: stories by saga id, picked by the reader's story chapter. anytime: stories for any time; {island}, {pirate}, {marine}, {sea} are filled in. canon: pirates on wall posters when there aren't enough player posters; saga = the first saga (0-5) they appear in. taunts: what a boss says over the Den Den Mushi when you come close (tier1..tier5 are the fallbacks).",
+  "world": {
+    "romance_dawn": [
+      "ROGER'S WORDS STILL ECHO: Twenty-two years after the Pirate King's execution, young dreamers keep setting out to sea in search of the One Piece.",
+      "CAPTAIN MORGAN'S IRON RULE: Shells Town residents say the Marine captain's new statue grows taller every week. Taxes grow with it.",
+      "SEA KING SIGHTED OFF DAWN ISLAND: Fishermen of Foosha Village warn travellers to keep small boats near the shore.",
+      "ALVIDA'S FLEET RAIDS MERCHANT SHIPS: The iron-mace pirate claims she is the most beautiful woman in the seas. Few dare to disagree."
+    ],
+    "east_blue": [
+      "BUGGY'S CREW TAKES ORANGE TOWN: Citizens flee as the clown pirate fires his famous Buggy Balls at the harbour.",
+      "BARATIE CHEF RETURNS TO THE KITCHEN: Red-Leg Zeff's floating restaurant says it will feed anyone who is hungry, even pirates.",
+      "ARLONG'S TRIBUTE DUE AGAIN: The Fish-Man pirate demands payment from every village on the Conomi Islands.",
+      "LOGUETOWN PREPARES FOR FESTIVAL: The town where Roger was born and died expects pirates by the hundred. Captain Smoker promises none will leave.",
+      "KRIEG ARMADA LOST IN THE GRAND LINE: Only one ship of fifty came back. The survivors speak of a man with hawk-like eyes.",
+      "REVERSE MOUNTAIN CURRENTS STRONGER THAN EVER: Sailors heading for the Grand Line are told to aim for the very centre."
+    ],
+    "paradise": [
+      "DROUGHT IN ALABASTA: Rain has not fallen on the desert kingdom for three years. Many blame King Cobra; some whisper about Dance Powder.",
+      "SIR CROCODILE HAILED AS HERO: The Warlord of the Sea is praised for chasing pirates out of Alabasta's ports.",
+      "STRANGE SHADOW OVER JAYA: A ship fell from the sky near Mock Town, and the locals now talk of an island in the clouds.",
+      "CP9 SEEN AT WATER 7: Shipwrights of Galley-La say government agents have been asking about old blueprints.",
+      "THRILLER BARK DRIFTS INTO THE FLORIAN TRIANGLE: Ships that pass the ghost island are found without their shadows.",
+      "SABAODY AUCTIONS DRAW CELESTIAL DRAGONS: Rookies with bounties over 100 million gather on the archipelago. The Navy is nervous.",
+      "ENIES LOBBY GATES CLOSE: The judicial island never sleeps. Prisoners carried across the Bridge of Hesitation are never seen again."
+    ],
+    "summit_war": [
+      "FIRE FIST ACE TO BE EXECUTED: The Marines will publicly execute Portgas D. Ace at Marineford. Whitebeard is expected to answer.",
+      "IMPEL DOWN ON HIGH ALERT: Warden Magellan doubles the guard on Level 6 after rumours of a break-in.",
+      "BOA HANCOCK REFUSES THE NAVY: The Pirate Empress will not join the war at Marineford, the Kuja say.",
+      "THE WAR OF THE BEST: Seven Warlords, three Admirals and the Whitebeard Pirates clash at Marineford. The world holds its breath.",
+      "WHITEBEARD HAS FALLEN: The strongest man in the world is dead. Blackbeard now holds the Tremor-Tremor Fruit.",
+      "A NEW ERA BEGINS: Pirates flood into the New World. The Navy starts conscripting at every base."
+    ],
+    "new_world": [
+      "FISH-MAN ISLAND QUAKES: Hody Jones's New Fish-Man Pirates threaten King Neptune's palace.",
+      "PUNK HAZARD QUARANTINED: A poison gas disaster turned the island half fire, half ice. A mad scientist still lives there.",
+      "DOFLAMINGO GIVES UP HIS THRONE?: Dressrosa's king steps down, then takes it back the same morning. Officials call it a misprint.",
+      "BIG MOM'S TEA PARTY INVITATIONS SENT: Every invitation is a wedding. Every refusal is a war.",
+      "WANO'S BORDERS SEALED: The samurai country lets no ship in or out. Kaido of the Beasts rules from Onigashima.",
+      "ZOU FOUND RUINED: The island on the elephant's back was attacked by Jack the Drought. The Minks are rebuilding.",
+      "REVERIE OPENS IN MARY GEOISE: Kings of fifty nations gather on the Red Line. Revolutionaries are rumoured to be close."
+    ],
+    "final_saga": [
+      "BLACKBEARD BUILDS AN ARMY: Hachinosu, the island of pirates, flies the Blackbeard flag. Ten Titanic Captains answer to Teach.",
+      "THE WORLD SHAKES: Waves rise across the seas and old islands sink a little lower each week. Scholars blame something buried in the past.",
+      "THE ROAD TO LAUGH TALE: Three Road Poneglyphs have been read, says a source. Somebody is close to the One Piece.",
+      "EGGHEAD SIGNAL HEARD WORLDWIDE: A voice speaks from every Den Den Mushi at once about a Great Kingdom, then the line goes dead."
+    ],
+    "void_century": [
+      "THE EMPTY THRONE IS NOT EMPTY: Guards in Pangaea Castle report footsteps in the throne room at night.",
+      "OHARA'S LAST BOOKS FOUND: Scholars say the Void Century cannot stay hidden forever.",
+      "THE MOTHER FLAME: Reports of a great light over the Red Line. The Five Elders give no comment."
+    ]
+  },
+  "anytime": [
+    "MARINE FLEET CROSSES THE {sea}: Twelve warships under Vice Admiral {marine} sailed past {island} this morning.",
+    "PIRATES CLASH NEAR {island}: The {pirate} Pirates and a rival crew fought for two days. Both ships were left without masts.",
+    "FESTIVAL AT {island}: Townsfolk invite every passing sailor to the harbour for food, music and fireworks.",
+    "SEA KING ATTACKS FERRY: Passengers on a ship bound for {island} were saved by a fisherman with a very big harpoon.",
+    "BERRY PRICES RISE: Merchants on {island} say a barrel of meat now costs twice what it did last month.",
+    "STORM WARNING FOR THE {sea}: Navigators report sudden cyclones. Captains should keep their Log Pose close.",
+    "TREASURE FOUND AT {island}: A child digging on the beach uncovered a chest of gold coins. The Navy collected it 'for safe keeping'.",
+    "BOUNTY HUNTERS GATHER: Word is that the {pirate} Pirates are worth hunting. Inns on {island} are full.",
+    "WORLD GOVERNMENT RAISES REWARDS: Every bounty in the {sea} will be checked again this season.",
+    "NEW MARINE BASE AT {island}: Vice Admiral {marine} promises to 'clean up' the nearby waters."
+  ],
+  "islands": ["Dawn Island", "Shells Town", "Syrup Village", "Loguetown", "Whisky Peak", "Little Garden", "Drum Island", "Nanohana", "Water 7", "Sabaody", "Fish-Man Island", "Dressrosa", "Zou", "Wano", "Elbaph", "Jaya", "Long Ring Long Land", "Banaro Island", "Baltigo", "Kamabakka"],
+  "pirates": ["Krieg", "Bellamy", "Foxy", "Wapol", "Caribou", "Capone Bege", "Scratchmen Apoo", "Urouge", "Jewelry Bonney", "Bartolomeo", "Cavendish", "Barto", "Gold Dust", "Iron Jaw", "Red Wave"],
+  "marines": ["Garp", "Momonga", "Onigumo", "Doberman", "Strawberry", "Tsuru", "Comil", "Bastille", "Yamakaji", "Nezumi", "Hina", "Vergo"],
+  "seas": ["East Blue", "West Blue", "North Blue", "South Blue", "Grand Line", "New World"],
+  "canon": [
+    {"name": "Buggy the Clown", "bounty": 15000000, "saga": 0},
+    {"name": "Alvida", "bounty": 5000000, "saga": 0},
+    {"name": "Kuro", "bounty": 16000000, "saga": 0},
+    {"name": "Don Krieg", "bounty": 17000000, "saga": 1},
+    {"name": "Arlong", "bounty": 20000000, "saga": 1},
+    {"name": "Monkey D. Luffy", "bounty": 30000000, "saga": 1},
+    {"name": "Bellamy", "bounty": 55000000, "saga": 2},
+    {"name": "Nico Robin", "bounty": 79000000, "saga": 2},
+    {"name": "Portgas D. Ace", "bounty": 550000000, "saga": 2},
+    {"name": "Eustass Kid", "bounty": 315000000, "saga": 2},
+    {"name": "Trafalgar Law", "bounty": 200000000, "saga": 2},
+    {"name": "Roronoa Zoro", "bounty": 120000000, "saga": 2},
+    {"name": "Edward Newgate", "bounty": 5046000000, "saga": 3},
+    {"name": "Marshall D. Teach", "bounty": 2247600000, "saga": 3},
+    {"name": "Donquixote Doflamingo", "bounty": 340000000, "saga": 4},
+    {"name": "Charlotte Katakuri", "bounty": 1057000000, "saga": 4},
+    {"name": "Charlotte Linlin", "bounty": 4388000000, "saga": 4},
+    {"name": "Kaido", "bounty": 4611100000, "saga": 4},
+    {"name": "Shanks", "bounty": 4048900000, "saga": 4},
+    {"name": "Monkey D. Luffy", "bounty": 3000000000, "saga": 5}
+  ],
+  "taunts": {
+    "buggy": ["Hey, you! Yes, you! Bring me that map before I fire a Buggy Ball at your silly face!", "Who are you calling a big red nose?! Come here and say it again!"],
+    "smoker": ["This is Smoker. I know you're close. You won't leave this island.", "Turn yourself in. I'm not in the mood to chase you."],
+    "crocodile": ["Kuhahaha... So the rookie came all this way just to dry up in my desert.", "Dreams are for the weak. Come and I'll show you."],
+    "enel": ["Yahahaha! I heard every word you said down there. God hears everything.", "You stand on my land. Kneel, or be struck down."],
+    "lucci": ["Cipher Pol Nine. You are on our list now. Justice will find you.", "Darkness is justice. Come, and I will show you."],
+    "moria": ["Kishishishi! What a fine shadow you have. I think I'll keep it.", "Come closer... my zombies are hungry for a new friend."],
+    "magellan": ["...This is the Warden. Nobody breaks out of my prison. Nobody breaks in either.", "Give me a moment... my stomach... then I'll poison you."],
+    "doflamingo": ["Fufufufu! You've got guts, coming to my kingdom. Let's see how long your strings last.", "Only the winners decide what justice is. Come and lose."],
+    "katakuri": ["I already know what you're going to say. Don't bother.", "Mama would like your head on the tea table."],
+    "queen": ["Murrrr! Udon's prisoners are rioting, and the rookie behind it is about to catch the Ice Oni!", "Kaido-san's party needs a little entertainment. You'll do."],
+    "gunko": ["The Holy Knights have come to Elbaph to judge the giants. Anyone who stands with them will be judged too.", "Rules are rules. No ifs, no buts."],
+    "shamrock": ["Elbaph will be judged, and Cerberus is hungry.", "My brother chose pirates. I chose the Holy Land. We'll see whose choice was right."],
+    "saturn": ["...An insect that crawled to Egghead. The Gorosei do not negotiate.", "Kneel. Every one of you."],
+    "hody": ["The surface world will drown. Fish-Man Island answers to me now!", "Another human in our sea? Bring him to the plaza. I want everyone to watch."],
+    "king": ["The Beasts Pirates do not answer to rookies. Turn around.", "Kaido-san is busy. You'll have to burn through me first."],
+    "kid": ["Get out of my way, or I'll crush you with your own ship!", "Another 'future Pirate King'? Ha! Come and try."],
+    "killer": ["Fa fa fa... Kid wants your head. I'll bring it to him.", "Fa fa fa fa..."],
+    "hawkins": ["The cards were clear. Your chance of surviving today is three percent.", "I drew Death for you. It is never wrong."],
+    "mihawk": ["You seek the world's strongest sword? Then come, and be quick about it.", "I do not waste my time on weaklings. Prove you are not one."],
+    "kizaru": ["Ooh, scary... a rookie on the line. Shall I come over at the speed of light?", "Maa, maa, I'm on my way."],
+    "akainu": ["Absolute Justice. Every pirate will burn, and you are next.", "There is no place in this world for scum like you."],
+    "fujitora": ["I cannot see you, but I hear the sea around you. Shall we roll the dice?", "The Navy asked me to bring you in. I would prefer you came quietly."],
+    "ryokugyu": ["Hah. Nice island you're standing on. My roots are under it.", "I haven't eaten in three years. You look full of life."],
+    "aokiji": ["Ara ara... I'd rather be sleeping. Don't make me freeze you.", "Lazy justice. Just leave, and I won't bother."],
+    "whitebeard": ["Gurarara! A brat with spirit. Come and test this old man.", "Every man who calls himself a pirate must face me sooner or later."],
+    "big_mom": ["Life or treat?! Bring me a cake or I'll take your life, mamamama!", "My children say a rookie is near. How rude to come without sweets."],
+    "kaido": ["Wololo... a fun fight at last? Don't disappoint me like the others.", "Strength is everything. Show me yours."],
+    "blackbeard": ["Zehahahaha! People's dreams never end! But yours ends today.", "That power you have... I want it. Zehahaha!"],
+    "imu": ["...You have read what was not meant to be read.", "...The world belongs to the throne. Your name will be erased."],
+    "loki": ["Elbaph's cursed prince has broken his chains. Giants and pirates alike, stay clear of the great tree.", "Thunder over Elbaph again... they say a dragon sleeps in Prince Loki."],
+    "xebec": ["Ha! The world is mine to take. Get out of my way, or join me.", "God Valley will burn, and you with it."],
+    "tier1": ["Gacha... Hey, I know you're out there. My crew is waiting for you!"],
+    "tier2": ["Gacha... You're the one with the bounty? Come and get beaten, then."],
+    "tier3": ["Gacha... Turn back, rookie. This island belongs to me."],
+    "tier4": ["Gacha... You've caused enough trouble. I'll end it here."],
+    "tier5": ["Gacha... The world is bigger than you think. Come, and learn."]
+  }
+}

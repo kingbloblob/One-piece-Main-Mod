@@ -1,0 +1,131 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:dadan_hideout",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:shells_town",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:syrup_village",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:cocoyasi_village",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:twin_capes_lighthouse",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:pirate_camp",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:drum_castle",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:nanohana_port",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:yuba_oasis",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:cricket_house",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:angel_beach",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:weatheria",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:davy_back_stage",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:sea_train_station",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:shakky_bar",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:sabaody_park",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:toy_house",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:mokomo_dukedom",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:chocolate_town",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:ebisu_town",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:wano_house",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:sunken_galleon",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:sea_king_bones",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:going_merry_farewell",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:baltigo",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:ohara_library",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:gray_terminal",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:momoiro_island",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:boin_archipelago",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:den_den_outpost",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "onepiece:ring_spread",
+    "spacing": 24,
+    "separation": 12,
+    "salt": 1408172001,
+    "min_distance": 0
+  }
+}

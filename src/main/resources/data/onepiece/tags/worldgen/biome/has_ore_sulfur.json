@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:badlands",
+    "minecraft:eroded_badlands",
+    "minecraft:desert",
+    "onepiece:punk_hazard_burning",
+    "onepiece:punk_hazard_frozen",
+    "onepiece:alabasta",
+    "onepiece:kuri",
+    "onepiece:hachinosu"
+  ]
+}

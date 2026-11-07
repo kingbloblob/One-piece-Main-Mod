@@ -1,0 +1,8 @@
+{
+  "sound_event": "onepiece_sounds:music.blackbeard_battle",
+  "description": {
+    "translate": "jukebox_song.onepiece_sounds.blackbeard_battle"
+  },
+  "length_in_seconds": 60.0,
+  "comparator_output": 15
+}

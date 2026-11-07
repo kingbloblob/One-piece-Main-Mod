@@ -1,0 +1,26 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:blazing_hell_furnace",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:freezing_hell_cells",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:newkama_land",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:eternal_hell_vault",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 24,
+    "separation": 8,
+    "salt": 1408172011
+  }
+}

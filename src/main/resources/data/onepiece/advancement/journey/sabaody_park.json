@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:bubble_glass"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.sabaody_park.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.sabaody_park.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:sabaody_park"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/land_ho"
+}

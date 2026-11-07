@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/sakura_cupboard"
+    },
+    "facing=east": {
+      "model": "onepiece:block/sakura_cupboard",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/sakura_cupboard",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/sakura_cupboard",
+      "y": 270
+    }
+  }
+}

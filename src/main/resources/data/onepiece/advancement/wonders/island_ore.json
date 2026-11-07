@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:snake_jade"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.island_ore.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.island_ore.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "onepiece:desert_amber",
+              "onepiece:sun_coral",
+              "onepiece:rock_candy",
+              "onepiece:raw_giant_iron",
+              "onepiece:egghead_alloy",
+              "onepiece:gloom_crystal",
+              "onepiece:electro_crystal",
+              "onepiece:snake_jade"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/root"
+}

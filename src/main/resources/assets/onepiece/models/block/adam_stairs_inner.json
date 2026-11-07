@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "onepiece:block/adam_planks",
+    "side": "onepiece:block/adam_planks",
+    "top": "onepiece:block/adam_planks"
+  }
+}

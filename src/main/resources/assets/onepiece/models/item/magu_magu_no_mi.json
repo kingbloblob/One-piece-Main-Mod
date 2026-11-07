@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "onepiece:item/magu_magu_no_mi"
+  }
+}

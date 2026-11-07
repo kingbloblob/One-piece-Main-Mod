@@ -1,0 +1,13 @@
+{
+  "name": "Thousand Sunny",
+  "template": "onepiece:ships/thousand_sunny",
+  "bow": "east",
+  "waterline": 2.9,
+  "faction": "player",
+  "tiers": [],
+  "crew": "Straw Hat Pirates",
+  "length": 47,
+  "beam": 19,
+  "height": 51,
+  "blocks": 4693
+}

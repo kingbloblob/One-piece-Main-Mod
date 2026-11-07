@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/swordsmith_forge"
+    },
+    "facing=east": {
+      "model": "onepiece:block/swordsmith_forge",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/swordsmith_forge",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/swordsmith_forge",
+      "y": 270
+    }
+  }
+}

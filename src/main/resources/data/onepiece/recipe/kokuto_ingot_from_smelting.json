@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 400,
+  "experience": 1.0,
+  "group": "kokuto_ingot",
+  "ingredient": "onepiece:raw_kokuto",
+  "result": {
+    "id": "onepiece:kokuto_ingot"
+  }
+}

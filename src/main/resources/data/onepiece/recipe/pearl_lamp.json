@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "onepiece:pearl_block",
+    "minecraft:glowstone_dust",
+    "onepiece:coral_bricks"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:pearl_lamp"
+  }
+}

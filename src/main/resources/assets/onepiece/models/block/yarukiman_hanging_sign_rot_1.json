@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_hanging_sign_rot_1",
+  "textures": {
+    "all": "onepiece:block/yarukiman_hanging_sign",
+    "particle": "onepiece:block/stripped_yarukiman_log"
+  }
+}

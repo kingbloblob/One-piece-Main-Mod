@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "onepiece:desert_thistle",
+          "condition": {
+            "type": "minecraft:match_block",
+            "blocks": "onepiece:desert_thistle",
+            "state": {
+              "half": "lower"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "random_sequence": "onepiece:blocks/desert_thistle"
+}

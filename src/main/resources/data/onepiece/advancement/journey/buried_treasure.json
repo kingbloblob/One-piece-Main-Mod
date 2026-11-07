@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:dig_spot"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.buried_treasure.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.buried_treasure.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/treasure_map"
+}

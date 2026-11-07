@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/feast_table"
+    },
+    "facing=east": {
+      "model": "onepiece:block/feast_table",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/feast_table",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/feast_table",
+      "y": 270
+    }
+  }
+}

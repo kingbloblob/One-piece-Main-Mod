@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": "#minecraft:logs",
+    "I": "minecraft:iron_ingot",
+    "R": "onepiece:rope_coil",
+    "P": "#minecraft:planks"
+  },
+  "pattern": [
+    "LLL",
+    " IR",
+    "PPP"
+  ],
+  "result": {
+    "id": "onepiece:shipyard_crane"
+  }
+}

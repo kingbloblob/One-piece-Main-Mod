@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wooden_button",
+  "ingredients": [
+    "onepiece:sakura_planks"
+  ],
+  "result": {
+    "id": "onepiece:sakura_button"
+  }
+}

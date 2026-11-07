@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "onepiece:block/pirate_bramble_bottom"
+  }
+}

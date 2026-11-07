@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "onepiece:block/dressrosa_stucco_slab"
+    },
+    "type=double": {
+      "model": "onepiece:block/dressrosa_stucco"
+    },
+    "type=top": {
+      "model": "onepiece:block/dressrosa_stucco_slab_top"
+    }
+  }
+}

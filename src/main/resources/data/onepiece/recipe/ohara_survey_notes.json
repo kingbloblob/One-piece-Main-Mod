@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:book",
+    "minecraft:compass",
+    "minecraft:ink_sac",
+    "minecraft:paper"
+  ],
+  "result": {
+    "id": "onepiece:ohara_survey_notes",
+    "count": 1
+  }
+}

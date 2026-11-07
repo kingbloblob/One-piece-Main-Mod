@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:book",
+    "minecraft:blue_dye",
+    "minecraft:oak_boat"
+  ],
+  "result": {
+    "id": "onepiece:deck_plans"
+  }
+}

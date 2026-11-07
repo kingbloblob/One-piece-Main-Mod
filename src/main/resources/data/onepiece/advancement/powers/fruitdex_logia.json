@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:mera_mera_no_mi"
+    },
+    "title": {
+      "translate": "advancements.onepiece.powers.fruitdex_logia.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.powers.fruitdex_logia.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:powers/fruitdex_15"
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/ore_cart"
+    },
+    "facing=east": {
+      "model": "onepiece:block/ore_cart",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/ore_cart",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/ore_cart",
+      "y": 270
+    }
+  }
+}

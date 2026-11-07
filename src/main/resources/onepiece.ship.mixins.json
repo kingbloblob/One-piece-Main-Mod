@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "com.onepiecemod.ship.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"EntityCollideMixin",
+		"EntityFluidMixin",
+		"ShipVehicleMoveMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

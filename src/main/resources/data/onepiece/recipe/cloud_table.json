@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "CCC",
+    " C ",
+    " C "
+  ],
+  "key": {
+    "C": "onepiece:island_cloud"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:cloud_table"
+  }
+}

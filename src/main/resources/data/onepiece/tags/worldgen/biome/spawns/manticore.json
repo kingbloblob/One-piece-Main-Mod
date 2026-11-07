@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:soul_sand_valley",
+    "minecraft:warped_forest",
+    "minecraft:nether_wastes",
+    "onepiece:impel_down_freezing_hell",
+    "onepiece:impel_down_blazing_hell"
+  ]
+}

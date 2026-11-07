@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "onepiece:adam_log"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "onepiece:blocks/adam_log"
+}

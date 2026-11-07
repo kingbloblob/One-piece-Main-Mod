@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:seraphim_feather"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.seraphim.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.seraphim.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/mark_iii"
+}

@@ -1,0 +1,52 @@
+package com.onepiecemod.flora;
+
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
+
+import com.onepiecemod.OnePieceMod;
+
+/**
+ * Island flora: flowers, tall plants, grass, shrubs, ground cover and soils for every Grand Line island.
+ * OnePieceMod calls initialize() once.
+ *
+ * Each plant is added to its biomes by tag: data/onepiece/tags/worldgen/biome/has_flora_<plant>.json lists the
+ * biomes it grows in, so where things grow can change without touching code. The soils are placed by the Grand Line
+ * surface rules instead (tools/islands/island_flavour.py). This file is made by tools/flora/gen_flora.py.
+ */
+public class FloraFeature {
+	public static final ResourceKey<CreativeModeTab> TAB_KEY = ResourceKey.create(
+			BuiltInRegistries.CREATIVE_MODE_TAB.key(), OnePieceMod.id("flora"));
+
+	public static void initialize() {
+		FloraBlocks.initialize();
+
+		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_KEY, FabricCreativeModeTab.builder()
+				.icon(() -> new ItemStack(FloraBlocks.DAWN_POPPY))
+				.title(Component.translatable("itemGroup.onepiece.flora"))
+				.displayItems((params, output) -> {
+%%TAB%%
+				})
+				.build());
+
+%%BIOMES%%
+	}
+
+	private static void addVegetation(String plant) {
+		TagKey<Biome> tag = TagKey.create(Registries.BIOME, OnePieceMod.id("has_flora_" + plant));
+		ResourceKey<PlacedFeature> feature = ResourceKey.create(Registries.PLACED_FEATURE, OnePieceMod.id("flora_" + plant));
+		BiomeModifications.addFeature(BiomeSelectors.tag(tag), GenerationStep.Decoration.VEGETAL_DECORATION, feature);
+	}
+}

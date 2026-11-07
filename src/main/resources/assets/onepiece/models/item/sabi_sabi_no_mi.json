@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "onepiece:item/sabi_sabi_no_mi"
+  }
+}

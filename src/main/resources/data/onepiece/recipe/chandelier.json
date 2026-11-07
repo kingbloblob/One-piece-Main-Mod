@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " N ",
+    "CGC",
+    " C "
+  ],
+  "key": {
+    "N": "minecraft:iron_chain",
+    "G": "minecraft:gold_ingot",
+    "C": "#minecraft:candles"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:chandelier"
+  }
+}

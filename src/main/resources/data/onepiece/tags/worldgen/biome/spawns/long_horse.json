@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:plains",
+    "minecraft:sunflower_plains",
+    "minecraft:savanna",
+    "onepiece:east_blue",
+    "onepiece:orange_town",
+    "onepiece:loguetown",
+    "onepiece:conomi_islands",
+    "onepiece:marineford",
+    "onepiece:zou",
+    "onepiece:god_valley",
+    "onepiece:dressrosa"
+  ]
+}

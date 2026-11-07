@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:gomu_gomu_no_mi"
+    },
+    "title": {
+      "translate": "advancements.onepiece.powers.root.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.powers.root.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "onepiece:gui/advancements/backgrounds/powers"
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ]
+}

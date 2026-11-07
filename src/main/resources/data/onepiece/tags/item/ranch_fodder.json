@@ -1,0 +1,17 @@
+{
+  "values": [
+    "minecraft:wheat",
+    "minecraft:hay_block",
+    "minecraft:carrot",
+    "minecraft:potato",
+    "minecraft:beetroot",
+    "minecraft:apple",
+    "minecraft:melon_slice",
+    "minecraft:sugar_cane",
+    "minecraft:kelp",
+    "minecraft:sweet_berries",
+    "minecraft:short_grass",
+    "minecraft:fern",
+    "#onepiece:island_crops"
+  ]
+}

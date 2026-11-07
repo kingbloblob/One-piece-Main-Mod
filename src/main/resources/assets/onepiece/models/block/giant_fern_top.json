@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "onepiece:block/giant_fern_top"
+  }
+}

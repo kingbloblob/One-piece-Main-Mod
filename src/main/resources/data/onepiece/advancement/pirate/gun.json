@@ -1,0 +1,42 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:flintlock_pistol"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.gun.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.gun.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "onepiece:flintlock_pistol",
+              "onepiece:marine_rifle",
+              "onepiece:tommy_gun",
+              "onepiece:hand_cannon",
+              "onepiece:kabuto",
+              "onepiece:kuro_kabuto"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:pirate/station"
+}

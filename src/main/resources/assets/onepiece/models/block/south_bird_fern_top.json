@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "onepiece:block/south_bird_fern_top"
+  }
+}

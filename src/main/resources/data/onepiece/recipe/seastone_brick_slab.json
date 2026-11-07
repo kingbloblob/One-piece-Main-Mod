@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:seastone_bricks"
+  },
+  "result": {
+    "count": 6,
+    "id": "onepiece:seastone_brick_slab"
+  }
+}

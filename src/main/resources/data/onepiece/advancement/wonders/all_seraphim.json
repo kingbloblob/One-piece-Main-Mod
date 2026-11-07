@@ -1,0 +1,49 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:vegapunk_chip"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.all_seraphim.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.all_seraphim.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "s_bear": {
+      "trigger": "minecraft:impossible"
+    },
+    "s_hawk": {
+      "trigger": "minecraft:impossible"
+    },
+    "s_snake": {
+      "trigger": "minecraft:impossible"
+    },
+    "s_shark": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "s_bear"
+    ],
+    [
+      "s_hawk"
+    ],
+    [
+      "s_snake"
+    ],
+    [
+      "s_shark"
+    ]
+  ],
+  "parent": "onepiece:wonders/seraphim",
+  "rewards": {
+    "experience": 500
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "_help": "Boss intros and story flashbacks (com.onepiecemod.cutscene). bosses: character id -> title (shown under the name), line (what they say; empty = their greeting from characters.json), color (hex accent). Each intro plays once per player, the first time that boss starts a fight with them. flashbacks: id -> chapter (story.json chapter id; plays when that chapter starts), title, when (shown under 'Flashback'), lines ('Speaker: text', or plain text for narration). Players replay seen flashbacks with /flashback.",
+  "bosses": {
+    "buggy": {"title": "Captain of the Buggy Pirates", "line": "You'll pay for laughing at my nose! Flashy, flashy!", "color": "E8423C"},
+    "smoker": {"title": "Marine Captain, the White Hunter", "color": "D8DDE6"},
+    "crocodile": {"title": "Warlord of the Sea, Mr. 0 of Baroque Works", "color": "D9B86A"},
+    "enel": {"title": "The God of Skypiea", "color": "6EC6FF"},
+    "lucci": {"title": "CP9's Strongest Assassin", "color": "C9A25A"},
+    "moria": {"title": "Warlord of the Sea, Master of Thriller Bark", "color": "8A6FC9"},
+    "magellan": {"title": "Chief Warden of Impel Down", "color": "9B4FC9"},
+    "doflamingo": {"title": "Warlord of the Sea, King of Dressrosa", "color": "FF6FB5"},
+    "katakuri": {"title": "Sweet Commander of the Big Mom Pirates", "color": "C24A6A"},
+    "big_mom": {"title": "Emperor of the Sea, Queen of Totto Land", "color": "FF8FD0"},
+    "queen": {"title": "All-Star of the Beast Pirates, the Plague", "color": "7FD15A"},
+    "king": {"title": "All-Star of the Beast Pirates, the Wildfire", "color": "FF7A2E"},
+    "kaido": {"title": "Emperor of the Sea, the Strongest Creature", "line": "Wololo... Show me you're worth killing.", "color": "6FA8FF"},
+    "blackbeard": {"title": "Emperor of the Sea, Captain of the Blackbeard Pirates", "color": "5A4A7A"},
+    "saturn": {"title": "Warrior God of Science and Defense, one of the Five Elders", "color": "B0B8C8"},
+    "gunko": {"title": "Holy Knight of Mary Geoise", "line": "Giants, pirates, it's all the same. You broke the rules, so you get punished.", "color": "D8D0F0"},
+    "shamrock": {"title": "Commander of the Holy Knights, Shanks's twin", "line": "You beat Gunko at Elbaph. My brother's pick... let's see what he saw in you.", "color": "E8E4F0"},
+    "hody": {"title": "Captain of the New Fish-Man Pirates", "line": "Ten thousand meters down, and you still think you can stand above us? Hahaha!", "color": "4A7AB8"},
+    "imu": {"title": "The One on the Empty Throne", "color": "9AA0B0"},
+    "loki": {"title": "Prince of Elbaph, the Accursed Prince", "line": "The chains are off. Now run.", "color": "D8B040"},
+    "xebec": {"title": "Captain of the Rocks Pirates, Terror of God Valley", "color": "B03A3A"},
+    "whitebeard": {"title": "Emperor of the Sea, the Strongest Man in the World", "color": "F2F2F2"},
+    "mihawk": {"title": "Warlord of the Sea, the World's Greatest Swordsman", "color": "C9C060"},
+    "akainu": {"title": "Fleet Admiral of the Navy, Red Dog", "color": "E8452C"},
+    "kizaru": {"title": "Admiral of the Navy, Yellow Monkey", "color": "FFE04A"},
+    "aokiji": {"title": "Former Admiral, Blue Pheasant", "color": "8FD8FF"},
+    "fujitora": {"title": "Admiral of the Navy, Purple Tiger", "color": "A57AE0"},
+    "ryokugyu": {"title": "Admiral of the Navy, Green Bull", "color": "6ED67A"},
+    "kid": {"title": "Captain of the Kid Pirates, the Worst Generation", "color": "E8423C"},
+    "killer": {"title": "Massacre Soldier of the Kid Pirates", "color": "F2D27A"},
+    "hawkins": {"title": "The Magician of the Hawkins Pirates", "color": "E8D49A"},
+    "garp": {"title": "Vice Admiral, Hero of the Navy", "color": "D8DDE6"},
+    "marco": {"title": "First Division Commander, the Phoenix", "color": "5AB8FF"},
+    "rayleigh": {"title": "The Dark King, Roger's First Mate", "color": "D8DDE6"},
+    "shanks": {"title": "Emperor of the Sea, Red-Haired Shanks", "color": "E8423C"},
+    "roger": {"title": "The King of the Pirates", "color": "F2C14E"}
+  },
+  "flashbacks": {
+    "roger_execution": {
+      "chapter": "dream",
+      "title": "The Man Who Started It All",
+      "when": "Loguetown, 22 years ago",
+      "lines": [
+        "A crowd fills the square under a grey sky. On the platform kneels Gol D. Roger, King of the Pirates.",
+        "Voice in the crowd: Where did you hide your treasure, Roger?!",
+        "Roger: Wahahaha! My treasure? Go and look for it. I left all of it in one place!",
+        "With those words, men all over the world set out to sea. The Great Pirate Era had begun."
+      ]
+    },
+    "shanks_hat": {
+      "chapter": "koby",
+      "title": "A Promise in Straw",
+      "when": "Foosha Village, 10 years ago",
+      "lines": [
+        "A Sea King rises from the water. A red-haired pirate throws himself between it and a crying boy.",
+        "Shanks: It's just an arm. No big deal. You're safe, that's what matters.",
+        "Shanks: Keep this hat for me. Give it back one day, when you've become a great pirate.",
+        "The boy swore he would. That boy was Monkey D. Luffy."
+      ]
+    },
+    "bellemere": {
+      "chapter": "arlong_park",
+      "title": "Bell-mère's Tangerines",
+      "when": "Cocoyasi Village, 8 years ago",
+      "lines": [
+        "Arlong demands a tax for every life in the village. Bell-mère has money for only one.",
+        "Bell-mère: Paying for two would be a lie. They're my daughters. I won't say they aren't.",
+        "Bell-mère: Nami, Nojiko... I love you.",
+        "A shot rang out among the tangerine trees. Nami joined Arlong's crew that day, to buy her village back."
+      ]
+    },
+    "zeff_rock": {
+      "chapter": "baratie",
+      "title": "Eighty-Five Days on a Rock",
+      "when": "The East Blue, 9 years ago",
+      "lines": [
+        "A storm sank the ship. A boy cook and the pirate Red-Leg Zeff washed up on a bare rock in the sea.",
+        "Zeff gave the boy the whole sack of food and kept nothing for himself but treasure.",
+        "Sanji: Your sack... it's full of jewels. You ate your own leg to stay alive?!",
+        "Zeff: Once we're off this rock, we'll build a restaurant out at sea. Where no one goes hungry."
+      ]
+    },
+    "loguetown_platform": {
+      "chapter": "loguetown",
+      "title": "The Town of the Beginning and the End",
+      "when": "Loguetown, the day of the execution",
+      "lines": [
+        "The same platform still stands in the square where Roger died.",
+        "They say he smiled at the end. A smile no one in the crowd ever forgot.",
+        "Twenty-two years later, a new pirate climbs the steps... and the sky is just as grey."
+      ]
+    },
+    "hiriluk": {
+      "chapter": "drum_island",
+      "title": "Cherry Blossoms in the Snow",
+      "when": "Drum Island, 6 years ago",
+      "lines": [
+        "A reindeer with a blue nose was chased away by his herd. A quack doctor named Hiriluk took him in.",
+        "Hiriluk: When do you think people die? When they are forgotten.",
+        "Hiriluk: There's no illness in this world that can't be cured, Chopper. Not even a sad country's heart.",
+        "Years later, the snow on Drum Island turned pink, just as the old man dreamed."
+      ]
+    },
+    "noland": {
+      "chapter": "sky_island",
+      "title": "The City of Gold",
+      "when": "Jaya, 400 years ago",
+      "lines": [
+        "The explorer Montblanc Noland found a golden city on Jaya and a warrior people who rang its great bell.",
+        "When he came back with the king, the city was gone. The ground under it had shot into the sky.",
+        "Calgara: Noland! Ring the bell, and we'll know you're here!",
+        "Noland was put to death as a liar. His last words: 'The city of gold sank into the sea.'"
+      ]
+    },
+    "ohara": {
+      "chapter": "enies_lobby",
+      "title": "The Burning of Ohara",
+      "when": "Ohara, 20 years ago",
+      "lines": [
+        "The scholars of Ohara read the Poneglyphs, the stones no one may read. The Navy called a Buster Call.",
+        "Professor Clover: The hundred years of the Void Century were real! There was a great kingdom...",
+        "Saul: Robin, you're never alone. One day you'll find friends who will protect you!",
+        "The island burned. An eight-year-old girl escaped with a bounty of 79 million Berries."
+      ]
+    },
+    "roger_crew": {
+      "chapter": "sabaody",
+      "title": "The Last Voyage of the Roger Pirates",
+      "when": "The New World, 24 years ago",
+      "lines": [
+        "Roger was sick and had little time left. His crew sailed anyway, to the last island.",
+        "Rayleigh: We reached the end of the world, and we laughed. That's why we named it Laugh Tale.",
+        "Rayleigh: Then the captain broke up the crew and turned himself in. He wanted to light a fire."
+      ]
+    },
+    "ace_captured": {
+      "chapter": "impel_down",
+      "title": "Fire Fist Ace",
+      "when": "Banaro Island, a few weeks ago",
+      "lines": [
+        "Ace chased Blackbeard across the sea. Teach had killed a crewmate, and that was a line no son of Whitebeard crossed.",
+        "Ace: You're the one who broke the rules of this ship. I'll bring you back myself!",
+        "Fire met darkness. When the smoke cleared, Ace was in chains, handed to the World Government.",
+        "Now he waits for his execution at Marineford, and the whole world holds its breath."
+      ]
+    },
+    "whitebeard_sons": {
+      "chapter": "marineford",
+      "title": "The Strongest Man's Family",
+      "when": "The Moby Dick, years ago",
+      "lines": [
+        "A young Ace came to kill Whitebeard. He tried a hundred times, and failed a hundred times.",
+        "Whitebeard: Gurarara! Why don't you become my son, brat?",
+        "Ace: ...Why does everyone call you 'Pops'?",
+        "Whitebeard: Because I'm your father. Now let's go and bring my son home."
+      ]
+    },
+    "sake_cups": {
+      "chapter": "paramount_war",
+      "title": "The Sake Cup Pledge",
+      "when": "Mt. Colubo, the Goa Kingdom, years ago",
+      "lines": [
+        "Three boys stole a bottle of sake from Dadan and climbed to the top of a hill.",
+        "Sabo: Did you know? If you share a cup of sake, you become brothers.",
+        "Ace: From today on, we're brothers!",
+        "Ace, on the execution platform: ...Luffy. I'm sorry I never told you who my father was."
+      ]
+    },
+    "three_d_two_y": {
+      "chapter": "training",
+      "title": "The Day the War Ended",
+      "when": "Marineford, after the war",
+      "lines": [
+        "The war was over. Whitebeard died on his feet. Fire Fist Ace died smiling.",
+        "Ace: Thank you... for loving me.",
+        "A young captain lost everything that day, and learned he was not strong enough yet.",
+        "He rang the Ox Bell sixteen times and sent his crew one message: two years. Then we meet again."
+      ]
+    },
+    "fisher_tiger": {
+      "chapter": "fishman_island",
+      "title": "The Sun Pirates",
+      "when": "Mary Geoise, 15 years ago",
+      "lines": [
+        "A Fish-Man named Fisher Tiger climbed the Red Line with his bare hands and set every slave in Mary Geoise free.",
+        "Humans and Fish-Men alike ran from the burning holy land.",
+        "Queen Otohime spent her life asking her people to forgive, so humans and Fish-Men could live on the sun's side together.",
+        "Otohime: Even if it takes a long time, I want our children to see the sun."
+      ]
+    },
+    "otohime": {
+      "chapter": "fishman_coup",
+      "title": "Queen Otohime's Signatures",
+      "when": "Gyoncorde Plaza, years ago",
+      "lines": [
+        "Queen Otohime went from street to street asking Fish-Men to sign: we want to live on the surface, beside the humans.",
+        "Otohime: Even if they hurt us, we must not hate them back. Hate only makes more hate.",
+        "A shot rang out in the plaza. The queen fell, with the box of signatures in her arms.",
+        "The man who fired was a Fish-Man who could not stand the idea of peace. His name was Hody Jones."
+      ]
+    },
+    "sabo_flag": {
+      "chapter": "dressrosa_colosseum",
+      "title": "A Boat Under a Noble's Flag",
+      "when": "The Goa Kingdom, years ago",
+      "lines": [
+        "Sabo hated being a noble. He set out to sea alone in a tiny boat, flying his own flag.",
+        "A World Noble's ship crossed his path. The noble did not like the flag, so he fired.",
+        "Everyone thought Sabo died that day. A man in a dark cloak pulled him out of the water: Monkey D. Dragon.",
+        "Sabo woke up with no memory, and only got it back the day he read that Ace had died."
+      ]
+    },
+    "kyros": {
+      "chapter": "dressrosa",
+      "title": "The Toy Soldier",
+      "when": "Dressrosa, 10 years ago",
+      "lines": [
+        "In one night Doflamingo took the throne. He turned his enemies into toys, and the world forgot they ever lived.",
+        "A one-legged tin soldier still remembers. Once he was Kyros, the greatest gladiator of the Colosseum.",
+        "Kyros: My daughter doesn't even know my name. I'll free this country first. Then I can be her father again."
+      ]
+    },
+    "iron_mask": {
+      "chapter": "totto_land",
+      "title": "The Iron Mask",
+      "when": "The Germa Kingdom, years ago",
+      "lines": [
+        "Vinsmoke Judge wanted his sons to have no feelings. One of them, Sanji, still cried. So Judge locked him in a cell with an iron mask.",
+        "Reiju: Go, Sanji. Run, and don't come back. And smile, so nobody sees you cry.",
+        "Sanji: One day I'll become a great cook. One day I'll have my own restaurant.",
+        "Judge: As far as I'm concerned, I never had a third son."
+      ]
+    },
+    "oden": {
+      "chapter": "wano_arrival",
+      "title": "The Lord Who Boiled",
+      "when": "Flower Capital, 20 years ago",
+      "lines": [
+        "Kozuki Oden sailed with Whitebeard and Roger. He came home to a Wano ruled by Kaido and the shogun Orochi.",
+        "He was sentenced to die in a pot of boiling oil, and he held his nine retainers above it for an hour.",
+        "Oden: To be boiled is to be cooked! I'll open the borders of Wano... one day, someone will!",
+        "Toki, Oden's wife, sent her retainers twenty years into the future. They have been waiting for you."
+      ]
+    },
+    "oden_onigashima": {
+      "chapter": "wano",
+      "title": "The Raid That Failed",
+      "when": "Onigashima, 20 years ago",
+      "lines": [
+        "Before his execution, Oden and his retainers stormed Onigashima. Oden's sword cut a scar on Kaido no one else ever had.",
+        "Then a trick from Orochi's men froze Oden for a single moment, and Kaido struck him down.",
+        "Kaido: That wasn't a fight I won. I'll never forget it.",
+        "Tonight the retainers sail to the same island. This time, the fire festival will burn for Wano."
+      ]
+    },
+    "kuma_memories": {
+      "chapter": "egghead_incident",
+      "title": "The Kindest Tyrant",
+      "when": "Sorbet Kingdom, long ago",
+      "lines": [
+        "Bartholomew Kuma was born a slave. He became a king, a Warlord, and at last a machine with no will of his own.",
+        "Every pain he took from others he kept inside. He gave his body to Vegapunk so his daughter Bonney could live.",
+        "Kuma: Bonney... I hope your future is full of happiness.",
+        "Now, with no mind left, his body walks across the sea. It is coming to Egghead."
+      ]
+    },
+    "god_valley": {
+      "chapter": "hachinosu",
+      "title": "The God Valley Incident",
+      "when": "God Valley, 38 years ago",
+      "lines": [
+        "The Rocks Pirates were the worst crew in history: Whitebeard, Big Mom and Kaido once sailed under one flag.",
+        "At God Valley, Rocks D. Xebec reached for the throne of the world.",
+        "To stop him, a pirate and a Marine fought side by side: Gol D. Roger and Monkey D. Garp.",
+        "The island was wiped off every map. The pirate island Hachinosu still remembers who built it."
+      ]
+    },
+    "giants_duel": {
+      "chapter": "elbaph_arrival",
+      "title": "The Hundred-Year Duel",
+      "when": "Little Garden, a hundred years ago",
+      "lines": [
+        "Two captains of the Giant Warrior Pirates, Dorry and Brogy, argued over who had caught the bigger Sea King.",
+        "Neither of them could remember the answer, so they fought. Every day, at the sound of the volcano, for a hundred years.",
+        "Dorry: Gegyagyagya! It's not about who's right anymore. It's about pride!",
+        "Elbaph's warriors still sing about them. The god of Elbaph favors the one who fights with honor."
+      ]
+    },
+    "chest_at_god_valley": {
+      "chapter": "holy_knights",
+      "title": "The Baby in the Treasure Chest",
+      "when": "God Valley, 38 years ago",
+      "lines": [
+        "In the ruins of God Valley, Roger's crew opened a treasure chest. Inside was a baby with bright red hair.",
+        "Roger: Ha! The best treasure we found all day. We'll keep him. His name is Shanks.",
+        "Roger never learned that another red-haired baby was taken up to the Holy Land that same day.",
+        "The World Nobles of the Figarland family raised him as their own. His name is Shamrock."
+      ]
+    },
+    "oden_reads": {
+      "chapter": "final_island",
+      "title": "The Man Who Could Read the Stones",
+      "when": "Roger's ship, the Oro Jackson, 25 years ago",
+      "lines": [
+        "Roger's crew had all four Road Poneglyphs, but no one aboard could read them. Then Kozuki Oden joined.",
+        "The Kozuki family carved the Poneglyphs long ago, and Oden had learned to read their old script.",
+        "Oden: The four stones point to one place. Roger-san, it's real!",
+        "Roger laughed. He named the island himself, after what they did when they got there."
+      ]
+    },
+    "roger_laugh_tale": {
+      "chapter": "laugh_tale",
+      "title": "We Laughed",
+      "when": "Laugh Tale, 24 years ago",
+      "lines": [
+        "Roger stood on the last island and read the final Poneglyph. Then he laughed until he cried.",
+        "Roger: We came too early. Joy Boy... I wish I'd been born in the same age as you.",
+        "He left the treasure where it was, for the ones who would come after.",
+        "Now you are the ones who came after."
+      ]
+    },
+    "joy_boy": {
+      "chapter": "void_century",
+      "title": "The Promise of Joy Boy",
+      "when": "800 years ago",
+      "lines": [
+        "A man called Joy Boy fought the twenty kings who would found the World Government.",
+        "He lost. Before he fell, he left a promise carved in stone and an apology to the Fish-Men he could not save.",
+        "Joy Boy: One day, someone will come who carries my will. When the drums of liberation sound, the dawn will come.",
+        "The kings burned the history of that century. But the stones did not burn."
+      ]
+    },
+    "empty_throne": {
+      "chapter": "empty_throne",
+      "title": "No One Sits on the Throne",
+      "when": "Mary Geoise, the Reverie",
+      "lines": [
+        "Twenty kings put down their swords around an empty throne, as a sign that no one rules the world.",
+        "For eight hundred years they told that story. Very few ever learned it was a lie.",
+        "Imu: ...The ones who know too much always come here in the end."
+      ]
+    }
+  }
+}

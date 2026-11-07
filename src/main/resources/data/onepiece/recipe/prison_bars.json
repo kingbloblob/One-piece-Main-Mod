@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:iron_bars",
+    "X": "minecraft:black_dye"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:prison_bars"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:ballast_tank"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.submarine.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.submarine.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/diving"
+}

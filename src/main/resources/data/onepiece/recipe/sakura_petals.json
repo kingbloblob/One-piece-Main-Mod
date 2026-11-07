@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:pink_petals",
+    "minecraft:white_dye"
+  ],
+  "result": {
+    "id": "onepiece:sakura_petals",
+    "count": 2
+  }
+}

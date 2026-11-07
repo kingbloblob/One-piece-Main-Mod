@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:wano_rice"
+  ],
+  "result": {
+    "count": 2,
+    "id": "onepiece:wano_rice_seeds"
+  }
+}

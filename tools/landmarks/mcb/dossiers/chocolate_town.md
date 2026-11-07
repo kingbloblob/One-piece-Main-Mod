@@ -1,0 +1,4 @@
+# Chocolate Town (Chocolat Town, Cacao Island) - dossier (batch 12)
+Sources: fandom wiki Cacao Island; episode 786 / chapter 827.
+- Totto Land island where almost everything is chocolate: houses, fountains, hot springs; eating buildings is allowed except roofs. Café Caramel (Pudding's café, chocolate + marshmallow + jelly beans + almonds) next to her house. Sweets Factory (big factory). Harbour where the Sunny docked. Mirror-world mirrors.
+Design brief: 170 site land; chocolate houses (chocolate_block walls, frosting_block trim, cookie_bricks base, wafer/striped roofs); Café Caramel with patio and marshmallow/jelly bean details; Pudding's house next door; Sweets Factory with chimneys; chocolate fountain square; chocolate canal (brown concrete 'liquid' + cookie bridges); candy-striped bollards, lollipop trees; harbour with Thousand Sunny; homie guards, candy chests.

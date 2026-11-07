@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "L  ",
+    "PLP",
+    "I I"
+  ],
+  "key": {
+    "L": "minecraft:leather",
+    "P": "minecraft:spruce_planks",
+    "I": "minecraft:stick"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:captains_chair"
+  }
+}

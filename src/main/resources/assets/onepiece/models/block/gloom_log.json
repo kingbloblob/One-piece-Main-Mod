@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "onepiece:block/gloom_log_top",
+    "side": "onepiece:block/gloom_log"
+  }
+}

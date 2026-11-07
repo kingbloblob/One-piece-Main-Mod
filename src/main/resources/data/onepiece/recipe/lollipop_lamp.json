@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:sugar",
+    "minecraft:pink_dye",
+    "minecraft:glowstone_dust",
+    "minecraft:stick"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:lollipop_lamp"
+  }
+}

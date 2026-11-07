@@ -1,0 +1,8 @@
+{
+  "sound_event": "onepiece_sounds:music.haul_the_anchor",
+  "description": {
+    "translate": "jukebox_song.onepiece_sounds.haul_the_anchor"
+  },
+  "length_in_seconds": 115.0,
+  "comparator_output": 7
+}

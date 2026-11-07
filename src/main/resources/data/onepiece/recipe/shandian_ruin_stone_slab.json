@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:shandian_ruin_stone"
+  },
+  "result": {
+    "count": 6,
+    "id": "onepiece:shandian_ruin_stone_slab"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:sea_king_bait",
+    "onepiece:sea_king_bait",
+    "onepiece:sea_king_scale",
+    "onepiece:sea_king_scale",
+    "onepiece:sea_pearl",
+    "minecraft:gold_ingot"
+  ],
+  "result": {
+    "id": "onepiece:sea_lord_lure",
+    "count": 1
+  }
+}

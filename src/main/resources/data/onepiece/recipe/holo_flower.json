@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:dandelion",
+    "minecraft:cyan_dye"
+  ],
+  "result": {
+    "id": "onepiece:holo_flower",
+    "count": 2
+  }
+}

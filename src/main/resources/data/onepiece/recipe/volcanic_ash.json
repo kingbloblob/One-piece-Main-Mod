@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:gravel",
+    "minecraft:charcoal"
+  ],
+  "result": {
+    "id": "onepiece:volcanic_ash",
+    "count": 2
+  }
+}

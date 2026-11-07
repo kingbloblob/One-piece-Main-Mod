@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "onepiece:block/adam_slab"
+    },
+    "type=double": {
+      "model": "onepiece:block/adam_planks"
+    },
+    "type=top": {
+      "model": "onepiece:block/adam_slab_top"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:dandelion",
+    "minecraft:red_dye"
+  ],
+  "result": {
+    "id": "onepiece:skull_lily",
+    "count": 2
+  }
+}

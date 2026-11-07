@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:moss_carpet",
+    "minecraft:gray_dye"
+  ],
+  "result": {
+    "id": "onepiece:ember_ash",
+    "count": 2
+  }
+}

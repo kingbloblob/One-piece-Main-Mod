@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:blue_dye",
+    "minecraft:copper_ingot"
+  ],
+  "result": {
+    "id": "onepiece:den_den_relay_blueprint"
+  }
+}

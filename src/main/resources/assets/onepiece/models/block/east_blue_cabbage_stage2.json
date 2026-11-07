@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "onepiece:block/east_blue_cabbage_stage2"
+  }
+}

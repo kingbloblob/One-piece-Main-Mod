@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:jungle",
+    "minecraft:sparse_jungle",
+    "onepiece:little_garden",
+    "onepiece:elbaph"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:log_pose"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.root.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.root.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "onepiece:gui/advancements/backgrounds/grand_line"
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ]
+}

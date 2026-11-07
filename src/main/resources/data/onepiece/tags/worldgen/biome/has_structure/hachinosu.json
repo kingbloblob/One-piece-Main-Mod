@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:is_beach",
+    "minecraft:stony_shore",
+    "onepiece:onigashima",
+    "onepiece:red_line",
+    "onepiece:hachinosu"
+  ]
+}

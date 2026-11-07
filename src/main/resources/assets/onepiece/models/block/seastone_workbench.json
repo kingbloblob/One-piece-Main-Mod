@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "onepiece:block/station/seastone_workbench_front",
+    "side": "onepiece:block/station/seastone_workbench_side",
+    "top": "onepiece:block/station/seastone_workbench_top",
+    "bottom": "onepiece:block/station/seastone_workbench_bottom",
+    "particle": "onepiece:block/station/seastone_workbench_side"
+  }
+}

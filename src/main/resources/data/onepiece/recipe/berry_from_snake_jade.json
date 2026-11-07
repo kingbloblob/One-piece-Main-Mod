@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:snake_jade"
+  ],
+  "result": {
+    "count": 8,
+    "id": "onepiece:berry"
+  }
+}

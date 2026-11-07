@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "J": "onepiece:jolly_roger",
+    "S": "minecraft:stick",
+    "C": "minecraft:cobblestone"
+  },
+  "pattern": [
+    "J",
+    "S",
+    "C"
+  ],
+  "result": {
+    "id": "onepiece:hideout_flag"
+  }
+}

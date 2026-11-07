@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": "minecraft:hay_block",
+    "W": "#minecraft:wool",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    " H ",
+    "SWS",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:straw_hat_scarecrow"
+  }
+}

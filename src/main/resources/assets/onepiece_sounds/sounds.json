@@ -1,0 +1,1606 @@
+{
+  "haki.conqueror_burst": {
+    "subtitle": "subtitles.onepiece_sounds.haki.conqueror_burst",
+    "sounds": [
+      "onepiece_sounds:haki/conqueror_burst"
+    ]
+  },
+  "haki.conqueror_awaken": {
+    "subtitle": "subtitles.onepiece_sounds.haki.conqueror_awaken",
+    "sounds": [
+      "onepiece_sounds:haki/conqueror_awaken"
+    ]
+  },
+  "haki.armament_on": {
+    "subtitle": "subtitles.onepiece_sounds.haki.armament_on",
+    "sounds": [
+      "onepiece_sounds:haki/armament_on"
+    ]
+  },
+  "haki.armament_hit": {
+    "subtitle": "subtitles.onepiece_sounds.haki.armament_hit",
+    "sounds": [
+      "onepiece_sounds:haki/armament_hit"
+    ]
+  },
+  "haki.observation_on": {
+    "subtitle": "subtitles.onepiece_sounds.haki.observation_on",
+    "sounds": [
+      "onepiece_sounds:haki/observation_on"
+    ]
+  },
+  "den_den_mushi.call": {
+    "subtitle": "subtitles.onepiece_sounds.den_den_mushi.call",
+    "sounds": [
+      "onepiece_sounds:den_den_mushi/call"
+    ]
+  },
+  "devil_fruit.eat": {
+    "subtitle": "subtitles.onepiece_sounds.devil_fruit.eat",
+    "sounds": [
+      "onepiece_sounds:devil_fruit/eat"
+    ]
+  },
+  "devil_fruit.awaken": {
+    "subtitle": "subtitles.onepiece_sounds.devil_fruit.awaken",
+    "sounds": [
+      "onepiece_sounds:devil_fruit/awaken"
+    ]
+  },
+  "bounty.raise": {
+    "subtitle": "subtitles.onepiece_sounds.bounty.raise",
+    "sounds": [
+      "onepiece_sounds:bounty/raise"
+    ]
+  },
+  "bounty.news_coo": {
+    "subtitle": "subtitles.onepiece_sounds.bounty.news_coo",
+    "sounds": [
+      "onepiece_sounds:bounty/news_coo"
+    ]
+  },
+  "navy.bugle": {
+    "subtitle": "subtitles.onepiece_sounds.navy.bugle",
+    "sounds": [
+      "onepiece_sounds:navy/bugle"
+    ]
+  },
+  "navy.cannon": {
+    "subtitle": "subtitles.onepiece_sounds.navy.cannon",
+    "sounds": [
+      "onepiece_sounds:navy/cannon"
+    ]
+  },
+  "boss.defeated": {
+    "subtitle": "subtitles.onepiece_sounds.boss.defeated",
+    "sounds": [
+      "onepiece_sounds:boss/defeated"
+    ]
+  },
+  "story.goal": {
+    "subtitle": "subtitles.onepiece_sounds.story.goal",
+    "sounds": [
+      "onepiece_sounds:story/goal"
+    ]
+  },
+  "story.chapter": {
+    "subtitle": "subtitles.onepiece_sounds.story.chapter",
+    "sounds": [
+      "onepiece_sounds:story/chapter"
+    ]
+  },
+  "story.quest_complete": {
+    "subtitle": "subtitles.onepiece_sounds.story.quest_complete",
+    "sounds": [
+      "onepiece_sounds:story/quest_complete"
+    ]
+  },
+  "fruit_move.fire": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.fire",
+    "sounds": [
+      "onepiece_sounds:fruit_move/fire"
+    ]
+  },
+  "fruit_move.magma": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.magma",
+    "sounds": [
+      "onepiece_sounds:fruit_move/magma"
+    ]
+  },
+  "fruit_move.ice": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.ice",
+    "sounds": [
+      "onepiece_sounds:fruit_move/ice"
+    ]
+  },
+  "fruit_move.lightning": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.lightning",
+    "sounds": [
+      "onepiece_sounds:fruit_move/lightning"
+    ]
+  },
+  "fruit_move.light": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.light",
+    "sounds": [
+      "onepiece_sounds:fruit_move/light"
+    ]
+  },
+  "fruit_move.darkness": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.darkness",
+    "sounds": [
+      "onepiece_sounds:fruit_move/darkness"
+    ]
+  },
+  "fruit_move.smoke": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.smoke",
+    "sounds": [
+      "onepiece_sounds:fruit_move/smoke"
+    ]
+  },
+  "fruit_move.sand": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.sand",
+    "sounds": [
+      "onepiece_sounds:fruit_move/sand"
+    ]
+  },
+  "fruit_move.quake": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.quake",
+    "sounds": [
+      "onepiece_sounds:fruit_move/quake"
+    ]
+  },
+  "fruit_move.rubber": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.rubber",
+    "sounds": [
+      "onepiece_sounds:fruit_move/rubber"
+    ]
+  },
+  "fruit_move.blade": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.blade",
+    "sounds": [
+      "onepiece_sounds:fruit_move/blade"
+    ]
+  },
+  "fruit_move.gravity": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.gravity",
+    "sounds": [
+      "onepiece_sounds:fruit_move/gravity"
+    ]
+  },
+  "fruit_move.plant": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.plant",
+    "sounds": [
+      "onepiece_sounds:fruit_move/plant"
+    ]
+  },
+  "fruit_move.poison": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.poison",
+    "sounds": [
+      "onepiece_sounds:fruit_move/poison"
+    ]
+  },
+  "fruit_move.explosion": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.explosion",
+    "sounds": [
+      "onepiece_sounds:fruit_move/explosion"
+    ]
+  },
+  "fruit_move.bubble": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.bubble",
+    "sounds": [
+      "onepiece_sounds:fruit_move/bubble"
+    ]
+  },
+  "fruit_move.warp": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.warp",
+    "sounds": [
+      "onepiece_sounds:fruit_move/warp"
+    ]
+  },
+  "fruit_move.string": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.string",
+    "sounds": [
+      "onepiece_sounds:fruit_move/string"
+    ]
+  },
+  "fruit_move.curse": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.curse",
+    "sounds": [
+      "onepiece_sounds:fruit_move/curse"
+    ]
+  },
+  "fruit_move.impact": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.impact",
+    "sounds": [
+      "onepiece_sounds:fruit_move/impact"
+    ]
+  },
+  "fruit_move.beast_roar": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.beast_roar",
+    "sounds": [
+      "onepiece_sounds:fruit_move/beast_roar"
+    ]
+  },
+  "fruit_move.dragon_roar": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.dragon_roar",
+    "sounds": [
+      "onepiece_sounds:fruit_move/dragon_roar"
+    ]
+  },
+  "fruit_move.bird_cry": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.bird_cry",
+    "sounds": [
+      "onepiece_sounds:fruit_move/bird_cry"
+    ]
+  },
+  "boss.intro": {
+    "subtitle": "subtitles.onepiece_sounds.boss.intro",
+    "sounds": [
+      "onepiece_sounds:boss/intro"
+    ]
+  },
+  "boss.phase": {
+    "subtitle": "subtitles.onepiece_sounds.boss.phase",
+    "sounds": [
+      "onepiece_sounds:boss/phase"
+    ]
+  },
+  "boss.windup": {
+    "subtitle": "subtitles.onepiece_sounds.boss.windup",
+    "sounds": [
+      "onepiece_sounds:boss/windup"
+    ]
+  },
+  "boss.signature": {
+    "subtitle": "subtitles.onepiece_sounds.boss.signature",
+    "sounds": [
+      "onepiece_sounds:boss/signature"
+    ]
+  },
+  "boss.strike_land": {
+    "subtitle": "subtitles.onepiece_sounds.boss.strike_land",
+    "sounds": [
+      "onepiece_sounds:boss/strike_land"
+    ]
+  },
+  "boss.slash_line": {
+    "subtitle": "subtitles.onepiece_sounds.boss.slash_line",
+    "sounds": [
+      "onepiece_sounds:boss/slash_line"
+    ]
+  },
+  "boss.black_hole": {
+    "subtitle": "subtitles.onepiece_sounds.boss.black_hole",
+    "sounds": [
+      "onepiece_sounds:boss/black_hole"
+    ]
+  },
+  "boss.ground_wave": {
+    "subtitle": "subtitles.onepiece_sounds.boss.ground_wave",
+    "sounds": [
+      "onepiece_sounds:boss/ground_wave"
+    ]
+  },
+  "boss.enrage": {
+    "subtitle": "subtitles.onepiece_sounds.boss.enrage",
+    "sounds": [
+      "onepiece_sounds:boss/enrage"
+    ]
+  },
+  "boss.leap": {
+    "subtitle": "subtitles.onepiece_sounds.boss.leap",
+    "sounds": [
+      "onepiece_sounds:boss/leap"
+    ]
+  },
+  "boss.petrify": {
+    "subtitle": "subtitles.onepiece_sounds.boss.petrify",
+    "sounds": [
+      "onepiece_sounds:boss/petrify"
+    ]
+  },
+  "boss.paw": {
+    "subtitle": "subtitles.onepiece_sounds.boss.paw",
+    "sounds": [
+      "onepiece_sounds:boss/paw"
+    ]
+  },
+  "boss.heal": {
+    "subtitle": "subtitles.onepiece_sounds.boss.heal",
+    "sounds": [
+      "onepiece_sounds:boss/heal"
+    ]
+  },
+  "style.dash_slash": {
+    "subtitle": "subtitles.onepiece_sounds.style.dash_slash",
+    "sounds": [
+      "onepiece_sounds:style/dash_slash"
+    ]
+  },
+  "style.tornado": {
+    "subtitle": "subtitles.onepiece_sounds.style.tornado",
+    "sounds": [
+      "onepiece_sounds:style/tornado"
+    ]
+  },
+  "style.big_slash": {
+    "subtitle": "subtitles.onepiece_sounds.style.big_slash",
+    "sounds": [
+      "onepiece_sounds:style/big_slash"
+    ]
+  },
+  "style.power_up": {
+    "subtitle": "subtitles.onepiece_sounds.style.power_up",
+    "sounds": [
+      "onepiece_sounds:style/power_up"
+    ]
+  },
+  "style.kick": {
+    "subtitle": "subtitles.onepiece_sounds.style.kick",
+    "sounds": [
+      "onepiece_sounds:style/kick"
+    ]
+  },
+  "style.fire_kick": {
+    "subtitle": "subtitles.onepiece_sounds.style.fire_kick",
+    "sounds": [
+      "onepiece_sounds:style/fire_kick"
+    ]
+  },
+  "style.fire_slash": {
+    "subtitle": "subtitles.onepiece_sounds.style.fire_slash",
+    "sounds": [
+      "onepiece_sounds:style/fire_slash"
+    ]
+  },
+  "style.shock_punch": {
+    "subtitle": "subtitles.onepiece_sounds.style.shock_punch",
+    "sounds": [
+      "onepiece_sounds:style/shock_punch"
+    ]
+  },
+  "style.ground_crush": {
+    "subtitle": "subtitles.onepiece_sounds.style.ground_crush",
+    "sounds": [
+      "onepiece_sounds:style/ground_crush"
+    ]
+  },
+  "style.water_shot": {
+    "subtitle": "subtitles.onepiece_sounds.style.water_shot",
+    "sounds": [
+      "onepiece_sounds:style/water_shot"
+    ]
+  },
+  "style.water_wave": {
+    "subtitle": "subtitles.onepiece_sounds.style.water_wave",
+    "sounds": [
+      "onepiece_sounds:style/water_wave"
+    ]
+  },
+  "style.hard_skin": {
+    "subtitle": "subtitles.onepiece_sounds.style.hard_skin",
+    "sounds": [
+      "onepiece_sounds:style/hard_skin"
+    ]
+  },
+  "style.soru": {
+    "subtitle": "subtitles.onepiece_sounds.style.soru",
+    "sounds": [
+      "onepiece_sounds:style/soru"
+    ]
+  },
+  "style.shigan": {
+    "subtitle": "subtitles.onepiece_sounds.style.shigan",
+    "sounds": [
+      "onepiece_sounds:style/shigan"
+    ]
+  },
+  "style.tekkai": {
+    "subtitle": "subtitles.onepiece_sounds.style.tekkai",
+    "sounds": [
+      "onepiece_sounds:style/tekkai"
+    ]
+  },
+  "style.geppo": {
+    "subtitle": "subtitles.onepiece_sounds.style.geppo",
+    "sounds": [
+      "onepiece_sounds:style/geppo"
+    ]
+  },
+  "style.claw": {
+    "subtitle": "subtitles.onepiece_sounds.style.claw",
+    "sounds": [
+      "onepiece_sounds:style/claw"
+    ]
+  },
+  "style.cut_flames": {
+    "subtitle": "subtitles.onepiece_sounds.style.cut_flames",
+    "sounds": [
+      "onepiece_sounds:style/cut_flames"
+    ]
+  },
+  "style.sheathe": {
+    "subtitle": "subtitles.onepiece_sounds.style.sheathe",
+    "sounds": [
+      "onepiece_sounds:style/sheathe"
+    ]
+  },
+  "style.lunge": {
+    "subtitle": "subtitles.onepiece_sounds.style.lunge",
+    "sounds": [
+      "onepiece_sounds:style/lunge"
+    ]
+  },
+  "style.chill_blade": {
+    "subtitle": "subtitles.onepiece_sounds.style.chill_blade",
+    "sounds": [
+      "onepiece_sounds:style/chill_blade"
+    ]
+  },
+  "style.lullaby": {
+    "subtitle": "subtitles.onepiece_sounds.style.lullaby",
+    "sounds": [
+      "onepiece_sounds:style/lullaby"
+    ]
+  },
+  "style.punch": {
+    "subtitle": "subtitles.onepiece_sounds.style.punch",
+    "sounds": [
+      "onepiece_sounds:style/punch"
+    ]
+  },
+  "style.throw": {
+    "subtitle": "subtitles.onepiece_sounds.style.throw",
+    "sounds": [
+      "onepiece_sounds:style/throw"
+    ]
+  },
+  "style.slingshot": {
+    "subtitle": "subtitles.onepiece_sounds.style.slingshot",
+    "sounds": [
+      "onepiece_sounds:style/slingshot"
+    ]
+  },
+  "fruit_hit.burn": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_hit.burn",
+    "sounds": [
+      "onepiece_sounds:fruit_hit/burn"
+    ]
+  },
+  "fruit_hit.freeze": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_hit.freeze",
+    "sounds": [
+      "onepiece_sounds:fruit_hit/freeze"
+    ]
+  },
+  "fruit_hit.shock": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_hit.shock",
+    "sounds": [
+      "onepiece_sounds:fruit_hit/shock"
+    ]
+  },
+  "fruit_hit.flash": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_hit.flash",
+    "sounds": [
+      "onepiece_sounds:fruit_hit/flash"
+    ]
+  },
+  "fruit_hit.dark": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_hit.dark",
+    "sounds": [
+      "onepiece_sounds:fruit_hit/dark"
+    ]
+  },
+  "fruit_hit.blunt": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_hit.blunt",
+    "sounds": [
+      "onepiece_sounds:fruit_hit/blunt"
+    ]
+  },
+  "fruit_hit.cut": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_hit.cut",
+    "sounds": [
+      "onepiece_sounds:fruit_hit/cut"
+    ]
+  },
+  "fruit_hit.splat": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_hit.splat",
+    "sounds": [
+      "onepiece_sounds:fruit_hit/splat"
+    ]
+  },
+  "fruit_hit.thorn": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_hit.thorn",
+    "sounds": [
+      "onepiece_sounds:fruit_hit/thorn"
+    ]
+  },
+  "fruit_hit.dust": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_hit.dust",
+    "sounds": [
+      "onepiece_sounds:fruit_hit/dust"
+    ]
+  },
+  "fruit_hit.bite": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_hit.bite",
+    "sounds": [
+      "onepiece_sounds:fruit_hit/bite"
+    ]
+  },
+  "fruit_move.gear_five": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.gear_five",
+    "sounds": [
+      "onepiece_sounds:fruit_move/gear_five"
+    ]
+  },
+  "fruit_move.heal": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.heal",
+    "sounds": [
+      "onepiece_sounds:fruit_move/heal"
+    ]
+  },
+  "fruit_move.zoan_shift": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.zoan_shift",
+    "sounds": [
+      "onepiece_sounds:fruit_move/zoan_shift"
+    ]
+  },
+  "ship.creak": {
+    "subtitle": "subtitles.onepiece_sounds.ship.creak",
+    "sounds": [
+      "onepiece_sounds:ship/creak"
+    ]
+  },
+  "ship.sail": {
+    "subtitle": "subtitles.onepiece_sounds.ship.sail",
+    "sounds": [
+      "onepiece_sounds:ship/sail"
+    ]
+  },
+  "ship.wake": {
+    "subtitle": "subtitles.onepiece_sounds.ship.wake",
+    "sounds": [
+      "onepiece_sounds:ship/wake"
+    ]
+  },
+  "ship.launch": {
+    "subtitle": "subtitles.onepiece_sounds.ship.launch",
+    "sounds": [
+      "onepiece_sounds:ship/launch"
+    ]
+  },
+  "ship.hull_hit": {
+    "subtitle": "subtitles.onepiece_sounds.ship.hull_hit",
+    "sounds": [
+      "onepiece_sounds:ship/hull_hit"
+    ]
+  },
+  "ship.repair": {
+    "subtitle": "subtitles.onepiece_sounds.ship.repair",
+    "sounds": [
+      "onepiece_sounds:ship/repair"
+    ]
+  },
+  "ship.sink": {
+    "subtitle": "subtitles.onepiece_sounds.ship.sink",
+    "sounds": [
+      "onepiece_sounds:ship/sink"
+    ]
+  },
+  "ship.break": {
+    "subtitle": "subtitles.onepiece_sounds.ship.break",
+    "sounds": [
+      "onepiece_sounds:ship/break"
+    ]
+  },
+  "ship.cannonball_splash": {
+    "subtitle": "subtitles.onepiece_sounds.ship.cannonball_splash",
+    "sounds": [
+      "onepiece_sounds:ship/cannonball_splash"
+    ]
+  },
+  "ship.grapple": {
+    "subtitle": "subtitles.onepiece_sounds.ship.grapple",
+    "sounds": [
+      "onepiece_sounds:ship/grapple"
+    ]
+  },
+  "ship.boarding": {
+    "subtitle": "subtitles.onepiece_sounds.ship.boarding",
+    "sounds": [
+      "onepiece_sounds:ship/boarding"
+    ]
+  },
+  "sea.whirlpool": {
+    "subtitle": "subtitles.onepiece_sounds.sea.whirlpool",
+    "sounds": [
+      "onepiece_sounds:sea/whirlpool"
+    ]
+  },
+  "sea.wave_crash": {
+    "subtitle": "subtitles.onepiece_sounds.sea.wave_crash",
+    "sounds": [
+      "onepiece_sounds:sea/wave_crash"
+    ]
+  },
+  "creature.snail_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.snail_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/snail_ambient"
+    ]
+  },
+  "creature.snail_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.snail_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/snail_hurt"
+    ]
+  },
+  "creature.snail_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.snail_death",
+    "sounds": [
+      "onepiece_sounds:creature/snail_death"
+    ]
+  },
+  "creature.deer_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.deer_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/deer_ambient"
+    ]
+  },
+  "creature.deer_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.deer_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/deer_hurt"
+    ]
+  },
+  "creature.deer_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.deer_death",
+    "sounds": [
+      "onepiece_sounds:creature/deer_death"
+    ]
+  },
+  "creature.giant_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.giant_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/giant_ambient"
+    ]
+  },
+  "creature.giant_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.giant_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/giant_hurt"
+    ]
+  },
+  "creature.giant_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.giant_death",
+    "sounds": [
+      "onepiece_sounds:creature/giant_death"
+    ]
+  },
+  "creature.bird_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.bird_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/bird_ambient"
+    ]
+  },
+  "creature.bird_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.bird_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/bird_hurt"
+    ]
+  },
+  "creature.bird_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.bird_death",
+    "sounds": [
+      "onepiece_sounds:creature/bird_death"
+    ]
+  },
+  "creature.bear_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.bear_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/bear_ambient"
+    ]
+  },
+  "creature.bear_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.bear_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/bear_hurt"
+    ]
+  },
+  "creature.bear_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.bear_death",
+    "sounds": [
+      "onepiece_sounds:creature/bear_death"
+    ]
+  },
+  "creature.horse_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.horse_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/horse_ambient"
+    ]
+  },
+  "creature.horse_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.horse_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/horse_hurt"
+    ]
+  },
+  "creature.horse_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.horse_death",
+    "sounds": [
+      "onepiece_sounds:creature/horse_death"
+    ]
+  },
+  "creature.seal_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.seal_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/seal_ambient"
+    ]
+  },
+  "creature.seal_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.seal_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/seal_hurt"
+    ]
+  },
+  "creature.seal_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.seal_death",
+    "sounds": [
+      "onepiece_sounds:creature/seal_death"
+    ]
+  },
+  "creature.bull_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.bull_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/bull_ambient"
+    ]
+  },
+  "creature.bull_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.bull_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/bull_hurt"
+    ]
+  },
+  "creature.bull_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.bull_death",
+    "sounds": [
+      "onepiece_sounds:creature/bull_death"
+    ]
+  },
+  "creature.cat_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.cat_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/cat_ambient"
+    ]
+  },
+  "creature.cat_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.cat_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/cat_hurt"
+    ]
+  },
+  "creature.cat_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.cat_death",
+    "sounds": [
+      "onepiece_sounds:creature/cat_death"
+    ]
+  },
+  "creature.wolf_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.wolf_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/wolf_ambient"
+    ]
+  },
+  "creature.wolf_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.wolf_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/wolf_hurt"
+    ]
+  },
+  "creature.wolf_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.wolf_death",
+    "sounds": [
+      "onepiece_sounds:creature/wolf_death"
+    ]
+  },
+  "creature.snake_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.snake_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/snake_ambient"
+    ]
+  },
+  "creature.snake_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.snake_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/snake_hurt"
+    ]
+  },
+  "creature.snake_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.snake_death",
+    "sounds": [
+      "onepiece_sounds:creature/snake_death"
+    ]
+  },
+  "creature.sea_monster_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.sea_monster_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/sea_monster_ambient"
+    ]
+  },
+  "creature.sea_monster_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.sea_monster_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/sea_monster_hurt"
+    ]
+  },
+  "creature.sea_monster_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.sea_monster_death",
+    "sounds": [
+      "onepiece_sounds:creature/sea_monster_death"
+    ]
+  },
+  "creature.monkey_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.monkey_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/monkey_ambient"
+    ]
+  },
+  "creature.monkey_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.monkey_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/monkey_hurt"
+    ]
+  },
+  "creature.monkey_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.monkey_death",
+    "sounds": [
+      "onepiece_sounds:creature/monkey_death"
+    ]
+  },
+  "creature.reptile_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.reptile_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/reptile_ambient"
+    ]
+  },
+  "creature.reptile_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.reptile_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/reptile_hurt"
+    ]
+  },
+  "creature.reptile_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.reptile_death",
+    "sounds": [
+      "onepiece_sounds:creature/reptile_death"
+    ]
+  },
+  "creature.dragon_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.dragon_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/dragon_ambient"
+    ]
+  },
+  "creature.dragon_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.dragon_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/dragon_hurt"
+    ]
+  },
+  "creature.dragon_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.dragon_death",
+    "sounds": [
+      "onepiece_sounds:creature/dragon_death"
+    ]
+  },
+  "creature.bug_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.bug_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/bug_ambient"
+    ]
+  },
+  "creature.bug_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.bug_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/bug_hurt"
+    ]
+  },
+  "creature.bug_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.bug_death",
+    "sounds": [
+      "onepiece_sounds:creature/bug_death"
+    ]
+  },
+  "creature.machine_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.machine_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/machine_ambient"
+    ]
+  },
+  "creature.machine_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.machine_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/machine_hurt"
+    ]
+  },
+  "creature.machine_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.machine_death",
+    "sounds": [
+      "onepiece_sounds:creature/machine_death"
+    ]
+  },
+  "creature.tree_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.tree_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/tree_ambient"
+    ]
+  },
+  "creature.tree_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.tree_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/tree_hurt"
+    ]
+  },
+  "creature.tree_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.tree_death",
+    "sounds": [
+      "onepiece_sounds:creature/tree_death"
+    ]
+  },
+  "creature.mole_ambient": {
+    "subtitle": "subtitles.onepiece_sounds.creature.mole_ambient",
+    "sounds": [
+      "onepiece_sounds:creature/mole_ambient"
+    ]
+  },
+  "creature.mole_hurt": {
+    "subtitle": "subtitles.onepiece_sounds.creature.mole_hurt",
+    "sounds": [
+      "onepiece_sounds:creature/mole_hurt"
+    ]
+  },
+  "creature.mole_death": {
+    "subtitle": "subtitles.onepiece_sounds.creature.mole_death",
+    "sounds": [
+      "onepiece_sounds:creature/mole_death"
+    ]
+  },
+  "fruit_move.howl": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.howl",
+    "sounds": [
+      "onepiece_sounds:fruit_move/howl"
+    ]
+  },
+  "fruit_move.snarl": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.snarl",
+    "sounds": [
+      "onepiece_sounds:fruit_move/snarl"
+    ]
+  },
+  "fruit_move.snake": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.snake",
+    "sounds": [
+      "onepiece_sounds:fruit_move/snake"
+    ]
+  },
+  "fruit_move.neigh": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.neigh",
+    "sounds": [
+      "onepiece_sounds:fruit_move/neigh"
+    ]
+  },
+  "fruit_move.bellow": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.bellow",
+    "sounds": [
+      "onepiece_sounds:fruit_move/bellow"
+    ]
+  },
+  "fruit_move.trumpet": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.trumpet",
+    "sounds": [
+      "onepiece_sounds:fruit_move/trumpet"
+    ]
+  },
+  "fruit_move.spider": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.spider",
+    "sounds": [
+      "onepiece_sounds:fruit_move/spider"
+    ]
+  },
+  "fruit_move.stomp": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.stomp",
+    "sounds": [
+      "onepiece_sounds:fruit_move/stomp"
+    ]
+  },
+  "fruit_move.dig": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.dig",
+    "sounds": [
+      "onepiece_sounds:fruit_move/dig"
+    ]
+  },
+  "fruit_move.barrier": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.barrier",
+    "sounds": [
+      "onepiece_sounds:fruit_move/barrier"
+    ]
+  },
+  "fruit_move.hush": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.hush",
+    "sounds": [
+      "onepiece_sounds:fruit_move/hush"
+    ]
+  },
+  "devil_fruit.awaken_logia": {
+    "subtitle": "subtitles.onepiece_sounds.devil_fruit.awaken_logia",
+    "sounds": [
+      "onepiece_sounds:devil_fruit/awaken_logia"
+    ]
+  },
+  "devil_fruit.awaken_zoan": {
+    "subtitle": "subtitles.onepiece_sounds.devil_fruit.awaken_zoan",
+    "sounds": [
+      "onepiece_sounds:devil_fruit/awaken_zoan"
+    ]
+  },
+  "devil_fruit.awaken_paramecia": {
+    "subtitle": "subtitles.onepiece_sounds.devil_fruit.awaken_paramecia",
+    "sounds": [
+      "onepiece_sounds:devil_fruit/awaken_paramecia"
+    ]
+  },
+  "fruit_move.sound_wave": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.sound_wave",
+    "sounds": [
+      "onepiece_sounds:fruit_move/sound_wave"
+    ]
+  },
+  "fruit_move.clock": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.clock",
+    "sounds": [
+      "onepiece_sounds:fruit_move/clock"
+    ]
+  },
+  "fruit_move.mirror": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.mirror",
+    "sounds": [
+      "onepiece_sounds:fruit_move/mirror"
+    ]
+  },
+  "fruit_move.door": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.door",
+    "sounds": [
+      "onepiece_sounds:fruit_move/door"
+    ]
+  },
+  "fruit_move.harden": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.harden",
+    "sounds": [
+      "onepiece_sounds:fruit_move/harden"
+    ]
+  },
+  "fruit_move.slip": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.slip",
+    "sounds": [
+      "onepiece_sounds:fruit_move/slip"
+    ]
+  },
+  "fruit_move.heavy_blow": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.heavy_blow",
+    "sounds": [
+      "onepiece_sounds:fruit_move/heavy_blow"
+    ]
+  },
+  "fruit_move.photon": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.photon",
+    "sounds": [
+      "onepiece_sounds:fruit_move/photon"
+    ]
+  },
+  "music_stinger.victory": {
+    "subtitle": "subtitles.onepiece_sounds.music_stinger.victory",
+    "sounds": [
+      "onepiece_sounds:music_stinger/victory"
+    ]
+  },
+  "fruit_move.wash": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.wash",
+    "sounds": [
+      "onepiece_sounds:fruit_move/wash"
+    ]
+  },
+  "fruit_move.float": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.float",
+    "sounds": [
+      "onepiece_sounds:fruit_move/float"
+    ]
+  },
+  "fruit_move.hormone": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.hormone",
+    "sounds": [
+      "onepiece_sounds:fruit_move/hormone"
+    ]
+  },
+  "fruit_move.swim": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.swim",
+    "sounds": [
+      "onepiece_sounds:fruit_move/swim"
+    ]
+  },
+  "fruit_move.spin": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.spin",
+    "sounds": [
+      "onepiece_sounds:fruit_move/spin"
+    ]
+  },
+  "fruit_move.crunch": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.crunch",
+    "sounds": [
+      "onepiece_sounds:fruit_move/crunch"
+    ]
+  },
+  "fruit_move.copy": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.copy",
+    "sounds": [
+      "onepiece_sounds:fruit_move/copy"
+    ]
+  },
+  "fruit_move.memory": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.memory",
+    "sounds": [
+      "onepiece_sounds:fruit_move/memory"
+    ]
+  },
+  "fruit_move.toy": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.toy",
+    "sounds": [
+      "onepiece_sounds:fruit_move/toy"
+    ]
+  },
+  "fruit_move.love": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.love",
+    "sounds": [
+      "onepiece_sounds:fruit_move/love"
+    ]
+  },
+  "fruit_move.ghost": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.ghost",
+    "sounds": [
+      "onepiece_sounds:fruit_move/ghost"
+    ]
+  },
+  "fruit_move.straw": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.straw",
+    "sounds": [
+      "onepiece_sounds:fruit_move/straw"
+    ]
+  },
+  "fruit_move.room": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.room",
+    "sounds": [
+      "onepiece_sounds:fruit_move/room"
+    ]
+  },
+  "fruit_move.sticky": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.sticky",
+    "sounds": [
+      "onepiece_sounds:fruit_move/sticky"
+    ]
+  },
+  "fruit_move.soul": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.soul",
+    "sounds": [
+      "onepiece_sounds:fruit_move/soul"
+    ]
+  },
+  "fruit_move.gas": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.gas",
+    "sounds": [
+      "onepiece_sounds:fruit_move/gas"
+    ]
+  },
+  "fruit_move.bloom": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.bloom",
+    "sounds": [
+      "onepiece_sounds:fruit_move/bloom"
+    ]
+  },
+  "fruit_move.magnet": {
+    "subtitle": "subtitles.onepiece_sounds.fruit_move.magnet",
+    "sounds": [
+      "onepiece_sounds:fruit_move/magnet"
+    ]
+  },
+  "music.toward_the_grand_line": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/toward_the_grand_line",
+        "stream": true
+      }
+    ]
+  },
+  "music.fair_winds": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/fair_winds",
+        "stream": true
+      }
+    ]
+  },
+  "music.boss_battle": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/boss_battle",
+        "stream": true
+      }
+    ]
+  },
+  "music.emperor_battle": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/emperor_battle",
+        "stream": true
+      }
+    ]
+  },
+  "music.justice_marches": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/justice_marches",
+        "stream": true
+      }
+    ]
+  },
+  "music.drink_to_the_horizon": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/drink_to_the_horizon",
+        "stream": true
+      }
+    ]
+  },
+  "music.haul_the_anchor": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/haul_the_anchor",
+        "stream": true
+      }
+    ]
+  },
+  "music.lantern_on_the_waves": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/lantern_on_the_waves",
+        "stream": true
+      }
+    ]
+  },
+  "music.admiral_battle": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/admiral_battle",
+        "stream": true
+      }
+    ]
+  },
+  "music.warlord_battle": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/warlord_battle",
+        "stream": true
+      }
+    ]
+  },
+  "music.final_battle": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/final_battle",
+        "stream": true
+      }
+    ]
+  },
+  "music.storm_at_sea": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/storm_at_sea",
+        "stream": true
+      }
+    ]
+  },
+  "music.deep_sea": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/deep_sea",
+        "stream": true
+      }
+    ]
+  },
+  "music.sea_king": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/sea_king",
+        "stream": true
+      }
+    ]
+  },
+  "music.whitebeard_battle": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/whitebeard_battle",
+        "stream": true
+      }
+    ]
+  },
+  "music.big_mom_battle": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/big_mom_battle",
+        "stream": true
+      }
+    ]
+  },
+  "music.kaido_battle": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/kaido_battle",
+        "stream": true
+      }
+    ]
+  },
+  "music.blackbeard_battle": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/blackbeard_battle",
+        "stream": true
+      }
+    ]
+  },
+  "music.elder_star_battle": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/elder_star_battle",
+        "stream": true
+      }
+    ]
+  },
+  "music.supernova_battle": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/supernova_battle",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.winter": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_winter",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.desert": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_desert",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.wano": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_wano",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.sky": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_sky",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.spooky": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_spooky",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.marine": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_marine",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.tropical": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_tropical",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.east_blue": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_east_blue",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.fishman": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_fishman",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.sabaody": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_sabaody",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.dressrosa": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_dressrosa",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.whole_cake": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_whole_cake",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.egghead": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_egghead",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.giants": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_giants",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.jungle": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_jungle",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.prison": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_prison",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.holy": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_holy",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.ancient": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_ancient",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.newkama": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_newkama",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.punk_hazard": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_punk_hazard",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.loguetown": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_loguetown",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.enies_lobby": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_enies_lobby",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.onigashima": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_onigashima",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.zou": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_zou",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.amazon_lily": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_amazon_lily",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.jaya": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_jaya",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.little_garden": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_little_garden",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.kuraigana": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_kuraigana",
+        "stream": true
+      }
+    ]
+  },
+  "music.island.hachinosu": {
+    "sounds": [
+      {
+        "name": "onepiece_sounds:music/island_hachinosu",
+        "stream": true
+      }
+    ]
+  }
+}

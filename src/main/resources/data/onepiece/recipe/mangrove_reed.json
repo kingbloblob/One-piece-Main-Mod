@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:tall_grass",
+    "minecraft:bone_meal"
+  ],
+  "result": {
+    "id": "onepiece:mangrove_reed",
+    "count": 2
+  }
+}

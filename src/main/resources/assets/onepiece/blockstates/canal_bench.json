@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/canal_bench"
+    },
+    "facing=east": {
+      "model": "onepiece:block/canal_bench",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/canal_bench",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/canal_bench",
+      "y": 270
+    }
+  }
+}

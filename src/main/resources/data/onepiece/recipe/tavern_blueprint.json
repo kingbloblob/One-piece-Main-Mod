@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:blue_dye"
+  ],
+  "result": {
+    "id": "onepiece:tavern_blueprint"
+  }
+}

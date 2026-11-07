@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "PBP"
+  ],
+  "key": {
+    "S": "minecraft:dark_oak_slab",
+    "P": "minecraft:dark_oak_planks",
+    "B": "minecraft:blue_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:marine_desk"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:snowy_slopes",
+    "minecraft:frozen_peaks",
+    "minecraft:jagged_peaks",
+    "minecraft:ice_spikes",
+    "minecraft:snowy_plains",
+    "minecraft:snowy_taiga",
+    "minecraft:grove",
+    "onepiece:drum_island",
+    "onepiece:punk_hazard_frozen"
+  ]
+}

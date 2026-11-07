@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "onepiece:flintlock_pistol",
+    "onepiece:marine_rifle",
+    "onepiece:tommy_gun",
+    "onepiece:hand_cannon",
+    "onepiece:senriku",
+    "onepiece:kabuto",
+    "onepiece:kuro_kabuto"
+  ]
+}

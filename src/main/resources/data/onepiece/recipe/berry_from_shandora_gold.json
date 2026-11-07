@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:shandora_gold_ingot"
+  ],
+  "result": {
+    "count": 10,
+    "id": "onepiece:berry"
+  }
+}

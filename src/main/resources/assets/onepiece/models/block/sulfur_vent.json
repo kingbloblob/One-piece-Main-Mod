@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "onepiece:block/sulfur_vent_top",
+    "bottom": "onepiece:block/sulfur_vent_side",
+    "side": "onepiece:block/sulfur_vent_side"
+  }
+}

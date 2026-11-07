@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:wanted_poster_xebec"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.xebec.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.xebec.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:pirate/all_bosses",
+  "rewards": {
+    "experience": 2000
+  }
+}

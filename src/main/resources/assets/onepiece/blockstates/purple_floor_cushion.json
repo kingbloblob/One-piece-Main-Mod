@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/purple_floor_cushion"
+    },
+    "facing=east": {
+      "model": "onepiece:block/purple_floor_cushion",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/purple_floor_cushion",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/purple_floor_cushion",
+      "y": 270
+    }
+  }
+}

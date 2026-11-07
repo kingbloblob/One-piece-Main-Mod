@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "condition": {
+            "type": "minecraft:match_block",
+            "blocks": "onepiece:amazon_flower",
+            "state": {
+              "half": "lower"
+            }
+          },
+          "name": "onepiece:amazon_flower"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "onepiece:blocks/amazon_flower"
+}

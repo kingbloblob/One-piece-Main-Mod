@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:simple_block",
+  "to_place": {
+    "id": "onepiece:giant_fern",
+    "properties": {
+      "half": "lower"
+    }
+  }
+}

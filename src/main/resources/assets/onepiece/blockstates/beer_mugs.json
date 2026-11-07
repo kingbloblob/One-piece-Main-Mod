@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/beer_mugs"
+    },
+    "facing=east": {
+      "model": "onepiece:block/beer_mugs",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/beer_mugs",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/beer_mugs",
+      "y": 270
+    }
+  }
+}

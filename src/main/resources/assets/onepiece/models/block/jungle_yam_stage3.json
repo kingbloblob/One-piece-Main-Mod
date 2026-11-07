@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "onepiece:block/jungle_yam_stage3"
+  }
+}

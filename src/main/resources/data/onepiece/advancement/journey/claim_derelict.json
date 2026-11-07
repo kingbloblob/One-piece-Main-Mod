@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:ships_wheel"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.claim_derelict.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.claim_derelict.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/ghost_ship"
+}

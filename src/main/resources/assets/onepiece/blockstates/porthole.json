@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/porthole"
+    },
+    "facing=east": {
+      "model": "onepiece:block/porthole",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/porthole",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/porthole",
+      "y": 270
+    }
+  }
+}

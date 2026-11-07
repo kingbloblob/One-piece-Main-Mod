@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/palm_wall_shelf"
+    },
+    "facing=east": {
+      "model": "onepiece:block/palm_wall_shelf",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/palm_wall_shelf",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/palm_wall_shelf",
+      "y": 270
+    }
+  }
+}

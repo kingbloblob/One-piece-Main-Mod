@@ -1,0 +1,517 @@
+[
+  {
+    "id": "stoked_bellows",
+    "station": "swordsmith_forge",
+    "name": "Stoked Bellows",
+    "icon": "minecraft:blast_furnace",
+    "description": "A big leather bellows keeps the fire white-hot. Small parts come out in pairs more often.",
+    "cost": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 8
+      },
+      {
+        "item": "minecraft:coal",
+        "count": 16
+      },
+      {
+        "item": "minecraft:leather",
+        "count": 4
+      }
+    ],
+    "perks": [
+      {
+        "type": "bonus",
+        "chance": 0.25,
+        "recipes": [
+          "skillful_whetstone",
+          "great_whetstone",
+          "scope",
+          "long_barrel",
+          "hair_trigger"
+        ],
+        "label": "whetstones and gun parts"
+      }
+    ],
+    "parents": []
+  },
+  {
+    "id": "tempering_anvil",
+    "station": "swordsmith_forge",
+    "name": "Tempering Anvil",
+    "icon": "minecraft:anvil",
+    "parents": [
+      "stoked_bellows"
+    ],
+    "requires": {
+      "bounty": 30000000
+    },
+    "description": "A Wano-style anvil for folding steel. Lets you forge Sea King fangs into a blade.",
+    "cost": [
+      {
+        "item": "minecraft:anvil",
+        "count": 1
+      },
+      {
+        "item": "onepiece:tamahagane_ingot",
+        "count": 8
+      },
+      {
+        "item": "onepiece:sea_king_fang",
+        "count": 2
+      }
+    ],
+    "perks": []
+  },
+  {
+    "id": "quench_trough",
+    "station": "swordsmith_forge",
+    "name": "Seawater Quench Trough",
+    "icon": "minecraft:cauldron",
+    "parents": [
+      "stoked_bellows"
+    ],
+    "requires": {
+      "boss": "smoker"
+    },
+    "description": "Quenching in seawater makes cleaner steel, so less of it is wasted.",
+    "cost": [
+      {
+        "item": "minecraft:iron_block",
+        "count": 6
+      },
+      {
+        "item": "minecraft:prismarine_shard",
+        "count": 8
+      },
+      {
+        "item": "onepiece:sea_pearl",
+        "count": 2
+      }
+    ],
+    "perks": [
+      {
+        "type": "save",
+        "chance": 0.1
+      }
+    ]
+  },
+  {
+    "id": "dragon_hearth",
+    "station": "swordsmith_forge",
+    "name": "Dragon Hearth",
+    "icon": "onepiece:dragon_heartstone",
+    "parents": [
+      "tempering_anvil",
+      "quench_trough"
+    ],
+    "requires": {
+      "bounty": 500000000
+    },
+    "description": "A Punk Hazard dragon's heartstone burns forever. Master smiths waste almost nothing and sometimes make two.",
+    "cost": [
+      {
+        "item": "onepiece:dragon_heartstone",
+        "count": 1
+      },
+      {
+        "item": "onepiece:kokuto_ingot",
+        "count": 4
+      },
+      {
+        "item": "minecraft:magma_block",
+        "count": 8
+      }
+    ],
+    "perks": [
+      {
+        "type": "save",
+        "chance": 0.2
+      },
+      {
+        "type": "bonus",
+        "chance": 0.1
+      }
+    ]
+  },
+  {
+    "id": "sturdy_workbench",
+    "station": "shipwright_bench",
+    "name": "Sturdy Workbench",
+    "icon": "minecraft:crafting_table",
+    "description": "A proper shipwright's bench with clamps and a good saw. Sometimes there's wood left for one more.",
+    "cost": [
+      {
+        "tag": "minecraft:planks",
+        "icon": "minecraft:oak_planks",
+        "name": "Any Planks",
+        "count": 16
+      },
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 8
+      },
+      {
+        "item": "onepiece:rope_coil",
+        "count": 2
+      }
+    ],
+    "perks": [
+      {
+        "type": "bonus",
+        "chance": 0.1
+      }
+    ],
+    "parents": []
+  },
+  {
+    "id": "powder_room",
+    "station": "shipwright_bench",
+    "name": "Powder Room",
+    "icon": "minecraft:tnt",
+    "parents": [
+      "sturdy_workbench"
+    ],
+    "requires": {
+      "boss": "buggy"
+    },
+    "description": "A dry, safe room for gunpowder. Ammo batches come out bigger.",
+    "cost": [
+      {
+        "item": "minecraft:gunpowder",
+        "count": 16
+      },
+      {
+        "item": "onepiece:sulfur",
+        "count": 8
+      },
+      {
+        "item": "onepiece:cannon",
+        "count": 1
+      }
+    ],
+    "perks": [
+      {
+        "type": "bonus",
+        "chance": 0.35,
+        "recipes": [
+          "bullet",
+          "bullet_from_sulfur",
+          "cannonball",
+          "cannonball_from_sulfur",
+          "lead_star",
+          "exploding_star",
+          "chain_shot",
+          "fire_shot",
+          "grapeshot"
+        ],
+        "label": "ammo"
+      }
+    ]
+  },
+  {
+    "id": "drydock_crane",
+    "station": "shipwright_bench",
+    "name": "Drydock Crane",
+    "icon": "onepiece:anchor",
+    "parents": [
+      "sturdy_workbench"
+    ],
+    "requires": {
+      "crew": "shipwright"
+    },
+    "description": "A crane like Water 7's docks. Ship parts waste less, and Adam wood makes hull plating in bulk.",
+    "cost": [
+      {
+        "item": "minecraft:iron_block",
+        "count": 4
+      },
+      {
+        "item": "onepiece:rope_coil",
+        "count": 8
+      },
+      {
+        "item": "onepiece:anchor",
+        "count": 1
+      }
+    ],
+    "perks": [
+      {
+        "type": "save",
+        "chance": 0.2,
+        "recipes": [
+          "hull_plating",
+          "hull_plating_adam",
+          "reinforced_sailcloth",
+          "heavy_gun_carriage",
+          "ship_coating",
+          "ballast_tank",
+          "cola_engine"
+        ],
+        "label": "ship parts"
+      }
+    ]
+  },
+  {
+    "id": "frankys_workshop",
+    "station": "shipwright_bench",
+    "name": "Franky's Workshop",
+    "icon": "onepiece:pacifista_core",
+    "parents": [
+      "powder_room",
+      "drydock_crane"
+    ],
+    "requires": {
+      "boss": "lucci"
+    },
+    "description": "SUPER! Pacifista cores and cola power a real cyborg workshop. Cyborg parts waste less, and a core replaces laser cores.",
+    "cost": [
+      {
+        "item": "onepiece:pacifista_core",
+        "count": 2
+      },
+      {
+        "item": "onepiece:cola_crate",
+        "count": 4
+      },
+      {
+        "item": "minecraft:iron_block",
+        "count": 4
+      }
+    ],
+    "perks": [
+      {
+        "type": "save",
+        "chance": 0.25,
+        "recipes": [
+          "cyborg_iron_frame_plating",
+          "cyborg_strong_right_arm",
+          "cyborg_cola_engine_core",
+          "cyborg_radical_beam_emitter",
+          "cyborg_coup_de_vent_cannon",
+          "cyborg_lunarian_plating",
+          "radical_beam_emitter_from_core"
+        ],
+        "label": "cyborg parts"
+      }
+    ]
+  },
+  {
+    "id": "brick_oven",
+    "station": "ships_galley",
+    "name": "Brick Oven (Cooking Tier II)",
+    "icon": "minecraft:smoker",
+    "requires": {
+      "islands": 3
+    },
+    "description": "A real oven for the galley. Unlocks Tier II dishes: Takoyaki, Sea King Ramen and Kibi Dango.",
+    "cost": [
+      {
+        "item": "minecraft:bricks",
+        "count": 24
+      },
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 4
+      },
+      {
+        "item": "minecraft:furnace",
+        "count": 1
+      }
+    ],
+    "perks": [
+      {
+        "type": "bonus",
+        "chance": 0.1
+      }
+    ],
+    "parents": []
+  },
+  {
+    "id": "spice_rack",
+    "station": "ships_galley",
+    "name": "Spice Rack",
+    "icon": "minecraft:cocoa_beans",
+    "parents": [
+      "brick_oven"
+    ],
+    "description": "Spices from every island. Dishes stretch further.",
+    "cost": [
+      {
+        "item": "minecraft:sweet_berries",
+        "count": 8
+      },
+      {
+        "item": "minecraft:cocoa_beans",
+        "count": 4
+      },
+      {
+        "item": "minecraft:sugar",
+        "count": 8
+      },
+      {
+        "item": "minecraft:honey_bottle",
+        "count": 2
+      }
+    ],
+    "perks": [
+      {
+        "type": "bonus",
+        "chance": 0.2
+      }
+    ]
+  },
+  {
+    "id": "sanjis_kitchen",
+    "station": "ships_galley",
+    "name": "Sanji's Kitchen (Cooking Tier III)",
+    "icon": "onepiece:ambergris",
+    "parents": [
+      "brick_oven"
+    ],
+    "requires": {
+      "crew": "cook",
+      "bounty": 100000000
+    },
+    "description": "A kitchen fit for the Baratie. Unlocks Tier III dishes: Wedding Cake, Ambergris Roast and Diable Flambe.",
+    "cost": [
+      {
+        "item": "onepiece:ambergris",
+        "count": 1
+      },
+      {
+        "item": "minecraft:gold_block",
+        "count": 2
+      },
+      {
+        "item": "minecraft:cauldron",
+        "count": 1
+      },
+      {
+        "item": "minecraft:iron_block",
+        "count": 2
+      }
+    ],
+    "perks": [
+      {
+        "type": "save",
+        "chance": 0.1
+      }
+    ]
+  },
+  {
+    "id": "all_blue_pantry",
+    "station": "ships_galley",
+    "name": "All Blue Pantry",
+    "icon": "onepiece:all_blue_kingfish",
+    "parents": [
+      "spice_rack",
+      "sanjis_kitchen"
+    ],
+    "requires": {
+      "islands": 10
+    },
+    "description": "Fish from every sea, kept fresh. The best cooks waste nothing.",
+    "cost": [
+      {
+        "item": "onepiece:all_blue_kingfish",
+        "count": 1
+      },
+      {
+        "item": "minecraft:blue_ice",
+        "count": 8
+      },
+      {
+        "item": "minecraft:barrel",
+        "count": 4
+      }
+    ],
+    "perks": [
+      {
+        "type": "save",
+        "chance": 0.15
+      },
+      {
+        "type": "bonus",
+        "chance": 0.1
+      }
+    ]
+  },
+  {
+    "id": "dial_bench",
+    "station": "navigators_desk",
+    "name": "Dial Bench",
+    "icon": "onepiece:dial_shell",
+    "requires": {
+      "islands": 3
+    },
+    "description": "Tools for opening and charging Skypiea Dial shells. Unlocks the Tone, Water and Milky Dials.",
+    "cost": [
+      {
+        "item": "onepiece:dial_shell",
+        "count": 4
+      },
+      {
+        "item": "minecraft:gold_ingot",
+        "count": 2
+      },
+      {
+        "item": "minecraft:spyglass",
+        "count": 1
+      }
+    ],
+    "parents": [],
+    "perks": []
+  },
+  {
+    "id": "weatheria_lab",
+    "station": "navigators_desk",
+    "name": "Weatheria Lab",
+    "icon": "onepiece:breath_dial",
+    "parents": [
+      "dial_bench"
+    ],
+    "requires": {
+      "boss": "enel"
+    },
+    "description": "Weather science from the sky island Weatheria. Unlocks the Jet, Axe, Eisen and Reject Dials, and Dials waste fewer shells.",
+    "cost": [
+      {
+        "item": "onepiece:dial_shell",
+        "count": 8
+      },
+      {
+        "item": "onepiece:breath_dial",
+        "count": 1
+      },
+      {
+        "item": "onepiece:flash_dial",
+        "count": 1
+      },
+      {
+        "item": "minecraft:copper_block",
+        "count": 4
+      }
+    ],
+    "perks": [
+      {
+        "type": "save",
+        "chance": 0.2,
+        "recipes": [
+          "tone_dial",
+          "water_dial",
+          "milky_dial",
+          "jet_dial",
+          "axe_dial",
+          "eisen_dial",
+          "reject_dial",
+          "flash_dial",
+          "breath_dial",
+          "flame_dial",
+          "impact_dial"
+        ],
+        "label": "Dials"
+      }
+    ]
+  }
+]

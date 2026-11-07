@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:sea_cat_spawn_egg"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.sea_cat.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.sea_cat.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:sea_cat"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/ride"
+}

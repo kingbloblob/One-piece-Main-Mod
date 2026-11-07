@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:book",
+    "minecraft:gold_nugget",
+    "minecraft:feather"
+  ],
+  "result": {
+    "id": "onepiece:builders_ledger"
+  }
+}

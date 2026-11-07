@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bush",
+    "minecraft:pink_dye"
+  ],
+  "result": {
+    "id": "onepiece:wano_azalea",
+    "count": 2
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "onepiece:block/shandian_ruin_stone_slab"
+    },
+    "type=double": {
+      "model": "onepiece:block/shandian_ruin_stone"
+    },
+    "type=top": {
+      "model": "onepiece:block/shandian_ruin_stone_slab_top"
+    }
+  }
+}

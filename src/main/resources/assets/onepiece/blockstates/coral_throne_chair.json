@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/coral_throne_chair"
+    },
+    "facing=east": {
+      "model": "onepiece:block/coral_throne_chair",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/coral_throne_chair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/coral_throne_chair",
+      "y": 270
+    }
+  }
+}

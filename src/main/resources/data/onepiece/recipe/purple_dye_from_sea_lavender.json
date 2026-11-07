@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:sea_lavender"
+  ],
+  "result": {
+    "id": "minecraft:purple_dye",
+    "count": 2
+  }
+}

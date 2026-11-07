@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "onepiece:dressrosa_stucco",
+  "result": {
+    "id": "onepiece:dressrosa_stucco_stairs",
+    "count": 1
+  }
+}

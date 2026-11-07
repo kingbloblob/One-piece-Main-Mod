@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:pearl_block"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:pearl_stairs"
+  }
+}

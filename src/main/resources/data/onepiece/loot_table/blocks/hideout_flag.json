@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "onepiece:hideout_flag"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "onepiece:blocks/hideout_flag"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    "onepiece:adam_log"
+  ],
+  "result": {
+    "count": 4,
+    "id": "onepiece:adam_planks"
+  }
+}

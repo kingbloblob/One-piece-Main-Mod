@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:diorite",
+    "X": "minecraft:white_dye"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:pearl_block"
+  }
+}

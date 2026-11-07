@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_sign_rot_2",
+  "textures": {
+    "all": "onepiece:block/adam_sign",
+    "particle": "onepiece:block/adam_planks"
+  }
+}

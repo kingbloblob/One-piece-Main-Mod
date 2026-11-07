@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:jungle_shrub"
+  ],
+  "result": {
+    "id": "minecraft:green_dye",
+    "count": 1
+  }
+}

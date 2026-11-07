@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "IRI",
+    "ICI"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "R": "minecraft:red_dye",
+    "C": "minecraft:chest"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:shipwright_tool_chest"
+  }
+}

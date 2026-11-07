@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:stone",
+    "X": "#minecraft:coals"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:scorched_stone"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "W  ",
+    "WWW",
+    " I "
+  ],
+  "key": {
+    "W": "minecraft:blue_wool",
+    "I": "minecraft:iron_ingot"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:marine_office_chair"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/tea_set"
+    },
+    "facing=east": {
+      "model": "onepiece:block/tea_set",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/tea_set",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/tea_set",
+      "y": 270
+    }
+  }
+}

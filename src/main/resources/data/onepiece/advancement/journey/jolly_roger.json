@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:jolly_roger"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.jolly_roger.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.jolly_roger.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:jolly_roger"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/sail"
+}

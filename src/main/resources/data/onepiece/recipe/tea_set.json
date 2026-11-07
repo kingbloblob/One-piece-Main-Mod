@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:clay_ball",
+    "minecraft:clay_ball",
+    "minecraft:clay_ball",
+    "minecraft:dark_oak_slab"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:tea_set"
+  }
+}

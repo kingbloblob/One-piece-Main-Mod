@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "onepiece:block/primeval_blossom_bottom"
+    },
+    "half=upper": {
+      "model": "onepiece:block/primeval_blossom_top"
+    }
+  }
+}

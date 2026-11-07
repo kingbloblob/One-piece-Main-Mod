@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "onepiece:snow_bricks",
+  "result": {
+    "id": "onepiece:snow_brick_slab",
+    "count": 2
+  }
+}

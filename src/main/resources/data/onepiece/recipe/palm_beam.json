@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "LLL"
+  ],
+  "key": {
+    "L": "onepiece:stripped_palm_log"
+  },
+  "result": {
+    "count": 6,
+    "id": "onepiece:palm_beam"
+  }
+}

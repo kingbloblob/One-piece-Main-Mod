@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:river",
+    "minecraft:ocean",
+    "minecraft:lukewarm_ocean",
+    "minecraft:warm_ocean",
+    "onepiece:fishman_reef",
+    "onepiece:sabaody",
+    "onepiece:new_world_sea",
+    "onepiece:enies_lobby"
+  ]
+}

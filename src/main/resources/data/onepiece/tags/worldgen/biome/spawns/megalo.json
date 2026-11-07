@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:warm_ocean",
+    "minecraft:lukewarm_ocean",
+    "onepiece:fishman_reef",
+    "onepiece:new_world_sea"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/marine_supply_crate"
+    },
+    "facing=east": {
+      "model": "onepiece:block/marine_supply_crate",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/marine_supply_crate",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/marine_supply_crate",
+      "y": 270
+    }
+  }
+}

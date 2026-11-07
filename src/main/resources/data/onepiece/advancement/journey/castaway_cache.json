@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:castaway_chart"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.castaway_cache.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.castaway_cache.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/message_bottle"
+}

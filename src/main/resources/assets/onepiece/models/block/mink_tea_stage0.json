@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "onepiece:block/mink_tea_stage0"
+  }
+}

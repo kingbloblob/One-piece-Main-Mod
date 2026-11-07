@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "minecraft:block/cake_side",
+    "side": "minecraft:block/cake_side",
+    "top": "minecraft:block/cake_top",
+    "bottom": "minecraft:block/cake_bottom"
+  }
+}

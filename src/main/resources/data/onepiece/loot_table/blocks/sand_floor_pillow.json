@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "onepiece:blocks/sand_floor_pillow",
+  "pools": [
+    {
+      "rolls": 1,
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "onepiece:sand_floor_pillow"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:deep_trench",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "onepiece:ring_spread",
+    "spacing": 30,
+    "separation": 12,
+    "salt": 1029384756,
+    "min_distance": 1500
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:savanna",
+    "minecraft:plains",
+    "minecraft:windswept_savanna",
+    "onepiece:dressrosa",
+    "onepiece:enies_lobby",
+    "onepiece:elbaph"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "I I",
+    "SWS"
+  ],
+  "key": {
+    "I": "minecraft:stick",
+    "S": "minecraft:string",
+    "W": "minecraft:white_wool"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:hammock"
+  }
+}

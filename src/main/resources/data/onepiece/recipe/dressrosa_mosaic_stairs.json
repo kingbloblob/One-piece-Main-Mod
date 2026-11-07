@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:dressrosa_mosaic"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:dressrosa_mosaic_stairs"
+  }
+}

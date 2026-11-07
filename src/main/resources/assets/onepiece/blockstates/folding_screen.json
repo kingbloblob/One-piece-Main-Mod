@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/folding_screen"
+    },
+    "facing=east": {
+      "model": "onepiece:block/folding_screen",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/folding_screen",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/folding_screen",
+      "y": 270
+    }
+  }
+}

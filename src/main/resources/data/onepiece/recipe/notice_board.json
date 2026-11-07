@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:paper",
+    "minecraft:paper",
+    "#minecraft:planks"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:notice_board"
+  }
+}

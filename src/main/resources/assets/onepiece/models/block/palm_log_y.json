@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_uv_locked_y",
+  "textures": {
+    "end": "onepiece:block/palm_log_top",
+    "side": "onepiece:block/palm_log"
+  }
+}

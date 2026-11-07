@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:alabasta_tiles"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:alabasta_tile_stairs"
+  }
+}

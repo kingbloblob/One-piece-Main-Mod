@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "onepiece:blocks/grand_line_wall_map",
+  "pools": [
+    {
+      "rolls": 1,
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "onepiece:grand_line_wall_map"
+        }
+      ]
+    }
+  ]
+}

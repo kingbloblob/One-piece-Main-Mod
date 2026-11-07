@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "onepiece:blocks/mikan_tree_pot",
+  "pools": [
+    {
+      "rolls": 1,
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "onepiece:mikan_tree_pot"
+        }
+      ]
+    }
+  ]
+}

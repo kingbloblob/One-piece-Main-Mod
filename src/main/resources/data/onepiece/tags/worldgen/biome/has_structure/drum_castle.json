@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:snowy_plains",
+    "minecraft:snowy_taiga",
+    "onepiece:drum_island",
+    "onepiece:egghead",
+    "onepiece:elbaph"
+  ]
+}

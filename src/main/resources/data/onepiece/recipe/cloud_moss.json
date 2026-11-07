@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:moss_carpet",
+    "minecraft:white_dye"
+  ],
+  "result": {
+    "id": "onepiece:cloud_moss",
+    "count": 2
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:dressrosa_tiles"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:dressrosa_tile_stairs"
+  }
+}

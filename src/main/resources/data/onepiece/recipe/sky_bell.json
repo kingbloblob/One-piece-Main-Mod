@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:dandelion",
+    "minecraft:light_blue_dye"
+  ],
+  "result": {
+    "id": "onepiece:sky_bell",
+    "count": 2
+  }
+}

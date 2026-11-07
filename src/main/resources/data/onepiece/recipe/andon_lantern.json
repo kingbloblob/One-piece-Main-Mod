@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "onepiece:shoji_screen",
+    "minecraft:torch"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:andon_lantern"
+  }
+}

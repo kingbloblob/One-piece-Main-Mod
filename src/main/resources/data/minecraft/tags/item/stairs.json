@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "onepiece:alabasta_sandstone_brick_stairs",
+    "onepiece:alabasta_tile_stairs",
+    "onepiece:wano_roof_tile_stairs",
+    "onepiece:wano_lacquer_stairs",
+    "onepiece:marine_brick_stairs",
+    "onepiece:marine_tile_stairs",
+    "onepiece:canal_brick_stairs",
+    "onepiece:water7_cobble_stairs",
+    "onepiece:dressrosa_mosaic_stairs",
+    "onepiece:dressrosa_tile_stairs",
+    "onepiece:dressrosa_stucco_stairs",
+    "onepiece:coral_brick_stairs",
+    "onepiece:pearl_stairs",
+    "onepiece:cloud_brick_stairs",
+    "onepiece:shandora_gold_brick_stairs",
+    "onepiece:shandian_ruin_stone_stairs",
+    "onepiece:snow_brick_stairs",
+    "onepiece:frozen_stone_stairs",
+    "onepiece:scorched_stone_stairs",
+    "onepiece:seastone_brick_stairs",
+    "onepiece:lab_panel_stairs",
+    "onepiece:chocolate_stairs",
+    "onepiece:cookie_brick_stairs",
+    "onepiece:frosting_stairs"
+  ]
+}

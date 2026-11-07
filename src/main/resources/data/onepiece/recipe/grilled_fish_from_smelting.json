@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": "#onepiece:raw_fish",
+  "result": {
+    "id": "onepiece:grilled_fish"
+  }
+}

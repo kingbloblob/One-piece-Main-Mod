@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:brown_mushroom",
+    "minecraft:glow_berries"
+  ],
+  "result": {
+    "id": "onepiece:ghost_mushroom",
+    "count": 2
+  }
+}

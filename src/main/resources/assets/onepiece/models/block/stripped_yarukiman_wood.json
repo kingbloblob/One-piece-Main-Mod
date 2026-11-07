@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "onepiece:block/stripped_yarukiman_log",
+    "side": "onepiece:block/stripped_yarukiman_log"
+  }
+}

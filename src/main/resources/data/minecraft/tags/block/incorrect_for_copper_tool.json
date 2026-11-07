@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#onepiece:needs_seastone_tool",
+    "#onepiece:needs_sea_prism_tool"
+  ]
+}

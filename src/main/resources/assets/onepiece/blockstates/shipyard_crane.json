@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/shipyard_crane"
+    },
+    "facing=east": {
+      "model": "onepiece:block/shipyard_crane",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/shipyard_crane",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/shipyard_crane",
+      "y": 270
+    }
+  }
+}

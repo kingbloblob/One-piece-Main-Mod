@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "onepiece:block/snake_pepper_stage3"
+  }
+}

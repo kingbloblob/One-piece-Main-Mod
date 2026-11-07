@@ -1,0 +1,20 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:tower_of_justice",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:ryugu_palace",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "onepiece:ring_spread",
+    "spacing": 44,
+    "separation": 18,
+    "salt": 1408172024,
+    "min_distance": 3500,
+    "max_distance": 6000
+  }
+}

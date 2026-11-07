@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:wano_roof_tiles"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.wano.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.wano.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/whole_cake"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "textures": {
+    "bottom": "onepiece:block/yarukiman_door_bottom",
+    "top": "onepiece:block/yarukiman_door_top"
+  }
+}

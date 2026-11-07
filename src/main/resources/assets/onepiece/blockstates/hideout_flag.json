@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": {"model": "onepiece:block/hideout_flag"},
+    "facing=east": {"model": "onepiece:block/hideout_flag", "y": 90},
+    "facing=south": {"model": "onepiece:block/hideout_flag", "y": 180},
+    "facing=west": {"model": "onepiece:block/hideout_flag", "y": 270}
+  }
+}

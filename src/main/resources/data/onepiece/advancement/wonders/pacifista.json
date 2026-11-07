@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:laser_core"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.pacifista.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.pacifista.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/root"
+}

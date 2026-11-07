@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SWS"
+  ],
+  "key": {
+    "S": "minecraft:string",
+    "W": "minecraft:blue_wool"
+  },
+  "result": {
+    "count": 2,
+    "id": "onepiece:blue_floor_cushion"
+  }
+}

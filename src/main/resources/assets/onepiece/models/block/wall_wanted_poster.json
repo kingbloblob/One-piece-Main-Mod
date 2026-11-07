@@ -1,0 +1,20 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "onepiece:block/wall_wanted_poster",
+    "poster": "onepiece:block/wall_wanted_poster"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 15], "to": [16, 16, 16],
+      "faces": {
+        "north": {"uv": [0, 0, 16, 16], "texture": "#poster"},
+        "south": {"uv": [16, 0, 0, 16], "texture": "#poster", "cullface": "south"},
+        "east": {"uv": [15, 0, 16, 16], "texture": "#poster"},
+        "west": {"uv": [0, 0, 1, 16], "texture": "#poster"},
+        "up": {"uv": [0, 0, 16, 1], "texture": "#poster"},
+        "down": {"uv": [0, 15, 16, 16], "texture": "#poster"}
+      }
+    }
+  ]
+}

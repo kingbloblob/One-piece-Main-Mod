@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "onepiece:block/paper_lantern"
+    },
+    "hanging=true": {
+      "model": "onepiece:block/paper_lantern_hanging"
+    }
+  }
+}

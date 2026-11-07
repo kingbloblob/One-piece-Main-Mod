@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:sand",
+    "minecraft:black_dye"
+  ],
+  "result": {
+    "id": "onepiece:black_sand",
+    "count": 2
+  }
+}

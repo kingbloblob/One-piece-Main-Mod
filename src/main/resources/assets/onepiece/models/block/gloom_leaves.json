@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "onepiece:block/gloom_leaves"
+  }
+}

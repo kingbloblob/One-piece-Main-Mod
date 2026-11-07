@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": "#minecraft:wool",
+    "L": "#minecraft:logs",
+    "S": "#minecraft:wooden_slabs"
+  },
+  "pattern": [
+    "WLW",
+    "WLW",
+    " S "
+  ],
+  "result": {
+    "id": "onepiece:training_post"
+  }
+}

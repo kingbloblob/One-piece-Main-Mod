@@ -1,0 +1,231 @@
+# One Piece Mod Achievements
+
+216 achievements in 4 tabs (press L in game). Ones marked **new** were added on 2026-10-30 (32 of them). Hidden ones stay secret until earned.
+
+## The Grand Line (story, navigation, sea events, ship fights, fishing, Sea Train, New Game+)
+
+- **Romance Dawn**: Finish the Romance Dawn chapters and set sail
+- **The Sea Restaurant**: Finish the Baratie chapter
+- **Hero of the East Blue**: Free Cocoyasi Village from Arlong
+- **Where It All Began**: Escape Loguetown, the town of the beginning and the end
+- **Into the Grand Line** [goal]: Climb Reverse Mountain into the Grand Line
+- **Cherry Blossoms in Winter**: Finish the Drum Island chapter
+- **Kingdom of Sand**: Save Alabasta from Crocodile
+- **The Sky Is Real**: Finish the Sky Island chapter
+- **Declaration of War**: Storm Enies Lobby
+- **Nightmare Ship**: Get your shadow back at Thriller Bark
+- **Sabaody Archipelago** [goal]: Reach the end of Paradise
+- **Island of Women**: Finish the Amazon Lily chapter
+- **Great Prison Break** [goal]: Break through every level of Impel Down
+- **Summit War**: Live through the war at Marineford
+- **Two Years Later** [goal]: Finish your two years of training
+- **10,000 Leagues Under the Sea**: Finish the Fish-Man Island chapter
+- **Fire and Ice**: Finish the Punk Hazard chapter
+- **Birdcage Breaker**: Free Dressrosa from Doflamingo
+- **The Elephant Who Walks**: Finish the Zou chapter
+- **Tea Party Crasher**: Escape Whole Cake Island
+- **Dawn of Wano** [goal]: Free Wano from Kaido
+- **Pirate Island**: Defeat Blackbeard's crew at Hachinosu
+- **The One Piece Is Real!** [challenge]: Reach Laugh Tale and find the One Piece
+- **The Holy Land** [goal] (hidden): Climb the Red Line to Mary Geoise
+- **The True History** [goal] (hidden): Uncover what happened in the Void Century
+- **The Empty Throne** [challenge] (hidden): Defeat the one who sits on the Empty Throne
+- **Follow the Needle**: Record your first island with a Log Pose
+- **Island Hopper**: Record 5 islands with a Log Pose
+- **Seasoned Navigator** [goal]: Record 10 islands with a Log Pose
+- **A Fixed Course**: Get an Eternal Pose
+- **Land Ho!**: Set foot on a Grand Line island
+- **Adventurer of the Grand Line** [challenge]: Visit every island of the Grand Line
+- **Bubbles and Mangroves**: Visit Sabaody Park
+- **Under the Sea**: Find Ryugu Palace
+- **Weather Science**: Find Weatheria in the sky
+- **Ohara's Legacy**: Find the ruins of the Ohara library
+- **Jailbreak** (hidden): Find the great prison, Impel Down
+- **Sail Away**: Take the helm of your own ship
+- **Raise the Flag**: Get a Jolly Roger for your ship
+- **Windless Waters** [goal]: Sail your ship into the Calm Belt
+- **Sea King Slayer** [goal]: Defeat a Sea King
+- **Charting the Seas**: Get a Sea Chart
+- **A Paper That Points Home**: Get someone's Vivre Card
+- **Into the Storm**: Sail through a Grand Line storm
+- **Round and Round**: Get caught in a whirlpool
+- **Aqua Laguna**: Face the giant wave of Aqua Laguna
+- **The Florian Triangle**: Get lost in the Florian Triangle mist
+- **Sudden Blizzard**: Get caught in a blizzard at sea
+- **Scorching Seas**: Sail through a heat wave
+- **Sea King Ambush**: Get ambushed by Sea Kings
+- **The Grand Line's Moods** [challenge]: Live through every kind of sea event
+- **Pirate vs Pirate**: Defeat a rival pirate
+- **Prepare to Board!**: Get a Boarding Hook
+- **X Marks the Spot**: Get a treasure map
+- **Buried Treasure**: Dig up the treasure under a red X
+- **Treasure of the Deep**: Find the treasure of a sunken ship
+- **A Captain's Fortune** [goal]: Dig up a captain's hoard past its guards
+- **Treasure Hunter** [challenge]: Find 10 treasures from maps
+- **Down She Goes**: Sink an enemy ship
+- **She's Ours Now**: Board an enemy ship and beat her whole crew
+- **Once More, With Feeling** [goal]: Start New Game+
+- **Legend of Every Age** [challenge]: Reach the last New Game+ cycle
+- **All Aboard the Puffing Tom**: Ride the Sea Train
+- **Station Master** [goal]: Build your own Sea Train Station
+- **Gone Fishing**: Catch a fish of the Grand Line **new**
+- **Sanji's Supplier**: Catch 10 kinds of fish **new**
+- **The All Blue Is Real** [goal]: Catch a fish from the All Blue **new**
+- **Every Fish in Every Sea** [challenge]: Catch every kind of fish **new**
+- **Regular Commuter**: Know 5 Sea Train stations **new**
+
+## Hidden Power (fruits, Haki, styles, Pirate Level)
+
+- **Who Are You?**: Choose your race
+- **A Cursed Bite**: Eat a Devil Fruit. You will never swim again
+- **Superhuman**: Eat a Paramecia fruit
+- **One With the Elements**: Eat a Logia fruit
+- **Wild Side**: Eat a Zoan fruit
+- **Getting the Hang of It**: Get a quarter of the way to awakening your Devil Fruit
+- **Fruit Master** [goal]: Master your Devil Fruit (1,000 mastery, or the amount set in the mod settings)
+- **Awakened** [challenge]: Awaken your Devil Fruit
+- **Sixth Sense**: Unlock Observation Haki
+- **Future Sight** [goal]: Master Observation Haki
+- **Iron Will**: Unlock Armament Haki
+- **Ryuo** [goal]: Master Armament Haki
+- **King's Disposition** [goal]: Awaken Conqueror's Haki
+- **Supreme King** [challenge]: Master Conqueror's Haki
+- **Martial Artist**: Learn a fighting style
+- **Student of Many**: Learn 3 fighting styles
+- **Master of Every Style** [challenge]: Learn every fighting style
+- **A Blade With a Name**: Get one of the named swords
+- **Three Swords at Once** [goal]: Carry Wado Ichimonji, Sandai Kitetsu and Shusui together
+- **World's Strongest Blade** [goal]: Take Yoru from Mihawk
+- **Getting Stronger**: Reach Pirate Level 10
+- **Seasoned Fighter**: Reach Pirate Level 25
+- **Monster of the Seas** [goal]: Reach Pirate Level 40
+- **Peak Condition** [challenge]: Reach Pirate Level 60
+- **Pushed to the Limit** [goal]: Raise one stat all the way to rank 20
+- **Fruit Scholar**: Get a Devil Fruit Encyclopedia
+- **Fruit Collector**: Discover 15 Devil Fruits
+- **Fruit Expert** [goal]: Discover 50 Devil Fruits
+- **Every Fruit Under the Sun** [challenge]: Discover every Devil Fruit
+
+## A Pirate's Life (bounty, bosses, crew, careers, Colosseum, Davy Back Fights, hideouts, raids)
+
+- **Wanted!**: Get your first bounty
+- **Rookie**: Reach a 10,000,000 Berry bounty
+- **Supernova** [goal]: Reach a 100,000,000 Berry bounty
+- **New World Threat**: Reach a 500,000,000 Berry bounty
+- **Billion-Berry Pirate** [goal]: Reach a 1,000,000,000 Berry bounty
+- **Legend of the Seas** [challenge]: Reach a 3,000,000,000 Berry bounty
+- **Enemy of the Navy**: Defeat a Marine
+- **Pirate Hunter**: Defeat your first boss
+- **Rematch!**: Defeat a boss on Hard
+- **No Mercy** [goal]: Defeat a boss on Expert
+- **The Worst Generation** [goal]: Defeat Kid, Killer and Hawkins
+- **Down With the Warlords** [goal]: Defeat Crocodile, Moria, Doflamingo and Mihawk
+- **Admiral Breaker** [challenge]: Defeat all five Admirals
+- **Emperor Slayer** [challenge]: Defeat Whitebeard, Big Mom, Kaido and Blackbeard
+- **Strongest in the World** [challenge]: Defeat every boss
+- **Captain**: Start your own pirate crew
+- **A Proper Crew**: Have 3 crewmates
+- **Full Crew** [goal]: Fill every role in your crew
+- **Flag Planted**: Claim a pirate kingdom
+- **Emperor of the Sea** [challenge]: Become one of the Four Emperors
+- **King of the Pirates** [challenge]: Become the Pirate King
+- **King of the World** [challenge] (hidden): Claim the highest title of all
+- **Pirate Workshop**: Get a crafting station
+- **Stone of the Sea**: Smelt a Seastone ingot
+- **Master Smith** [goal]: Get a Swordsmith's Forge
+- **Lock and Load**: Get a gun
+- **Doctor's Secret**: Get a Rumble Ball
+- **Lending a Hand**: Finish a quest step for a character
+- **A Story Worth Telling**: Finish a character's whole quest line
+- **Friend of the Seas** [goal]: Finish 5 characters' quest lines
+- **Everyone's Hero** [challenge]: Finish every character's quest line
+- **Making Friends**: Meet 10 characters from the story
+- **Pirate Architect**: Finish building a multiblock from a blueprint
+- **Master Builder** [goal]: Finish every kind of blueprint building
+- **Navy Repelled** [goal]: Fight off a Navy raid
+- **Hunter Becomes Hunted**: Defeat a Devil Fruit bounty hunter
+- **Poison Proof** [goal]: Defeat Magellan, warden of Impel Down
+- **Shadow of the World** [challenge] (hidden): Defeat Imu
+- **The Rocks Legend** [challenge] (hidden): Defeat Rocks D. Xebec at God Valley
+- **Reader of the Ancient Text** [goal]: Make a Road Poneglyph rubbing
+- **Song of the Sea**: Get a One Piece music disc
+- **MEAT!**: Eat cooked Sea King meat
+- **Bink's Sake**: Drink sake with your crew
+- **Raid Boss** [goal]: Win a raid called with the Raid Den Den Mushi
+- **No Crew Can Stop Us** [challenge]: Win every raid
+- **Take a Seat**: Sit down on a chair, stool, bench or cushion
+- **Absolute Justice**: Join the Marines **new**
+- **Captain of the Navy** [goal]: Reach the rank of Marine Captain **new**
+- **Fleet Admiral** [challenge]: Reach the top of the Marine ranks **new**
+- **Dawn of the World**: Join the Revolutionary Army **new**
+- **Army Commander** [goal]: Reach the rank of Revolutionary Army Commander **new**
+- **Dragon's Right Hand** [challenge]: Reach the top of the Revolutionary ranks **new**
+- **Following Orders**: Finish 10 Marine or Revolutionary missions **new**
+- **Gladiator**: Win a cup at the Corrida Colosseum **new**
+- **Champion of the Corrida** [goal]: Win the Champion cup at the Corrida Colosseum **new**
+- **Davy Back Fight!**: Win a Davy Back Fight **new**
+- **Silver Fox, Outfoxed** [goal]: Win a Davy Back Fight against the Foxy Pirates **new**
+- **Undefeated Crew** [challenge]: Win 10 Davy Back Fights **new**
+- **Home Port**: Claim land for a pirate hideout **new**
+- **Pirate Fort**: Grow your hideout into a Pirate Fort **new**
+- **Pirate Fortress** [challenge]: Grow your hideout into a Pirate Fortress **new**
+- **Hold the Fort** [goal]: Drive the Navy off your hideout **new**
+
+## Wonders of the World (landmarks, dungeons, creatures, pets, Vegapunk hunts, cyborgs, the deep sea)
+
+- **Floating Restaurant**: Visit the Baratie
+- **Fish-Man Hideout**: Visit Arlong Park
+- **Royal Palace of Sand**: Visit Alubarna Palace
+- **City of Water**: Visit the Galley-La docks of Water 7
+- **Tower of Justice**: Visit the Tower of Justice at Enies Lobby
+- **The Biggest Ship**: Climb aboard Thriller Bark
+- **Whitebeard's Flagship**: Climb aboard the Moby Dick
+- **Navy Headquarters**: Visit Marineford
+- **Island of Demons**: Visit Onigashima
+- **Sweet Castle**: Visit Whole Cake Chateau
+- **World Traveller** [challenge]: Visit all eleven great landmarks, Ryugu Palace included
+- **Strange Steed**: Ride a creature of the Grand Line
+- **Animal Friend**: Tame a creature of the Grand Line
+- **Banana Crocodile**: Defeat a Bananawani
+- **Here, Kitty**: Defeat a Sea Cat
+- **Release the Kraken** [goal]: Defeat a Kraken
+- **Dragon Slayer** [goal]: Defeat a Punk Hazard dragon
+- **Monster Hunter** [challenge]: Defeat every kind of wild monster
+- **Steel of Wano**: Mine Tamahagane ore
+- **Wapometal**: Get a Wapometal ingot
+- **City of Gold**: Mine the gold of Shandora
+- **Black Blade Ore**: Mine Kokuto ore deep underground
+- **A Black Blade** [goal]: Forge a Kokuto blade
+- **Scales of a Dragon** [goal]: Get a Dragon Scale chestplate
+- **Scales of the Deep**: Get a Sea King Scale chestplate
+- **Sky Island Tech**: Get a Dial
+- **Deep Sea Diver**: Get a Diving Helmet or Bubble Coating
+- **Coated for the Deep**: Have your ship coated at Sabaody
+- **Dive! Dive!**: Take a submarine or a coated ship 20 blocks under the sea
+- **Ten Thousand Meters Under the Sea** [challenge]: Sail 100 blocks under the surface of the sea
+- **Level 4: Blazing Hell**: Enter the Blazing Hell of Impel Down
+- **Level 5: Freezing Hell**: Enter the Freezing Hell of Impel Down
+- **Newkama Land** [goal]: Find the hidden paradise of Newkama Land
+- **Above the Clouds**: Stand on the heights of the Red Line
+- **Lost Kingdom** [goal]: Walk among the ruins of the Void Century
+- **God Valley** [goal] (hidden): Find the island that vanished from the map
+- **Buried Treasure**: Find a pirate's Treasure Grotto deep underground
+- **Top Secret**: Find a hidden Marine bunker underground
+- **SMILE Factory**: Find the Donquixote Family's underground SMILE Factory
+- **The Buried City**: Find ancient ruins from the Void Century underground
+- **Spelunker of the Grand Line** [challenge]: Find all four underground dungeons
+- **The Sea Made Solid**: Mine a Sea Prism crystal in a Seastone Grotto
+- **Guardian of the Ruins** [goal]: Defeat an Ancient Sentinel
+- **Things in the Dark** [goal]: Defeat every kind of cave creature
+- **Dig, Dig, Dig!**: Ride a Cave Mole
+- **Here, Boy!**: Get a Pet Whistle **new**
+- **Lord of the Sea Kings** [goal]: Tame a Sea King **new**
+- **Chopper Would Approve**: Have 3 pets with you at once **new**
+- **Bartholomew Who?**: Defeat a hunting Pacifista **new**
+- **Mark III Scrapped** [goal]: Defeat a Pacifista Mark III **new**
+- **Clipped Wings** [goal]: Defeat a hunting Seraphim **new**
+- **Vegapunk's Worst Day** [challenge]: Defeat S-Bear, S-Hawk, S-Snake and S-Shark **new**
+- **SUUUPER!**: Install a cyborg upgrade **new**
+- **Tier III** [goal]: Upgrade a cyborg part to tier III **new**
+- **General Franky** [challenge]: Upgrade every cyborg part to tier III **new**
+- **The Deep Trench** [goal]: Find a Deep Trench on the sea floor **new**

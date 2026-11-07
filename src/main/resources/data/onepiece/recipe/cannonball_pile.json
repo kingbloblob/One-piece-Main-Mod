@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:iron_ingot",
+    "minecraft:coal",
+    "minecraft:coal"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:cannonball_pile"
+  }
+}

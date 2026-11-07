@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:marine_bricks"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.marine_bunker.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.marine_bunker.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:marine_bunker"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/root"
+}

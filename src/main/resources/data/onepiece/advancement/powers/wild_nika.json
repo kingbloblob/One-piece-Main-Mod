@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:gomu_gomu_no_mi"
+    },
+    "title": {
+      "translate": "advancements.onepiece.powers.wild_nika.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.powers.wild_nika.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:powers/mastery"
+}

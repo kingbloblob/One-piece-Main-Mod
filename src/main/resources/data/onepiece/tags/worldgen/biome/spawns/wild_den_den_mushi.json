@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:beach",
+    "minecraft:swamp",
+    "minecraft:mangrove_swamp",
+    "onepiece:fishman_reef",
+    "onepiece:sabaody",
+    "onepiece:new_world_sea",
+    "onepiece:zou",
+    "onepiece:egghead",
+    "onepiece:enies_lobby"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "music.menu": {
+    "replace": true,
+    "sounds": [
+      { "name": "onepiece_sounds:music/toward_the_grand_line", "stream": true },
+      { "name": "onepiece_sounds:music/fair_winds", "stream": true }
+    ]
+  }
+}

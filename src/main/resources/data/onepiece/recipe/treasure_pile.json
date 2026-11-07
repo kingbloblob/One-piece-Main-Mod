@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:emerald"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:treasure_pile"
+  }
+}

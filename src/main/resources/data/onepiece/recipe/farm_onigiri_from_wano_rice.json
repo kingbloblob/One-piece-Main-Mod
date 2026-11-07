@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:wano_rice",
+    "onepiece:wano_rice",
+    "minecraft:dried_kelp"
+  ],
+  "result": {
+    "count": 3,
+    "id": "onepiece:onigiri"
+  }
+}

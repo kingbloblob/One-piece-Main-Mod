@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "onepiece:block/water7_cobbles",
+    "side": "onepiece:block/water7_cobbles",
+    "top": "onepiece:block/water7_cobbles"
+  }
+}

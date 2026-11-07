@@ -1,0 +1,327 @@
+{
+ "_comment": "Boss fights: crew = NPC kit the boss calls (empty = fights alone), signature = phase 3 move (rain_<look>, slash_line, black_hole, ground_wave), phase2/phase3 = what the boss shouts at 66% and 33% health. form = monster form the boss turns into at phase 2 (seiryu, leopard, pteranodon, venom_demon, brachiosaurus, gyuki), empty = none. Titans (Emperors, Admirals) also have mechanics = [phase 2 move, phase 3 move] (see TitanFight), phase4 = what they shout at 12% health, ultimate = moves joined by + fired big at phase 4, ultimateName = how it's announced.",
+ "bosses": {
+  "queen": {
+   "crew": "gifter",
+   "signature": "rain_poison",
+   "phase2": "Murrrr! Time to get serious. Brachio form!",
+   "phase3": "Ice Oni Bullets! Catch the plague!",
+   "form": "brachiosaurus"
+  },
+  "saturn": {
+   "crew": "cp0_agent",
+   "signature": "rain_curse",
+   "phase2": "You still stand? Then see my true form.",
+   "phase3": "Kneel before the Gorosei!",
+   "form": "gyuki",
+   "mechanics": [
+    "spider_needles",
+    "gorosei_glare"
+   ],
+   "phase4": "Wounds mean nothing to me. I cannot die here.",
+   "ultimate": "spider_needles+gorosei_glare+spider_needles",
+   "ultimateName": "the Ushi-Oni Stampede"
+  },
+  "blackbeard": {
+   "crew": "blackbeard_pirate",
+   "signature": "black_hole",
+   "phase2": "Zehahaha! Now this is getting fun!",
+   "phase3": "Kurouzu! Nobody escapes the darkness!",
+   "mechanics": [
+    "liberation",
+    "gura_yami"
+   ],
+   "phase4": "The darkness AND the quake! Zehahaha, I'm the strongest!",
+   "ultimate": "liberation+tsunami",
+   "ultimateName": "Kurouzu Quake"
+  },
+  "buggy": {
+   "crew": "buggy_pirate",
+   "signature": "rain_fire",
+   "phase2": "Bara Bara Festival! You can't hit what's in pieces!",
+   "phase3": "Muggy Ball! That's flashy, isn't it?!"
+  },
+  "whitebeard": {
+   "crew": "whitebeard_pirate",
+   "signature": "ground_wave",
+   "phase2": "Gurarara! You've got guts, brat!",
+   "phase3": "This is the power that shakes the world!",
+   "mechanics": [
+    "quake_split",
+    "tsunami"
+   ],
+   "phase4": "I won't let you hurt my sons... not while I'm still standing!",
+   "ultimate": "tsunami+quake_split+tsunami",
+   "ultimateName": "Gekishin, the Earth-Shaking Strike"
+  },
+  "big_mom": {
+   "crew": "pirate",
+   "signature": "rain_lightning",
+   "phase2": "Life... or death?!",
+   "phase3": "Zeus! Prometheus! Burn them all!",
+   "mechanics": [
+    "zeus_storm",
+    "soul_pocus"
+   ],
+   "phase4": "Mama's hungry! WEDDING CAKE!",
+   "ultimate": "zeus_storm+soul_pocus+zeus_storm",
+   "ultimateName": "Misery, Heavenly Fire"
+  },
+  "kaido": {
+   "crew": "gifter",
+   "signature": "rain_lightning",
+   "phase2": "Hah! Finally, a fight worth having!",
+   "phase3": "Thunder Bagua! Feel the storm!",
+   "form": "seiryu",
+   "mechanics": [
+    "bolo_breath",
+    "drunk"
+   ],
+   "phase4": "Is this all you've got?! Then die with me!",
+   "ultimate": "thunder_bagua+bolo_breath",
+   "ultimateName": "Thunder Bagua"
+  },
+  "kid": {
+   "crew": "pirate",
+   "signature": "rain_metal",
+   "phase2": "Don't look down on me!",
+   "phase3": "Repel! Punk Gibson!"
+  },
+  "killer": {
+   "crew": "pirate",
+   "signature": "slash_line",
+   "phase2": "Fafafa... you're tougher than you look.",
+   "phase3": "Massacre Soldier!"
+  },
+  "hawkins": {
+   "crew": "pirate",
+   "signature": "rain_curse",
+   "phase2": "The cards say you lose here.",
+   "phase3": "Straw Sword! Your fate is sealed!"
+  },
+  "mihawk": {
+   "crew": "",
+   "signature": "slash_line",
+   "phase2": "Let me show you the gap between us.",
+   "phase3": "Look closely. This is the world's strongest slash."
+  },
+  "crocodile": {
+   "crew": "baroque_agent",
+   "signature": "rain_sand",
+   "phase2": "You can't fight the sand.",
+   "phase3": "Ground Death! Desert Spada!"
+  },
+  "doflamingo": {
+   "crew": "donquixote",
+   "signature": "rain_string",
+   "phase2": "Fuffuffu! Dance for me!",
+   "phase3": "Birdcage! Nobody leaves this island!"
+  },
+  "moria": {
+   "crew": "pirate",
+   "signature": "black_hole",
+   "phase2": "Kishishishi! Your shadow will be mine!",
+   "phase3": "Shadows Asgard!"
+  },
+  "akainu": {
+   "crew": "elite_marine",
+   "signature": "rain_magma",
+   "phase2": "Absolute Justice!",
+   "phase3": "Ryusei Kazan! Burn under the meteor shower!",
+   "mechanics": [
+    "magma_pools",
+    "meteor_volcano"
+   ],
+   "phase4": "Evil must be wiped out, down to the last ember!",
+   "ultimate": "meteor_volcano+magma_pools",
+   "ultimateName": "Ryusei Kazan, the Meteor Volcano"
+  },
+  "kizaru": {
+   "crew": "pacifista",
+   "signature": "rain_light",
+   "phase2": "Ooh, how scary~",
+   "phase3": "Yasakani no Magatama!",
+   "mechanics": [
+    "light_blink",
+    "yata_mirror"
+   ],
+   "phase4": "Ooh... I guess I'll have to try now~",
+   "ultimate": "light_blink+yasakani+yata_mirror",
+   "ultimateName": "Yasakani no Magatama"
+  },
+  "fujitora": {
+   "crew": "elite_marine",
+   "signature": "rain_rock",
+   "phase2": "I can't see you, but I can hear you just fine.",
+   "phase3": "Gravity Blade! Raging Tiger!",
+   "mechanics": [
+    "gravity_well",
+    "meteor"
+   ],
+   "phase4": "Let the dice decide... and the heavens fall.",
+   "ultimate": "gravity_well+meteor",
+   "ultimateName": "Meteor Shower"
+  },
+  "ryokugyu": {
+   "crew": "elite_marine",
+   "signature": "rain_plant",
+   "phase2": "I've been sitting for days. Don't bore me.",
+   "phase3": "Mori Mori! The forest takes you!",
+   "mechanics": [
+    "root_field",
+    "forest_prison"
+   ],
+   "phase4": "Everything here belongs to the forest now.",
+   "ultimate": "root_field+forest_prison",
+   "ultimateName": "Great Forest"
+  },
+  "aokiji": {
+   "crew": "marine_officer",
+   "signature": "rain_ice",
+   "phase2": "Let's not drag this out.",
+   "phase3": "Ice Age!",
+   "mechanics": [
+    "ice_field",
+    "ice_age"
+   ],
+   "phase4": "Fine. I'll freeze the whole sea if I have to.",
+   "ultimate": "ice_field+ice_age",
+   "ultimateName": "Ice Age"
+  },
+  "smoker": {
+   "crew": "marine",
+   "signature": "rain_smoke",
+   "phase2": "White Blow!",
+   "phase3": "White Launcher! You're not getting away!"
+  },
+  "lucci": {
+   "crew": "cp_agent",
+   "signature": "ground_wave",
+   "phase2": "Justice is power.",
+   "phase3": "Rokuogan!",
+   "form": "leopard"
+  },
+  "katakuri": {
+   "crew": "pirate",
+   "signature": "ground_wave",
+   "phase2": "I can see your future.",
+   "phase3": "Power Mochi! There's no escape!"
+  },
+  "king": {
+   "crew": "gifter",
+   "signature": "rain_fire",
+   "phase2": "You'll burn like the rest.",
+   "phase3": "Fire Pteranodon!",
+   "form": "pteranodon"
+  },
+  "enel": {
+   "crew": "",
+   "signature": "rain_lightning",
+   "phase2": "Yahahaha! I am god!",
+   "phase3": "El Thor! Two hundred million volts!"
+  },
+  "magellan": {
+   "crew": "jailer",
+   "signature": "rain_poison",
+   "phase2": "No one escapes Impel Down.",
+   "phase3": "Venom Demon: Hell's Judgment!",
+   "form": "venom_demon"
+  },
+  "imu": {
+   "crew": "seraphim",
+   "signature": "black_hole",
+   "phase2": "...You dare strike the throne?",
+   "phase3": "Kneel.",
+   "form": "imu_demon",
+   "form3": "imu_beast"
+  },
+  "loki": {
+   "crew": "",
+   "signature": "rain_lightning",
+   "phase2": "Enough! Behold the Nidhogg!",
+   "phase3": "Ragnarok! Let the world tree burn!",
+   "form": "nidhogg"
+  },
+  "xebec": {
+   "crew": "pirate",
+   "signature": "ground_wave",
+   "phase2": "The world will be mine!",
+   "phase3": "Everyone, kneel before Rocks!"
+  },
+  "garp": {
+   "crew": "elite_marine",
+   "signature": "ground_wave",
+   "phase2": "Bwahaha! You hit harder than my grandson!",
+   "phase3": "Galaxy Impact!"
+  },
+  "marco": {
+   "crew": "whitebeard_pirate",
+   "signature": "rain_fire",
+   "phase2": "These blue flames don't go out, yoi.",
+   "phase3": "Phoenix Brand!"
+  },
+  "rayleigh": {
+   "crew": "",
+   "signature": "slash_line",
+   "phase2": "Not bad. Let me get serious for a moment.",
+   "phase3": "This is what real Haki looks like."
+  },
+  "shanks": {
+   "crew": "pirate_gunner",
+   "signature": "slash_line",
+   "phase2": "Alright, boys, stand back. I'll take this one.",
+   "phase3": "Divine Departure!",
+   "mechanics": [
+    "haoshoku_crash",
+    "divine_departure"
+   ],
+   "phase4": "I came here to end this.",
+   "ultimate": "haoshoku_crash+divine_departure",
+   "ultimateName": "Kamusari, the Divine Departure"
+  },
+  "roger": {
+   "crew": "pirate_captain",
+   "signature": "slash_line",
+   "phase2": "Wahahaha! Now THIS is an adventure!",
+   "phase3": "Kamusari! Divine Departure!"
+  },
+  "hody": {
+   "crew": "fishman",
+   "signature": "rain_poison",
+   "phase2": "Energy Steroids! Ten more! Hahaha, I feel the power!",
+   "phase3": "Shark Tooth Gun! Drown, human!"
+  },
+  "shamrock": {
+   "crew": "holy_knight",
+   "signature": "slash_line",
+   "phase2": "Enough holding back. My sword has teeth.",
+   "phase3": "In the name of the Holy Land: kneel!",
+   "mechanics": [
+    "haoshoku_crash",
+    "gorosei_glare"
+   ],
+   "phase4": "I won't lose to the brother who ran away. Not to his pick either.",
+   "ultimate": "haoshoku_crash+gorosei_glare+haoshoku_crash",
+   "ultimateName": "Judgment of the Holy Land",
+   "companion": "cerberus",
+   "companionName": "Cerberus",
+   "companionLine": "Cerberus! Off the leash. Bite them in three.",
+   "companionHealth": 220,
+   "companionDamage": 13,
+   "companionScale": 2.4
+  },
+  "gunko": {
+   "crew": "holy_knight",
+   "signature": "slash_line",
+   "phase2": "You're still standing? That's against the rules.",
+   "phase3": "By order of the Holy Land: obey!",
+   "mechanics": [
+    "gorosei_glare",
+    "haoshoku_crash"
+   ],
+   "phase4": "The Holy Knights don't lose to pirates. Not here. Not ever.",
+   "ultimate": "gorosei_glare+haoshoku_crash+gorosei_glare",
+   "ultimateName": "Sentence of the Holy Knights"
+  }
+ }
+}

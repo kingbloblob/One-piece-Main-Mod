@@ -1,0 +1,15 @@
+{
+  "name": "Miss Love Duck",
+  "template": "onepiece:ships/miss_love_duck",
+  "bow": "east",
+  "waterline": 4.9,
+  "faction": "pirate",
+  "tiers": [
+    0
+  ],
+  "crew": "Alvida Pirates",
+  "length": 36,
+  "beam": 17,
+  "height": 33,
+  "blocks": 1688
+}

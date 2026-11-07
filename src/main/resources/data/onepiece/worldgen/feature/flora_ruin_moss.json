@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:simple_block",
+  "to_place": {
+    "id": "onepiece:ruin_moss",
+    "properties": {
+      "facing": "north",
+      "flower_amount": "3"
+    }
+  }
+}

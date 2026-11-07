@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    " B ",
+    " B "
+  ],
+  "key": {
+    "S": "minecraft:prismarine_slab",
+    "B": "onepiece:coral_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:coral_table"
+  }
+}

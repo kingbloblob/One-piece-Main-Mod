@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "RTR"
+  ],
+  "key": {
+    "R": "minecraft:red_carpet",
+    "T": "onepiece:alabasta_tiles"
+  },
+  "result": {
+    "count": 3,
+    "id": "onepiece:alabasta_rug"
+  }
+}

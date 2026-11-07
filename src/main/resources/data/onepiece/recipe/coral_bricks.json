@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:stone_bricks",
+    "X": "minecraft:pink_dye"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:coral_bricks"
+  }
+}

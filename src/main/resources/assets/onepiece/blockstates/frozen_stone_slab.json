@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "onepiece:block/frozen_stone_slab"
+    },
+    "type=double": {
+      "model": "onepiece:block/frozen_stone"
+    },
+    "type=top": {
+      "model": "onepiece:block/frozen_stone_slab_top"
+    }
+  }
+}

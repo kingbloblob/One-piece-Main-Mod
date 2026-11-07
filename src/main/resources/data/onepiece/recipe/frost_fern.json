@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:short_grass",
+    "minecraft:light_blue_dye"
+  ],
+  "result": {
+    "id": "onepiece:frost_fern",
+    "count": 2
+  }
+}

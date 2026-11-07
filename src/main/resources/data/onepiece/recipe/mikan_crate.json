@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:mikan"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:mikan_crate"
+  }
+}

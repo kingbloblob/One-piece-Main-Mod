@@ -1,0 +1,272 @@
+[
+  {
+    "id": "bandit",
+    "entity": "onepiece:sea_pirate",
+    "name": "Mountain Bandit",
+    "mainhand": "minecraft:wooden_axe",
+    "head": "minecraft:leather_helmet"
+  },
+  {
+    "id": "rookie_pirate",
+    "entity": "onepiece:sea_pirate",
+    "name": "Rookie Pirate",
+    "mainhand": "minecraft:wooden_sword",
+    "head": "minecraft:leather_helmet"
+  },
+  {
+    "id": "marine_recruit",
+    "entity": "onepiece:marine",
+    "name": "Marine Recruit",
+    "mainhand": "minecraft:bow",
+    "head": "minecraft:leather_helmet"
+  },
+  {
+    "id": "buggy_pirate",
+    "entity": "onepiece:sea_pirate",
+    "name": "Buggy Pirate",
+    "mainhand": "minecraft:stone_sword",
+    "head": "minecraft:leather_helmet"
+  },
+  {
+    "id": "kuja_warrior",
+    "entity": "minecraft:skeleton",
+    "name": "Kuja Warrior",
+    "mainhand": "minecraft:bow",
+    "head": "minecraft:golden_helmet"
+  },
+  {
+    "id": "marine",
+    "entity": "onepiece:marine",
+    "name": "Marine Soldier",
+    "mainhand": "minecraft:iron_sword",
+    "head": "minecraft:chainmail_helmet"
+  },
+  {
+    "id": "marine_rifle",
+    "entity": "onepiece:marine",
+    "name": "Marine Rifleman",
+    "mainhand": "minecraft:crossbow",
+    "head": "minecraft:chainmail_helmet"
+  },
+  {
+    "id": "pirate",
+    "entity": "onepiece:sea_pirate",
+    "name": "Pirate",
+    "mainhand": "minecraft:iron_axe"
+  },
+  {
+    "id": "pirate_gunner",
+    "entity": "onepiece:sea_pirate",
+    "name": "Pirate Gunner",
+    "mainhand": "minecraft:crossbow"
+  },
+  {
+    "id": "fishman",
+    "entity": "onepiece:sea_pirate",
+    "name": "Fish-Man",
+    "mainhand": "minecraft:trident",
+    "health": 30
+  },
+  {
+    "id": "zombie_soldier",
+    "entity": "minecraft:zombie",
+    "name": "Zombie Soldier",
+    "mainhand": "minecraft:iron_sword",
+    "head": "minecraft:iron_helmet",
+    "health": 30
+  },
+  {
+    "id": "baroque_agent",
+    "entity": "onepiece:sea_pirate",
+    "name": "Baroque Works Agent",
+    "mainhand": "minecraft:iron_sword",
+    "head": "minecraft:golden_helmet"
+  },
+  {
+    "id": "bounty_hunter",
+    "entity": "onepiece:sea_pirate",
+    "name": "Bounty Hunter",
+    "mainhand": "minecraft:iron_sword"
+  },
+  {
+    "id": "homie",
+    "entity": "minecraft:zombie",
+    "name": "Homie",
+    "mainhand": "minecraft:stone_sword",
+    "head": "minecraft:carved_pumpkin",
+    "health": 26
+  },
+  {
+    "id": "samurai",
+    "entity": "minecraft:vindicator",
+    "name": "Samurai",
+    "mainhand": "minecraft:iron_sword",
+    "head": "minecraft:iron_helmet"
+  },
+  {
+    "id": "frost_soldier",
+    "entity": "minecraft:stray",
+    "name": "Frost Soldier",
+    "mainhand": "minecraft:bow",
+    "head": "minecraft:iron_helmet"
+  },
+  {
+    "id": "elite_marine",
+    "entity": "onepiece:marine",
+    "name": "Marine Captain",
+    "mainhand": "minecraft:diamond_sword",
+    "head": "minecraft:iron_helmet",
+    "chest": "minecraft:iron_chestplate",
+    "health": 40
+  },
+  {
+    "id": "cp_agent",
+    "entity": "onepiece:marine",
+    "name": "CP Agent",
+    "mainhand": "minecraft:iron_sword",
+    "head": "minecraft:leather_helmet",
+    "health": 36,
+    "damage": 8
+  },
+  {
+    "id": "gifter",
+    "entity": "onepiece:sea_pirate",
+    "name": "Gifter",
+    "mainhand": "minecraft:diamond_axe",
+    "head": "minecraft:iron_helmet",
+    "chest": "minecraft:chainmail_chestplate",
+    "health": 40
+  },
+  {
+    "id": "headliner",
+    "entity": "onepiece:sea_pirate",
+    "name": "Headliner",
+    "mainhand": "minecraft:netherite_axe",
+    "head": "minecraft:diamond_helmet",
+    "chest": "minecraft:diamond_chestplate",
+    "health": 60
+  },
+  {
+    "id": "jailer",
+    "entity": "onepiece:marine",
+    "name": "Impel Down Jailer",
+    "mainhand": "minecraft:stone_sword",
+    "health": 40
+  },
+  {
+    "id": "humandrill",
+    "entity": "minecraft:vindicator",
+    "name": "Humandrill",
+    "mainhand": "minecraft:iron_sword",
+    "health": 40
+  },
+  {
+    "id": "gladiator",
+    "entity": "minecraft:vindicator",
+    "name": "Gladiator",
+    "mainhand": "minecraft:iron_sword",
+    "offhand": "minecraft:shield",
+    "head": "minecraft:golden_helmet",
+    "chest": "minecraft:golden_chestplate",
+    "health": 40
+  },
+  {
+    "id": "donquixote",
+    "entity": "onepiece:sea_pirate",
+    "name": "Donquixote Pirate",
+    "mainhand": "minecraft:crossbow",
+    "head": "minecraft:iron_helmet",
+    "health": 30
+  },
+  {
+    "id": "whitebeard_pirate",
+    "entity": "onepiece:sea_pirate",
+    "name": "Whitebeard Pirate",
+    "mainhand": "minecraft:diamond_sword",
+    "head": "minecraft:iron_helmet",
+    "chest": "minecraft:iron_chestplate",
+    "health": 50
+  },
+  {
+    "id": "blackbeard_pirate",
+    "entity": "onepiece:sea_pirate",
+    "name": "Blackbeard Pirate",
+    "mainhand": "minecraft:netherite_sword",
+    "head": "minecraft:iron_helmet",
+    "chest": "minecraft:diamond_chestplate",
+    "health": 50
+  },
+  {
+    "id": "flame_guard",
+    "entity": "minecraft:blaze",
+    "name": "Flame Guard",
+    "health": 40
+  },
+  {
+    "id": "sky_priest",
+    "entity": "minecraft:blaze",
+    "name": "Sky Priest",
+    "health": 30
+  },
+  {
+    "id": "war_beast",
+    "entity": "minecraft:ravager",
+    "name": "War Beast",
+    "health": 120
+  },
+  {
+    "id": "vice_admiral",
+    "entity": "onepiece:marine",
+    "name": "Vice Admiral",
+    "mainhand": "minecraft:netherite_sword",
+    "head": "minecraft:diamond_helmet",
+    "chest": "minecraft:diamond_chestplate",
+    "legs": "minecraft:diamond_leggings",
+    "feet": "minecraft:diamond_boots",
+    "health": 80,
+    "damage": 12
+  },
+  {
+    "id": "pacifista",
+    "entity": "onepiece:marine",
+    "name": "Pacifista",
+    "mainhand": "minecraft:netherite_axe",
+    "head": "minecraft:netherite_helmet",
+    "chest": "minecraft:netherite_chestplate",
+    "health": 120,
+    "damage": 14
+  },
+  {
+    "id": "seraphim",
+    "entity": "onepiece:marine",
+    "name": "Seraphim",
+    "health": 100
+  },
+  {
+    "id": "cp0_agent",
+    "entity": "onepiece:marine",
+    "name": "CP0 Agent",
+    "mainhand": "minecraft:netherite_sword",
+    "head": "minecraft:iron_helmet",
+    "chest": "minecraft:netherite_chestplate",
+    "health": 70,
+    "damage": 12
+  },
+  {
+    "id": "warden_jailer",
+    "entity": "minecraft:wither_skeleton",
+    "name": "Jailer Beast",
+    "mainhand": "minecraft:netherite_sword",
+    "head": "minecraft:netherite_helmet",
+    "health": 90
+  },
+  {
+    "id": "ancient_guardian",
+    "entity": "minecraft:wither_skeleton",
+    "name": "Ancient Guardian",
+    "mainhand": "minecraft:netherite_sword",
+    "head": "minecraft:netherite_helmet",
+    "chest": "minecraft:netherite_chestplate",
+    "health": 120
+  }
+]

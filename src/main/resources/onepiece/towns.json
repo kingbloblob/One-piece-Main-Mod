@@ -1,0 +1,373 @@
+{
+  "_comment": "Townsfolk, routines, markets, bar brawls and festivals (package com.onepiecemod.town). towns: structure id -> who lives there. Item ids that don't exist are skipped. Skins: groups painted by tools/towns/gen_town_skins.py.",
+
+  "towns": {
+    "foosha_village":   { "name": "Foosha Village",        "culture": "east_blue", "population": 9,  "bar": true,  "market": false, "festival": "harvest_festival",
+                          "jobs": { "farmer": 3, "fisher": 2, "sailor": 1, "bartender": 1, "child": 2, "elder": 1 } },
+    "syrup_village":    { "name": "Syrup Village",         "culture": "east_blue", "population": 9,  "bar": true,  "market": false, "festival": "harvest_festival",
+                          "jobs": { "farmer": 3, "merchant": 1, "cook": 1, "bartender": 1, "child": 3, "elder": 1 } },
+    "cocoyasi_village": { "name": "Cocoyasi Village",      "culture": "east_blue", "population": 8,  "bar": false, "market": false, "festival": "harvest_festival",
+                          "jobs": { "farmer": 3, "fisher": 2, "doctor": 1, "child": 2, "elder": 1 } },
+    "shells_town":      { "name": "Shells Town",           "culture": "east_blue", "population": 10, "bar": true,  "market": true,
+                          "jobs": { "merchant": 3, "cook": 1, "bartender": 1, "smith": 1, "farmer": 1, "sailor": 2, "child": 2 } },
+    "loguetown":        { "name": "Loguetown",             "culture": "east_blue", "population": 14, "bar": true,  "market": true,
+                          "jobs": { "merchant": 4, "smith": 1, "cook": 1, "bartender": 1, "fisher": 1, "sailor": 3, "child": 2, "elder": 1 } },
+    "baratie":          { "name": "the Baratie",           "culture": "east_blue", "population": 6,  "bar": true,  "market": false,
+                          "jobs": { "cook": 4, "sailor": 3 } },
+    "drum_castle":      { "name": "Drum Island",           "culture": "east_blue", "population": 6,  "bar": false, "market": false, "festival": "sakura_festival",
+                          "jobs": { "doctor": 2, "farmer": 1, "elder": 1, "child": 2 } },
+    "ohara_library":    { "name": "Ohara",                 "culture": "east_blue", "population": 5,  "bar": false, "market": false,
+                          "jobs": { "scholar": 4, "child": 1 } },
+
+    "whisky_peak":      { "name": "Whisky Peak",           "culture": "grand_line", "population": 11, "bar": true, "market": false, "festival": "welcome_party", "brawlChance": 2.0,
+                          "jobs": { "smith": 1, "sailor": 4, "bartender": 2, "cook": 1, "merchant": 1, "elder": 1 } },
+    "mock_town":        { "name": "Mock Town",             "culture": "grand_line", "population": 14, "bar": true, "market": true, "brawlChance": 3.0,
+                          "jobs": { "sailor": 6, "bartender": 2, "merchant": 3, "smith": 1, "cook": 1, "child": 1 } },
+
+    "nanohana_port":    { "name": "Nanohana",              "culture": "alabasta", "population": 15, "bar": true,  "market": true, "festival": "rain_festival",
+                          "jobs": { "smith": 1, "merchant": 5, "fisher": 2, "cook": 1, "bartender": 1, "sailor": 2, "child": 2, "elder": 1 } },
+    "yuba_oasis":       { "name": "Yuba",                  "culture": "alabasta", "population": 5,  "bar": false, "market": false, "festival": "rain_festival",
+                          "jobs": { "farmer": 3, "elder": 1, "child": 1 } },
+    "alubarna_palace":  { "name": "Alubarna",              "culture": "alabasta", "population": 12, "bar": false, "market": true, "festival": "rain_festival",
+                          "jobs": { "merchant": 4, "cook": 2, "farmer": 1, "scholar": 1, "child": 2, "elder": 2 } },
+
+    "galley_la_dock":   { "name": "Water 7",               "culture": "water7", "population": 15, "bar": true,  "market": true, "festival": "aqua_laguna",
+                          "jobs": { "smith": 1, "shipwright": 6, "merchant": 3, "cook": 1, "bartender": 1, "sailor": 1, "child": 2 } },
+    "sea_train_station":{ "name": "the Puffing Tom station", "culture": "water7", "population": 4, "bar": false, "market": false,
+                          "jobs": { "merchant": 1, "sailor": 2, "child": 1 } },
+
+    "sabaody_park":     { "name": "Sabaody",               "culture": "sabaody", "population": 13, "bar": false, "market": true,
+                          "jobs": { "smith": 1, "merchant": 4, "cook": 2, "sailor": 2, "child": 3, "elder": 1 } },
+    "shakky_bar":       { "name": "Shakky's Rip-off Bar",  "culture": "sabaody", "population": 4,  "bar": true,  "market": false,
+                          "jobs": { "bartender": 1, "sailor": 3 } },
+
+    "flower_capital":   { "name": "the Flower Capital",    "culture": "wano", "population": 14, "bar": true,  "market": true, "festival": "fire_festival",
+                          "jobs": { "merchant": 4, "cook": 2, "smith": 1, "bartender": 1, "farmer": 1, "dancer": 2, "child": 2, "elder": 1 } },
+    "ebisu_town":       { "name": "Ebisu Town",            "culture": "wano", "population": 9,  "bar": false, "market": true, "festival": "fire_festival",
+                          "jobs": { "merchant": 2, "farmer": 3, "cook": 1, "child": 2, "elder": 1 } },
+    "wano_house":       { "name": "the samurai house",     "culture": "wano", "population": 4,  "bar": false, "market": false, "festival": "fire_festival",
+                          "jobs": { "farmer": 1, "cook": 1, "child": 1, "elder": 1 } },
+
+    "chocolate_town":   { "name": "Chocolate Town",        "culture": "totto", "population": 10, "bar": false, "market": true, "festival": "tea_party",
+                          "jobs": { "merchant": 3, "cook": 3, "farmer": 1, "child": 3 } },
+    "amazon_lily":      { "name": "Amazon Lily",           "culture": "kuja", "population": 11, "bar": false, "market": true,
+                          "jobs": { "smith": 1, "merchant": 3, "farmer": 2, "fisher": 2, "cook": 1, "child": 1, "elder": 1 } }
+  },
+
+  "cultures": {
+    "east_blue":  { "default": "villager" },
+    "grand_line": { "default": "sailor", "skins": { "farmer": "villager", "elder": "elder", "child": "child" } },
+    "alabasta":   { "default": "alabasta_folk", "skins": { "child": "child", "bartender": "bartender" },
+                    "goods": [
+                      { "buy": "onepiece:berry", "buyCount": 2, "sell": "minecraft:sand", "sellCount": 16 },
+                      { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:cactus", "sellCount": 4 },
+                      { "buy": "onepiece:berry", "buyCount": 4, "sell": "onepiece:coconut", "sellCount": 3 },
+                      { "buy": "onepiece:berry", "buyCount": 6, "sell": "minecraft:camel_spawn_egg", "sellCount": 1, "maxUses": 1 },
+                      { "buy": "onepiece:berry", "buyCount": 8, "sell": "minecraft:orange_carpet", "sellCount": 6 },
+                      { "buy": "onepiece:berry", "buyCount": 5, "sell": "minecraft:dried_ghast", "sellCount": 1, "maxUses": 1 },
+                      { "buy": "minecraft:water_bucket", "buyCount": 1, "sell": "onepiece:berry", "sellCount": 3 }
+                    ] },
+    "water7":     { "default": "shipwright", "skins": { "merchant": "merchant", "cook": "cook", "bartender": "bartender", "child": "child", "sailor": "sailor" },
+                    "goods": [
+                      { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:oak_planks", "sellCount": 32 },
+                      { "buy": "onepiece:berry", "buyCount": 6, "sell": "onepiece:adam_planks", "sellCount": 4 },
+                      { "buy": "onepiece:berry", "buyCount": 4, "sell": "minecraft:oak_boat", "sellCount": 1 },
+                      { "buy": "onepiece:berry", "buyCount": 5, "sell": "minecraft:white_wool", "sellCount": 12 },
+                      { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:chain", "sellCount": 6 },
+                      { "buy": "minecraft:oak_log", "buyCount": 16, "sell": "onepiece:berry", "sellCount": 3 },
+                      { "buy": "minecraft:iron_ingot", "buyCount": 6, "sell": "onepiece:berry", "sellCount": 3 }
+                    ] },
+    "sabaody":    { "default": "sabaody_folk", "skins": { "child": "child", "cook": "cook", "sailor": "sailor", "bartender": "bartender" },
+                    "goods": [
+                      { "buy": "onepiece:berry", "buyCount": 4, "sell": "onepiece:bubble_resin", "sellCount": 4 },
+                      { "buy": "onepiece:berry", "buyCount": 8, "sell": "onepiece:bubble_coating", "sellCount": 1, "maxUses": 4 },
+                      { "buy": "onepiece:berry", "buyCount": 3, "sell": "onepiece:cotton_candy", "sellCount": 3 },
+                      { "buy": "onepiece:berry", "buyCount": 6, "sell": "minecraft:slime_ball", "sellCount": 4 },
+                      { "buy": "onepiece:berry", "buyCount": 10, "sell": "onepiece:yarukiman_resin", "sellCount": 2, "maxUses": 4 },
+                      { "buy": "onepiece:berry", "buyCount": 5, "sell": "minecraft:pink_dye", "sellCount": 8 }
+                    ] },
+    "wano":       { "default": "wano_folk", "skins": { "child": "child", "dancer": "festival_dancer" },
+                    "goods": [
+                      { "buy": "onepiece:berry", "buyCount": 2, "sell": "onepiece:onigiri", "sellCount": 4 },
+                      { "buy": "onepiece:berry", "buyCount": 3, "sell": "onepiece:dango", "sellCount": 3 },
+                      { "buy": "onepiece:berry", "buyCount": 4, "sell": "onepiece:sake", "sellCount": 2 },
+                      { "buy": "onepiece:berry", "buyCount": 8, "sell": "onepiece:tamahagane_ingot", "sellCount": 1, "maxUses": 4 },
+                      { "buy": "onepiece:berry", "buyCount": 5, "sell": "minecraft:bamboo", "sellCount": 16 },
+                      { "buy": "onepiece:berry", "buyCount": 4, "sell": "minecraft:cherry_sapling", "sellCount": 2 },
+                      { "buy": "onepiece:berry", "buyCount": 6, "sell": "minecraft:firework_rocket", "sellCount": 6 },
+                      { "buy": "minecraft:wheat", "buyCount": 12, "sell": "onepiece:berry", "sellCount": 2 }
+                    ] },
+    "totto":      { "default": "totto_folk", "skins": { "child": "child", "cook": "cook" },
+                    "goods": [
+                      { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:cookie", "sellCount": 8 },
+                      { "buy": "onepiece:berry", "buyCount": 5, "sell": "minecraft:cake", "sellCount": 1 },
+                      { "buy": "onepiece:berry", "buyCount": 3, "sell": "onepiece:cotton_candy", "sellCount": 3 },
+                      { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:pumpkin_pie", "sellCount": 2 },
+                      { "buy": "onepiece:berry", "buyCount": 4, "sell": "minecraft:honey_bottle", "sellCount": 3 },
+                      { "buy": "minecraft:sugar", "buyCount": 16, "sell": "onepiece:berry", "sellCount": 2 },
+                      { "buy": "minecraft:cocoa_beans", "buyCount": 12, "sell": "onepiece:berry", "sellCount": 2 }
+                    ] },
+    "kuja":       { "default": "kuja_folk",
+                    "goods": [
+                      { "buy": "onepiece:berry", "buyCount": 4, "sell": "minecraft:arrow", "sellCount": 16 },
+                      { "buy": "onepiece:berry", "buyCount": 8, "sell": "minecraft:bow", "sellCount": 1 },
+                      { "buy": "onepiece:berry", "buyCount": 6, "sell": "minecraft:cooked_porkchop", "sellCount": 6 },
+                      { "buy": "onepiece:berry", "buyCount": 10, "sell": "minecraft:lead", "sellCount": 2 },
+                      { "buy": "minecraft:feather", "buyCount": 12, "sell": "onepiece:berry", "sellCount": 2 }
+                    ] }
+  },
+
+  "jobs": {
+    "farmer": {
+      "title": "Farmer", "skin": "villager", "workBlocks": ["minecraft:composter", "minecraft:farmland", "minecraft:hay_block", "onepiece:mikan_bush"],
+      "hold": "minecraft:iron_hoe",
+      "trades": [
+        { "buy": "minecraft:wheat", "buyCount": 16, "sell": "onepiece:berry", "sellCount": 2 },
+        { "buy": "minecraft:carrot", "buyCount": 16, "sell": "onepiece:berry", "sellCount": 2 },
+        { "buy": "minecraft:potato", "buyCount": 16, "sell": "onepiece:berry", "sellCount": 2 },
+        { "buy": "onepiece:berry", "buyCount": 1, "sell": "minecraft:bread", "sellCount": 3 },
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "onepiece:mikan", "sellCount": 3 },
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "minecraft:apple", "sellCount": 4 }
+      ],
+      "lines": ["Good soil this year. The crops are coming up nicely.", "If you've got wheat to sell, I'll pay fair Berries.",
+                "Pirates trampled my field last month. Not you, I hope?", "Nothing beats a mikan picked straight off the tree."]
+    },
+    "fisher": {
+      "title": "Fisher", "skin": "fisher", "workAt": "water", "hold": "minecraft:fishing_rod",
+      "trades": [
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "minecraft:cod", "sellCount": 6 },
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "minecraft:salmon", "sellCount": 5 },
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:tropical_fish", "sellCount": 3 },
+        { "buy": "minecraft:string", "buyCount": 12, "sell": "onepiece:berry", "sellCount": 2 },
+        { "buy": "onepiece:berry", "buyCount": 8, "sell": "onepiece:sea_king_bait", "sellCount": 1, "maxUses": 4 }
+      ],
+      "lines": ["The fish are biting today!", "Saw a Sea King's fin out past the reef. Stay away from the deep water.",
+                "My grandpa caught a fish as big as a ship. Or so he says.", "Want fresh fish? Caught this morning!"]
+    },
+    "sailor": {
+      "title": "Sailor", "skin": "sailor", "workAt": "water", "brawler": true, "nightOwl": true,
+      "lines": ["Ever sailed the Grand Line? It eats ships like crackers.", "Buy me a drink and I'll tell you about the Calm Belt.",
+                "I heard the Log Pose needles go crazy near Fish-Man Island.", "Arr, what are you looking at?",
+                "Rumour is a Yonko ship was spotted near here. I'm staying ashore!"]
+    },
+    "merchant": {
+      "title": "Merchant", "skin": "merchant", "workAt": "market", "marketer": true,
+      "trades": [
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "minecraft:torch", "sellCount": 16 },
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:rope", "sellCount": 8 },
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:lead", "sellCount": 2 },
+        { "buy": "onepiece:berry", "buyCount": 4, "sell": "minecraft:lantern", "sellCount": 2 },
+        { "buy": "onepiece:berry", "buyCount": 6, "sell": "minecraft:compass", "sellCount": 1 },
+        { "buy": "onepiece:berry", "buyCount": 8, "sell": "minecraft:spyglass", "sellCount": 1 },
+        { "buy": "minecraft:gold_ingot", "buyCount": 3, "sell": "onepiece:berry", "sellCount": 4 },
+        { "buy": "minecraft:emerald", "buyCount": 2, "sell": "onepiece:berry", "sellCount": 4 }
+      ],
+      "calls": ["Fresh goods, straight off the ship!", "Best prices on the island, I swear on my mother!",
+                "Come look, come look! Treasures from every sea!", "Today only: a special deal for pirates with honest faces!"],
+      "lines": ["Business is good when ships come in.", "Haggle all you like. Sneak and talk to me to try.",
+                "Everything has a price. Even a Devil Fruit... if you know who to ask."]
+    },
+    "bartender": {
+      "title": "Bartender", "skin": "bartender", "workAt": "bar", "nightOwl": true,
+      "trades": [
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "onepiece:sake", "sellCount": 2 },
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "onepiece:cola", "sellCount": 2 },
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "minecraft:honey_bottle", "sellCount": 2 },
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "minecraft:milk_bucket", "sellCount": 1 },
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:cooked_beef", "sellCount": 3 },
+        { "buy": "onepiece:berry", "buyCount": 10, "sell": "onepiece:sea_chart", "sellCount": 1, "maxUses": 2 }
+      ],
+      "lines": ["What'll it be?", "No fighting in my bar! ...Well, not too much fighting.",
+                "Every pirate who passes through ends up telling me their dream.", "Pay first, drink later. House rules."]
+    },
+    "cook": {
+      "title": "Cook", "skin": "cook", "workBlocks": ["minecraft:smoker", "minecraft:furnace", "minecraft:campfire", "minecraft:cauldron"],
+      "trades": [
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "onepiece:onigiri", "sellCount": 3 },
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:cooked_beef", "sellCount": 4 },
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:cooked_cod", "sellCount": 4 },
+        { "buy": "onepiece:berry", "buyCount": 4, "sell": "minecraft:pumpkin_pie", "sellCount": 3 },
+        { "buy": "onepiece:berry", "buyCount": 6, "sell": "onepiece:cooked_sea_king_meat", "sellCount": 2, "maxUses": 6 },
+        { "buy": "minecraft:beef", "buyCount": 8, "sell": "onepiece:berry", "sellCount": 2 }
+      ],
+      "lines": ["Hungry? Nobody leaves my kitchen hungry.", "A cook who wastes food isn't a cook at all.",
+                "Bring me Sea King meat and I'll make you a feast."]
+    },
+    "smith": {
+      "title": "Blacksmith", "skin": "villager", "workBlocks": ["minecraft:anvil", "minecraft:smithing_table", "minecraft:blast_furnace", "minecraft:grindstone"],
+      "hold": "minecraft:iron_axe",
+      "trades": [
+        { "buy": "onepiece:berry", "buyCount": 6, "sell": "minecraft:iron_sword", "sellCount": 1 },
+        { "buy": "onepiece:berry", "buyCount": 5, "sell": "minecraft:iron_pickaxe", "sellCount": 1 },
+        { "buy": "onepiece:berry", "buyCount": 8, "sell": "minecraft:iron_chestplate", "sellCount": 1 },
+        { "buy": "onepiece:berry", "buyCount": 4, "sell": "onepiece:skillful_whetstone", "sellCount": 1, "maxUses": 4 },
+        { "buy": "minecraft:coal", "buyCount": 16, "sell": "onepiece:berry", "sellCount": 2 },
+        { "buy": "minecraft:iron_ingot", "buyCount": 6, "sell": "onepiece:berry", "sellCount": 3 }
+      ],
+      "lines": ["A good blade needs a good sword-polisher.", "Swordsmen come here every week asking for a cursed sword. I don't sell those.",
+                "That weapon of yours could use some work.", "Hold up whatever needs mending and I'll take a look. Bring the materials, mind."]
+    },
+    "shipwright": {
+      "title": "Shipwright", "skin": "shipwright", "workAt": "water", "hold": "minecraft:iron_axe",
+      "trades": [
+        { "buy": "onepiece:berry", "buyCount": 4, "sell": "minecraft:oak_boat", "sellCount": 1 },
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:oak_planks", "sellCount": 24 },
+        { "buy": "onepiece:berry", "buyCount": 6, "sell": "onepiece:adam_planks", "sellCount": 3, "maxUses": 6 },
+        { "buy": "minecraft:oak_log", "buyCount": 16, "sell": "onepiece:berry", "sellCount": 3 },
+        { "buy": "minecraft:iron_ingot", "buyCount": 6, "sell": "onepiece:berry", "sellCount": 3 }
+      ],
+      "lines": ["A ship is more than wood and nails. She has a soul.", "Galley-La builds the finest ships in the world!",
+                "Bring your ship to the dock and I'll take a look at her hull.", "Watch out for Aqua Laguna. When the tide comes, get to high ground!"]
+    },
+    "doctor": {
+      "title": "Doctor", "skin": "elder", "workBlocks": ["minecraft:brewing_stand", "minecraft:cauldron", "minecraft:lectern"],
+      "trades": [
+        { "buy": "onepiece:berry", "buyCount": 4, "sell": "minecraft:golden_carrot", "sellCount": 2 },
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:honey_bottle", "sellCount": 2 },
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:glistering_melon_slice", "sellCount": 2 },
+        { "buy": "minecraft:glass_bottle", "buyCount": 8, "sell": "onepiece:berry", "sellCount": 1 }
+      ],
+      "lines": ["When do you think people die? When they are forgotten.", "Rest up. Even pirates need sleep.",
+                "Medicine can cure many things. Not a broken heart, though."]
+    },
+    "scholar": {
+      "title": "Scholar", "skin": "elder", "workBlocks": ["minecraft:lectern", "minecraft:bookshelf", "minecraft:chiseled_bookshelf"],
+      "trades": [
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "minecraft:paper", "sellCount": 12 },
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:book", "sellCount": 2 },
+        { "buy": "onepiece:berry", "buyCount": 10, "sell": "onepiece:sea_chart", "sellCount": 1, "maxUses": 3 }
+      ],
+      "lines": ["The Poneglyphs hold the true history. The World Government fears them.", "A hundred years are missing from history. The Void Century.",
+                "Knowledge is the one treasure no one can steal from you."]
+    },
+    "dancer": {
+      "title": "Dancer", "skin": "festival_dancer",
+      "lines": ["The festival is the best night of the year!", "Dance with us when the lanterns are lit!"]
+    },
+    "child": {
+      "title": "Kid", "skin": "child", "child": true,
+      "lines": ["When I grow up I'm gonna be a pirate!", "Are you a pirate? Do you have a Devil Fruit?!",
+                "Tag! You're it!", "My mom says pirates are bad. But you look cool."]
+    },
+    "foreign_trader": {
+      "title": "Foreign Trader", "skin": "merchant", "workAt": "market", "marketer": true,
+      "calls": ["Wares from beyond the Red Line! You won't find these anywhere else!", "Dials from the sky! Scales from the deep sea!",
+                "My ship leaves when the market closes. Buy now or never!"],
+      "lines": ["I've sailed every sea there is. Well, except the Calm Belt. I'm not crazy."]
+    },
+    "elder": {
+      "title": "Elder", "skin": "elder",
+      "lines": ["In my day the sea was calmer. Then Gold Roger said those words...", "Wealth, fame, power. He had it all, that Pirate King.",
+                "Young folk these days, always running off to sea.", "Stay a while. The Log Pose needs time to set, you know."]
+    }
+  },
+
+  "imports": [
+    { "buy": "onepiece:berry", "buyCount": 16, "sell": "onepiece:log_pose", "sellCount": 1, "maxUses": 1 },
+    { "buy": "onepiece:berry", "buyCount": 24, "sell": "onepiece:eternal_pose", "sellCount": 1, "maxUses": 1 },
+    { "buy": "onepiece:berry", "buyCount": 12, "sell": "onepiece:dial_shell", "sellCount": 1, "maxUses": 2 },
+    { "buy": "onepiece:berry", "buyCount": 20, "sell": "onepiece:flash_dial", "sellCount": 1, "maxUses": 1 },
+    { "buy": "onepiece:berry", "buyCount": 10, "sell": "onepiece:sea_pearl", "sellCount": 1, "maxUses": 2 },
+    { "buy": "onepiece:berry", "buyCount": 14, "sell": "onepiece:sea_king_scale", "sellCount": 1, "maxUses": 2 },
+    { "buy": "onepiece:berry", "buyCount": 16, "sell": "onepiece:den_den_mushi", "sellCount": 1, "maxUses": 1 },
+    { "buy": "onepiece:berry", "buyCount": 12, "sell": "onepiece:wapometal_ingot", "sellCount": 2, "maxUses": 2 },
+    { "buy": "onepiece:berry", "buyCount": 18, "sell": "onepiece:kokuto_ingot", "sellCount": 1, "maxUses": 1 },
+    { "buy": "onepiece:berry", "buyCount": 8, "sell": "onepiece:raw_shandora_gold", "sellCount": 2, "maxUses": 2 },
+    { "buy": "onepiece:berry", "buyCount": 20, "sell": "minecraft:golden_apple", "sellCount": 1, "maxUses": 1 },
+    { "buy": "onepiece:berry", "buyCount": 30, "sell": "minecraft:heart_of_the_sea", "sellCount": 1, "maxUses": 1 },
+    { "buy": "onepiece:berry", "buyCount": 10, "sell": "minecraft:nautilus_shell", "sellCount": 2, "maxUses": 2 },
+    { "buy": "onepiece:berry", "buyCount": 6, "sell": "minecraft:music_disc_far", "sellCount": 1, "maxUses": 1 },
+    { "buy": "onepiece:berry", "buyCount": 9, "sell": "onepiece:sea_chart", "sellCount": 1, "maxUses": 2 }
+  ],
+
+  "rumors": [
+    "They say a giant whale keeps ramming the Red Line, waiting for his friends to come back.",
+    "Somebody found a talking skeleton in the Florian Triangle. Brrr.",
+    "A sky island? Ha! Next you'll tell me the Log Pose points up.",
+    "The Marines put a new bounty up this morning. The News Coo dropped the papers already.",
+    "My cousin swears he saw a pirate ship with a sheep's head.",
+    "If a Den Den Mushi rings in the middle of the night, don't answer. Trust me.",
+    "Never anger an Emperor's crew. Their territory has eyes everywhere."
+  ],
+
+  "festivals": {
+    "fire_festival": {
+      "name": "Fire Festival", "every": 7, "offset": 3, "start": 12500, "end": 22000,
+      "announce": "Lanterns are lit and taiko drums thunder: the Fire Festival has begun in %s!",
+      "particles": ["flame", "lantern", "spark"], "fireworks": [16711680, 16744448, 16766720, 16777215], "music": "taiko",
+      "goods": [
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "onepiece:dango", "sellCount": 4 },
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "onepiece:sake", "sellCount": 2 },
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:firework_rocket", "sellCount": 6 },
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "minecraft:lantern", "sellCount": 2 }
+      ],
+      "gifts": ["minecraft:firework_rocket*6", "onepiece:dango*3"], "effect": "minecraft:strength"
+    },
+    "sakura_festival": {
+      "name": "Hiluluk's Cherry Blossoms", "every": 9, "offset": 5, "start": 12500, "end": 20000,
+      "announce": "Pink snow falls over %s. Dr. Hiluluk's cherry blossoms bloom in the night sky!",
+      "particles": ["cherry", "snow"], "fireworks": [16761035, 16738740, 16777215], "music": "chime",
+      "goods": [
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:cherry_sapling", "sellCount": 1 },
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "minecraft:pink_petals", "sellCount": 8 }
+      ],
+      "gifts": ["minecraft:cherry_sapling*2", "minecraft:golden_carrot*3"], "effect": "minecraft:regeneration"
+    },
+    "harvest_festival": {
+      "name": "Harvest Festival", "every": 6, "offset": 1, "start": 12000, "end": 19000,
+      "announce": "Bonfires blaze and fiddles play: %s is holding its Harvest Festival tonight!",
+      "particles": ["bonfire", "notes"], "fireworks": [16766720, 16744448, 65280], "music": "fiddle",
+      "goods": [
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "minecraft:pumpkin_pie", "sellCount": 3 },
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "onepiece:mikan", "sellCount": 4 },
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:cooked_beef", "sellCount": 5 }
+      ],
+      "gifts": ["minecraft:cooked_beef*4", "onepiece:mikan*4"], "effect": "minecraft:saturation"
+    },
+    "rain_festival": {
+      "name": "Rain Festival", "every": 10, "offset": 6, "start": 12000, "end": 20000,
+      "announce": "The people of %s dance in the streets to celebrate the return of the rain!",
+      "particles": ["rain", "notes"], "fireworks": [3381759, 65535, 16777215], "music": "fiddle",
+      "goods": [
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "minecraft:melon_slice", "sellCount": 8 },
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "onepiece:coconut", "sellCount": 3 }
+      ],
+      "gifts": ["onepiece:berry*6", "onepiece:coconut*2"], "effect": "minecraft:speed"
+    },
+    "tea_party": {
+      "name": "Tea Party", "every": 8, "offset": 2, "start": 3000, "end": 9000,
+      "announce": "The Tea Party has begun in %s! Sweets for everyone (Mama insists).",
+      "particles": ["confetti", "notes"], "fireworks": [16761035, 11141375, 16777164, 11206570], "music": "chime",
+      "goods": [
+        { "buy": "onepiece:berry", "buyCount": 3, "sell": "minecraft:cake", "sellCount": 1 },
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "minecraft:cookie", "sellCount": 10 },
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "onepiece:cotton_candy", "sellCount": 3 }
+      ],
+      "gifts": ["minecraft:cake*1", "minecraft:cookie*8"], "effect": "minecraft:absorption"
+    },
+    "welcome_party": {
+      "name": "Welcome Party", "every": 3, "offset": 0, "start": 13000, "end": 20000,
+      "announce": "Whisky Peak throws a welcome party for the new pirates in %s! ...a little too friendly, maybe?",
+      "particles": ["notes", "confetti"], "fireworks": [16766720, 16711680], "music": "fiddle",
+      "goods": [
+        { "buy": "onepiece:berry", "buyCount": 2, "sell": "onepiece:sake", "sellCount": 3 }
+      ],
+      "gifts": ["onepiece:sake*2", "minecraft:cooked_beef*3"], "effect": "minecraft:nausea"
+    },
+    "aqua_laguna": {
+      "name": "Aqua Laguna", "every": 12, "offset": 7, "start": 4000, "end": 7000, "hazard": true,
+      "announce": "AQUA LAGUNA IS COMING! Everyone in %s, get to high ground!",
+      "particles": ["wave"], "fireworks": [], "music": "alarm",
+      "goods": [], "gifts": [], "effect": ""
+    },
+    "victory_banquet": {
+      "name": "Victory Banquet", "start": 0, "end": 24000,
+      "announce": "%s throws a banquet in your honour!",
+      "particles": ["bonfire", "notes", "confetti"], "fireworks": [16711680, 16766720, 65280, 3381759], "music": "fiddle",
+      "goods": [
+        { "buy": "onepiece:berry", "buyCount": 1, "sell": "minecraft:cooked_beef", "sellCount": 6 }
+      ],
+      "gifts": ["minecraft:cooked_beef*8", "onepiece:sake*2"], "effect": "minecraft:strength"
+    }
+  }
+}

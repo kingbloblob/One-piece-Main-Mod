@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "onepiece:blocks/barrel_table",
+  "pools": [
+    {
+      "rolls": 1,
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "onepiece:barrel_table"
+        }
+      ]
+    }
+  ]
+}

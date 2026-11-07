@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:desert_thistle"
+  ],
+  "result": {
+    "id": "minecraft:magenta_dye",
+    "count": 2
+  }
+}

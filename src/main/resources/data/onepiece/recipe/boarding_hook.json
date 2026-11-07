@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "T": "minecraft:tripwire_hook",
+    "S": "minecraft:string"
+  },
+  "pattern": [
+    "I I",
+    " T ",
+    "SS "
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:boarding_hook"
+  }
+}

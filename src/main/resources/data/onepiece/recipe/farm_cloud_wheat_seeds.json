@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:cloud_wheat"
+  ],
+  "result": {
+    "count": 2,
+    "id": "onepiece:cloud_wheat_seeds"
+  }
+}

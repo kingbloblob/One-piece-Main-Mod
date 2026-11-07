@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "onepiece:blocks/cloud_sofa",
+  "pools": [
+    {
+      "rolls": 1,
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "onepiece:cloud_sofa"
+        }
+      ]
+    }
+  ]
+}

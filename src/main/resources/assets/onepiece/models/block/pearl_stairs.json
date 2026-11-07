@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "onepiece:block/pearl_block",
+    "side": "onepiece:block/pearl_block",
+    "top": "onepiece:block/pearl_block"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "tamahagane_ingot",
+  "ingredient": "onepiece:raw_tamahagane",
+  "result": {
+    "id": "onepiece:tamahagane_ingot"
+  }
+}

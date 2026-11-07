@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "onepiece:block/marine_bricks",
+    "side": "onepiece:block/marine_bricks",
+    "top": "onepiece:block/marine_bricks"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:flower_pot",
+    "minecraft:oak_sapling",
+    "onepiece:mikan"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:mikan_tree_pot"
+  }
+}

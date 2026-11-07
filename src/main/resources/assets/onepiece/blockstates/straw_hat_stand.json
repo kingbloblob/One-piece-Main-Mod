@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/straw_hat_stand"
+    },
+    "facing=east": {
+      "model": "onepiece:block/straw_hat_stand",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/straw_hat_stand",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/straw_hat_stand",
+      "y": 270
+    }
+  }
+}

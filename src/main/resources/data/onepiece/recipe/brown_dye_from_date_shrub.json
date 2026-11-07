@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:date_shrub"
+  ],
+  "result": {
+    "id": "minecraft:brown_dye",
+    "count": 1
+  }
+}

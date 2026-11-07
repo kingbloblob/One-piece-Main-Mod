@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:stone",
+    "X": "minecraft:ice"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:frozen_stone"
+  }
+}

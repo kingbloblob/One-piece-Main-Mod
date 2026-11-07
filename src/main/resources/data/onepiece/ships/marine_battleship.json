@@ -1,0 +1,17 @@
+{
+  "name": "Marine Battleship",
+  "template": "onepiece:ships/marine_battleship",
+  "bow": "east",
+  "waterline": 2.9,
+  "faction": "marine",
+  "tiers": [
+    3,
+    4,
+    5
+  ],
+  "crew": "Marines",
+  "length": 52,
+  "beam": 27,
+  "height": 48,
+  "blocks": 4567
+}

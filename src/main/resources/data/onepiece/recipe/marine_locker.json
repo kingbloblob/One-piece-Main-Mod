@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "IBI",
+    "ICI",
+    "III"
+  ],
+  "key": {
+    "I": "minecraft:iron_nugget",
+    "B": "minecraft:blue_dye",
+    "C": "minecraft:chest"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:marine_locker"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/pirate_chest"
+    },
+    "facing=east": {
+      "model": "onepiece:block/pirate_chest",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/pirate_chest",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/pirate_chest",
+      "y": 270
+    }
+  }
+}

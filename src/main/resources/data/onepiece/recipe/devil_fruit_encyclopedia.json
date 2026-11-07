@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:book",
+    "minecraft:gold_ingot",
+    "minecraft:ink_sac"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:devil_fruit_encyclopedia"
+  }
+}

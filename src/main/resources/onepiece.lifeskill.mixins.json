@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "com.onepiecemod.lifeskill.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"FurnaceResultSlotLifeSkillMixin",
+		"ItemLifeSkillMixin",
+		"ItemStackLifeSkillMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

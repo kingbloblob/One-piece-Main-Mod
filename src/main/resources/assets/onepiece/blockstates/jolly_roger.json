@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/jolly_roger"
+    },
+    "facing=east": {
+      "model": "onepiece:block/jolly_roger",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/jolly_roger",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/jolly_roger",
+      "y": 270
+    }
+  }
+}

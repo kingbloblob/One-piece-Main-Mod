@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:gold_nugget",
+    "onepiece:berry",
+    "onepiece:berry"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:colosseum_ticket"
+  }
+}

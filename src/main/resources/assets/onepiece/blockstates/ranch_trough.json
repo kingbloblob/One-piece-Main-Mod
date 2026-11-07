@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "full=false": {
+      "model": "onepiece:block/ranch_trough"
+    },
+    "full=true": {
+      "model": "onepiece:block/ranch_trough_full"
+    }
+  }
+}

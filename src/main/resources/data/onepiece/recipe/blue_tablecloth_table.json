@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "onepiece:oak_table",
+    "minecraft:blue_carpet"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:blue_tablecloth_table"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:dojo_scroll_black_leg"
+    },
+    "title": {
+      "translate": "advancements.onepiece.powers.style.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.powers.style.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:powers/root"
+}

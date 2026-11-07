@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/figurehead_sunny"
+    },
+    "facing=east": {
+      "model": "onepiece:block/figurehead_sunny",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/figurehead_sunny",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/figurehead_sunny",
+      "y": 270
+    }
+  }
+}

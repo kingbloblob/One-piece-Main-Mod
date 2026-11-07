@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:is_forest",
+    "onepiece:zou",
+    "onepiece:east_blue",
+    "minecraft:plains",
+    "minecraft:sunflower_plains",
+    "onepiece:east_blue"
+  ]
+}

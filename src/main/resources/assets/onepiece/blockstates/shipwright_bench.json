@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/shipwright_bench"
+    },
+    "facing=east": {
+      "model": "onepiece:block/shipwright_bench",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/shipwright_bench",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/shipwright_bench",
+      "y": 270
+    }
+  }
+}

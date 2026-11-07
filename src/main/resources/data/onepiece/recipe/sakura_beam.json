@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "LLL"
+  ],
+  "key": {
+    "L": "onepiece:stripped_sakura_log"
+  },
+  "result": {
+    "count": 6,
+    "id": "onepiece:sakura_beam"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/hibachi_brazier"
+    },
+    "facing=east": {
+      "model": "onepiece:block/hibachi_brazier",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/hibachi_brazier",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/hibachi_brazier",
+      "y": 270
+    }
+  }
+}

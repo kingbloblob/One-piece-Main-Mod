@@ -1,0 +1,786 @@
+[
+  {
+    "item": "onepiece:yoru",
+    "title": "Boss drop: Dracule Mihawk",
+    "icon": "minecraft:iron_sword",
+    "notes": [
+      "Drops the first time you beat Dracule Mihawk as a boss.",
+      "Rematches don't drop it again."
+    ],
+    "boss": "mihawk"
+  },
+  {
+    "item": "onepiece:enma",
+    "title": "Boss drop: Kaido",
+    "icon": "minecraft:iron_sword",
+    "notes": [
+      "Drops the first time you beat Kaido as a boss.",
+      "Rematches don't drop it again."
+    ],
+    "boss": "kaido"
+  },
+  {
+    "item": "onepiece:shusui",
+    "title": "Boss drop: Gecko Moria",
+    "icon": "minecraft:iron_sword",
+    "notes": [
+      "Drops the first time you beat Gecko Moria as a boss.",
+      "Rematches don't drop it again."
+    ],
+    "boss": "moria"
+  },
+  {
+    "item": "onepiece:dojo_scroll_rokushiki",
+    "title": "Boss drop: Rob Lucci",
+    "icon": "minecraft:iron_sword",
+    "notes": [
+      "Drops the first time you beat Rob Lucci as a boss.",
+      "Rematches don't drop it again."
+    ],
+    "boss": "lucci"
+  },
+  {
+    "item": "onepiece:hassaikai",
+    "title": "Boss drop: Kaido",
+    "icon": "minecraft:iron_sword",
+    "notes": [
+      "Drops the first time you beat Kaido as a boss.",
+      "Rematches don't drop it again."
+    ],
+    "boss": "kaido"
+  },
+  {
+    "item": "onepiece:murakumogiri",
+    "title": "Boss drop: Whitebeard",
+    "icon": "minecraft:iron_sword",
+    "notes": [
+      "Drops the first time you beat Whitebeard as a boss.",
+      "Rematches don't drop it again."
+    ],
+    "boss": "whitebeard"
+  },
+  {
+    "item": "onepiece:golden_hook",
+    "title": "Boss drop: Crocodile",
+    "icon": "minecraft:iron_sword",
+    "notes": [
+      "Drops the first time you beat Crocodile as a boss.",
+      "Rematches don't drop it again."
+    ],
+    "boss": "crocodile"
+  },
+  {
+    "item": "onepiece:punisher",
+    "title": "Boss drop: Killer",
+    "icon": "minecraft:iron_sword",
+    "notes": [
+      "Drops the first time you beat Killer as a boss.",
+      "Rematches don't drop it again."
+    ],
+    "boss": "killer"
+  },
+  {
+    "item": "onepiece:mogura",
+    "title": "Boss drop: Charlotte Katakuri",
+    "icon": "minecraft:iron_sword",
+    "notes": [
+      "Drops the first time you beat Charlotte Katakuri as a boss.",
+      "Rematches don't drop it again."
+    ],
+    "boss": "katakuri"
+  },
+  {
+    "item": "onepiece:homie_umbrella",
+    "title": "Boss drop: Big Mom",
+    "icon": "minecraft:iron_sword",
+    "notes": [
+      "Drops the first time you beat Big Mom as a boss.",
+      "Rematches don't drop it again."
+    ],
+    "boss": "big_mom"
+  },
+  {
+    "item": "onepiece:nonosama_bo",
+    "title": "Boss drop: Enel",
+    "icon": "minecraft:iron_sword",
+    "notes": [
+      "Drops the first time you beat Enel as a boss.",
+      "Rematches don't drop it again."
+    ],
+    "boss": "enel"
+  },
+  {
+    "item": "onepiece:senriku",
+    "title": "Boss drop: Blackbeard",
+    "icon": "minecraft:iron_sword",
+    "notes": [
+      "Drops the first time you beat Blackbeard as a boss.",
+      "Rematches don't drop it again."
+    ],
+    "boss": "blackbeard"
+  },
+  {
+    "item": "onepiece:music_disc_toward_the_grand_line",
+    "title": "Boss drop: any boss",
+    "icon": "minecraft:jukebox",
+    "notes": [
+      "Every boss you beat has a 12% chance to drop a random One Piece song."
+    ]
+  },
+  {
+    "item": "onepiece:music_disc_fair_winds",
+    "title": "Boss drop: any boss",
+    "icon": "minecraft:jukebox",
+    "notes": [
+      "Every boss you beat has a 12% chance to drop a random One Piece song."
+    ]
+  },
+  {
+    "item": "onepiece:music_disc_boss_battle",
+    "title": "Boss drop: any boss",
+    "icon": "minecraft:jukebox",
+    "notes": [
+      "Every boss you beat has a 12% chance to drop a random One Piece song."
+    ]
+  },
+  {
+    "item": "onepiece:music_disc_justice_marches",
+    "title": "Boss drop: any boss",
+    "icon": "minecraft:jukebox",
+    "notes": [
+      "Every boss you beat has a 12% chance to drop a random One Piece song."
+    ]
+  },
+  {
+    "item": "onepiece:music_disc_drink_to_the_horizon",
+    "title": "Boss drop: any boss",
+    "icon": "minecraft:jukebox",
+    "notes": [
+      "Every boss you beat has a 12% chance to drop a random One Piece song."
+    ]
+  },
+  {
+    "item": "onepiece:music_disc_haul_the_anchor",
+    "title": "Boss drop: any boss",
+    "icon": "minecraft:jukebox",
+    "notes": [
+      "Every boss you beat has a 12% chance to drop a random One Piece song."
+    ]
+  },
+  {
+    "item": "onepiece:music_disc_lantern_on_the_waves",
+    "title": "Boss drop: any boss",
+    "icon": "minecraft:jukebox",
+    "notes": [
+      "Every boss you beat has a 12% chance to drop a random One Piece song."
+    ]
+  },
+  {
+    "item": "onepiece:music_disc_emperor_battle",
+    "title": "Boss drop: Emperors and Admirals",
+    "icon": "minecraft:jukebox",
+    "notes": [
+      "Emperors and Admirals drop this song (12% chance per win)."
+    ]
+  },
+  {
+    "item": "onepiece:trophy_beasts",
+    "title": "Raid reward: Beasts Pirates",
+    "icon": "onepiece:raid_den_den_mushi",
+    "notes": [
+      "Given the first time you win the Beasts Pirates raid."
+    ]
+  },
+  {
+    "item": "onepiece:trophy_big_mom",
+    "title": "Raid reward: Big Mom Pirates",
+    "icon": "onepiece:raid_den_den_mushi",
+    "notes": [
+      "Given the first time you win the Big Mom Pirates raid."
+    ]
+  },
+  {
+    "item": "onepiece:trophy_blackbeard",
+    "title": "Raid reward: Blackbeard Pirates",
+    "icon": "onepiece:raid_den_den_mushi",
+    "notes": [
+      "Given the first time you win the Blackbeard Pirates raid."
+    ]
+  },
+  {
+    "item": "onepiece:trophy_red_hair",
+    "title": "Raid reward: Red Hair Pirates",
+    "icon": "onepiece:raid_den_den_mushi",
+    "notes": [
+      "Given the first time you win the Red Hair Pirates raid."
+    ]
+  },
+  {
+    "item": "onepiece:trophy_whitebeard",
+    "title": "Raid reward: Whitebeard's Legacy",
+    "icon": "onepiece:raid_den_den_mushi",
+    "notes": [
+      "Given the first time you win the Whitebeard's Legacy raid."
+    ]
+  },
+  {
+    "item": "onepiece:trophy_rocks",
+    "title": "Raid reward: Rocks Pirates (God Valley)",
+    "icon": "onepiece:raid_den_den_mushi",
+    "notes": [
+      "Given the first time you win the Rocks Pirates (God Valley) raid."
+    ]
+  },
+  {
+    "item": "onepiece:trophy_roger",
+    "title": "Raid reward: Roger Pirates",
+    "icon": "onepiece:raid_den_den_mushi",
+    "notes": [
+      "Given the first time you win the Roger Pirates raid."
+    ]
+  },
+  {
+    "item": "onepiece:trophy_final_war",
+    "title": "Raid reward: Final War",
+    "icon": "onepiece:raid_den_den_mushi",
+    "notes": [
+      "Given the first time you win the Final War raid."
+    ]
+  },
+  {
+    "item": "onepiece:raid_den_den_mushi",
+    "title": "Story reward: Laugh Tale",
+    "icon": "onepiece:the_one_piece",
+    "notes": [
+      "Given when you finish the story at Laugh Tale. It opens the endgame raids."
+    ]
+  },
+  {
+    "item": "onepiece:newspaper",
+    "title": "Delivered by the News Coo",
+    "icon": "minecraft:feather",
+    "notes": [
+      "A News Coo drops a fresh paper every morning, with the news since your last one."
+    ]
+  },
+  {
+    "item": "onepiece:yarukiman_resin",
+    "title": "Tap a Yarukiman tree",
+    "icon": "minecraft:glass_bottle",
+    "notes": [
+      "Right-click a Yarukiman log with a Glass Bottle to collect resin."
+    ]
+  },
+  {
+    "item": "onepiece:captains_log",
+    "title": "Story journal",
+    "icon": "minecraft:writable_book",
+    "notes": [
+      "You get it when your story starts. Lost it? Type /story log to get a new one."
+    ]
+  },
+  {
+    "item": "onepiece:blue_sea_bream",
+    "title": "Fishing: East Blue",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in East Blue.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:striped_mackerel",
+    "title": "Fishing: East Blue",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in East Blue.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:east_blue_lobster",
+    "title": "Fishing: East Blue",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in East Blue.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:calm_belt_eel",
+    "title": "Fishing: Calm Belt",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in Calm Belt.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:sea_king_fry",
+    "title": "Fishing: Calm Belt",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in Calm Belt.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:elephant_honmaguro",
+    "title": "Fishing: Grand Line",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in Grand Line.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:grand_line_puffer",
+    "title": "Fishing: Grand Line",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in Grand Line.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:rainbow_snapper",
+    "title": "Fishing: Grand Line",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in Grand Line.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:new_world_swordfish",
+    "title": "Fishing: New World",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in New World.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:abyss_angler",
+    "title": "Fishing: New World",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in New World.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:glowfin",
+    "title": "Fishing: Fishman Island or Sabaody",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in Fishman Island or Sabaody.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:sky_fish",
+    "title": "Fishing: Skypiea",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in Skypiea.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:golden_koi",
+    "title": "Fishing: Wano or Onigashima",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in Wano or Onigashima.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:frostfin_cod",
+    "title": "Fishing: Drum Island or frozen Punk Hazard",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in Drum Island or frozen Punk Hazard.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:sandora_catfish",
+    "title": "Fishing: Alabasta",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in Alabasta.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:ghost_fish",
+    "title": "Fishing: Thriller Bark",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish with a normal fishing rod in Thriller Bark.",
+      "Grill it, or cook it at the Ship's Galley."
+    ]
+  },
+  {
+    "item": "onepiece:all_blue_kingfish",
+    "title": "Fishing: the All Blue",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish in the All Blue, far out in the New World.",
+      "The All Blue Compass points the way."
+    ]
+  },
+  {
+    "item": "onepiece:rainbow_sunfish",
+    "title": "Fishing: the All Blue",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Fish in the All Blue, far out in the New World.",
+      "The All Blue Compass points the way."
+    ]
+  },
+  {
+    "item": "onepiece:sea_king_meat",
+    "title": "Fishing: Calm Belt",
+    "icon": "minecraft:fishing_rod",
+    "notes": [
+      "Now and then a Calm Belt catch is a slab of Sea King meat.",
+      "Sea Kings drop it too."
+    ]
+  },
+  {
+    "item": "onepiece:east_blue_cabbage_seeds",
+    "title": "Wild seeds: East Blue (Conomi, Orange Town, Loguetown)",
+    "icon": "minecraft:short_grass",
+    "notes": [
+      "Break grass, ferns and wild plants on East Blue (Conomi, Orange Town, Loguetown): now and then a seed drops.",
+      "A grown crop drops more seeds. Bank one in a Seed Vault to draw a free seed every day."
+    ]
+  },
+  {
+    "item": "onepiece:east_blue_cabbage",
+    "title": "Farming",
+    "icon": "onepiece:east_blue_cabbage_seeds",
+    "notes": [
+      "Grow East Blue Cabbage on farmland. Fastest on East Blue (Conomi, Orange Town, Loguetown).",
+      "Sprinklers, the Watering Can and Ranch Manure speed it up."
+    ]
+  },
+  {
+    "item": "onepiece:wano_rice_seeds",
+    "title": "Wild seeds: Wano, Kuri and Onigashima",
+    "icon": "minecraft:short_grass",
+    "notes": [
+      "Break grass, ferns and wild plants on Wano, Kuri and Onigashima: now and then a seed drops.",
+      "A grown crop drops more seeds. Bank one in a Seed Vault to draw a free seed every day."
+    ]
+  },
+  {
+    "item": "onepiece:wano_rice",
+    "title": "Farming",
+    "icon": "onepiece:wano_rice_seeds",
+    "notes": [
+      "Grow Wano Rice on farmland. Fastest on Wano, Kuri and Onigashima.",
+      "Sprinklers, the Watering Can and Ranch Manure speed it up."
+    ]
+  },
+  {
+    "item": "onepiece:kibi_millet_seeds",
+    "title": "Wild seeds: Wano and Kuri",
+    "icon": "minecraft:short_grass",
+    "notes": [
+      "Break grass, ferns and wild plants on Wano and Kuri: now and then a seed drops.",
+      "A grown crop drops more seeds. Bank one in a Seed Vault to draw a free seed every day."
+    ]
+  },
+  {
+    "item": "onepiece:kibi_millet",
+    "title": "Farming",
+    "icon": "onepiece:kibi_millet_seeds",
+    "notes": [
+      "Grow Kibi Millet on farmland. Fastest on Wano and Kuri.",
+      "Sprinklers, the Watering Can and Ranch Manure speed it up."
+    ]
+  },
+  {
+    "item": "onepiece:cloud_wheat_seeds",
+    "title": "Wild seeds: Skypiea",
+    "icon": "minecraft:short_grass",
+    "notes": [
+      "Break grass, ferns and wild plants on Skypiea: now and then a seed drops.",
+      "A grown crop drops more seeds. Bank one in a Seed Vault to draw a free seed every day."
+    ]
+  },
+  {
+    "item": "onepiece:cloud_wheat",
+    "title": "Farming",
+    "icon": "onepiece:cloud_wheat_seeds",
+    "notes": [
+      "Grow Cloud Wheat on farmland. Fastest on Skypiea.",
+      "Sprinklers, the Watering Can and Ranch Manure speed it up."
+    ]
+  },
+  {
+    "item": "onepiece:elbaph_barley_seeds",
+    "title": "Wild seeds: Elbaph, the land of giants",
+    "icon": "minecraft:short_grass",
+    "notes": [
+      "Break grass, ferns and wild plants on Elbaph, the land of giants: now and then a seed drops.",
+      "A grown crop drops more seeds. Bank one in a Seed Vault to draw a free seed every day."
+    ]
+  },
+  {
+    "item": "onepiece:elbaph_barley",
+    "title": "Farming",
+    "icon": "onepiece:elbaph_barley_seeds",
+    "notes": [
+      "Grow Elbaph Barley on farmland. Fastest on Elbaph, the land of giants.",
+      "Sprinklers, the Watering Can and Ranch Manure speed it up."
+    ]
+  },
+  {
+    "item": "onepiece:frost_turnip_seeds",
+    "title": "Wild seeds: Drum Island and frozen Punk Hazard",
+    "icon": "minecraft:short_grass",
+    "notes": [
+      "Break grass, ferns and wild plants on Drum Island and frozen Punk Hazard: now and then a seed drops.",
+      "A grown crop drops more seeds. Bank one in a Seed Vault to draw a free seed every day."
+    ]
+  },
+  {
+    "item": "onepiece:frost_turnip",
+    "title": "Farming",
+    "icon": "onepiece:frost_turnip_seeds",
+    "notes": [
+      "Grow Frost Turnip on farmland. Fastest on Drum Island and frozen Punk Hazard.",
+      "Sprinklers, the Watering Can and Ranch Manure speed it up."
+    ]
+  },
+  {
+    "item": "onepiece:jungle_yam_seeds",
+    "title": "Wild seeds: Jaya and Little Garden",
+    "icon": "minecraft:short_grass",
+    "notes": [
+      "Break grass, ferns and wild plants on Jaya and Little Garden: now and then a seed drops.",
+      "A grown crop drops more seeds. Bank one in a Seed Vault to draw a free seed every day."
+    ]
+  },
+  {
+    "item": "onepiece:jungle_yam",
+    "title": "Farming",
+    "icon": "onepiece:jungle_yam_seeds",
+    "notes": [
+      "Grow Jungle Yam on farmland. Fastest on Jaya and Little Garden.",
+      "Sprinklers, the Watering Can and Ranch Manure speed it up."
+    ]
+  },
+  {
+    "item": "onepiece:dressrosa_tomato_seeds",
+    "title": "Wild seeds: Dressrosa and Green Bit",
+    "icon": "minecraft:short_grass",
+    "notes": [
+      "Break grass, ferns and wild plants on Dressrosa and Green Bit: now and then a seed drops.",
+      "A grown crop drops more seeds. Bank one in a Seed Vault to draw a free seed every day."
+    ]
+  },
+  {
+    "item": "onepiece:dressrosa_tomato",
+    "title": "Farming",
+    "icon": "onepiece:dressrosa_tomato_seeds",
+    "notes": [
+      "Grow Dressrosa Tomato on farmland. Fastest on Dressrosa and Green Bit.",
+      "Sprinklers, the Watering Can and Ranch Manure speed it up."
+    ]
+  },
+  {
+    "item": "onepiece:snake_pepper_seeds",
+    "title": "Wild seeds: Amazon Lily",
+    "icon": "minecraft:short_grass",
+    "notes": [
+      "Break grass, ferns and wild plants on Amazon Lily: now and then a seed drops.",
+      "A grown crop drops more seeds. Bank one in a Seed Vault to draw a free seed every day."
+    ]
+  },
+  {
+    "item": "onepiece:snake_pepper",
+    "title": "Farming",
+    "icon": "onepiece:snake_pepper_seeds",
+    "notes": [
+      "Grow Snake Pepper on farmland. Fastest on Amazon Lily.",
+      "Sprinklers, the Watering Can and Ranch Manure speed it up."
+    ]
+  },
+  {
+    "item": "onepiece:sea_grape_seeds",
+    "title": "Wild seeds: Fishman Island and Sabaody",
+    "icon": "minecraft:short_grass",
+    "notes": [
+      "Break grass, ferns and wild plants on Fishman Island and Sabaody: now and then a seed drops.",
+      "A grown crop drops more seeds. Bank one in a Seed Vault to draw a free seed every day."
+    ]
+  },
+  {
+    "item": "onepiece:sea_grape",
+    "title": "Farming",
+    "icon": "onepiece:sea_grape_seeds",
+    "notes": [
+      "Grow Sea Grapes on farmland. Fastest on Fishman Island and Sabaody.",
+      "Sprinklers, the Watering Can and Ranch Manure speed it up."
+    ]
+  },
+  {
+    "item": "onepiece:totland_cacao_seeds",
+    "title": "Wild seeds: Whole Cake Island and Cacao Island",
+    "icon": "minecraft:short_grass",
+    "notes": [
+      "Break grass, ferns and wild plants on Whole Cake Island and Cacao Island: now and then a seed drops.",
+      "A grown crop drops more seeds. Bank one in a Seed Vault to draw a free seed every day."
+    ]
+  },
+  {
+    "item": "onepiece:totland_cacao",
+    "title": "Farming",
+    "icon": "onepiece:totland_cacao_seeds",
+    "notes": [
+      "Grow Totland Cacao on farmland. Fastest on Whole Cake Island and Cacao Island.",
+      "Sprinklers, the Watering Can and Ranch Manure speed it up."
+    ]
+  },
+  {
+    "item": "onepiece:mink_tea_seeds",
+    "title": "Wild seeds: Zou, on the elephant's back",
+    "icon": "minecraft:short_grass",
+    "notes": [
+      "Break grass, ferns and wild plants on Zou, on the elephant's back: now and then a seed drops.",
+      "A grown crop drops more seeds. Bank one in a Seed Vault to draw a free seed every day."
+    ]
+  },
+  {
+    "item": "onepiece:mink_tea",
+    "title": "Farming",
+    "icon": "onepiece:mink_tea_seeds",
+    "notes": [
+      "Grow Mink Tea on farmland. Fastest on Zou, on the elephant's back.",
+      "Sprinklers, the Watering Can and Ranch Manure speed it up."
+    ]
+  },
+  {
+    "item": "onepiece:ghost_pumpkin_seeds",
+    "title": "Wild seeds: Thriller Bark, Kuraigana and the Withered Forest",
+    "icon": "minecraft:short_grass",
+    "notes": [
+      "Break grass, ferns and wild plants on Thriller Bark, Kuraigana and the Withered Forest: now and then a seed drops.",
+      "A grown crop drops more seeds. Bank one in a Seed Vault to draw a free seed every day."
+    ]
+  },
+  {
+    "item": "onepiece:ghost_pumpkin",
+    "title": "Farming",
+    "icon": "onepiece:ghost_pumpkin_seeds",
+    "notes": [
+      "Grow Ghost Pumpkin on farmland. Fastest on Thriller Bark, Kuraigana and the Withered Forest.",
+      "Sprinklers, the Watering Can and Ranch Manure speed it up."
+    ]
+  },
+  {
+    "item": "onepiece:sand_melon_seeds",
+    "title": "Wild seeds: Alabasta",
+    "icon": "minecraft:short_grass",
+    "notes": [
+      "Break grass, ferns and wild plants on Alabasta: now and then a seed drops.",
+      "A grown crop drops more seeds. Bank one in a Seed Vault to draw a free seed every day."
+    ]
+  },
+  {
+    "item": "onepiece:sand_melon",
+    "title": "Farming",
+    "icon": "onepiece:sand_melon_seeds",
+    "notes": [
+      "Grow Sand Melon on farmland. Fastest on Alabasta.",
+      "Sprinklers, the Watering Can and Ranch Manure speed it up."
+    ]
+  },
+  {
+    "item": "onepiece:fresh_milk",
+    "title": "Ranching",
+    "icon": "onepiece:ranch_trough",
+    "notes": [
+      "Keep a cow, goat or Drum Reindeer near a Ranch Trough filled with fodder.",
+      "Now and then it leaves this in a chest beside the trough."
+    ]
+  },
+  {
+    "item": "onepiece:truffle",
+    "title": "Ranching",
+    "icon": "onepiece:ranch_trough",
+    "notes": [
+      "Keep a pig near a Ranch Trough filled with fodder.",
+      "Now and then it leaves this in a chest beside the trough."
+    ]
+  },
+  {
+    "item": "onepiece:south_bird_egg",
+    "title": "Ranching",
+    "icon": "onepiece:ranch_trough",
+    "notes": [
+      "Keep a South Bird near a Ranch Trough filled with fodder.",
+      "Now and then it leaves this in a chest beside the trough."
+    ]
+  },
+  {
+    "item": "onepiece:duck_egg",
+    "title": "Ranching",
+    "icon": "onepiece:ranch_trough",
+    "notes": [
+      "Keep a Spot-billed Duck near a Ranch Trough filled with fodder.",
+      "Now and then it leaves this in a chest beside the trough."
+    ]
+  },
+  {
+    "item": "onepiece:ranch_manure",
+    "title": "Ranching",
+    "icon": "onepiece:ranch_trough",
+    "notes": [
+      "Keep any ranch animal near a Ranch Trough filled with fodder.",
+      "Now and then it leaves this in a chest beside the trough."
+    ]
+  },
+  {
+    "item": "onepiece:sea_king_fang",
+    "title": "Rare drop: Sea King",
+    "icon": "onepiece:sea_king_fang",
+    "notes": [
+      "12% when you defeat a Sea King.",
+      "Used at the Swordsmith's Forge after building the Tempering Anvil."
+    ]
+  },
+  {
+    "item": "onepiece:ambergris",
+    "title": "Rare drop: Island Whale",
+    "icon": "onepiece:ambergris",
+    "notes": [
+      "20% when you defeat an Island Whale.",
+      "Used at the Ship's Galley: Sanji's Kitchen upgrade and Ambergris Roast."
+    ]
+  },
+  {
+    "item": "onepiece:dragon_heartstone",
+    "title": "Rare drop: Punk Hazard Dragon",
+    "icon": "onepiece:dragon_heartstone",
+    "notes": [
+      "8% when you defeat a Punk Hazard Dragon.",
+      "Used to build the Dragon Hearth at the Swordsmith's Forge."
+    ]
+  },
+  {
+    "item": "onepiece:pacifista_core",
+    "title": "Rare drop: Pacifista",
+    "icon": "onepiece:pacifista_core",
+    "notes": [
+      "15% when you defeat a Pacifista, or in lab chests.",
+      "Used at the Shipwright's Bench: Franky's Workshop."
+    ]
+  }
+]

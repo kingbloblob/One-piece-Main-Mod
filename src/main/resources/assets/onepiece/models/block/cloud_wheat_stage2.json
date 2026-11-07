@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "onepiece:block/cloud_wheat_stage2"
+  }
+}

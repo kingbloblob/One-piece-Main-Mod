@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "condition": {
+            "type": "minecraft:match_block",
+            "blocks": "onepiece:gloom_door",
+            "state": {
+              "half": "lower"
+            }
+          },
+          "name": "onepiece:gloom_door"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "onepiece:blocks/gloom_door"
+}

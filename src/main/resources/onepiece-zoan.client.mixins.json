@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "com.onepiecemod.zoan.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"ZoanRenderMixin",
+		"FirstPersonArmMixin",
+		"GunRecoilMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

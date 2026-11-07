@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:bowl",
+    "minecraft:iron_nugget",
+    "minecraft:beef"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:pet_bowl"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "PCP"
+  ],
+  "key": {
+    "S": "onepiece:wano_lacquer_slab",
+    "P": "onepiece:wano_lacquer_planks",
+    "C": "minecraft:chest"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:wano_tansu"
+  }
+}

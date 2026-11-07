@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/grand_line_wall_map"
+    },
+    "facing=east": {
+      "model": "onepiece:block/grand_line_wall_map",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/grand_line_wall_map",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/grand_line_wall_map",
+      "y": 270
+    }
+  }
+}

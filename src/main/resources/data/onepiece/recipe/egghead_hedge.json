@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bush",
+    "minecraft:cyan_dye"
+  ],
+  "result": {
+    "id": "onepiece:egghead_hedge",
+    "count": 2
+  }
+}

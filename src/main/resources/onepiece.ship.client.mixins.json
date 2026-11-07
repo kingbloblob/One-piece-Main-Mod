@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "com.onepiecemod.ship.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"MinecraftPickMixin",
+		"CameraFluidMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

@@ -1,0 +1,82 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:spider_eye"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.cave_hunter.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.cave_hunter.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "prism_crab": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:prism_crab"
+          }
+        }
+      }
+    },
+    "cave_centipede": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:cave_centipede"
+          }
+        }
+      }
+    },
+    "sulfur_salamander": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:sulfur_salamander"
+          }
+        }
+      }
+    },
+    "ancient_sentinel": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:ancient_sentinel"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "prism_crab"
+    ],
+    [
+      "cave_centipede"
+    ],
+    [
+      "sulfur_salamander"
+    ],
+    [
+      "ancient_sentinel"
+    ]
+  ],
+  "parent": "onepiece:wonders/ancient_sentinel"
+}

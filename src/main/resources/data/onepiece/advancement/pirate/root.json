@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:jolly_roger"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.root.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.root.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "onepiece:gui/advancements/backgrounds/pirate"
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ]
+}

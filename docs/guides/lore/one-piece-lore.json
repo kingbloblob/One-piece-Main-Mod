@@ -1,0 +1,1701 @@
+{
+ "fruits": [
+  {
+   "name": "Gomu Gomu no Mi",
+   "english": "Gum-Gum Fruit",
+   "type": "Zoan",
+   "subtype": "Mythical (true name: Hito Hito no Mi, Model: Nika)",
+   "user": "Monkey D. Luffy",
+   "power": "Rubber body that stretches and shrugs off blunt hits and bullets. Awakened as Sun God Nika (Gear 5): cartoon-like freedom, turning the surroundings to rubber.",
+   "minecraft": "Already in the mod. Add stretch punch (long reach), Gear 2 (Speed + Strength with steam particles), Gear 4 (big inflated form), Gear 5 as a late awakening."
+  },
+  {
+   "name": "Mera Mera no Mi",
+   "english": "Flame-Flame Fruit",
+   "type": "Logia",
+   "subtype": "",
+   "user": "Portgas D. Ace, later Sabo",
+   "power": "Become, create and control fire. Fire Fist, Fire Pillar, Great Flame Commandment: Flame Emperor.",
+   "minecraft": "Immune to fire and lava damage, fire immunity. Shoot fireballs, set mobs alight, fire body that ignites attackers."
+  },
+  {
+   "name": "Hie Hie no Mi",
+   "english": "Ice-Ice Fruit",
+   "type": "Logia",
+   "subtype": "",
+   "user": "Kuzan (Aokiji)",
+   "power": "Become and create ice. Freezes people solid and turns the sea to ice to walk across it.",
+   "minecraft": "Freeze water blocks under your feet (Frost Walker+), Slowness and freeze ticks on hit, ice spike projectile."
+  },
+  {
+   "name": "Magu Magu no Mi",
+   "english": "Magma-Magma Fruit",
+   "type": "Logia",
+   "subtype": "",
+   "user": "Sakazuki (Akainu)",
+   "power": "Become and create magma, hotter than Ace's fire. Great Eruption fists rain from the sky.",
+   "minecraft": "Place temporary lava, magma fist projectile that sets blocks on fire, immunity to lava."
+  },
+  {
+   "name": "Pika Pika no Mi",
+   "english": "Glint-Glint Fruit",
+   "type": "Logia",
+   "subtype": "",
+   "user": "Borsalino (Kizaru)",
+   "power": "Become light. Travels at light speed, fires laser kicks, forms the light sword Ama no Murakumo.",
+   "minecraft": "Short-range teleport dash in look direction, laser beam ray-cast attack, glowing light trail."
+  },
+  {
+   "name": "Goro Goro no Mi",
+   "english": "Rumble-Rumble Fruit",
+   "type": "Logia",
+   "subtype": "",
+   "user": "Enel",
+   "power": "Become and control lightning. Paired with strong Observation (Mantra) it covers a whole sky island.",
+   "minecraft": "Summon lightning bolts on target, charge Redstone, chain lightning between mobs."
+  },
+  {
+   "name": "Suna Suna no Mi",
+   "english": "Sand-Sand Fruit",
+   "type": "Logia",
+   "subtype": "",
+   "user": "Sir Crocodile",
+   "power": "Become sand and drain moisture from anything his right hand touches. Weakness: getting wet.",
+   "minecraft": "Turn blocks to sand, Wither-like dehydrate touch, sandstorm that blinds. Water hits stop your intangibility."
+  },
+  {
+   "name": "Moku Moku no Mi",
+   "english": "Smoke-Smoke Fruit",
+   "type": "Logia",
+   "subtype": "",
+   "user": "Smoker",
+   "power": "Become and control smoke. Ties people up with smoke and flies on a smoke trail.",
+   "minecraft": "Smoke cloud that gives Blindness, smoke grab that pulls a mob to you, slow flight."
+  },
+  {
+   "name": "Yami Yami no Mi",
+   "english": "Dark-Dark Fruit",
+   "type": "Logia",
+   "subtype": "Special: user cannot become intangible",
+   "user": "Marshall D. Teach (Blackbeard)",
+   "power": "Darkness that pulls in everything like a black hole. Touching a fruit user cancels their power. Takes more damage, not less.",
+   "minecraft": "Pull nearby mobs and dropped items to you, touch to disable another player's fruit for a few seconds. Unique: lets you eat a second fruit."
+  },
+  {
+   "name": "Numa Numa no Mi",
+   "english": "Swamp-Swamp Fruit",
+   "type": "Logia",
+   "subtype": "",
+   "user": "Caribou",
+   "power": "Become a bottomless swamp that stores anything inside the body.",
+   "minecraft": "Extra storage inventory, sink enemies into mud blocks that trap them."
+  },
+  {
+   "name": "Gasu Gasu no Mi",
+   "english": "Gas-Gas Fruit",
+   "type": "Logia",
+   "subtype": "",
+   "user": "Caesar Clown",
+   "power": "Become and control gas. Can remove oxygen around targets and make poison gas.",
+   "minecraft": "Poison cloud (lingering potion effect), suffocate target to make it lose air."
+  },
+  {
+   "name": "Yuki Yuki no Mi",
+   "english": "Snow-Snow Fruit",
+   "type": "Logia",
+   "subtype": "",
+   "user": "Monet",
+   "power": "Become and control snow. Blizzards and snow storms.",
+   "minecraft": "Spawn snow layers, Slowness blizzard area, snow golem companions."
+  },
+  {
+   "name": "Mori Mori no Mi",
+   "english": "Forest-Forest Fruit",
+   "type": "Logia",
+   "subtype": "",
+   "user": "Aramaki (Ryokugyu)",
+   "power": "Become a forest. Roots drain nutrients from people, and he never needs to eat.",
+   "minecraft": "Grow trees and vines instantly, root snare, hunger never drops while standing on grass."
+  },
+  {
+   "name": "Gura Gura no Mi",
+   "english": "Tremor-Tremor Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Edward Newgate (Whitebeard), later Blackbeard",
+   "power": "Creates quake shockwaves by cracking the air. Called the strongest Paramecia, said to be able to destroy the world.",
+   "minecraft": "Ground-pound shockwave that knocks back everything in a radius and breaks weak blocks. Tsunami ability near water."
+  },
+  {
+   "name": "Ope Ope no Mi",
+   "english": "Op-Op Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Trafalgar D. Water Law",
+   "power": "Creates a sphere called Room where he can cut, swap, and move anything, including organs. Can grant eternal youth at the cost of his life.",
+   "minecraft": "Place a Room area, then swap places with any mob inside it, teleport items, and cut mobs from range without breaking them."
+  },
+  {
+   "name": "Ito Ito no Mi",
+   "english": "String-String Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Donquixote Doflamingo",
+   "power": "Creates strings to cut, control puppets, walk on clouds and stitch wounds. Birdcage traps a whole island.",
+   "minecraft": "Grapple hook with strings, take control of a mob for a few seconds, a big cage of string walls."
+  },
+  {
+   "name": "Bara Bara no Mi",
+   "english": "Chop-Chop Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Buggy",
+   "power": "Split body into pieces that float and move on their own. Immune to cuts. Feet must stay on the ground.",
+   "minecraft": "Immune to sword damage. Send your fist flying as a homing projectile."
+  },
+  {
+   "name": "Hana Hana no Mi",
+   "english": "Flower-Flower Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Nico Robin",
+   "power": "Sprout copies of her body parts on any surface, up to giant size.",
+   "minecraft": "Hit and grab mobs from range by summoning arms at their location. Use clones to open doors and press buttons far away."
+  },
+  {
+   "name": "Nikyu Nikyu no Mi",
+   "english": "Paw-Paw Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Bartholomew Kuma",
+   "power": "Paw pads that repel anything, even pain, fatigue and air. Can send people flying for days to a distant place.",
+   "minecraft": "Reflect projectiles, blast mobs far away, and a random long-range teleport for players."
+  },
+  {
+   "name": "Kage Kage no Mi",
+   "english": "Shadow-Shadow Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Gecko Moria",
+   "power": "Steals and controls shadows, putting them in corpses to make zombie soldiers.",
+   "minecraft": "Raise allied zombies from killed mobs. Steal a player's shadow: sunlight then damages them."
+  },
+  {
+   "name": "Horo Horo no Mi",
+   "english": "Hollow-Hollow Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Perona",
+   "power": "Creates ghosts. Negative Hollows drain the will of anyone they pass through.",
+   "minecraft": "Ghost projectile that gives Weakness and Slowness and makes the target crouch. Ghost form to scout."
+  },
+  {
+   "name": "Mero Mero no Mi",
+   "english": "Love-Love Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Boa Hancock",
+   "power": "Turns anyone attracted to her into stone, also with kicks and arrows of love.",
+   "minecraft": "Turn mobs into a stone statue for a few seconds (frozen and invulnerable)."
+  },
+  {
+   "name": "Yomi Yomi no Mi",
+   "english": "Revive-Revive Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Brook",
+   "power": "Brought him back to life once. Later lets his soul leave his body and creates freezing cold from the underworld.",
+   "minecraft": "One free respawn where you die (keep inventory). Soul form flight like spectator mode, frost sword attacks."
+  },
+  {
+   "name": "Soru Soru no Mi",
+   "english": "Soul-Soul Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Charlotte Linlin (Big Mom)",
+   "power": "Takes lifespan from people and puts souls in objects, making living homies like Zeus and Prometheus.",
+   "minecraft": "Give souls to blocks or items to make allied mobs. Drain years from enemies to heal yourself."
+  },
+  {
+   "name": "Mochi Mochi no Mi",
+   "english": "Mochi-Mochi Fruit",
+   "type": "Paramecia",
+   "subtype": "Special Paramecia (acts like a Logia)",
+   "user": "Charlotte Katakuri",
+   "power": "Create, control and become sticky mochi.",
+   "minecraft": "Sticky blocks that slow and trap mobs. Mochi fist punches."
+  },
+  {
+   "name": "Bisu Bisu no Mi",
+   "english": "Biscuit-Biscuit Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Charlotte Cracker",
+   "power": "Creates hard biscuit armor and soldiers. The biscuit can be eaten.",
+   "minecraft": "Spawn biscuit golems. Edible armor that also fills hunger."
+  },
+  {
+   "name": "Pero Pero no Mi",
+   "english": "Lick-Lick Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Charlotte Perospero",
+   "power": "Creates and controls candy, sealing people in candy.",
+   "minecraft": "Candy cage blocks around a target. Candy ladders and bridges."
+  },
+  {
+   "name": "Mira Mira no Mi",
+   "english": "Mirror-Mirror Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Charlotte Brulee",
+   "power": "Makes mirrors, travel through the Mirror World and copy others' looks.",
+   "minecraft": "Teleport between two mirror blocks you place. A pocket dimension."
+  },
+  {
+   "name": "Netsu Netsu no Mi",
+   "english": "Heat-Heat Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Charlotte Oven",
+   "power": "Heats his body and anything he touches.",
+   "minecraft": "Smelt items in your hand, boil water nearby, burn touch."
+  },
+  {
+   "name": "Bari Bari no Mi",
+   "english": "Barrier-Barrier Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Bartolomeo",
+   "power": "Creates unbreakable barrier walls.",
+   "minecraft": "Place temporary bedrock-strength barrier walls. Shield wall that blocks projectiles."
+  },
+  {
+   "name": "Hobi Hobi no Mi",
+   "english": "Hobby-Hobby Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Sugar",
+   "power": "Turns people into toys and erases everyone's memory of them.",
+   "minecraft": "Turn a mob into a toy item. Turn a hostile mob into a pet."
+  },
+  {
+   "name": "Doru Doru no Mi",
+   "english": "Wax-Wax Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Galdino (Mr. 3)",
+   "power": "Creates wax as hard as steel, shaping armor, weapons and statues.",
+   "minecraft": "Temporary wax blocks and wax armor. Lose them when they touch fire."
+  },
+  {
+   "name": "Bomu Bomu no Mi",
+   "english": "Bomb-Bomb Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Gem (Mr. 5)",
+   "power": "Turns any body part, even breath or snot, into explosives.",
+   "minecraft": "Explosive punch, throw explosive items. Immune to explosion damage."
+  },
+  {
+   "name": "Kilo Kilo no Mi",
+   "english": "Kilo-Kilo Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Mikita (Miss Valentine)",
+   "power": "Changes body weight from 1 kg to 10,000 kg.",
+   "minecraft": "Float slowly like Slow Falling, or drop as heavy as an anvil for big landing damage."
+  },
+  {
+   "name": "Supa Supa no Mi",
+   "english": "Dice-Dice Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Daz Bonez (Mr. 1)",
+   "power": "Turns the body into blades of steel.",
+   "minecraft": "Arms deal sword damage. Hard as iron: armor bonus while active."
+  },
+  {
+   "name": "Mane Mane no Mi",
+   "english": "Clone-Clone Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Bentham (Mr. 2 Bon Clay), later Kurozumi Higurashi",
+   "power": "Copy anyone's face and body after touching their face.",
+   "minecraft": "Disguise as another player's skin, or as a mob so others ignore you."
+  },
+  {
+   "name": "Noro Noro no Mi",
+   "english": "Slow-Slow Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Foxy",
+   "power": "Noroma photons slow anything they hit for 30 seconds.",
+   "minecraft": "Beam that gives Slowness 255 for a few seconds."
+  },
+  {
+   "name": "Doa Doa no Mi",
+   "english": "Door-Door Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Blueno",
+   "power": "Makes doors in anything, even air, to travel through walls.",
+   "minecraft": "Walk through walls by opening a door. Hidden pocket room."
+  },
+  {
+   "name": "Awa Awa no Mi",
+   "english": "Bubble-Bubble Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Kalifa",
+   "power": "Soap bubbles that wash away a person's strength.",
+   "minecraft": "Bubbles that give Weakness and Mining Fatigue."
+  },
+  {
+   "name": "Fuwa Fuwa no Mi",
+   "english": "Float-Float Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Shiki",
+   "power": "Makes anything he has touched float, including himself and whole islands.",
+   "minecraft": "Levitate mobs, blocks and yourself. Lift chunks of land into the sky."
+  },
+  {
+   "name": "Ishi Ishi no Mi",
+   "english": "Stone-Stone Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Pica",
+   "power": "Merge with stone and control it, even whole cities.",
+   "minecraft": "Move through stone blocks. Build stone giants and walls."
+  },
+  {
+   "name": "Hira Hira no Mi",
+   "english": "Flutter-Flutter Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Diamante",
+   "power": "Makes anything flutter like a flag, so steel goes soft.",
+   "minecraft": "Turn walls into flags that mobs walk through. Wavy sword attacks."
+  },
+  {
+   "name": "Nagi Nagi no Mi",
+   "english": "Calm-Calm Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Donquixote Rosinante (Corazon)",
+   "power": "Erases all sound around himself or a target.",
+   "minecraft": "Silent movement: no sounds and Sculk sensors ignore you."
+  },
+  {
+   "name": "Toshi Toshi no Mi",
+   "english": "Age-Age Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Jewelry Bonney",
+   "power": "Changes the age of herself and others. Can take on the form of a future she imagines.",
+   "minecraft": "Turn mobs into babies, age crops instantly."
+  },
+  {
+   "name": "Horu Horu no Mi",
+   "english": "Hormone-Hormone Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Emporio Ivankov",
+   "power": "Controls hormones to heal, change gender, and boost others.",
+   "minecraft": "Healing and buffs with a cost (hunger drop afterward)."
+  },
+  {
+   "name": "Doku Doku no Mi",
+   "english": "Venom-Venom Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Magellan",
+   "power": "Creates and controls deadly poison, with a venom demon.",
+   "minecraft": "Poison touch and poison pools. Immune to Poison."
+  },
+  {
+   "name": "Bane Bane no Mi",
+   "english": "Spring-Spring Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Bellamy",
+   "power": "Turns legs and arms into springs.",
+   "minecraft": "Jump Boost IV, bouncing attacks."
+  },
+  {
+   "name": "Kira Kira no Mi",
+   "english": "Glitter-Glitter Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Jozu",
+   "power": "Turns the body into diamond.",
+   "minecraft": "Big armor boost, but you move slower."
+  },
+  {
+   "name": "Woshu Woshu no Mi",
+   "english": "Wash-Wash Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Tsuru",
+   "power": "Washes and wrings out people, hanging them up to dry, washing away their evil.",
+   "minecraft": "Turn hostile mobs neutral for a time."
+  },
+  {
+   "name": "Jiki Jiki no Mi",
+   "english": "Magnet-Magnet Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Eustass Kid",
+   "power": "Magnetism that pulls in metal to build giant arms.",
+   "minecraft": "Pull iron items and armor to you, a giant metal arm made from nearby iron blocks."
+  },
+  {
+   "name": "Wara Wara no Mi",
+   "english": "Straw-Straw Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Basil Hawkins",
+   "power": "Makes straw dolls that take damage for him, passing it onto others.",
+   "minecraft": "Totem-like: damage you take passes to a linked mob."
+  },
+  {
+   "name": "Oto Oto no Mi",
+   "english": "Sound-Sound Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Scratchmen Apoo",
+   "power": "Turns his body into instruments. Sound attacks that cut from range.",
+   "minecraft": "Note block sound attacks that hit from far away."
+  },
+  {
+   "name": "Shiro Shiro no Mi",
+   "english": "Castle-Castle Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Capone Bege",
+   "power": "His body is a fortress with tiny soldiers and cannons inside.",
+   "minecraft": "Portable base: store players and mobs inside you."
+  },
+  {
+   "name": "Baku Baku no Mi",
+   "english": "Munch-Munch Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Wapol",
+   "power": "Eat anything and turn into what he ate.",
+   "minecraft": "Eat blocks or items to gain their properties."
+  },
+  {
+   "name": "Choki Choki no Mi",
+   "english": "Snip-Snip Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Inazuma",
+   "power": "Fingers become scissors that cut anything like paper.",
+   "minecraft": "Cut out a block and carry it like a sheet."
+  },
+  {
+   "name": "Fude Fude no Mi",
+   "english": "Brush-Brush Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Kurozumi Kanjuro",
+   "power": "Drawings come to life.",
+   "minecraft": "Draw a mob on a sign or map item and it spawns."
+  },
+  {
+   "name": "Fuku Fuku no Mi",
+   "english": "Clothes-Clothes Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Kin'emon",
+   "power": "Creates clothes from anything and changes outfits instantly.",
+   "minecraft": "Swap armor sets with one key press."
+  },
+  {
+   "name": "Kibi Kibi no Mi",
+   "english": "Millet-Millet Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Tama",
+   "power": "Makes kibi dango that tame any animal or SMILE user who eats it.",
+   "minecraft": "Tame any mob with a dango item."
+  },
+  {
+   "name": "Toki Toki no Mi",
+   "english": "Time-Time Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Kozuki Toki",
+   "power": "Sends herself or others forward in time.",
+   "minecraft": "Freeze a player or mob in time, and it reappears later."
+  },
+  {
+   "name": "Memo Memo no Mi",
+   "english": "Memo-Memo Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Charlotte Pudding",
+   "power": "Pulls out memories like film reels and edits them.",
+   "minecraft": "Reset a mob's target so it forgets you."
+  },
+  {
+   "name": "Riki Riki no Mi",
+   "english": "Power-Power Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Jesus Burgess",
+   "power": "Gives superhuman strength.",
+   "minecraft": "Strength III while active."
+  },
+  {
+   "name": "Wapu Wapu no Mi",
+   "english": "Warp-Warp Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Van Augur",
+   "power": "Teleports himself and others.",
+   "minecraft": "Teleport to marked locations."
+  },
+  {
+   "name": "Shiku Shiku no Mi",
+   "english": "Sick-Sick Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Doc Q",
+   "power": "Spreads disease, and can also heal it.",
+   "minecraft": "Give or remove effects like Poison and Nausea."
+  },
+  {
+   "name": "Zushi Zushi no Mi",
+   "english": "Press-Press Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Issho (Fujitora)",
+   "power": "Controls gravity, pulling meteors from space.",
+   "minecraft": "Gravity crush (pin mobs down), meteor rain from the sky."
+  },
+  {
+   "name": "Nomi Nomi no Mi",
+   "english": "Brain-Brain Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Dr. Vegapunk",
+   "power": "Brain stores endless knowledge, so it keeps growing.",
+   "minecraft": "Unlock crafting recipes faster, show info on mobs."
+  },
+  {
+   "name": "Beta Beta no Mi",
+   "english": "Stick-Stick Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Trebol",
+   "power": "Sticky mucus that can trap and burn.",
+   "minecraft": "Sticky slime blocks that trap enemies."
+  },
+  {
+   "name": "Pamu Pamu no Mi",
+   "english": "Pop-Pop Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Gladius",
+   "power": "Makes himself and things he touches swell and burst.",
+   "minecraft": "Pop blocks like small TNT on touch."
+  },
+  {
+   "name": "Sui Sui no Mi",
+   "english": "Swim-Swim Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Senor Pink",
+   "power": "Swim through the ground and walls like water.",
+   "minecraft": "Swim through dirt and stone like water (still can't swim in real water)."
+  },
+  {
+   "name": "Buki Buki no Mi",
+   "english": "Arms-Arms Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Baby 5",
+   "power": "Turns her body into any weapon.",
+   "minecraft": "Shape arms into sword, axe or crossbow on the fly."
+  },
+  {
+   "name": "Guru Guru no Mi",
+   "english": "Spin-Spin Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Buffalo",
+   "power": "Spins body parts like a helicopter propeller.",
+   "minecraft": "Short flight with spinning arms."
+  },
+  {
+   "name": "Modo Modo no Mi",
+   "english": "Return-Return Fruit",
+   "type": "Paramecia",
+   "subtype": "",
+   "user": "Ain (film)",
+   "power": "Takes years away from anyone she touches.",
+   "minecraft": "Turn adult mobs into babies."
+  },
+  {
+   "name": "Hito Hito no Mi",
+   "english": "Human-Human Fruit",
+   "type": "Zoan",
+   "subtype": "",
+   "user": "Tony Tony Chopper",
+   "power": "A reindeer gained human intelligence and forms. Rumble Balls give him seven Points, and Monster Point.",
+   "minecraft": "Swap forms (speed, strength, heavy). A Rumble Ball item that unlocks the big form."
+  },
+  {
+   "name": "Hito Hito no Mi, Model: Daibutsu",
+   "english": "Human-Human Fruit, Model: Great Buddha",
+   "type": "Zoan",
+   "subtype": "Mythical",
+   "user": "Sengoku",
+   "power": "Turns into a giant golden Buddha and fires shockwaves from his palms.",
+   "minecraft": "Grow huge and golden, palm shockwave that knocks back."
+  },
+  {
+   "name": "Uo Uo no Mi, Model: Seiryu",
+   "english": "Fish-Fish Fruit, Model: Azure Dragon",
+   "type": "Zoan",
+   "subtype": "Mythical",
+   "user": "Kaido (an artificial copy: Kozuki Momonosuke)",
+   "power": "Becomes a huge Eastern dragon. Breathes fire, makes clouds to fly, and wind blades.",
+   "minecraft": "Flying dragon form with fire breath. Make clouds you can stand on."
+  },
+  {
+   "name": "Tori Tori no Mi, Model: Phoenix",
+   "english": "Bird-Bird Fruit, Model: Phoenix",
+   "type": "Zoan",
+   "subtype": "Mythical",
+   "user": "Marco",
+   "power": "Turns into a phoenix. Blue flames heal him and others, and do not burn.",
+   "minecraft": "Flight and constant Regeneration. Heal allies with blue fire."
+  },
+  {
+   "name": "Inu Inu no Mi, Model: Okuchi no Makami",
+   "english": "Dog-Dog Fruit, Model: Wolf God",
+   "type": "Zoan",
+   "subtype": "Mythical",
+   "user": "Yamato",
+   "power": "A divine wolf that controls ice and cold.",
+   "minecraft": "Wolf form with ice attacks and fast running."
+  },
+  {
+   "name": "Hebi Hebi no Mi, Model: Yamata no Orochi",
+   "english": "Snake-Snake Fruit, Model: Eight-headed Serpent",
+   "type": "Zoan",
+   "subtype": "Mythical",
+   "user": "Kurozumi Orochi",
+   "power": "Turns into an eight-headed serpent. Survives while one head lives.",
+   "minecraft": "Get several extra lives in snake form."
+  },
+  {
+   "name": "Inu Inu no Mi, Model: Kyubi no Kitsune",
+   "english": "Dog-Dog Fruit, Model: Nine-Tailed Fox",
+   "type": "Zoan",
+   "subtype": "Mythical",
+   "user": "Catarina Devon",
+   "power": "A nine-tailed fox that can perfectly copy other people.",
+   "minecraft": "Disguise as any mob or player."
+  },
+  {
+   "name": "Ryu Ryu no Mi, Model: Pteranodon",
+   "english": "Dragon-Dragon Fruit, Model: Pteranodon",
+   "type": "Zoan",
+   "subtype": "Ancient",
+   "user": "King",
+   "power": "A flying pterosaur. Combined with his Lunarian flames.",
+   "minecraft": "Fast flight form with fire immunity."
+  },
+  {
+   "name": "Ryu Ryu no Mi, Model: Brachiosaurus",
+   "english": "Dragon-Dragon Fruit, Model: Brachiosaurus",
+   "type": "Zoan",
+   "subtype": "Ancient",
+   "user": "Queen",
+   "power": "A long-necked dinosaur, mixed with cyborg weapons.",
+   "minecraft": "Huge, slow, tanky form."
+  },
+  {
+   "name": "Ryu Ryu no Mi, Model: Allosaurus",
+   "english": "Dragon-Dragon Fruit, Model: Allosaurus",
+   "type": "Zoan",
+   "subtype": "Ancient",
+   "user": "X Drake",
+   "power": "A large predatory dinosaur.",
+   "minecraft": "Strong bite attack and extra health."
+  },
+  {
+   "name": "Ryu Ryu no Mi, Model: Spinosaurus",
+   "english": "Dragon-Dragon Fruit, Model: Spinosaurus",
+   "type": "Zoan",
+   "subtype": "Ancient",
+   "user": "Page One",
+   "power": "A spinosaurus that can also shrink.",
+   "minecraft": "Swim-ready dino form."
+  },
+  {
+   "name": "Zou Zou no Mi, Model: Mammoth",
+   "english": "Elephant-Elephant Fruit, Model: Mammoth",
+   "type": "Zoan",
+   "subtype": "Ancient",
+   "user": "Jack",
+   "power": "A huge mammoth.",
+   "minecraft": "Charge attack that breaks blocks."
+  },
+  {
+   "name": "Neko Neko no Mi, Model: Leopard",
+   "english": "Cat-Cat Fruit, Model: Leopard",
+   "type": "Zoan",
+   "subtype": "",
+   "user": "Rob Lucci",
+   "power": "A leopard man. Later awakened with stronger power.",
+   "minecraft": "Speed and strength boost, pounce."
+  },
+  {
+   "name": "Ushi Ushi no Mi, Model: Giraffe",
+   "english": "Ox-Ox Fruit, Model: Giraffe",
+   "type": "Zoan",
+   "subtype": "",
+   "user": "Kaku",
+   "power": "A giraffe, with a neck used like a hammer and legs that cut.",
+   "minecraft": "Long-reach headbutt."
+  },
+  {
+   "name": "Tori Tori no Mi, Model: Falcon",
+   "english": "Bird-Bird Fruit, Model: Falcon",
+   "type": "Zoan",
+   "subtype": "",
+   "user": "Pell",
+   "power": "A falcon. He can fly people around.",
+   "minecraft": "Basic flight. Carry another player."
+  },
+  {
+   "name": "Ushi Ushi no Mi, Model: Bison",
+   "english": "Ox-Ox Fruit, Model: Bison",
+   "type": "Zoan",
+   "subtype": "",
+   "user": "Dalton",
+   "power": "A bison.",
+   "minecraft": "Charge and knockback."
+  },
+  {
+   "name": "Hebi Hebi no Mi, Model: Anaconda / King Cobra",
+   "english": "Snake-Snake Fruit",
+   "type": "Zoan",
+   "subtype": "",
+   "user": "Boa Sandersonia / Boa Marigold",
+   "power": "Snake forms for the two Gorgon sisters.",
+   "minecraft": "Wrap and squeeze a mob, poison bite."
+  },
+  {
+   "name": "Kumo Kumo no Mi, Model: Rosamygale Grauvogeli",
+   "english": "Spider-Spider Fruit",
+   "type": "Zoan",
+   "subtype": "Ancient",
+   "user": "Black Maria",
+   "power": "A giant ancient spider that uses webs.",
+   "minecraft": "Cobweb traps, climb walls."
+  },
+  {
+   "name": "Inu Inu no Mi, Model: Dachshund",
+   "english": "Dog-Dog Fruit, Model: Dachshund",
+   "type": "Zoan",
+   "subtype": "Eaten by a gun",
+   "user": "Lassoo (Mr. 4's gun)",
+   "power": "A gun that ate a fruit. It became a living dog-gun.",
+   "minecraft": "A gun item that is also a pet dog."
+  },
+  {
+   "name": "Zou Zou no Mi",
+   "english": "Elephant-Elephant Fruit",
+   "type": "Zoan",
+   "subtype": "Eaten by a sword",
+   "user": "Funkfreed (Spandam's sword)",
+   "power": "A sword that ate a fruit. It can turn into an elephant.",
+   "minecraft": "A sword item that you can summon as a mount."
+  },
+  {
+   "name": "SMILE (artificial)",
+   "english": "Artificial Zoan",
+   "type": "Zoan",
+   "subtype": "Artificial",
+   "user": "Beasts Pirates' Gifters",
+   "power": "Man-made Zoan fruits made by Caesar Clown. Most give random animal parts. Failures take away the ability to frown and make the user laugh.",
+   "minecraft": "Random cheap fruit with a random animal part. Failure: no power and constant laughter."
+  }
+ ],
+ "characters": [
+  {
+   "name": "Monkey D. Luffy",
+   "affiliation": "Straw Hat Pirates",
+   "role": "Captain, Emperor",
+   "fruit": "Gomu Gomu no Mi (Hito Hito no Mi, Model: Nika)",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "Rubber brawling with Gears 2 to 5",
+   "weapons": "Fists"
+  },
+  {
+   "name": "Roronoa Zoro",
+   "affiliation": "Straw Hat Pirates",
+   "role": "Swordsman",
+   "fruit": "None",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "Three Sword Style (Santoryu), Nine Sword Style (Asura)",
+   "weapons": "Wado Ichimonji, Sandai Kitetsu, Enma"
+  },
+  {
+   "name": "Nami",
+   "affiliation": "Straw Hat Pirates",
+   "role": "Navigator",
+   "fruit": "None",
+   "haki": [],
+   "style": "Weather control with tools",
+   "weapons": "Sorcery Clima-Tact with Zeus"
+  },
+  {
+   "name": "Usopp",
+   "affiliation": "Straw Hat Pirates",
+   "role": "Sniper",
+   "fruit": "None",
+   "haki": [
+    "Observation"
+   ],
+   "style": "Long-range sniping with Pop Greens (plant seeds)",
+   "weapons": "Kabuto / Kuro Kabuto slingshot"
+  },
+  {
+   "name": "Sanji",
+   "affiliation": "Straw Hat Pirates",
+   "role": "Cook",
+   "fruit": "None",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "Black Leg Style kicks, Diable Jambe, Ifrit Jambe",
+   "weapons": "Feet only (never uses hands); Raid Suit"
+  },
+  {
+   "name": "Tony Tony Chopper",
+   "affiliation": "Straw Hat Pirates",
+   "role": "Doctor",
+   "fruit": "Hito Hito no Mi",
+   "haki": [],
+   "style": "Transformation Points and medicine",
+   "weapons": "Rumble Balls"
+  },
+  {
+   "name": "Nico Robin",
+   "affiliation": "Straw Hat Pirates",
+   "role": "Archaeologist",
+   "fruit": "Hana Hana no Mi",
+   "haki": [],
+   "style": "Sprouting limbs, Demonio Fleur",
+   "weapons": "None"
+  },
+  {
+   "name": "Franky",
+   "affiliation": "Straw Hat Pirates",
+   "role": "Shipwright",
+   "fruit": "None",
+   "haki": [],
+   "style": "Cyborg weapons, Franky Shogun mech",
+   "weapons": "Radical Beam, built-in cannons"
+  },
+  {
+   "name": "Brook",
+   "affiliation": "Straw Hat Pirates",
+   "role": "Musician",
+   "fruit": "Yomi Yomi no Mi",
+   "haki": [],
+   "style": "Fast fencing with soul freezing",
+   "weapons": "Soul Solid (cane sword)"
+  },
+  {
+   "name": "Jinbe",
+   "affiliation": "Straw Hat Pirates",
+   "role": "Helmsman",
+   "fruit": "None",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "Fish-Man Karate and Fish-Man Jujutsu (water control)",
+   "weapons": "Fists"
+  },
+  {
+   "name": "Shanks",
+   "affiliation": "Red Hair Pirates",
+   "role": "Captain, Emperor",
+   "fruit": "None",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "Swordsmanship with top Conqueror's Haki",
+   "weapons": "Gryphon"
+  },
+  {
+   "name": "Marshall D. Teach (Blackbeard)",
+   "affiliation": "Blackbeard Pirates",
+   "role": "Captain, Emperor",
+   "fruit": "Yami Yami no Mi + Gura Gura no Mi",
+   "haki": [],
+   "style": "Two Devil Fruits at once",
+   "weapons": "None known"
+  },
+  {
+   "name": "Buggy",
+   "affiliation": "Cross Guild / Buggy Pirates",
+   "role": "Captain, Emperor",
+   "fruit": "Bara Bara no Mi",
+   "haki": [],
+   "style": "Split body attacks",
+   "weapons": "Knives, Muggy Balls (cannonballs)"
+  },
+  {
+   "name": "Edward Newgate (Whitebeard)",
+   "affiliation": "Whitebeard Pirates",
+   "role": "Captain, former Emperor",
+   "fruit": "Gura Gura no Mi",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "Quake punches through a weapon",
+   "weapons": "Murakumogiri"
+  },
+  {
+   "name": "Charlotte Linlin (Big Mom)",
+   "affiliation": "Big Mom Pirates",
+   "role": "Captain, former Emperor",
+   "fruit": "Soru Soru no Mi",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "Raw strength with soul homies",
+   "weapons": "Napoleon (sword homie), Zeus, Prometheus"
+  },
+  {
+   "name": "Kaido",
+   "affiliation": "Beasts Pirates",
+   "role": "Captain, former Emperor",
+   "fruit": "Uo Uo no Mi, Model: Seiryu",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "Dragon form, club combat",
+   "weapons": "Hassaikai (kanabo club)"
+  },
+  {
+   "name": "Trafalgar D. Water Law",
+   "affiliation": "Heart Pirates",
+   "role": "Captain",
+   "fruit": "Ope Ope no Mi",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "Room-based surgery techniques",
+   "weapons": "Kikoku (nodachi)"
+  },
+  {
+   "name": "Eustass Kid",
+   "affiliation": "Kid Pirates",
+   "role": "Captain",
+   "fruit": "Jiki Jiki no Mi",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "Magnetic arms",
+   "weapons": "Punk Gibson (giant metal arm)"
+  },
+  {
+   "name": "Killer",
+   "affiliation": "Kid Pirates",
+   "role": "Combatant",
+   "fruit": "SMILE (failed)",
+   "haki": [
+    "Armament"
+   ],
+   "style": "Spinning blade attacks",
+   "weapons": "Punisher (scythe blades)"
+  },
+  {
+   "name": "Basil Hawkins",
+   "affiliation": "Hawkins Pirates",
+   "role": "Captain",
+   "fruit": "Wara Wara no Mi",
+   "haki": [],
+   "style": "Fortune-telling with tarot cards",
+   "weapons": "Straw dolls"
+  },
+  {
+   "name": "X Drake",
+   "affiliation": "SWORD (Marine spy)",
+   "role": "Captain",
+   "fruit": "Ryu Ryu no Mi, Model: Allosaurus",
+   "haki": [
+    "Armament"
+   ],
+   "style": "Dinosaur form",
+   "weapons": "Sword and axe"
+  },
+  {
+   "name": "Jewelry Bonney",
+   "affiliation": "Bonney Pirates",
+   "role": "Captain",
+   "fruit": "Toshi Toshi no Mi",
+   "haki": [],
+   "style": "Age manipulation",
+   "weapons": "None"
+  },
+  {
+   "name": "Dracule Mihawk",
+   "affiliation": "Cross Guild",
+   "role": "Greatest Swordsman",
+   "fruit": "None",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "The world's best swordsmanship",
+   "weapons": "Yoru (black blade)"
+  },
+  {
+   "name": "Sir Crocodile",
+   "affiliation": "Cross Guild",
+   "role": "Former Warlord",
+   "fruit": "Suna Suna no Mi",
+   "haki": [
+    "Armament"
+   ],
+   "style": "Sand and dehydration",
+   "weapons": "Golden poison hook"
+  },
+  {
+   "name": "Donquixote Doflamingo",
+   "affiliation": "Donquixote Pirates",
+   "role": "Former Warlord",
+   "fruit": "Ito Ito no Mi",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "String attacks",
+   "weapons": "Strings"
+  },
+  {
+   "name": "Boa Hancock",
+   "affiliation": "Kuja Pirates",
+   "role": "Empress, former Warlord",
+   "fruit": "Mero Mero no Mi",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "Kicks and petrification",
+   "weapons": "None"
+  },
+  {
+   "name": "Bartholomew Kuma",
+   "affiliation": "Revolutionary Army",
+   "role": "Former Warlord",
+   "fruit": "Nikyu Nikyu no Mi",
+   "haki": [],
+   "style": "Paw repulsion",
+   "weapons": "None"
+  },
+  {
+   "name": "Gecko Moria",
+   "affiliation": "Thriller Bark Pirates",
+   "role": "Former Warlord",
+   "fruit": "Kage Kage no Mi",
+   "haki": [],
+   "style": "Shadow control, zombie army",
+   "weapons": "Scissors"
+  },
+  {
+   "name": "Monkey D. Garp",
+   "affiliation": "Marines",
+   "role": "Vice Admiral (hero)",
+   "fruit": "None",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "Bare-fist strength: Fist of Love, Galaxy Impact",
+   "weapons": "Fists, thrown cannonballs"
+  },
+  {
+   "name": "Sengoku",
+   "affiliation": "Marines",
+   "role": "Former Fleet Admiral",
+   "fruit": "Hito Hito no Mi, Model: Daibutsu",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "Shockwave palms",
+   "weapons": "None"
+  },
+  {
+   "name": "Sakazuki (Akainu)",
+   "affiliation": "Marines",
+   "role": "Fleet Admiral",
+   "fruit": "Magu Magu no Mi",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "Magma fists",
+   "weapons": "None"
+  },
+  {
+   "name": "Borsalino (Kizaru)",
+   "affiliation": "Marines",
+   "role": "Admiral",
+   "fruit": "Pika Pika no Mi",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "Light speed kicks and lasers",
+   "weapons": "Ama no Murakumo (light sword)"
+  },
+  {
+   "name": "Issho (Fujitora)",
+   "affiliation": "Marines",
+   "role": "Admiral",
+   "fruit": "Zushi Zushi no Mi",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "Gravity and blind swordsmanship",
+   "weapons": "Cane sword (shikomizue)"
+  },
+  {
+   "name": "Aramaki (Ryokugyu)",
+   "affiliation": "Marines",
+   "role": "Admiral",
+   "fruit": "Mori Mori no Mi",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "Forest growth",
+   "weapons": "None"
+  },
+  {
+   "name": "Kuzan (Aokiji)",
+   "affiliation": "Blackbeard Pirates (former Admiral)",
+   "role": "Commander",
+   "fruit": "Hie Hie no Mi",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "Ice attacks",
+   "weapons": "Ice Saber"
+  },
+  {
+   "name": "Smoker",
+   "affiliation": "Marines",
+   "role": "Vice Admiral",
+   "fruit": "Moku Moku no Mi",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "Smoke and a seastone weapon",
+   "weapons": "Nanashaku Jitte (seastone tip)"
+  },
+  {
+   "name": "Koby",
+   "affiliation": "Marines / SWORD",
+   "role": "Captain",
+   "fruit": "None",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "Six Powers (Rokushiki), Honesty Impact",
+   "weapons": "Fists"
+  },
+  {
+   "name": "Tashigi",
+   "affiliation": "Marines",
+   "role": "Captain",
+   "fruit": "None",
+   "haki": [
+    "Armament"
+   ],
+   "style": "Swordsmanship",
+   "weapons": "Shigure"
+  },
+  {
+   "name": "Rob Lucci",
+   "affiliation": "CP0",
+   "role": "Agent",
+   "fruit": "Neko Neko no Mi, Model: Leopard",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "Six Powers (Rokushiki)",
+   "weapons": "None"
+  },
+  {
+   "name": "Monkey D. Dragon",
+   "affiliation": "Revolutionary Army",
+   "role": "Leader",
+   "fruit": "Unknown",
+   "haki": [],
+   "style": "Unknown (linked to wind)",
+   "weapons": "Unknown"
+  },
+  {
+   "name": "Sabo",
+   "affiliation": "Revolutionary Army",
+   "role": "Chief of Staff",
+   "fruit": "Mera Mera no Mi",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "Dragon Claw fist plus fire",
+   "weapons": "Metal pipe staff"
+  },
+  {
+   "name": "Portgas D. Ace",
+   "affiliation": "Whitebeard Pirates",
+   "role": "2nd Division Commander",
+   "fruit": "Mera Mera no Mi",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "Fire Fist",
+   "weapons": "None"
+  },
+  {
+   "name": "Marco",
+   "affiliation": "Whitebeard Pirates",
+   "role": "1st Division Commander",
+   "fruit": "Tori Tori no Mi, Model: Phoenix",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "Phoenix kicks and healing",
+   "weapons": "None"
+  },
+  {
+   "name": "Silvers Rayleigh",
+   "affiliation": "Former Roger Pirates",
+   "role": "First Mate (Dark King)",
+   "fruit": "None",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "Master swordsman and Haki teacher",
+   "weapons": "Sword"
+  },
+  {
+   "name": "Gol D. Roger",
+   "affiliation": "Roger Pirates",
+   "role": "Pirate King",
+   "fruit": "None",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "Swordsmanship with Conqueror's Haki",
+   "weapons": "Ace (his sword)"
+  },
+  {
+   "name": "Kozuki Oden",
+   "affiliation": "Wano / Roger Pirates",
+   "role": "Daimyo",
+   "fruit": "None",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "Oden Two-Sword Style",
+   "weapons": "Enma, Ame no Habakiri"
+  },
+  {
+   "name": "Yamato",
+   "affiliation": "Wano",
+   "role": "Oden's successor",
+   "fruit": "Inu Inu no Mi, Model: Okuchi no Makami",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "Club fighting with ice",
+   "weapons": "Kanabo club"
+  },
+  {
+   "name": "Charlotte Katakuri",
+   "affiliation": "Big Mom Pirates",
+   "role": "Sweet Commander",
+   "fruit": "Mochi Mochi no Mi",
+   "haki": [
+    "Conqueror's",
+    "Armament",
+    "Observation"
+   ],
+   "style": "Future-seeing Observation, mochi",
+   "weapons": "Mogura (trident)"
+  },
+  {
+   "name": "King",
+   "affiliation": "Beasts Pirates",
+   "role": "All-Star",
+   "fruit": "Ryu Ryu no Mi, Model: Pteranodon",
+   "haki": [
+    "Armament",
+    "Observation"
+   ],
+   "style": "Lunarian fire and flight",
+   "weapons": "Sword"
+  },
+  {
+   "name": "Enel",
+   "affiliation": "Sky Island (self-proclaimed god)",
+   "role": "God of Skypiea",
+   "fruit": "Goro Goro no Mi",
+   "haki": [
+    "Observation"
+   ],
+   "style": "Lightning plus Mantra (Observation)",
+   "weapons": "Nonosama Bo (golden staff)"
+  },
+  {
+   "name": "Kin'emon",
+   "affiliation": "Wano (Red Scabbards)",
+   "role": "Samurai",
+   "fruit": "Fuku Fuku no Mi",
+   "haki": [
+    "Armament"
+   ],
+   "style": "Fox Fire Style (cuts fire)",
+   "weapons": "Katana"
+  },
+  {
+   "name": "Dr. Vegapunk",
+   "affiliation": "Egghead (former Marine scientist)",
+   "role": "Genius scientist",
+   "fruit": "Nomi Nomi no Mi",
+   "haki": [],
+   "style": "Inventions: Pacifista, Seraphim, artificial fruits",
+   "weapons": "Technology"
+  }
+ ],
+ "weapons": [
+  {
+   "name": "Yoru",
+   "kind": "Black blade (sword)",
+   "grade": "Supreme Grade (Saijo O Wazamono)",
+   "owner": "Dracule Mihawk",
+   "note": "One of the 12 Supreme Grade blades. Its slash split an iceberg.",
+   "minecraft": "Top-tier sword, highest damage, sweeping range attack."
+  },
+  {
+   "name": "Murakumogiri",
+   "kind": "Naginata (bisento)",
+   "grade": "Supreme Grade",
+   "owner": "Edward Newgate (Whitebeard)",
+   "note": "Channels his quake power.",
+   "minecraft": "Polearm with long reach that boosts the Gura Gura shockwave."
+  },
+  {
+   "name": "Shodai Kitetsu",
+   "kind": "Katana",
+   "grade": "Supreme Grade",
+   "owner": "Unknown",
+   "note": "The first Kitetsu blade; all Kitetsu are cursed.",
+   "minecraft": "Super rare cursed sword: strong but hurts the holder sometimes."
+  },
+  {
+   "name": "Enma",
+   "kind": "Katana",
+   "grade": "Great Grade (O Wazamono)",
+   "owner": "Kozuki Oden, then Roronoa Zoro",
+   "note": "Pulls Haki out of the wielder by force. Can cut through to the underworld.",
+   "minecraft": "Drains your stamina or hunger with each swing in exchange for big damage."
+  },
+  {
+   "name": "Ame no Habakiri",
+   "kind": "Katana",
+   "grade": "Great Grade",
+   "owner": "Kozuki Oden",
+   "note": "Oden's second sword.",
+   "minecraft": "Pair with Enma for dual wielding."
+  },
+  {
+   "name": "Shusui",
+   "kind": "Black blade (katana)",
+   "grade": "Great Grade",
+   "owner": "Ryuma, then Zoro, returned to Wano",
+   "note": "A national treasure of Wano. Turned black from its long history.",
+   "minecraft": "Found in a Wano grave structure."
+  },
+  {
+   "name": "Wado Ichimonji",
+   "kind": "Katana",
+   "grade": "Great Grade",
+   "owner": "Kuina, then Roronoa Zoro",
+   "note": "Made by Shimotsuki Kozaburo. Zoro holds it in his mouth.",
+   "minecraft": "Starter meito from a dojo village."
+  },
+  {
+   "name": "Kikoku",
+   "kind": "Nodachi",
+   "grade": "Great Grade",
+   "owner": "Trafalgar Law",
+   "note": "A long, cursed-looking blade that Law uses with Room.",
+   "minecraft": "Long-reach sword that boosts Room powers."
+  },
+  {
+   "name": "Sandai Kitetsu",
+   "kind": "Katana",
+   "grade": "Skillful Grade (Ryo Wazamono)",
+   "owner": "Roronoa Zoro",
+   "note": "Cursed; it brings bad luck to its owner. It tested Zoro and lost.",
+   "minecraft": "Cursed sword: chance to hurt you, extra damage if you are lucky."
+  },
+  {
+   "name": "Shigure",
+   "kind": "Katana",
+   "grade": "Skillful Grade",
+   "owner": "Tashigi",
+   "note": "A meito Tashigi carries everywhere.",
+   "minecraft": "Mid-tier sword."
+  },
+  {
+   "name": "Soul Solid",
+   "kind": "Cane sword",
+   "grade": "Skillful Grade",
+   "owner": "Brook",
+   "note": "Freezes what it cuts with the chill of the underworld.",
+   "minecraft": "Sword with freezing effect."
+  },
+  {
+   "name": "Gryphon",
+   "kind": "Saber",
+   "grade": "Unknown",
+   "owner": "Shanks",
+   "note": "Shanks's saber, used to block Kaido-level attacks.",
+   "minecraft": "Endgame sword with knockback on Haki clash."
+  },
+  {
+   "name": "Ace",
+   "kind": "Sword",
+   "grade": "Unknown",
+   "owner": "Gol D. Roger",
+   "note": "Roger's sword. Same name as his son Ace.",
+   "minecraft": "Legendary sword from the Pirate King."
+  },
+  {
+   "name": "Durandal",
+   "kind": "Sword",
+   "grade": "Unknown",
+   "owner": "Cavendish",
+   "note": "The White Horse Cavendish's sword.",
+   "minecraft": "Fast sword."
+  },
+  {
+   "name": "Hassaikai",
+   "kind": "Kanabo (spiked club)",
+   "grade": "Not a sword",
+   "owner": "Kaido",
+   "note": "Kaido's iron club.",
+   "minecraft": "Heavy club: slow, huge damage, knockback."
+  },
+  {
+   "name": "Mogura",
+   "kind": "Trident",
+   "grade": "Not a sword",
+   "owner": "Charlotte Katakuri",
+   "note": "Made of mochi-coated steel.",
+   "minecraft": "Trident that pulls targets."
+  },
+  {
+   "name": "Napoleon",
+   "kind": "Sword homie (bicorne hat)",
+   "grade": "Not graded",
+   "owner": "Charlotte Linlin (Big Mom)",
+   "note": "A living hat that turns into a sword.",
+   "minecraft": "Living weapon item with its own mob form."
+  },
+  {
+   "name": "Nanashaku Jitte",
+   "kind": "Jitte with seastone tip",
+   "grade": "Not a sword",
+   "owner": "Smoker",
+   "note": "Seastone tip shuts down Devil Fruit powers.",
+   "minecraft": "Weapon that disables a target's fruit power on hit."
+  },
+  {
+   "name": "Sorcery Clima-Tact",
+   "kind": "Staff",
+   "grade": "Not a sword",
+   "owner": "Nami",
+   "note": "Made by Usopp. Makes weather. Later fused with Zeus.",
+   "minecraft": "Staff that makes lightning, rain or mirages."
+  },
+  {
+   "name": "Kabuto / Kuro Kabuto",
+   "kind": "Slingshot",
+   "grade": "Not a sword",
+   "owner": "Usopp",
+   "note": "Fires Pop Greens, plant seeds that grow into traps.",
+   "minecraft": "Slingshot that fires seed ammo that grows into plants."
+  },
+  {
+   "name": "Punk Gibson",
+   "kind": "Magnetic arm",
+   "grade": "Not a sword",
+   "owner": "Eustass Kid",
+   "note": "A giant arm made of pulled-in metal.",
+   "minecraft": "Ability, not an item: needs nearby iron."
+  },
+  {
+   "name": "Punisher",
+   "kind": "Scythe blades",
+   "grade": "Not a sword",
+   "owner": "Killer",
+   "note": "Spinning blades on his wrists.",
+   "minecraft": "Wrist blades with spin attack."
+  },
+  {
+   "name": "Funkfreed",
+   "kind": "Sword that ate a fruit",
+   "grade": "Not graded",
+   "owner": "Spandam",
+   "note": "Ate the Zou Zou no Mi and turns into an elephant.",
+   "minecraft": "Sword that summons an elephant mount."
+  },
+  {
+   "name": "Lassoo",
+   "kind": "Gun that ate a fruit",
+   "grade": "Not graded",
+   "owner": "Mr. 4",
+   "note": "Ate a dog fruit. Fires explosive baseballs.",
+   "minecraft": "Pet dog that is also a ranged weapon."
+  },
+  {
+   "name": "Nonosama Bo",
+   "kind": "Golden staff",
+   "grade": "Not a sword",
+   "owner": "Enel",
+   "note": "Conducts lightning.",
+   "minecraft": "Staff that boosts lightning powers."
+  },
+  {
+   "name": "Kiribachi",
+   "kind": "Saw-sword",
+   "grade": "Not a sword",
+   "owner": "Arlong",
+   "note": "A giant saw-toothed blade.",
+   "minecraft": "Fish-man weapon drop."
+  },
+  {
+   "name": "Seastone (Kairoseki)",
+   "kind": "Material",
+   "grade": "Material",
+   "owner": "Marines",
+   "note": "A stone that gives off the same energy as the sea. It weakens fruit users who touch it.",
+   "minecraft": "Ore and crafting material: handcuffs, cages, weapons that cancel powers."
+  }
+ ],
+ "rules": [
+  {
+   "rule": "One fruit per person",
+   "lore": "Eating a second fruit kills you. Blackbeard is the only known exception.",
+   "minecraft": "Already in the mod."
+  },
+  {
+   "rule": "Water weakness",
+   "lore": "Fruit users can't swim and lose strength in sea water.",
+   "minecraft": "Already in the mod: Weakness and sinking in water."
+  },
+  {
+   "rule": "Seastone",
+   "lore": "Seastone has the same effect as the sea on fruit users.",
+   "minecraft": "Seastone ore, cuffs and weapon tips that turn off powers."
+  },
+  {
+   "rule": "Fruit respawns",
+   "lore": "When a user dies, their fruit grows back somewhere in the world, often in a nearby fruit.",
+   "minecraft": "When a player dies, drop their fruit on the ground or spawn it in a random chest."
+  },
+  {
+   "rule": "Logia intangibility",
+   "lore": "Logia users turn into their element so normal attacks pass through them.",
+   "minecraft": "Dodge non-Haki melee and arrows. Armament Haki and seastone ignore this."
+  },
+  {
+   "rule": "Awakening",
+   "lore": "Strong users can awaken their fruit, which lets Paramecia change their surroundings and makes Zoans stronger.",
+   "minecraft": "Unlock after a quest or a high level, as the late upgrade for each fruit."
+  },
+  {
+   "rule": "Types",
+   "lore": "Paramecia: body or ability powers. Zoan: animal forms (Ancient and Mythical are rarer). Logia: become an element.",
+   "minecraft": "Use rarity tiers: Paramecia common, Zoan uncommon, Logia and Mythical Zoan rare."
+  }
+ ],
+ "haki": [
+  {
+   "name": "Armament Haki (Busoshoku)",
+   "lore": "Armor made of will. Hits Logia users, hardens fists and weapons black. Advanced: hits from inside (Emission, Internal Destruction).",
+   "minecraft": "Black hardened arms, damage bonus, hits through Logia dodge, armor boost."
+  },
+  {
+   "name": "Observation Haki (Kenbunshoku)",
+   "lore": "Sense presences and predict attacks. Advanced: see the future.",
+   "minecraft": "Glowing outline on nearby mobs (like the Glowing effect), chance to dodge attacks."
+  },
+  {
+   "name": "Conqueror's Haki (Haoshoku)",
+   "lore": "Rare will of a king. Knocks out weaker people. Advanced: coat attacks with it.",
+   "minecraft": "Burst that knocks out weak mobs nearby. Only some players get it, maybe by rare roll."
+  }
+ ],
+ "notes": "Compiled from One Piece canon up to the Elbaph arc of the manga. Fruit names use the Japanese romanization with the English (Viz) name. 'Minecraft' fields are design ideas, not built features. The series has well over 150 named fruits; this list covers the notable ones."
+}

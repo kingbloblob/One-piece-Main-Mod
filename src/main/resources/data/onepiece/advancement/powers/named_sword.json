@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:wado_ichimonji"
+    },
+    "title": {
+      "translate": "advancements.onepiece.powers.named_sword.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.powers.named_sword.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "onepiece:wado_ichimonji",
+              "onepiece:sandai_kitetsu",
+              "onepiece:shusui",
+              "onepiece:enma",
+              "onepiece:yoru",
+              "onepiece:shodai_kitetsu",
+              "onepiece:ame_no_habakiri",
+              "onepiece:ace"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:powers/style"
+}

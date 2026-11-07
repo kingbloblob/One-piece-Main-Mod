@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "onepiece:block/pirate_bramble_bottom"
+    },
+    "half=upper": {
+      "model": "onepiece:block/pirate_bramble_top"
+    }
+  }
+}

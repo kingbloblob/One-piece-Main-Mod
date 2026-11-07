@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "onepiece:shell_sand",
+    "onepiece:oyster_gravel",
+    "onepiece:sugar_sand",
+    "onepiece:black_sand",
+    "onepiece:volcanic_ash",
+    "onepiece:grave_soil",
+    "onepiece:jungle_loam",
+    "onepiece:permafrost"
+  ]
+}

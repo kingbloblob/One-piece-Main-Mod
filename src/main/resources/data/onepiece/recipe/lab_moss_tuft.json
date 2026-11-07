@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:short_grass",
+    "minecraft:cyan_dye"
+  ],
+  "result": {
+    "id": "onepiece:lab_moss_tuft",
+    "count": 2
+  }
+}

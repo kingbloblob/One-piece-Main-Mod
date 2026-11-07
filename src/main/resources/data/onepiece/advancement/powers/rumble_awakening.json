@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:rumble_ball"
+    },
+    "title": {
+      "translate": "advancements.onepiece.powers.rumble_awakening.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.powers.rumble_awakening.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:powers/mastery"
+}

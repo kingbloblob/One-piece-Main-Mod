@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:fossil",
+  "fossil_processors": "onepiece:underground_fossil_rot",
+  "fossil_structures": [
+    "onepiece:underground/fossil/sea_king_skull",
+    "onepiece:underground/fossil/sea_king_ribs",
+    "onepiece:underground/fossil/sea_king_ribs_short",
+    "onepiece:underground/fossil/sea_king_tail"
+  ],
+  "max_empty_corners_allowed": 6,
+  "overlay_processors": "onepiece:underground_fossil_overlay",
+  "overlay_structures": [
+    "onepiece:underground/fossil/sea_king_skull_rock",
+    "onepiece:underground/fossil/sea_king_ribs_rock",
+    "onepiece:underground/fossil/sea_king_ribs_short_rock",
+    "onepiece:underground/fossil/sea_king_tail_rock"
+  ]
+}

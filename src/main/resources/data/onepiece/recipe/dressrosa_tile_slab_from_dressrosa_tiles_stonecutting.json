@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "onepiece:dressrosa_tiles",
+  "result": {
+    "id": "onepiece:dressrosa_tile_slab",
+    "count": 2
+  }
+}

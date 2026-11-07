@@ -1,0 +1,3375 @@
+[
+  {
+    "id": "ships_wheel",
+    "station": "shipwright_bench",
+    "result": "onepiece:ships_wheel",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:stick",
+        "count": 4
+      },
+      {
+        "tag": "minecraft:planks",
+        "icon": "minecraft:oak_planks",
+        "name": "Any Planks",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "rope_coil",
+    "station": "shipwright_bench",
+    "result": "onepiece:rope_coil",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:string",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "id": "jolly_roger",
+    "station": "shipwright_bench",
+    "result": "onepiece:jolly_roger",
+    "count": 2,
+    "ingredients": [
+      {
+        "item": "minecraft:black_wool",
+        "count": 4
+      },
+      {
+        "item": "minecraft:stick",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "porthole",
+    "station": "shipwright_bench",
+    "result": "onepiece:porthole",
+    "count": 4,
+    "ingredients": [
+      {
+        "tag": "minecraft:planks",
+        "icon": "minecraft:oak_planks",
+        "name": "Any Planks",
+        "count": 4
+      },
+      {
+        "item": "minecraft:copper_ingot",
+        "count": 4
+      },
+      {
+        "item": "minecraft:glass",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "anchor",
+    "station": "shipwright_bench",
+    "result": "onepiece:anchor",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 6
+      },
+      {
+        "item": "minecraft:iron_chain",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "cannon",
+    "station": "shipwright_bench",
+    "result": "onepiece:cannon",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 5
+      },
+      {
+        "tag": "minecraft:planks",
+        "icon": "minecraft:oak_planks",
+        "name": "Any Planks",
+        "count": 2
+      },
+      {
+        "item": "minecraft:gunpowder",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "boss": "buggy"
+    }
+  },
+  {
+    "id": "figurehead_merry",
+    "station": "shipwright_bench",
+    "result": "onepiece:figurehead_merry",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:yellow_terracotta",
+        "count": 2
+      },
+      {
+        "item": "minecraft:white_wool",
+        "count": 3
+      },
+      {
+        "tag": "minecraft:planks",
+        "icon": "minecraft:oak_planks",
+        "name": "Any Planks",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "figurehead_moby",
+    "station": "shipwright_bench",
+    "result": "onepiece:figurehead_moby",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:white_concrete",
+        "count": 4
+      },
+      {
+        "item": "minecraft:black_dye",
+        "count": 1
+      },
+      {
+        "tag": "minecraft:planks",
+        "icon": "minecraft:oak_planks",
+        "name": "Any Planks",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "bounty": 100000000
+    }
+  },
+  {
+    "id": "figurehead_sunny",
+    "station": "shipwright_bench",
+    "result": "onepiece:figurehead_sunny",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:orange_wool",
+        "count": 4
+      },
+      {
+        "item": "minecraft:yellow_wool",
+        "count": 4
+      },
+      {
+        "item": "onepiece:adam_planks",
+        "count": 4
+      }
+    ],
+    "requires": {
+      "boss": "lucci"
+    }
+  },
+  {
+    "id": "sea_king_bait",
+    "station": "ships_galley",
+    "result": "onepiece:sea_king_bait",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:cod",
+        "count": 1
+      },
+      {
+        "item": "minecraft:salmon",
+        "count": 1
+      },
+      {
+        "item": "minecraft:rotten_flesh",
+        "count": 1
+      },
+      {
+        "item": "minecraft:prismarine_shard",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "pirate_bento",
+    "station": "ships_galley",
+    "result": "onepiece:pirate_bento",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:bread",
+        "count": 1
+      },
+      {
+        "item": "minecraft:cooked_salmon",
+        "count": 1
+      },
+      {
+        "item": "minecraft:carrot",
+        "count": 1
+      },
+      {
+        "item": "minecraft:dried_kelp",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "sea_king_stew",
+    "station": "ships_galley",
+    "result": "onepiece:sea_king_stew",
+    "count": 2,
+    "ingredients": [
+      {
+        "item": "onepiece:cooked_sea_king_meat",
+        "count": 1
+      },
+      {
+        "item": "minecraft:potato",
+        "count": 2
+      },
+      {
+        "item": "minecraft:brown_mushroom",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bowl",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "rumble_ball",
+    "station": "ships_galley",
+    "result": "onepiece:rumble_ball",
+    "count": 2,
+    "ingredients": [
+      {
+        "item": "minecraft:sugar",
+        "count": 1
+      },
+      {
+        "item": "minecraft:glistering_melon_slice",
+        "count": 1
+      },
+      {
+        "item": "minecraft:glowstone_dust",
+        "count": 1
+      },
+      {
+        "item": "minecraft:nether_wart",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "log_pose",
+    "station": "navigators_desk",
+    "result": "onepiece:log_pose",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:compass",
+        "count": 1
+      },
+      {
+        "item": "minecraft:leather",
+        "count": 2
+      },
+      {
+        "item": "minecraft:glass",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "sea_chart",
+    "station": "navigators_desk",
+    "result": "onepiece:sea_chart",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:ink_sac",
+        "count": 1
+      },
+      {
+        "item": "minecraft:map",
+        "count": 1
+      },
+      {
+        "item": "minecraft:compass",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "crew": "navigator"
+    }
+  },
+  {
+    "id": "den_den_mushi",
+    "station": "navigators_desk",
+    "result": "onepiece:den_den_mushi",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:nautilus_shell",
+        "count": 1
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "count": 1
+      },
+      {
+        "item": "minecraft:copper_ingot",
+        "count": 1
+      },
+      {
+        "item": "minecraft:redstone",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "eternal_pose",
+    "station": "navigators_desk",
+    "result": "onepiece:eternal_pose",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:log_pose",
+        "count": 1
+      },
+      {
+        "tag": "minecraft:planks",
+        "icon": "minecraft:oak_planks",
+        "name": "Any Planks",
+        "count": 6
+      },
+      {
+        "item": "minecraft:glass_pane",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "islands": 3
+    }
+  },
+  {
+    "id": "seastone_cuffs",
+    "station": "seastone_workbench",
+    "result": "onepiece:seastone_cuffs",
+    "count": 2,
+    "ingredients": [
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 2
+      },
+      {
+        "item": "minecraft:iron_chain",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "seastone_jitte",
+    "station": "seastone_workbench",
+    "result": "onepiece:seastone_jitte",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 3
+      },
+      {
+        "item": "minecraft:stick",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "boss": "smoker"
+    }
+  },
+  {
+    "id": "sandai_kitetsu",
+    "station": "swordsmith_forge",
+    "result": "onepiece:sandai_kitetsu",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:diamond_sword",
+        "count": 1
+      },
+      {
+        "item": "minecraft:crying_obsidian",
+        "count": 1
+      },
+      {
+        "item": "minecraft:redstone",
+        "count": 2
+      },
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "bounty": 30000000
+    }
+  },
+  {
+    "id": "shodai_kitetsu",
+    "station": "swordsmith_forge",
+    "result": "onepiece:shodai_kitetsu",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sandai_kitetsu",
+        "count": 1
+      },
+      {
+        "item": "onepiece:kokuto_ingot",
+        "count": 8
+      },
+      {
+        "item": "minecraft:nether_star",
+        "count": 1
+      },
+      {
+        "item": "minecraft:crying_obsidian",
+        "count": 4
+      }
+    ],
+    "requires": {
+      "boss": "kaido",
+      "bounty": 1000000000
+    }
+  },
+  {
+    "id": "wado_ichimonji",
+    "station": "swordsmith_forge",
+    "result": "onepiece:wado_ichimonji",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:diamond_sword",
+        "count": 1
+      },
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 4
+      },
+      {
+        "item": "minecraft:white_wool",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "bounty": 100000000,
+      "armament": 1
+    }
+  },
+  {
+    "id": "bullet",
+    "station": "shipwright_bench",
+    "result": "onepiece:bullet",
+    "count": 8,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 1
+      },
+      {
+        "item": "minecraft:gunpowder",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "cannonball",
+    "station": "shipwright_bench",
+    "result": "onepiece:cannonball",
+    "count": 4,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 3
+      },
+      {
+        "item": "minecraft:gunpowder",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "boss": "buggy"
+    }
+  },
+  {
+    "id": "lead_star",
+    "station": "shipwright_bench",
+    "result": "onepiece:lead_star",
+    "count": 8,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_nugget",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "id": "exploding_star",
+    "station": "shipwright_bench",
+    "result": "onepiece:exploding_star",
+    "count": 4,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_nugget",
+        "count": 4
+      },
+      {
+        "item": "minecraft:gunpowder",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "tabasco_star",
+    "station": "ships_galley",
+    "result": "onepiece:tabasco_star",
+    "count": 4,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_nugget",
+        "count": 4
+      },
+      {
+        "item": "minecraft:blaze_powder",
+        "count": 1
+      },
+      {
+        "item": "minecraft:sweet_berries",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "pop_green",
+    "station": "ships_galley",
+    "result": "onepiece:pop_green",
+    "count": 4,
+    "ingredients": [
+      {
+        "item": "minecraft:wheat_seeds",
+        "count": 4
+      },
+      {
+        "item": "minecraft:bone_meal",
+        "count": 2
+      },
+      {
+        "item": "minecraft:sweet_berries",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "islands": 5
+    }
+  },
+  {
+    "id": "bone_in_meat",
+    "station": "ships_galley",
+    "result": "onepiece:bone_in_meat",
+    "count": 2,
+    "ingredients": [
+      {
+        "item": "minecraft:cooked_beef",
+        "count": 2
+      },
+      {
+        "item": "minecraft:bone",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "seafood_paella",
+    "station": "ships_galley",
+    "result": "onepiece:seafood_paella",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:cooked_cod",
+        "count": 1
+      },
+      {
+        "item": "minecraft:cooked_salmon",
+        "count": 1
+      },
+      {
+        "item": "minecraft:wheat",
+        "count": 2
+      },
+      {
+        "item": "minecraft:dried_kelp",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "mikan_sorbet",
+    "station": "ships_galley",
+    "result": "onepiece:mikan_sorbet",
+    "count": 2,
+    "ingredients": [
+      {
+        "item": "onepiece:mikan",
+        "count": 2
+      },
+      {
+        "item": "minecraft:snowball",
+        "count": 1
+      },
+      {
+        "item": "minecraft:sugar",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "fire_curry",
+    "station": "ships_galley",
+    "result": "onepiece:fire_curry",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:cooked_porkchop",
+        "count": 1
+      },
+      {
+        "item": "minecraft:potato",
+        "count": 1
+      },
+      {
+        "item": "minecraft:carrot",
+        "count": 1
+      },
+      {
+        "item": "minecraft:blaze_powder",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "herbal_tea",
+    "station": "ships_galley",
+    "result": "onepiece:herbal_tea",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:honey_bottle",
+        "count": 1
+      },
+      {
+        "item": "minecraft:sweet_berries",
+        "count": 2
+      },
+      {
+        "item": "minecraft:dandelion",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "all_blue_feast",
+    "station": "ships_galley",
+    "result": "onepiece:all_blue_feast",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:cooked_sea_king_meat",
+        "count": 1
+      },
+      {
+        "item": "minecraft:cooked_beef",
+        "count": 1
+      },
+      {
+        "item": "minecraft:cooked_salmon",
+        "count": 1
+      },
+      {
+        "item": "minecraft:golden_carrot",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bread",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "crew": "cook"
+    }
+  },
+  {
+    "id": "buggy_knife",
+    "station": "shipwright_bench",
+    "result": "onepiece:buggy_knife",
+    "count": 4,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 2
+      },
+      {
+        "item": "minecraft:stick",
+        "count": 2
+      },
+      {
+        "item": "minecraft:red_dye",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "flintlock_pistol",
+    "station": "shipwright_bench",
+    "result": "onepiece:flintlock_pistol",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 3
+      },
+      {
+        "tag": "minecraft:planks",
+        "icon": "minecraft:oak_planks",
+        "name": "Any Planks",
+        "count": 2
+      },
+      {
+        "item": "minecraft:flint",
+        "count": 1
+      },
+      {
+        "item": "minecraft:gunpowder",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "kabuto",
+    "station": "shipwright_bench",
+    "result": "onepiece:kabuto",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:bamboo",
+        "count": 4
+      },
+      {
+        "item": "minecraft:string",
+        "count": 3
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "islands": 3
+    }
+  },
+  {
+    "id": "marine_rifle",
+    "station": "shipwright_bench",
+    "result": "onepiece:marine_rifle",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 5
+      },
+      {
+        "tag": "minecraft:planks",
+        "icon": "minecraft:oak_planks",
+        "name": "Any Planks",
+        "count": 3
+      },
+      {
+        "item": "minecraft:flint",
+        "count": 1
+      },
+      {
+        "item": "minecraft:gunpowder",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "boss": "smoker"
+    }
+  },
+  {
+    "id": "hand_cannon",
+    "station": "shipwright_bench",
+    "result": "onepiece:hand_cannon",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_block",
+        "count": 2
+      },
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 3
+      },
+      {
+        "item": "minecraft:gunpowder",
+        "count": 4
+      }
+    ],
+    "requires": {
+      "boss": "buggy"
+    }
+  },
+  {
+    "id": "sorcery_clima_tact",
+    "station": "navigators_desk",
+    "result": "onepiece:sorcery_clima_tact",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 3
+      },
+      {
+        "item": "minecraft:lightning_rod",
+        "count": 1
+      },
+      {
+        "item": "minecraft:blue_dye",
+        "count": 2
+      },
+      {
+        "item": "minecraft:heart_of_the_sea",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "islands": 5
+    }
+  },
+  {
+    "id": "seastone_bullet",
+    "station": "seastone_workbench",
+    "result": "onepiece:seastone_bullet",
+    "count": 8,
+    "ingredients": [
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 1
+      },
+      {
+        "item": "onepiece:bullet",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "id": "tommy_gun",
+    "station": "shipwright_bench",
+    "result": "onepiece:tommy_gun",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_block",
+        "count": 2
+      },
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 4
+      },
+      {
+        "tag": "minecraft:planks",
+        "icon": "minecraft:oak_planks",
+        "name": "Any Planks",
+        "count": 2
+      },
+      {
+        "item": "minecraft:redstone",
+        "count": 4
+      },
+      {
+        "item": "minecraft:gunpowder",
+        "count": 4
+      }
+    ],
+    "requires": {
+      "bounty": 150000000
+    }
+  },
+  {
+    "id": "kuro_kabuto",
+    "station": "seastone_workbench",
+    "result": "onepiece:kuro_kabuto",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:kabuto",
+        "count": 1
+      },
+      {
+        "item": "minecraft:obsidian",
+        "count": 2
+      },
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 2
+      },
+      {
+        "item": "minecraft:black_dye",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "boss": "doflamingo"
+    }
+  },
+  {
+    "id": "neko_no_te",
+    "station": "swordsmith_forge",
+    "result": "onepiece:neko_no_te",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 5
+      },
+      {
+        "item": "minecraft:leather",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "bounty": 16000000
+    }
+  },
+  {
+    "id": "kiribachi",
+    "station": "swordsmith_forge",
+    "result": "onepiece:kiribachi",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 6
+      },
+      {
+        "item": "minecraft:prismarine_shard",
+        "count": 4
+      },
+      {
+        "item": "minecraft:stick",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "bounty": 20000000
+    }
+  },
+  {
+    "id": "shigure",
+    "station": "swordsmith_forge",
+    "result": "onepiece:shigure",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:diamond",
+        "count": 2
+      },
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 2
+      },
+      {
+        "item": "minecraft:stick",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "boss": "smoker"
+    }
+  },
+  {
+    "id": "soul_solid",
+    "station": "swordsmith_forge",
+    "result": "onepiece:soul_solid",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:diamond",
+        "count": 2
+      },
+      {
+        "item": "minecraft:packed_ice",
+        "count": 4
+      },
+      {
+        "item": "minecraft:bone",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "boss": "moria"
+    }
+  },
+  {
+    "id": "kikoku",
+    "station": "swordsmith_forge",
+    "result": "onepiece:kikoku",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:netherite_ingot",
+        "count": 1
+      },
+      {
+        "item": "minecraft:diamond",
+        "count": 3
+      },
+      {
+        "item": "minecraft:white_wool",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "boss": "doflamingo"
+    }
+  },
+  {
+    "id": "gryphon",
+    "station": "swordsmith_forge",
+    "result": "onepiece:gryphon",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:netherite_ingot",
+        "count": 2
+      },
+      {
+        "item": "minecraft:diamond",
+        "count": 4
+      },
+      {
+        "item": "minecraft:gold_ingot",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "bounty": 1000000000,
+      "armament": 4
+    }
+  },
+  {
+    "id": "skillful_whetstone",
+    "station": "swordsmith_forge",
+    "result": "onepiece:skillful_whetstone",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 2
+      },
+      {
+        "item": "minecraft:flint",
+        "count": 2
+      },
+      {
+        "item": "minecraft:smooth_stone",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "bounty": 10000000
+    }
+  },
+  {
+    "id": "great_whetstone",
+    "station": "swordsmith_forge",
+    "result": "onepiece:great_whetstone",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:skillful_whetstone",
+        "count": 1
+      },
+      {
+        "item": "minecraft:diamond",
+        "count": 2
+      },
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "bounty": 100000000,
+      "armament": 2
+    }
+  },
+  {
+    "id": "supreme_whetstone",
+    "station": "swordsmith_forge",
+    "result": "onepiece:supreme_whetstone",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:great_whetstone",
+        "count": 1
+      },
+      {
+        "item": "minecraft:netherite_ingot",
+        "count": 1
+      },
+      {
+        "item": "minecraft:nether_star",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "boss": "mihawk",
+      "bounty": 500000000
+    }
+  },
+  {
+    "id": "scope",
+    "station": "swordsmith_forge",
+    "result": "onepiece:scope",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:spyglass",
+        "count": 1
+      },
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "long_barrel",
+    "station": "swordsmith_forge",
+    "result": "onepiece:long_barrel",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 4
+      },
+      {
+        "item": "minecraft:gunpowder",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "boss": "smoker"
+    }
+  },
+  {
+    "id": "hair_trigger",
+    "station": "swordsmith_forge",
+    "result": "onepiece:hair_trigger",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 2
+      },
+      {
+        "item": "minecraft:redstone",
+        "count": 2
+      },
+      {
+        "item": "minecraft:tripwire_hook",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "bounty": 50000000
+    }
+  },
+  {
+    "id": "flame_dial",
+    "station": "navigators_desk",
+    "result": "onepiece:flame_dial",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:dial_shell",
+        "count": 1
+      },
+      {
+        "item": "minecraft:blaze_powder",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "boss": "enel"
+    }
+  },
+  {
+    "id": "impact_dial",
+    "station": "navigators_desk",
+    "result": "onepiece:impact_dial",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:dial_shell",
+        "count": 1
+      },
+      {
+        "item": "minecraft:wind_charge",
+        "count": 4
+      }
+    ],
+    "requires": {
+      "boss": "enel"
+    }
+  },
+  {
+    "id": "tamahagane_katana",
+    "station": "swordsmith_forge",
+    "result": "onepiece:tamahagane_katana",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:tamahagane_ingot",
+        "count": 3
+      },
+      {
+        "item": "minecraft:stick",
+        "count": 1
+      },
+      {
+        "item": "minecraft:leather",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "kokuto_blade",
+    "station": "swordsmith_forge",
+    "result": "onepiece:kokuto_blade",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:tamahagane_katana",
+        "count": 1
+      },
+      {
+        "item": "onepiece:kokuto_ingot",
+        "count": 3
+      },
+      {
+        "item": "minecraft:blaze_powder",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "boss": "mihawk"
+    }
+  },
+  {
+    "id": "wapometal_helmet",
+    "station": "shipwright_bench",
+    "result": "onepiece:wapometal_helmet",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:wapometal_ingot",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "id": "wapometal_chestplate",
+    "station": "shipwright_bench",
+    "result": "onepiece:wapometal_chestplate",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:wapometal_ingot",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "id": "wapometal_leggings",
+    "station": "shipwright_bench",
+    "result": "onepiece:wapometal_leggings",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:wapometal_ingot",
+        "count": 7
+      }
+    ]
+  },
+  {
+    "id": "wapometal_boots",
+    "station": "shipwright_bench",
+    "result": "onepiece:wapometal_boots",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:wapometal_ingot",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "id": "sea_king_scale_helmet",
+    "station": "seastone_workbench",
+    "result": "onepiece:sea_king_scale_helmet",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sea_king_scale",
+        "count": 5
+      },
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "sea_king_scale_chestplate",
+    "station": "seastone_workbench",
+    "result": "onepiece:sea_king_scale_chestplate",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sea_king_scale",
+        "count": 8
+      },
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "sea_king_scale_leggings",
+    "station": "seastone_workbench",
+    "result": "onepiece:sea_king_scale_leggings",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sea_king_scale",
+        "count": 7
+      },
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "sea_king_scale_boots",
+    "station": "seastone_workbench",
+    "result": "onepiece:sea_king_scale_boots",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sea_king_scale",
+        "count": 4
+      },
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "dragon_scale_helmet",
+    "station": "swordsmith_forge",
+    "result": "onepiece:dragon_scale_helmet",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:dragon_scale",
+        "count": 5
+      },
+      {
+        "item": "onepiece:kokuto_ingot",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "boss": "kaido"
+    }
+  },
+  {
+    "id": "dragon_scale_chestplate",
+    "station": "swordsmith_forge",
+    "result": "onepiece:dragon_scale_chestplate",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:dragon_scale",
+        "count": 8
+      },
+      {
+        "item": "onepiece:kokuto_ingot",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "boss": "kaido"
+    }
+  },
+  {
+    "id": "dragon_scale_leggings",
+    "station": "swordsmith_forge",
+    "result": "onepiece:dragon_scale_leggings",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:dragon_scale",
+        "count": 7
+      },
+      {
+        "item": "onepiece:kokuto_ingot",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "boss": "kaido"
+    }
+  },
+  {
+    "id": "dragon_scale_boots",
+    "station": "swordsmith_forge",
+    "result": "onepiece:dragon_scale_boots",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:dragon_scale",
+        "count": 4
+      },
+      {
+        "item": "onepiece:kokuto_ingot",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "boss": "kaido"
+    }
+  },
+  {
+    "id": "diving_helmet",
+    "station": "shipwright_bench",
+    "result": "onepiece:diving_helmet",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sea_pearl",
+        "count": 3
+      },
+      {
+        "item": "minecraft:copper_ingot",
+        "count": 5
+      },
+      {
+        "item": "minecraft:glass",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "flash_dial",
+    "station": "navigators_desk",
+    "result": "onepiece:flash_dial",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:dial_shell",
+        "count": 1
+      },
+      {
+        "item": "minecraft:glowstone_dust",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "id": "breath_dial",
+    "station": "navigators_desk",
+    "result": "onepiece:breath_dial",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:dial_shell",
+        "count": 1
+      },
+      {
+        "item": "minecraft:feather",
+        "count": 4
+      },
+      {
+        "item": "minecraft:phantom_membrane",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "bubble_coating",
+    "station": "navigators_desk",
+    "result": "onepiece:bubble_coating",
+    "count": 2,
+    "ingredients": [
+      {
+        "item": "onepiece:yarukiman_resin",
+        "count": 1
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "bullet_from_sulfur",
+    "station": "shipwright_bench",
+    "result": "onepiece:bullet",
+    "count": 12,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 1
+      },
+      {
+        "item": "onepiece:sulfur",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "cannonball_from_sulfur",
+    "station": "shipwright_bench",
+    "result": "onepiece:cannonball",
+    "count": 4,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 2
+      },
+      {
+        "item": "onepiece:sulfur",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "boss": "buggy"
+    }
+  },
+  {
+    "id": "chain_shot",
+    "station": "shipwright_bench",
+    "result": "onepiece:chain_shot",
+    "count": 4,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 2
+      },
+      {
+        "item": "minecraft:iron_chain",
+        "count": 2
+      },
+      {
+        "item": "minecraft:gunpowder",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "boss": "smoker"
+    }
+  },
+  {
+    "id": "fire_shot",
+    "station": "shipwright_bench",
+    "result": "onepiece:fire_shot",
+    "count": 4,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 2
+      },
+      {
+        "item": "minecraft:gunpowder",
+        "count": 2
+      },
+      {
+        "item": "minecraft:fire_charge",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "islands": 5
+    }
+  },
+  {
+    "id": "grapeshot",
+    "station": "shipwright_bench",
+    "result": "onepiece:grapeshot",
+    "count": 4,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_nugget",
+        "count": 9
+      },
+      {
+        "item": "minecraft:gunpowder",
+        "count": 2
+      },
+      {
+        "item": "minecraft:string",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "boss": "buggy"
+    }
+  },
+  {
+    "id": "hull_plating",
+    "station": "shipwright_bench",
+    "result": "onepiece:hull_plating",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_block",
+        "count": 2
+      },
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 4
+      },
+      {
+        "tag": "minecraft:planks",
+        "icon": "minecraft:oak_planks",
+        "name": "Any Planks",
+        "count": 8
+      }
+    ],
+    "requires": {
+      "crew": "shipwright"
+    }
+  },
+  {
+    "id": "reinforced_sailcloth",
+    "station": "shipwright_bench",
+    "result": "onepiece:reinforced_sailcloth",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:white_wool",
+        "count": 6
+      },
+      {
+        "item": "minecraft:string",
+        "count": 8
+      },
+      {
+        "item": "minecraft:leather",
+        "count": 4
+      }
+    ],
+    "requires": {
+      "crew": "shipwright"
+    }
+  },
+  {
+    "id": "heavy_gun_carriage",
+    "station": "shipwright_bench",
+    "result": "onepiece:heavy_gun_carriage",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_block",
+        "count": 3
+      },
+      {
+        "item": "minecraft:gunpowder",
+        "count": 4
+      },
+      {
+        "tag": "minecraft:planks",
+        "icon": "minecraft:oak_planks",
+        "name": "Any Planks",
+        "count": 4
+      }
+    ],
+    "requires": {
+      "crew": "shipwright"
+    }
+  },
+  {
+    "id": "cola_engine",
+    "station": "shipwright_bench",
+    "result": "onepiece:cola_engine",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_block",
+        "count": 4
+      },
+      {
+        "item": "onepiece:cola_crate",
+        "count": 4
+      },
+      {
+        "item": "minecraft:redstone",
+        "count": 8
+      }
+    ],
+    "requires": {
+      "boss": "lucci"
+    }
+  },
+  {
+    "id": "sea_purge",
+    "station": "seastone_workbench",
+    "result": "onepiece:sea_purge",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 4
+      },
+      {
+        "item": "onepiece:sea_king_scale",
+        "count": 6
+      },
+      {
+        "item": "minecraft:ghast_tear",
+        "count": 2
+      },
+      {
+        "item": "minecraft:glass_bottle",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "bounty": 150000000
+    }
+  },
+  {
+    "id": "sea_bream_sashimi",
+    "station": "ships_galley",
+    "result": "onepiece:sea_bream_sashimi",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:blue_sea_bream",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "lobster_bisque",
+    "station": "ships_galley",
+    "result": "onepiece:lobster_bisque",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:east_blue_lobster",
+        "count": 1
+      },
+      {
+        "item": "minecraft:brown_mushroom",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bowl",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "seafood_fried_rice",
+    "station": "ships_galley",
+    "result": "onepiece:seafood_fried_rice",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:striped_mackerel",
+        "count": 1
+      },
+      {
+        "item": "onepiece:blue_sea_bream",
+        "count": 1
+      },
+      {
+        "item": "minecraft:egg",
+        "count": 1
+      },
+      {
+        "item": "minecraft:wheat",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "eel_kabayaki",
+    "station": "ships_galley",
+    "result": "onepiece:eel_kabayaki",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:calm_belt_eel",
+        "count": 1
+      },
+      {
+        "item": "minecraft:sugar",
+        "count": 1
+      },
+      {
+        "item": "minecraft:wheat",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "sea_king_barbecue",
+    "station": "ships_galley",
+    "result": "onepiece:sea_king_barbecue",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:cooked_sea_king_meat",
+        "count": 2
+      },
+      {
+        "item": "minecraft:carrot",
+        "count": 1
+      },
+      {
+        "item": "minecraft:stick",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "elephant_tuna_sushi",
+    "station": "ships_galley",
+    "result": "onepiece:elephant_tuna_sushi",
+    "count": 2,
+    "ingredients": [
+      {
+        "item": "onepiece:elephant_honmaguro",
+        "count": 1
+      },
+      {
+        "item": "minecraft:dried_kelp",
+        "count": 2
+      },
+      {
+        "item": "minecraft:wheat",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "puffer_hot_pot",
+    "station": "ships_galley",
+    "result": "onepiece:puffer_hot_pot",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:grand_line_puffer",
+        "count": 1
+      },
+      {
+        "item": "minecraft:carrot",
+        "count": 1
+      },
+      {
+        "item": "minecraft:potato",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bowl",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "crew": "cook"
+    }
+  },
+  {
+    "id": "rainbow_snapper_carpaccio",
+    "station": "ships_galley",
+    "result": "onepiece:rainbow_snapper_carpaccio",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:rainbow_snapper",
+        "count": 1
+      },
+      {
+        "item": "onepiece:mikan",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "swordfish_steak",
+    "station": "ships_galley",
+    "result": "onepiece:swordfish_steak",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:new_world_swordfish",
+        "count": 1
+      },
+      {
+        "item": "minecraft:baked_potato",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "angler_lantern_soup",
+    "station": "ships_galley",
+    "result": "onepiece:angler_lantern_soup",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:abyss_angler",
+        "count": 1
+      },
+      {
+        "item": "minecraft:glow_berries",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bowl",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "glowfin_stew",
+    "station": "ships_galley",
+    "result": "onepiece:glowfin_stew",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:glowfin",
+        "count": 1
+      },
+      {
+        "item": "minecraft:kelp",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bowl",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "sky_fish_skewers",
+    "station": "ships_galley",
+    "result": "onepiece:sky_fish_skewers",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sky_fish",
+        "count": 2
+      },
+      {
+        "item": "minecraft:stick",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "golden_koi_oden",
+    "station": "ships_galley",
+    "result": "onepiece:golden_koi_oden",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:golden_koi",
+        "count": 1
+      },
+      {
+        "item": "minecraft:egg",
+        "count": 1
+      },
+      {
+        "item": "minecraft:dried_kelp",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bowl",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "frostfin_hot_pot",
+    "station": "ships_galley",
+    "result": "onepiece:frostfin_hot_pot",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:frostfin_cod",
+        "count": 1
+      },
+      {
+        "item": "minecraft:potato",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bowl",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "sandora_catfish_kebab",
+    "station": "ships_galley",
+    "result": "onepiece:sandora_catfish_kebab",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sandora_catfish",
+        "count": 1
+      },
+      {
+        "item": "minecraft:beetroot",
+        "count": 1
+      },
+      {
+        "item": "minecraft:stick",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "ghost_fish_soup",
+    "station": "ships_galley",
+    "result": "onepiece:ghost_fish_soup",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:ghost_fish",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bone",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bowl",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "all_blue_full_course",
+    "station": "ships_galley",
+    "result": "onepiece:all_blue_full_course",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:all_blue_kingfish",
+        "count": 1
+      },
+      {
+        "item": "onepiece:rainbow_sunfish",
+        "count": 1
+      },
+      {
+        "item": "onepiece:cooked_sea_king_meat",
+        "count": 1
+      },
+      {
+        "item": "minecraft:golden_carrot",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bread",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "crew": "cook"
+    }
+  },
+  {
+    "id": "sea_king_meat_from_fry",
+    "station": "ships_galley",
+    "result": "onepiece:sea_king_meat",
+    "count": 2,
+    "ingredients": [
+      {
+        "item": "onepiece:sea_king_fry",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "all_blue_compass",
+    "station": "navigators_desk",
+    "result": "onepiece:all_blue_compass",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:compass",
+        "count": 1
+      },
+      {
+        "item": "onepiece:blue_sea_bream",
+        "count": 1
+      },
+      {
+        "item": "onepiece:calm_belt_eel",
+        "count": 1
+      },
+      {
+        "item": "onepiece:elephant_honmaguro",
+        "count": 1
+      },
+      {
+        "item": "onepiece:new_world_swordfish",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "crew": "cook"
+    }
+  },
+  {
+    "id": "cyborg_iron_frame_plating",
+    "station": "shipwright_bench",
+    "result": "onepiece:iron_frame_plating",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:pacifista_scrap",
+        "count": 6
+      },
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 6
+      }
+    ]
+  },
+  {
+    "id": "cyborg_strong_right_arm",
+    "station": "shipwright_bench",
+    "result": "onepiece:strong_right_arm",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:pacifista_scrap",
+        "count": 6
+      },
+      {
+        "item": "minecraft:iron_block",
+        "count": 1
+      },
+      {
+        "item": "minecraft:piston",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "cyborg_cola_engine_core",
+    "station": "shipwright_bench",
+    "result": "onepiece:cola_engine_core",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:pacifista_scrap",
+        "count": 4
+      },
+      {
+        "item": "onepiece:cola",
+        "count": 4
+      },
+      {
+        "item": "minecraft:copper_block",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "cyborg_radical_beam_emitter",
+    "station": "shipwright_bench",
+    "result": "onepiece:radical_beam_emitter",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:laser_core",
+        "count": 2
+      },
+      {
+        "item": "onepiece:pacifista_scrap",
+        "count": 4
+      },
+      {
+        "item": "minecraft:redstone",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "id": "cyborg_coup_de_vent_cannon",
+    "station": "shipwright_bench",
+    "result": "onepiece:coup_de_vent_cannon",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:laser_core",
+        "count": 1
+      },
+      {
+        "item": "onepiece:pacifista_scrap",
+        "count": 4
+      },
+      {
+        "item": "minecraft:wind_charge",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "id": "cyborg_lunarian_plating",
+    "station": "shipwright_bench",
+    "result": "onepiece:lunarian_plating",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:seraphim_feather",
+        "count": 3
+      },
+      {
+        "item": "onepiece:pacifista_scrap",
+        "count": 4
+      },
+      {
+        "item": "minecraft:blaze_powder",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "id": "ballast_tank",
+    "station": "shipwright_bench",
+    "result": "onepiece:ballast_tank",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 6
+      },
+      {
+        "item": "minecraft:copper_ingot",
+        "count": 4
+      },
+      {
+        "item": "minecraft:bucket",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "ship_coating",
+    "station": "shipwright_bench",
+    "result": "onepiece:ship_coating",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:yarukiman_resin",
+        "count": 6
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "count": 4
+      },
+      {
+        "item": "minecraft:phantom_membrane",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "polar_tang",
+    "station": "shipwright_bench",
+    "result": "onepiece:polar_tang",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:ballast_tank",
+        "count": 4
+      },
+      {
+        "item": "minecraft:yellow_concrete",
+        "count": 48
+      },
+      {
+        "item": "minecraft:iron_block",
+        "count": 6
+      },
+      {
+        "item": "minecraft:glass",
+        "count": 8
+      },
+      {
+        "item": "onepiece:ships_wheel",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "crew": "shipwright",
+      "islands": 8
+    }
+  },
+  {
+    "id": "omurice",
+    "station": "ships_galley",
+    "result": "onepiece:omurice",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:wano_rice",
+        "count": 2
+      },
+      {
+        "item": "minecraft:egg",
+        "count": 1
+      },
+      {
+        "item": "onepiece:dressrosa_tomato",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "cloud_bread",
+    "station": "ships_galley",
+    "result": "onepiece:cloud_bread",
+    "count": 2,
+    "ingredients": [
+      {
+        "item": "onepiece:cloud_wheat",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "sand_melon_sorbet",
+    "station": "ships_galley",
+    "result": "onepiece:sand_melon_sorbet",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sand_melon",
+        "count": 2
+      },
+      {
+        "item": "minecraft:snowball",
+        "count": 1
+      },
+      {
+        "item": "minecraft:sugar",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bowl",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "frost_turnip_stew",
+    "station": "ships_galley",
+    "result": "onepiece:frost_turnip_stew",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:frost_turnip",
+        "count": 2
+      },
+      {
+        "item": "minecraft:potato",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bowl",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "totland_chocolate",
+    "station": "ships_galley",
+    "result": "onepiece:totland_chocolate",
+    "count": 2,
+    "ingredients": [
+      {
+        "item": "onepiece:totland_cacao",
+        "count": 3
+      },
+      {
+        "item": "minecraft:sugar",
+        "count": 1
+      },
+      {
+        "item": "onepiece:fresh_milk",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "ghost_pumpkin_pie",
+    "station": "ships_galley",
+    "result": "onepiece:ghost_pumpkin_pie",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:ghost_pumpkin",
+        "count": 1
+      },
+      {
+        "item": "minecraft:sugar",
+        "count": 1
+      },
+      {
+        "item": "minecraft:egg",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "dressrosa_paella",
+    "station": "ships_galley",
+    "result": "onepiece:dressrosa_paella",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:wano_rice",
+        "count": 1
+      },
+      {
+        "item": "onepiece:dressrosa_tomato",
+        "count": 2
+      },
+      {
+        "tag": "onepiece:raw_fish",
+        "icon": "onepiece:striped_mackerel",
+        "name": "Any One Piece Fish",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "giants_ale",
+    "station": "ships_galley",
+    "result": "onepiece:giants_ale",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:elbaph_barley",
+        "count": 3
+      },
+      {
+        "item": "minecraft:glass_bottle",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "mink_tea_cup",
+    "station": "ships_galley",
+    "result": "onepiece:mink_tea_cup",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:mink_tea",
+        "count": 2
+      },
+      {
+        "item": "minecraft:glass_bottle",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "sea_grape_salad",
+    "station": "ships_galley",
+    "result": "onepiece:sea_grape_salad",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sea_grape",
+        "count": 2
+      },
+      {
+        "item": "minecraft:kelp",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bowl",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "kuja_curry",
+    "station": "ships_galley",
+    "result": "onepiece:kuja_curry",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:snake_pepper",
+        "count": 2
+      },
+      {
+        "item": "onepiece:wano_rice",
+        "count": 1
+      },
+      {
+        "item": "minecraft:beef",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bowl",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "jungle_yam_stew",
+    "station": "ships_galley",
+    "result": "onepiece:jungle_yam_stew",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:jungle_yam",
+        "count": 2
+      },
+      {
+        "item": "minecraft:carrot",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bowl",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "baratie_cabbage_rolls",
+    "station": "ships_galley",
+    "result": "onepiece:baratie_cabbage_rolls",
+    "count": 2,
+    "ingredients": [
+      {
+        "item": "onepiece:east_blue_cabbage",
+        "count": 2
+      },
+      {
+        "item": "minecraft:porkchop",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "truffle_risotto",
+    "station": "ships_galley",
+    "result": "onepiece:truffle_risotto",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:wano_rice",
+        "count": 1
+      },
+      {
+        "item": "onepiece:truffle",
+        "count": 1
+      },
+      {
+        "item": "onepiece:fresh_milk",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bowl",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "crew": "cook"
+    }
+  },
+  {
+    "id": "ranch_breakfast",
+    "station": "ships_galley",
+    "result": "onepiece:ranch_breakfast",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:south_bird_egg",
+        "count": 1
+      },
+      {
+        "item": "onepiece:duck_egg",
+        "count": 1
+      },
+      {
+        "item": "onepiece:cheese",
+        "count": 1
+      },
+      {
+        "item": "onepiece:truffle",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bread",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "crew": "cook"
+    }
+  },
+  {
+    "id": "cheese",
+    "station": "ships_galley",
+    "result": "onepiece:cheese",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:fresh_milk",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "mining_drill",
+    "station": "shipwright_bench",
+    "result": "onepiece:mining_drill",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 8
+      },
+      {
+        "item": "minecraft:piston",
+        "count": 1
+      },
+      {
+        "item": "minecraft:furnace",
+        "count": 1
+      },
+      {
+        "item": "minecraft:redstone",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "id": "ore_cart",
+    "station": "shipwright_bench",
+    "result": "onepiece:ore_cart",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 3
+      },
+      {
+        "item": "minecraft:chest",
+        "count": 1
+      },
+      {
+        "tag": "minecraft:planks",
+        "icon": "minecraft:oak_planks",
+        "name": "Any Planks",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "adam_drill_bit",
+    "station": "shipwright_bench",
+    "result": "onepiece:adam_drill_bit",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:adam_planks",
+        "count": 2
+      },
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 3
+      },
+      {
+        "item": "minecraft:flint",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "adam_pickaxe",
+    "station": "shipwright_bench",
+    "result": "onepiece:adam_pickaxe",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:adam_planks",
+        "count": 3
+      },
+      {
+        "item": "minecraft:stick",
+        "count": 2
+      },
+      {
+        "item": "minecraft:iron_nugget",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "adam_axe",
+    "station": "shipwright_bench",
+    "result": "onepiece:adam_axe",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:adam_planks",
+        "count": 3
+      },
+      {
+        "item": "minecraft:stick",
+        "count": 2
+      },
+      {
+        "item": "minecraft:iron_nugget",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "adam_shovel",
+    "station": "shipwright_bench",
+    "result": "onepiece:adam_shovel",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:adam_planks",
+        "count": 1
+      },
+      {
+        "item": "minecraft:stick",
+        "count": 2
+      },
+      {
+        "item": "minecraft:iron_nugget",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "seastone_pickaxe",
+    "station": "seastone_workbench",
+    "result": "onepiece:seastone_pickaxe",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 3
+      },
+      {
+        "item": "onepiece:adam_log",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "seastone_axe",
+    "station": "seastone_workbench",
+    "result": "onepiece:seastone_axe",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 3
+      },
+      {
+        "item": "onepiece:adam_log",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "seastone_shovel",
+    "station": "seastone_workbench",
+    "result": "onepiece:seastone_shovel",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 1
+      },
+      {
+        "item": "onepiece:adam_log",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "seastone_drill_bit",
+    "station": "seastone_workbench",
+    "result": "onepiece:seastone_drill_bit",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 4
+      },
+      {
+        "item": "onepiece:adam_drill_bit",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "sea_prism_ingot",
+    "station": "seastone_workbench",
+    "result": "onepiece:sea_prism_ingot",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sea_prism_shard",
+        "count": 4
+      },
+      {
+        "item": "onepiece:seastone_ingot",
+        "count": 2
+      },
+      {
+        "item": "onepiece:giant_iron_ingot",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "boss": "magellan"
+    }
+  },
+  {
+    "id": "sea_prism_pickaxe",
+    "station": "seastone_workbench",
+    "result": "onepiece:sea_prism_pickaxe",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sea_prism_ingot",
+        "count": 3
+      },
+      {
+        "item": "onepiece:adam_log",
+        "count": 1
+      },
+      {
+        "item": "onepiece:electro_crystal",
+        "count": 4
+      }
+    ],
+    "requires": {
+      "boss": "magellan"
+    }
+  },
+  {
+    "id": "sea_prism_axe",
+    "station": "seastone_workbench",
+    "result": "onepiece:sea_prism_axe",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sea_prism_ingot",
+        "count": 3
+      },
+      {
+        "item": "onepiece:adam_log",
+        "count": 1
+      },
+      {
+        "item": "onepiece:snake_jade",
+        "count": 4
+      }
+    ],
+    "requires": {
+      "boss": "magellan"
+    }
+  },
+  {
+    "id": "sea_prism_shovel",
+    "station": "seastone_workbench",
+    "result": "onepiece:sea_prism_shovel",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sea_prism_ingot",
+        "count": 1
+      },
+      {
+        "item": "onepiece:adam_log",
+        "count": 1
+      },
+      {
+        "item": "onepiece:sun_coral",
+        "count": 4
+      }
+    ],
+    "requires": {
+      "boss": "magellan"
+    }
+  },
+  {
+    "id": "sea_prism_drill_bit",
+    "station": "seastone_workbench",
+    "result": "onepiece:sea_prism_drill_bit",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sea_prism_ingot",
+        "count": 4
+      },
+      {
+        "item": "onepiece:seastone_drill_bit",
+        "count": 1
+      },
+      {
+        "item": "onepiece:egghead_alloy",
+        "count": 4
+      }
+    ],
+    "requires": {
+      "boss": "magellan"
+    }
+  },
+  {
+    "id": "sea_king_fang_blade",
+    "station": "swordsmith_forge",
+    "result": "onepiece:sea_king_fang_blade",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:sea_king_fang",
+        "count": 3
+      },
+      {
+        "item": "onepiece:tamahagane_ingot",
+        "count": 2
+      },
+      {
+        "item": "minecraft:stick",
+        "count": 1
+      },
+      {
+        "item": "minecraft:leather",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "upgrade": "tempering_anvil"
+    }
+  },
+  {
+    "id": "hull_plating_adam",
+    "station": "shipwright_bench",
+    "result": "onepiece:hull_plating",
+    "count": 3,
+    "ingredients": [
+      {
+        "item": "onepiece:adam_planks",
+        "count": 2
+      },
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 4
+      },
+      {
+        "item": "minecraft:iron_block",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "upgrade": "drydock_crane"
+    }
+  },
+  {
+    "id": "radical_beam_emitter_from_core",
+    "station": "shipwright_bench",
+    "result": "onepiece:radical_beam_emitter",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:pacifista_core",
+        "count": 1
+      },
+      {
+        "item": "onepiece:pacifista_scrap",
+        "count": 2
+      },
+      {
+        "item": "minecraft:redstone",
+        "count": 8
+      }
+    ],
+    "requires": {
+      "upgrade": "frankys_workshop"
+    }
+  },
+  {
+    "id": "tone_dial",
+    "station": "navigators_desk",
+    "result": "onepiece:tone_dial",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:dial_shell",
+        "count": 1
+      },
+      {
+        "item": "minecraft:note_block",
+        "count": 1
+      },
+      {
+        "item": "minecraft:amethyst_shard",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "upgrade": "dial_bench"
+    }
+  },
+  {
+    "id": "water_dial",
+    "station": "navigators_desk",
+    "result": "onepiece:water_dial",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:dial_shell",
+        "count": 1
+      },
+      {
+        "item": "minecraft:prismarine_shard",
+        "count": 2
+      },
+      {
+        "item": "minecraft:kelp",
+        "count": 4
+      }
+    ],
+    "requires": {
+      "upgrade": "dial_bench"
+    }
+  },
+  {
+    "id": "milky_dial",
+    "station": "navigators_desk",
+    "result": "onepiece:milky_dial",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:dial_shell",
+        "count": 1
+      },
+      {
+        "item": "minecraft:white_wool",
+        "count": 4
+      },
+      {
+        "item": "minecraft:snowball",
+        "count": 4
+      }
+    ],
+    "requires": {
+      "upgrade": "dial_bench"
+    }
+  },
+  {
+    "id": "jet_dial",
+    "station": "navigators_desk",
+    "result": "onepiece:jet_dial",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:dial_shell",
+        "count": 2
+      },
+      {
+        "item": "onepiece:breath_dial",
+        "count": 1
+      },
+      {
+        "item": "minecraft:feather",
+        "count": 8
+      },
+      {
+        "item": "minecraft:phantom_membrane",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "upgrade": "weatheria_lab"
+    }
+  },
+  {
+    "id": "axe_dial",
+    "station": "navigators_desk",
+    "result": "onepiece:axe_dial",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:dial_shell",
+        "count": 1
+      },
+      {
+        "item": "minecraft:iron_axe",
+        "count": 1
+      },
+      {
+        "item": "minecraft:feather",
+        "count": 4
+      },
+      {
+        "item": "minecraft:flint",
+        "count": 4
+      }
+    ],
+    "requires": {
+      "upgrade": "weatheria_lab"
+    }
+  },
+  {
+    "id": "eisen_dial",
+    "station": "navigators_desk",
+    "result": "onepiece:eisen_dial",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:dial_shell",
+        "count": 2
+      },
+      {
+        "item": "minecraft:white_wool",
+        "count": 8
+      },
+      {
+        "item": "minecraft:iron_ingot",
+        "count": 4
+      }
+    ],
+    "requires": {
+      "upgrade": "weatheria_lab"
+    }
+  },
+  {
+    "id": "reject_dial",
+    "station": "navigators_desk",
+    "result": "onepiece:reject_dial",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:dial_shell",
+        "count": 4
+      },
+      {
+        "item": "onepiece:impact_dial",
+        "count": 1
+      },
+      {
+        "item": "minecraft:obsidian",
+        "count": 4
+      },
+      {
+        "item": "minecraft:diamond",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "bounty": 100000000,
+      "upgrade": "weatheria_lab"
+    }
+  },
+  {
+    "id": "takoyaki",
+    "station": "ships_galley",
+    "result": "onepiece:takoyaki",
+    "count": 3,
+    "ingredients": [
+      {
+        "item": "minecraft:ink_sac",
+        "count": 1
+      },
+      {
+        "item": "minecraft:wheat",
+        "count": 2
+      },
+      {
+        "item": "minecraft:egg",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "upgrade": "brick_oven"
+    }
+  },
+  {
+    "id": "sea_king_ramen",
+    "station": "ships_galley",
+    "result": "onepiece:sea_king_ramen",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:cooked_sea_king_meat",
+        "count": 1
+      },
+      {
+        "item": "minecraft:wheat",
+        "count": 3
+      },
+      {
+        "item": "minecraft:egg",
+        "count": 1
+      },
+      {
+        "item": "minecraft:bowl",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "upgrade": "brick_oven"
+    }
+  },
+  {
+    "id": "kibi_dango",
+    "station": "ships_galley",
+    "result": "onepiece:kibi_dango",
+    "count": 3,
+    "ingredients": [
+      {
+        "item": "minecraft:wheat",
+        "count": 2
+      },
+      {
+        "item": "minecraft:sugar",
+        "count": 2
+      },
+      {
+        "item": "minecraft:sweet_berries",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "upgrade": "brick_oven"
+    }
+  },
+  {
+    "id": "wedding_cake_slice",
+    "station": "ships_galley",
+    "result": "onepiece:wedding_cake_slice",
+    "count": 4,
+    "ingredients": [
+      {
+        "item": "minecraft:cake",
+        "count": 1
+      },
+      {
+        "item": "minecraft:sugar",
+        "count": 4
+      },
+      {
+        "item": "minecraft:glow_berries",
+        "count": 2
+      },
+      {
+        "item": "minecraft:gold_ingot",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "upgrade": "sanjis_kitchen"
+    }
+  },
+  {
+    "id": "ambergris_roast",
+    "station": "ships_galley",
+    "result": "onepiece:ambergris_roast",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:ambergris",
+        "count": 1
+      },
+      {
+        "item": "onepiece:cooked_sea_king_meat",
+        "count": 2
+      },
+      {
+        "item": "minecraft:golden_carrot",
+        "count": 1
+      }
+    ],
+    "requires": {
+      "upgrade": "sanjis_kitchen"
+    }
+  },
+  {
+    "id": "diable_flambe",
+    "station": "ships_galley",
+    "result": "onepiece:diable_flambe",
+    "count": 1,
+    "ingredients": [
+      {
+        "item": "onepiece:cooked_sea_king_meat",
+        "count": 1
+      },
+      {
+        "item": "minecraft:blaze_powder",
+        "count": 1
+      },
+      {
+        "item": "minecraft:baked_potato",
+        "count": 2
+      }
+    ],
+    "requires": {
+      "upgrade": "sanjis_kitchen"
+    }
+  }
+]

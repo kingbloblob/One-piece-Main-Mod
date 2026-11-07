@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:wapometal_ingot"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.wapometal.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.wapometal.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:wapometal_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/root"
+}

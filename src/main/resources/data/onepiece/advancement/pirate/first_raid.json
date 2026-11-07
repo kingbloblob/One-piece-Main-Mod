@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:den_den_mushi"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.first_raid.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.first_raid.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:pirate/emperors"
+}

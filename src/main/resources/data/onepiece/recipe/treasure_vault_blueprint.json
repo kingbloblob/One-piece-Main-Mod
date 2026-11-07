@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:blue_dye",
+    "minecraft:gold_ingot"
+  ],
+  "result": {
+    "id": "onepiece:treasure_vault_blueprint"
+  }
+}

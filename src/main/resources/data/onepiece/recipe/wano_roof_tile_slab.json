@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:wano_roof_tiles"
+  },
+  "result": {
+    "count": 6,
+    "id": "onepiece:wano_roof_tile_slab"
+  }
+}

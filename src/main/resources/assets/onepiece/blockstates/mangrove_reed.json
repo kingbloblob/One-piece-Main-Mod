@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "onepiece:block/mangrove_reed_bottom"
+    },
+    "half=upper": {
+      "model": "onepiece:block/mangrove_reed_top"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:tall_grass",
+    "minecraft:pink_dye"
+  ],
+  "result": {
+    "id": "onepiece:candy_shrub",
+    "count": 2
+  }
+}

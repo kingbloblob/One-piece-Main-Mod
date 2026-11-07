@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:large_fern",
+    "minecraft:bone_meal"
+  ],
+  "result": {
+    "id": "onepiece:giant_fern",
+    "count": 2
+  }
+}

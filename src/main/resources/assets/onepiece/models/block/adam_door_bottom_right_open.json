@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right_open",
+  "textures": {
+    "bottom": "onepiece:block/adam_door_bottom",
+    "top": "onepiece:block/adam_door_top"
+  }
+}

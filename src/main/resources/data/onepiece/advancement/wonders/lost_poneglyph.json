@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:ohara_survey_notes"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.lost_poneglyph.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.lost_poneglyph.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/root"
+}

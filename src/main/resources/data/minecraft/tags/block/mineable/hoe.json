@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "onepiece:sakura_leaves",
+    "onepiece:yarukiman_leaves",
+    "onepiece:palm_leaves",
+    "onepiece:gloom_leaves",
+    "onepiece:cloud_bricks",
+    "onepiece:cloud_brick_stairs",
+    "onepiece:cloud_brick_slab",
+    "onepiece:frosting_block",
+    "onepiece:frosting_stairs",
+    "onepiece:frosting_slab",
+    "onepiece:tatami"
+  ]
+}

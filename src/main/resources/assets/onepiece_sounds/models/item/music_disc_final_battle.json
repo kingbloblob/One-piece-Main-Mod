@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "onepiece_sounds:item/music_disc_final_battle"
+  }
+}

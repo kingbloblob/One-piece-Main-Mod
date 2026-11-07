@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "com.onepiecemod.body.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"AvatarRendererMixin",
+		"HumanoidModelMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

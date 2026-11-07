@@ -1,0 +1,78 @@
+package com.onepiecemod.furniture;
+
+import java.util.List;
+
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+
+import com.onepiecemod.OnePieceMod;
+import com.onepiecemod.furniture.FurnitureBlock.Mount;
+
+/**
+ * Every furniture block. Each one lists: the block it copies (hardness and sound), its light, where it
+ * mounts, its seat height in pixels (0 = not a seat), whether you bump into it, and the boxes of its
+ * shape in pixels, facing north.
+ *
+ * This file is made by tools/furniture/gen_furniture.py from tools/furniture/props.py (together with
+ * the models, recipes and loot tables). To add a block, add it there and run the script again.
+ */
+public class FurnitureBlocks {
+%%BLOCKS%%
+
+	public static final List<Block> ALL = List.of(
+			%%ALL%%);
+
+	/** The furniture you can store things in (props.py "storage"): cupboards, counters, nightstands, cabinets, chests. */
+	public static final List<Block> STORAGE = List.of(
+			%%STORAGE%%);
+
+	public static void initialize() {
+		FlammableBlockRegistry flammable = FlammableBlockRegistry.getDefaultInstance();
+%%FLAMMABLE%%
+	}
+
+	private static double[] b(double x1, double y1, double z1, double x2, double y2, double z2) {
+		return new double[] {x1, y1, z1, x2, y2, z2};
+	}
+
+	private static Block furniture(String name, Block copy, int light, Mount mount, double seat, boolean solid, double[]... boxes) {
+		return make(name, 0, copy, light, mount, seat, solid, boxes);
+	}
+
+	/** Furniture that opens like a chest, with 9 or 27 slots. */
+	private static Block storage(String name, int slots, Block copy, int light, Mount mount, double seat, boolean solid, double[]... boxes) {
+		return make(name, slots, copy, light, mount, seat, solid, boxes);
+	}
+
+	private static Block make(String name, int slots, Block copy, int light, Mount mount, double seat, boolean solid, double[]... boxes) {
+		VoxelShape shape = Shapes.empty();
+		for (double[] b : boxes) {
+			shape = Shapes.or(shape, Block.box(b[0], b[1], b[2], b[3], b[4], b[5]));
+		}
+		VoxelShape finalShape = shape.optimize();
+		BlockBehaviour.Properties properties = BlockBehaviour.Properties.ofFullCopy(copy)
+				.noOcclusion()
+				.lightLevel(state -> light);
+		if (!solid) {
+			properties = properties.noCollision();
+		}
+		ResourceKey<Block> key = ResourceKey.create(Registries.BLOCK, OnePieceMod.id(name));
+		Block block = Registry.register(BuiltInRegistries.BLOCK, key,
+				slots > 0 ? new StorageFurnitureBlock(properties.setId(key), finalShape, mount, seat, solid, slots)
+						: new FurnitureBlock(properties.setId(key), finalShape, mount, seat, solid));
+		ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, OnePieceMod.id(name));
+		Registry.register(BuiltInRegistries.ITEM, itemKey, new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix().setId(itemKey)));
+		return block;
+	}
+}

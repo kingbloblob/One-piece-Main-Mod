@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/green_rug"
+    },
+    "facing=east": {
+      "model": "onepiece:block/green_rug",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/green_rug",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/green_rug",
+      "y": 270
+    }
+  }
+}

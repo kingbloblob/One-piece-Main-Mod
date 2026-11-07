@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:scorched_stone"
+  },
+  "result": {
+    "count": 6,
+    "id": "onepiece:scorched_stone_wall"
+  }
+}

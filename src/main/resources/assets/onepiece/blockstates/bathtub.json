@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/bathtub"
+    },
+    "facing=east": {
+      "model": "onepiece:block/bathtub",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/bathtub",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/bathtub",
+      "y": 270
+    }
+  }
+}

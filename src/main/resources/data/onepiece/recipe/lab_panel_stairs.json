@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:lab_panel"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:lab_panel_stairs"
+  }
+}

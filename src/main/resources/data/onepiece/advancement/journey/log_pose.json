@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:log_pose"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.log_pose.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.log_pose.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/root"
+}

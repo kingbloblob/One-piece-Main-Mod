@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " W ",
+    "R R",
+    " W "
+  ],
+  "key": {
+    "W": "minecraft:white_wool",
+    "R": "minecraft:red_wool"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:life_ring"
+  }
+}

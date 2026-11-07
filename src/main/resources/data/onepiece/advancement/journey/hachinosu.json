@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:berry"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.hachinosu.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.hachinosu.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/elbaph"
+}

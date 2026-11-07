@@ -1,0 +1,8 @@
+{
+  "sound_event": "onepiece_sounds:music.drink_to_the_horizon",
+  "description": {
+    "translate": "jukebox_song.onepiece_sounds.drink_to_the_horizon"
+  },
+  "length_in_seconds": 77.3,
+  "comparator_output": 6
+}

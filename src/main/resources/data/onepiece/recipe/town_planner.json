@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:map",
+    "minecraft:ink_sac",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "onepiece:town_planner"
+  }
+}

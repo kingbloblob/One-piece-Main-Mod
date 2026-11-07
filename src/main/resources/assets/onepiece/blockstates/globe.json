@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/globe"
+    },
+    "facing=east": {
+      "model": "onepiece:block/globe",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/globe",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/globe",
+      "y": 270
+    }
+  }
+}

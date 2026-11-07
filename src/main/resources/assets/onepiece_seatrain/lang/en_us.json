@@ -1,0 +1,9 @@
+{
+  "block.onepiece.sea_train_booth": "Sea Train Ticket Booth",
+  "item.onepiece.sea_train_booth_blueprint": "Sea Train Station Blueprint",
+  "entity.onepiece.sea_train": "Puffing Tom",
+  "advancements.onepiece.journey.sea_train.title": "All Aboard the Puffing Tom",
+  "advancements.onepiece.journey.sea_train.description": "Ride the Sea Train",
+  "advancements.onepiece.journey.station_master.title": "Station Master",
+  "advancements.onepiece.journey.station_master.description": "Build your own Sea Train Station"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:blue_dye",
+    "minecraft:oak_boat"
+  ],
+  "result": {
+    "id": "onepiece:shipyard_crane_blueprint"
+  }
+}

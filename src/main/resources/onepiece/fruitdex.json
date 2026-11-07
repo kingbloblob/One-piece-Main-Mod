@@ -1,0 +1,542 @@
+{
+ "gomu_gomu_no_mi": {
+  "english": "Gum-Gum Fruit",
+  "user": "Monkey D. Luffy",
+  "lore": "Rubber body that stretches and shrugs off blunt hits and bullets. Awakened as Sun God Nika (Gear 5): cartoon-like freedom, turning the surroundings to rubber."
+ },
+ "ope_ope_no_mi": {
+  "english": "Op-Op Fruit",
+  "user": "Trafalgar D. Water Law",
+  "lore": "Creates a sphere called Room where he can cut, swap, and move anything, including organs. Can grant eternal youth at the cost of his life."
+ },
+ "bara_bara_no_mi": {
+  "english": "Chop-Chop Fruit",
+  "user": "Buggy",
+  "lore": "Split body into pieces that float and move on their own. Immune to cuts. Feet must stay on the ground."
+ },
+ "gura_gura_no_mi": {
+  "english": "Tremor-Tremor Fruit",
+  "user": "Edward Newgate (Whitebeard), later Blackbeard",
+  "lore": "Creates quake shockwaves by cracking the air. Called the strongest Paramecia, said to be able to destroy the world."
+ },
+ "soru_soru_no_mi": {
+  "english": "Soul-Soul Fruit",
+  "user": "Charlotte Linlin (Big Mom)",
+  "lore": "Takes lifespan from people and puts souls in objects, making living homies like Zeus and Prometheus."
+ },
+ "jiki_jiki_no_mi": {
+  "english": "Magnet-Magnet Fruit",
+  "user": "Eustass Kid",
+  "lore": "Magnetism that pulls in metal to build giant arms."
+ },
+ "wara_wara_no_mi": {
+  "english": "Straw-Straw Fruit",
+  "user": "Basil Hawkins",
+  "lore": "Makes straw dolls that take damage for him, passing it onto others."
+ },
+ "toshi_toshi_no_mi": {
+  "english": "Age-Age Fruit",
+  "user": "Jewelry Bonney",
+  "lore": "Changes the age of herself and others. Can take on the form of a future she imagines."
+ },
+ "ito_ito_no_mi": {
+  "english": "String-String Fruit",
+  "user": "Donquixote Doflamingo",
+  "lore": "Creates strings to cut, control puppets, walk on clouds and stitch wounds. Birdcage traps a whole island."
+ },
+ "mero_mero_no_mi": {
+  "english": "Love-Love Fruit",
+  "user": "Boa Hancock",
+  "lore": "Turns anyone attracted to her into stone, also with kicks and arrows of love."
+ },
+ "nikyu_nikyu_no_mi": {
+  "english": "Paw-Paw Fruit",
+  "user": "Bartholomew Kuma",
+  "lore": "Paw pads that repel anything, even pain, fatigue and air. Can send people flying for days to a distant place."
+ },
+ "kage_kage_no_mi": {
+  "english": "Shadow-Shadow Fruit",
+  "user": "Gecko Moria",
+  "lore": "Steals and controls shadows, putting them in corpses to make zombie soldiers."
+ },
+ "zushi_zushi_no_mi": {
+  "english": "Press-Press Fruit",
+  "user": "Issho (Fujitora)",
+  "lore": "Controls gravity, pulling meteors from space."
+ },
+ "mochi_mochi_no_mi": {
+  "english": "Mochi-Mochi Fruit",
+  "user": "Charlotte Katakuri",
+  "lore": "Create, control and become sticky mochi."
+ },
+ "fuku_fuku_no_mi": {
+  "english": "Clothes-Clothes Fruit",
+  "user": "Kin'emon",
+  "lore": "Creates clothes from anything and changes outfits instantly."
+ },
+ "nomi_nomi_no_mi": {
+  "english": "Brain-Brain Fruit",
+  "user": "Dr. Vegapunk",
+  "lore": "Brain stores endless knowledge, so it keeps growing."
+ },
+ "hana_hana_no_mi": {
+  "english": "Flower-Flower Fruit",
+  "user": "Nico Robin",
+  "lore": "Sprout copies of her body parts on any surface, up to giant size."
+ },
+ "yomi_yomi_no_mi": {
+  "english": "Revive-Revive Fruit",
+  "user": "Brook",
+  "lore": "Brought him back to life once. Later lets his soul leave his body and creates freezing cold from the underworld."
+ },
+ "horo_horo_no_mi": {
+  "english": "Hollow-Hollow Fruit",
+  "user": "Perona",
+  "lore": "Creates ghosts. Negative Hollows drain the will of anyone they pass through."
+ },
+ "bisu_bisu_no_mi": {
+  "english": "Biscuit-Biscuit Fruit",
+  "user": "Charlotte Cracker",
+  "lore": "Creates hard biscuit armor and soldiers. The biscuit can be eaten."
+ },
+ "pero_pero_no_mi": {
+  "english": "Lick-Lick Fruit",
+  "user": "Charlotte Perospero",
+  "lore": "Creates and controls candy, sealing people in candy."
+ },
+ "mira_mira_no_mi": {
+  "english": "Mirror-Mirror Fruit",
+  "user": "Charlotte Brulee",
+  "lore": "Makes mirrors, travel through the Mirror World and copy others' looks."
+ },
+ "netsu_netsu_no_mi": {
+  "english": "Heat-Heat Fruit",
+  "user": "Charlotte Oven",
+  "lore": "Heats his body and anything he touches."
+ },
+ "bari_bari_no_mi": {
+  "english": "Barrier-Barrier Fruit",
+  "user": "Bartolomeo",
+  "lore": "Creates unbreakable barrier walls."
+ },
+ "hobi_hobi_no_mi": {
+  "english": "Hobby-Hobby Fruit",
+  "user": "Sugar",
+  "lore": "Turns people into toys and erases everyone's memory of them."
+ },
+ "doru_doru_no_mi": {
+  "english": "Wax-Wax Fruit",
+  "user": "Galdino (Mr. 3)",
+  "lore": "Creates wax as hard as steel, shaping armor, weapons and statues."
+ },
+ "bomu_bomu_no_mi": {
+  "english": "Bomb-Bomb Fruit",
+  "user": "Gem (Mr. 5)",
+  "lore": "Turns any body part, even breath or snot, into explosives."
+ },
+ "kilo_kilo_no_mi": {
+  "english": "Kilo-Kilo Fruit",
+  "user": "Mikita (Miss Valentine)",
+  "lore": "Changes body weight from 1 kg to 10,000 kg."
+ },
+ "supa_supa_no_mi": {
+  "english": "Dice-Dice Fruit",
+  "user": "Daz Bonez (Mr. 1)",
+  "lore": "Turns the body into blades of steel."
+ },
+ "mane_mane_no_mi": {
+  "english": "Clone-Clone Fruit",
+  "user": "Bentham (Mr. 2 Bon Clay), later Kurozumi Higurashi",
+  "lore": "Copy anyone's face and body after touching their face."
+ },
+ "noro_noro_no_mi": {
+  "english": "Slow-Slow Fruit",
+  "user": "Foxy",
+  "lore": "Noroma photons slow anything they hit for 30 seconds."
+ },
+ "doa_doa_no_mi": {
+  "english": "Door-Door Fruit",
+  "user": "Blueno",
+  "lore": "Makes doors in anything, even air, to travel through walls."
+ },
+ "awa_awa_no_mi": {
+  "english": "Bubble-Bubble Fruit",
+  "user": "Kalifa",
+  "lore": "Soap bubbles that wash away a person's strength."
+ },
+ "fuwa_fuwa_no_mi": {
+  "english": "Float-Float Fruit",
+  "user": "Shiki",
+  "lore": "Makes anything he has touched float, including himself and whole islands."
+ },
+ "ishi_ishi_no_mi": {
+  "english": "Stone-Stone Fruit",
+  "user": "Pica",
+  "lore": "Merge with stone and control it, even whole cities."
+ },
+ "hira_hira_no_mi": {
+  "english": "Flutter-Flutter Fruit",
+  "user": "Diamante",
+  "lore": "Makes anything flutter like a flag, so steel goes soft."
+ },
+ "nagi_nagi_no_mi": {
+  "english": "Calm-Calm Fruit",
+  "user": "Donquixote Rosinante (Corazon)",
+  "lore": "Erases all sound around himself or a target."
+ },
+ "horu_horu_no_mi": {
+  "english": "Hormone-Hormone Fruit",
+  "user": "Emporio Ivankov",
+  "lore": "Controls hormones to heal, change gender, and boost others."
+ },
+ "doku_doku_no_mi": {
+  "english": "Venom-Venom Fruit",
+  "user": "Magellan",
+  "lore": "Creates and controls deadly poison, with a venom demon."
+ },
+ "bane_bane_no_mi": {
+  "english": "Spring-Spring Fruit",
+  "user": "Bellamy",
+  "lore": "Turns legs and arms into springs."
+ },
+ "kira_kira_no_mi": {
+  "english": "Glitter-Glitter Fruit",
+  "user": "Jozu",
+  "lore": "Turns the body into diamond."
+ },
+ "woshu_woshu_no_mi": {
+  "english": "Wash-Wash Fruit",
+  "user": "Tsuru",
+  "lore": "Washes and wrings out people, hanging them up to dry, washing away their evil."
+ },
+ "oto_oto_no_mi": {
+  "english": "Sound-Sound Fruit",
+  "user": "Scratchmen Apoo",
+  "lore": "Turns his body into instruments. Sound attacks that cut from range."
+ },
+ "shiro_shiro_no_mi": {
+  "english": "Castle-Castle Fruit",
+  "user": "Capone Bege",
+  "lore": "His body is a fortress with tiny soldiers and cannons inside."
+ },
+ "baku_baku_no_mi": {
+  "english": "Munch-Munch Fruit",
+  "user": "Wapol",
+  "lore": "Eat anything and turn into what he ate."
+ },
+ "choki_choki_no_mi": {
+  "english": "Snip-Snip Fruit",
+  "user": "Inazuma",
+  "lore": "Fingers become scissors that cut anything like paper."
+ },
+ "fude_fude_no_mi": {
+  "english": "Brush-Brush Fruit",
+  "user": "Kurozumi Kanjuro",
+  "lore": "Drawings come to life."
+ },
+ "kibi_kibi_no_mi": {
+  "english": "Millet-Millet Fruit",
+  "user": "Tama",
+  "lore": "Makes kibi dango that tame any animal or SMILE user who eats it."
+ },
+ "toki_toki_no_mi": {
+  "english": "Time-Time Fruit",
+  "user": "Kozuki Toki",
+  "lore": "Sends herself or others forward in time."
+ },
+ "memo_memo_no_mi": {
+  "english": "Memo-Memo Fruit",
+  "user": "Charlotte Pudding",
+  "lore": "Pulls out memories like film reels and edits them."
+ },
+ "riki_riki_no_mi": {
+  "english": "Power-Power Fruit",
+  "user": "Jesus Burgess",
+  "lore": "Gives superhuman strength."
+ },
+ "wapu_wapu_no_mi": {
+  "english": "Warp-Warp Fruit",
+  "user": "Van Augur",
+  "lore": "Teleports himself and others."
+ },
+ "shiku_shiku_no_mi": {
+  "english": "Sick-Sick Fruit",
+  "user": "Doc Q",
+  "lore": "Spreads disease, and can also heal it."
+ },
+ "beta_beta_no_mi": {
+  "english": "Stick-Stick Fruit",
+  "user": "Trebol",
+  "lore": "Sticky mucus that can trap and burn."
+ },
+ "pamu_pamu_no_mi": {
+  "english": "Pop-Pop Fruit",
+  "user": "Gladius",
+  "lore": "Makes himself and things he touches swell and burst."
+ },
+ "sui_sui_no_mi": {
+  "english": "Swim-Swim Fruit",
+  "user": "Senor Pink",
+  "lore": "Swim through the ground and walls like water."
+ },
+ "buki_buki_no_mi": {
+  "english": "Arms-Arms Fruit",
+  "user": "Baby 5",
+  "lore": "Turns her body into any weapon."
+ },
+ "guru_guru_no_mi": {
+  "english": "Spin-Spin Fruit",
+  "user": "Buffalo",
+  "lore": "Spins body parts like a helicopter propeller."
+ },
+ "modo_modo_no_mi": {
+  "english": "Return-Return Fruit",
+  "user": "Ain (film)",
+  "lore": "Takes years away from anyone she touches."
+ },
+ "sube_sube_no_mi": {
+  "english": "Slip-Slip Fruit",
+  "user": "Alvida",
+  "lore": "Makes the body perfectly smooth, so attacks slide right off."
+ },
+ "ori_ori_no_mi": {
+  "english": "Cage-Cage Fruit",
+  "user": "Hina",
+  "lore": "Turns the body into iron bars that lock whatever passes through them."
+ },
+ "chiyu_chiyu_no_mi": {
+  "english": "Heal-Heal Fruit",
+  "user": "Mansherry",
+  "lore": "Tears that heal any wound, even ones that seem fatal."
+ },
+ "nui_nui_no_mi": {
+  "english": "Stitch-Stitch Fruit",
+  "user": "Leo",
+  "lore": "Sews anything together, from people to the ground itself."
+ },
+ "ton_ton_no_mi": {
+  "english": "Ton-Ton Fruit",
+  "user": "Machvise",
+  "lore": "Changes body weight to crush enemies under tons of mass."
+ },
+ "ato_ato_no_mi": {
+  "english": "Art-Art Fruit",
+  "user": "Jean Ango",
+  "lore": "Turns people and things into abstract art."
+ },
+ "sabi_sabi_no_mi": {
+  "english": "Rust-Rust Fruit",
+  "user": "Shu",
+  "lore": "Rusts any metal it touches, even swords."
+ },
+ "mato_mato_no_mi": {
+  "english": "Target-Target Fruit",
+  "user": "Vander Decken IX",
+  "lore": "Marks a target, and anything thrown will chase it forever."
+ },
+ "mera_mera_no_mi": {
+  "english": "Flame-Flame Fruit",
+  "user": "Portgas D. Ace, later Sabo",
+  "lore": "Become, create and control fire. Fire Fist, Fire Pillar, Great Flame Commandment: Flame Emperor."
+ },
+ "hie_hie_no_mi": {
+  "english": "Ice-Ice Fruit",
+  "user": "Kuzan (Aokiji)",
+  "lore": "Become and create ice. Freezes people solid and turns the sea to ice to walk across it."
+ },
+ "yami_yami_no_mi": {
+  "english": "Dark-Dark Fruit",
+  "user": "Marshall D. Teach (Blackbeard)",
+  "lore": "Darkness that pulls in everything like a black hole. Touching a fruit user cancels their power. Takes more damage, not less."
+ },
+ "suna_suna_no_mi": {
+  "english": "Sand-Sand Fruit",
+  "user": "Sir Crocodile",
+  "lore": "Become sand and drain moisture from anything his right hand touches. Weakness: getting wet."
+ },
+ "magu_magu_no_mi": {
+  "english": "Magma-Magma Fruit",
+  "user": "Sakazuki (Akainu)",
+  "lore": "Become and create magma, hotter than Ace's fire. Great Eruption fists rain from the sky."
+ },
+ "pika_pika_no_mi": {
+  "english": "Glint-Glint Fruit",
+  "user": "Borsalino (Kizaru)",
+  "lore": "Become light. Travels at light speed, fires laser kicks, forms the light sword Ama no Murakumo."
+ },
+ "mori_mori_no_mi": {
+  "english": "Forest-Forest Fruit",
+  "user": "Aramaki (Ryokugyu)",
+  "lore": "Become a forest. Roots drain nutrients from people, and he never needs to eat."
+ },
+ "moku_moku_no_mi": {
+  "english": "Smoke-Smoke Fruit",
+  "user": "Smoker",
+  "lore": "Become and control smoke. Ties people up with smoke and flies on a smoke trail."
+ },
+ "goro_goro_no_mi": {
+  "english": "Rumble-Rumble Fruit",
+  "user": "Enel",
+  "lore": "Become and control lightning. Paired with strong Observation (Mantra) it covers a whole sky island."
+ },
+ "numa_numa_no_mi": {
+  "english": "Swamp-Swamp Fruit",
+  "user": "Caribou",
+  "lore": "Become a bottomless swamp that stores anything inside the body."
+ },
+ "gasu_gasu_no_mi": {
+  "english": "Gas-Gas Fruit",
+  "user": "Caesar Clown",
+  "lore": "Become and control gas. Can remove oxygen around targets and make poison gas."
+ },
+ "yuki_yuki_no_mi": {
+  "english": "Snow-Snow Fruit",
+  "user": "Monet",
+  "lore": "Become and control snow. Blizzards and snow storms."
+ },
+ "hito_hito_no_mi": {
+  "english": "Human-Human Fruit",
+  "user": "Tony Tony Chopper",
+  "lore": "A reindeer gained human intelligence and forms. Rumble Balls give him seven Points, and Monster Point."
+ },
+ "hito_hito_no_mi_daibutsu": {
+  "english": "Human-Human Fruit, Model: Great Buddha",
+  "user": "Sengoku",
+  "lore": "Turns into a giant golden Buddha and fires shockwaves from his palms."
+ },
+ "uo_uo_no_mi_seiryu": {
+  "english": "Fish-Fish Fruit, Model: Azure Dragon",
+  "user": "Kaido (an artificial copy: Kozuki Momonosuke)",
+  "lore": "Becomes a huge Eastern dragon. Breathes fire, makes clouds to fly, and wind blades."
+ },
+ "ryu_ryu_no_mi_allosaurus": {
+  "english": "Dragon-Dragon Fruit, Model: Allosaurus",
+  "user": "X Drake",
+  "lore": "A large predatory dinosaur."
+ },
+ "ryu_ryu_no_mi_pteranodon": {
+  "english": "Dragon-Dragon Fruit, Model: Pteranodon",
+  "user": "King",
+  "lore": "A flying pterosaur. Combined with his Lunarian flames."
+ },
+ "ryu_ryu_no_mi_nidhogg": {
+  "english": "Dragon-Dragon Fruit, Model: Nidhogg",
+  "user": "Loki (Prince of Elbaph)",
+  "lore": "A Mythical Zoan: the dragon that gnaws at the roots of the world tree. Loki's hybrid form appears in chapter 1198."
+ },
+ "neko_neko_no_mi_leopard": {
+  "english": "Cat-Cat Fruit, Model: Leopard",
+  "user": "Rob Lucci",
+  "lore": "A leopard man. Later awakened with stronger power."
+ },
+ "tori_tori_no_mi_phoenix": {
+  "english": "Bird-Bird Fruit, Model: Phoenix",
+  "user": "Marco",
+  "lore": "Turns into a phoenix. Blue flames heal him and others, and do not burn."
+ },
+ "inu_inu_no_mi_okuchi_no_makami": {
+  "english": "Dog-Dog Fruit, Model: Wolf God",
+  "user": "Yamato",
+  "lore": "A divine wolf that controls ice and cold."
+ },
+ "mogu_mogu_no_mi": {
+  "english": "Mole-Mole Fruit",
+  "user": "Drophy",
+  "lore": "A mole Zoan that digs through the ground with ease."
+ },
+ "uma_uma_no_mi": {
+  "english": "Horse-Horse Fruit",
+  "user": "Pierre",
+  "lore": "Eaten by a bird, making a winged horse."
+ },
+ "sara_sara_no_mi_axolotl": {
+  "english": "Salamander Fruit, Model: Axolotl",
+  "user": "Smiley",
+  "lore": "A gas slime that becomes a giant poison cloud."
+ },
+ "inu_inu_no_mi_wolf": {
+  "english": "Dog-Dog Fruit, Model: Wolf",
+  "user": "Jabra",
+  "lore": "A wolf Zoan of CP9 that mixes claws with Rokushiki."
+ },
+ "inu_inu_no_mi_jackal": {
+  "english": "Dog-Dog Fruit, Model: Jackal",
+  "user": "Chaka",
+  "lore": "A jackal Zoan used by an Alabasta guard captain."
+ },
+ "neko_neko_no_mi_saber_tiger": {
+  "english": "Cat-Cat Fruit, Model: Saber Tiger",
+  "user": "Who's-Who",
+  "lore": "An Ancient Zoan with huge fangs, used by a former CP9 agent."
+ },
+ "ryu_ryu_no_mi_pachycephalosaurus": {
+  "english": "Dragon-Dragon Fruit, Model: Pachycephalosaurus",
+  "user": "Ulti",
+  "lore": "An Ancient Zoan with a rock-hard headbutt."
+ },
+ "ryu_ryu_no_mi_triceratops": {
+  "english": "Dragon-Dragon Fruit, Model: Triceratops",
+  "user": "Sasaki",
+  "lore": "An Ancient Zoan that spins its frill like a blade."
+ },
+ "ryu_ryu_no_mi_spinosaurus": {
+  "english": "Dragon-Dragon Fruit, Model: Spinosaurus",
+  "user": "Page One",
+  "lore": "A spinosaurus that can also shrink."
+ },
+ "ryu_ryu_no_mi_brachiosaurus": {
+  "english": "Dragon-Dragon Fruit, Model: Brachiosaurus",
+  "user": "Queen",
+  "lore": "A long-necked dinosaur, mixed with cyborg weapons."
+ },
+ "zou_zou_no_mi_mammoth": {
+  "english": "Elephant-Elephant Fruit, Model: Mammoth",
+  "user": "Jack",
+  "lore": "A huge mammoth."
+ },
+ "zou_zou_no_mi": {
+  "english": "Elephant-Elephant Fruit",
+  "user": "Funkfreed (Spandam's sword)",
+  "lore": "A sword that ate a fruit. It can turn into an elephant."
+ },
+ "ushi_ushi_no_mi_giraffe": {
+  "english": "Ox-Ox Fruit, Model: Giraffe",
+  "user": "Kaku",
+  "lore": "A giraffe, with a neck used like a hammer and legs that cut."
+ },
+ "ushi_ushi_no_mi_bison": {
+  "english": "Ox-Ox Fruit, Model: Bison",
+  "user": "Dalton",
+  "lore": "A bison."
+ },
+ "tori_tori_no_mi_falcon": {
+  "english": "Bird-Bird Fruit, Model: Falcon",
+  "user": "Pell",
+  "lore": "A falcon. He can fly people around."
+ },
+ "hebi_hebi_no_mi_anaconda": {
+  "english": "Snake-Snake Fruit, Model: Anaconda",
+  "user": "Boa Sandersonia",
+  "lore": "A giant snake Zoan that crushes foes in its coils."
+ },
+ "hebi_hebi_no_mi_king_cobra": {
+  "english": "Snake-Snake Fruit, Model: King Cobra",
+  "user": "Boa Marigold",
+  "lore": "A cobra Zoan with venom that burns."
+ },
+ "hebi_hebi_no_mi_yamata_no_orochi": {
+  "english": "Snake-Snake Fruit, Model: Eight-headed Serpent",
+  "user": "Kurozumi Orochi",
+  "lore": "Turns into an eight-headed serpent. Survives while one head lives."
+ },
+ "inu_inu_no_mi_kyubi_no_kitsune": {
+  "english": "Dog-Dog Fruit, Model: Nine-Tailed Fox",
+  "user": "Catarina Devon",
+  "lore": "A nine-tailed fox that can perfectly copy other people."
+ },
+ "kumo_kumo_no_mi_rosamygale_grauvogeli": {
+  "english": "Spider-Spider Fruit",
+  "user": "Black Maria",
+  "lore": "A giant ancient spider that uses webs."
+ }
+}

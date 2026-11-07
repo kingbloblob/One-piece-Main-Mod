@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "onepiece:block/deck_lawn_top",
+    "side": "onepiece:block/deck_lawn_side",
+    "bottom": "minecraft:block/dirt"
+  }
+}

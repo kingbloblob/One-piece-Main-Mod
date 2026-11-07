@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "onepiece:cookie_bricks",
+  "result": {
+    "id": "onepiece:cookie_brick_stairs",
+    "count": 1
+  }
+}

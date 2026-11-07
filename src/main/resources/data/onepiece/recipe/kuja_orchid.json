@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:dandelion",
+    "minecraft:magenta_dye"
+  ],
+  "result": {
+    "id": "onepiece:kuja_orchid",
+    "count": 2
+  }
+}

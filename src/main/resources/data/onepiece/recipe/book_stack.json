@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:book",
+    "minecraft:book",
+    "minecraft:book"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:book_stack"
+  }
+}

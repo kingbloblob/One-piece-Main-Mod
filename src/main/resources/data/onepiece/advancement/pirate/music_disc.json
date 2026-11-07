@@ -1,0 +1,41 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece_sounds:music_disc_fair_winds"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.music_disc.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.music_disc.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "onepiece_sounds:music_disc_boss_battle",
+              "onepiece_sounds:music_disc_emperor_battle",
+              "onepiece_sounds:music_disc_fair_winds",
+              "onepiece_sounds:music_disc_justice_marches",
+              "onepiece_sounds:music_disc_toward_the_grand_line"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:pirate/root"
+}

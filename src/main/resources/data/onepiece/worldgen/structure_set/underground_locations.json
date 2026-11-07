@@ -1,0 +1,26 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:treasure_grotto",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:ancient_ruins",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:marine_bunker",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:smile_factory",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 22,
+    "separation": 9,
+    "salt": 2510251
+  }
+}

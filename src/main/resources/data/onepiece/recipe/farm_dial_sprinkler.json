@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "onepiece:dial_shell",
+    "S": "onepiece:sprinkler"
+  },
+  "pattern": [
+    " D ",
+    "DSD",
+    " D "
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:dial_sprinkler"
+  }
+}

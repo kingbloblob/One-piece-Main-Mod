@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:jungle",
+    "minecraft:swamp",
+    "onepiece:amazon_lily",
+    "onepiece:green_bit",
+    "onepiece:zou",
+    "onepiece:onigashima",
+    "onepiece:god_valley"
+  ]
+}

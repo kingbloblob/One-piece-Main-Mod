@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:pet_whistle"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.pet_whistle.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.pet_whistle.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:pet_whistle"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/tame"
+}

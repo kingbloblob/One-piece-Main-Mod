@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "onepiece:block/yarukiman_planks",
+    "side": "onepiece:block/yarukiman_planks",
+    "top": "onepiece:block/yarukiman_planks"
+  }
+}

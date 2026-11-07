@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "onepiece:wapometal"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "onepiece:wapometal"
+      }
+    ]
+  }
+}

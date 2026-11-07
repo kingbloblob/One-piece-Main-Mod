@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:short_grass",
+    "minecraft:gray_dye"
+  ],
+  "result": {
+    "id": "onepiece:gloom_grass",
+    "count": 2
+  }
+}

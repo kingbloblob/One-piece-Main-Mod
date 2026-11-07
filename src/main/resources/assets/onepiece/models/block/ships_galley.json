@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "onepiece:block/station/ships_galley_front",
+    "side": "onepiece:block/station/ships_galley_side",
+    "top": "onepiece:block/station/ships_galley_top",
+    "bottom": "onepiece:block/station/ships_galley_bottom",
+    "particle": "onepiece:block/station/ships_galley_side"
+  }
+}

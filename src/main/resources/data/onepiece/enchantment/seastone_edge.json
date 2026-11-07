@@ -1,0 +1,22 @@
+{
+  "anvil_cost": 4,
+  "description": {
+    "translate": "enchantment.onepiece.seastone_edge"
+  },
+  "effects": {},
+  "max_cost": {
+    "base": 25,
+    "per_level_above_first": 9
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 5,
+    "per_level_above_first": 9
+  },
+  "primary_items": "#onepiece:enchantable/one_piece_weapon",
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#onepiece:enchantable/one_piece_weapon",
+  "weight": 3
+}

@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:poneglyph"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.void_century_ruins.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.void_century_ruins.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:void_century_ruins"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/red_line_heights"
+}

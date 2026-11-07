@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:flash_dial"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.dial.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.dial.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "onepiece:flash_dial",
+              "onepiece:breath_dial"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/shandora_gold"
+}

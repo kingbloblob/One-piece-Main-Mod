@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:book",
+    "C": "minecraft:chest",
+    "P": "#minecraft:planks"
+  },
+  "pattern": [
+    " B ",
+    "PCP",
+    "P P"
+  ],
+  "result": {
+    "id": "onepiece:ship_log"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/spruce_counter"
+    },
+    "facing=east": {
+      "model": "onepiece:block/spruce_counter",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/spruce_counter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/spruce_counter",
+      "y": 270
+    }
+  }
+}

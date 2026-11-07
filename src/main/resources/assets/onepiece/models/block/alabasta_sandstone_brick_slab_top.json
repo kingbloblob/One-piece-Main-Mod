@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "onepiece:block/alabasta_sandstone_bricks",
+    "side": "onepiece:block/alabasta_sandstone_bricks",
+    "top": "onepiece:block/alabasta_sandstone_bricks"
+  }
+}

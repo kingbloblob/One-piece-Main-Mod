@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/hanging_rope"
+    },
+    "facing=east": {
+      "model": "onepiece:block/hanging_rope",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/hanging_rope",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/hanging_rope",
+      "y": 270
+    }
+  }
+}

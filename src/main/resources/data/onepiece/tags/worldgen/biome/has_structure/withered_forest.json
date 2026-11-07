@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "onepiece:wano",
+    "#minecraft:is_forest",
+    "#minecraft:is_jungle",
+    "onepiece:elbaph",
+    "onepiece:withered_forest"
+  ]
+}

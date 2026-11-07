@@ -1,0 +1,3556 @@
+[
+  {
+    "id": "luffy",
+    "name": "Monkey D. Luffy",
+    "role": "quest",
+    "tier": 5,
+    "health": 400,
+    "damage": 18,
+    "bounty": 64,
+    "scale": 0.97,
+    "power": "punch",
+    "greeting": "I'm gonna be King of the Pirates!",
+    "hardPower": "haki",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "fruitItem": "onepiece:gomu_gomu_no_mi",
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 20,
+        "start": "I'm STARVING! Bring me 16 steaks!",
+        "done": "Shishishi! Meat is the best!",
+        "item": "minecraft:cooked_beef",
+        "count": 16
+      },
+      {
+        "type": "talk",
+        "berries": 15,
+        "start": "I need a swordsman for my crew. Go tell Zoro he's joining!",
+        "done": "He said yes? Great! I knew he would.",
+        "target": "zoro"
+      },
+      {
+        "type": "defeat",
+        "berries": 60,
+        "start": "Crocodile is drying up Alabasta! Here's his wanted poster. Go kick his butt!",
+        "done": "You beat Crocodile? Let's have a feast!",
+        "target": "crocodile",
+        "rewardItem": "minecraft:golden_apple",
+        "rewardCount": 3
+      },
+      {
+        "type": "defeat",
+        "berries": 150,
+        "start": "Katakuri can see the future. That's so cool! But he's in our way. Here's his poster.",
+        "done": "You beat him! You're really strong!",
+        "target": "katakuri",
+        "rewardItem": "minecraft:golden_apple",
+        "rewardCount": 6
+      },
+      {
+        "type": "escort",
+        "berries": 70,
+        "target": "nami",
+        "place": "cocoyasi_village",
+        "start": "Nami wants to visit her mom's tangerine grove. Go with her and keep her safe!",
+        "done": "Nami's smiling again? Shishishi! You're a good friend.",
+        "rewardItem": "minecraft:golden_apple",
+        "rewardCount": 3
+      }
+    ],
+    "thanks": "Got any more meat?"
+  },
+  {
+    "id": "zoro",
+    "name": "Roronoa Zoro",
+    "role": "quest",
+    "tier": 5,
+    "health": 400,
+    "damage": 18,
+    "bounty": 64,
+    "scale": 1.01,
+    "power": "sword",
+    "greeting": "Don't get in my way.",
+    "hardPower": "haki",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "heldItem": "onepiece:enma",
+    "offhandItem": "onepiece:sandai_kitetsu",
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 20,
+        "start": "Three Sword Style needs three swords. Bring me three.",
+        "done": "Good steel. These will do.",
+        "item": "minecraft:iron_sword",
+        "count": 3
+      },
+      {
+        "type": "defeat",
+        "berries": 60,
+        "start": "Killer keeps getting in my way in Wano. Deal with him. Here's his poster.",
+        "done": "Hmph. Not bad.",
+        "target": "killer"
+      },
+      {
+        "type": "defeat",
+        "berries": 150,
+        "start": "King is Kaido's right hand. His flames are no joke. Poster's yours.",
+        "done": "You cut through fire. Respect.",
+        "target": "king",
+        "rewardItem": "minecraft:diamond_sword",
+        "rewardCount": 1
+      },
+      {
+        "type": "defeat",
+        "berries": 300,
+        "start": "Mihawk is the greatest swordsman alive. Beat him and prove it can be done.",
+        "done": "...Not bad. Take this blade, you earned it.",
+        "target": "mihawk",
+        "rewardItem": "minecraft:netherite_sword",
+        "rewardCount": 1
+      }
+    ],
+    "thanks": "Now, which way is the ship?"
+  },
+  {
+    "id": "nami",
+    "heldItem": "onepiece:sorcery_clima_tact",
+    "name": "Nami",
+    "role": "trader",
+    "tier": 3,
+    "health": 150,
+    "damage": 9,
+    "bounty": 25,
+    "scale": 0.94,
+    "power": "lightning",
+    "greeting": "Maps, compasses, the weather... everything has a price!",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:experience_bottle"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "levels": [
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 8,
+          "sell": "onepiece:sea_chart",
+          "sellCount": 1,
+          "maxUses": 16,
+          "xp": 2
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 6,
+          "sell": "minecraft:compass",
+          "sellCount": 1,
+          "maxUses": 16,
+          "xp": 2
+        },
+        {
+          "buy": "minecraft:gold_ingot",
+          "buyCount": 4,
+          "sell": "onepiece:berry",
+          "sellCount": 2,
+          "maxUses": 16,
+          "xp": 2
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 16,
+          "sell": "onepiece:log_pose",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 10,
+          "sell": "onepiece:sea_chart",
+          "sellCount": 1,
+          "chart": "alubarna_palace",
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 12,
+          "sell": "onepiece:sea_chart",
+          "sellCount": 1,
+          "chart": "treasure_grotto",
+          "maxUses": 8,
+          "xp": 5
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 6,
+          "sell": "minecraft:spyglass",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "minecraft:emerald",
+          "buyCount": 2,
+          "sell": "onepiece:berry",
+          "sellCount": 2,
+          "maxUses": 12,
+          "xp": 5
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 24,
+          "sell": "onepiece:eternal_pose",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 16,
+          "sell": "onepiece:sea_chart",
+          "sellCount": 1,
+          "chart": "ryugu_palace",
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "minecraft:diamond",
+          "buyCount": 2,
+          "sell": "onepiece:berry",
+          "sellCount": 4,
+          "maxUses": 12,
+          "xp": 10
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 24,
+          "sell": "onepiece:sea_chart",
+          "sellCount": 1,
+          "chart": "egghead_lab",
+          "maxUses": 8,
+          "xp": 15
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 10,
+          "sell": "minecraft:wind_charge",
+          "sellCount": 8,
+          "maxUses": 8,
+          "xp": 15
+        },
+        {
+          "buy": "minecraft:gold_block",
+          "buyCount": 4,
+          "sell": "onepiece:berry",
+          "sellCount": 12,
+          "maxUses": 8,
+          "xp": 15
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 64,
+          "sell": "onepiece:sea_chart",
+          "sellCount": 1,
+          "chart": "laugh_tale",
+          "maxUses": 4,
+          "xp": 30
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 48,
+          "sell": "minecraft:heart_of_the_sea",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        }
+      ]
+    ],
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 20,
+        "start": "I'm going to draw a map of the whole world. Bring me 24 sheets of paper!",
+        "done": "Perfect! The first page of my world map starts today.",
+        "item": "minecraft:paper",
+        "count": 24
+      },
+      {
+        "type": "explore",
+        "berries": 60,
+        "start": "Up in the sky there's a little island where old men study the weather. Weatheria! Go and find it for me.",
+        "done": "It's real? I'm going there to learn everything about the weather!",
+        "target": "weatheria",
+        "rewardItem": "minecraft:compass",
+        "rewardCount": 1
+      },
+      {
+        "type": "defeat",
+        "berries": 120,
+        "start": "That so-called god Enel kidnapped me on his golden ark. Here's his poster. Ground him!",
+        "done": "Ha! Not so godly now. Here, take this. ...You can pay me back later.",
+        "target": "enel",
+        "rewardItem": "minecraft:gold_ingot",
+        "rewardCount": 6
+      }
+    ],
+    "thanks": "Got any treasure for me? I'll take care of it. Just a small fee."
+  },
+  {
+    "id": "usopp",
+    "name": "Usopp",
+    "role": "trader",
+    "tier": 2,
+    "health": 80,
+    "damage": 6,
+    "bounty": 12,
+    "scale": 0.98,
+    "power": "punch",
+    "greeting": "I, Captain Usopp, have 8,000 followers! Want to buy something?",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:diamond"
+    ],
+    "heldItem": "onepiece:kuro_kabuto",
+    "levels": [
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 4,
+          "sell": "minecraft:arrow",
+          "sellCount": 16,
+          "maxUses": 16,
+          "xp": 2
+        },
+        {
+          "buy": "minecraft:gunpowder",
+          "buyCount": 8,
+          "sell": "onepiece:berry",
+          "sellCount": 3,
+          "maxUses": 16,
+          "xp": 2
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 8,
+          "sell": "minecraft:bow",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 6,
+          "sell": "minecraft:fire_charge",
+          "sellCount": 4,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "minecraft:string",
+          "buyCount": 16,
+          "sell": "onepiece:berry",
+          "sellCount": 2,
+          "maxUses": 12,
+          "xp": 5
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 12,
+          "sell": "minecraft:crossbow",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 10,
+          "sell": "minecraft:spectral_arrow",
+          "sellCount": 8,
+          "maxUses": 12,
+          "xp": 10
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 8,
+          "sell": "minecraft:firework_rocket",
+          "sellCount": 8,
+          "maxUses": 8,
+          "xp": 15
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 12,
+          "sell": "minecraft:tnt",
+          "sellCount": 4,
+          "maxUses": 8,
+          "xp": 15
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 8,
+          "sell": "minecraft:bone_meal",
+          "sellCount": 32,
+          "maxUses": 4,
+          "xp": 30
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 24,
+          "sell": "minecraft:wind_charge",
+          "sellCount": 16,
+          "maxUses": 4,
+          "xp": 30
+        }
+      ]
+    ],
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 15,
+        "start": "I'm brave, I'm just... preparing! Bring me 16 eggs for my Rotten Egg Star ammo.",
+        "done": "Hissatsu! Rotten Egg Star! ...After they go rotten, anyway.",
+        "item": "minecraft:egg",
+        "count": 16
+      },
+      {
+        "type": "explore",
+        "berries": 50,
+        "start": "I never said a proper goodbye to the Going Merry. Go see the place where she rests, please.",
+        "done": "She's still there? ...Thank you. She was the best ship in the world.",
+        "target": "going_merry_farewell"
+      },
+      {
+        "type": "talk",
+        "berries": 60,
+        "start": "My dad Yasopp sails with Red-Haired Shanks. Tell him his son is a brave warrior of the sea!",
+        "done": "Dad said he's proud of me? I-I'm not crying, there's sand in my eye!",
+        "target": "shanks",
+        "rewardItem": "minecraft:arrow",
+        "rewardCount": 32
+      }
+    ],
+    "thanks": "I once fought a goldfish so big its poop was an island. True story!"
+  },
+  {
+    "id": "sanji",
+    "name": "Sanji",
+    "role": "trader",
+    "tier": 4,
+    "health": 250,
+    "damage": 13,
+    "bounty": 45,
+    "scale": 1.0,
+    "power": "fire",
+    "greeting": "Hungry? Nobody leaves my kitchen hungry.",
+    "hardPower": "beast",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "levels": [
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 3,
+          "sell": "minecraft:cooked_beef",
+          "sellCount": 4,
+          "maxUses": 16,
+          "xp": 2
+        },
+        {
+          "buy": "minecraft:cod",
+          "buyCount": 12,
+          "sell": "onepiece:berry",
+          "sellCount": 3,
+          "maxUses": 16,
+          "xp": 2
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 4,
+          "sell": "minecraft:pumpkin_pie",
+          "sellCount": 4,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 2,
+          "sell": "minecraft:bread",
+          "sellCount": 4,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "minecraft:wheat",
+          "buyCount": 16,
+          "sell": "onepiece:berry",
+          "sellCount": 2,
+          "maxUses": 12,
+          "xp": 5
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 6,
+          "sell": "minecraft:cake",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 8,
+          "sell": "minecraft:golden_carrot",
+          "sellCount": 4,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "minecraft:salmon",
+          "buyCount": 12,
+          "sell": "onepiece:berry",
+          "sellCount": 3,
+          "maxUses": 12,
+          "xp": 10
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 20,
+          "sell": "minecraft:golden_apple",
+          "sellCount": 1,
+          "maxUses": 8,
+          "xp": 15
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 8,
+          "sell": "minecraft:rabbit_stew",
+          "sellCount": 4,
+          "maxUses": 8,
+          "xp": 15
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry_block",
+          "buyCount": 12,
+          "sell": "minecraft:enchanted_golden_apple",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        }
+      ]
+    ],
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 25,
+        "start": "A cook is only as good as his fish. Catch me 8 Blue Sea Bream.",
+        "done": "Beautiful fish. Now watch a master at work.",
+        "item": "onepiece:blue_sea_bream",
+        "count": 8
+      },
+      {
+        "type": "deliver",
+        "berries": 30,
+        "start": "Take this sashimi to my beautiful Nami-swan. Careful! Don't you dare eat any.",
+        "done": "She smiled?! Mellorine~! You've done a great service.",
+        "item": "onepiece:sea_bream_sashimi",
+        "count": 4,
+        "target": "nami"
+      },
+      {
+        "type": "fetch",
+        "berries": 150,
+        "start": "Somewhere out there is the All Blue, where every fish in the world swims. Bring me proof: an All Blue Kingfish.",
+        "done": "It's real... The All Blue is real! I'll cook you the best meal of your life.",
+        "item": "onepiece:all_blue_kingfish",
+        "count": 1,
+        "rewardItem": "minecraft:golden_carrot",
+        "rewardCount": 16
+      }
+    ],
+    "thanks": "Hungry? Never be shy in my kitchen."
+  },
+  {
+    "id": "chopper",
+    "name": "Tony Tony Chopper",
+    "role": "trader",
+    "tier": 2,
+    "health": 80,
+    "damage": 6,
+    "bounty": 12,
+    "scale": 0.59,
+    "power": "beast",
+    "greeting": "I-I'm not happy that you came to see me, you jerk!",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:diamond"
+    ],
+    "fruitItem": "onepiece:hito_hito_no_mi",
+    "levels": [
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 4,
+          "sell": "minecraft:honey_bottle",
+          "sellCount": 2,
+          "maxUses": 16,
+          "xp": 2
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 4,
+          "sell": "minecraft:milk_bucket",
+          "sellCount": 1,
+          "maxUses": 16,
+          "xp": 2
+        },
+        {
+          "buy": "minecraft:sugar",
+          "buyCount": 8,
+          "sell": "onepiece:berry",
+          "sellCount": 2,
+          "maxUses": 16,
+          "xp": 2
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 4,
+          "sell": "minecraft:glistering_melon_slice",
+          "sellCount": 2,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 6,
+          "sell": "minecraft:golden_carrot",
+          "sellCount": 4,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "minecraft:sweet_berries",
+          "buyCount": 8,
+          "sell": "onepiece:berry",
+          "sellCount": 2,
+          "maxUses": 12,
+          "xp": 5
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 16,
+          "sell": "minecraft:golden_apple",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 6,
+          "sell": "minecraft:nether_wart",
+          "sellCount": 4,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 8,
+          "sell": "minecraft:blaze_powder",
+          "sellCount": 2,
+          "maxUses": 12,
+          "xp": 10
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 16,
+          "sell": "minecraft:ghast_tear",
+          "sellCount": 2,
+          "maxUses": 8,
+          "xp": 15
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 12,
+          "sell": "minecraft:phantom_membrane",
+          "sellCount": 4,
+          "maxUses": 8,
+          "xp": 15
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry_block",
+          "buyCount": 10,
+          "sell": "minecraft:totem_of_undying",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        }
+      ]
+    ],
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 15,
+        "start": "I'm making a new medicine. Bring me 8 Winter Roses from the snowy islands, please.",
+        "done": "Thank you! This will help a lot of people. ...D-don't thank me, jerk!",
+        "item": "onepiece:winter_rose",
+        "count": 8
+      },
+      {
+        "type": "talk",
+        "berries": 25,
+        "start": "Torao is an amazing surgeon. Could you ask him if he'd teach me a little?",
+        "done": "He said yes?! I'm going to be a doctor who can cure any disease!",
+        "target": "law"
+      },
+      {
+        "type": "explore",
+        "berries": 40,
+        "start": "Doctor Hiriluk's flag flies over Drum Castle. Go and see that it's still there, for me.",
+        "done": "It's still flying... Doctor, your dream lives on.",
+        "target": "drum_castle",
+        "rewardItem": "minecraft:golden_apple",
+        "rewardCount": 2
+      }
+    ],
+    "thanks": "If you get hurt, come see me! I'm a doctor!"
+  },
+  {
+    "id": "robin",
+    "name": "Nico Robin",
+    "role": "quest",
+    "tier": 4,
+    "health": 250,
+    "damage": 13,
+    "bounty": 45,
+    "scale": 1.04,
+    "power": "string",
+    "greeting": "Fufu. History is full of secrets.",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "fruitItem": "onepiece:hana_hana_no_mi",
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 20,
+        "start": "History is written in books. Bring me twelve, please.",
+        "done": "Fufu. What a lovely collection.",
+        "item": "minecraft:book",
+        "count": 12
+      },
+      {
+        "type": "defeat",
+        "berries": 100,
+        "start": "Rob Lucci hunts anyone who reads the Poneglyphs. Will you stop him?",
+        "done": "Thank you. I want to live!... and keep reading.",
+        "target": "lucci"
+      },
+      {
+        "type": "talk",
+        "berries": 30,
+        "start": "Dr. Vegapunk knows things about the Void Century. Please tell him I'd like to visit.",
+        "done": "He agreed? Wonderful.",
+        "target": "vegapunk"
+      },
+      {
+        "type": "fetch",
+        "berries": 200,
+        "start": "The Road Poneglyphs are made of a stone that can't be broken. Bring me 4 ancient debris to study.",
+        "done": "Remarkable. We're close to the truth.",
+        "item": "minecraft:ancient_debris",
+        "count": 4,
+        "rewardItem": "minecraft:experience_bottle",
+        "rewardCount": 16
+      },
+      {
+        "type": "explore",
+        "berries": 60,
+        "target": "ohara_library",
+        "start": "I want to know if anything is left of Ohara's Tree of Knowledge. Will you go and see?",
+        "done": "The tree still stands... Thank you. Some knowledge can never be burned.",
+        "rewardItem": "minecraft:book",
+        "rewardCount": 8
+      }
+    ],
+    "thanks": "Have you seen any red Poneglyphs?"
+  },
+  {
+    "id": "franky",
+    "name": "Franky",
+    "role": "trader",
+    "tier": 4,
+    "health": 250,
+    "damage": 13,
+    "bounty": 45,
+    "scale": 1.33,
+    "power": "quake",
+    "greeting": "SUUUPER! Need parts for a ship?",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "levels": [
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 8,
+          "sell": "minecraft:iron_ingot",
+          "sellCount": 8,
+          "maxUses": 16,
+          "xp": 2
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 3,
+          "sell": "minecraft:oak_boat",
+          "sellCount": 1,
+          "maxUses": 16,
+          "xp": 2
+        },
+        {
+          "buy": "minecraft:copper_ingot",
+          "buyCount": 16,
+          "sell": "onepiece:berry",
+          "sellCount": 3,
+          "maxUses": 16,
+          "xp": 2
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 6,
+          "sell": "minecraft:redstone",
+          "sellCount": 16,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 5,
+          "sell": "minecraft:piston",
+          "sellCount": 2,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "minecraft:oak_log",
+          "buyCount": 16,
+          "sell": "onepiece:berry",
+          "sellCount": 2,
+          "maxUses": 12,
+          "xp": 5
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 10,
+          "sell": "minecraft:tnt",
+          "sellCount": 4,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 8,
+          "sell": "minecraft:sticky_piston",
+          "sellCount": 4,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 6,
+          "sell": "minecraft:minecart",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 10
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 6,
+          "sell": "minecraft:rail",
+          "sellCount": 16,
+          "maxUses": 8,
+          "xp": 15
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 8,
+          "sell": "minecraft:powered_rail",
+          "sellCount": 2,
+          "maxUses": 8,
+          "xp": 15
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 16,
+          "sell": "minecraft:anvil",
+          "sellCount": 1,
+          "maxUses": 8,
+          "xp": 15
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry_block",
+          "buyCount": 12,
+          "sell": "minecraft:netherite_ingot",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        },
+        {
+          "buy": "onepiece:berry_block",
+          "buyCount": 16,
+          "sell": "minecraft:beacon",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        }
+      ]
+    ],
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 20,
+        "start": "I run on cola, bro! Bring me 8 bottles and I'm SUUUPER!",
+        "done": "SUUUPER! My tank's full again!",
+        "item": "onepiece:cola",
+        "count": 8
+      },
+      {
+        "type": "fetch",
+        "berries": 60,
+        "start": "Real ships need real wood. Bring me 16 Adam logs from the Treasure Tree Adam.",
+        "done": "That's the stuff! A ship of Adam wood can sail anywhere.",
+        "item": "onepiece:adam_log",
+        "count": 16,
+        "rewardItem": "onepiece:adam_planks",
+        "rewardCount": 16
+      },
+      {
+        "type": "defeat",
+        "berries": 150,
+        "start": "CP9 tore up Iceburg and took Tom's blueprints. Lucci's their top dog. Here's his poster!",
+        "done": "The pigeon guy's down? That's what I call SUPER!",
+        "target": "lucci",
+        "rewardItem": "minecraft:iron_block",
+        "rewardCount": 4
+      }
+    ],
+    "thanks": "Need a ship fixed? Franky House does it all!"
+  },
+  {
+    "id": "brook",
+    "name": "Brook",
+    "role": "trader",
+    "tier": 3,
+    "health": 150,
+    "damage": 9,
+    "bounty": 25,
+    "scale": 1.54,
+    "power": "ice",
+    "greeting": "Yohohoho! May I see your... music collection?",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:experience_bottle"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "fruitItem": "onepiece:yomi_yomi_no_mi",
+    "heldItem": "onepiece:soul_solid",
+    "levels": [
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 4,
+          "sell": "minecraft:note_block",
+          "sellCount": 2,
+          "maxUses": 16,
+          "xp": 2
+        },
+        {
+          "buy": "minecraft:bone",
+          "buyCount": 16,
+          "sell": "onepiece:berry",
+          "sellCount": 2,
+          "maxUses": 16,
+          "xp": 2
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 12,
+          "sell": "minecraft:music_disc_cat",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 12,
+          "sell": "minecraft:music_disc_13",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 5
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 16,
+          "sell": "minecraft:jukebox",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 12,
+          "sell": "minecraft:music_disc_mall",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 12,
+          "sell": "minecraft:music_disc_far",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "minecraft:rotten_flesh",
+          "buyCount": 16,
+          "sell": "onepiece:berry",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 10
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 16,
+          "sell": "minecraft:music_disc_stal",
+          "sellCount": 1,
+          "maxUses": 8,
+          "xp": 15
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 16,
+          "sell": "minecraft:music_disc_wait",
+          "sellCount": 1,
+          "maxUses": 8,
+          "xp": 15
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 40,
+          "sell": "minecraft:music_disc_pigstep",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 40,
+          "sell": "minecraft:music_disc_otherside",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        }
+      ]
+    ],
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 20,
+        "start": "Milk is good for your bones! Could you bring me 3 buckets? Yohohoho!",
+        "done": "Ahh, my bones feel stronger already! Not that I have muscles. Yohohoho!",
+        "item": "minecraft:milk_bucket",
+        "count": 3
+      },
+      {
+        "type": "explore",
+        "berries": 50,
+        "start": "I promised a little whale, Laboon, that I would come back to the Twin Capes. Please go and see if he still waits.",
+        "done": "He's still waiting... After fifty years. My eyes are full of tears! Though I have no eyes. Yohoho...",
+        "target": "twin_capes_lighthouse",
+        "rewardItem": "minecraft:jukebox",
+        "rewardCount": 1
+      },
+      {
+        "type": "defeat",
+        "berries": 120,
+        "start": "Gecko Moria stole my shadow and left me in the dark. Here is his poster. Help me get it back!",
+        "done": "I can walk in the sun again! Thank you! Yohohoho!",
+        "target": "moria",
+        "rewardItem": "minecraft:golden_apple",
+        "rewardCount": 3
+      }
+    ],
+    "thanks": "Shall I play you a song? Binks' Sake, perhaps?"
+  },
+  {
+    "id": "jinbe",
+    "name": "Jinbe",
+    "role": "quest",
+    "tier": 4,
+    "health": 250,
+    "damage": 13,
+    "bounty": 45,
+    "scale": 1.67,
+    "power": "punch",
+    "greeting": "Fish-Man Karate is about the water in all things.",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 20,
+        "start": "The Ryugu Palace on Fish-Man Island needs repairs. Bring 10 prismarine shards.",
+        "done": "Thank you. The children will be safe.",
+        "item": "minecraft:prismarine_shard",
+        "count": 10
+      },
+      {
+        "type": "talk",
+        "berries": 20,
+        "start": "Tell Luffy that I will join his crew once I leave Big Mom's.",
+        "done": "He laughed and said 'Of course!' That sounds like him.",
+        "target": "luffy"
+      },
+      {
+        "type": "defeat",
+        "berries": 250,
+        "start": "Big Mom won't let anyone leave her crew alive. Here is her poster. Be careful.",
+        "done": "You bested an Emperor. I am in your debt.",
+        "target": "big_mom",
+        "rewardItem": "minecraft:heart_of_the_sea",
+        "rewardCount": 1
+      },
+      {
+        "type": "escort",
+        "berries": 60,
+        "target": "chopper",
+        "place": "drum_castle",
+        "start": "Chopper wants to visit Doctor Kureha on Drum Island. The seas are rough, so go with him.",
+        "done": "A doctor who looks after his own teacher. That is a fine young man."
+      }
+    ],
+    "thanks": "The sea is calm today."
+  },
+  {
+    "id": "shanks",
+    "name": "Shanks",
+    "role": "quest",
+    "tier": 5,
+    "health": 400,
+    "damage": 18,
+    "bounty": 64,
+    "scale": 1.11,
+    "power": "haki",
+    "greeting": "Let's have a drink first.",
+    "hardPower": "haki",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "heldItem": "minecraft:diamond_sword",
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 15,
+        "start": "A party needs drinks! Bring me 4 honey bottles.",
+        "done": "Now we're talking! Cheers!",
+        "item": "minecraft:honey_bottle",
+        "count": 4
+      },
+      {
+        "type": "talk",
+        "berries": 20,
+        "start": "Give Luffy my regards. Tell him to come return my hat when he's a great pirate.",
+        "done": "Hahaha! He said he'll give it back himself? Good.",
+        "target": "luffy"
+      },
+      {
+        "type": "defeat",
+        "berries": 120,
+        "start": "Eustass Kid is heading for Elbaph. Let's teach him some manners. Here's his poster.",
+        "done": "One strike. Not bad at all.",
+        "target": "kid"
+      },
+      {
+        "type": "defeat",
+        "berries": 400,
+        "start": "Teach gave me these scars. He's too dangerous to leave alone. Here's his poster.",
+        "done": "You did it. Now THAT deserves a party!",
+        "target": "blackbeard",
+        "rewardItem": "minecraft:enchanted_golden_apple",
+        "rewardCount": 1
+      }
+    ],
+    "thanks": "Take care of that hat."
+  },
+  {
+    "id": "blackbeard",
+    "name": "Marshall D. Teach (Blackbeard)",
+    "role": "boss",
+    "tier": 5,
+    "health": 1500,
+    "damage": 20,
+    "bounty": 180,
+    "scale": 1.91,
+    "power": "darkness",
+    "greeting": "Zehahahaha! People's dreams never end!",
+    "hardPower": "quake",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "fruitItem": "onepiece:yami_yami_no_mi"
+  },
+  {
+    "id": "buggy",
+    "name": "Buggy",
+    "role": "boss",
+    "tier": 1,
+    "health": 100,
+    "damage": 5,
+    "bounty": 15,
+    "scale": 1.07,
+    "power": "punch",
+    "greeting": "Who're you calling a big red nose?!",
+    "hardPower": "sword",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:diamond"
+    ],
+    "fruitItem": "onepiece:bara_bara_no_mi",
+    "heldItem": "onepiece:buggy_knife"
+  },
+  {
+    "id": "whitebeard",
+    "name": "Edward Newgate (Whitebeard)",
+    "role": "boss",
+    "tier": 5,
+    "health": 1700,
+    "damage": 22,
+    "bounty": 200,
+    "scale": 3.7,
+    "power": "quake",
+    "greeting": "Gurarara! Bring it, brat!",
+    "hardPower": "sword",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "fruitItem": "onepiece:gura_gura_no_mi",
+    "heldItem": "onepiece:murakumogiri"
+  },
+  {
+    "id": "big_mom",
+    "name": "Charlotte Linlin (Big Mom)",
+    "role": "boss",
+    "tier": 5,
+    "health": 1300,
+    "damage": 18,
+    "bounty": 150,
+    "scale": 3.56,
+    "power": "soul",
+    "greeting": "Life or treat?!",
+    "hardPower": "fire",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "fruitItem": "onepiece:soru_soru_no_mi",
+    "heldItem": "onepiece:homie_umbrella"
+  },
+  {
+    "id": "kaido",
+    "name": "Kaido",
+    "role": "boss",
+    "tier": 5,
+    "health": 1500,
+    "damage": 20,
+    "bounty": 180,
+    "scale": 3.94,
+    "power": "dragon",
+    "greeting": "Wololo... Let's have a fun fight!",
+    "hardPower": "lightning",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "fruitItem": "onepiece:uo_uo_no_mi_seiryu",
+    "heldItem": "onepiece:hassaikai"
+  },
+  {
+    "id": "law",
+    "name": "Trafalgar D. Water Law",
+    "role": "quest",
+    "tier": 4,
+    "health": 250,
+    "damage": 13,
+    "bounty": 45,
+    "scale": 1.06,
+    "power": "teleport",
+    "greeting": "Room...",
+    "hardPower": "sword",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "fruitItem": "onepiece:ope_ope_no_mi",
+    "heldItem": "onepiece:kikoku",
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 20,
+        "start": "I need surgical tools. Bring me 16 iron ingots.",
+        "done": "Good. These will do.",
+        "item": "minecraft:iron_ingot",
+        "count": 16
+      },
+      {
+        "type": "talk",
+        "berries": 20,
+        "start": "Go tell Straw Hat I'm proposing an alliance. Don't make it weird.",
+        "done": "He said yes and called us friends. ...Great.",
+        "target": "luffy"
+      },
+      {
+        "type": "defeat",
+        "berries": 150,
+        "start": "Doflamingo took everything from me. Take his poster. We end this.",
+        "done": "It's over. ...Thank you.",
+        "target": "doflamingo",
+        "rewardItem": "minecraft:diamond",
+        "rewardCount": 4
+      },
+      {
+        "type": "defeat",
+        "berries": 250,
+        "start": "Big Mom is after us in Wano. Kid and I can't do it alone. Poster.",
+        "done": "An Emperor down. Not a bad day.",
+        "target": "big_mom"
+      }
+    ],
+    "thanks": "Don't get the wrong idea. We're just allies."
+  },
+  {
+    "id": "kid",
+    "name": "Eustass Kid",
+    "role": "boss",
+    "tier": 4,
+    "health": 900,
+    "damage": 14,
+    "bounty": 80,
+    "scale": 1.14,
+    "power": "pull",
+    "greeting": "Get out of my way!",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "fruitItem": "onepiece:jiki_jiki_no_mi"
+  },
+  {
+    "id": "killer",
+    "name": "Killer",
+    "role": "boss",
+    "tier": 3,
+    "health": 400,
+    "damage": 10,
+    "bounty": 40,
+    "scale": 1.08,
+    "power": "sword",
+    "greeting": "Fa fa fa...",
+    "hardPower": "beast",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:experience_bottle"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "heldItem": "onepiece:punisher",
+    "bonusDrop": "minecraft:iron_sword"
+  },
+  {
+    "id": "hawkins",
+    "name": "Basil Hawkins",
+    "role": "boss",
+    "tier": 3,
+    "health": 400,
+    "damage": 10,
+    "bounty": 40,
+    "scale": 1.17,
+    "power": "curse",
+    "greeting": "The cards say you will lose.",
+    "hardPower": "petrify",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:experience_bottle"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "fruitItem": "onepiece:wara_wara_no_mi"
+  },
+  {
+    "id": "drake",
+    "name": "X Drake",
+    "role": "quest",
+    "tier": 3,
+    "health": 150,
+    "damage": 9,
+    "bounty": 25,
+    "scale": 1.29,
+    "power": "beast",
+    "greeting": "Keep your voice down. I'm on a mission.",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:experience_bottle"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "fruitItem": "onepiece:ryu_ryu_no_mi_allosaurus",
+    "heldItem": "minecraft:iron_axe",
+    "quests": [
+      {
+        "type": "talk",
+        "berries": 15,
+        "start": "I need to send a message to SWORD. Find Koby and tell him the mission continues.",
+        "done": "Good. Message delivered.",
+        "target": "koby"
+      },
+      {
+        "type": "defeat",
+        "berries": 80,
+        "start": "Hawkins knows I'm a spy. Deal with him before he talks. Here's his poster.",
+        "done": "Good. My cover holds.",
+        "target": "hawkins",
+        "rewardItem": "minecraft:experience_bottle",
+        "rewardCount": 16
+      },
+      {
+        "type": "talk",
+        "berries": 50,
+        "start": "Report to Garp. He's the one who backs SWORD.",
+        "done": "He's pleased? Then so am I.",
+        "target": "garp"
+      }
+    ],
+    "thanks": "SWORD sends its thanks."
+  },
+  {
+    "id": "bonney",
+    "name": "Jewelry Bonney",
+    "role": "quest",
+    "tier": 3,
+    "health": 150,
+    "damage": 9,
+    "bounty": 25,
+    "scale": 0.97,
+    "power": "curse",
+    "greeting": "You got food? I'm starving!",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:experience_bottle"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "fruitItem": "onepiece:toshi_toshi_no_mi",
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 40,
+        "start": "Bring me 32 steaks. Right now!",
+        "done": "Mmmph! You're alright.",
+        "item": "minecraft:cooked_beef",
+        "count": 32,
+        "rewardItem": "minecraft:cake",
+        "rewardCount": 1
+      },
+      {
+        "type": "talk",
+        "berries": 30,
+        "start": "Have you seen my dad? Big guy, Bible, paws. Tell him I'm looking for him.",
+        "done": "He... he said that? *sniff* Thanks.",
+        "target": "kuma"
+      },
+      {
+        "type": "defeat",
+        "berries": 300,
+        "start": "Kizaru is attacking Egghead. Here's his poster. Get him!",
+        "done": "Ha! Take that, admiral!",
+        "target": "kizaru"
+      },
+      {
+        "type": "escort",
+        "berries": 80,
+        "target": "vegapunk",
+        "place": "egghead_lab",
+        "start": "Vegapunk has to get back to Egghead before the Marines find him. Take him there!",
+        "done": "He made it? Thank you... I owe you a feast."
+      }
+    ],
+    "thanks": "Got any more food?"
+  },
+  {
+    "id": "mihawk",
+    "name": "Dracule Mihawk",
+    "role": "boss",
+    "tier": 5,
+    "health": 1400,
+    "damage": 20,
+    "bounty": 160,
+    "scale": 1.1,
+    "power": "sword",
+    "greeting": "Show me what you have.",
+    "hardPower": "haki",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "heldItem": "onepiece:yoru",
+    "bonusDrop": "minecraft:netherite_sword"
+  },
+  {
+    "id": "crocodile",
+    "name": "Sir Crocodile",
+    "role": "boss",
+    "tier": 3,
+    "health": 350,
+    "damage": 9,
+    "bounty": 40,
+    "scale": 1.41,
+    "power": "sand",
+    "greeting": "Dreams are for the weak.",
+    "hardPower": "pull",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:experience_bottle"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "fruitItem": "onepiece:suna_suna_no_mi"
+  },
+  {
+    "id": "doflamingo",
+    "name": "Donquixote Doflamingo",
+    "role": "boss",
+    "tier": 4,
+    "health": 900,
+    "damage": 14,
+    "bounty": 90,
+    "scale": 1.51,
+    "power": "string",
+    "greeting": "Fufufufu! Only the winners are justice!",
+    "hardPower": "fire",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "fruitItem": "onepiece:ito_ito_no_mi"
+  },
+  {
+    "id": "hancock",
+    "name": "Boa Hancock",
+    "role": "quest",
+    "tier": 4,
+    "health": 250,
+    "damage": 13,
+    "bounty": 45,
+    "scale": 1.44,
+    "power": "petrify",
+    "greeting": "Hmph. You may look upon me.",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "fruitItem": "onepiece:mero_mero_no_mi",
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 50,
+        "start": "Bring me eight roses. Only the finest for the Empress.",
+        "done": "...They're beautiful. Not that I care.",
+        "item": "minecraft:rose_bush",
+        "count": 8
+      },
+      {
+        "type": "talk",
+        "berries": 30,
+        "start": "D-deliver this message to Luffy. Tell him... tell him I said hello!",
+        "done": "He said hello back?! *faints*",
+        "target": "luffy"
+      },
+      {
+        "type": "defeat",
+        "berries": 400,
+        "start": "Blackbeard attacked Amazon Lily to steal my power! Take his poster and punish him!",
+        "done": "You protected my island. You may stay... for now.",
+        "target": "blackbeard",
+        "rewardItem": "minecraft:totem_of_undying",
+        "rewardCount": 1
+      },
+      {
+        "type": "deliver",
+        "berries": 50,
+        "item": "minecraft:cake",
+        "count": 1,
+        "target": "luffy",
+        "start": "Deliver this cake to my beloved Luffy... and if he asks, it's not from me! It is! Tell him it is!",
+        "done": "He said thank you?! *faints*",
+        "rewardItem": "minecraft:golden_apple",
+        "rewardCount": 2
+      }
+    ],
+    "thanks": "Have you seen Luffy?"
+  },
+  {
+    "id": "kuma",
+    "name": "Bartholomew Kuma",
+    "role": "quest",
+    "tier": 4,
+    "health": 250,
+    "damage": 13,
+    "bounty": 45,
+    "scale": 3.83,
+    "power": "paw",
+    "greeting": "If you could go on a trip, where would you go?",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "fruitItem": "onepiece:nikyu_nikyu_no_mi",
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 15,
+        "start": "I've lost my Bible. Could you bring me a book?",
+        "done": "Thank you. This will do.",
+        "item": "minecraft:book",
+        "count": 1
+      },
+      {
+        "type": "defeat",
+        "berries": 100,
+        "start": "Gecko Moria is stealing shadows. His poster.",
+        "done": "Thank you. Now... where shall I send you?",
+        "target": "moria",
+        "rewardItem": "minecraft:ender_pearl",
+        "rewardCount": 8
+      },
+      {
+        "type": "talk",
+        "berries": 30,
+        "start": "Please watch over my daughter Bonney. Tell her I'm proud of her.",
+        "done": "Thank you. That is all I wanted.",
+        "target": "bonney"
+      }
+    ],
+    "thanks": "If you could go on a trip, where would you go?"
+  },
+  {
+    "id": "moria",
+    "name": "Gecko Moria",
+    "role": "boss",
+    "tier": 3,
+    "health": 550,
+    "damage": 11,
+    "bounty": 60,
+    "scale": 3.24,
+    "power": "shadow",
+    "greeting": "Kishishishi! Your shadow is mine!",
+    "hardPower": "darkness",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:experience_bottle"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "fruitItem": "onepiece:kage_kage_no_mi",
+    "heldItem": "minecraft:shears"
+  },
+  {
+    "id": "garp",
+    "name": "Monkey D. Garp",
+    "role": "quest",
+    "tier": 5,
+    "health": 400,
+    "damage": 18,
+    "bounty": 64,
+    "scale": 1.59,
+    "power": "punch",
+    "greeting": "Bwahahaha! Fist of Love!",
+    "hardPower": "haki",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 15,
+        "start": "Bring me 16 bread. I mean rice crackers. Bread's fine.",
+        "done": "*munch munch* Good kid!",
+        "item": "minecraft:bread",
+        "count": 16
+      },
+      {
+        "type": "talk",
+        "berries": 20,
+        "start": "Go check on my student Koby. Make sure he's training!",
+        "done": "Ha! He's doing push-ups? Good boy.",
+        "target": "koby"
+      },
+      {
+        "type": "defeat",
+        "berries": 300,
+        "start": "Kuzan was my student, and now he sails with Blackbeard. Bring him to his senses.",
+        "done": "Hmph. Good work. Have a rice cracker.",
+        "target": "aokiji",
+        "rewardItem": "minecraft:netherite_ingot",
+        "rewardCount": 1
+      },
+      {
+        "type": "deliver",
+        "berries": 40,
+        "item": "minecraft:cookie",
+        "count": 16,
+        "target": "luffy",
+        "start": "Take these rice crackers to my grandson Luffy. And tell him to come home and become a Marine!",
+        "done": "He ate them all on the spot? Bwahaha! That's my boy."
+      }
+    ],
+    "thanks": "Zzz..."
+  },
+  {
+    "id": "sengoku",
+    "name": "Sengoku",
+    "role": "trader",
+    "tier": 5,
+    "health": 400,
+    "damage": 18,
+    "bounty": 64,
+    "scale": 1.54,
+    "power": "quake",
+    "greeting": "Looking for bounties? I have plenty of posters.",
+    "hardPower": "haki",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "fruitItem": "onepiece:hito_hito_no_mi_daibutsu",
+    "levels": [
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 6,
+          "sell": "onepiece:wanted_poster_buggy",
+          "sellCount": 1,
+          "maxUses": 16,
+          "xp": 2
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 12,
+          "sell": "onepiece:wanted_poster_smoker",
+          "sellCount": 1,
+          "maxUses": 16,
+          "xp": 2
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 24,
+          "sell": "onepiece:wanted_poster_killer",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 24,
+          "sell": "onepiece:wanted_poster_hawkins",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 24,
+          "sell": "onepiece:wanted_poster_crocodile",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 24,
+          "sell": "onepiece:wanted_poster_moria",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 24,
+          "sell": "onepiece:wanted_poster_enel",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 5
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 40,
+          "sell": "onepiece:wanted_poster_kid",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 40,
+          "sell": "onepiece:wanted_poster_doflamingo",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 40,
+          "sell": "onepiece:wanted_poster_lucci",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 40,
+          "sell": "onepiece:wanted_poster_katakuri",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 40,
+          "sell": "onepiece:wanted_poster_king",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 10
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 64,
+          "sell": "onepiece:wanted_poster_blackbeard",
+          "sellCount": 1,
+          "maxUses": 8,
+          "xp": 15
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 64,
+          "sell": "onepiece:wanted_poster_whitebeard",
+          "sellCount": 1,
+          "maxUses": 8,
+          "xp": 15
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 64,
+          "sell": "onepiece:wanted_poster_big_mom",
+          "sellCount": 1,
+          "maxUses": 8,
+          "xp": 15
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 64,
+          "sell": "onepiece:wanted_poster_kaido",
+          "sellCount": 1,
+          "maxUses": 8,
+          "xp": 15
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 64,
+          "sell": "onepiece:wanted_poster_mihawk",
+          "sellCount": 1,
+          "maxUses": 8,
+          "xp": 15
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 64,
+          "sell": "onepiece:wanted_poster_akainu",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 64,
+          "sell": "onepiece:wanted_poster_kizaru",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 64,
+          "sell": "onepiece:wanted_poster_fujitora",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 64,
+          "sell": "onepiece:wanted_poster_ryokugyu",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 64,
+          "sell": "onepiece:wanted_poster_aokiji",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 64,
+          "sell": "onepiece:wanted_poster_loki",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        }
+      ]
+    ],
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 20,
+        "start": "My goat is hungry and the Marine kitchen is out of hay. Bring me 16 wheat.",
+        "done": "She thanks you. So do I.",
+        "item": "minecraft:wheat",
+        "count": 16
+      },
+      {
+        "type": "talk",
+        "berries": 20,
+        "start": "Garp ate my rice crackers again. Go tell that fool to stay out of my office!",
+        "done": "He laughed and ate another one? ...Typical.",
+        "target": "garp"
+      },
+      {
+        "type": "defeat",
+        "berries": 300,
+        "start": "Blackbeard stole Whitebeard's power at Marineford. I'm retired, but you aren't. Here's his poster.",
+        "done": "The man who started this era of chaos, beaten. Well done.",
+        "target": "blackbeard",
+        "rewardItem": "minecraft:diamond",
+        "rewardCount": 4
+      }
+    ],
+    "thanks": "Have a rice cracker. Don't tell Garp."
+  },
+  {
+    "id": "akainu",
+    "name": "Sakazuki (Akainu)",
+    "role": "boss",
+    "tier": 5,
+    "health": 1300,
+    "damage": 18,
+    "bounty": 150,
+    "scale": 1.7,
+    "power": "magma",
+    "greeting": "Absolute Justice!",
+    "hardPower": "quake",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "fruitItem": "onepiece:magu_magu_no_mi"
+  },
+  {
+    "id": "kizaru",
+    "name": "Borsalino (Kizaru)",
+    "role": "boss",
+    "tier": 5,
+    "health": 1300,
+    "damage": 18,
+    "bounty": 150,
+    "scale": 1.53,
+    "power": "teleport",
+    "greeting": "Ooh, scary...",
+    "hardPower": "lightning",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "fruitItem": "onepiece:pika_pika_no_mi"
+  },
+  {
+    "id": "fujitora",
+    "name": "Issho (Fujitora)",
+    "role": "boss",
+    "tier": 5,
+    "health": 1300,
+    "damage": 18,
+    "bounty": 150,
+    "scale": 1.5,
+    "power": "gravity",
+    "greeting": "Let us roll the dice.",
+    "hardPower": "quake",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "fruitItem": "onepiece:zushi_zushi_no_mi",
+    "heldItem": "minecraft:iron_sword"
+  },
+  {
+    "id": "ryokugyu",
+    "name": "Aramaki (Ryokugyu)",
+    "role": "boss",
+    "tier": 5,
+    "health": 1300,
+    "damage": 18,
+    "bounty": 150,
+    "scale": 1.67,
+    "power": "forest",
+    "greeting": "I'll drain you dry.",
+    "hardPower": "string",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "fruitItem": "onepiece:mori_mori_no_mi"
+  },
+  {
+    "id": "aokiji",
+    "name": "Kuzan (Aokiji)",
+    "role": "boss",
+    "tier": 5,
+    "health": 1300,
+    "damage": 18,
+    "bounty": 150,
+    "scale": 1.47,
+    "power": "ice",
+    "greeting": "Ara ara... too much work.",
+    "hardPower": "petrify",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "fruitItem": "onepiece:hie_hie_no_mi"
+  },
+  {
+    "id": "smoker",
+    "heldItem": "onepiece:seastone_jitte",
+    "name": "Smoker",
+    "role": "boss",
+    "tier": 2,
+    "health": 200,
+    "damage": 7,
+    "bounty": 25,
+    "scale": 1.16,
+    "power": "smoke",
+    "greeting": "You're not escaping this time.",
+    "hardPower": "pull",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:diamond"
+    ],
+    "fruitItem": "onepiece:moku_moku_no_mi"
+  },
+  {
+    "id": "koby",
+    "name": "Koby",
+    "role": "quest",
+    "tier": 2,
+    "health": 80,
+    "damage": 6,
+    "bounty": 12,
+    "scale": 0.93,
+    "power": "punch",
+    "greeting": "I'm going to be a Marine Admiral!",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:diamond"
+    ],
+    "quests": [
+      {
+        "type": "talk",
+        "berries": 10,
+        "start": "I'm looking for Luffy-san. He saved me from Alvida! Can you find him and say hi for me?",
+        "done": "He remembered me? Amazing!",
+        "target": "luffy"
+      },
+      {
+        "type": "defeat",
+        "berries": 20,
+        "start": "Buggy the Clown is attacking Orange Town! Here's his poster. Please help!",
+        "done": "You did it! I'll train harder too!",
+        "target": "buggy",
+        "rewardItem": "minecraft:iron_sword",
+        "rewardCount": 1
+      },
+      {
+        "type": "talk",
+        "berries": 20,
+        "start": "Vice Admiral Garp is training me. Tell him I'm ready for the next lesson!",
+        "done": "He said WHAT? ...Okay. One thousand push-ups it is.",
+        "target": "garp"
+      }
+    ],
+    "thanks": "I'll be an Admiral someday. Just watch!"
+  },
+  {
+    "id": "tashigi",
+    "name": "Tashigi",
+    "role": "trader",
+    "tier": 2,
+    "health": 80,
+    "damage": 6,
+    "bounty": 12,
+    "scale": 0.94,
+    "power": "sword",
+    "greeting": "Every sword deserves respect. Want one?",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:diamond"
+    ],
+    "heldItem": "onepiece:shigure",
+    "levels": [
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 6,
+          "sell": "minecraft:iron_sword",
+          "sellCount": 1,
+          "maxUses": 16,
+          "xp": 2
+        },
+        {
+          "buy": "minecraft:iron_ingot",
+          "buyCount": 8,
+          "sell": "onepiece:berry",
+          "sellCount": 1,
+          "maxUses": 16,
+          "xp": 2
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 6,
+          "sell": "minecraft:shield",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 6,
+          "sell": "minecraft:iron_axe",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 5
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 32,
+          "sell": "minecraft:diamond_sword",
+          "sellCount": 1,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "minecraft:diamond",
+          "buyCount": 2,
+          "sell": "onepiece:berry",
+          "sellCount": 4,
+          "maxUses": 12,
+          "xp": 10
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 40,
+          "sell": "minecraft:diamond_chestplate",
+          "sellCount": 1,
+          "maxUses": 8,
+          "xp": 15
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 32,
+          "sell": "minecraft:diamond_axe",
+          "sellCount": 1,
+          "maxUses": 8,
+          "xp": 15
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry_block",
+          "buyCount": 12,
+          "sell": "minecraft:netherite_ingot",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        },
+        {
+          "buy": "onepiece:berry_block",
+          "buyCount": 10,
+          "sell": "minecraft:mace",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        }
+      ]
+    ],
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 40,
+        "start": "Famous swords shouldn't be in the hands of pirates. Forge or find me a Tamahagane Katana.",
+        "done": "A fine blade. I'll keep it safe from pirates.",
+        "item": "onepiece:tamahagane_katana",
+        "count": 1
+      },
+      {
+        "type": "talk",
+        "berries": 20,
+        "start": "Tell Captain Koby that G-5 is ready if he needs us.",
+        "done": "Good. G-5 is rough, but they're loyal.",
+        "target": "koby"
+      },
+      {
+        "type": "defeat",
+        "berries": 80,
+        "start": "Crocodile nearly took over Alabasta and a pirate had to stop him. Not this time. Here's his poster.",
+        "done": "Justice was served by... you. I suppose I should thank you.",
+        "target": "crocodile",
+        "rewardItem": "minecraft:iron_sword",
+        "rewardCount": 1
+      }
+    ],
+    "thanks": "Have you seen my glasses? ...Oh, they're on my head."
+  },
+  {
+    "id": "lucci",
+    "name": "Rob Lucci",
+    "role": "boss",
+    "tier": 4,
+    "health": 500,
+    "damage": 12,
+    "bounty": 60,
+    "scale": 1.18,
+    "power": "beast",
+    "greeting": "Justice is whatever we say it is.",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "fruitItem": "onepiece:neko_neko_no_mi_leopard"
+  },
+  {
+    "id": "dragon",
+    "name": "Monkey D. Dragon",
+    "role": "quest",
+    "tier": 5,
+    "health": 400,
+    "damage": 18,
+    "bounty": 64,
+    "scale": 1.42,
+    "power": "paw",
+    "greeting": "The wind is changing.",
+    "hardPower": "haki",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "quests": [
+      {
+        "type": "talk",
+        "berries": 20,
+        "start": "Tell Sabo the Revolutionary Army gathers at Baltigo.",
+        "done": "Good. The plan moves forward.",
+        "target": "sabo"
+      },
+      {
+        "type": "talk",
+        "berries": 30,
+        "start": "Kuma was my friend. Find him and tell him we have not forgotten.",
+        "done": "Thank you.",
+        "target": "kuma"
+      },
+      {
+        "type": "defeat",
+        "berries": 300,
+        "start": "The admiral Ryokugyu hunts my people. Here's his poster.",
+        "done": "The world is one step freer.",
+        "target": "ryokugyu",
+        "rewardItem": "minecraft:elytra",
+        "rewardCount": 1
+      },
+      {
+        "type": "explore",
+        "berries": 50,
+        "target": "gray_terminal",
+        "start": "Go to the Gray Terminal. See with your own eyes what the nobles throw away.",
+        "done": "Now you understand why we fight."
+      }
+    ],
+    "thanks": "Watch the horizon."
+  },
+  {
+    "id": "sabo",
+    "name": "Sabo",
+    "role": "quest",
+    "tier": 4,
+    "health": 250,
+    "damage": 13,
+    "bounty": 45,
+    "scale": 1.04,
+    "power": "fire",
+    "greeting": "Hey! Any friend of Luffy's is a friend of mine.",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "fruitItem": "onepiece:mera_mera_no_mi",
+    "quests": [
+      {
+        "type": "talk",
+        "berries": 15,
+        "start": "Report to Dragon for me. Tell him Dressrosa is going well.",
+        "done": "Thanks! He's not much of a talker, huh?",
+        "target": "dragon"
+      },
+      {
+        "type": "fetch",
+        "berries": 20,
+        "start": "I bent my pipe again. Bring 16 iron ingots for a new one.",
+        "done": "Perfect! Good as new.",
+        "item": "minecraft:iron_ingot",
+        "count": 16
+      },
+      {
+        "type": "defeat",
+        "berries": 300,
+        "start": "Fujitora is a fair man, but he stands in our way. Here's his poster.",
+        "done": "Great job! Ace would be proud.",
+        "target": "fujitora",
+        "rewardItem": "minecraft:blaze_rod",
+        "rewardCount": 8
+      }
+    ],
+    "thanks": "Next stop: the Revolution."
+  },
+  {
+    "id": "ace",
+    "name": "Portgas D. Ace",
+    "role": "quest",
+    "tier": 4,
+    "health": 250,
+    "damage": 13,
+    "bounty": 45,
+    "scale": 1.03,
+    "power": "fire",
+    "greeting": "Thanks for looking after my little brother.",
+    "hardPower": "quake",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "fruitItem": "onepiece:mera_mera_no_mi",
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 20,
+        "start": "I just ate, but I could eat more. Bring 16 porkchops! ...Zzz.",
+        "done": "Huh? Oh, food! Thanks!",
+        "item": "minecraft:cooked_porkchop",
+        "count": 16
+      },
+      {
+        "type": "defeat",
+        "berries": 60,
+        "start": "Smoker keeps chasing Luffy. Mind giving him some smoke of his own?",
+        "done": "Ha! You've got guts.",
+        "target": "smoker",
+        "rewardItem": "minecraft:fire_charge",
+        "rewardCount": 16
+      },
+      {
+        "type": "defeat",
+        "berries": 400,
+        "start": "Teach killed a crewmate and ran. As 2nd Division Commander, I'm going after him. Help me.",
+        "done": "You did what I couldn't. Thank you.",
+        "target": "blackbeard"
+      }
+    ],
+    "thanks": "Zzz... oh, sorry, I fell asleep."
+  },
+  {
+    "id": "marco",
+    "name": "Marco",
+    "role": "quest",
+    "tier": 5,
+    "health": 400,
+    "damage": 18,
+    "bounty": 64,
+    "scale": 1.13,
+    "power": "heal",
+    "greeting": "Yoi. What do you need?",
+    "hardPower": "beast",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "fruitItem": "onepiece:tori_tori_no_mi_phoenix",
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 20,
+        "start": "I'm a doctor these days, yoi. Bring 8 golden carrots for my patients.",
+        "done": "Thanks, yoi.",
+        "item": "minecraft:golden_carrot",
+        "count": 8
+      },
+      {
+        "type": "talk",
+        "berries": 20,
+        "start": "Go see Ace. Tell him Pops says don't do anything reckless, yoi.",
+        "done": "He'll be reckless anyway, yoi.",
+        "target": "ace"
+      },
+      {
+        "type": "defeat",
+        "berries": 400,
+        "start": "Akainu killed Ace. Here's his poster, yoi.",
+        "done": "Thank you. Ace can rest now.",
+        "target": "akainu",
+        "rewardItem": "minecraft:totem_of_undying",
+        "rewardCount": 2
+      }
+    ],
+    "thanks": "I'm just a doctor now, yoi."
+  },
+  {
+    "id": "rayleigh",
+    "name": "Silvers Rayleigh",
+    "role": "quest",
+    "tier": 5,
+    "health": 400,
+    "damage": 18,
+    "bounty": 64,
+    "scale": 1.04,
+    "power": "haki",
+    "greeting": "Ah, young one. Want to learn Haki?",
+    "hardPower": "haki",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "heldItem": "minecraft:diamond_sword",
+    "quests": [
+      {
+        "type": "talk",
+        "berries": 20,
+        "start": "Say hello to Shanks for me. He was a little cabin boy back then.",
+        "done": "He sent his regards? Good lad.",
+        "target": "shanks"
+      },
+      {
+        "type": "defeat",
+        "berries": 30,
+        "start": "Buggy's gotten full of himself. Take him down a peg, would you?",
+        "done": "Hahaha! He'll get over it.",
+        "target": "buggy"
+      },
+      {
+        "type": "defeat",
+        "berries": 300,
+        "start": "Kizaru again. I'm getting too old for this. Go on, poster's yours.",
+        "done": "Splendid! Your Haki is getting strong.",
+        "target": "kizaru",
+        "rewardItem": "minecraft:experience_bottle",
+        "rewardCount": 32
+      }
+    ],
+    "thanks": "Let's have a drink at Shakky's."
+  },
+  {
+    "id": "roger",
+    "name": "Gol D. Roger",
+    "role": "quest",
+    "tier": 5,
+    "health": 400,
+    "damage": 18,
+    "bounty": 64,
+    "scale": 1.52,
+    "power": "haki",
+    "greeting": "Wahahaha! My treasure? Go look for it!",
+    "hardPower": "haki",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "heldItem": "minecraft:diamond_sword",
+    "quests": [
+      {
+        "type": "talk",
+        "berries": 20,
+        "start": "Find my partner Rayleigh. Tell him the voyage isn't over.",
+        "done": "Wahahaha! That's my first mate!",
+        "target": "rayleigh"
+      },
+      {
+        "type": "talk",
+        "berries": 20,
+        "start": "Oden sailed with me to Laugh Tale. Go tell him I said thanks.",
+        "done": "He cried? Of course he did!",
+        "target": "oden"
+      },
+      {
+        "type": "defeat",
+        "berries": 500,
+        "start": "Newgate and I fought for three days and nights. Let's see if you can do better.",
+        "done": "Wahahaha! You might find the One Piece after all!",
+        "target": "whitebeard",
+        "rewardItem": "minecraft:nether_star",
+        "rewardCount": 1
+      },
+      {
+        "type": "explore",
+        "berries": 60,
+        "target": "twin_capes_lighthouse",
+        "start": "Every great voyage starts at the Twin Capes. Go stand where the Grand Line begins and feel it!",
+        "done": "Wahaha! You felt it, didn't you? That's the start of an adventure."
+      }
+    ],
+    "thanks": "I'll be waiting at Laugh Tale."
+  },
+  {
+    "id": "oden",
+    "name": "Kozuki Oden",
+    "role": "quest",
+    "tier": 5,
+    "health": 400,
+    "damage": 18,
+    "bounty": 64,
+    "scale": 2.12,
+    "power": "sword",
+    "greeting": "Ha! Wano is waiting to open its borders!",
+    "hardPower": "haki",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "heldItem": "minecraft:netherite_sword",
+    "offhandItem": "minecraft:netherite_sword",
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 15,
+        "start": "Bring me 16 baked potatoes! I'll make a hot pot.",
+        "done": "Delicious! Now that's Oden!",
+        "item": "minecraft:baked_potato",
+        "count": 16
+      },
+      {
+        "type": "talk",
+        "berries": 20,
+        "start": "Tell Kin'emon that the Red Scabbards must be ready in 20 years.",
+        "done": "Good. They will be.",
+        "target": "kinemon"
+      },
+      {
+        "type": "defeat",
+        "berries": 200,
+        "start": "King is Kaido's strongest commander. Here's his poster.",
+        "done": "Splendid! Wano is one step closer to freedom.",
+        "target": "king",
+        "rewardItem": "minecraft:netherite_sword",
+        "rewardCount": 1
+      }
+    ],
+    "thanks": "Boiled in oil? That's nothing!"
+  },
+  {
+    "id": "yamato",
+    "name": "Yamato",
+    "role": "quest",
+    "tier": 5,
+    "health": 400,
+    "damage": 18,
+    "bounty": 64,
+    "scale": 1.46,
+    "power": "ice",
+    "greeting": "I am Kozuki Oden!",
+    "hardPower": "haki",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "fruitItem": "onepiece:inu_inu_no_mi_okuchi_no_makami",
+    "heldItem": "minecraft:mace",
+    "quests": [
+      {
+        "type": "talk",
+        "berries": 20,
+        "start": "I want to meet my hero, Oden! Tell him I've read his journal a hundred times.",
+        "done": "He knows who I am?! This is the best day!",
+        "target": "oden"
+      },
+      {
+        "type": "fetch",
+        "berries": 20,
+        "start": "Help me build a snow fort! 16 packed ice please.",
+        "done": "Perfect! Like Onigashima's frozen halls.",
+        "item": "minecraft:packed_ice",
+        "count": 16
+      },
+      {
+        "type": "defeat",
+        "berries": 400,
+        "start": "My father Kaido keeps Wano in chains. Here's his poster. Let's free Wano!",
+        "done": "Wano is free! Can I sail with you now?",
+        "target": "kaido",
+        "rewardItem": "minecraft:enchanted_golden_apple",
+        "rewardCount": 2
+      }
+    ],
+    "thanks": "I want to see the world like Oden did."
+  },
+  {
+    "id": "katakuri",
+    "name": "Charlotte Katakuri",
+    "role": "boss",
+    "tier": 4,
+    "health": 1000,
+    "damage": 15,
+    "bounty": 100,
+    "scale": 2.51,
+    "power": "petrify",
+    "greeting": "I can see the future.",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "fruitItem": "onepiece:mochi_mochi_no_mi",
+    "heldItem": "onepiece:mogura"
+  },
+  {
+    "id": "king",
+    "name": "King",
+    "role": "boss",
+    "tier": 4,
+    "health": 1100,
+    "damage": 16,
+    "bounty": 100,
+    "scale": 3.4,
+    "power": "fire",
+    "greeting": "You think you can stand against the Beasts?",
+    "hardPower": "beast",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "fruitItem": "onepiece:ryu_ryu_no_mi_pteranodon",
+    "heldItem": "minecraft:iron_sword"
+  },
+  {
+    "id": "enel",
+    "heldItem": "onepiece:nonosama_bo",
+    "name": "Enel",
+    "role": "boss",
+    "tier": 3,
+    "health": 400,
+    "damage": 10,
+    "bounty": 45,
+    "scale": 1.48,
+    "power": "lightning",
+    "greeting": "Yahahaha! I am God!",
+    "hardPower": "teleport",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:experience_bottle"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "fruitItem": "onepiece:goro_goro_no_mi"
+  },
+  {
+    "id": "kinemon",
+    "name": "Kin'emon",
+    "role": "quest",
+    "tier": 3,
+    "health": 150,
+    "damage": 9,
+    "bounty": 25,
+    "scale": 1.06,
+    "power": "fire",
+    "greeting": "Greetings, friend of Lord Oden!",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:experience_bottle"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "fruitItem": "onepiece:fuku_fuku_no_mi",
+    "heldItem": "minecraft:iron_sword",
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 40,
+        "start": "Our raid needs blades. Bring 24 iron ingots.",
+        "done": "Splendid! Our swords will be sharp.",
+        "item": "minecraft:iron_ingot",
+        "count": 24,
+        "rewardItem": "minecraft:iron_sword",
+        "rewardCount": 1
+      },
+      {
+        "type": "talk",
+        "berries": 20,
+        "start": "Ask Luffy if the Straw Hats will fight beside the samurai of Wano.",
+        "done": "He agreed! Wonderful!",
+        "target": "luffy"
+      },
+      {
+        "type": "defeat",
+        "berries": 80,
+        "start": "Hawkins guards the path to Onigashima. Here is his poster.",
+        "done": "The way is clear. For Wano!",
+        "target": "hawkins"
+      },
+      {
+        "type": "deliver",
+        "berries": 45,
+        "item": "minecraft:cooked_salmon",
+        "count": 8,
+        "target": "oden",
+        "start": "Lord Oden longs for the taste of Wano. Carry this grilled fish to him, with my respects.",
+        "done": "He smiled? Then my duty as a retainer is done."
+      }
+    ],
+    "thanks": "For Wano!"
+  },
+  {
+    "id": "vegapunk",
+    "name": "Dr. Vegapunk",
+    "role": "trader",
+    "tier": 4,
+    "health": 250,
+    "damage": 13,
+    "bounty": 45,
+    "scale": 0.94,
+    "power": "lightning",
+    "greeting": "Science will save the future! Need anything?",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "fruitItem": "onepiece:nomi_nomi_no_mi",
+    "levels": [
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 3,
+          "sell": "minecraft:redstone",
+          "sellCount": 8,
+          "maxUses": 16,
+          "xp": 2
+        },
+        {
+          "buy": "minecraft:diamond",
+          "buyCount": 4,
+          "sell": "onepiece:berry",
+          "sellCount": 8,
+          "maxUses": 16,
+          "xp": 2
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 8,
+          "sell": "minecraft:observer",
+          "sellCount": 4,
+          "maxUses": 12,
+          "xp": 5
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 8,
+          "sell": "minecraft:comparator",
+          "sellCount": 4,
+          "maxUses": 12,
+          "xp": 5
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 10,
+          "sell": "minecraft:ender_pearl",
+          "sellCount": 2,
+          "maxUses": 12,
+          "xp": 10
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 8,
+          "sell": "minecraft:experience_bottle",
+          "sellCount": 8,
+          "maxUses": 12,
+          "xp": 10
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry_block",
+          "buyCount": 3,
+          "sell": "minecraft:netherite_scrap",
+          "sellCount": 1,
+          "maxUses": 8,
+          "xp": 15
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 16,
+          "sell": "minecraft:crafter",
+          "sellCount": 2,
+          "maxUses": 8,
+          "xp": 15
+        }
+      ],
+      [
+        {
+          "buy": "onepiece:berry_block",
+          "buyCount": 20,
+          "sell": "minecraft:elytra",
+          "sellCount": 1,
+          "maxUses": 4,
+          "xp": 30
+        },
+        {
+          "buy": "onepiece:berry",
+          "buyCount": 32,
+          "sell": "minecraft:end_crystal",
+          "sellCount": 2,
+          "maxUses": 4,
+          "xp": 30
+        }
+      ]
+    ],
+    "quests": [
+      {
+        "type": "fetch",
+        "berries": 40,
+        "start": "Science needs materials! Bring me 8 Wapometal ingots for my next invention.",
+        "done": "Excellent! The lab will put these to good use.",
+        "item": "onepiece:wapometal_ingot",
+        "count": 8
+      },
+      {
+        "type": "explore",
+        "berries": 100,
+        "start": "The Void Century hides the truth of this world. Go to its ruins and tell me what you see.",
+        "done": "So the ruins remain... The world deserves to know what happened.",
+        "target": "void_century_ruins",
+        "rewardItem": "minecraft:book",
+        "rewardCount": 8
+      },
+      {
+        "type": "defeat",
+        "berries": 250,
+        "start": "Kizaru was sent to Egghead to silence me. He's not a bad man, but he follows orders. Stop him.",
+        "done": "You stopped a light-speed Admiral? My data never predicted that!",
+        "target": "kizaru",
+        "rewardItem": "minecraft:netherite_scrap",
+        "rewardCount": 2
+      }
+    ],
+    "thanks": "Knowledge belongs to everyone. Stop by any time."
+  },
+  {
+    "id": "magellan",
+    "name": "Magellan",
+    "role": "boss",
+    "tier": 4,
+    "health": 650,
+    "damage": 12,
+    "bounty": 70,
+    "scale": 1.67,
+    "power": "poison",
+    "greeting": "...Excuse me, I need the bathroom first. Then I'll deal with you.",
+    "hardPower": "curse",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "fruitItem": "onepiece:doku_doku_no_mi"
+  },
+  {
+    "id": "ivankov",
+    "name": "Emporio Ivankov",
+    "role": "quest",
+    "tier": 4,
+    "health": 250,
+    "damage": 13,
+    "bounty": 45,
+    "scale": 1.48,
+    "power": "paw",
+    "greeting": "Hee-haw! Welcome to Newkama Land, candy boy!",
+    "hardPower": "punch",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "fruitItem": "onepiece:horu_horu_no_mi",
+    "quests": [
+      {
+        "type": "fetch",
+        "item": "minecraft:pink_tulip",
+        "count": 8,
+        "berries": 30,
+        "start": "Newkama Land needs more color! Bring Iva-sama 8 pink tulips, hee-haw!",
+        "done": "Ve-ry good, candy boy!"
+      },
+      {
+        "type": "talk",
+        "target": "luffy",
+        "berries": 40,
+        "start": "Straw-boy is Dragon's son! Go tell him Iva-sama is on his side!",
+        "done": "He remembers me? Hee-haw!"
+      },
+      {
+        "type": "defeat",
+        "target": "magellan",
+        "berries": 300,
+        "start": "Magellan's poison guards the lowest floors of Impel Down. Beat him so we can all break out! Here's his poster.",
+        "done": "FREEDOM! A Death Wink of thanks, hee-haw!",
+        "rewardItem": "minecraft:totem_of_undying",
+        "rewardCount": 2
+      }
+    ],
+    "thanks": "Miracles happen to those who never give up, hee-haw!"
+  },
+  {
+    "id": "imu",
+    "name": "Imu",
+    "role": "boss",
+    "tier": 5,
+    "health": 2200,
+    "damage": 24,
+    "bounty": 300,
+    "scale": 1.67,
+    "power": "darkness",
+    "greeting": "...You have seen too much.",
+    "hardPower": "haki",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star",
+      "minecraft:nether_star"
+    ],
+    "bonusDrop": "minecraft:nether_star"
+  },
+  {
+    "id": "loki",
+    "name": "Loki",
+    "role": "boss",
+    "tier": 5,
+    "health": 1900,
+    "damage": 22,
+    "bounty": 260,
+    "scale": 15.0,
+    "power": "lightning",
+    "greeting": "Free me from these chains... and I'll show you why Elbaph fears its prince.",
+    "hardPower": "dragon",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ],
+    "fruitItem": "onepiece:ryu_ryu_no_mi_nidhogg",
+    "heldItem": "minecraft:mace"
+  },
+  {
+    "id": "xebec",
+    "name": "Rocks D. Xebec",
+    "role": "boss",
+    "tier": 5,
+    "health": 3000,
+    "damage": 28,
+    "bounty": 400,
+    "scale": 1.8,
+    "power": "rocks",
+    "greeting": "Ha! I'll take the head of God himself... and you're in my way!",
+    "hardPower": "haki",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:nether_star"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star",
+      "minecraft:nether_star"
+    ],
+    "fruitItem": "onepiece:yami_yami_no_mi",
+    "heldItem": "minecraft:netherite_sword",
+    "bonusDrop": "onepiece:wanted_poster_xebec"
+  },
+  {
+    "id": "queen",
+    "name": "Queen the Plague",
+    "role": "boss",
+    "tier": 4,
+    "health": 1100,
+    "damage": 16,
+    "bounty": 95,
+    "scale": 3.39,
+    "power": "beast",
+    "greeting": "Murrrrrrrrrr! You're late for the show, prisoner!",
+    "hardPower": "poison",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ],
+    "fruitItem": "onepiece:ryu_ryu_no_mi_brachiosaurus"
+  },
+  {
+    "id": "saturn",
+    "name": "Saint Jaygarcia Saturn",
+    "role": "boss",
+    "tier": 5,
+    "health": 1500,
+    "damage": 19,
+    "bounty": 250,
+    "scale": 2.22,
+    "power": "poison",
+    "greeting": "Bugs. All of you. Kneel.",
+    "hardPower": "curse",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ]
+  },
+  {
+    "id": "hody",
+    "name": "Hody Jones",
+    "role": "boss",
+    "tier": 4,
+    "health": 750,
+    "damage": 14,
+    "bounty": 70,
+    "scale": 1.83,
+    "power": "punch",
+    "greeting": "Humans belong at the bottom of the sea. I'll put you there myself!",
+    "hardPower": "beast",
+    "hardRewards": [
+      "minecraft:golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying"
+    ]
+  },
+  {
+    "id": "shamrock",
+    "name": "Figarland Shamrock",
+    "role": "boss",
+    "tier": 5,
+    "health": 1400,
+    "damage": 19,
+    "bounty": 160,
+    "scale": 1.11,
+    "power": "haki",
+    "greeting": "So you're the one my brother bet on. The Holy Land will judge that.",
+    "hardPower": "curse",
+    "heldItem": "minecraft:netherite_sword",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ]
+  },
+  {
+    "id": "gunko",
+    "name": "Saint Gunko",
+    "role": "boss",
+    "tier": 5,
+    "health": 1200,
+    "damage": 18,
+    "bounty": 140,
+    "scale": 0.98,
+    "power": "haki",
+    "greeting": "Elbaph broke the Holy Land's rules. Rules are rules. No ifs, no buts.",
+    "hardPower": "curse",
+    "heldItem": "minecraft:netherite_sword",
+    "hardRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:diamond",
+      "minecraft:netherite_scrap"
+    ],
+    "expertRewards": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:netherite_ingot",
+      "minecraft:totem_of_undying",
+      "minecraft:nether_star"
+    ]
+  }
+]

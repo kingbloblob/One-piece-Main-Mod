@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "FFF",
+    "PDP"
+  ],
+  "key": {
+    "F": "#minecraft:small_flowers",
+    "P": "minecraft:spruce_planks",
+    "D": "minecraft:dirt"
+  },
+  "result": {
+    "count": 2,
+    "id": "onepiece:flower_box"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:tall_grass",
+    "minecraft:red_dye"
+  ],
+  "result": {
+    "id": "onepiece:passion_rose",
+    "count": 2
+  }
+}

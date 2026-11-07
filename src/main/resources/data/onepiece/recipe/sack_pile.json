@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "onepiece:grain_sack",
+    "onepiece:grain_sack",
+    "onepiece:grain_sack"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:sack_pile"
+  }
+}

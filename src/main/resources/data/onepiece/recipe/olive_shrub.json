@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bush",
+    "minecraft:green_dye"
+  ],
+  "result": {
+    "id": "onepiece:olive_shrub",
+    "count": 2
+  }
+}

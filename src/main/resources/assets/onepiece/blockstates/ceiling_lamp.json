@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/ceiling_lamp"
+    },
+    "facing=east": {
+      "model": "onepiece:block/ceiling_lamp",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/ceiling_lamp",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/ceiling_lamp",
+      "y": 270
+    }
+  }
+}

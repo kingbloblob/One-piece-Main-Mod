@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:vegetation_patch",
+  "depth": 2,
+  "extra_bottom_block_chance": 0.0,
+  "extra_edge_column_chance": 0.4,
+  "ground_state": {
+    "type": "minecraft:weighted",
+    "entries": [
+      {
+        "data": "minecraft:basalt",
+        "weight": 6
+      },
+      {
+        "data": "minecraft:smooth_basalt",
+        "weight": 3
+      },
+      {
+        "data": "minecraft:magma_block",
+        "weight": 2
+      },
+      {
+        "data": "onepiece:sulfur_vent",
+        "weight": 3
+      },
+      {
+        "data": "onepiece:sulfur_ore",
+        "weight": 1
+      },
+      {
+        "data": "minecraft:blackstone",
+        "weight": 2
+      }
+    ]
+  },
+  "replaceable": "#onepiece:underground_patch_replaceable",
+  "surface": "floor",
+  "vegetation_chance": 0.0,
+  "vegetation_feature": {
+    "feature": {
+      "type": "minecraft:simple_block",
+      "to_place": {
+        "id": "minecraft:cave_air"
+      }
+    },
+    "placement": []
+  },
+  "vertical_range": 5,
+  "xz_radius": {
+    "type": "minecraft:uniform",
+    "min_inclusive": 3,
+    "max_inclusive": 7
+  }
+}

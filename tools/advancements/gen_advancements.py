@@ -1,0 +1,769 @@
+"""Writes the One Piece advancements (achievements) into the shared source.
+
+Run:  python3 gen_advancements.py [source dir, default ../../source]
+
+Writes:
+  data/onepiece/advancement/{journey,powers,pirate,wonders}/*.json
+  assets/onepiece_advancements/lang/en_us.json
+  assets/onepiece/textures/gui/advancements/backgrounds/{grand_line,powers,pirate,wonders}.png
+
+Advancements marked CODE have one impossible criterion called "done". They are awarded from Java by
+com.onepiecemod.advancement.AdvancementChecks, which keeps a check for each of those ids. Everything else
+uses vanilla triggers and needs no code.
+"""
+import json
+import os
+import random
+import shutil
+import sys
+
+from PIL import Image
+
+SRC = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file__), "..", "..", "source")
+RES = os.path.join(SRC, "src", "main", "resources")
+ADV = os.path.join(RES, "data", "onepiece", "advancement")
+LANG = os.path.join(RES, "assets", "onepiece_advancements", "lang", "en_us.json")
+BG = os.path.join(RES, "assets", "onepiece", "textures", "gui", "advancements", "backgrounds")
+
+CODE = "code"
+
+
+def has_items(*ids):
+    """inventory_changed: any one of these items."""
+    return {"trigger": "minecraft:inventory_changed",
+            "conditions": {"items": [{"items": list(ids) if len(ids) > 1 else ids[0]}]}}
+
+
+def killed(entity):
+    return {"trigger": "minecraft:player_killed_entity",
+            "conditions": {"entity": {"type": "minecraft:entity_properties", "entity": "this",
+                                      "predicate": {"minecraft:entity_type": entity}}}}
+
+
+def at(kind, value):
+    """location: standing in a biome or structure."""
+    return {"trigger": "minecraft:location",
+            "conditions": {"player": {"type": "minecraft:entity_properties", "entity": "this",
+                                      "predicate": {"minecraft:location": {kind: value}}}}}
+
+
+ISLANDS = ["east_blue", "dressrosa", "zou", "sabaody", "whole_cake", "wano", "drum_island", "elbaph", "egghead",
+           "alabasta", "jaya", "skypiea", "fishman_reef", "amazon_lily", "punk_hazard_frozen",
+           "punk_hazard_burning", "little_garden", "thriller_bark", "onigashima", "red_line"]
+
+# (id, parent, icon, title, description, frame, criteria, extra)
+# criteria: CODE, one criterion dict, or {name: criterion} (all must be met).
+A = []
+
+
+def adv(id, parent, icon, title, desc, frame="task", criteria=CODE, **extra):
+    A.append(dict(id=id, parent=parent, icon=icon, title=title, desc=desc, frame=frame, criteria=criteria, **extra))
+
+
+# ---------------- Tab 1: The Grand Line (story, navigation, the sea) ----------------
+adv("journey/root", None, "onepiece:log_pose", "The Grand Line",
+    "Set out to find the One Piece", background="onepiece:gui/advancements/backgrounds/grand_line")
+
+story = [
+    ("romance_dawn", "set_sail", "minecraft:oak_boat", "Romance Dawn", "Finish the Romance Dawn chapters and set sail", "task"),
+    ("baratie", "baratie", "onepiece:cooked_sea_king_meat", "The Sea Restaurant", "Finish the Baratie chapter", "task"),
+    ("east_blue", "arlong_park", "onepiece:mikan", "Hero of the East Blue", "Free Cocoyasi Village from Arlong", "task"),
+    ("loguetown", "loguetown", "minecraft:lightning_rod", "Where It All Began", "Escape Loguetown, the town of the beginning and the end", "task"),
+    ("reverse_mountain", "reverse_mountain", "onepiece:log_pose", "Into the Grand Line", "Climb Reverse Mountain into the Grand Line", "goal"),
+    ("drum_island", "drum_island", "minecraft:snow_block", "Cherry Blossoms in Winter", "Finish the Drum Island chapter", "task"),
+    ("alabasta", "alabasta", "onepiece:alabasta_sandstone_bricks", "Kingdom of Sand", "Save Alabasta from Crocodile", "task"),
+    ("sky_island", "sky_island", "onepiece:island_cloud", "The Sky Is Real", "Finish the Sky Island chapter", "task"),
+    ("enies_lobby", "enies_lobby", "onepiece:jolly_roger", "Declaration of War", "Storm Enies Lobby", "task"),
+    ("thriller_bark", "thriller_bark", "minecraft:wither_rose", "Nightmare Ship", "Get your shadow back at Thriller Bark", "task"),
+    ("sabaody", "sabaody", "onepiece:bubble_glass", "Sabaody Archipelago", "Reach the end of Paradise", "goal"),
+    ("amazon_lily", "amazon_lily", "minecraft:pink_tulip", "Island of Women", "Finish the Amazon Lily chapter", "task"),
+    ("impel_down_escape", "impel_down", "onepiece:prison_bars", "Great Prison Break", "Break through every level of Impel Down", "goal"),
+    ("marineford", "marineford", "onepiece:marine_bricks", "Summit War", "Live through the war at Marineford", "task"),
+    ("paramount_war", "paramount_war", "minecraft:fire_charge", "The Paramount War", "Break through to the execution platform at Marineford", "task"),
+    ("training", "training", "onepiece:dojo_scroll_santoryu", "Two Years Later", "Finish your two years of training", "goal"),
+    ("fishman_island", "fishman_island", "onepiece:coral_bricks", "10,000 Leagues Under the Sea", "Finish the Fish-Man Island chapter", "task"),
+    ("punk_hazard", "punk_hazard", "minecraft:magma_block", "Fire and Ice", "Finish the Punk Hazard chapter", "task"),
+    ("dressrosa", "dressrosa", "onepiece:dressrosa_mosaic", "Birdcage Breaker", "Free Dressrosa from Doflamingo", "task"),
+    ("zou", "zou", "onepiece:road_poneglyph_zou", "The Elephant Who Walks", "Finish the Zou chapter", "task"),
+    ("whole_cake", "whole_cake", "onepiece:chocolate_block", "Tea Party Crasher", "Escape Whole Cake Island", "task"),
+    ("wano", "wano", "onepiece:wano_roof_tiles", "Dawn of Wano", "Free Wano from Kaido", "goal"),
+    ("egghead", "egghead_incident", "onepiece:vegapunk_chip", "Island of the Future", "Get off Egghead alive with Vegapunk's message out", "goal"),
+    ("hachinosu", "hachinosu", "onepiece:berry", "Pirate Island", "Defeat Blackbeard's crew at Hachinosu", "task"),
+]
+parent = "journey/root"
+for adv_id, chapter, icon, title, desc, frame in story:
+    adv("journey/" + adv_id, parent, icon, title, desc, frame, chapter=chapter)
+    parent = "journey/" + adv_id
+adv("journey/laugh_tale", parent, "onepiece:the_one_piece", "The One Piece Is Real!",
+    "Reach Laugh Tale and find the One Piece", "challenge", chapter="laugh_tale", xp=500)
+# Post-game saga in the End. Hidden, so they don't spoil the ending.
+adv("journey/red_line", "journey/laugh_tale", "minecraft:end_stone_bricks", "The Holy Land",
+    "Climb the Red Line to Mary Geoise", "goal", chapter="red_line", hidden=True)
+adv("journey/void_century", "journey/red_line", "onepiece:poneglyph", "The True History",
+    "Uncover what happened in the Void Century", "goal", chapter="void_century", hidden=True)
+adv("journey/empty_throne", "journey/void_century", "minecraft:dragon_egg", "The Empty Throne",
+    "Defeat the one who sits on the Empty Throne", "challenge", chapter="empty_throne", xp=1000, hidden=True)
+adv("journey/dawn", "journey/empty_throne", "minecraft:note_block", "The Dawn of the World",
+    "Read the whole true history at Laugh Tale and hear the Drums of Liberation", "challenge", chapter="dawn", xp=1500, hidden=True)
+
+# Navigation
+adv("journey/log_pose", "journey/root", "onepiece:log_pose", "Follow the Needle",
+    "Record your first island with a Log Pose")
+adv("journey/five_islands", "journey/log_pose", "onepiece:log_pose", "Island Hopper",
+    "Record 5 islands with a Log Pose")
+adv("journey/ten_islands", "journey/five_islands", "onepiece:log_pose", "Seasoned Navigator",
+    "Record 10 islands with a Log Pose", "goal")
+adv("journey/eternal_pose", "journey/log_pose", "onepiece:eternal_pose", "A Fixed Course",
+    "Get an Eternal Pose", criteria=has_items("onepiece:eternal_pose"))
+adv("journey/land_ho", "journey/root", "onepiece:palm_sapling", "Land Ho!",
+    "Set foot on a Grand Line island", criteria=at("biomes", "#onepiece:one_piece_islands"))
+adv("journey/all_islands", "journey/land_ho", "minecraft:filled_map", "Adventurer of the Grand Line",
+    "Visit every island of the Grand Line", "challenge",
+    criteria={b: at("biomes", "onepiece:" + b) for b in ISLANDS}, xp=300)
+for sid, structure, icon, title, desc in [
+    ("sabaody_park", "sabaody_park", "onepiece:bubble_glass", "Bubbles and Mangroves", "Visit Sabaody Park"),
+    ("ryugu_palace", "ryugu_palace", "onepiece:pearl_block", "Under the Sea", "Find Ryugu Palace"),
+    ("weatheria", "weatheria", "onepiece:cloud_puff", "Weather Science", "Find Weatheria in the sky"),
+    ("ohara", "ohara_library", "minecraft:book", "Ohara's Legacy", "Find the ruins of the Ohara library"),
+]:
+    adv("journey/" + sid, "journey/land_ho", icon, title, desc, criteria=at("structures", "onepiece:" + structure))
+adv("journey/impel_down", "journey/land_ho", "onepiece:prison_bars", "Jailbreak",
+    "Find the great prison, Impel Down", criteria=at("structures", "onepiece:impel_down"), hidden=True)
+
+# The sea
+adv("journey/sail", "journey/root", "onepiece:ships_wheel", "Sail Away", "Take the helm of your own ship")
+adv("journey/jolly_roger", "journey/sail", "onepiece:jolly_roger", "Raise the Flag",
+    "Get a Jolly Roger for your ship", criteria=has_items("onepiece:jolly_roger"))
+adv("journey/calm_belt", "journey/sail", "minecraft:feather", "Windless Waters",
+    "Sail your ship into the Calm Belt", "goal")
+adv("journey/sea_king", "journey/sail", "onepiece:sea_king_meat", "Sea King Slayer",
+    "Defeat a Sea King", "goal", criteria=killed("onepiece:sea_king"))
+
+# ---------------- Tab 2: Powers (Devil Fruits, Haki, fighting styles) ----------------
+adv("powers/root", None, "onepiece:gomu_gomu_no_mi", "Hidden Power",
+    "Grow stronger with Devil Fruits, Haki and fighting styles",
+    background="onepiece:gui/advancements/backgrounds/powers")
+adv("powers/race", "powers/root", "minecraft:player_head", "Who Are You?", "Choose your race")
+adv("powers/devil_fruit", "powers/root", "onepiece:gomu_gomu_no_mi", "A Cursed Bite",
+    "Eat a Devil Fruit. You will never swim again")
+adv("powers/paramecia", "powers/devil_fruit", "onepiece:ope_ope_no_mi", "Superhuman",
+    "Eat a Paramecia fruit")
+adv("powers/logia", "powers/devil_fruit", "onepiece:mera_mera_no_mi", "One With the Elements",
+    "Eat a Logia fruit")
+adv("powers/zoan", "powers/devil_fruit", "onepiece:tori_tori_no_mi_phoenix", "Wild Side",
+    "Eat a Zoan fruit")
+adv("powers/mastery", "powers/devil_fruit", "minecraft:experience_bottle", "Getting the Hang of It",
+    "Get a quarter of the way to awakening your Devil Fruit")
+adv("powers/mastery_max", "powers/mastery", "minecraft:enchanted_book", "Fruit Master",
+    "Master your Devil Fruit (1,000 mastery, or the amount set in the mod settings)", "goal")
+adv("powers/awakening", "powers/mastery_max", "minecraft:nether_star", "Awakened",
+    "Awaken your Devil Fruit", "challenge", xp=300)
+
+adv("powers/observation", "powers/root", "minecraft:ender_eye", "Sixth Sense", "Unlock Observation Haki")
+adv("powers/observation_max", "powers/observation", "minecraft:spyglass", "Future Sight",
+    "Master Observation Haki", "goal")
+adv("powers/armament", "powers/root", "minecraft:iron_ingot", "Iron Will", "Unlock Armament Haki")
+adv("powers/armament_max", "powers/armament", "minecraft:netherite_ingot", "Ryuo",
+    "Master Armament Haki", "goal")
+adv("powers/conqueror", "powers/root", "minecraft:golden_helmet", "King's Disposition",
+    "Awaken Conqueror's Haki", "goal")
+adv("powers/conqueror_max", "powers/conqueror", "minecraft:dragon_head", "Supreme King",
+    "Master Conqueror's Haki", "challenge", xp=300)
+
+adv("powers/style", "powers/root", "onepiece:dojo_scroll_black_leg", "Martial Artist", "Learn a fighting style")
+adv("powers/three_styles", "powers/style", "onepiece:dojo_scroll_rokushiki", "Student of Many",
+    "Learn 3 fighting styles")
+adv("powers/all_styles", "powers/three_styles", "onepiece:dojo_scroll_santoryu", "Master of Every Style",
+    "Learn every fighting style", "challenge", xp=200)
+adv("powers/named_sword", "powers/style", "onepiece:wado_ichimonji", "A Blade With a Name",
+    "Get one of the named swords", criteria=has_items("onepiece:wado_ichimonji", "onepiece:sandai_kitetsu",
+                                                     "onepiece:shusui", "onepiece:enma", "onepiece:yoru",
+                                                     "onepiece:shodai_kitetsu", "onepiece:ame_no_habakiri", "onepiece:ace"))
+adv("powers/three_swords", "powers/named_sword", "onepiece:shusui", "Three Swords at Once",
+    "Carry Wado Ichimonji, Sandai Kitetsu and Shusui together", "goal",
+    criteria={"swords": {"trigger": "minecraft:inventory_changed", "conditions": {"items": [
+        {"items": "onepiece:wado_ichimonji"}, {"items": "onepiece:sandai_kitetsu"}, {"items": "onepiece:shusui"}]}}})
+adv("powers/yoru", "powers/named_sword", "onepiece:yoru", "World's Strongest Blade",
+    "Take Yoru from Mihawk", "goal", criteria=has_items("onepiece:yoru"))
+# Late-game rewards (2026-11-03). CODE ones are granted from Java: race/Sulong, power/Awakening.rumbleAwaken,
+# weapon/BlackBlades, shipcombat/ShipyardUpgrades.
+adv("powers/legendary_sword", "powers/yoru", "onepiece:ace", "Legend of the Blade",
+    "Get Shodai Kitetsu, Ame no Habakiri or Roger's sword Ace", "challenge",
+    criteria=has_items("onepiece:shodai_kitetsu", "onepiece:ame_no_habakiri", "onepiece:ace"))
+adv("powers/black_blade", "powers/named_sword", "onepiece:kokuto_blade", "Kokuto",
+    "Temper a sword into a Black Blade with Armament Haki", "challenge")
+adv("powers/sulong", "powers/race", "minecraft:white_wool", "Sulong!",
+    "As a Mink, turn Sulong under the full moon (or with a Rumble Ball)")
+adv("powers/sulong_master", "powers/sulong", "minecraft:white_wool", "Master of the Moon",
+    "Train Sulong until you can call it up at will", "challenge")
+adv("powers/rumble_awakening", "powers/mastery", "onepiece:rumble_ball", "Rumble!",
+    "Force your Devil Fruit to awaken with a Rumble Ball")
+adv("powers/wild_nika", "powers/mastery", "onepiece:gomu_gomu_no_mi", "Gone Wild",
+    "Go feral in Gear 5: press the Awaken key again while Sun God Nika is active", "challenge")
+adv("journey/legendary_ship", "journey/sail", "onepiece:hull_plating", "Legendary Ship",
+    "Fit a level 5 upgrade to your ship", "challenge")
+
+# ---------------- Tab 3: Pirate Life (bounty, bosses, crew, titles, gear) ----------------
+adv("pirate/root", None, "onepiece:jolly_roger", "A Pirate's Life",
+    "Bounties, battles, crews and crowns", background="onepiece:gui/advancements/backgrounds/pirate")
+
+bounties = [
+    ("bounty", "Wanted!", "Get your first bounty", "task", None),
+    ("bounty_10m", "Rookie", "Reach a 10,000,000 Berry bounty", "task", None),
+    ("bounty_100m", "Supernova", "Reach a 100,000,000 Berry bounty", "goal", None),
+    ("bounty_500m", "New World Threat", "Reach a 500,000,000 Berry bounty", "task", None),
+    ("bounty_1b", "Billion-Berry Pirate", "Reach a 1,000,000,000 Berry bounty", "goal", None),
+    ("bounty_3b", "Legend of the Seas", "Reach a 3,000,000,000 Berry bounty", "challenge", 300),
+]
+parent = "pirate/root"
+for bid, title, desc, frame, xp in bounties:
+    extra = {"xp": xp} if xp else {}
+    adv("pirate/" + bid, parent, "onepiece:bounty_poster", title, desc, frame, **extra)
+    parent = "pirate/" + bid
+adv("pirate/marine", "pirate/bounty", "minecraft:iron_sword", "Enemy of the Navy",
+    "Defeat a Marine", criteria=killed("onepiece:marine"))
+
+adv("pirate/first_boss", "pirate/root", "onepiece:wanted_poster_buggy", "Pirate Hunter", "Defeat your first boss")
+adv("pirate/hard_boss", "pirate/first_boss", "onepiece:wanted_poster_smoker", "Rematch!",
+    "Defeat a boss on Hard")
+adv("pirate/expert_boss", "pirate/hard_boss", "onepiece:wanted_poster_katakuri", "No Mercy",
+    "Defeat a boss on Expert", "goal")
+adv("pirate/worst_generation", "pirate/first_boss", "onepiece:wanted_poster_kid", "The Worst Generation",
+    "Defeat Kid, Killer and Hawkins", "goal")
+adv("pirate/warlords", "pirate/first_boss", "onepiece:wanted_poster_crocodile", "Down With the Warlords",
+    "Defeat Crocodile, Moria, Doflamingo and Mihawk", "goal")
+adv("pirate/admirals", "pirate/warlords", "onepiece:wanted_poster_akainu", "Admiral Breaker",
+    "Defeat all five Admirals", "challenge", xp=300)
+adv("pirate/emperors", "pirate/warlords", "onepiece:wanted_poster_kaido", "Emperor Slayer",
+    "Defeat Whitebeard, Big Mom, Kaido and Blackbeard", "challenge", xp=300)
+adv("pirate/all_bosses", "pirate/emperors", "minecraft:totem_of_undying", "Strongest in the World",
+    "Defeat every boss", "challenge", xp=1000)
+
+adv("pirate/crew", "pirate/root", "minecraft:white_banner", "Captain", "Start your own pirate crew")
+adv("pirate/crew_3", "pirate/crew", "minecraft:cake", "A Proper Crew", "Have 3 crewmates")
+adv("pirate/crew_full", "pirate/crew_3", "onepiece:figurehead_sunny", "Full Crew",
+    "Fill every role in your crew", "goal")
+
+adv("pirate/kingdom", "pirate/crew_full", "onepiece:kingdom_flag", "Flag Planted", "Claim a pirate kingdom")
+adv("pirate/emperor", "pirate/kingdom", "minecraft:golden_helmet", "Emperor of the Sea",
+    "Become one of the Four Emperors", "challenge", xp=500)
+adv("pirate/pirate_king", "pirate/emperor", "minecraft:gold_block", "King of the Pirates",
+    "Become the Pirate King", "challenge", xp=1000)
+adv("pirate/king_of_the_world", "pirate/pirate_king", "minecraft:netherite_block", "King of the World",
+    "Claim the highest title of all", "challenge", xp=2000, hidden=True)
+
+adv("pirate/station", "pirate/root", "onepiece:shipwright_bench", "Pirate Workshop",
+    "Get a crafting station", criteria=has_items("onepiece:shipwright_bench", "onepiece:ships_galley",
+                                                 "onepiece:navigators_desk", "onepiece:seastone_workbench",
+                                                 "onepiece:swordsmith_forge"))
+adv("pirate/seastone", "pirate/station", "onepiece:seastone_ingot", "Stone of the Sea",
+    "Smelt a Seastone ingot", criteria=has_items("onepiece:seastone_ingot"))
+adv("pirate/forge", "pirate/seastone", "onepiece:swordsmith_forge", "Master Smith",
+    "Get a Swordsmith's Forge", "goal", criteria=has_items("onepiece:swordsmith_forge"))
+adv("pirate/gun", "pirate/station", "onepiece:flintlock_pistol", "Lock and Load",
+    "Get a gun", criteria=has_items("onepiece:flintlock_pistol", "onepiece:marine_rifle", "onepiece:tommy_gun",
+                                    "onepiece:hand_cannon", "onepiece:kabuto", "onepiece:kuro_kabuto"))
+adv("pirate/rumble_ball", "pirate/station", "onepiece:rumble_ball", "Doctor's Secret",
+    "Get a Rumble Ball", criteria=has_items("onepiece:rumble_ball"))
+
+
+# ================= Second batch (2026-10-24): systems added after the first 80 =================
+
+# ---- The Grand Line: navigation gear, weather events, battles at sea ----
+adv("journey/sea_chart", "journey/log_pose", "onepiece:sea_chart", "Charting the Seas", "Get a Sea Chart",
+    criteria=has_items("onepiece:sea_chart"))
+adv("journey/vivre_card", "journey/log_pose", "minecraft:paper", "A Paper That Points Home",
+    "Get someone's Vivre Card")
+WEATHER = [
+    ("storm", "minecraft:lightning_rod", "Into the Storm", "Sail through a Grand Line storm"),
+    ("whirlpool", "minecraft:heart_of_the_sea", "Round and Round", "Get caught in a whirlpool"),
+    ("aqua_laguna", "minecraft:water_bucket", "Aqua Laguna", "Face the giant wave of Aqua Laguna"),
+    ("florian_mist", "minecraft:cobweb", "The Florian Triangle", "Get lost in the Florian Triangle mist"),
+    ("blizzard", "minecraft:powder_snow_bucket", "Sudden Blizzard", "Get caught in a blizzard at sea"),
+    ("heat_wave", "minecraft:magma_cream", "Scorching Seas", "Sail through a heat wave"),
+    ("sea_king_ambush", "onepiece:sea_king_meat", "Sea King Ambush", "Get ambushed by Sea Kings"),
+]
+# Sea exploration hazards (2026-11-03). Not part of "The Grand Line's Moods" so that one stays as it was.
+for wid, icon, title, desc in [
+    ("waterspout", "minecraft:wind_charge", "Twister at Sea", "Get caught near a waterspout"),
+    ("rogue_wave", "minecraft:prismarine_shard", "Rogue Wave", "Be at sea when a rogue wave rolls through"),
+    ("hailstorm", "minecraft:snowball", "Hail the Size of Cannonballs", "Sail through a Grand Line hailstorm"),
+]:
+    adv("journey/" + wid, "journey/sail", icon, title, desc)
+for wid, icon, title, desc in WEATHER:
+    adv("journey/" + wid, "journey/sail", icon, title, desc)
+adv("journey/all_weather", "journey/storm", "minecraft:recovery_compass", "The Grand Line's Moods",
+    "Live through every kind of sea event", "challenge", xp=250)
+adv("journey/sea_battle", "journey/sail", "onepiece:cannonball", "Pirate vs Pirate",
+    "Defeat a rival pirate", criteria=killed("onepiece:sea_pirate"))
+adv("journey/boarding_hook", "journey/sea_battle", "onepiece:boarding_hook", "Prepare to Board!",
+    "Get a Boarding Hook", criteria=has_items("onepiece:boarding_hook"))
+
+# ---- Treasure hunting (com.onepiecemod.treasure awards the CODE ones itself, via AdvancementFeature.grant) ----
+adv("journey/treasure_map", "journey/sea_chart", "onepiece:treasure_map", "X Marks the Spot",
+    "Get a treasure map", criteria=has_items("onepiece:treasure_map", "onepiece:wreck_chart", "onepiece:hoard_map", "onepiece:castaway_chart"))
+adv("journey/buried_treasure", "journey/treasure_map", "onepiece:dig_spot", "Buried Treasure",
+    "Dig up the treasure under a red X")
+adv("journey/sunken_wreck", "journey/treasure_map", "onepiece:wreck_chart", "Treasure of the Deep",
+    "Find the treasure of a sunken ship")
+adv("journey/captains_hoard", "journey/buried_treasure", "onepiece:hoard_map", "A Captain's Fortune",
+    "Dig up a captain's hoard past its guards", "goal")
+adv("journey/treasure_hunter", "journey/captains_hoard", "minecraft:gold_block", "Treasure Hunter",
+    "Find 10 treasures from maps", "challenge", xp=300)
+
+# ---- Sea exploration (com.onepiecemod.voyage and the castaway cache; all awarded from code) ----
+adv("journey/ride_the_wave", "journey/rogue_wave", "minecraft:oak_boat", "Bow First",
+    "Turn your bow into a rogue wave and ride right over it")
+adv("journey/message_bottle", "journey/sail", "onepiece:message_in_a_bottle", "Message in a Bottle",
+    "Open a message in a bottle")
+adv("journey/castaway_cache", "journey/message_bottle", "onepiece:castaway_chart", "Castaway's Cache",
+    "Dig up a castaway's cache on a lonely sandbar")
+adv("journey/island_whale", "journey/sail", "minecraft:prismarine_crystals", "Island on the Move",
+    "Meet an Island Whale at sea")
+adv("journey/kraken", "journey/sail", "onepiece:kraken_ink", "Release the Ship!",
+    "Beat off a Kraken that grabbed your ship", "goal")
+adv("journey/sea_king_lord", "journey/kraken", "onepiece:sea_king_scale", "Lord of the Deep",
+    "Slay a Sea King Lord in the New World", "challenge", xp=250)
+adv("journey/ghost_ship", "journey/sail", "minecraft:soul_lantern", "All Aboard the Ghost Ship",
+    "Set foot on a ghost ship")
+adv("journey/claim_derelict", "journey/ghost_ship", "onepiece:ships_wheel", "Finders Keepers",
+    "Take the wheel of a derelict or a ghost ship and make her yours")
+
+# ---- Hidden Power: Pirate Level, stat tree, Devil Fruit encyclopedia ----
+LEVELS = [(10, "minecraft:wooden_sword", "Getting Stronger", "task"),
+          (25, "minecraft:iron_sword", "Seasoned Fighter", "task"),
+          (40, "minecraft:diamond_sword", "Monster of the Seas", "goal"),
+          (60, "minecraft:netherite_sword", "Peak Condition", "challenge")]
+parent = "powers/root"
+for level, icon, title, frame in LEVELS:
+    extra = {"xp": 300} if level == 60 else {}
+    adv("powers/level_%d" % level, parent, icon, title, "Reach Pirate Level %d" % level, frame, **extra)
+    parent = "powers/level_%d" % level
+adv("powers/stat_max", "powers/level_25", "minecraft:golden_apple", "Pushed to the Limit",
+    "Raise one stat all the way to rank 20", "goal")
+adv("powers/encyclopedia", "powers/devil_fruit", "onepiece:devil_fruit_encyclopedia", "Fruit Scholar",
+    "Get a Devil Fruit Encyclopedia", criteria=has_items("onepiece:devil_fruit_encyclopedia"))
+adv("powers/fruitdex_15", "powers/encyclopedia", "onepiece:bara_bara_no_mi", "Fruit Collector",
+    "Discover 15 Devil Fruits")
+adv("powers/fruitdex_50", "powers/fruitdex_15", "onepiece:hie_hie_no_mi", "Fruit Expert",
+    "Discover 50 Devil Fruits", "goal")
+adv("powers/fruitdex_all", "powers/fruitdex_50", "onepiece:yami_yami_no_mi", "Every Fruit Under the Sun",
+    "Discover every Devil Fruit", "challenge", xp=500)
+adv("powers/fruitdex_paramecia", "powers/fruitdex_15", "onepiece:ope_ope_no_mi", "Superhuman Scholar",
+    "Find every Paramecia fruit for your encyclopedia", "goal")
+adv("powers/fruitdex_logia", "powers/fruitdex_15", "onepiece:mera_mera_no_mi", "Elemental Scholar",
+    "Find every Logia fruit for your encyclopedia", "goal")
+adv("powers/fruitdex_zoan", "powers/fruitdex_15", "onepiece:tori_tori_no_mi_phoenix", "Beast Scholar",
+    "Find every Zoan fruit for your encyclopedia", "goal")
+
+# ---- A Pirate's Life: quests, buildings, raids, special bosses, food ----
+adv("pirate/quest", "pirate/root", "minecraft:writable_book", "Lending a Hand", "Finish a quest step for a character")
+adv("pirate/quest_line", "pirate/quest", "minecraft:book", "A Story Worth Telling",
+    "Finish a character's whole quest line")
+adv("pirate/quest_lines_5", "pirate/quest_line", "minecraft:bookshelf", "Friend of the Seas",
+    "Finish 5 characters' quest lines", "goal")
+adv("pirate/quest_lines_all", "pirate/quest_lines_5", "minecraft:enchanted_book", "Everyone's Hero",
+    "Finish every character's quest line", "challenge", xp=500)
+adv("pirate/met_10", "pirate/quest", "minecraft:player_head", "Making Friends",
+    "Meet 10 characters from the story")
+adv("pirate/building", "pirate/crew", "onepiece:den_den_relay_blueprint", "Pirate Architect",
+    "Finish building a multiblock from a blueprint")
+adv("pirate/all_buildings", "pirate/building", "onepiece:treasure_vault_blueprint", "Master Builder",
+    "Finish every kind of blueprint building", "goal")
+adv("pirate/navy_raid", "pirate/bounty", "minecraft:shield", "Navy Repelled",
+    "Fight off a Navy raid", "goal")
+adv("pirate/bounty_hunter", "pirate/bounty", "onepiece:flintlock_pistol", "Hunter Becomes Hunted",
+    "Defeat a Devil Fruit bounty hunter", criteria=killed("onepiece:bounty_hunter"))
+# Side jobs (com.onepiecemod.sidejob.SideJobs awards these itself, via AdvancementFeature.grant)
+adv("pirate/wanted_contract", "pirate/bounty", "minecraft:paper", "Dead or Alive",
+    "Finish a Wanted contract from a bartender, sailor or foreign trader")
+adv("pirate/pirate_hunter", "pirate/wanted_contract", "minecraft:iron_sword", "Demon of the East Blue",
+    "Finish 15 Wanted contracts, like a certain green-haired swordsman", "goal")
+adv("pirate/town_helper", "pirate/quest", "minecraft:bread", "Odd Jobs",
+    "Help a townsperson who asked you for a favor")
+adv("pirate/friend_of_the_towns", "pirate/town_helper", "minecraft:bell", "Everybody's Friend",
+    "Finish 20 town requests", "goal")
+adv("pirate/magellan", "pirate/first_boss", "onepiece:wanted_poster_magellan", "Poison Proof",
+    "Defeat Magellan, warden of Impel Down", "goal")
+adv("pirate/queen", "pirate/first_boss", "onepiece:wanted_poster_queen", "Plague Cured",
+    "Defeat Queen the Plague at Udon Prison", "goal")
+adv("pirate/hody", "pirate/first_boss", "onepiece:wanted_poster_hody", "Sun Pirates' Heir",
+    "Defeat Hody Jones at the Ryugu Palace", "goal")
+adv("pirate/saturn", "pirate/first_boss", "onepiece:wanted_poster_saturn", "Kneel to No One",
+    "Defeat Saint Jaygarcia Saturn of the Gorosei", "challenge", xp=500)
+adv("pirate/imu", "pirate/all_bosses", "onepiece:wanted_poster_imu", "Shadow of the World",
+    "Defeat Imu", "challenge", xp=1000, hidden=True)
+adv("pirate/loki", "pirate/first_boss", "onepiece:wanted_poster_loki", "The Accursed Prince",
+    "Defeat Loki of Elbaph after he takes his Nidhogg form", "challenge", xp=750)
+adv("pirate/xebec", "pirate/all_bosses", "onepiece:wanted_poster_xebec", "The Rocks Legend",
+    "Defeat Rocks D. Xebec at God Valley", "challenge", xp=2000, hidden=True)
+adv("pirate/rubbing", "pirate/root", "onepiece:road_poneglyph_wano", "Reader of the Ancient Text",
+    "Make a Road Poneglyph rubbing", "goal",
+    criteria=has_items("onepiece:road_poneglyph_zou", "onepiece:road_poneglyph_whole_cake",
+                       "onepiece:road_poneglyph_wano", "onepiece:road_poneglyph_hachinosu"))
+adv("pirate/music_disc", "pirate/root", "onepiece_sounds:music_disc_fair_winds", "Song of the Sea",
+    "Get a One Piece music disc",
+    criteria=has_items(*["onepiece_sounds:music_disc_" + s for s in
+                         ("boss_battle", "emperor_battle", "fair_winds", "justice_marches", "toward_the_grand_line")]))
+
+
+def ate(item):
+    return {"trigger": "minecraft:consume_item", "conditions": {"item": {"items": item}}}
+
+
+adv("pirate/meat", "pirate/root", "onepiece:cooked_sea_king_meat", "MEAT!", "Eat cooked Sea King meat",
+    criteria=ate("onepiece:cooked_sea_king_meat"))
+adv("pirate/sake", "pirate/meat", "onepiece:sake", "Bink's Sake", "Drink sake with your crew",
+    criteria=ate("onepiece:sake"))
+
+# ---------------- Tab 4: Wonders of the World (landmarks, creatures, ores, Nether and End) ----------------
+adv("wonders/root", None, "minecraft:filled_map", "Wonders of the World",
+    "Famous places, strange creatures and rare treasures", background="onepiece:gui/advancements/backgrounds/wonders")
+
+LANDMARKS = [
+    ("baratie", "onepiece:cooked_sea_king_meat", "Floating Restaurant", "Visit the Baratie"),
+    ("arlong_park", "onepiece:mikan", "Fish-Man Hideout", "Visit Arlong Park"),
+    ("alubarna_palace", "onepiece:alabasta_sandstone_bricks", "Royal Palace of Sand", "Visit Alubarna Palace"),
+    ("galley_la_dock", "onepiece:ships_wheel", "City of Water", "Visit the Galley-La docks of Water 7"),
+    ("tower_of_justice", "onepiece:marine_bricks", "Tower of Justice", "Visit the Tower of Justice at Enies Lobby"),
+    ("thriller_bark", "minecraft:wither_rose", "The Biggest Ship", "Climb aboard Thriller Bark"),
+    ("moby_dick", "minecraft:white_banner", "Whitebeard's Flagship", "Climb aboard the Moby Dick"),
+    ("marineford", "onepiece:marine_bricks", "Navy Headquarters", "Visit Marineford"),
+    ("onigashima", "onepiece:wano_roof_tiles", "Island of Demons", "Visit Onigashima"),
+    ("whole_cake_chateau", "onepiece:chocolate_block", "Sweet Castle", "Visit Whole Cake Chateau"),
+]
+for lid, icon, title, desc in LANDMARKS:
+    adv("wonders/" + lid, "wonders/root", icon, title, desc, criteria=at("structures", "onepiece:" + lid))
+adv("wonders/all_landmarks", "wonders/marineford", "minecraft:spyglass", "World Traveller",
+    "Visit all eleven great landmarks, Ryugu Palace included", "challenge", xp=400,
+    criteria={l: at("structures", "onepiece:" + l) for l in [x[0] for x in LANDMARKS] + ["ryugu_palace"]})
+
+# Creatures
+adv("wonders/ride", "wonders/root", "minecraft:saddle", "Strange Steed", "Ride a creature of the Grand Line")
+adv("wonders/tame", "wonders/ride", "minecraft:lead", "Animal Friend", "Tame a creature of the Grand Line")
+HOSTILE = ["lapahn", "sand_scorpion", "smiley", "fighting_fish", "bananawani", "tyrannosaurus", "sky_shark", "nola",
+           "humandrill", "cerberus", "basilisk", "manticore", "punk_hazard_dragon", "sea_cat", "homie_tree",
+           "pacifista", "rusukaina_gorilla"]
+for cid, icon, title, desc, frame in [
+    ("bananawani", "onepiece:bananawani_spawn_egg", "Banana Crocodile", "Defeat a Bananawani", "task"),
+    ("sea_cat", "onepiece:sea_cat_spawn_egg", "Here, Kitty", "Defeat a Sea Cat", "task"),
+    ("kraken", "onepiece:kraken_ink", "Release the Kraken", "Defeat a Kraken", "goal"),
+    ("punk_hazard_dragon", "onepiece:dragon_scale", "Dragon Slayer", "Defeat a Punk Hazard dragon", "goal"),
+]:
+    adv("wonders/" + cid, "wonders/ride", icon, title, desc, frame, criteria=killed("onepiece:" + cid))
+adv("wonders/monster_hunter", "wonders/punk_hazard_dragon", "minecraft:bone", "Monster Hunter",
+    "Defeat every kind of wild monster", "challenge", xp=400,
+    criteria={c: killed("onepiece:" + c) for c in HOSTILE})
+
+# Ores and the gear made from them
+for oid, item, title, desc in [
+    ("tamahagane", "onepiece:raw_tamahagane", "Steel of Wano", "Mine Tamahagane ore"),
+    ("wapometal", "onepiece:wapometal_ingot", "Wapometal", "Get a Wapometal ingot"),
+    ("shandora_gold", "onepiece:raw_shandora_gold", "City of Gold", "Mine the gold of Shandora"),
+    ("kokuto", "onepiece:raw_kokuto", "Black Blade Ore", "Mine Kokuto ore deep underground"),
+]:
+    adv("wonders/" + oid, "wonders/root", item, title, desc, criteria=has_items(item))
+adv("wonders/kokuto_blade", "wonders/kokuto", "onepiece:kokuto_blade", "A Black Blade",
+    "Forge a Kokuto blade", "goal", criteria=has_items("onepiece:kokuto_blade"))
+adv("wonders/dragon_armor", "wonders/punk_hazard_dragon", "onepiece:dragon_scale_chestplate", "Scales of a Dragon",
+    "Get a Dragon Scale chestplate", "goal", criteria=has_items("onepiece:dragon_scale_chestplate"))
+adv("wonders/sea_king_armor", "wonders/root", "onepiece:sea_king_scale_chestplate", "Scales of the Deep",
+    "Get a Sea King Scale chestplate", criteria=has_items("onepiece:sea_king_scale_chestplate"))
+adv("wonders/dial", "wonders/shandora_gold", "onepiece:flash_dial", "Sky Island Tech",
+    "Get a Dial", criteria=has_items("onepiece:flash_dial", "onepiece:breath_dial"))
+adv("wonders/diving", "wonders/root", "onepiece:diving_helmet", "Deep Sea Diver",
+    "Get a Diving Helmet or Bubble Coating", criteria=has_items("onepiece:diving_helmet", "onepiece:bubble_coating"))
+adv("wonders/coated", "wonders/diving", "onepiece:ship_coating", "Coated for the Deep",
+    "Have your ship coated at Sabaody")
+adv("wonders/submarine", "wonders/diving", "onepiece:ballast_tank", "Dive! Dive!",
+    "Take a submarine or a coated ship 20 blocks under the sea")
+adv("wonders/abyss", "wonders/submarine", "minecraft:sea_lantern", "Ten Thousand Meters Under the Sea",
+    "Sail 100 blocks under the surface of the sea", "challenge", xp=200)
+
+# Nether (Impel Down) and End (the Holy Land)
+adv("wonders/blazing_hell", "wonders/root", "minecraft:blaze_powder", "Level 4: Blazing Hell",
+    "Enter the Blazing Hell of Impel Down", criteria=at("biomes", "onepiece:impel_down_blazing_hell"))
+adv("wonders/freezing_hell", "wonders/blazing_hell", "minecraft:blue_ice", "Level 5: Freezing Hell",
+    "Enter the Freezing Hell of Impel Down", criteria=at("biomes", "onepiece:impel_down_freezing_hell"))
+adv("wonders/newkama_land", "wonders/freezing_hell", "minecraft:pink_dye", "Newkama Land",
+    "Find the hidden paradise of Newkama Land", "goal", criteria=at("biomes", "onepiece:newkama_land"))
+adv("wonders/red_line_heights", "wonders/root", "minecraft:end_stone", "Above the Clouds",
+    "Stand on the heights of the Red Line", criteria=at("biomes", "onepiece:red_line_heights"))
+adv("wonders/void_century_ruins", "wonders/red_line_heights", "onepiece:poneglyph", "Lost Kingdom",
+    "Walk among the ruins of the Void Century", "goal", criteria=at("biomes", "onepiece:void_century_ruins"))
+# ---- Poneglyph hunt (poneglyph/PoneglyphHunt) and the Sea King bosses (sea/SeaBosses), awarded from Java ----
+adv("wonders/lost_poneglyph", "wonders/root", "onepiece:ohara_survey_notes", "Stone No Blade Can Cut",
+    "Find one of the twelve Lost Poneglyphs")
+adv("wonders/poneglyph_scholar", "wonders/lost_poneglyph", "onepiece:poneglyph", "Scholar of Ohara",
+    "Read all twelve Lost Poneglyphs", "challenge", xp=500)
+adv("wonders/lord_of_the_coast", "wonders/root", "onepiece:coast_lord_fang", "Lord of the Coast",
+    "Defeat the Sea King that took a Yonko's arm")
+adv("wonders/florian_phantom", "wonders/lord_of_the_coast", "onepiece:phantom_scale", "Ghost in the Fog",
+    "Defeat the Florian Phantom of the Grand Line")
+adv("wonders/calm_belt_behemoth", "wonders/lord_of_the_coast", "onepiece:behemoth_horn", "Nest of the Sea Kings",
+    "Defeat the Calm Belt Behemoth", "goal")
+adv("wonders/ancient_sea_king", "wonders/calm_belt_behemoth", "onepiece:ancient_sea_king_fang", "Older Than History",
+    "Defeat an Ancient Sea King in the New World", "goal")
+adv("wonders/sea_king_slayer", "wonders/ancient_sea_king", "onepiece:sea_lord_lure", "Terror of the Deep",
+    "Defeat every sea's legendary Sea King", "challenge", xp=500)
+adv("wonders/god_valley", "wonders/root", "minecraft:wither_skeleton_skull", "God Valley",
+    "Find the island that vanished from the map", "goal", criteria=at("structures", "onepiece:god_valley"),
+    hidden=True)
+
+
+# ---------------- Added 2026-10-29: underground dungeons, ship fights, raids, New Game+, furniture ----------------
+DUNGEONS = [
+    ("treasure_grotto", "onepiece:treasure_pile", "Buried Treasure", "Find a pirate's Treasure Grotto deep underground"),
+    ("marine_bunker", "onepiece:marine_bricks", "Top Secret", "Find a hidden Marine bunker underground"),
+    ("smile_factory", "minecraft:brewing_stand", "SMILE Factory", "Find the Donquixote Family's underground SMILE Factory"),
+    ("ancient_ruins", "onepiece:ancient_glyph_stone", "The Buried City", "Find ancient ruins from the Void Century underground"),
+]
+for did, icon, title, desc in DUNGEONS:
+    adv("wonders/" + did, "wonders/root", icon, title, desc, criteria=at("structures", "onepiece:" + did))
+adv("wonders/all_dungeons", "wonders/ancient_ruins", "minecraft:filled_map", "Spelunker of the Grand Line",
+    "Find all four underground dungeons", "challenge", xp=300,
+    criteria={d[0]: at("structures", "onepiece:" + d[0]) for d in DUNGEONS})
+adv("wonders/sea_prism_crystal", "wonders/root", "onepiece:sea_prism_crystal", "The Sea Made Solid",
+    "Mine a Sea Prism crystal in a Seastone Grotto", criteria=has_items("onepiece:sea_prism_crystal"))
+adv("wonders/ancient_sentinel", "wonders/ancient_ruins", "onepiece:ancient_glyph_stone", "Guardian of the Ruins",
+    "Defeat an Ancient Sentinel", "goal", criteria=killed("onepiece:ancient_sentinel"))
+adv("wonders/cave_hunter", "wonders/ancient_sentinel", "minecraft:spider_eye", "Things in the Dark",
+    "Defeat every kind of cave creature", "goal",
+    criteria={c: killed("onepiece:" + c) for c in ["prism_crab", "cave_centipede", "sulfur_salamander", "ancient_sentinel"]})
+adv("wonders/cave_mole", "wonders/ride", "onepiece:cave_mole_spawn_egg", "Dig, Dig, Dig!", "Ride a Cave Mole")
+
+adv("journey/sink_ship", "journey/sea_battle", "minecraft:tnt", "Down She Goes",
+    "Sink an enemy ship")
+adv("journey/capture_ship", "journey/boarding_hook", "onepiece:ships_wheel", "She's Ours Now",
+    "Board an enemy ship and beat her whole crew")
+adv("journey/win_naval_battle", "journey/sink_ship", "onepiece:cannon", "Fleet Breaker",
+    "Sink or capture every ship in a Marine fleet or pirate armada", "challenge")
+adv("journey/repel_boarders", "journey/sea_battle", "minecraft:iron_sword", "Repel Boarders!",
+    "Fight off an enemy boarding party on your own ship")
+adv("journey/new_game_plus", "journey/laugh_tale", "minecraft:clock", "Once More, With Feeling",
+    "Start New Game+", "goal")
+adv("journey/new_game_plus_max", "journey/new_game_plus", "minecraft:recovery_compass", "Legend of Every Age",
+    "Reach the last New Game+ cycle", "challenge", xp=1000)
+
+adv("pirate/first_raid", "pirate/emperors", "onepiece:den_den_mushi", "Raid Boss",
+    "Win a raid called with the Raid Den Den Mushi", "goal")
+adv("pirate/all_raids", "pirate/first_raid", "minecraft:nether_star", "No Crew Can Stop Us",
+    "Win every raid", "challenge", xp=1000)
+adv("pirate/take_a_seat", "pirate/root", "onepiece:oak_chair", "Take a Seat", "Sit down on a chair, stool, bench or cushion")
+
+# ---- Sea Train (com.onepiecemod.seatrain awards both via AdvancementFeature.grant) ----
+adv("journey/sea_train", "journey/enies_lobby", "minecraft:rail", "All Aboard the Puffing Tom", "Ride the Sea Train")
+adv("journey/station_master", "journey/sea_train", "onepiece:sea_train_booth", "Station Master",
+    "Build your own Sea Train Station", "goal")
+
+# ---------------- Added 2026-10-30: fishing, careers, arena, hideouts, pets, Vegapunk hunts, cyborgs ----------------
+# Fishing (cuisine.Fishing fish log)
+adv("journey/first_catch", "journey/root", "minecraft:fishing_rod", "Gone Fishing", "Catch a fish of the Grand Line")
+adv("journey/fish_log_10", "journey/first_catch", "onepiece:blue_sea_bream", "Sanji's Supplier", "Catch 10 kinds of fish")
+adv("journey/all_blue", "journey/fish_log_10", "onepiece:all_blue_kingfish", "The All Blue Is Real",
+    "Catch a fish from the All Blue", "goal")
+adv("journey/every_fish", "journey/all_blue", "minecraft:cod_bucket", "Every Fish in Every Sea",
+    "Catch every kind of fish", "challenge", xp=300)
+# Sea Train
+adv("journey/commuter", "journey/sea_train", "minecraft:powered_rail", "Regular Commuter",
+    "Know 5 Sea Train stations")
+
+# Careers (career.Careers)
+adv("pirate/join_marines", "pirate/root", "onepiece:navy_den_den_mushi", "Absolute Justice", "Join the Marines")
+adv("pirate/marine_captain", "pirate/join_marines", "onepiece:marine_rifle", "Captain of the Navy",
+    "Reach the rank of Marine Captain", "goal")
+adv("pirate/fleet_admiral", "pirate/marine_captain", "onepiece:marine_bricks", "Fleet Admiral",
+    "Reach the top of the Marine ranks", "challenge", xp=500)
+adv("pirate/join_revolution", "pirate/root", "onepiece:revolutionary_invitation", "Dawn of the World",
+    "Join the Revolutionary Army")
+adv("pirate/army_commander", "pirate/join_revolution", "onepiece:revolutionary_den_den_mushi", "Army Commander",
+    "Reach the rank of Revolutionary Army Commander", "goal")
+adv("pirate/right_hand", "pirate/army_commander", "minecraft:green_banner", "Dragon's Right Hand",
+    "Reach the top of the Revolutionary ranks", "challenge", xp=500)
+adv("pirate/orders_10", "pirate/root", "minecraft:writable_book", "Following Orders",
+    "Finish 10 Marine or Revolutionary missions")
+
+# Corrida Colosseum and Davy Back Fights (arena.ArenaRecord)
+adv("pirate/colosseum", "pirate/root", "onepiece:colosseum_ticket", "Gladiator", "Win a cup at the Corrida Colosseum")
+adv("pirate/colosseum_champion", "pirate/colosseum", "minecraft:golden_helmet", "Champion of the Corrida",
+    "Win the Champion cup at the Corrida Colosseum", "goal")
+adv("pirate/davy_back", "pirate/crew", "onepiece:davy_back_flag", "Davy Back Fight!", "Win a Davy Back Fight")
+adv("pirate/beat_foxy", "pirate/davy_back", "minecraft:fox_spawn_egg", "Silver Fox, Outfoxed",
+    "Win a Davy Back Fight against the Foxy Pirates", "goal")
+adv("pirate/davy_back_10", "pirate/beat_foxy", "minecraft:white_banner", "Undefeated Crew",
+    "Win 10 Davy Back Fights", "challenge", xp=300)
+
+# Hideouts (hideout.Hideouts)
+adv("pirate/hideout", "pirate/crew", "onepiece:hideout_flag", "Home Port", "Claim land for a pirate hideout")
+adv("pirate/pirate_fort", "pirate/hideout", "minecraft:cobblestone_wall", "Pirate Fort",
+    "Grow your hideout into a Pirate Fort")
+adv("pirate/pirate_fortress", "pirate/pirate_fort", "minecraft:bell", "Pirate Fortress",
+    "Grow your hideout into a Pirate Fortress", "challenge", xp=300)
+adv("pirate/hold_the_fort", "pirate/hideout", "minecraft:shield", "Hold the Fort",
+    "Drive the Navy off your hideout", "goal")
+
+# Pets (pet.Pet: creatures and Sea Kings)
+adv("wonders/pet_whistle", "wonders/tame", "onepiece:pet_whistle", "Here, Boy!", "Get a Pet Whistle",
+    criteria=has_items("onepiece:pet_whistle"))
+adv("wonders/sea_king_pet", "wonders/tame", "minecraft:prismarine_shard", "Lord of the Sea Kings",
+    "Tame a Sea King", "goal")
+adv("wonders/menagerie", "wonders/tame", "minecraft:lead", "Chopper Would Approve", "Have 3 pets with you at once")
+
+# Vegapunk hunts (vegapunk.VegapunkHunts awards these with AdvancementFeature.grant) and cyborg upgrades
+adv("wonders/pacifista", "wonders/root", "onepiece:laser_core", "Bartholomew Who?", "Defeat a hunting Pacifista")
+adv("wonders/mark_iii", "wonders/pacifista", "minecraft:iron_block", "Mark III Scrapped",
+    "Defeat a Pacifista Mark III", "goal")
+adv("wonders/seraphim", "wonders/mark_iii", "onepiece:seraphim_feather", "Clipped Wings", "Defeat a hunting Seraphim", "goal")
+adv("wonders/all_seraphim", "wonders/seraphim", "onepiece:vegapunk_chip", "Vegapunk's Worst Day",
+    "Defeat S-Bear, S-Hawk, S-Snake and S-Shark", "challenge", xp=500,
+    criteria={u: {"trigger": "minecraft:impossible"} for u in ["s_bear", "s_hawk", "s_snake", "s_shark"]})
+adv("wonders/cyborg", "wonders/pacifista", "onepiece:iron_frame_plating", "SUUUPER!", "Install a cyborg upgrade")
+adv("wonders/cyborg_tier3", "wonders/cyborg", "onepiece:cola_engine_core", "Tier III", "Upgrade a cyborg part to tier III", "goal")
+adv("wonders/full_cyborg", "wonders/cyborg_tier3", "onepiece:radical_beam_emitter", "General Franky",
+    "Upgrade every cyborg part to tier III", "challenge", xp=500)
+adv("wonders/deep_trench", "wonders/submarine", "minecraft:sculk", "The Deep Trench",
+    "Find a Deep Trench on the sea floor", "goal", criteria=at("structures", "onepiece:deep_trench"))
+
+# ---- Added 2026-11-03: dungeons and their mini-bosses (com.onepiecemod.dungeon.DungeonBosses awards them) ----
+IMPOSSIBLE = {"trigger": "minecraft:impossible"}
+adv("pirate/dungeon_delver", "pirate/root", "minecraft:iron_sword", "Into the Depths",
+    "Defeat the mini-boss at the bottom of a dungeon")
+adv("pirate/dungeon_master", "pirate/dungeon_delver", "minecraft:netherite_sword", "Master of the Deep Halls",
+    "Defeat the mini-boss of all five dungeons", "challenge",
+    criteria={s: IMPOSSIBLE for s in ["sand_king_tomb", "ryuma_crypt", "kitetsu_forge", "oden_shrine", "roger_vault"]})
+
+
+# ---------------- Added 2026-11-03: Collector's Log (collection.CollectionFeature awards the CODE ones with AdvancementFeature.grant) ----------------
+adv("journey/collector_log", "journey/root", "onepiece:collectors_log", "Collector's Log", "Get a Collector's Log",
+    criteria=has_items("onepiece:collectors_log"))
+adv("journey/island_complete", "journey/collector_log", "minecraft:filled_map", "Island Complete",
+    "Finish every goal of one island in your Collector's Log")
+adv("journey/sea_east_blue", "journey/island_complete", "onepiece:eternal_pose", "Pride of the East Blue",
+    "Finish every island of the East Blue", "goal")
+adv("journey/sea_paradise", "journey/sea_east_blue", "onepiece:log_pose", "Paradise Charted",
+    "Finish every island of Paradise", "goal")
+adv("journey/sea_new_world", "journey/sea_paradise", "minecraft:recovery_compass", "Emperor of the New World",
+    "Finish every island of the New World", "challenge", xp=500)
+adv("journey/sea_impel_down", "journey/island_complete", "minecraft:iron_bars", "Jailbreak Tourist",
+    "Finish every level of Impel Down", "goal")
+adv("journey/sea_red_line", "journey/island_complete", "minecraft:gold_block", "Above the Clouds",
+    "Finish every island of the Holy Land and the Void Century", "goal")
+adv("journey/every_island", "journey/sea_new_world", "minecraft:nether_star", "Every Island Under the Sun",
+    "Finish every island in the Collector's Log", "challenge", xp=1000)
+adv("pirate/gourmet", "journey/collector_log", "onepiece:all_blue_full_course", "Sanji's Taste Tester",
+    "Taste every dish in the Collector's Log", "challenge", xp=300)
+adv("pirate/sword_collector", "journey/collector_log", "onepiece:yoru", "Sword Hunter",
+    "Hold every legendary blade in the Collector's Log", "challenge", xp=500)
+adv("wonders/ship_spotter", "journey/collector_log", "onepiece:thousand_sunny", "Ship Spotter",
+    "Spot every famous ship on the seas", "goal")
+
+
+def text(key):
+    return {"translate": key}
+
+
+def build():
+    if os.path.isdir(ADV):
+        for tab in ("journey", "powers", "pirate", "wonders"):
+            shutil.rmtree(os.path.join(ADV, tab), ignore_errors=True)
+    lang = {}
+    code_ids = []
+    for a in A:
+        key = "advancements.onepiece." + a["id"].replace("/", ".")
+        lang[key + ".title"] = a["title"]
+        lang[key + ".description"] = a["desc"]
+        root = a["parent"] is None
+        display = {
+            "icon": {"id": a["icon"]},
+            "title": text(key + ".title"),
+            "description": text(key + ".description"),
+            "frame": a["frame"],
+            "show_toast": not root,
+            "announce_to_chat": not root,
+            "hidden": a.get("hidden", False),
+        }
+        if root:
+            display["background"] = a["background"]
+        crit = a["criteria"]
+        if crit == CODE or "chapter" in a:
+            criteria = {"done": {"trigger": "minecraft:impossible"}}
+            code_ids.append(a["id"])
+        elif "trigger" in crit:
+            criteria = {"done": crit}
+        else:
+            criteria = crit
+        data = {"display": display, "criteria": criteria, "requirements": [[name] for name in criteria]}
+        if a["parent"]:
+            data["parent"] = "onepiece:" + a["parent"]
+        if a.get("xp"):
+            data["rewards"] = {"experience": a["xp"]}
+        path = os.path.join(ADV, a["id"] + ".json")
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "w") as f:
+            json.dump(data, f, indent=2)
+            f.write("\n")
+    os.makedirs(os.path.dirname(LANG), exist_ok=True)
+    with open(LANG, "w") as f:
+        json.dump(lang, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+    draw_backgrounds()
+    print(len(A), "advancements,", len(code_ids), "awarded from code:")
+    print(" ".join(code_ids))
+    chapters = {a["id"]: a["chapter"] for a in A if "chapter" in a}
+    print("story chapters:", chapters)
+
+
+def tile(path, base, spots, seed):
+    """A 16x16 background tile: a base colour with a few lighter and darker spots."""
+    rnd = random.Random(seed)
+    img = Image.new("RGBA", (16, 16), base + (255,))
+    px = img.load()
+    for y in range(16):
+        for x in range(16):
+            shade = rnd.choice(spots)
+            r, g, b = (max(0, min(255, c + shade)) for c in base)
+            px[x, y] = (r, g, b, 255)
+    img.save(path)
+
+
+def draw_backgrounds():
+    os.makedirs(BG, exist_ok=True)
+    # Deep sea blue with little wave highlights.
+    rnd = random.Random(7)
+    img = Image.new("RGBA", (16, 16))
+    px = img.load()
+    for y in range(16):
+        for x in range(16):
+            v = rnd.randint(-6, 6)
+            px[x, y] = (22 + v, 62 + v, 110 + v, 255)
+    for y0, x0 in [(2, 1), (6, 9), (11, 3), (14, 11)]:
+        for dx in range(4):
+            px[(x0 + dx) % 16, (y0 - (1 if dx in (1, 2) else 0)) % 16] = (90, 150, 200, 255)
+    img.save(os.path.join(BG, "grand_line.png"))
+    # Dark purple, like a Devil Fruit swirl.
+    tile(os.path.join(BG, "powers.png"), (52, 30, 72), [-8, -4, 0, 0, 4, 10], 11)
+    # Ship deck planks.
+    img = Image.new("RGBA", (16, 16))
+    px = img.load()
+    rnd = random.Random(3)
+    for y in range(16):
+        for x in range(16):
+            v = rnd.randint(-8, 8)
+            seam = y % 4 == 3 or (x == (5 if (y // 4) % 2 else 12))
+            base = (70, 48, 30) if seam else (120 + v, 84 + v, 52 + v)
+            px[x, y] = base + (255,)
+    img.save(os.path.join(BG, "pirate.png"))
+    # Old parchment map with faded grid lines.
+    img = Image.new("RGBA", (16, 16))
+    px = img.load()
+    rnd = random.Random(5)
+    for y in range(16):
+        for x in range(16):
+            v = rnd.randint(-7, 7)
+            line = x == 7 or y == 7
+            px[x, y] = ((168, 132, 84) if line else (206 + v, 176 + v, 122 + v)) + (255,)
+    img.save(os.path.join(BG, "wonders.png"))
+
+
+if __name__ == "__main__":
+    build()

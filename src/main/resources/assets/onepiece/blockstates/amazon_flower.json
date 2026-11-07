@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "onepiece:block/amazon_flower_bottom"
+    },
+    "half=upper": {
+      "model": "onepiece:block/amazon_flower_top"
+    }
+  }
+}

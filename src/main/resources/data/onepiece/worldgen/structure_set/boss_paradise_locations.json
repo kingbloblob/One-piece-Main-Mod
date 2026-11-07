@@ -1,0 +1,28 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:rain_dinners",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:shandora",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:straw_shrine",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:kamazo_hideout",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "onepiece:ring_spread",
+    "spacing": 24,
+    "separation": 11,
+    "salt": 1408172032,
+    "min_distance": 1500,
+    "max_distance": 3500
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "W W"
+  ],
+  "key": {
+    "S": "minecraft:stone_brick_slab",
+    "W": "minecraft:stone_brick_wall"
+  },
+  "result": {
+    "count": 4,
+    "id": "onepiece:stone_balustrade"
+  }
+}

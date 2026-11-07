@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "onepiece:block/wano_roof_tile_slab"
+    },
+    "type=double": {
+      "model": "onepiece:block/wano_roof_tiles"
+    },
+    "type=top": {
+      "model": "onepiece:block/wano_roof_tile_slab_top"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:marineford",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:onigashima",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:whole_cake_chateau",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:moby_dick",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "onepiece:ring_spread",
+    "spacing": 56,
+    "separation": 24,
+    "salt": 1408172021,
+    "min_distance": 6000
+  }
+}

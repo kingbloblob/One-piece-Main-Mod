@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:water7_cobbles"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:water7_cobble_stairs"
+  }
+}

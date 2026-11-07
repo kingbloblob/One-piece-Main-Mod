@@ -1,0 +1,16 @@
+{
+  "name": "Big Top",
+  "template": "onepiece:ships/big_top",
+  "bow": "east",
+  "waterline": 3.9,
+  "faction": "pirate",
+  "tiers": [
+    0,
+    1
+  ],
+  "crew": "Buggy Pirates",
+  "length": 40,
+  "beam": 20,
+  "height": 34,
+  "blocks": 2222
+}

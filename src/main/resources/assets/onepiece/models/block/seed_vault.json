@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "onepiece:block/seed_vault_top",
+    "bottom": "onepiece:block/seed_vault_bottom",
+    "side": "onepiece:block/seed_vault_side"
+  }
+}

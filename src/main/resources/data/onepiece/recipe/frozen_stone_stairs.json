@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:frozen_stone"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:frozen_stone_stairs"
+  }
+}

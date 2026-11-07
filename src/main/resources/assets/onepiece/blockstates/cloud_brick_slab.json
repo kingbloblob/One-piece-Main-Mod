@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "onepiece:block/cloud_brick_slab"
+    },
+    "type=double": {
+      "model": "onepiece:block/cloud_bricks"
+    },
+    "type=top": {
+      "model": "onepiece:block/cloud_brick_slab_top"
+    }
+  }
+}

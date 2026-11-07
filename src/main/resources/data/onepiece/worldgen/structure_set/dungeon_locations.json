@@ -1,0 +1,23 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:sand_king_tomb",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:ryuma_crypt",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:roger_vault",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "onepiece:ring_spread",
+    "spacing": 18,
+    "separation": 7,
+    "salt": 3111202601,
+    "min_distance": 600
+  }
+}

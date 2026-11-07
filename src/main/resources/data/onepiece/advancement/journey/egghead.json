@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:vegapunk_chip"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.egghead.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.egghead.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/wano"
+}

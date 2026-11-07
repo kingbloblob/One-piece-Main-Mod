@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/brass_oil_lamp"
+    },
+    "facing=east": {
+      "model": "onepiece:block/brass_oil_lamp",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/brass_oil_lamp",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/brass_oil_lamp",
+      "y": 270
+    }
+  }
+}

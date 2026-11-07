@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "onepiece:birch_table",
+    "minecraft:paper",
+    "minecraft:paper"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:drafting_table"
+  }
+}

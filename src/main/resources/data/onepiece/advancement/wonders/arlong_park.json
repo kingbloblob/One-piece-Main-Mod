@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:mikan"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.arlong_park.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.arlong_park.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:arlong_park"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/root"
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/fishing_net"
+    },
+    "facing=east": {
+      "model": "onepiece:block/fishing_net",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/fishing_net",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/fishing_net",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,1786 @@
+{
+ "_comment": "Pirate and Marine NPC kits (com.onepiecemod.npc). Each kit picks a skin from a skin group (tools/npcs/gen_npc_skins.py), a crew ('*' = a random made-up crew), a rank and a loadout (combat style + weapon). Styles: sword, brawler, heavy, haki, rokushiki, fishman, gunner, sniper, bomber, beam. patrols = which groups walk around each biome ('default' for any other island or beach).",
+ "kits": [
+  {
+   "id": "marine_recruit",
+   "faction": "marine",
+   "crews": [
+    "Marines"
+   ],
+   "name": "{rank} {surname}",
+   "ranks": [
+    "Seaman Recruit",
+    "Seaman Apprentice"
+   ],
+   "skins": [
+    "marine_grunt"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 3,
+     "weapons": [
+      "minecraft:wooden_sword",
+      "minecraft:stone_sword"
+     ]
+    },
+    {
+     "style": "gunner",
+     "weight": 1,
+     "weapons": [
+      "onepiece:flintlock_pistol"
+     ]
+    }
+   ],
+   "health": 18,
+   "damage": 3,
+   "berries": 1,
+   "bounty": 200000
+  },
+  {
+   "id": "marine",
+   "faction": "marine",
+   "crews": [
+    "Marines"
+   ],
+   "name": "{rank} {surname}",
+   "ranks": [
+    "Seaman",
+    "Petty Officer",
+    "Chief Petty Officer"
+   ],
+   "skins": [
+    "marine_grunt"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 4,
+     "weapons": [
+      "minecraft:iron_sword",
+      "minecraft:stone_sword"
+     ]
+    },
+    {
+     "style": "brawler",
+     "weight": 1
+    },
+    {
+     "style": "heavy",
+     "weight": 1,
+     "weapons": [
+      "onepiece:seastone_jitte",
+      "minecraft:iron_axe"
+     ]
+    },
+    {
+     "style": "gunner",
+     "weight": 2,
+     "weapons": [
+      "onepiece:flintlock_pistol"
+     ]
+    }
+   ],
+   "health": 24,
+   "damage": 5,
+   "berries": 2,
+   "bounty": 400000
+  },
+  {
+   "id": "marine_rifle",
+   "faction": "marine",
+   "crews": [
+    "Marines"
+   ],
+   "name": "{rank} {surname}",
+   "ranks": [
+    "Seaman",
+    "Petty Officer",
+    "Master Chief Petty Officer"
+   ],
+   "skins": [
+    "marine_rifle"
+   ],
+   "loadouts": [
+    {
+     "style": "gunner",
+     "weight": 4,
+     "weapons": [
+      "onepiece:marine_rifle",
+      "onepiece:flintlock_pistol"
+     ]
+    },
+    {
+     "style": "sniper",
+     "weight": 1,
+     "weapons": [
+      "onepiece:marine_rifle"
+     ]
+    },
+    {
+     "style": "bomber",
+     "weight": 1
+    }
+   ],
+   "health": 20,
+   "damage": 5,
+   "berries": 2,
+   "bounty": 400000
+  },
+  {
+   "id": "marine_officer",
+   "faction": "marine",
+   "crews": [
+    "Marines"
+   ],
+   "name": "{rank} {surname}",
+   "ranks": [
+    "Ensign",
+    "Lieutenant Junior Grade",
+    "Lieutenant",
+    "Lieutenant Commander"
+   ],
+   "skins": [
+    "marine_officer"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 3,
+     "weapons": [
+      "minecraft:iron_sword",
+      "minecraft:diamond_sword"
+     ]
+    },
+    {
+     "style": "haki",
+     "weight": 1,
+     "weapons": [
+      "minecraft:iron_sword"
+     ]
+    },
+    {
+     "style": "gunner",
+     "weight": 1,
+     "weapons": [
+      "onepiece:flintlock_pistol"
+     ]
+    },
+    {
+     "style": "heavy",
+     "weight": 1,
+     "weapons": [
+      "onepiece:seastone_jitte"
+     ]
+    }
+   ],
+   "health": 40,
+   "damage": 7,
+   "armor": 4,
+   "berries": 3,
+   "bounty": 1000000
+  },
+  {
+   "id": "elite_marine",
+   "faction": "marine",
+   "crews": [
+    "Marines"
+   ],
+   "name": "{rank} {surname}",
+   "ranks": [
+    "Commander",
+    "Captain"
+   ],
+   "skins": [
+    "marine_captain"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 3,
+     "weapons": [
+      "minecraft:diamond_sword"
+     ]
+    },
+    {
+     "style": "haki",
+     "weight": 2,
+     "weapons": [
+      "minecraft:diamond_sword",
+      ""
+     ]
+    },
+    {
+     "style": "heavy",
+     "weight": 1,
+     "weapons": [
+      "onepiece:seastone_jitte",
+      "minecraft:diamond_axe"
+     ]
+    },
+    {
+     "style": "brawler",
+     "weight": 1
+    },
+    {
+     "style": "gunner",
+     "weight": 1,
+     "weapons": [
+      "onepiece:tommy_gun"
+     ]
+    }
+   ],
+   "health": 70,
+   "damage": 10,
+   "armor": 6,
+   "berries": 8,
+   "bounty": 3000000
+  },
+  {
+   "id": "vice_admiral",
+   "faction": "marine",
+   "crews": [
+    "Marines"
+   ],
+   "name": "{rank} {surname}",
+   "ranks": [
+    "Rear Admiral",
+    "Vice Admiral"
+   ],
+   "skins": [
+    "vice_admiral"
+   ],
+   "loadouts": [
+    {
+     "style": "haki",
+     "weight": 3,
+     "weapons": [
+      "minecraft:netherite_sword",
+      ""
+     ]
+    },
+    {
+     "style": "brawler",
+     "weight": 1
+    },
+    {
+     "style": "heavy",
+     "weight": 1,
+     "weapons": [
+      "minecraft:netherite_axe",
+      "minecraft:mace"
+     ]
+    },
+    {
+     "style": "sword",
+     "weight": 1,
+     "weapons": [
+      "minecraft:netherite_sword"
+     ]
+    }
+   ],
+   "health": 140,
+   "damage": 13,
+   "armor": 10,
+   "berries": 25,
+   "bounty": 30000000,
+   "knockbackResistance": 0.6
+  },
+  {
+   "id": "cp_agent",
+   "faction": "marine",
+   "crews": [
+    "CP1",
+    "CP2",
+    "CP5",
+    "CP7",
+    "CP9"
+   ],
+   "name": "{crew} Agent {name}",
+   "ranks": [
+    "Agent"
+   ],
+   "skins": [
+    "cp_agent"
+   ],
+   "loadouts": [
+    {
+     "style": "rokushiki",
+     "weight": 3
+    },
+    {
+     "style": "sword",
+     "weight": 1,
+     "weapons": [
+      "minecraft:iron_sword"
+     ]
+    },
+    {
+     "style": "gunner",
+     "weight": 1,
+     "weapons": [
+      "onepiece:flintlock_pistol"
+     ]
+    }
+   ],
+   "health": 40,
+   "damage": 8,
+   "armor": 4,
+   "berries": 6,
+   "bounty": 2000000,
+   "speed": 0.33
+  },
+  {
+   "id": "cp0_agent",
+   "faction": "marine",
+   "crews": [
+    "CP0"
+   ],
+   "name": "CP0 Agent {name}",
+   "ranks": [
+    "Agent"
+   ],
+   "skins": [
+    "cp0_agent"
+   ],
+   "loadouts": [
+    {
+     "style": "rokushiki",
+     "weight": 3
+    },
+    {
+     "style": "haki",
+     "weight": 1,
+     "weapons": [
+      "minecraft:netherite_sword"
+     ]
+    }
+   ],
+   "health": 80,
+   "damage": 12,
+   "armor": 8,
+   "berries": 15,
+   "bounty": 15000000,
+   "speed": 0.34
+  },
+  {
+   "id": "pacifista",
+   "faction": "marine",
+   "crews": [
+    "World Government"
+   ],
+   "name": "Pacifista PX-{num}",
+   "ranks": [
+    "Pacifista"
+   ],
+   "skins": [
+    "pacifista"
+   ],
+   "loadouts": [
+    {
+     "style": "beam",
+     "weight": 3
+    },
+    {
+     "style": "brawler",
+     "weight": 1
+    }
+   ],
+   "health": 120,
+   "damage": 14,
+   "armor": 12,
+   "berries": 20,
+   "bounty": 20000000,
+   "knockbackResistance": 0.9,
+   "speed": 0.26,
+   "scale": 3.83
+  },
+  {
+   "id": "seraphim",
+   "faction": "marine",
+   "crews": [
+    "World Government"
+   ],
+   "name": "Seraphim S-{name}",
+   "ranks": [
+    "Seraphim"
+   ],
+   "skins": [
+    "seraphim"
+   ],
+   "loadouts": [
+    {
+     "style": "beam",
+     "weight": 2
+    },
+    {
+     "style": "haki",
+     "weight": 1,
+     "weapons": [
+      "minecraft:netherite_sword"
+     ]
+    },
+    {
+     "style": "sword",
+     "weight": 1,
+     "weapons": [
+      "minecraft:netherite_sword"
+     ]
+    }
+   ],
+   "health": 110,
+   "damage": 14,
+   "armor": 10,
+   "berries": 25,
+   "bounty": 40000000,
+   "knockbackResistance": 0.6
+  },
+  {
+   "id": "jailer",
+   "faction": "marine",
+   "crews": [
+    "Impel Down"
+   ],
+   "name": "{rank} {surname}",
+   "ranks": [
+    "Guard",
+    "Jailer",
+    "Head Jailer"
+   ],
+   "skins": [
+    "jailer"
+   ],
+   "loadouts": [
+    {
+     "style": "heavy",
+     "weight": 3,
+     "weapons": [
+      "minecraft:iron_axe",
+      "minecraft:mace",
+      "onepiece:seastone_jitte"
+     ]
+    },
+    {
+     "style": "sword",
+     "weight": 1,
+     "weapons": [
+      "minecraft:iron_sword"
+     ]
+    },
+    {
+     "style": "gunner",
+     "weight": 1,
+     "weapons": [
+      "onepiece:marine_rifle"
+     ]
+    }
+   ],
+   "health": 40,
+   "damage": 7,
+   "armor": 6,
+   "berries": 4,
+   "bounty": 1000000
+  },
+  {
+   "id": "bandit",
+   "faction": "pirate",
+   "crews": [
+    "Higuma Bandits",
+    "Mountain Bandits",
+    "Dadan Family"
+   ],
+   "name": "{crew} {name}",
+   "ranks": [
+    "Bandit"
+   ],
+   "skins": [
+    "bandit"
+   ],
+   "loadouts": [
+    {
+     "style": "heavy",
+     "weight": 2,
+     "weapons": [
+      "minecraft:wooden_axe",
+      "minecraft:stone_axe"
+     ]
+    },
+    {
+     "style": "sword",
+     "weight": 1,
+     "weapons": [
+      "minecraft:stone_sword"
+     ]
+    },
+    {
+     "style": "brawler",
+     "weight": 1
+    }
+   ],
+   "health": 18,
+   "damage": 3,
+   "berries": 1
+  },
+  {
+   "id": "rookie_pirate",
+   "faction": "pirate",
+   "crews": [
+    "*"
+   ],
+   "name": "{crew} {name}",
+   "ranks": [
+    "Deckhand"
+   ],
+   "skins": [
+    "rookie"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 3,
+     "weapons": [
+      "minecraft:wooden_sword",
+      "minecraft:stone_sword"
+     ]
+    },
+    {
+     "style": "brawler",
+     "weight": 1
+    },
+    {
+     "style": "gunner",
+     "weight": 1,
+     "weapons": [
+      "onepiece:flintlock_pistol"
+     ]
+    }
+   ],
+   "health": 18,
+   "damage": 3,
+   "berries": 1
+  },
+  {
+   "id": "buggy_pirate",
+   "faction": "pirate",
+   "crews": [
+    "Buggy Pirates"
+   ],
+   "name": "{crew} {name}",
+   "ranks": [
+    "Clown"
+   ],
+   "skins": [
+    "buggy"
+   ],
+   "loadouts": [
+    {
+     "style": "bomber",
+     "weight": 2
+    },
+    {
+     "style": "sword",
+     "weight": 2,
+     "weapons": [
+      "minecraft:stone_sword",
+      "onepiece:buggy_knife"
+     ]
+    },
+    {
+     "style": "brawler",
+     "weight": 1
+    }
+   ],
+   "health": 20,
+   "damage": 4,
+   "berries": 2
+  },
+  {
+   "id": "pirate",
+   "faction": "pirate",
+   "crews": [
+    "*"
+   ],
+   "name": "{crew} {name}",
+   "ranks": [
+    "Deckhand",
+    "Gunner's Mate",
+    "Bosun"
+   ],
+   "skins": [
+    "deckhand"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 3,
+     "weapons": [
+      "minecraft:iron_sword",
+      "minecraft:stone_sword"
+     ]
+    },
+    {
+     "style": "heavy",
+     "weight": 2,
+     "weapons": [
+      "minecraft:iron_axe"
+     ]
+    },
+    {
+     "style": "brawler",
+     "weight": 1
+    },
+    {
+     "style": "gunner",
+     "weight": 1,
+     "weapons": [
+      "onepiece:flintlock_pistol"
+     ]
+    },
+    {
+     "style": "bomber",
+     "weight": 1
+    }
+   ],
+   "health": 24,
+   "damage": 5,
+   "berries": 2
+  },
+  {
+   "id": "pirate_gunner",
+   "faction": "pirate",
+   "crews": [
+    "*"
+   ],
+   "name": "{crew} {name}",
+   "ranks": [
+    "Gunner"
+   ],
+   "skins": [
+    "deckhand"
+   ],
+   "loadouts": [
+    {
+     "style": "gunner",
+     "weight": 3,
+     "weapons": [
+      "onepiece:flintlock_pistol",
+      "onepiece:tommy_gun"
+     ]
+    },
+    {
+     "style": "sniper",
+     "weight": 1,
+     "weapons": [
+      "onepiece:marine_rifle"
+     ]
+    },
+    {
+     "style": "bomber",
+     "weight": 1
+    }
+   ],
+   "health": 22,
+   "damage": 5,
+   "berries": 2
+  },
+  {
+   "id": "pirate_captain",
+   "faction": "pirate",
+   "crews": [
+    "*"
+   ],
+   "name": "Captain {epithet} {name}",
+   "ranks": [
+    "Captain"
+   ],
+   "skins": [
+    "pirate_captain"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 2,
+     "weapons": [
+      "minecraft:diamond_sword",
+      "minecraft:iron_sword"
+     ]
+    },
+    {
+     "style": "haki",
+     "weight": 1,
+     "weapons": [
+      "minecraft:iron_sword",
+      ""
+     ]
+    },
+    {
+     "style": "gunner",
+     "weight": 1,
+     "weapons": [
+      "onepiece:flintlock_pistol"
+     ]
+    },
+    {
+     "style": "heavy",
+     "weight": 1,
+     "weapons": [
+      "minecraft:iron_axe"
+     ]
+    }
+   ],
+   "health": 60,
+   "damage": 8,
+   "armor": 4,
+   "berries": 12,
+   "knockbackResistance": 0.3
+  },
+  {
+   "id": "fishman",
+   "faction": "pirate",
+   "crews": [
+    "Arlong Pirates",
+    "New Fish-Man Pirates",
+    "Flying Pirates"
+   ],
+   "name": "{crew} {name}",
+   "ranks": [
+    "Fish-Man"
+   ],
+   "skins": [
+    "fishman"
+   ],
+   "loadouts": [
+    {
+     "style": "fishman",
+     "weight": 3,
+     "weapons": [
+      "minecraft:trident",
+      "",
+      "minecraft:iron_sword"
+     ]
+    },
+    {
+     "style": "sword",
+     "weight": 1,
+     "weapons": [
+      "onepiece:kiribachi",
+      "minecraft:iron_sword"
+     ]
+    }
+   ],
+   "health": 34,
+   "damage": 6,
+   "armor": 2,
+   "berries": 3,
+   "knockbackResistance": 0.3
+  },
+  {
+   "id": "baroque_agent",
+   "faction": "pirate",
+   "crews": [
+    "Baroque Works"
+   ],
+   "name": "{rank} {name}",
+   "ranks": [
+    "Billions",
+    "Millions",
+    "Frontier Agent"
+   ],
+   "skins": [
+    "baroque"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 2,
+     "weapons": [
+      "minecraft:iron_sword"
+     ]
+    },
+    {
+     "style": "gunner",
+     "weight": 1,
+     "weapons": [
+      "onepiece:flintlock_pistol"
+     ]
+    },
+    {
+     "style": "bomber",
+     "weight": 1
+    },
+    {
+     "style": "brawler",
+     "weight": 1
+    }
+   ],
+   "health": 26,
+   "damage": 5,
+   "berries": 3
+  },
+  {
+   "id": "bounty_hunter",
+   "faction": "pirate",
+   "crews": [
+    ""
+   ],
+   "name": "{epithet} {name}",
+   "ranks": [
+    "Bounty Hunter"
+   ],
+   "skins": [
+    "bounty_hunter"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 2,
+     "weapons": [
+      "minecraft:iron_sword"
+     ]
+    },
+    {
+     "style": "gunner",
+     "weight": 2,
+     "weapons": [
+      "onepiece:flintlock_pistol"
+     ]
+    },
+    {
+     "style": "sniper",
+     "weight": 1,
+     "weapons": [
+      "onepiece:marine_rifle"
+     ]
+    }
+   ],
+   "health": 26,
+   "damage": 6,
+   "berries": 4
+  },
+  {
+   "id": "gifter",
+   "faction": "pirate",
+   "crews": [
+    "Beasts Pirates"
+   ],
+   "name": "{rank} {name}",
+   "ranks": [
+    "Waiter",
+    "Pleasure",
+    "Gifter"
+   ],
+   "skins": [
+    "gifter"
+   ],
+   "loadouts": [
+    {
+     "style": "heavy",
+     "weight": 3,
+     "weapons": [
+      "minecraft:diamond_axe",
+      "minecraft:iron_axe",
+      "minecraft:mace"
+     ]
+    },
+    {
+     "style": "brawler",
+     "weight": 1
+    },
+    {
+     "style": "sword",
+     "weight": 1,
+     "weapons": [
+      "minecraft:iron_sword"
+     ]
+    }
+   ],
+   "health": 40,
+   "damage": 8,
+   "armor": 4,
+   "berries": 5,
+   "knockbackResistance": 0.3
+  },
+  {
+   "id": "headliner",
+   "faction": "pirate",
+   "crews": [
+    "Beasts Pirates"
+   ],
+   "name": "Headliner {epithet} {name}",
+   "ranks": [
+    "Headliner"
+   ],
+   "skins": [
+    "headliner"
+   ],
+   "loadouts": [
+    {
+     "style": "heavy",
+     "weight": 2,
+     "weapons": [
+      "minecraft:netherite_axe",
+      "minecraft:mace"
+     ]
+    },
+    {
+     "style": "haki",
+     "weight": 1,
+     "weapons": [
+      "minecraft:diamond_sword"
+     ]
+    },
+    {
+     "style": "sword",
+     "weight": 1,
+     "weapons": [
+      "minecraft:diamond_sword"
+     ]
+    }
+   ],
+   "health": 60,
+   "damage": 10,
+   "armor": 6,
+   "berries": 10,
+   "knockbackResistance": 0.5,
+   "scale": 1.15
+  },
+  {
+   "id": "donquixote",
+   "faction": "pirate",
+   "crews": [
+    "Donquixote Pirates"
+   ],
+   "name": "{crew} {name}",
+   "ranks": [
+    "Underling",
+    "Officer"
+   ],
+   "skins": [
+    "donquixote"
+   ],
+   "loadouts": [
+    {
+     "style": "gunner",
+     "weight": 2,
+     "weapons": [
+      "onepiece:flintlock_pistol",
+      "onepiece:tommy_gun"
+     ]
+    },
+    {
+     "style": "sword",
+     "weight": 1,
+     "weapons": [
+      "minecraft:iron_sword"
+     ]
+    },
+    {
+     "style": "sniper",
+     "weight": 1,
+     "weapons": [
+      "onepiece:marine_rifle"
+     ]
+    }
+   ],
+   "health": 30,
+   "damage": 6,
+   "armor": 2,
+   "berries": 4
+  },
+  {
+   "id": "whitebeard_pirate",
+   "faction": "pirate",
+   "crews": [
+    "Whitebeard Pirates"
+   ],
+   "name": "{crew} {name}",
+   "ranks": [
+    "Division Member",
+    "Division Veteran"
+   ],
+   "skins": [
+    "whitebeard"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 2,
+     "weapons": [
+      "minecraft:diamond_sword"
+     ]
+    },
+    {
+     "style": "haki",
+     "weight": 1,
+     "weapons": [
+      "minecraft:diamond_sword",
+      ""
+     ]
+    },
+    {
+     "style": "brawler",
+     "weight": 1
+    },
+    {
+     "style": "heavy",
+     "weight": 1,
+     "weapons": [
+      "minecraft:diamond_axe"
+     ]
+    }
+   ],
+   "health": 50,
+   "damage": 9,
+   "armor": 6,
+   "berries": 8,
+   "knockbackResistance": 0.3
+  },
+  {
+   "id": "blackbeard_pirate",
+   "faction": "pirate",
+   "crews": [
+    "Blackbeard Pirates"
+   ],
+   "name": "{crew} {name}",
+   "ranks": [
+    "Crewman"
+   ],
+   "skins": [
+    "blackbeard"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 2,
+     "weapons": [
+      "minecraft:netherite_sword",
+      "minecraft:diamond_sword"
+     ]
+    },
+    {
+     "style": "gunner",
+     "weight": 1,
+     "weapons": [
+      "onepiece:tommy_gun"
+     ]
+    },
+    {
+     "style": "heavy",
+     "weight": 1,
+     "weapons": [
+      "minecraft:netherite_axe"
+     ]
+    }
+   ],
+   "health": 50,
+   "damage": 9,
+   "armor": 6,
+   "berries": 8
+  },
+  {
+   "id": "tomb_guard",
+   "faction": "pirate",
+   "crews": [
+    "Tomb Raiders"
+   ],
+   "name": "{rank} {name}",
+   "ranks": [
+    "Tomb Raider",
+    "Raider Veteran"
+   ],
+   "skins": [
+    "tomb_guard"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 3,
+     "weapons": [
+      "minecraft:iron_sword",
+      "minecraft:golden_sword"
+     ]
+    },
+    {
+     "style": "heavy",
+     "weight": 2,
+     "weapons": [
+      "minecraft:iron_axe"
+     ]
+    },
+    {
+     "style": "gunner",
+     "weight": 1,
+     "weapons": [
+      "onepiece:flintlock_pistol"
+     ]
+    }
+   ],
+   "health": 32,
+   "damage": 6,
+   "armor": 3,
+   "berries": 4
+  },
+  {
+   "id": "tomb_warden",
+   "faction": "pirate",
+   "crews": [
+    "Tomb Raiders"
+   ],
+   "name": "Tomb Warden Hassad",
+   "ranks": [
+    "Warden"
+   ],
+   "skins": [
+    "tomb_guard"
+   ],
+   "loadouts": [
+    {
+     "style": "heavy",
+     "weight": 1,
+     "weapons": [
+      "minecraft:diamond_axe"
+     ]
+    }
+   ],
+   "health": 160,
+   "damage": 9,
+   "armor": 6,
+   "berries": 30,
+   "knockbackResistance": 0.6,
+   "scale": 1.2
+  },
+  {
+   "id": "undead_pirate",
+   "faction": "pirate",
+   "crews": [
+    "the Restless Dead"
+   ],
+   "name": "Restless {name}",
+   "ranks": [
+    "Restless Dead"
+   ],
+   "skins": [
+    "undead"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 3,
+     "weapons": [
+      "minecraft:iron_sword",
+      "minecraft:stone_sword"
+     ]
+    },
+    {
+     "style": "brawler",
+     "weight": 1
+    }
+   ],
+   "health": 30,
+   "damage": 6,
+   "armor": 2,
+   "berries": 3
+  },
+  {
+   "id": "sword_shade",
+   "faction": "pirate",
+   "crews": [
+    "the Restless Dead"
+   ],
+   "name": "Shade of the Sword God",
+   "ranks": [
+    "Shade"
+   ],
+   "skins": [
+    "undead"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 1,
+     "weapons": [
+      "minecraft:diamond_sword"
+     ]
+    }
+   ],
+   "health": 220,
+   "damage": 11,
+   "armor": 6,
+   "berries": 40,
+   "speed": 0.34,
+   "knockbackResistance": 0.5,
+   "scale": 1.1
+  },
+  {
+   "id": "ronin",
+   "faction": "pirate",
+   "crews": [
+    "Wandering Ronin"
+   ],
+   "name": "Ronin {name}",
+   "ranks": [
+    "Ronin",
+    "Ronin Veteran"
+   ],
+   "skins": [
+    "ronin"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 3,
+     "weapons": [
+      "minecraft:iron_sword",
+      "minecraft:diamond_sword"
+     ]
+    },
+    {
+     "style": "haki",
+     "weight": 1,
+     "weapons": [
+      "minecraft:diamond_sword"
+     ]
+    }
+   ],
+   "health": 45,
+   "damage": 8,
+   "armor": 4,
+   "berries": 5,
+   "knockbackResistance": 0.2
+  },
+  {
+   "id": "ronin_lord",
+   "faction": "pirate",
+   "crews": [
+    "Wandering Ronin"
+   ],
+   "name": "Ronin Lord Kagemaru",
+   "ranks": [
+    "Ronin Lord"
+   ],
+   "skins": [
+    "ronin"
+   ],
+   "loadouts": [
+    {
+     "style": "haki",
+     "weight": 1,
+     "weapons": [
+      "minecraft:netherite_sword"
+     ],
+     "offhand": "minecraft:diamond_sword"
+    }
+   ],
+   "health": 320,
+   "damage": 14,
+   "armor": 8,
+   "berries": 60,
+   "knockbackResistance": 0.5,
+   "scale": 1.1
+  },
+  {
+   "id": "cursed_smith",
+   "faction": "pirate",
+   "crews": [
+    "Beasts Pirates"
+   ],
+   "name": "Kurogane the Cursed Smith",
+   "ranks": [
+    "Cursed Smith"
+   ],
+   "skins": [
+    "smith"
+   ],
+   "loadouts": [
+    {
+     "style": "heavy",
+     "weight": 1,
+     "weapons": [
+      "minecraft:mace",
+      "minecraft:netherite_axe"
+     ]
+    }
+   ],
+   "health": 320,
+   "damage": 15,
+   "armor": 10,
+   "berries": 60,
+   "knockbackResistance": 0.8,
+   "scale": 1.3
+  },
+  {
+   "id": "rocks_pirate",
+   "faction": "pirate",
+   "crews": [
+    "Rocks Pirates"
+   ],
+   "name": "{crew} {name}",
+   "ranks": [
+    "Old Guard",
+    "Veteran"
+   ],
+   "skins": [
+    "rocks"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 2,
+     "weapons": [
+      "minecraft:netherite_sword",
+      "minecraft:diamond_sword"
+     ]
+    },
+    {
+     "style": "haki",
+     "weight": 1,
+     "weapons": [
+      "minecraft:diamond_sword"
+     ]
+    },
+    {
+     "style": "gunner",
+     "weight": 1,
+     "weapons": [
+      "onepiece:tommy_gun"
+     ]
+    },
+    {
+     "style": "heavy",
+     "weight": 1,
+     "weapons": [
+      "minecraft:netherite_axe"
+     ]
+    }
+   ],
+   "health": 60,
+   "damage": 10,
+   "armor": 7,
+   "berries": 8,
+   "knockbackResistance": 0.3
+  },
+  {
+   "id": "rocks_captain",
+   "faction": "pirate",
+   "crews": [
+    "Rocks Pirates"
+   ],
+   "name": "Gorvak the Undying",
+   "ranks": [
+    "Captain"
+   ],
+   "skins": [
+    "rocks"
+   ],
+   "loadouts": [
+    {
+     "style": "haki",
+     "weight": 1,
+     "weapons": [
+      "minecraft:netherite_axe"
+     ]
+    }
+   ],
+   "health": 450,
+   "damage": 17,
+   "armor": 12,
+   "berries": 100,
+   "knockbackResistance": 0.9,
+   "scale": 1.35
+  },
+  {
+   "id": "big_mom_pirate",
+   "faction": "pirate",
+   "crews": [
+    "Big Mom Pirates"
+   ],
+   "name": "{rank} {name}",
+   "ranks": [
+    "Chess Soldier",
+    "Minister",
+    "Sweet Commander's Aide"
+   ],
+   "skins": [
+    "big_mom"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 2,
+     "weapons": [
+      "minecraft:iron_sword",
+      "minecraft:diamond_sword"
+     ]
+    },
+    {
+     "style": "heavy",
+     "weight": 1,
+     "weapons": [
+      "minecraft:iron_axe",
+      "minecraft:mace"
+     ]
+    },
+    {
+     "style": "gunner",
+     "weight": 1,
+     "weapons": [
+      "onepiece:flintlock_pistol"
+     ]
+    }
+   ],
+   "health": 42,
+   "damage": 8,
+   "armor": 4,
+   "berries": 5,
+   "knockbackResistance": 0.3
+  },
+  {
+   "id": "holy_knight",
+   "faction": "marine",
+   "crews": [
+    "Holy Knights"
+   ],
+   "name": "{rank} {name}",
+   "ranks": [
+    "Holy Knight",
+    "Knight of God"
+   ],
+   "skins": [
+    "holy_knight"
+   ],
+   "loadouts": [
+    {
+     "style": "sword",
+     "weight": 2,
+     "weapons": [
+      "minecraft:netherite_sword"
+     ]
+    },
+    {
+     "style": "haki",
+     "weight": 1,
+     "weapons": [
+      "minecraft:netherite_sword"
+     ]
+    },
+    {
+     "style": "gunner",
+     "weight": 1,
+     "weapons": [
+      "onepiece:flintlock_pistol"
+     ]
+    }
+   ],
+   "health": 120,
+   "damage": 15,
+   "armor": 10,
+   "berries": 30,
+   "knockbackResistance": 0.5
+  }
+ ],
+ "patrols": {
+  "default": [
+   {
+    "kits": [
+     "rookie_pirate",
+     "pirate",
+     "pirate_gunner"
+    ],
+    "weight": 3,
+    "min": 2,
+    "max": 4,
+    "leader": "pirate_captain"
+   },
+   {
+    "kits": [
+     "marine",
+     "marine_rifle"
+    ],
+    "weight": 2,
+    "min": 2,
+    "max": 4,
+    "leader": "marine_officer"
+   }
+  ],
+  "onepiece:east_blue": [
+   {
+    "kits": [
+     "rookie_pirate",
+     "rookie_pirate",
+     "pirate"
+    ],
+    "weight": 3,
+    "min": 2,
+    "max": 4,
+    "leader": "pirate_captain"
+   },
+   {
+    "kits": [
+     "buggy_pirate"
+    ],
+    "weight": 2,
+    "min": 2,
+    "max": 4
+   },
+   {
+    "kits": [
+     "bandit"
+    ],
+    "weight": 1,
+    "min": 2,
+    "max": 4
+   },
+   {
+    "kits": [
+     "marine_recruit",
+     "marine_recruit",
+     "marine"
+    ],
+    "weight": 2,
+    "min": 2,
+    "max": 4,
+    "leader": "marine_officer"
+   }
+  ],
+  "onepiece:alabasta": [
+   {
+    "kits": [
+     "baroque_agent"
+    ],
+    "weight": 3,
+    "min": 2,
+    "max": 4
+   },
+   {
+    "kits": [
+     "marine",
+     "marine_rifle"
+    ],
+    "weight": 1,
+    "min": 2,
+    "max": 4,
+    "leader": "marine_officer"
+   },
+   {
+    "kits": [
+     "bandit"
+    ],
+    "weight": 1,
+    "min": 2,
+    "max": 4
+   }
+  ],
+  "onepiece:jaya": [
+   {
+    "kits": [
+     "rookie_pirate",
+     "pirate",
+     "pirate_gunner"
+    ],
+    "weight": 2,
+    "min": 2,
+    "max": 4,
+    "leader": "pirate_captain"
+   },
+   {
+    "kits": [
+     "blackbeard_pirate"
+    ],
+    "weight": 1,
+    "min": 2,
+    "max": 4
+   },
+   {
+    "kits": [
+     "bounty_hunter"
+    ],
+    "weight": 1,
+    "min": 1,
+    "max": 3
+   }
+  ],
+  "onepiece:sabaody": [
+   {
+    "kits": [
+     "rookie_pirate",
+     "pirate",
+     "pirate_gunner"
+    ],
+    "weight": 2,
+    "min": 2,
+    "max": 4,
+    "leader": "pirate_captain"
+   },
+   {
+    "kits": [
+     "marine",
+     "marine_rifle"
+    ],
+    "weight": 2,
+    "min": 2,
+    "max": 4,
+    "leader": "elite_marine"
+   },
+   {
+    "kits": [
+     "bounty_hunter"
+    ],
+    "weight": 1,
+    "min": 1,
+    "max": 3
+   },
+   {
+    "kits": [
+     "pacifista"
+    ],
+    "weight": 1,
+    "min": 1,
+    "max": 1
+   }
+  ],
+  "onepiece:fishman_reef": [
+   {
+    "kits": [
+     "fishman"
+    ],
+    "weight": 3,
+    "min": 2,
+    "max": 4
+   }
+  ],
+  "onepiece:dressrosa": [
+   {
+    "kits": [
+     "donquixote"
+    ],
+    "weight": 3,
+    "min": 2,
+    "max": 4
+   },
+   {
+    "kits": [
+     "rookie_pirate",
+     "pirate",
+     "pirate_gunner"
+    ],
+    "weight": 1,
+    "min": 2,
+    "max": 4,
+    "leader": "pirate_captain"
+   }
+  ],
+  "onepiece:whole_cake": [
+   {
+    "kits": [
+     "rookie_pirate",
+     "pirate",
+     "pirate_gunner"
+    ],
+    "weight": 1,
+    "min": 2,
+    "max": 4,
+    "leader": "pirate_captain"
+   }
+  ],
+  "onepiece:wano": [
+   {
+    "kits": [
+     "gifter"
+    ],
+    "weight": 3,
+    "min": 2,
+    "max": 4,
+    "leader": "headliner"
+   }
+  ],
+  "onepiece:onigashima": [
+   {
+    "kits": [
+     "gifter"
+    ],
+    "weight": 3,
+    "min": 2,
+    "max": 4,
+    "leader": "headliner"
+   }
+  ],
+  "onepiece:punk_hazard_frozen": [
+   {
+    "kits": [
+     "marine",
+     "marine_rifle"
+    ],
+    "weight": 1,
+    "min": 2,
+    "max": 4,
+    "leader": "elite_marine"
+   }
+  ],
+  "onepiece:punk_hazard_burning": [
+   {
+    "kits": [
+     "marine",
+     "marine_rifle"
+    ],
+    "weight": 1,
+    "min": 2,
+    "max": 4,
+    "leader": "elite_marine"
+   }
+  ],
+  "onepiece:egghead": [
+   {
+    "kits": [
+     "cp_agent",
+     "marine"
+    ],
+    "weight": 2,
+    "min": 2,
+    "max": 4,
+    "leader": "cp0_agent"
+   },
+   {
+    "kits": [
+     "pacifista"
+    ],
+    "weight": 1,
+    "min": 1,
+    "max": 2
+   },
+   {
+    "kits": [
+     "seraphim"
+    ],
+    "weight": 1,
+    "min": 1,
+    "max": 1
+   }
+  ],
+  "onepiece:red_line": [
+   {
+    "kits": [
+     "marine",
+     "marine_rifle"
+    ],
+    "weight": 1,
+    "min": 2,
+    "max": 4,
+    "leader": "vice_admiral"
+   },
+   {
+    "kits": [
+     "cp_agent"
+    ],
+    "weight": 1,
+    "min": 2,
+    "max": 4,
+    "leader": "cp0_agent"
+   }
+  ],
+  "onepiece:amazon_lily": [],
+  "onepiece:skypiea": [],
+  "onepiece:elbaph": [],
+  "onepiece:zou": [],
+  "onepiece:little_garden": []
+ }
+}

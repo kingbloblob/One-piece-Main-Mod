@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/sea_train_booth"
+    },
+    "facing=east": {
+      "model": "onepiece:block/sea_train_booth",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/sea_train_booth",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/sea_train_booth",
+      "y": 270
+    }
+  }
+}

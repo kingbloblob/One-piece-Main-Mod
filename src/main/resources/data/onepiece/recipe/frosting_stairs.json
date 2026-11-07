@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:frosting_block"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:frosting_stairs"
+  }
+}

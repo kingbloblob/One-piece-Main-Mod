@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "onepiece:block/stripped_yarukiman_log_x"
+    },
+    "axis=y": {
+      "model": "onepiece:block/stripped_yarukiman_log_y"
+    },
+    "axis=z": {
+      "model": "onepiece:block/stripped_yarukiman_log_z"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:cobweb_moss"
+  ],
+  "result": {
+    "id": "minecraft:light_gray_dye",
+    "count": 1
+  }
+}

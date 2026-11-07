@@ -1,0 +1,13 @@
+{
+  "name": "Going Merry",
+  "template": "onepiece:ships/going_merry",
+  "bow": "east",
+  "waterline": 4.9,
+  "faction": "player",
+  "tiers": [],
+  "crew": "Straw Hat Pirates",
+  "length": 38,
+  "beam": 18,
+  "height": 35,
+  "blocks": 2233
+}

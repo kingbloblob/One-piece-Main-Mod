@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "LLL"
+  ],
+  "key": {
+    "L": "minecraft:stripped_dark_oak_log"
+  },
+  "result": {
+    "count": 6,
+    "id": "onepiece:dark_oak_beam"
+  }
+}

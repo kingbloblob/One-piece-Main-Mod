@@ -1,0 +1,4 @@
+# Mokomo Dukedom (Zou) - dossier (batch 12)
+Sources: fandom wiki Zou; ch. 803-822.
+- On the back of the 1000-year elephant Zunesha. Kurau City (centre of the back, edge of the Whale Forest): ancient buildings embedded in rock formations, round houses; it was battered by Jack. Whale Forest with the Whale Tree, trunk like a baleen whale bending upwards; Duke Inuarashi's palace in it; secret room in its tail with the Road Poneglyph. Right Flank Forest: Nekomamushi's Guardians by night.
+Design brief: 176 site; the island IS Zunesha's back: grey wrinkled skin flanks (gray terracotta/tuff mix), the head with fan ears, tusks and trunk rising from the sea at the north end, tail at the south; forest on top (zunesha_moss, mink_fern, giant trees); Whale Tree at the middle (whale-shaped trunk with palace rooms + poneglyph room in tail); Kurau City: round stone houses built into rock outcrops, market; Right Flank camp with tents and lanterns; rope bridges; chests.

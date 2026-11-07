@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:desert",
+    "onepiece:alabasta",
+    "minecraft:badlands",
+    "minecraft:savanna"
+  ]
+}

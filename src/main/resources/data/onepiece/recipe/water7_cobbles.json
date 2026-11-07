@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:cobblestone",
+    "X": "minecraft:sand"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:water7_cobbles"
+  }
+}

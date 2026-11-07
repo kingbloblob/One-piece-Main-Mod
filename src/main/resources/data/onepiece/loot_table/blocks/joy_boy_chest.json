@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "condition": {
+            "type": "minecraft:match_block",
+            "blocks": "onepiece:joy_boy_chest",
+            "state": {
+              "treasure": "false"
+            }
+          },
+          "name": "onepiece:joy_boy_chest"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "onepiece:blocks/joy_boy_chest"
+}

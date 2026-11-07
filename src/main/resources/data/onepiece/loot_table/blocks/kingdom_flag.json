@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "onepiece:kingdom_flag"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "onepiece:blocks/kingdom_flag"
+}

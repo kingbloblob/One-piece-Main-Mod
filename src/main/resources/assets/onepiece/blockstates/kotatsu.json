@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/kotatsu"
+    },
+    "facing=east": {
+      "model": "onepiece:block/kotatsu",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/kotatsu",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/kotatsu",
+      "y": 270
+    }
+  }
+}

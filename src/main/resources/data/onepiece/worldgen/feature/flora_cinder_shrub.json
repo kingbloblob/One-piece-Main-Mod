@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:simple_block",
+  "to_place": {
+    "id": "onepiece:cinder_shrub",
+    "properties": {
+      "half": "lower"
+    }
+  }
+}

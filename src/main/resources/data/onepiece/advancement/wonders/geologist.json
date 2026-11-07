@@ -1,0 +1,115 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:electro_crystal"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.geologist.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.geologist.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "desert_amber": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:desert_amber"
+          }
+        ]
+      }
+    },
+    "sun_coral": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:sun_coral"
+          }
+        ]
+      }
+    },
+    "rock_candy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:rock_candy"
+          }
+        ]
+      }
+    },
+    "raw_giant_iron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:raw_giant_iron"
+          }
+        ]
+      }
+    },
+    "egghead_alloy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:egghead_alloy"
+          }
+        ]
+      }
+    },
+    "gloom_crystal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:gloom_crystal"
+          }
+        ]
+      }
+    },
+    "electro_crystal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:electro_crystal"
+          }
+        ]
+      }
+    },
+    "snake_jade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:snake_jade"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "desert_amber",
+      "sun_coral",
+      "rock_candy",
+      "raw_giant_iron",
+      "egghead_alloy",
+      "gloom_crystal",
+      "electro_crystal",
+      "snake_jade"
+    ]
+  ],
+  "parent": "onepiece:wonders/island_ore",
+  "rewards": {
+    "experience": 500
+  }
+}

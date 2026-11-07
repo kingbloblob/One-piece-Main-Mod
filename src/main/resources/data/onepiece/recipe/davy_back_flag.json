@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WWB",
+    "WWB",
+    "  S"
+  ],
+  "key": {
+    "W": "minecraft:white_wool",
+    "B": "minecraft:bone",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:davy_back_flag"
+  }
+}

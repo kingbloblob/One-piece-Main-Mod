@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:wano_rice_grass"
+  ],
+  "result": {
+    "id": "minecraft:lime_dye",
+    "count": 1
+  }
+}

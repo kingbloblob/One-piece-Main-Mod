@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "Q Q"
+  ],
+  "key": {
+    "S": "minecraft:quartz_slab",
+    "Q": "minecraft:quartz_pillar"
+  },
+  "result": {
+    "count": 4,
+    "id": "onepiece:marble_balustrade"
+  }
+}

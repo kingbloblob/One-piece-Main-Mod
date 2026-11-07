@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:diving_helmet"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.diving.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.diving.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "onepiece:diving_helmet",
+              "onepiece:bubble_coating"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/root"
+}

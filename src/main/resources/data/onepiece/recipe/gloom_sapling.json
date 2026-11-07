@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:dark_oak_sapling",
+    "minecraft:black_dye"
+  ],
+  "result": {
+    "id": "onepiece:gloom_sapling"
+  }
+}

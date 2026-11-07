@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:phantom_scale"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.florian_phantom.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.florian_phantom.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/lord_of_the_coast"
+}

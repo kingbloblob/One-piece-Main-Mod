@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:boarding_hook"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.boarding_hook.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.boarding_hook.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:boarding_hook"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/sea_battle"
+}

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "onepiece:sea_king_scale"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "onepiece:sea_king_scale"
+      }
+    ]
+  }
+}

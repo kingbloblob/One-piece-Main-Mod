@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:display_context",
+    "cases": [
+      {
+        "when": "gui",
+        "model": {
+          "type": "minecraft:model",
+          "model": "onepiece:item/sandai_kitetsu"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "onepiece:item/sandai_kitetsu_held"
+    }
+  }
+}

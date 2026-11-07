@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:swamp",
+    "minecraft:mangrove_swamp",
+    "onepiece:punk_hazard_burning",
+    "onepiece:punk_hazard_frozen",
+    "onepiece:kuri",
+    "onepiece:hachinosu"
+  ]
+}

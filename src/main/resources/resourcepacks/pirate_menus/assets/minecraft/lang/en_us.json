@@ -1,0 +1,17 @@
+{
+  "deathScreen.title": "Your voyage ends here...",
+  "deathScreen.title.hardcore": "Lost to the sea forever!",
+  "deathScreen.respawn": "Set Sail Again",
+  "deathScreen.titleScreen": "Return to Port (Title Screen)",
+  "menu.returnToGame": "Back to the Voyage",
+  "menu.quit": "Abandon Ship",
+  "menu.game": "Captain's Cabin (Game Menu)",
+  "menu.paused": "Anchored (Game Paused)",
+  "menu.savingLevel": "Writing the ship's log...",
+  "menu.savingChunks": "Rolling up the sea charts...",
+  "menu.preparingSpawn": "Charting the islands: %s%%",
+  "connect.joining": "Raising the anchor...",
+  "multiplayer.downloadingTerrain": "Sighting land...",
+  "createWorld.preparing": "Drawing a new map of the seas...",
+  "selectWorld.title": "Choose Your Voyage (Select World)"
+}

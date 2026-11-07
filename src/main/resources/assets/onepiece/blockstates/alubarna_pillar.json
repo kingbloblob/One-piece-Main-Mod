@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "onepiece:block/alubarna_pillar_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "onepiece:block/alubarna_pillar"
+    },
+    "axis=z": {
+      "model": "onepiece:block/alubarna_pillar_horizontal",
+      "x": 90
+    }
+  }
+}

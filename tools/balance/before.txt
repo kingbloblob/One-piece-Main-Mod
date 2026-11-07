@@ -1,0 +1,103 @@
+== Titans on Normal / Hard / Expert ==
+  kaido N                            eff.HP    1500  story-end   1:40  maxed   1:00  hit    20 =   9% hp
+  kaido H                            eff.HP    3151  story-end   3:30  maxed   2:06  hit    30 =  16% hp
+  kaido E                            eff.HP    5808  story-end   6:27  maxed   3:52  hit    40 =  25% hp
+  big_mom N                          eff.HP    1300  story-end   1:26  maxed   0:52  hit    18 =   7% hp
+  big_mom H                          eff.HP    2731  story-end   3:02  maxed   1:49  hit    27 =  13% hp
+  big_mom E                          eff.HP    5033  story-end   5:35  maxed   3:21  hit    36 =  21% hp
+  blackbeard N                       eff.HP    1500  story-end   1:40  maxed   1:00  hit    20 =   9% hp
+  blackbeard H                       eff.HP    3151  story-end   3:30  maxed   2:06  hit    30 =  16% hp
+  blackbeard E                       eff.HP    5808  story-end   6:27  maxed   3:52  hit    40 =  25% hp
+  whitebeard N                       eff.HP    1700  story-end   1:53  maxed   1:08  hit    22 =  10% hp
+  whitebeard H                       eff.HP    3571  story-end   3:58  maxed   2:22  hit    33 =  18% hp
+  whitebeard E                       eff.HP    6582  story-end   7:18  maxed   4:23  hit    44 =  29% hp
+  akainu N                           eff.HP    1300  story-end   1:26  maxed   0:52  hit    18 =   7% hp
+  akainu H                           eff.HP    2731  story-end   3:02  maxed   1:49  hit    27 =  13% hp
+  akainu E                           eff.HP    5033  story-end   5:35  maxed   3:21  hit    36 =  21% hp
+  mihawk N                           eff.HP    1400  story-end   1:33  maxed   0:56  hit    20 =   9% hp
+  mihawk H                           eff.HP    2941  story-end   3:16  maxed   1:57  hit    30 =  16% hp
+  mihawk E                           eff.HP    5420  story-end   6:01  maxed   3:36  hit    40 =  25% hp
+  imu N                              eff.HP    2200  story-end   2:26  maxed   1:28  hit    24 =  11% hp
+  imu H                              eff.HP    4622  story-end   5:08  maxed   3:04  hit    36 =  21% hp
+  imu E                              eff.HP    8518  story-end   9:27  maxed   5:40  hit    48 =  34% hp
+  xebec N                            eff.HP    3000  story-end   3:20  maxed   2:00  hit    28 =  14% hp
+  xebec H                            eff.HP    6303  story-end   7:00  maxed   4:12  hit    42 =  27% hp
+  xebec E                            eff.HP   11615  story-end  12:54  maxed   7:44  hit    56 =  44% hp
+== Legend Ladder (Expert x rung) ==
+  kaido Legend 1                     eff.HP    8131  story-end   9:02  maxed   5:25  hit    46 =  31% hp
+  kaido Legend 2                     eff.HP   10454  story-end  11:36  maxed   6:58  hit    52 =  38% hp
+  kaido Legend 3                     eff.HP   12777  story-end  14:11  maxed   8:31  hit    58 =  46% hp
+  kaido Legend 4                     eff.HP   15100  story-end  16:46  maxed  10:03  hit    64 =  55% hp
+  kaido Legend 5                     eff.HP   17423  story-end  19:21  maxed  11:36  hit    70 =  64% hp
+  whitebeard Legend 1                eff.HP    9215  story-end  10:14  maxed   6:08  hit    51 =  37% hp
+  whitebeard Legend 2                eff.HP   11847  story-end  13:09  maxed   7:53  hit    57 =  45% hp
+  whitebeard Legend 3                eff.HP   14480  story-end  16:05  maxed   9:39  hit    64 =  54% hp
+  whitebeard Legend 4                eff.HP   17113  story-end  19:00  maxed  11:24  hit    70 =  64% hp
+  whitebeard Legend 5                eff.HP   19746  story-end  21:56  maxed  13:09  hit    77 =  75% hp
+  akainu Legend 1                    eff.HP    7046  story-end   7:49  maxed   4:41  hit    41 =  26% hp
+  akainu Legend 2                    eff.HP    9060  story-end  10:03  maxed   6:02  hit    47 =  32% hp
+  akainu Legend 3                    eff.HP   11073  story-end  12:18  maxed   7:22  hit    52 =  39% hp
+  akainu Legend 4                    eff.HP   13086  story-end  14:32  maxed   8:43  hit    58 =  46% hp
+  akainu Legend 5                    eff.HP   15100  story-end  16:46  maxed  10:03  hit    63 =  53% hp
+== New Game+ story bosses (Normal) ==
+  buggy NG+0                         eff.HP     100  story-end   0:06  maxed   0:04  hit     5 =   1% hp
+  buggy NG+1                         eff.HP     125  story-end   0:08  maxed   0:05  hit     6 =   2% hp
+  buggy NG+3                         eff.HP     219  story-end   0:14  maxed   0:08  hit     8 =   3% hp
+  buggy NG+5                         eff.HP     375  story-end   0:25  maxed   0:15  hit    10 =   3% hp
+  lucci NG+0                         eff.HP     500  story-end   0:33  maxed   0:20  hit    12 =   4% hp
+  lucci NG+1                         eff.HP     625  story-end   0:41  maxed   0:25  hit    14 =   5% hp
+  lucci NG+3                         eff.HP    1094  story-end   1:12  maxed   0:43  hit    19 =   8% hp
+  lucci NG+5                         eff.HP    1875  story-end   2:05  maxed   1:15  hit    24 =  11% hp
+  doflamingo NG+0                    eff.HP     900  story-end   1:00  maxed   0:36  hit    14 =   5% hp
+  doflamingo NG+1                    eff.HP    1125  story-end   1:15  maxed   0:45  hit    17 =   7% hp
+  doflamingo NG+3                    eff.HP    1969  story-end   2:11  maxed   1:18  hit    22 =  10% hp
+  doflamingo NG+5                    eff.HP    3375  story-end   3:45  maxed   2:15  hit    28 =  14% hp
+  kaido NG+0                         eff.HP    1500  story-end   1:40  maxed   1:00  hit    20 =   9% hp
+  kaido NG+1                         eff.HP    1875  story-end   2:05  maxed   1:15  hit    24 =  11% hp
+  kaido NG+3                         eff.HP    3281  story-end   3:38  maxed   2:11  hit    32 =  18% hp
+  kaido NG+5                         eff.HP    5625  story-end   6:15  maxed   3:45  hit    40 =  25% hp
+  imu NG+0                           eff.HP    2200  story-end   2:26  maxed   1:28  hit    24 =  11% hp
+  imu NG+1                           eff.HP    2750  story-end   3:03  maxed   1:50  hit    29 =  15% hp
+  imu NG+3                           eff.HP    4812  story-end   5:20  maxed   3:12  hit    38 =  23% hp
+  imu NG+5                           eff.HP    8250  story-end   9:10  maxed   5:30  hit    48 =  34% hp
+== Raids (25 min limit; trash at 2x dps for sweeps) ==
+  final_war   1p NG+0 story-end  13:48
+  final_war   1p NG+0 maxed       8:17
+  final_war   2p NG+0 maxed       5:20
+  final_war   1p NG+3 maxed      17:53
+  final_war   1p NG+5 maxed      30:16  OVER LIMIT
+  beasts      1p NG+0 story-end  14:25
+  beasts      1p NG+0 maxed       8:39
+  beasts      2p NG+0 maxed       5:50
+  beasts      1p NG+3 maxed      20:02  tight
+  beasts      1p NG+5 maxed      38:21  OVER LIMIT
+  big_mom     1p NG+0 story-end  12:42
+  big_mom     1p NG+0 maxed       7:37
+  big_mom     2p NG+0 maxed       5:07
+  big_mom     1p NG+3 maxed      17:40
+  big_mom     1p NG+5 maxed      33:50  OVER LIMIT
+  blackbeard  1p NG+0 story-end  12:09
+  blackbeard  1p NG+0 maxed       7:17
+  blackbeard  2p NG+0 maxed       4:57
+  blackbeard  1p NG+3 maxed      16:48
+  blackbeard  1p NG+5 maxed      32:01  OVER LIMIT
+  whitebeard  1p NG+0 story-end  14:54
+  whitebeard  1p NG+0 maxed       8:56
+  whitebeard  2p NG+0 maxed       6:01
+  whitebeard  1p NG+3 maxed      20:44  tight
+  whitebeard  1p NG+5 maxed      39:43  OVER LIMIT
+  red_hair    1p NG+0 story-end  13:44
+  red_hair    1p NG+0 maxed       8:14
+  red_hair    2p NG+0 maxed       6:13
+  red_hair    1p NG+3 maxed      21:25  tight
+  red_hair    1p NG+5 maxed      27:32  OVER LIMIT
+  rocks       1p NG+0 story-end  33:35  OVER LIMIT
+  rocks       1p NG+0 maxed      20:09  tight
+  rocks       2p NG+0 maxed      15:09
+  rocks       1p NG+3 maxed      52:41  OVER LIMIT
+  rocks       1p NG+5 maxed      67:45  OVER LIMIT
+  roger       1p NG+0 story-end  58:45  OVER LIMIT
+  roger       1p NG+0 maxed      35:15  OVER LIMIT
+  roger       2p NG+0 maxed      17:43
+  roger       1p NG+3 maxed      61:41  OVER LIMIT
+  roger       1p NG+5 maxed      79:19  OVER LIMIT

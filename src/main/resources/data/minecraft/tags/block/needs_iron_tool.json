@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "onepiece:seastone_ore",
+    "onepiece:deepslate_seastone_ore",
+    "onepiece:seastone_block",
+    "onepiece:tamahagane_ore",
+    "onepiece:deepslate_tamahagane_ore",
+    "onepiece:wapometal_ore",
+    "onepiece:deepslate_wapometal_ore",
+    "onepiece:shandora_gold_ore",
+    "onepiece:desert_amber_ore",
+    "onepiece:sun_coral_ore",
+    "onepiece:rock_candy_ore",
+    "onepiece:giant_iron_ore",
+    "onepiece:egghead_alloy_ore",
+    "onepiece:gloom_crystal_ore",
+    "onepiece:electro_crystal_ore",
+    "onepiece:snake_jade_ore",
+    "onepiece:mining_drill"
+  ]
+}

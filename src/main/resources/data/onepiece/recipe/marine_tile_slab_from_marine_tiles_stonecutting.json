@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "onepiece:marine_tiles",
+  "result": {
+    "id": "onepiece:marine_tile_slab",
+    "count": 2
+  }
+}

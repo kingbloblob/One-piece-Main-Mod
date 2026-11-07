@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "onepiece:block/cinder_shrub_bottom"
+    },
+    "half=upper": {
+      "model": "onepiece:block/cinder_shrub_top"
+    }
+  }
+}

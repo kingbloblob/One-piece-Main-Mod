@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/cola_barrel"
+    },
+    "facing=east": {
+      "model": "onepiece:block/cola_barrel",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/cola_barrel",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/cola_barrel",
+      "y": 270
+    }
+  }
+}

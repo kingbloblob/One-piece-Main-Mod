@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:swamp",
+    "minecraft:dark_forest",
+    "onepiece:sabaody",
+    "onepiece:thriller_bark"
+  ]
+}

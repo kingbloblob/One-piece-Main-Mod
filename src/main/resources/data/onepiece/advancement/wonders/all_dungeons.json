@@ -1,0 +1,93 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:filled_map"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.all_dungeons.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.all_dungeons.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "treasure_grotto": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:treasure_grotto"
+            }
+          }
+        }
+      }
+    },
+    "marine_bunker": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:marine_bunker"
+            }
+          }
+        }
+      }
+    },
+    "smile_factory": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:smile_factory"
+            }
+          }
+        }
+      }
+    },
+    "ancient_ruins": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:ancient_ruins"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "treasure_grotto"
+    ],
+    [
+      "marine_bunker"
+    ],
+    [
+      "smile_factory"
+    ],
+    [
+      "ancient_ruins"
+    ]
+  ],
+  "parent": "onepiece:wonders/ancient_ruins",
+  "rewards": {
+    "experience": 300
+  }
+}

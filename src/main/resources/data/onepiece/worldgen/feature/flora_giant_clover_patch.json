@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:simple_block",
+  "to_place": {
+    "id": "onepiece:giant_clover_patch",
+    "properties": {
+      "facing": "north",
+      "flower_amount": "3"
+    }
+  }
+}

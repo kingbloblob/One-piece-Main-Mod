@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:treasure_vault_blueprint"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.all_buildings.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.all_buildings.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:pirate/building"
+}

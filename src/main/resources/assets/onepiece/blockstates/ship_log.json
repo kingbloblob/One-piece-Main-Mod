@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "onepiece:block/ship_log" },
+    "facing=east": { "model": "onepiece:block/ship_log", "y": 90 },
+    "facing=south": { "model": "onepiece:block/ship_log", "y": 180 },
+    "facing=west": { "model": "onepiece:block/ship_log", "y": 270 }
+  }
+}

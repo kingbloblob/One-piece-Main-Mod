@@ -1,0 +1,22 @@
+{
+  "anvil_cost": 2,
+  "description": {
+    "translate": "enchantment.onepiece.quick_draw"
+  },
+  "effects": {},
+  "max_cost": {
+    "base": 25,
+    "per_level_above_first": 9
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 5,
+    "per_level_above_first": 9
+  },
+  "primary_items": "#onepiece:guns",
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#onepiece:guns",
+  "weight": 5
+}

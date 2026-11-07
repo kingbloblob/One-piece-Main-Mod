@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:kuraigana_thistle"
+  ],
+  "result": {
+    "id": "minecraft:purple_dye",
+    "count": 2
+  }
+}

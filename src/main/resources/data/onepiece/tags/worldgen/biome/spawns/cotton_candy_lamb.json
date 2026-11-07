@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:meadow",
+    "minecraft:cherry_grove",
+    "minecraft:flower_forest",
+    "minecraft:sunflower_plains",
+    "onepiece:whole_cake",
+    "onepiece:cacao_island"
+  ]
+}

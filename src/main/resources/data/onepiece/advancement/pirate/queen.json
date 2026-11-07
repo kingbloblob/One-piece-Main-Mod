@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:wanted_poster_queen"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.queen.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.queen.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:pirate/first_boss"
+}

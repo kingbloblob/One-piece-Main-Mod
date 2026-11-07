@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.onepiecemod.multiplayer.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"server": [
+		"ServerWorldTypeMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

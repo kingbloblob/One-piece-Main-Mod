@@ -1,0 +1,27 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:egghead_lab",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:hachinosu",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:kuraigana_castle",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:god_valley",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "onepiece:ring_spread",
+    "spacing": 32,
+    "separation": 12,
+    "salt": 1408172034,
+    "min_distance": 6000
+  }
+}

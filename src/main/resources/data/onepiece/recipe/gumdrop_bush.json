@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bush",
+    "minecraft:magenta_dye"
+  ],
+  "result": {
+    "id": "onepiece:gumdrop_bush",
+    "count": 2
+  }
+}

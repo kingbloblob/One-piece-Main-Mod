@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:oak_chair"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.take_a_seat.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.take_a_seat.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:pirate/root"
+}

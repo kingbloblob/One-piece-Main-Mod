@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:island_cloud"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.sky_island.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.sky_island.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/alabasta"
+}

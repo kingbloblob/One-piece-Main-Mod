@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "I I"
+  ],
+  "key": {
+    "S": "onepiece:sakura_slab",
+    "I": "minecraft:stick"
+  },
+  "result": {
+    "count": 2,
+    "id": "onepiece:sakura_wall_shelf"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:white_terracotta",
+    "minecraft:water_bucket",
+    "onepiece:pearl_block"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:giant_clam_basin"
+  }
+}

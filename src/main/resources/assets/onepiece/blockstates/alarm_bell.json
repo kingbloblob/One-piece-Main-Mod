@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/alarm_bell"
+    },
+    "facing=east": {
+      "model": "onepiece:block/alarm_bell",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/alarm_bell",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/alarm_bell",
+      "y": 270
+    }
+  }
+}

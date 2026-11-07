@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "WSW"
+  ],
+  "key": {
+    "W": "minecraft:wheat",
+    "S": "minecraft:string"
+  },
+  "result": {
+    "count": 2,
+    "id": "onepiece:straw_mat"
+  }
+}

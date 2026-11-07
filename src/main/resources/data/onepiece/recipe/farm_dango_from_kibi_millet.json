@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:kibi_millet",
+    "onepiece:kibi_millet",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "count": 2,
+    "id": "onepiece:dango"
+  }
+}

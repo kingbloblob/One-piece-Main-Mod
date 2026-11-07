@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:jungle_sapling",
+    "minecraft:sand"
+  ],
+  "result": {
+    "id": "onepiece:palm_sapling"
+  }
+}

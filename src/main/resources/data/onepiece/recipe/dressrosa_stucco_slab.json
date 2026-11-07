@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:dressrosa_stucco"
+  },
+  "result": {
+    "count": 6,
+    "id": "onepiece:dressrosa_stucco_slab"
+  }
+}

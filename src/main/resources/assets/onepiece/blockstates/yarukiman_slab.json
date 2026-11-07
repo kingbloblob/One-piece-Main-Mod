@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "onepiece:block/yarukiman_slab"
+    },
+    "type=double": {
+      "model": "onepiece:block/yarukiman_planks"
+    },
+    "type=top": {
+      "model": "onepiece:block/yarukiman_slab_top"
+    }
+  }
+}

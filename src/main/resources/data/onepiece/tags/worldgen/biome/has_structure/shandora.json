@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "onepiece:skypiea",
+    "#minecraft:is_jungle",
+    "minecraft:ocean",
+    "minecraft:warm_ocean"
+  ]
+}

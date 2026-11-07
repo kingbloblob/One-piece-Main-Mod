@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:alabasta_sandstone_bricks"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.alubarna_palace.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.alubarna_palace.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:alubarna_palace"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/root"
+}

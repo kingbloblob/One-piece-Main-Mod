@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:warm_ocean",
+    "minecraft:lukewarm_ocean",
+    "minecraft:deep_lukewarm_ocean",
+    "minecraft:ocean",
+    "onepiece:east_blue",
+    "onepiece:fishman_reef",
+    "onepiece:orange_town",
+    "onepiece:loguetown",
+    "onepiece:conomi_islands",
+    "onepiece:marineford",
+    "onepiece:new_world_sea"
+  ]
+}

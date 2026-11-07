@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:kraken_ink"
+  ],
+  "result": {
+    "count": 2,
+    "id": "minecraft:black_dye"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:all_blue_kingfish"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.all_blue.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.all_blue.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/fish_log_10"
+}

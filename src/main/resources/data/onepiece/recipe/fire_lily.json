@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:orange_tulip",
+    "minecraft:blaze_powder"
+  ],
+  "result": {
+    "id": "onepiece:fire_lily",
+    "count": 2
+  }
+}

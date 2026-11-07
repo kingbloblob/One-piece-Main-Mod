@@ -1,0 +1,276 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "metal": "minecraft:block/gold_block",
+    "candle": "minecraft:block/white_candle_lit",
+    "particle": "minecraft:block/gold_block"
+  },
+  "elements": [
+    {
+      "from": [
+        6,
+        2,
+        15
+      ],
+      "to": [
+        10,
+        10,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "from": [
+        7.5,
+        4,
+        10
+      ],
+      "to": [
+        8.5,
+        5,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "from": [
+        6,
+        5,
+        8.5
+      ],
+      "to": [
+        10,
+        6,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "from": [
+        7,
+        6,
+        9.5
+      ],
+      "to": [
+        9,
+        12,
+        11.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#candle",
+          "uv": [
+            0,
+            8,
+            2,
+            14
+          ]
+        },
+        "south": {
+          "texture": "#candle",
+          "uv": [
+            0,
+            8,
+            2,
+            14
+          ]
+        },
+        "east": {
+          "texture": "#candle",
+          "uv": [
+            0,
+            8,
+            2,
+            14
+          ]
+        },
+        "west": {
+          "texture": "#candle",
+          "uv": [
+            0,
+            8,
+            2,
+            14
+          ]
+        },
+        "up": {
+          "texture": "#candle",
+          "uv": [
+            0,
+            6,
+            2,
+            8
+          ]
+        },
+        "down": {
+          "texture": "#candle",
+          "uv": [
+            0,
+            6,
+            2,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "from": [
+        7.5,
+        12,
+        10.5
+      ],
+      "to": [
+        8.5,
+        13,
+        10.5
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          12,
+          10.5
+        ],
+        "axis": "y",
+        "angle": 45
+      },
+      "faces": {
+        "north": {
+          "texture": "#candle",
+          "uv": [
+            0,
+            5,
+            1,
+            6
+          ]
+        },
+        "south": {
+          "texture": "#candle",
+          "uv": [
+            0,
+            5,
+            1,
+            6
+          ]
+        }
+      }
+    },
+    {
+      "from": [
+        7.5,
+        12,
+        10.5
+      ],
+      "to": [
+        8.5,
+        13,
+        10.5
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          12,
+          10.5
+        ],
+        "axis": "y",
+        "angle": -45
+      },
+      "faces": {
+        "north": {
+          "texture": "#candle",
+          "uv": [
+            0,
+            5,
+            1,
+            6
+          ]
+        },
+        "south": {
+          "texture": "#candle",
+          "uv": [
+            0,
+            5,
+            1,
+            6
+          ]
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    }
+  }
+}

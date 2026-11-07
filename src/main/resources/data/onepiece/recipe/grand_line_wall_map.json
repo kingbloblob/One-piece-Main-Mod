@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:paper",
+    "minecraft:compass"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:grand_line_wall_map"
+  }
+}

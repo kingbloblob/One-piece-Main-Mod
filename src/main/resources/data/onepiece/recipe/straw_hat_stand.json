@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:wheat",
+    "minecraft:wheat",
+    "minecraft:red_dye",
+    "minecraft:stick"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:straw_hat_stand"
+  }
+}

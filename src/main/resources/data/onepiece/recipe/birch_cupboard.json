@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SPS",
+    "PCP",
+    "SPS"
+  ],
+  "key": {
+    "S": "minecraft:birch_slab",
+    "P": "minecraft:birch_planks",
+    "C": "minecraft:chest"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:birch_cupboard"
+  }
+}

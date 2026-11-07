@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:netherrack_replace_blobs",
+  "radius": {
+    "type": "minecraft:uniform",
+    "min_inclusive": 3,
+    "max_inclusive": 6
+  },
+  "state": "minecraft:tuff",
+  "target": "minecraft:end_stone"
+}

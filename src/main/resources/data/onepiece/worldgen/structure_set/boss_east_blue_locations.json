@@ -1,0 +1,20 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:buggy_big_top",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:loguetown",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "onepiece:ring_spread",
+    "spacing": 22,
+    "separation": 10,
+    "salt": 1408172031,
+    "min_distance": 0,
+    "max_distance": 1500
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "I I"
+  ],
+  "key": {
+    "S": "onepiece:palm_slab",
+    "I": "minecraft:stick"
+  },
+  "result": {
+    "count": 2,
+    "id": "onepiece:palm_wall_shelf"
+  }
+}

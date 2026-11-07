@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bush",
+    "minecraft:orange_dye"
+  ],
+  "result": {
+    "id": "onepiece:cinder_bush",
+    "count": 2
+  }
+}

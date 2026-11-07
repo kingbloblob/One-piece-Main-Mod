@@ -1,0 +1,168 @@
+{
+  "aquifers": {
+    "barrier": {
+      "type": "minecraft:noise",
+      "noise": "minecraft:aquifer_barrier",
+      "xz_scale": 1.0,
+      "y_scale": 0.5
+    },
+    "exclusion": {
+      "type": "minecraft:min",
+      "left": {
+        "type": "minecraft:sub",
+        "left": -0.225,
+        "right": "onepiece:grand_line/erosion"
+      },
+      "right": {
+        "type": "minecraft:max",
+        "left": {
+          "type": "minecraft:sub",
+          "left": "onepiece:grand_line/depth",
+          "right": 0.9
+        },
+        "right": 0.0
+      }
+    },
+    "fluid_level_floodedness": {
+      "type": "minecraft:noise",
+      "noise": "minecraft:aquifer_fluid_level_floodedness",
+      "xz_scale": 1.0,
+      "y_scale": 0.67
+    },
+    "fluid_level_spread": {
+      "type": "minecraft:noise",
+      "noise": "minecraft:aquifer_fluid_level_spread",
+      "xz_scale": 1.0,
+      "y_scale": 0.7142857142857143
+    },
+    "lava": {
+      "type": "minecraft:noise",
+      "noise": "minecraft:aquifer_lava",
+      "xz_scale": 1.0,
+      "y_scale": 1.0
+    },
+    "surface_level": "onepiece:grand_line/preliminary_surface_level"
+  },
+  "debug_functions": [
+    {
+      "function": "onepiece:grand_line/final_density",
+      "label": "N"
+    },
+    {
+      "function": "onepiece:grand_line/temperature",
+      "label": "T"
+    },
+    {
+      "function": "onepiece:grand_line/vegetation",
+      "label": "V"
+    },
+    {
+      "function": "onepiece:grand_line/continents",
+      "label": "C"
+    },
+    {
+      "function": "onepiece:grand_line/erosion",
+      "label": "E"
+    },
+    {
+      "function": "onepiece:grand_line/depth",
+      "label": "D"
+    },
+    {
+      "function": "onepiece:grand_line/ridges",
+      "label": "W"
+    },
+    {
+      "function": {
+        "type": "minecraft:mul",
+        "left": {
+          "type": "minecraft:add",
+          "left": {
+            "type": "minecraft:abs",
+            "input": {
+              "type": "minecraft:add",
+              "left": {
+                "type": "minecraft:abs",
+                "input": "onepiece:grand_line/ridges"
+              },
+              "right": -0.6666667
+            }
+          },
+          "right": -0.33333334
+        },
+        "right": -3.0
+      },
+      "label": "PV"
+    },
+    {
+      "function": "onepiece:grand_line/preliminary_surface_level",
+      "label": "PS"
+    }
+  ],
+  "default_block": "minecraft:stone",
+  "default_fluid": "minecraft:water",
+  "disable_mob_generation": false,
+  "legacy_random_source": false,
+  "material_rule": "onepiece:grand_line",
+  "noise": {
+    "height": 384,
+    "min_y": -64
+  },
+  "noise_router": {
+    "chunk_surface_level": "onepiece:grand_line/chunk_surface_level",
+    "continents": "onepiece:grand_line/continents",
+    "depth": "onepiece:grand_line/depth",
+    "erosion": "onepiece:grand_line/erosion",
+    "final_density": "onepiece:grand_line/final_density",
+    "ridges": "onepiece:grand_line/ridges",
+    "temperature": "onepiece:grand_line/temperature",
+    "vegetation": "onepiece:grand_line/vegetation"
+  },
+  "sea_level": 63,
+  "spawn_target": [
+    {
+      "onepiece:grand_line/continents": [
+        -0.11,
+        1.0
+      ],
+      "onepiece:grand_line/erosion": [
+        -1.0,
+        1.0
+      ],
+      "onepiece:grand_line/ridges": [
+        -1.0,
+        -0.16
+      ],
+      "onepiece:grand_line/temperature": [
+        -1.0,
+        1.0
+      ],
+      "onepiece:grand_line/vegetation": [
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "onepiece:grand_line/continents": [
+        -0.11,
+        1.0
+      ],
+      "onepiece:grand_line/erosion": [
+        -1.0,
+        1.0
+      ],
+      "onepiece:grand_line/ridges": [
+        0.16,
+        1.0
+      ],
+      "onepiece:grand_line/temperature": [
+        -1.0,
+        1.0
+      ],
+      "onepiece:grand_line/vegetation": [
+        -1.0,
+        1.0
+      ]
+    }
+  ]
+}

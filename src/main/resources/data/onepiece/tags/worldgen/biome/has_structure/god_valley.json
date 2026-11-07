@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:plains",
+    "minecraft:meadow",
+    "minecraft:sunflower_plains",
+    "minecraft:savanna",
+    "onepiece:east_blue",
+    "onepiece:dressrosa",
+    "onepiece:god_valley"
+  ]
+}

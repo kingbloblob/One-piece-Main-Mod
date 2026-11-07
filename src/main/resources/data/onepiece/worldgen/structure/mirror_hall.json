@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": "#onepiece:has_structure/mirror_hall",
+  "step": "surface_structures",
+  "spawn_overrides": {
+    "monster": {
+      "bounding_box": "piece",
+      "spawns": []
+    },
+    "ambient": {
+      "bounding_box": "piece",
+      "spawns": []
+    }
+  },
+  "terrain_adaptation": "beard_thin",
+  "start_pool": "onepiece:mirror_hall",
+  "size": 4,
+  "max_distance_from_center": {
+    "horizontal": 83,
+    "vertical": 83
+  },
+  "use_expansion_hack": false,
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
+  "start_height": {
+    "absolute": -6
+  },
+  "liquid_settings": "ignore_waterlogging"
+}

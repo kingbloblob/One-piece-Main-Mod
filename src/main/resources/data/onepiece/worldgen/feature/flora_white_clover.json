@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:simple_block",
+  "to_place": {
+    "id": "onepiece:white_clover",
+    "properties": {
+      "facing": "north",
+      "flower_amount": "3"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/candelabra"
+    },
+    "facing=east": {
+      "model": "onepiece:block/candelabra",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/candelabra",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/candelabra",
+      "y": 270
+    }
+  }
+}

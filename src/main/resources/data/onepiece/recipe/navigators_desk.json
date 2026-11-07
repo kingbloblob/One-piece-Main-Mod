@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "minecraft:paper",
+    "M": "minecraft:map",
+    "G": "minecraft:gold_ingot",
+    "T": "minecraft:cartography_table",
+    "W": "onepiece:ships_wheel"
+  },
+  "pattern": [
+    "PMP",
+    "GTG",
+    " W "
+  ],
+  "result": {
+    "id": "onepiece:navigators_desk"
+  }
+}

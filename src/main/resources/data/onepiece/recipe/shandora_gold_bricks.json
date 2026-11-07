@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:stone_bricks",
+    "X": "minecraft:gold_ingot"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:shandora_gold_bricks"
+  }
+}

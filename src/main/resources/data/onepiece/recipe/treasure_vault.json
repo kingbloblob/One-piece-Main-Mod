@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "G": "minecraft:gold_ingot",
+    "B": "onepiece:berry",
+    "C": "minecraft:chest"
+  },
+  "pattern": [
+    "IGI",
+    "BCB",
+    "IGI"
+  ],
+  "result": {
+    "id": "onepiece:treasure_vault"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:tori_tori_no_mi_phoenix"
+    },
+    "title": {
+      "translate": "advancements.onepiece.powers.fruitdex_zoan.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.powers.fruitdex_zoan.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:powers/fruitdex_15"
+}

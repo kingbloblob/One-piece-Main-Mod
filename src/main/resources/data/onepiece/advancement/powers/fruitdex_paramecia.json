@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:ope_ope_no_mi"
+    },
+    "title": {
+      "translate": "advancements.onepiece.powers.fruitdex_paramecia.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.powers.fruitdex_paramecia.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:powers/fruitdex_15"
+}

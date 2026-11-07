@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "minecraft:block/vault_front_off",
+    "side": "minecraft:block/vault_side_off",
+    "top": "minecraft:block/vault_top",
+    "bottom": "minecraft:block/vault_bottom"
+  }
+}

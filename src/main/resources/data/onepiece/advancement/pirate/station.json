@@ -1,0 +1,41 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:shipwright_bench"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.station.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.station.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "onepiece:shipwright_bench",
+              "onepiece:ships_galley",
+              "onepiece:navigators_desk",
+              "onepiece:seastone_workbench",
+              "onepiece:swordsmith_forge"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:pirate/root"
+}

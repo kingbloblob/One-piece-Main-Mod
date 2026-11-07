@@ -1,0 +1,649 @@
+{
+	"_help": "What friendly characters say on the talk screen (right-click them). Keys under characters are character ids from characters.json. Every line is optional; missing ones use defaults. {player} becomes the player's name. hello = random opening lines; island / self / recruit / advice / train = answers to those choices; chapters = advice for one story chapter (ids from story.json); accept / decline / waiting = about their jobs (the job text itself is in characters.json); trade = said as the shop opens; bye = goodbye. Code: com.onepiecemod.dialogue.",
+	"defaults": {
+		"hello": [
+			"Hm? Can I help you?"
+		],
+		"island": "Just an island on the sea. Look around, you might find something.",
+		"self": "Me? Nothing special. Just trying to get by out here.",
+		"recruit": "Sorry, I'm not looking for a crew. Try the recruitment board at a Pirate Tavern.",
+		"advice": "Keep your Log Pose close and your crew closer.",
+		"accept": "Thanks. I'll be waiting.",
+		"decline": "All right. Come back if you change your mind.",
+		"waiting": "Not done yet?",
+		"trade": "Take a look.",
+		"train": "Training takes time. Are you ready?",
+		"bye": "See you around."
+	},
+	"characters": {
+		"luffy": {
+			"hello": [
+				"Oh! Hey, {player}! You got any meat on you?",
+				"Shishishi! You look like you'd be fun on an adventure.",
+				"I'm gonna be King of the Pirates, you know. Bet you didn't know that."
+			],
+			"island": "Foosha Village is my home! Makino runs the bar, the mayor yells a lot, and the windmills spin all day. Shanks used to drink here before he left.",
+			"self": "I ate the Gomu Gomu fruit when I was little, so now I'm rubber! Can't swim though. Someday I'm gonna find the One Piece and be the freest guy on the whole sea.",
+			"recruit": "Huh? Nope! I'm the captain! ...But you can be MY nakama if you want. Get a crew going and we'll see who gets to Laugh Tale first!",
+			"advice": "Eat a lot, sleep a lot, punch the bad guys. That's basically it!",
+			"chapters": {
+				"dream": "You just got here? Then pick a dream first. Mine's the biggest one there is, so you'll need a different one!",
+				"koby": "Koby's at the Marine base in Shells Town. He's a crybaby but he's got guts. Go say hi!",
+				"set_sail": "You need a ship! A real one, with a wheel. Rafts are fine too until you get one.",
+				"orange_town": "Buggy's a big-nosed clown who stole Shanks's map once. Kick him into orbit!",
+				"arlong_park": "Arlong made Nami cry. I don't forgive anyone who does that.",
+				"marineford": "...Ace is waiting. Hurry. Please.",
+				"wano": "Kaido's the strongest creature alive, they say. That just means beating him will feel great!",
+				"laugh_tale": "The One Piece is right there! I can smell it! It smells like... meat?"
+			},
+			"accept": "Shishishi! I knew you'd say yes!",
+			"decline": "Aww, boring! Fine, come back later.",
+			"waiting": "Did you do it yet? No? Then go!",
+			"bye": "See ya! Don't die out there!"
+		},
+		"zoro": {
+			"hello": [
+				"...What. I'm napping.",
+				"You look like you can hold a sword. Barely.",
+				"If you're here to fight, draw. If not, keep it short."
+			],
+			"island": "Shells Town. The Marines here used to tie me to a post in the yard. Food was terrible. The base is that ugly building with the big gate.",
+			"self": "Roronoa Zoro. Three swords. I made a promise to a friend that I'd become the greatest swordsman in the world. I don't break promises.",
+			"recruit": "I already have a captain. He's an idiot, but he's mine. Find your own swordsman at a tavern.",
+			"advice": "Train until you can't stand, then train some more. And don't ask me for directions.",
+			"chapters": {
+				"koby": "A crew needs a swordsman. Go hire one. Not me.",
+				"loguetown": "Smoker's smoke can't be cut by a normal blade. Bring Haki, or bring a bigger sword.",
+				"enies_lobby": "Lucci's quick. Keep your guard up and don't blink.",
+				"thriller_bark": "There's a swordsman zombie on that ship who fights like Ryuma. I'd like a go at him.",
+				"wano": "Wano makes the best swords in the world. Keep your eyes open for a black blade."
+			},
+			"train": "You want to learn Santoryu? Then hold one blade in your teeth and stop complaining.",
+			"accept": "Hmph. Don't slow me down.",
+			"decline": "Suit yourself.",
+			"waiting": "It's not done. Don't come back until it is.",
+			"bye": "...Which way was the ship again?"
+		},
+		"nami": {
+			"hello": [
+				"A customer! Welcome, welcome. Prices are fair, mostly.",
+				"If you're here to waste my time, that costs extra.",
+				"The air feels heavy today. Storm's coming in by evening."
+			],
+			"island": "Cocoyasi Village. My mother planted the tangerine grove up on the hill. Don't touch the tangerines unless you plan to pay for them.",
+			"self": "I'm a navigator. I've been drawing sea charts since I was a kid, and someday I'll draw a map of the entire world. Also, I like money. A lot.",
+			"recruit": "Join you? Hmm... your ship would need a better navigator, sure. But my rate is a hundred million Berries. Up front. No? Then try the tavern board.",
+			"advice": "Never sail into the Grand Line without a Log Pose. A normal compass just spins there. I sell both, by the way.",
+			"chapters": {
+				"arlong_park": "...You're going to Arlong Park? Be careful. Those Fish-Men are much stronger than regular people.",
+				"reverse_mountain": "You sail UP the mountain on the currents, then straight down the other side. Hold on tight, and buy a Log Pose first.",
+				"sky_island": "Sky islands float on clouds way up high. The Knock Up Stream can launch a ship there, if you're brave or stupid.",
+				"zou": "Zou is on the back of a giant elephant that never stops walking. Charts can't keep up with it."
+			},
+			"trade": "Let's see what you can afford.",
+			"accept": "Fine, but I want a cut.",
+			"decline": "Then stop wasting my time!",
+			"waiting": "Not done? I'm charging you interest.",
+			"bye": "Bye! Come back with more Berries!"
+		},
+		"usopp": {
+			"hello": [
+				"Ah! Don't come any closer! ...Oh, you're a customer. I knew that.",
+				"Did you hear? I once beat a goldfish as big as an island!",
+				"Welcome to Captain Usopp's legendary shop of legendary items!"
+			],
+			"island": "Syrup Village. Quiet place with lots of farms and one big mansion on the hill. I used to run through the streets shouting that pirates were coming. Long story.",
+			"self": "I'm the great Captain Usopp, sniper of the seas! I can hit a target from miles away. My dream is to be a brave warrior of the sea, like my dad.",
+			"recruit": "M-me? Join YOUR crew? I'd love to, but I have a terrible disease called can't-leave-my-crew-itis. Very serious. Try a tavern!",
+			"advice": "If you're scared, it's okay to run. Just remember to come back when it counts.",
+			"chapters": {
+				"syrup_village": "There's a butler in that mansion who's way too good with... never mind. Just keep an eye on Kaya for me.",
+				"sky_island": "Enel shoots lightning. Rubber doesn't conduct it. Wood does. Remember that.",
+				"enies_lobby": "Sogeking says hello. Sogeking is not me. Sogeking is a stranger."
+			},
+			"trade": "Every item here was tested by me personally. Mostly.",
+			"accept": "Leave it to me! I mean, you! Leave it to you!",
+			"decline": "Phew. I mean, too bad!",
+			"waiting": "Still working on it? Take your time. Lots of time.",
+			"bye": "Farewell! Tell everyone you met the great Captain Usopp!"
+		},
+		"sanji": {
+			"hello": [
+				"Welcome to the Baratie. Sit down, I'll bring you something.",
+				"You look starved. That's a crime in my kitchen.",
+				"If you're a lady, the first dish is on the house."
+			],
+			"island": "The Baratie floats on the sea. Old Zeff built it as a restaurant shaped like a fish, so even pirates can eat. Cooks here fight as well as they cook.",
+			"self": "Sanji. Cook. I fight with my legs, because a cook's hands are for food. I'm looking for the All Blue, a sea where fish from every ocean swim together.",
+			"recruit": "Sorry, I already cook for a rubber idiot who eats enough for ten. Hire a cook at a tavern, and tell them never to waste food.",
+			"advice": "Never waste food, and never let a hungry person leave hungry. That's all a cook needs to know.",
+			"chapters": {
+				"baratie": "Your ship needs a galley. Without a kitchen, a crew falls apart within a week.",
+				"whole_cake": "Big Mom loves sweets more than life itself. A good cake can calm her... for a while.",
+				"training": "Two years is a long time. Use it. Get stronger, and learn something new."
+			},
+			"train": "Black Leg Style. You kick, you never punch. Your hands belong to the kitchen.",
+			"trade": "Here's today's menu. Everything is fresh.",
+			"accept": "Good. Now eat something before you go.",
+			"decline": "No problem. The kitchen's always open.",
+			"waiting": "Not done yet? Come eat, then get back to it.",
+			"bye": "Take care. Come back hungry."
+		},
+		"chopper": {
+			"hello": [
+				"Eek! Oh... you're not a hunter. Phew.",
+				"Are you hurt? Let me see. I'm a doctor!",
+				"Saying I'm cute won't make me happy, you jerk! Hehehe..."
+			],
+			"island": "Drum Island is really cold, and the castle is way up on the mountain. Doctorine still lives there. She's a hundred and something but don't tell her I said that.",
+			"self": "I'm Tony Tony Chopper, a reindeer who ate the Human-Human fruit. I'm going to be a doctor who can cure any disease in the world!",
+			"recruit": "I... I can't, I'm already a Straw Hat. But a ship without a doctor is dangerous! Please hire one at a tavern!",
+			"advice": "Rest when you're tired, eat your vegetables, and if anything hurts, come see me!",
+			"chapters": {
+				"drum_island": "You need a doctor on your crew. Snowstorms on Drum can kill you in one night.",
+				"thriller_bark": "Z-z-zombies? I'm not scared! I'm just shaking because it's cold!",
+				"punk_hazard": "There's poison gas on Punk Hazard. Don't breathe it! Bring milk!"
+			},
+			"trade": "Medicine and potions! I made them myself.",
+			"accept": "Okay! Be careful, and come back safe!",
+			"decline": "Okay... but come back if you get hurt!",
+			"waiting": "Not finished yet? That's okay, just don't overdo it.",
+			"bye": "Bye! Stay healthy!"
+		},
+		"robin": {
+			"hello": [
+				"Hello. I was just reading. Fufu.",
+				"You have a curious look. I like that.",
+				"Every ruin is a page of history someone tried to tear out."
+			],
+			"island": "This is what's left of Ohara, an island of scholars. They kept the greatest library in the world in a giant tree. The Navy burned it when I was eight.",
+			"self": "Nico Robin. Archaeologist. I can read the Poneglyphs, the stones that hold the true history of the world. I want to know what happened in the Void Century.",
+			"recruit": "That's sweet of you. But I've finally found people I want to live for. An archaeologist joins a crew that's ready, so build one up first.",
+			"advice": "If you find a Poneglyph, don't try to break it. Make a rubbing. And have someone who can read it.",
+			"chapters": {
+				"alabasta": "There's a Poneglyph under Alubarna. Crocodile wants it for the wrong reasons.",
+				"sky_island": "The ruins of Shandora have a golden bell, and a stone with writing in Roger's own hand.",
+				"zou": "The Road Poneglyphs lead to Laugh Tale. There are four. Zou holds one of them.",
+				"void_century": "A hundred years were erased from history. Whoever did it is still here, at the top of the world."
+			},
+			"accept": "Thank you. I'll be waiting.",
+			"decline": "That's all right. History is patient.",
+			"waiting": "Take your time. The stones have waited eight hundred years.",
+			"bye": "Until next time. Try not to die. Fufu."
+		},
+		"franky": {
+			"hello": [
+				"SUUUPER! Welcome, bro!",
+				"You need something built? I can build anything!",
+				"Check out these arms! Fully upgraded this week!"
+			],
+			"island": "Water 7 is the city of water! Canals everywhere, and the Galley-La docks build the best ships on the sea. Aqua Laguna hits every year, so the whole city sinks a little more.",
+			"self": "Franky, the cyborg shipwright! I built the Thousand Sunny, the ship that'll sail to the end of the world. My body runs on cola!",
+			"recruit": "Ow! You've got heart, bro. But I'm already the Straw Hats' shipwright. Every crew needs one, so find yours at a tavern!",
+			"advice": "Take care of your ship and she'll take care of you. Patch every hole before you set sail.",
+			"chapters": {
+				"set_sail": "A Shipwright's Bench, a ship's wheel, and a lot of wood. That's how every ship starts.",
+				"enies_lobby": "The World Government's tower of justice never sleeps. Ride the sea train there. SUPER fast!"
+			},
+			"trade": "These are SUPER parts. Take a look!",
+			"accept": "That's the spirit, bro!",
+			"decline": "No worries! Come back when you're ready!",
+			"waiting": "Still on it? Don't give up, bro!",
+			"bye": "See ya! Stay SUPER!"
+		},
+		"brook": {
+			"hello": [
+				"Yohohoho! A guest! My heart is pounding! ...Though I have no heart. Skull joke!",
+				"Good day. Would you like to hear a song?",
+				"Pardon me, may I see... no, I shouldn't ask that."
+			],
+			"island": "Thriller Bark is the largest ship in the world, and it is full of zombies. I lived alone in the fog for fifty years. It is very good for my violin practice.",
+			"self": "Brook, the musician. I died once, and the Revive-Revive fruit brought my soul back. Only my bones were left, but I have an appointment with an old friend, a whale named Laboon.",
+			"recruit": "Oh my, what an honor! But I already have a captain who said I could join without even asking. Find a musician at a tavern. A ship without songs is lonely.",
+			"advice": "Even in the darkest fog, keep going. You might be surprised what's waiting on the other side.",
+			"chapters": {
+				"thriller_bark": "Gecko Moria steals shadows. Without your shadow, sunlight will burn you to dust. Please be careful.",
+				"reverse_mountain": "If you see a very large whale at the twin capes, please tell him Brook is still coming."
+			},
+			"train": "Soul King Fencing! The blade is cold as the underworld. Yohohoho!",
+			"trade": "Music for the soul! I'd sing about my prices, but I have no tongue. Yohoho!",
+			"accept": "Splendid! I'll play you a farewell song!",
+			"decline": "Ah, too bad. My heart would sink... if I had one!",
+			"waiting": "Not done? Then I'll keep playing until you are.",
+			"bye": "Goodbye! Yohohoho!"
+		},
+		"jinbe": {
+			"hello": [
+				"Welcome. Please, sit. The sea is calm today.",
+				"A human visitor. Fish-Man Island welcomes you.",
+				"You carry yourself well, young one."
+			],
+			"island": "The Ryugu Palace is the home of Fish-Man Island's royal family, ten thousand meters under the sea. The light here comes from the roots of the Sunny Tree, Eve.",
+			"self": "I am Jinbe, once a Warlord of the Sea. I fight with Fish-Man Karate. For a long time I tried to build a bridge between humans and Fish-Men. I still do.",
+			"recruit": "A kind offer. But my heart already sails with one captain. Gather a crew at a tavern, and find a helmsman who knows the water.",
+			"advice": "Don't fight the current. Learn it, and it will carry you where you want to go.",
+			"chapters": {
+				"fishman_island": "Coral Hill and the palace are worth seeing. Mind Hody's crowd, though. Hatred runs deep here.",
+				"marineford": "I will stand with Whitebeard there. Whatever happens, protect the ones you love.",
+				"whole_cake": "Leaving Big Mom's crew means facing her. I have made my choice."
+			},
+			"train": "Fish-Man Karate moves the water inside your opponent. Feel the water first, then strike.",
+			"accept": "I am in your debt.",
+			"decline": "I understand. Come back when you're ready.",
+			"waiting": "There is no rush. But do not forget.",
+			"bye": "May the sea treat you well."
+		},
+		"shanks": {
+			"hello": [
+				"Dahahaha! Pull up a barrel, have a drink!",
+				"Hey there. You've got an interesting look in your eye.",
+				"Relax. Nobody's fighting today."
+			],
+			"island": "Elbaph, the land of giants. Biggest tree you'll ever see, and the giants throw a party whenever they feel like it. Good people. Loud people.",
+			"self": "Me? I'm just a guy who likes a good party. I gave my hat to a kid once and told him to bring it back when he was a great pirate. Still waiting.",
+			"recruit": "Ha! I like your nerve. But my crew's got enough drunks already. Build your own crew, and I'll come drink with you someday.",
+			"advice": "You don't need to win every fight. Know which ones are worth it.",
+			"chapters": {
+				"dream": "A dream doesn't have to make sense to anyone else. Just don't give it up.",
+				"marineford": "This war's gone on long enough. Someone has to end it.",
+				"hachinosu": "Teach is cleverer than he looks. Don't let him near any Devil Fruit."
+			},
+			"accept": "Good! I'll owe you a drink.",
+			"decline": "No problem. Have a drink anyway.",
+			"waiting": "Still out there, huh? Don't rush. Just don't quit.",
+			"bye": "Take care. And don't lose that look."
+		},
+		"law": {
+			"hello": [
+				"...What do you want.",
+				"Room... Relax. I'm not operating on you. Yet.",
+				"Speak. I don't have much time."
+			],
+			"island": "Punk Hazard. Half of it is on fire and the other half is frozen. A scientist named Caesar made it a lab for poison gas. I'd leave if I were you.",
+			"self": "Trafalgar Law. Surgeon. The Ope-Ope fruit lets me cut and swap anything inside my Room. I've had one goal for thirteen years. You don't need to know what.",
+			"recruit": "I'm a captain. I don't join crews. ...Alliances, maybe. If you have a plan worth hearing.",
+			"advice": "Have a plan. Then have a second one, because the first won't survive contact with Straw Hat.",
+			"chapters": {
+				"sabaody": "The Archipelago is crawling with Supernovas. Don't start fights you can't finish there.",
+				"punk_hazard": "Caesar's lab is in the frozen half. The kids there are being used. Get them out.",
+				"dressrosa": "Doflamingo's strings cover the whole island. Cut the main thread and the rest falls.",
+				"wano": "Big Mom is coming. Kid and I will handle it. Probably."
+			},
+			"accept": "Don't screw this up.",
+			"decline": "Fine. Wasting time.",
+			"waiting": "Not done? Then why are you here?",
+			"bye": "Go."
+		},
+		"drake": {
+			"hello": [
+				"Keep your voice down.",
+				"You didn't see me. Understood?",
+				"...Are you being followed?"
+			],
+			"island": "Navarone is a Marine fortress. If anyone asks, I'm a wanted pirate here to cause trouble. That story needs to hold.",
+			"self": "X Drake. Former Marine rear admiral, now a pirate captain with a bounty. That is the official story. The real one is classified.",
+			"recruit": "I already serve something. If you're serious about a crew, start one properly. Taverns are less dangerous than I am.",
+			"advice": "Trust facts, not flags. People change sides more often than you'd think.",
+			"chapters": {
+				"loguetown": "Smoker plays by his own rules. He's a Marine I'd trust, oddly enough.",
+				"wano": "Kaido's crew has spies too. Watch what you say in the Flower Capital."
+			},
+			"accept": "Good. Not a word to anyone.",
+			"decline": "Understood. This conversation didn't happen.",
+			"waiting": "The mission isn't complete. Keep moving.",
+			"bye": "If anyone asks, we've never met."
+		},
+		"bonney": {
+			"hello": [
+				"Food? Tell me you brought food.",
+				"Hey! Don't stare. Or do. Whatever.",
+				"If you're not bringing me pizza, why are you here?"
+			],
+			"island": "Egghead is Vegapunk's island of the future. Robots, labs, stuff that flies. It's always warm here, which is nice. The food machines are even nicer.",
+			"self": "Jewelry Bonney. Pirate captain. I can make people older or younger. I'm looking for my dad. He's a big guy and he hasn't been himself for a while.",
+			"recruit": "Join you? Ha! Will you feed me? ...Every day? Nah, I've got my own crew. Go find one at a tavern.",
+			"advice": "Eat before every fight. You never know how long it'll last.",
+			"chapters": {
+				"sabaody": "Lots of pirates here, lots of restaurants. I'll be at that one. Then that one.",
+				"red_line": "Mary Geoise is where they took my dad. I'm going there. Don't stop me."
+			},
+			"accept": "Great! Now go, and bring snacks on the way back!",
+			"decline": "Ugh, fine. You're useless.",
+			"waiting": "Not done? Then why are my hands still empty?",
+			"bye": "Bring food next time!"
+		},
+		"hancock": {
+			"hello": [
+				"Hmph. You may stand there. Briefly.",
+				"Do not look so surprised. Of course I am beautiful.",
+				"You are fortunate. I am in a forgiving mood today."
+			],
+			"island": "Amazon Lily, the island of women, inside the Calm Belt. Men are not allowed. You may stay only because I have not decided otherwise.",
+			"self": "I am Boa Hancock, Empress of the Kuja, Captain of the Kuja Pirates. The world forgives me because I am beautiful. Most of the world, anyway.",
+			"recruit": "You wish me to serve under YOU? How bold. How foolish. No. There is only one man I would follow, and you are not him.",
+			"advice": "Never bow your head to anyone you have not chosen to respect.",
+			"chapters": {
+				"amazon_lily": "Since you're here, you may help me. Do it well and I will let you leave alive.",
+				"impel_down": "Impel Down is beneath the sea. I will take you to its gate. What happens after is not my concern... but be careful.",
+				"marineford": "If Luffy is there, I will be there. That is all."
+			},
+			"accept": "Good. I knew you would obey.",
+			"decline": "You dare refuse me? ...Fine. Leave.",
+			"waiting": "Why have you returned with nothing? Go.",
+			"bye": "You are dismissed."
+		},
+		"kuma": {
+			"hello": [
+				"...",
+				"If you could take a trip anywhere, where would you go?",
+				"You look tired. Rest, if you can."
+			],
+			"island": "Baltigo is the Revolutionary Army's hidden home. White sand and grey stone. Nothing grows here, but the people who come here bring hope with them.",
+			"self": "Bartholomew Kuma. I ate the Paw-Paw fruit. I can push away anything, even pain, even memories. I am a Revolutionary, and I am a father.",
+			"recruit": "I cannot. My time is running out, and there is one person I have to protect. Gather your own crew.",
+			"advice": "Some journeys can only be made alone. That's all right. Someone is always waiting at the end.",
+			"chapters": {
+				"sabaody": "Your crew will be scattered. Trust that you will meet again.",
+				"red_line": "Mary Geoise. I have walked that road before. Forgive me for not walking with you."
+			},
+			"accept": "Thank you.",
+			"decline": "I see.",
+			"waiting": "...Not yet.",
+			"bye": "Have a safe trip."
+		},
+		"garp": {
+			"hello": [
+				"Bwahahaha! Who are you? Doesn't matter! Want a rice cracker?",
+				"Hm? Zzz... Oh! I was awake the whole time!",
+				"Brats these days. In my day we trained by punching mountains!"
+			],
+			"island": "This is a Marine base. We catch pirates here! Not my grandson, though. Well, maybe a little. Bwahaha!",
+			"self": "Vice Admiral Monkey D. Garp, the Hero of the Navy! I chased Roger all over the sea. They keep offering me a promotion to admiral. I keep saying no!",
+			"recruit": "Join a PIRATE crew? I'll give you a Fist of Love for even asking! ...Bwahaha! Go hire your crew at a tavern, brat.",
+			"advice": "Punch hard, eat a lot, and never lose to anyone you're protecting.",
+			"chapters": {
+				"koby": "My student Koby is training at Shells Town. Be nice to him. Or I'll be not nice to you.",
+				"marineford": "Ace is my grandson too. ...Don't talk to me right now.",
+				"training": "Two years? I could make a Marine out of you in two weeks! Bwahaha!"
+			},
+			"accept": "Good! I like people who don't hesitate!",
+			"decline": "Bah! Lazy brat! Come back when you've had a nap.",
+			"waiting": "Not done? Then why are you standing here? Move!",
+			"bye": "Off you go! Bwahahaha!"
+		},
+		"sengoku": {
+			"hello": [
+				"Wanted posters, fresh from the presses. Interested?",
+				"I'm retired. I still keep the posters, though. Old habits.",
+				"Hm. Your face isn't on any of my posters. Yet."
+			],
+			"island": "Marineford is the Navy's headquarters, or it was. The bay in the middle is shaped like a crescent so our ships can defend it from three sides.",
+			"self": "Sengoku. I was Fleet Admiral during the Marineford war. Now I'm an instructor who feeds rice crackers to a goat. The posters are a hobby.",
+			"recruit": "A retired fleet admiral on a pirate ship? That's a joke even Garp wouldn't make. Hire someone at a tavern.",
+			"advice": "Posters only call out bosses you've already beaten at their lair. A poster is a rematch, not a shortcut.",
+			"chapters": {
+				"loguetown": "Every pirate gets a bounty eventually. Raise yours and the Navy will start paying attention.",
+				"marineford": "This is where the war will be fought. Pick your side carefully."
+			},
+			"trade": "Take your pick. Every face has a price.",
+			"accept": "Very well.",
+			"decline": "As you wish.",
+			"waiting": "Still on it? Hmph.",
+			"bye": "Watch yourself out there."
+		},
+		"koby": {
+			"hello": [
+				"Ah! Hello! I'm Koby! Sorry, I'm a bit nervous.",
+				"Vice Admiral Garp has me running laps again...",
+				"I'm going to be an admiral someday. I really am!"
+			],
+			"island": "Shells Town has a Marine base. The old captain was a bully, but things are better now. The people here are kind once you get to know them.",
+			"self": "I'm Koby. I used to wash dishes for a pirate called Alvida. Then a boy in a straw hat saved me, and now I'm a Marine. I want to protect people who can't protect themselves.",
+			"recruit": "M-m-me? On a pirate crew? I'm a Marine! But, um, the tavern board might have someone braver than me.",
+			"advice": "Being scared isn't the same as giving up. You can be scared and still keep going.",
+			"chapters": {
+				"koby": "You came! Now you need a crew. Start one with /crew create, then find a swordsman.",
+				"orange_town": "Buggy has the whole town scared. I hope someone stops him soon.",
+				"marineford": "Somebody has to stop this war before more people die. Even if it's me."
+			},
+			"train": "Rokushiki takes years of training. I'll show you the steps, if you promise to keep practicing!",
+			"accept": "Thank you! I knew you were a good person!",
+			"decline": "That's okay! Maybe later!",
+			"waiting": "Not done yet? That's fine, keep trying!",
+			"bye": "Take care! I'll keep training!"
+		},
+		"tashigi": {
+			"hello": [
+				"Oh! A customer. Please excuse me, my glasses keep slipping.",
+				"Every blade here is a masterpiece. Please handle them with respect.",
+				"Are you a swordsman? Let me see your sword."
+			],
+			"island": "Loguetown is the town of the beginning and the end. Gol D. Roger was born here, and he was executed in the main square. Pirates come to see the scaffold before the Grand Line.",
+			"self": "Tashigi, Marine captain under Smoker. I collect famous swords. Too many of them end up in the hands of pirates who don't deserve them.",
+			"recruit": "Absolutely not! I'm a Marine! ...But if you need a swordsman, please hire someone who'll take good care of their blade.",
+			"advice": "Never use a great sword for a bad cause. A sword remembers who carried it.",
+			"chapters": {
+				"loguetown": "Smoker will chase any pirate who comes through here. I'd go quickly if I were you.",
+				"punk_hazard": "I'm going to Punk Hazard with Smoker. Something terrible is happening to children there."
+			},
+			"trade": "These are all fine blades. Choose carefully.",
+			"accept": "Understood!",
+			"decline": "Very well.",
+			"waiting": "Not yet? Please keep at it.",
+			"bye": "Take care of your sword."
+		},
+		"dragon": {
+			"hello": [
+				"...The wind is shifting.",
+				"You came a long way to find this place.",
+				"Speak. I'm listening."
+			],
+			"island": "Baltigo. Our base sits on an island of white stone. The World Government has hunted for it for years.",
+			"self": "Monkey D. Dragon. They call me the most wanted man in the world. I lead the Revolutionary Army. We fight for the people the World Government forgot.",
+			"recruit": "I already have an army. If you want to change the world, build your own crew and show the world what you stand for.",
+			"advice": "Every throne has a foundation. Find out what it's built on.",
+			"chapters": {
+				"loguetown": "Remember this town. A storm once saved a boy here. Storms aren't always bad luck.",
+				"red_line": "Mary Geoise sits on top of the Red Line, above everyone. That's exactly the problem.",
+				"empty_throne": "There's an empty throne at the top of the world. Except it isn't empty."
+			},
+			"accept": "Good.",
+			"decline": "Then go your own way.",
+			"waiting": "The wind hasn't changed yet. Keep going.",
+			"bye": "We'll meet again."
+		},
+		"sabo": {
+			"hello": [
+				"Hey! Good to meet you!",
+				"Any friend of Luffy's is a friend of mine.",
+				"Revolutionary Army, Chief of Staff. Nice to meet you!"
+			],
+			"island": "Baltigo's not much to look at, but it's home. Dragon found me in the sea when I was a kid. I didn't remember anything back then.",
+			"self": "I'm Sabo. Ace, Luffy and I swore to be brothers when we were kids. I lost my memories for a long time. Now I've got them back, and I've got Ace's fire fruit too.",
+			"recruit": "Ha! Tempting. But the Army needs me. Hire a crew at a tavern, and look after them like they're family.",
+			"advice": "Freedom isn't something someone else can give you. You have to take it.",
+			"chapters": {
+				"dressrosa": "There's a tournament at the Corrida Colosseum, and the prize is a fruit that once belonged to my brother. I'm going to win it.",
+				"marineford": "...I wasn't there. I'll never forgive myself for that."
+			},
+			"train": "Ryusoken! Dragon Claw Fist. Grip like a dragon's talon. It breaks stone!",
+			"accept": "Thanks! I owe you one.",
+			"decline": "No worries!",
+			"waiting": "Still on it? You'll get there.",
+			"bye": "See you around!"
+		},
+		"ace": {
+			"hello": [
+				"Oh, hey. Thanks for looking out for my brother.",
+				"Name's Ace. Got any food? ...Zzz.",
+				"Sorry, did I fall asleep? Happens a lot."
+			],
+			"island": "Banaro Island. Burned-out town, and I'm chasing someone through here. Not much else to say. The fires are mine, sorry about that.",
+			"self": "Portgas D. Ace, Second Division Commander of the Whitebeard Pirates. I ate the Mera-Mera fruit. My little brother's out there somewhere trying to be King of the Pirates.",
+			"recruit": "I've already got the best captain in the world, Pops. If you need fighters, try a tavern. Look for people with heart.",
+			"advice": "Live with no regrets. That's all I can tell you.",
+			"chapters": {
+				"alabasta": "Seen a guy with a straw hat? My brother. Tell him I said hi.",
+				"hachinosu": "Teach killed one of our own and ran off. I can't let that slide."
+			},
+			"accept": "Thanks! You're a good one.",
+			"decline": "Hey, no problem.",
+			"waiting": "Not done yet? Don't worry, I'll wait. ...Zzz.",
+			"bye": "Take care of yourself out there."
+		},
+		"marco": {
+			"hello": [
+				"Yoi. What do you need?",
+				"Visitor, yoi? Welcome aboard the Moby Dick.",
+				"I'm a doctor these days, yoi. You hurt?"
+			],
+			"island": "This is the Moby Dick, Pops's flagship. Biggest family on the sea lives on this deck. Mind the cannons, yoi.",
+			"self": "Marco the Phoenix, First Division Commander. My fire heals instead of burns, yoi. After Pops, I keep the family together.",
+			"recruit": "My family's right here, yoi. Start your own crew at a tavern, and treat them like Pops treated us.",
+			"advice": "Family isn't blood, yoi. It's who you sail with.",
+			"chapters": {
+				"marineford": "Pops is going to war for Ace. We all are, yoi.",
+				"wano": "Oden was one of us once. If his country needs help, I'll come, yoi."
+			},
+			"accept": "Thanks, yoi.",
+			"decline": "All right, yoi.",
+			"waiting": "Still working on it, yoi? Take care.",
+			"bye": "Safe sailing, yoi."
+		},
+		"rayleigh": {
+			"hello": [
+				"Ah, a young one. Come in, have a seat.",
+				"You have the look of someone heading for the New World.",
+				"Shakky, another drink please. And one for our guest."
+			],
+			"island": "Shakky's Rip-off Bar on Sabaody Archipelago. The islands here are giant mangroves, and the bubbles that float up from their roots coat ships for the trip to Fish-Man Island.",
+			"self": "Silvers Rayleigh. I was first mate on Roger's ship, a long time ago. These days I coat ships for a living, and gamble when I'm short of money.",
+			"recruit": "Wahaha! I'm far too old for that. Build your own crew, and when they're strong enough, come back and I'll coat your ship.",
+			"advice": "Haki is in everyone. Doubt is what keeps it asleep.",
+			"chapters": {
+				"sabaody": "Welcome to Sabaody. Be careful with the Celestial Dragons here. Don't even look at them wrong.",
+				"training": "Two years of training is about right. I'll teach you what I can on Rusukaina.",
+				"laugh_tale": "So you found all four stones. Roger would have liked you."
+			},
+			"train": "Haki lessons? Gladly. I'll teach you Observation and Armament, for a small fee. An old man has to eat.",
+			"accept": "Good, good.",
+			"decline": "Ha. Some other time, then.",
+			"waiting": "Not yet? There's no hurry. The sea will still be there.",
+			"bye": "Go on, then. Enjoy the voyage."
+		},
+		"roger": {
+			"hello": [
+				"Wahahaha! So you made it here!",
+				"Well, well. Someone finally caught up.",
+				"You read all four stones? Then sit down, let's laugh about it!"
+			],
+			"island": "Laugh Tale. The last island of the Grand Line. When I got here, I laughed so hard I couldn't stop. That's how it got its name.",
+			"self": "Gol D. Roger. Some people called me Pirate King. I just wanted to see the end of the sea, and I did. And I left something here for whoever came next.",
+			"recruit": "Wahahaha! My voyage is done, kid. Yours is the one that matters now. Find your crew, and laugh a lot.",
+			"advice": "Don't let anyone tell you what's at the end of the sea. Go and see it yourself.",
+			"chapters": {
+				"laugh_tale": "You want my treasure? Then go look for it! It's all here somewhere!"
+			},
+			"accept": "That's the spirit!",
+			"decline": "Wahaha! Fair enough!",
+			"waiting": "Not done? I'm not going anywhere.",
+			"bye": "Go on! The sea's waiting!"
+		},
+		"oden": {
+			"hello": [
+				"Ha! A traveler! Welcome to Wano!",
+				"You look hungry! I'll make oden. You're eating it.",
+				"The borders of Wano won't stay closed forever!"
+			],
+			"island": "My house in Wano. The rivers are clean, the rice is sweet and the mountains go all the way up to the clouds. It's the finest country in the world.",
+			"self": "Kozuki Oden! Samurai, daimyo of Kuri, and I sailed with both Whitebeard and Roger! I fight with two swords, and I'll boil anyone who hurts my people.",
+			"recruit": "Ha! I've already done that, twice! My place is in Wano now. Gather your crew at a tavern and come back with a feast.",
+			"advice": "A man who never risks anything never sees anything. Go see the whole world!",
+			"chapters": {
+				"wano": "Wano needs heroes. Twenty years from now, the Red Scabbards will strike."
+			},
+			"train": "Oden Nitoryu! Two swords, one heart. Cut what needs cutting and nothing else.",
+			"accept": "Hahaha! I like you!",
+			"decline": "Ha! Come back when you're hungry, then!",
+			"waiting": "Not yet? I'll keep the pot warm.",
+			"bye": "Farewell! Don't forget Wano!"
+		},
+		"yamato": {
+			"hello": [
+				"I am Kozuki Oden! ...Well, I want to be.",
+				"A visitor! From outside Wano? Tell me everything!",
+				"My father won't let me leave this island. Not yet, anyway."
+			],
+			"island": "This is Oden's old house, in Wano. Nobody comes here much. I read his journal over and over, and I dream about sailing the sea like he did.",
+			"self": "I'm Yamato. Kaido is my father, but I decided a long time ago to be like Oden instead. I ate a Mythical Zoan fruit. I'm going to free Wano.",
+			"recruit": "I'd love to sail with you! But first Wano has to be free. After that... maybe! For now, try the tavern board.",
+			"advice": "Read everything you can about the world. Then go out and see that the books were wrong.",
+			"chapters": {
+				"wano": "My father is on Onigashima. When we fight him, I'm fighting with you.",
+				"zou": "After Wano, I'll see the world, just like Oden wrote."
+			},
+			"accept": "Great! We're comrades now!",
+			"decline": "Oh... okay. Maybe later!",
+			"waiting": "Not done yet? I'll wait right here.",
+			"bye": "Come back soon! Bring stories!"
+		},
+		"kinemon": {
+			"hello": [
+				"Greetings, friend of Lord Oden!",
+				"Hm. You do not look like a ninja, but you might be one.",
+				"Welcome to the Flower Capital, traveler."
+			],
+			"island": "The Flower Capital, the heart of Wano. Orochi rules it now, and the people starve. But the cherry blossoms still bloom.",
+			"self": "I am Kin'emon, leader of the Red Scabbards, retainer to the Kozuki family. I can turn leaves into clothes. Very useful for disguises.",
+			"recruit": "My life belongs to the Kozuki family. I cannot follow another lord. But a crew of brave fighters? Find them at a tavern.",
+			"advice": "A samurai keeps his word, even if it costs him everything.",
+			"chapters": {
+				"wano": "The raid on Onigashima happens on the night of the fire festival. Every sword counts.",
+				"punk_hazard": "I was split in two on Punk Hazard. A long story. Do not ask."
+			},
+			"train": "Fox Fire Style. The blade cuts flame itself. Watch closely.",
+			"accept": "You have my gratitude!",
+			"decline": "I understand. Think on it.",
+			"waiting": "Not yet? Courage, my friend.",
+			"bye": "Until we meet again."
+		},
+		"vegapunk": {
+			"hello": [
+				"Ah! A visitor! Fascinating!",
+				"Don't touch anything blue. Or green. Actually, don't touch anything.",
+				"Science will save the future! Probably!"
+			],
+			"island": "My lab on Punk Hazard. Well, my old lab. It's half frozen and half on fire now, which is very interesting from a scientific point of view.",
+			"self": "Dr. Vegapunk, the greatest scientist alive. My brain is so big I had to split it into six bodies. I built the Pacifista and the Seraphim. I'm not proud of everything.",
+			"recruit": "My research is too important to leave! But I can sell you parts for your ship, or for your arms. Hire a crew at a tavern.",
+			"advice": "Knowledge is the greatest treasure. Even the World Government is afraid of it.",
+			"chapters": {
+				"void_century": "The Void Century is the biggest secret in history. I know a little. That's why they want me silenced."
+			},
+			"trade": "Experimental equipment! Mostly safe!",
+			"accept": "Wonderful! For science!",
+			"decline": "A pity. For science.",
+			"waiting": "Still collecting data? Excellent.",
+			"bye": "Goodbye! Don't explode!"
+		},
+		"ivankov": {
+			"hello": [
+				"Hee-haw! Welcome to Newkama Land, candy boy!",
+				"You look like you need a party! Or a hormone shot!",
+				"Iva-sama sees all! And Iva-sama likes what Iva-sama sees!"
+			],
+			"island": "Newkama Land is a secret level of Impel Down, hidden between floors five and six. The guards don't know about it. Here, we dance and eat and plot our escape!",
+			"self": "Emporio Ivankov, the Queen of the Okama Kingdom! I ate the Horm-Horm fruit. I can change anything about a body with my hormones! I'm a commander of the Revolutionary Army!",
+			"recruit": "Hee-haw! Iva-sama has a kingdom to run, candy! But you can find fabulous crewmates at a tavern!",
+			"advice": "Miracles happen to those who never give up! Hee-haw!",
+			"chapters": {
+				"impel_down": "Magellan rules this prison with poison. Avoid it, or beat him! Iva-sama believes in you!",
+				"marineford": "We broke out! Now to Marineford! Hee-haw!"
+			},
+			"accept": "Hee-haw! Iva-sama knew it!",
+			"decline": "Pfft! Iva-sama will wait. But not for long!",
+			"waiting": "Not done? Hormones won't fix that, candy!",
+			"bye": "Bye-bye, candy boy! Hee-haw!"
+		}
+	}
+}

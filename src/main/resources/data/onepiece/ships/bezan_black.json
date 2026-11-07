@@ -1,0 +1,15 @@
+{
+  "name": "Bezan Black",
+  "template": "onepiece:ships/bezan_black",
+  "bow": "east",
+  "waterline": 3.9,
+  "faction": "pirate",
+  "tiers": [
+    1
+  ],
+  "crew": "Black Cat Pirates",
+  "length": 39,
+  "beam": 21,
+  "height": 35,
+  "blocks": 2267
+}

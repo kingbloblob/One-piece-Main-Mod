@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:ace"
+    },
+    "title": {
+      "translate": "advancements.onepiece.powers.legendary_sword.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.powers.legendary_sword.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "onepiece:shodai_kitetsu",
+              "onepiece:ame_no_habakiri",
+              "onepiece:ace"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:powers/yoru"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:lily_pad",
+    "minecraft:pink_dye"
+  ],
+  "result": {
+    "id": "onepiece:sky_lotus",
+    "count": 2
+  }
+}

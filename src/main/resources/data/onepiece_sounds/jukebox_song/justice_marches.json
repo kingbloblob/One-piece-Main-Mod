@@ -1,0 +1,8 @@
+{
+  "sound_event": "onepiece_sounds:music.justice_marches",
+  "description": {
+    "translate": "jukebox_song.onepiece_sounds.justice_marches"
+  },
+  "length_in_seconds": 49.7,
+  "comparator_output": 5
+}

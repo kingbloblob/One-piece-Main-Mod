@@ -1,0 +1,27 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:g5_base",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:udon_prison",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:marine_battleship",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:rusukaina",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "onepiece:ring_spread",
+    "spacing": 40,
+    "separation": 14,
+    "salt": 1408172003,
+    "min_distance": 3000
+  }
+}

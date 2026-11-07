@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "onepiece:chocolate_block",
+  "result": {
+    "id": "onepiece:chocolate_stairs",
+    "count": 1
+  }
+}

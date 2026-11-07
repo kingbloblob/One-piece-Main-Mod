@@ -1,0 +1,8 @@
+{
+  "sound_event": "onepiece_sounds:music.sea_king",
+  "description": {
+    "translate": "jukebox_song.onepiece_sounds.sea_king"
+  },
+  "length_in_seconds": 67.2,
+  "comparator_output": 14
+}

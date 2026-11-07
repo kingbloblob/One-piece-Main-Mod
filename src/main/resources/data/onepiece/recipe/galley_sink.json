@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "I",
+    "C",
+    "B"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "C": "onepiece:spruce_counter",
+    "B": "minecraft:water_bucket"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:galley_sink"
+  }
+}

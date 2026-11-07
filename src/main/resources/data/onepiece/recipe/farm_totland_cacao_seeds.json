@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:totland_cacao"
+  ],
+  "result": {
+    "count": 2,
+    "id": "onepiece:totland_cacao_seeds"
+  }
+}

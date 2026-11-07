@@ -1,0 +1,188 @@
+package com.onepiecemod.deco;
+
+import java.util.function.Function;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
+import net.minecraft.core.particles.ColorParticleOption;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.random.WeightedList;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DoubleHighBlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.FlowerBedBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.world.level.block.LanternBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SaplingBlock;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TallFlowerBlock;
+import net.minecraft.world.level.block.TransparentBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
+import net.minecraft.world.level.block.UntintedParticleLeavesBlock;
+import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.grower.TreeGrower;
+import net.minecraft.world.level.block.sounds.AmbientLeavesBlockSoundPlayer;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
+
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+
+import com.onepiecemod.OnePieceMod;
+import com.onepiecemod.world.WorldBlocks;
+
+/**
+ * Building blocks, wood sets, lanterns and plants from the islands of One Piece.
+ *
+ * This file is made by tools/deco/gen_deco.py (together with the models, textures, loot tables,
+ * tags and recipes). To add a block, add it to that script and run it again rather than editing here.
+ */
+public class DecoBlocks {
+%%BLOCKS%%
+
+	public static void initialize() {
+		FlammableBlockRegistry flammable = FlammableBlockRegistry.getDefaultInstance();
+%%FLAMMABLE%%
+	}
+
+	// ---------------------------------------------------------------- helpers
+
+	private static Block cube(String name, Block copy) {
+		return register(name, Block::new, BlockBehaviour.Properties.ofFullCopy(copy));
+	}
+
+	private static Block cube(String name, Block copy, int light) {
+		return register(name, Block::new, BlockBehaviour.Properties.ofFullCopy(copy).lightLevel(state -> light));
+	}
+
+	private static Block pillar(String name, Block copy) {
+		return register(name, RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(copy));
+	}
+
+	private static Block log(String name, Block copy) {
+		return pillar(name, copy);
+	}
+
+	private static Block stairs(String name, Block base) {
+		return register(name, properties -> new StairBlock(base.defaultBlockState(), properties) {}, BlockBehaviour.Properties.ofFullCopy(base));
+	}
+
+	private static Block slab(String name, Block base) {
+		return register(name, SlabBlock::new, BlockBehaviour.Properties.ofFullCopy(base));
+	}
+
+	private static Block wall(String name, Block base) {
+		return register(name, WallBlock::new, BlockBehaviour.Properties.ofFullCopy(base).forceSolidOn());
+	}
+
+	private static Block fence(String name, Block planks) {
+		return register(name, FenceBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE).mapColor(planks.defaultMapColor()));
+	}
+
+	private static Block fenceGate(String name, Block planks, WoodType type) {
+		return register(name, properties -> new FenceGateBlock(type, properties),
+				BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE).mapColor(planks.defaultMapColor()));
+	}
+
+	private static Block door(String name, BlockSetType type) {
+		return registerTall(name, properties -> new DoorBlock(type, properties) {}, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR));
+	}
+
+	private static Block trapdoor(String name, BlockSetType type) {
+		return register(name, properties -> new TrapDoorBlock(type, properties) {}, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR));
+	}
+
+	private static Block button(String name, BlockSetType type) {
+		return register(name, properties -> new ButtonBlock(type, 30, properties) {}, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON));
+	}
+
+	private static Block pressurePlate(String name, BlockSetType type) {
+		return register(name, properties -> new PressurePlateBlock(type, properties) {}, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE));
+	}
+
+	private static Block leaves(String name, ParticleOptions particle) {
+		return register(name, properties -> new UntintedParticleLeavesBlock(0.01f, particle, AmbientLeavesBlockSoundPlayer.noAmbientSound(), properties),
+				BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_LEAVES));
+	}
+
+	/** A sapling that grows the tree in data/onepiece/worldgen/feature/<tree>.json. Palms also grow on sand. */
+	private static Block sapling(String name, String tree, boolean growsOnSand) {
+		ResourceKey<net.minecraft.world.level.levelgen.feature.Feature> feature = ResourceKey.create(Registries.FEATURE, OnePieceMod.id(tree));
+		TreeGrower grower = new TreeGrower("onepiece_" + tree, WeightedList.of(feature), WeightedList.of(), WeightedList.of(), feature);
+		return register(name, properties -> new SaplingBlock(grower, properties) {
+			@Override
+			protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
+				return super.mayPlaceOn(state, level, pos) || (growsOnSand && state.is(BlockTags.SAND));
+			}
+		}, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SAPLING));
+	}
+
+	private static Block flower(String name, Holder<MobEffect> stewEffect, float seconds, int light) {
+		return register(name, properties -> new DecoFlowerBlock(stewEffect, seconds, properties),
+				BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY).lightLevel(state -> light));
+	}
+
+	private static Block tallPlant(String name) {
+		return registerTall(name, TallFlowerBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.ROSE_BUSH));
+	}
+
+	private static Block petals(String name) {
+		return register(name, properties -> new FlowerBedBlock(properties, 3) {}, BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_PETALS));
+	}
+
+	private static Block glass(String name) {
+		return register(name, properties -> new TransparentBlock(properties) {}, BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS));
+	}
+
+	private static Block pane(String name, Block copy) {
+		return register(name, properties -> new IronBarsBlock(properties) {}, BlockBehaviour.Properties.ofFullCopy(copy));
+	}
+
+	private static Block lantern(String name) {
+		return register(name, LanternBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN));
+	}
+
+	/** Registers a block and the item you hold to place it. */
+	private static Block register(String name, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties properties) {
+		Block block = registerBlockOnly(name, factory, properties);
+		registerItem(name, itemProperties -> new BlockItem(block, itemProperties));
+		return block;
+	}
+
+	/** Doors and tall plants use an item that places both halves. */
+	private static Block registerTall(String name, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties properties) {
+		Block block = registerBlockOnly(name, factory, properties);
+		registerItem(name, itemProperties -> new DoubleHighBlockItem(block, itemProperties));
+		return block;
+	}
+
+	/** A block with no item of its own (the Mikan Bush is planted with a Mikan). */
+	static Block registerBlockOnly(String name, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties properties) {
+		ResourceKey<Block> key = ResourceKey.create(Registries.BLOCK, OnePieceMod.id(name));
+		return Registry.register(BuiltInRegistries.BLOCK, key, factory.apply(properties.setId(key)));
+	}
+
+	private static void registerItem(String name, Function<Item.Properties, Item> factory) {
+		ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, OnePieceMod.id(name));
+		Registry.register(BuiltInRegistries.ITEM, key, factory.apply(new Item.Properties().useBlockDescriptionPrefix().setId(key)));
+	}
+}

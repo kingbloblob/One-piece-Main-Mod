@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:blue_dye",
+    "minecraft:ladder"
+  ],
+  "result": {
+    "id": "onepiece:alarm_bell_blueprint"
+  }
+}

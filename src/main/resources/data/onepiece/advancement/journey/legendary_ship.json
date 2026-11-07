@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:hull_plating"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.legendary_ship.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.legendary_ship.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/sail"
+}

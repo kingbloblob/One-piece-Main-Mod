@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:deep_ocean",
+    "minecraft:deep_cold_ocean",
+    "minecraft:deep_lukewarm_ocean",
+    "onepiece:red_line",
+    "onepiece:east_blue",
+    "onepiece:orange_town",
+    "onepiece:loguetown",
+    "onepiece:conomi_islands",
+    "onepiece:marineford"
+  ]
+}

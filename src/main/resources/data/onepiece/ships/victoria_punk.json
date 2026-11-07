@@ -1,0 +1,17 @@
+{
+  "name": "Victoria Punk",
+  "template": "onepiece:ships/victoria_punk",
+  "bow": "east",
+  "waterline": 3.9,
+  "faction": "pirate",
+  "tiers": [
+    3,
+    4,
+    5
+  ],
+  "crew": "Kid Pirates",
+  "length": 43,
+  "beam": 23,
+  "height": 50,
+  "blocks": 3797
+}

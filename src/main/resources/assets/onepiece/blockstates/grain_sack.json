@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/grain_sack"
+    },
+    "facing=east": {
+      "model": "onepiece:block/grain_sack",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/grain_sack",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/grain_sack",
+      "y": 270
+    }
+  }
+}

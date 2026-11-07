@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:mink_tea"
+  ],
+  "result": {
+    "count": 2,
+    "id": "onepiece:mink_tea_seeds"
+  }
+}

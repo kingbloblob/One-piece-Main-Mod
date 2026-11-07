@@ -1,0 +1,8 @@
+{
+  "sound_event": "onepiece_sounds:music.emperor_battle",
+  "description": {
+    "translate": "jukebox_song.onepiece_sounds.emperor_battle"
+  },
+  "length_in_seconds": 71.1,
+  "comparator_output": 4
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:simple_block",
+  "to_place": {
+    "id": "onepiece:upper_yard_reed",
+    "properties": {
+      "half": "lower"
+    }
+  }
+}

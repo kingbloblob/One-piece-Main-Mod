@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "onepiece:item/sea_king_fang_blade"
+  }
+}

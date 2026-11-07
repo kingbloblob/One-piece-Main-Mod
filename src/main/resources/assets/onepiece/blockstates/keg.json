@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/keg"
+    },
+    "facing=east": {
+      "model": "onepiece:block/keg",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/keg",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/keg",
+      "y": 270
+    }
+  }
+}

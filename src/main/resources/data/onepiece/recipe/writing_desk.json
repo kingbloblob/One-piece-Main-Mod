@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "PFP"
+  ],
+  "key": {
+    "S": "minecraft:dark_oak_slab",
+    "P": "minecraft:dark_oak_planks",
+    "F": "minecraft:feather"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:writing_desk"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "onepiece:block/sakura_slab"
+    },
+    "type=double": {
+      "model": "onepiece:block/sakura_planks"
+    },
+    "type=top": {
+      "model": "onepiece:block/sakura_slab_top"
+    }
+  }
+}

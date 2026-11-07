@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:short_grass",
+    "minecraft:orange_dye"
+  ],
+  "result": {
+    "id": "onepiece:ember_grass",
+    "count": 2
+  }
+}

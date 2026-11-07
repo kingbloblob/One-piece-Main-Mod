@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "onepiece:block/sea_lavender_bottom"
+    },
+    "half=upper": {
+      "model": "onepiece:block/sea_lavender_top"
+    }
+  }
+}

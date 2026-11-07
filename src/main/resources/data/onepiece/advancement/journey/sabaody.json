@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:bubble_glass"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.sabaody.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.sabaody.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/thriller_bark"
+}

@@ -1,0 +1,41 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:shusui"
+    },
+    "title": {
+      "translate": "advancements.onepiece.powers.three_swords.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.powers.three_swords.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "swords": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:wado_ichimonji"
+          },
+          {
+            "items": "onepiece:sandai_kitetsu"
+          },
+          {
+            "items": "onepiece:shusui"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "swords"
+    ]
+  ],
+  "parent": "onepiece:powers/named_sword"
+}

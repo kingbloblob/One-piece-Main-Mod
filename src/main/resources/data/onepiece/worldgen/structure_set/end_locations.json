@@ -1,0 +1,22 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:pangaea_castle",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:celestial_mansion",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:void_century_ruins",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 22,
+    "separation": 9,
+    "salt": 1408172012
+  }
+}

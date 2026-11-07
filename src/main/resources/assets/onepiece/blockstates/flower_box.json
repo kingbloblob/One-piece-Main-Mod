@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/flower_box"
+    },
+    "facing=east": {
+      "model": "onepiece:block/flower_box",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/flower_box",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/flower_box",
+      "y": 270
+    }
+  }
+}

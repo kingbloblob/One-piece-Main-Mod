@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:glass",
+    "X": "minecraft:slime_ball"
+  },
+  "result": {
+    "id": "onepiece:bubble_glass",
+    "count": 8
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:marine_base",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:whisky_peak",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:little_garden_camp",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:mock_town",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:giant_jack",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:franky_house",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:auction_house",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:amazon_lily",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:fishman_district",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:punk_hazard_lab",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:flower_capital",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:elbaph_tree",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:navarone",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:banaro_island",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:tequila_wolf",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "onepiece:ring_spread",
+    "spacing": 30,
+    "separation": 13,
+    "salt": 1408172002,
+    "min_distance": 1000
+  }
+}

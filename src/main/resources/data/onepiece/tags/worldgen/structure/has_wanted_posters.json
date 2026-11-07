@@ -1,0 +1,36 @@
+{
+  "values": [
+    "onepiece:foosha_village",
+    "onepiece:shells_town",
+    "onepiece:syrup_village",
+    "onepiece:cocoyasi_village",
+    "onepiece:loguetown",
+    "onepiece:marine_base",
+    "onepiece:g5_base",
+    "onepiece:navarone",
+    "onepiece:marineford",
+    "onepiece:mock_town",
+    "onepiece:nanohana_port",
+    "onepiece:whisky_peak",
+    "onepiece:galley_la_dock",
+    "onepiece:ebisu_town",
+    "onepiece:chocolate_town",
+    "onepiece:flower_capital",
+    "onepiece:sabaody_park",
+    "onepiece:shakky_bar",
+    "onepiece:den_den_outpost",
+    "onepiece:sea_train_station",
+    "onepiece:baratie",
+    "onepiece:gray_terminal",
+    "onepiece:rain_dinners",
+    "onepiece:tequila_wolf",
+    "onepiece:fishman_district",
+    "onepiece:mokomo_dukedom",
+    "onepiece:yuba_oasis",
+    "onepiece:auction_house",
+    {
+      "id": "#minecraft:village",
+      "required": false
+    }
+  ]
+}

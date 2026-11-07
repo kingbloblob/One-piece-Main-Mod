@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " S ",
+    "I I"
+  ],
+  "key": {
+    "S": "minecraft:birch_slab",
+    "I": "minecraft:stick"
+  },
+  "result": {
+    "count": 2,
+    "id": "onepiece:birch_stool"
+  }
+}

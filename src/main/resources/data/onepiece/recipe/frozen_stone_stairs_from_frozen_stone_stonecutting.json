@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "onepiece:frozen_stone",
+  "result": {
+    "id": "onepiece:frozen_stone_stairs",
+    "count": 1
+  }
+}

@@ -1,0 +1,52 @@
+package com.onepiecemod.deco;
+
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
+
+import com.onepiecemod.OnePieceMod;
+
+/**
+ * Island building blocks, trees, flowers and snacks. OnePieceMod calls initialize() once.
+ *
+ * Trees and flowers are added to biomes by tag: data/onepiece/tags/worldgen/biome/has_deco_*.json
+ * lists the biomes each one grows in, so you can change where things grow without touching code.
+ * This file is made by tools/deco/gen_deco.py.
+ */
+public class DecoFeature {
+	public static final ResourceKey<CreativeModeTab> TAB_KEY = ResourceKey.create(
+			BuiltInRegistries.CREATIVE_MODE_TAB.key(), OnePieceMod.id("deco"));
+
+	public static void initialize() {
+		DecoBlocks.initialize();
+		DecoItems.initialize();
+
+		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_KEY, FabricCreativeModeTab.builder()
+				.icon(() -> new ItemStack(DecoBlocks.SAKURA_SAPLING))
+				.title(Component.translatable("itemGroup.onepiece.deco"))
+				.displayItems((params, output) -> {
+%%TAB%%
+				})
+				.build());
+
+%%BIOMES%%
+	}
+
+	private static void addVegetation(String biomeTag, String placedFeature) {
+		TagKey<Biome> tag = TagKey.create(Registries.BIOME, OnePieceMod.id(biomeTag));
+		ResourceKey<PlacedFeature> feature = ResourceKey.create(Registries.PLACED_FEATURE, OnePieceMod.id(placedFeature));
+		BiomeModifications.addFeature(BiomeSelectors.tag(tag), GenerationStep.Decoration.VEGETAL_DECORATION, feature);
+	}
+}

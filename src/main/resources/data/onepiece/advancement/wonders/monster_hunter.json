@@ -1,0 +1,280 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:bone"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.monster_hunter.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.monster_hunter.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "lapahn": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:lapahn"
+          }
+        }
+      }
+    },
+    "sand_scorpion": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:sand_scorpion"
+          }
+        }
+      }
+    },
+    "smiley": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:smiley"
+          }
+        }
+      }
+    },
+    "fighting_fish": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:fighting_fish"
+          }
+        }
+      }
+    },
+    "bananawani": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:bananawani"
+          }
+        }
+      }
+    },
+    "tyrannosaurus": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:tyrannosaurus"
+          }
+        }
+      }
+    },
+    "sky_shark": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:sky_shark"
+          }
+        }
+      }
+    },
+    "nola": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:nola"
+          }
+        }
+      }
+    },
+    "humandrill": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:humandrill"
+          }
+        }
+      }
+    },
+    "cerberus": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:cerberus"
+          }
+        }
+      }
+    },
+    "basilisk": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:basilisk"
+          }
+        }
+      }
+    },
+    "manticore": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:manticore"
+          }
+        }
+      }
+    },
+    "punk_hazard_dragon": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:punk_hazard_dragon"
+          }
+        }
+      }
+    },
+    "sea_cat": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:sea_cat"
+          }
+        }
+      }
+    },
+    "homie_tree": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:homie_tree"
+          }
+        }
+      }
+    },
+    "pacifista": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:pacifista"
+          }
+        }
+      }
+    },
+    "rusukaina_gorilla": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "onepiece:rusukaina_gorilla"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "lapahn"
+    ],
+    [
+      "sand_scorpion"
+    ],
+    [
+      "smiley"
+    ],
+    [
+      "fighting_fish"
+    ],
+    [
+      "bananawani"
+    ],
+    [
+      "tyrannosaurus"
+    ],
+    [
+      "sky_shark"
+    ],
+    [
+      "nola"
+    ],
+    [
+      "humandrill"
+    ],
+    [
+      "cerberus"
+    ],
+    [
+      "basilisk"
+    ],
+    [
+      "manticore"
+    ],
+    [
+      "punk_hazard_dragon"
+    ],
+    [
+      "sea_cat"
+    ],
+    [
+      "homie_tree"
+    ],
+    [
+      "pacifista"
+    ],
+    [
+      "rusukaina_gorilla"
+    ]
+  ],
+  "parent": "onepiece:wonders/punk_hazard_dragon",
+  "rewards": {
+    "experience": 400
+  }
+}

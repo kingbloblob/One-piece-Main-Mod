@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "onepiece:block/bubble_lamp"
+    },
+    "hanging=true": {
+      "model": "onepiece:block/bubble_lamp_hanging"
+    }
+  }
+}

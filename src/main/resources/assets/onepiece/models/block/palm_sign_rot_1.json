@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_sign_rot_1",
+  "textures": {
+    "all": "onepiece:block/palm_sign",
+    "particle": "onepiece:block/palm_planks"
+  }
+}

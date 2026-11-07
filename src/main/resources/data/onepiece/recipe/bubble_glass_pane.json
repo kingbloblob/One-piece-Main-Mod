@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:bubble_glass"
+  },
+  "result": {
+    "count": 16,
+    "id": "onepiece:bubble_glass_pane"
+  }
+}

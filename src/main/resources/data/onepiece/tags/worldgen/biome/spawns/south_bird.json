@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:jungle",
+    "minecraft:sparse_jungle",
+    "minecraft:bamboo_jungle",
+    "onepiece:jaya",
+    "onepiece:zou",
+    "onepiece:god_valley",
+    "onepiece:egghead",
+    "onepiece:enies_lobby"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:poneglyph"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.poneglyph_scholar.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.poneglyph_scholar.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/lost_poneglyph",
+  "rewards": {
+    "experience": 500
+  }
+}

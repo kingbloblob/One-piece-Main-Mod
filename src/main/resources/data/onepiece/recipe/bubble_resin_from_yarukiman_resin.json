@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:yarukiman_resin"
+  ],
+  "result": {
+    "count": 4,
+    "id": "onepiece:bubble_resin"
+  }
+}

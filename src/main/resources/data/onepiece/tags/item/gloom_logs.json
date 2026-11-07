@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "onepiece:gloom_log",
+    "onepiece:gloom_wood",
+    "onepiece:stripped_gloom_log",
+    "onepiece:stripped_gloom_wood"
+  ]
+}

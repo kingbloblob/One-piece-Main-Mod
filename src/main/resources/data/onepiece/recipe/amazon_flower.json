@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:peony",
+    "minecraft:vine"
+  ],
+  "result": {
+    "id": "onepiece:amazon_flower",
+    "count": 2
+  }
+}

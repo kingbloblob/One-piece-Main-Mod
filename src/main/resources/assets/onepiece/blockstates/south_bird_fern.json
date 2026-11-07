@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "onepiece:block/south_bird_fern_bottom"
+    },
+    "half=upper": {
+      "model": "onepiece:block/south_bird_fern_top"
+    }
+  }
+}

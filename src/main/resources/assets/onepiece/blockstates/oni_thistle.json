@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "onepiece:block/oni_thistle_bottom"
+    },
+    "half=upper": {
+      "model": "onepiece:block/oni_thistle_top"
+    }
+  }
+}

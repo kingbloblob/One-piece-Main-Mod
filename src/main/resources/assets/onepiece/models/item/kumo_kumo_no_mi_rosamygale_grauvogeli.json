@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "onepiece:item/kumo_kumo_no_mi_rosamygale_grauvogeli"
+  }
+}

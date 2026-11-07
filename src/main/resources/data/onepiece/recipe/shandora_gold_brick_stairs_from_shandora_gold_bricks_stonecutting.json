@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "onepiece:shandora_gold_bricks",
+  "result": {
+    "id": "onepiece:shandora_gold_brick_stairs",
+    "count": 1
+  }
+}

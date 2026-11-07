@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "onepiece:lab_panel",
+  "result": {
+    "id": "onepiece:lab_panel_stairs",
+    "count": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": "#minecraft:wool_carpets",
+    "P": "#minecraft:planks",
+    "K": "minecraft:cake"
+  },
+  "pattern": [
+    "WWW",
+    "PKP",
+    "P P"
+  ],
+  "result": {
+    "id": "onepiece:feast_table"
+  }
+}

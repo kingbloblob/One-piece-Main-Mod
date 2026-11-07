@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "CCC",
+    " G ",
+    " G "
+  ],
+  "key": {
+    "G": "minecraft:gold_nugget",
+    "C": "#minecraft:candles"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:candelabra"
+  }
+}

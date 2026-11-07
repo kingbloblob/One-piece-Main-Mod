@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:thousand_sunny"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.ship_spotter.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.ship_spotter.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/collector_log"
+}

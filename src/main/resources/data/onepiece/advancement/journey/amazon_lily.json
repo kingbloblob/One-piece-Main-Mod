@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:pink_tulip"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.amazon_lily.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.amazon_lily.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/sabaody"
+}

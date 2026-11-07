@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:desert",
+    "minecraft:savanna",
+    "minecraft:savanna_plateau",
+    "onepiece:alabasta",
+    "onepiece:dressrosa",
+    "onepiece:egghead"
+  ]
+}

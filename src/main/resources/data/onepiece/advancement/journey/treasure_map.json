@@ -1,0 +1,40 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:treasure_map"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.treasure_map.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.treasure_map.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "onepiece:treasure_map",
+              "onepiece:wreck_chart",
+              "onepiece:hoard_map",
+              "onepiece:castaway_chart"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/sea_chart"
+}

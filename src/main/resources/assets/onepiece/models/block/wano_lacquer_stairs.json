@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "onepiece:block/wano_lacquer_planks",
+    "side": "onepiece:block/wano_lacquer_planks",
+    "top": "onepiece:block/wano_lacquer_planks"
+  }
+}

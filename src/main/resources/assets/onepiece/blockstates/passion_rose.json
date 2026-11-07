@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "onepiece:block/passion_rose_bottom"
+    },
+    "half=upper": {
+      "model": "onepiece:block/passion_rose_top"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:colosseum_ticket"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.colosseum.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.colosseum.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:pirate/root"
+}

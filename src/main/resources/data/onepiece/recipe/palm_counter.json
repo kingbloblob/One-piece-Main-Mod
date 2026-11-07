@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "P P",
+    "PPP"
+  ],
+  "key": {
+    "S": "onepiece:palm_slab",
+    "P": "onepiece:palm_planks"
+  },
+  "result": {
+    "count": 2,
+    "id": "onepiece:palm_counter"
+  }
+}

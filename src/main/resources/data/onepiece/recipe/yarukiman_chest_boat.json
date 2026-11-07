@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "chest_boat",
+  "ingredients": [
+    "minecraft:chest",
+    "onepiece:yarukiman_boat"
+  ],
+  "result": {
+    "id": "onepiece:yarukiman_chest_boat"
+  }
+}

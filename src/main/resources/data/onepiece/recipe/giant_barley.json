@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:tall_grass",
+    "minecraft:yellow_dye"
+  ],
+  "result": {
+    "id": "onepiece:giant_barley",
+    "count": 2
+  }
+}

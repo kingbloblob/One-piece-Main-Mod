@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "onepiece:block/chocolate_slab"
+    },
+    "type=double": {
+      "model": "onepiece:block/chocolate_block"
+    },
+    "type=top": {
+      "model": "onepiece:block/chocolate_slab_top"
+    }
+  }
+}

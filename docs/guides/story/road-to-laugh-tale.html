@@ -1,0 +1,320 @@
+<title>Road to Laugh Tale</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Literata:opsz,wght@7..72,400;7..72,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column like a ship's log; each saga is a logbook entry with its chapter table, hours ruled in the margin. */
+:root {
+  --paper: #eef2f3;
+  --panel: #ffffff;
+  --ink: #14263a;
+  --muted: #4f6275;
+  --rule: #c9d4dc;
+  --red: #b3262d;
+  --gold: #b07a12;
+  --sea: #2f6f8f;
+  --fast: #2f6f8f;
+  --slow: #9fc0d0;
+  --warn-bg: #fbeaea;
+  --mid-bg: #fdf3df;
+  --low-bg: #e6f0f4;
+  --display: "Alfa Slab One", "Rockwell", Georgia, serif;
+  --body: "Literata", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #0f1a25; --panel: #162533; --ink: #e3ebf1; --muted: #9db0c0; --rule: #2a3d4f;
+  --red: #e0636a; --gold: #e0b14f; --sea: #6fb3d3; --fast: #6fb3d3; --slow: #2f5469;
+  --warn-bg: #3a1e22; --mid-bg: #352a14; --low-bg: #1a3242; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --paper: #0f1a25; --panel: #162533; --ink: #e3ebf1; --muted: #9db0c0; --rule: #2a3d4f;
+  --red: #e0636a; --gold: #e0b14f; --sea: #6fb3d3; --fast: #6fb3d3; --slow: #2f5469;
+  --warn-bg: #3a1e22; --mid-bg: #352a14; --low-bg: #1a3242; color-scheme: dark; }
+
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 920px; margin: 0 auto; padding-block: 40px 80px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2 { font-family: var(--display); font-weight: 400; text-wrap: balance; letter-spacing: .01em; line-height: 1.15; }
+h1 { font-size: clamp(2rem, 6vw, 3.2rem); margin: 0 0 12px; }
+h2 { font-size: 1.6rem; margin: 0 0 8px; }
+h3 { font-size: 1.1rem; margin: 0 0 6px; }
+p { margin: 0 0 12px; max-width: 68ch; }
+.eyebrow { font-family: var(--mono); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+.lede { font-size: 1.12rem; color: var(--ink); }
+.muted { color: var(--muted); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+section { margin-top: 56px; }
+.stats { display: flex; flex-wrap: wrap; gap: 28px; margin: 24px 0 4px; }
+.stat b { display: block; font-family: var(--display); font-weight: 400; font-size: 2rem; color: var(--red); line-height: 1.1; }
+.stat span { font-size: .85rem; color: var(--muted); }
+
+/* hours chart */
+.chart { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 20px; margin-top: 16px; }
+.row { display: grid; grid-template-columns: 170px 1fr 92px; gap: 12px; align-items: center; padding: 6px 0; }
+.row + .row { border-top: 1px dashed var(--rule); }
+.row .name { font-weight: 600; font-size: .95rem; min-width: 0; }
+.bars { display: grid; gap: 4px; min-width: 0; }
+.bar { height: 10px; border-radius: 2px; }
+.bar.f { background: var(--fast); }
+.bar.s { background: var(--slow); }
+.hrs { font-family: var(--mono); font-size: .85rem; text-align: right; font-variant-numeric: tabular-nums; }
+.legend { display: flex; gap: 18px; font-size: .85rem; color: var(--muted); margin-top: 12px; flex-wrap: wrap; }
+.legend i { display: inline-block; width: 14px; height: 10px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+.total { display: grid; grid-template-columns: 170px 1fr 92px; gap: 12px; padding-top: 10px; margin-top: 6px; border-top: 2px solid var(--ink); font-weight: 600; }
+
+/* saga entries */
+.saga { border-top: 3px solid var(--ink); padding-top: 18px; }
+.saga-head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: baseline; }
+.tag { font-family: var(--mono); font-size: .8rem; color: var(--muted); }
+.unlock { background: var(--low-bg); border-radius: 4px; padding: 10px 14px; margin: 12px 0; font-size: .95rem; }
+.unlock b { color: var(--sea); }
+.tbl { overflow-x: auto; margin-top: 8px; }
+table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: .92rem; }
+th { text-align: left; font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; padding: 8px 10px; border-bottom: 1px solid var(--ink); }
+td { padding: 9px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+td.n { font-family: var(--mono); color: var(--red); width: 32px; }
+td.ch { font-weight: 600; width: 23%; }
+code { font-family: var(--mono); font-size: .85em; background: var(--low-bg); padding: 1px 5px; border-radius: 3px; }
+
+/* mechanics */
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 16px; }
+.box { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 16px 18px; min-width: 0; }
+.box p:last-child, .box ul:last-child { margin-bottom: 0; }
+ul { padding-left: 20px; margin: 0 0 12px; }
+li { margin-bottom: 4px; }
+
+/* issues */
+.issue { display: grid; grid-template-columns: 92px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.sev { font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; height: fit-content; text-align: center; }
+.sev.hi { background: var(--warn-bg); color: var(--red); }
+.sev.md { background: var(--mid-bg); color: var(--gold); }
+.sev.lo { background: var(--low-bg); color: var(--sea); }
+.issue h3 { margin-bottom: 4px; }
+.issue p { margin-bottom: 6px; }
+.fix { font-size: .93rem; }
+.fix b { color: var(--sea); }
+
+.ask { background: var(--panel); border: 2px solid var(--red); border-radius: 6px; padding: 20px 22px; }
+.ask ol { padding-left: 22px; margin: 0; }
+
+@media (max-width: 560px) {
+  .row, .total { grid-template-columns: 1fr 70px; }
+  .row .name, .total .name { grid-column: 1 / -1; }
+  .issue { grid-template-columns: 1fr; gap: 6px; }
+  .sev { width: fit-content; }
+}
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">One Piece mod · story campaign design</div>
+  <h1>The Road to Laugh Tale</h1>
+  <p class="lede">A main story that walks you through the voyage in order: East Blue, the first half of the Grand Line, the Summit War and the two-year training, the New World, and a finale on Laugh Tale. It uses the characters, lairs, crew, Haki, styles, ships and navigation the mod already has, and adds a Captain's Log that always tells you what to do next.</p>
+  <div class="stats">
+    <div class="stat"><b>6</b><span>sagas</span></div>
+    <div class="stat"><b>26</b><span>chapters</span></div>
+    <div class="stat"><b class="mono">20 h</b><span>rushing the main story</span></div>
+    <div class="stat"><b class="mono">48 h</b><span>doing side quests and full crew</span></div>
+    <div class="stat"><b class="mono">60 h+</b><span>with the post-game</span></div>
+  </div>
+
+  <section>
+    <h2>Hours by saga</h2>
+    <p class="muted">"Fast" is a player who follows the Log, skips optional fights and only hires the crew roles the story needs. "Thorough" does every quest giver in that saga, hires the full crew, learns two styles and explores the lairs. Travel is counted in: legendary islands sit about 1,000 to 4,000 blocks apart.</p>
+    <div class="chart" role="img" aria-label="Hours per saga, fast and thorough">
+      <div class="row"><div class="name">0 · Romance Dawn</div><div class="bars"><div class="bar f" style="width:7%"></div><div class="bar s" style="width:14%"></div></div><div class="hrs">1 / 2</div></div>
+      <div class="row"><div class="name">1 · East Blue</div><div class="bars"><div class="bar f" style="width:25%"></div><div class="bar s" style="width:57%"></div></div><div class="hrs">3.5 / 8</div></div>
+      <div class="row"><div class="name">2 · Paradise</div><div class="bars"><div class="bar f" style="width:39%"></div><div class="bar s" style="width:93%"></div></div><div class="hrs">5.5 / 13</div></div>
+      <div class="row"><div class="name">3 · Summit War</div><div class="bars"><div class="bar f" style="width:18%"></div><div class="bar s" style="width:43%"></div></div><div class="hrs">2.5 / 6</div></div>
+      <div class="row"><div class="name">4 · New World</div><div class="bars"><div class="bar f" style="width:39%"></div><div class="bar s" style="width:100%"></div></div><div class="hrs">5.5 / 14</div></div>
+      <div class="row"><div class="name">5 · Final Saga</div><div class="bars"><div class="bar f" style="width:14%"></div><div class="bar s" style="width:36%"></div></div><div class="hrs">2 / 5</div></div>
+      <div class="total"><div class="name">Main story</div><div></div><div class="hrs">20 / 48</div></div>
+      <div class="legend"><span><i style="background:var(--fast)"></i>Fast (hours)</span><span><i style="background:var(--slow)"></i>Thorough (hours)</span><span>Bars are drawn to one scale, 14 h = full width</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How the campaign works</h2>
+    <p>Everything lives in a new package, <code>com.onepiecemod.story</code>. Other parts of the mod only get a one-line hook where the story needs to know something happened or needs to hold something back.</p>
+    <div class="grid2">
+      <div class="box">
+        <h3>Captain's Log</h3>
+        <p>You get it on first join, right after picking a race. Right-click it, or type <code>/story</code>, to see the current chapter, a short story text, and a checklist of goals. Each chapter hands you a Sea Chart to the next place, so you are never lost.</p>
+      </div>
+      <div class="box">
+        <h3>Goals reuse what exists</h3>
+        <ul>
+          <li>Beat a boss <span class="muted">(boss list)</span></li>
+          <li>Finish a quest giver's step, or meet someone</li>
+          <li>Reach a structure, or a sea (Calm Belt, Grand Line)</li>
+          <li>Bounty, Haki level, fruit mastery, Log Pose islands</li>
+          <li>Hire a crew role, learn a style, craft or carry an item</li>
+          <li>Survive a story event (new)</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Story events (new)</h3>
+        <p>A few set pieces that plain quests can't do: escape Kizaru on Sabaody, hold the line at Marineford against Marine waves, and the Road Poneglyph rubbings. They reuse the Marine squads and boss entities.</p>
+      </div>
+      <div class="box">
+        <h3>Story gates</h3>
+        <p>Some shortcuts get held back until the right chapter (see the pacing problems below). A world option, <code>storyGates</code>, turns them off for sandbox players and servers that want the old free play.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="saga">
+    <div class="saga-head"><h2>Saga 0 · Romance Dawn</h2><span class="tag">fast 1 h · thorough 2 h · easy structures</span></div>
+    <p>You wash up as a nobody with a dream. Short and guided: it teaches the Log, quest givers, the crew command and your first boat.</p>
+    <div class="tbl"><table>
+      <tr><th>#</th><th>Chapter</th><th>Goals</th><th>Systems used</th></tr>
+      <tr><td class="n">1</td><td class="ch">A Hat and a Dream</td><td>Pick a race. Reach Foosha Village and bring Luffy his 16 steaks.</td><td>Races, Luffy quest step 1, Sea Chart</td></tr>
+      <tr><td class="n">2</td><td class="ch">The Marine Who Wanted Out</td><td>Meet Koby at Shells Town. Type <code>/crew create</code>. Hire a swordsman.</td><td>Koby quest, crew hiring</td></tr>
+      <tr><td class="n">3</td><td class="ch">Set Sail</td><td>Build the Shipwright's Bench, make a Ship's Wheel, and sail a boat 300 blocks.</td><td>Crafting stations, ships</td></tr>
+    </table></div>
+    <div class="unlock"><b>Unlocks:</b> Captain's Log goals for East Blue, Sengoku's first two posters (Buggy, Smoker) for rematches.</div>
+  </section>
+
+  <section class="saga">
+    <div class="saga-head"><h2>Saga 1 · East Blue</h2><span class="tag">fast 3.5 h · thorough 8 h · easy → medium</span></div>
+    <p>Gather the core crew and get a name for yourself. Ends when you cross the Calm Belt into the Grand Line.</p>
+    <div class="tbl"><table>
+      <tr><th>#</th><th>Chapter</th><th>Goals</th><th>Systems used</th></tr>
+      <tr><td class="n">4</td><td class="ch">Orange Town</td><td>Beat Buggy in his Big Top lair.</td><td>Boss lair, first bounty poster, Cannon recipe</td></tr>
+      <tr><td class="n">5</td><td class="ch">Syrup Village</td><td>Meet Usopp. Hire a sniper. Assemble your first ship.</td><td>Ships, crew. Optional: Sogeking style</td></tr>
+      <tr><td class="n">6</td><td class="ch">The Baratie</td><td>Meet Sanji. Build a Ship's Galley. Hire a cook.</td><td>Galley, crew cook. Optional: Black Leg</td></tr>
+      <tr><td class="n">7</td><td class="ch">Arlong Park</td><td>Clear the Fish-Men guards at Arlong Park, then meet Nami at Cocoyasi. Hire a navigator.</td><td>Structure guards, crew navigator</td></tr>
+      <tr><td class="n">8</td><td class="ch">Loguetown</td><td>Beat Smoker at the Execution Square. Bounty reaches 50M.</td><td>Boss lair, bounty, Marine hunts start in earnest</td></tr>
+      <tr><td class="n">9</td><td class="ch">Reverse Mountain</td><td>Craft a Log Pose, reach the Twin Capes Lighthouse, cross the Calm Belt and record your first Grand Line island.</td><td>Navigator's Desk, Calm Belt, Sea Kings, Log Pose</td></tr>
+    </table></div>
+    <div class="unlock"><b>Unlocks:</b> Navigator's Desk and Seastone Workbench as goals in the Log, tier 3 posters at Sengoku, Paradise chapters.</div>
+  </section>
+
+  <section class="saga">
+    <div class="saga-head"><h2>Saga 2 · Paradise</h2><span class="tag">fast 5.5 h · thorough 13 h · medium → hard</span></div>
+    <p>The first half of the Grand Line. Five big islands, each with a villain, and the crew fills out. Ends at Sabaody, where it all goes wrong.</p>
+    <div class="tbl"><table>
+      <tr><th>#</th><th>Chapter</th><th>Goals</th><th>Systems used</th></tr>
+      <tr><td class="n">10</td><td class="ch">Drum Island</td><td>Reach Drum Castle, meet Chopper, hire a doctor, craft a Rumble Ball.</td><td>Crew doctor, Galley</td></tr>
+      <tr><td class="n">11</td><td class="ch">Alabasta</td><td>Visit Yuba Oasis and Alubarna, then beat Crocodile at Rain Dinners.</td><td>Luffy quest step 3, boss lair</td></tr>
+      <tr><td class="n">12</td><td class="ch">Sky Island</td><td>Find Cricket's house, ride the Knock Up Stream to Skypiea, beat Enel at Shandora.</td><td>New: one-time sky launch event (see problems)</td></tr>
+      <tr><td class="n">13</td><td class="ch">Water 7 and Enies Lobby</td><td>Meet Franky, hire a shipwright, beat Rob Lucci at the Tower of Justice.</td><td>Robin quest, Sunny figurehead unlocks</td></tr>
+      <tr><td class="n">14</td><td class="ch">Thriller Bark</td><td>Beat Gecko Moria. Hire a musician.</td><td>Boss lair (Shusui), crew musician</td></tr>
+      <tr><td class="n">15</td><td class="ch">Sabaody</td><td>Meet Rayleigh at Shakky's bar. Survive Kizaru for 2 minutes until Kuma sends you flying.</td><td>New: escape event, Kuma teleports you far away</td></tr>
+    </table></div>
+    <div class="unlock"><b>Unlocks:</b> Observation and Armament Haki trainable past level 2, tier 4 posters, Summit War chapters.</div>
+  </section>
+
+  <section class="saga">
+    <div class="saga-head"><h2>Saga 3 · Summit War and the two years</h2><span class="tag">fast 2.5 h · thorough 6 h · hard</span></div>
+    <p>A short, dramatic saga, then a training stretch that turns you from a rookie into someone who can survive the New World.</p>
+    <div class="tbl"><table>
+      <tr><th>#</th><th>Chapter</th><th>Goals</th><th>Systems used</th></tr>
+      <tr><td class="n">16</td><td class="ch">Amazon Lily</td><td>Bring Hancock her roses. If you were not born with Conqueror's Haki, you get one guaranteed trial here.</td><td>Hancock quest, Conqueror's Haki</td></tr>
+      <tr><td class="n">17</td><td class="ch">Marineford</td><td>Hold the plaza against 5 waves of Marines. Akainu arrives on the last wave. Surviving is the goal; beating him is a post-game bonus.</td><td>New: siege event with Marine squads at Marineford</td></tr>
+      <tr><td class="n">18</td><td class="ch">Two Years of Training</td><td>At Rusukaina: reach Armament 3 and Observation 3, learn one fighting style, and reach 300 fruit mastery (or a second style if you have no fruit).</td><td>Haki, styles, fruit mastery, Rayleigh lessons</td></tr>
+    </table></div>
+    <div class="unlock"><b>Unlocks:</b> Rayleigh's paid lessons stop (you trained), the New World chapters, Swordsmith's Forge in the Log.</div>
+  </section>
+
+  <section class="saga">
+    <div class="saga-head"><h2>Saga 4 · New World</h2><span class="tag">fast 5.5 h · thorough 14 h · hard → legendary</span></div>
+    <p>The longest saga. The goal is the three Road Poneglyphs, each guarded by an Emperor or a Warlord. You need an archaeologist in your crew to copy them.</p>
+    <div class="tbl"><table>
+      <tr><th>#</th><th>Chapter</th><th>Goals</th><th>Systems used</th></tr>
+      <tr><td class="n">19</td><td class="ch">Fish-Man Island</td><td>Dive to Ryugu Palace, meet Jinbe, hire a helmsman.</td><td>Sea floor structures, Fish-Man race or water breathing</td></tr>
+      <tr><td class="n">20</td><td class="ch">Punk Hazard</td><td>Meet Law at the laboratory and finish his first step.</td><td>Law quest</td></tr>
+      <tr><td class="n">21</td><td class="ch">Dressrosa</td><td>Beat Doflamingo in the Birdcage.</td><td>Legendary lair, Law quest step 3</td></tr>
+      <tr><td class="n">22</td><td class="ch">Zou</td><td>Hire an archaeologist. Copy the first Road Poneglyph at Mokomo Dukedom.</td><td>New: Poneglyph rubbing item</td></tr>
+      <tr><td class="n">23</td><td class="ch">Whole Cake Island</td><td>Beat Katakuri, then Big Mom. Copy her Road Poneglyph.</td><td>Two lairs, Jinbe quest</td></tr>
+      <tr><td class="n">24</td><td class="ch">Wano</td><td>Help Kin'emon and Oden, beat King, then Kaido at Onigashima. Copy the third Road Poneglyph.</td><td>Wano quests, Enma, awakening allowed from here</td></tr>
+    </table></div>
+    <div class="unlock"><b>Unlocks:</b> Devil Fruit awakening, tier 5 posters, the Final Saga.</div>
+  </section>
+
+  <section class="saga">
+    <div class="saga-head"><h2>Saga 5 · Final Saga</h2><span class="tag">fast 2 h · thorough 5 h · legendary</span></div>
+    <p>The last Road Poneglyph is in Blackbeard's hands. Take it, put the four rubbings together, and sail for the island at the end of the world.</p>
+    <div class="tbl"><table>
+      <tr><th>#</th><th>Chapter</th><th>Goals</th><th>Systems used</th></tr>
+      <tr><td class="n">25</td><td class="ch">Hachinosu</td><td>Beat Blackbeard on Pirate Island and take the fourth rubbing. Optional on the way: Egghead (Kizaru) and Elbaph (Shanks).</td><td>Legendary lair, Bonney and Shanks quests</td></tr>
+      <tr><td class="n">26</td><td class="ch">Laugh Tale</td><td>Combine the four rubbings at a Navigator's Desk into the Laugh Tale chart. Fight past the Ancient Guardians and talk to Roger.</td><td>Laugh Tale structure, Roger quest. Ending text, "Pirate King" title, treasure</td></tr>
+    </table></div>
+    <div class="unlock"><b>Post-game:</b> Mihawk, Whitebeard, the four Admirals and Aokiji, Roger's full quest line, Impel Down and Mary Geoise, Hard and Expert boss rematches (being added now), and awakening every power. About 10 to 15 more hours.</div>
+  </section>
+
+  <section>
+    <h2>Pacing problems in the current mod</h2>
+    <p class="muted">Found by reading the data files and code. Each comes with the fix I'd make; fixes marked "gate" only apply while story gates are on.</p>
+
+    <div class="issue"><span class="sev hi">Too fast</span><div>
+      <h3>Wanted Posters skip the whole voyage</h3>
+      <p>Sengoku sells every boss poster (6 to 64 Berries), and quest "defeat" steps hand you the poster. You can summon Kaido in your backyard, so lairs, ships and navigation become optional.</p>
+      <p class="fix"><b>Fix (gate):</b> the first win against each story boss has to be at its lair. Posters become rematches, which fits the Hard and Expert rematch versions being added. Sengoku only sells posters for bosses you already beat, and quest steps give the Sea Chart to the lair instead of the poster.</p>
+    </div></div>
+
+    <div class="issue"><span class="sev hi">Too fast</span><div>
+      <h3>Awakening only needs 5 cheap boss kills</h3>
+      <p>"Beat 5 different bosses" can be 5 posters of Buggy-tier bosses bought for about 100 Berries, so awakening lands in the first few hours.</p>
+      <p class="fix"><b>Fix (gate):</b> awakening needs the Wano chapter done, on top of the existing 1,000 mastery.</p>
+    </div></div>
+
+    <div class="issue"><span class="sev hi">Out of order</span><div>
+      <h3>Early characters send you to endgame places</h3>
+      <p>Luffy's second step is "talk to Zoro", but Zoro lives at Kuraigana Castle, Mihawk's legendary lair. Jinbe asks for Big Mom at step 3, Bonney for Kizaru, Garp for Aokiji. A new player following the first quest giver walks into the hardest areas.</p>
+      <p class="fix"><b>Fix:</b> the Log sends you to quest givers only for steps that fit your saga, and shows later steps as "come back after Wano". In <code>characters.json</code>, move Zoro's home to an early place (he starts at Shells Town in the story) or change Luffy's step to "hire a swordsman".</p>
+    </div></div>
+
+    <div class="issue"><span class="sev hi">No ending</span><div>
+      <h3>Nothing ties the systems together, and Laugh Tale is just another structure</h3>
+      <p>There is no main goal or finish line. Laugh Tale generates naturally and <code>/locate</code> can find it, so the final island could be the first one you see.</p>
+      <p class="fix"><b>Fix (gate):</b> the campaign itself, and Laugh Tale's treasure and Roger only open once you carry the four Road Poneglyph rubbings.</p>
+    </div></div>
+
+    <div class="issue"><span class="sev md">Map</span><div>
+      <h3>The world has no East Blue to start in</h3>
+      <p>The Grand Line is the stripe from Z −1000 to 1000, so world spawn is already in the Grand Line. Structures of every tier spawn anywhere their biome fits, so Wano can sit next to Foosha Village.</p>
+      <p class="fix"><b>Fix:</b> the story doesn't depend on geography. Each chapter's Sea Chart points to the nearest copy of the right place. Optionally, the sea stripes can move so spawn sits in East Blue (one number in <code>CalmBelt.java</code>, owned by the seas work). Without that, chapter 9 asks you to cross a Calm Belt and come back.</p>
+    </div></div>
+
+    <div class="issue"><span class="sev md">Too fast</span><div>
+      <h3>Rayleigh's Haki lessons are cheap</h3>
+      <p>10 Berries for 40 XP on both Haki at once. About 750 Berries (one tenth of all quest rewards) buys Armament and Observation level 5.</p>
+      <p class="fix"><b>Fix (gate):</b> lessons open at Sabaody, cost rises each time (10, 15, 20...) and stop above level 3. Levels 4 and 5 come from real fighting.</p>
+    </div></div>
+
+    <div class="issue"><span class="sev md">Farmable</span><div>
+      <h3>Conqueror's Haki can be farmed with rematches</h3>
+      <p>Every boss kill has a 2 to 10% chance, and posters make kills repeatable.</p>
+      <p class="fix"><b>Fix (gate):</b> only a first win against each boss rolls the chance, plus the guaranteed trial at Amazon Lily.</p>
+    </div></div>
+
+    <div class="issue"><span class="sev md">Luck spike</span><div>
+      <h3>Any leaf can drop Gura Gura on day one</h3>
+      <p>The 1-in-2,000 leaf drop picks from all 107 fruits evenly, so an Emperor's fruit can show up in the first hour.</p>
+      <p class="fix"><b>Fix (gate):</b> leaves only drop fruits whose tier matches your saga or lower. Bosses still drop their own.</p>
+    </div></div>
+
+    <div class="issue"><span class="sev lo">Blocked</span><div>
+      <h3>No way up to the sky islands</h3>
+      <p>Angel Beach, Weatheria and Shandora sit at y=170. Without Elytra or a fruit that flies, survival players can't reach Enel.</p>
+      <p class="fix"><b>Fix:</b> a one-time Knock Up Stream launch from Cricket's house in chapter 12, plus a cloud ladder home.</p>
+    </div></div>
+
+    <div class="issue"><span class="sev lo">Fine</span><div>
+      <h3>Things that already pace well</h3>
+      <p>Crew hire prices (940 Berries for all nine), the crafting station chain, the fighting style final moves locked behind bosses, Marine hunt threat levels, and the 1,000 mastery for awakening. The story uses these as they are.</p>
+    </div></div>
+  </section>
+
+  <section>
+    <div class="ask">
+      <h2>What I'd build, in order</h2>
+      <ol>
+        <li><b>Core:</b> Captain's Log, <code>/story</code>, the 26 chapters as a data file you can edit, goal checks, rewards and Sea Charts.</li>
+        <li><b>Story gates</b> on the shortcuts above, with the <code>storyGates</code> world option to turn them off.</li>
+        <li><b>Story events:</b> Kizaru escape, Marineford siege, Knock Up Stream, Road Poneglyph rubbings, the Laugh Tale ending.</li>
+        <li><b>Data fixes</b> in other parts: Zoro's home, Luffy's step 2, and the optional sea stripe move (I'd ask those owners first).</li>
+      </ol>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "S",
+    "C",
+    "P"
+  ],
+  "key": {
+    "S": "onepiece:sakura_slab",
+    "C": "minecraft:chest",
+    "P": "onepiece:sakura_planks"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:sakura_nightstand"
+  }
+}

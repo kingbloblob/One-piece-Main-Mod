@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bush",
+    "minecraft:brown_dye"
+  ],
+  "result": {
+    "id": "onepiece:red_line_scrub",
+    "count": 2
+  }
+}

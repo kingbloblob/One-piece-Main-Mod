@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:dressrosa_tiles"
+  },
+  "result": {
+    "count": 6,
+    "id": "onepiece:dressrosa_tile_slab"
+  }
+}

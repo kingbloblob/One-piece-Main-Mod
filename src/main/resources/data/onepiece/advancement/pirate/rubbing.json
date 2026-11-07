@@ -1,0 +1,40 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:road_poneglyph_wano"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.rubbing.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.rubbing.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "onepiece:road_poneglyph_zou",
+              "onepiece:road_poneglyph_whole_cake",
+              "onepiece:road_poneglyph_wano",
+              "onepiece:road_poneglyph_hachinosu"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:pirate/root"
+}

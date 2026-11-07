@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "onepiece:desert_amber_ore",
+    "onepiece:sun_coral_ore",
+    "onepiece:rock_candy_ore",
+    "onepiece:giant_iron_ore",
+    "onepiece:egghead_alloy_ore",
+    "onepiece:gloom_crystal_ore",
+    "onepiece:electro_crystal_ore",
+    "onepiece:snake_jade_ore",
+    "onepiece:sea_prism_vein"
+  ]
+}

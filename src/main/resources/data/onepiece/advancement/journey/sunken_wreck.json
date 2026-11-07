@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:wreck_chart"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.sunken_wreck.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.sunken_wreck.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/treasure_map"
+}

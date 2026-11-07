@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "#onepiece:deco_plant_soil",
+    "minecraft:mud",
+    "minecraft:moss_block",
+    "minecraft:pale_moss_block",
+    "minecraft:red_sand",
+    "minecraft:suspicious_sand",
+    "minecraft:clay",
+    "onepiece:sugar_sand",
+    "onepiece:black_sand",
+    "onepiece:volcanic_ash",
+    "onepiece:grave_soil",
+    "onepiece:jungle_loam",
+    "onepiece:permafrost"
+  ]
+}

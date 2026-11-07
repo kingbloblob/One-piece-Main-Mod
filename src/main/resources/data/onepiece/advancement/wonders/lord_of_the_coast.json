@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:coast_lord_fang"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.lord_of_the_coast.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.lord_of_the_coast.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/root"
+}

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:hoard_map"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.captains_hoard.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.captains_hoard.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/buried_treasure"
+}

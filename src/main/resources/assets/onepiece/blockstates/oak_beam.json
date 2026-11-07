@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/oak_beam"
+    },
+    "facing=east": {
+      "model": "onepiece:block/oak_beam",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/oak_beam",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/oak_beam",
+      "y": 270
+    }
+  }
+}

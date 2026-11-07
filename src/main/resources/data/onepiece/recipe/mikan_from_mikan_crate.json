@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:mikan_crate"
+  ],
+  "result": {
+    "id": "onepiece:mikan",
+    "count": 9
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/pet_bed"
+    },
+    "facing=east": {
+      "model": "onepiece:block/pet_bed",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/pet_bed",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/pet_bed",
+      "y": 270
+    }
+  }
+}

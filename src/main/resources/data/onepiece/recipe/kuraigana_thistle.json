@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:tall_grass",
+    "minecraft:purple_dye"
+  ],
+  "result": {
+    "id": "onepiece:kuraigana_thistle",
+    "count": 2
+  }
+}

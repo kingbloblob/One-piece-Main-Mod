@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "onepiece:block/upper_yard_reed_bottom"
+    },
+    "half=upper": {
+      "model": "onepiece:block/upper_yard_reed_top"
+    }
+  }
+}

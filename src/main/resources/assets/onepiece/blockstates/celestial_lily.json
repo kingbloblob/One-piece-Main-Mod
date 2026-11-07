@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "onepiece:block/celestial_lily_bottom"
+    },
+    "half=upper": {
+      "model": "onepiece:block/celestial_lily_top"
+    }
+  }
+}

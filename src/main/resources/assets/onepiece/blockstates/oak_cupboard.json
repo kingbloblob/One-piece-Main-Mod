@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/oak_cupboard"
+    },
+    "facing=east": {
+      "model": "onepiece:block/oak_cupboard",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/oak_cupboard",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/oak_cupboard",
+      "y": 270
+    }
+  }
+}

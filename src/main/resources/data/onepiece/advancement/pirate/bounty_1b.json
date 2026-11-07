@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:bounty_poster"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.bounty_1b.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.bounty_1b.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:pirate/bounty_500m"
+}

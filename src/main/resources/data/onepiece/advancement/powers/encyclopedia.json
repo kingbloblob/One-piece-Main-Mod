@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:devil_fruit_encyclopedia"
+    },
+    "title": {
+      "translate": "advancements.onepiece.powers.encyclopedia.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.powers.encyclopedia.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "onepiece:devil_fruit_encyclopedia"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:powers/devil_fruit"
+}

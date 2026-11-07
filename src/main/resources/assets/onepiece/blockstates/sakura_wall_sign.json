@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "onepiece:block/sakura_wall_sign",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "onepiece:block/sakura_wall_sign",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "onepiece:block/sakura_wall_sign"
+    },
+    "facing=west": {
+      "model": "onepiece:block/sakura_wall_sign",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:simple_block",
+  "to_place": {
+    "id": "onepiece:mangrove_reed",
+    "properties": {
+      "half": "lower"
+    }
+  }
+}

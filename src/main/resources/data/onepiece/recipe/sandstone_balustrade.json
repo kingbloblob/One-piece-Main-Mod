@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "W W"
+  ],
+  "key": {
+    "S": "minecraft:smooth_sandstone_slab",
+    "W": "minecraft:sandstone_wall"
+  },
+  "result": {
+    "count": 4,
+    "id": "onepiece:sandstone_balustrade"
+  }
+}

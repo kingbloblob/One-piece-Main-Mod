@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "group": "shandora_gold_ingot",
+  "ingredient": "onepiece:raw_shandora_gold",
+  "result": {
+    "id": "onepiece:shandora_gold_ingot"
+  }
+}

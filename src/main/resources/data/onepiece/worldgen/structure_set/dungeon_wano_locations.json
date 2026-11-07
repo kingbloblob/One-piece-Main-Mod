@@ -1,0 +1,19 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:kitetsu_forge",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:oden_shrine",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "onepiece:ring_spread",
+    "spacing": 10,
+    "separation": 4,
+    "salt": 3111202602,
+    "min_distance": 1200
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "sound_event": "onepiece_sounds:music.lantern_on_the_waves",
+  "description": {
+    "translate": "jukebox_song.onepiece_sounds.lantern_on_the_waves"
+  },
+  "length_in_seconds": 84.8,
+  "comparator_output": 8
+}

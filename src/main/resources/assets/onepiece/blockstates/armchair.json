@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/armchair"
+    },
+    "facing=east": {
+      "model": "onepiece:block/armchair",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/armchair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/armchair",
+      "y": 270
+    }
+  }
+}

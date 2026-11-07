@@ -1,0 +1,83 @@
+{
+	"schemaVersion": 1,
+	"id": "onepiece",
+	"version": "${version}",
+	"name": "One Piece Mod",
+	"description": "A big One Piece adventure: eat Devil Fruits, learn Haki and fighting styles, build a crew and a ship, earn a bounty, and sail the Grand Line through a story campaign with famous islands, characters and bosses. Unofficial fan-made mod.",
+	"authors": [
+		"ryan"
+	],
+	"contact": {
+		"homepage": "https://github.com/ryanmTCG/one-piece-mod",
+		"sources": "https://github.com/ryanmTCG/one-piece-mod",
+		"issues": "https://github.com/ryanmTCG/one-piece-mod/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/onepiece/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.onepiecemod.OnePieceMod"
+		],
+		"client": [
+			"com.onepiecemod.client.OnePieceModClient"
+		],
+		"jei_mod_plugin": [
+			"com.onepiecemod.jei.OnePieceJeiPlugin"
+		],
+		"modmenu": [
+			"com.onepiecemod.config.client.ModMenuSettings"
+		]
+	},
+	"mixins": [
+		{
+			"config": "onepiece.client.mixins.json",
+			"environment": "client"
+		},
+		{
+			"config": "onepiece-anim.client.mixins.json",
+			"environment": "client"
+		},
+		{
+			"config": "onepiece-weapon.client.mixins.json",
+			"environment": "client"
+		},
+		{
+			"config": "onepiece-zoan.client.mixins.json",
+			"environment": "client"
+		},
+		{
+			"config": "onepiece.sea.mixins.json",
+			"environment": "client"
+		},
+		"onepiece.worldgen.mixins.json",
+		"onepiece.ship.mixins.json",
+		"onepiece.lifeskill.mixins.json",
+		{
+			"config": "onepiece.multiplayer.mixins.json",
+			"environment": "server"
+		},
+		{
+			"config": "onepiece.haki.client.mixins.json",
+			"environment": "client"
+		},
+		{
+			"config": "onepiece.ship.client.mixins.json",
+			"environment": "client"
+		},
+		{
+			"config": "onepiece.weather.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"jei": "*",
+		"modmenu": "*"
+	}
+}

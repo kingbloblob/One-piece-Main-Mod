@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:cloud_bricks"
+  },
+  "result": {
+    "count": 6,
+    "id": "onepiece:cloud_brick_slab"
+  }
+}

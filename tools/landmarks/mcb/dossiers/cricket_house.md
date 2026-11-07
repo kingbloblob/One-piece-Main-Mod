@@ -1,0 +1,5 @@
+# Montblanc Cricket's house (Jaya) - dossier (batch 11)
+Sources: series knowledge (Jaya arc), no web pages reachable in the cloud box.
+- Cricket lives behind a grand castle front on the Jaya shore: from the sea it looks like a castle, but it is only the front half of Noland's old house; the other half was blasted up to Skypiea with the Knock Up Stream (Shandora's half is in the sky). Behind it is a small, plain wooden house.
+- Cricket dives for Noland's city of gold every day (decompression sickness), keeps maps and Noland's logbook; the Saruyama Alliance (Masira, Shoujou) camp nearby and refit the Going Merry (Flying Model) before the Knock Up Stream; South Birds live in the jungle.
+Design brief: 160 site, ground y 2; castle front 3 thick, cream stone + blue roofs, half-round west tower, gate keep with stepped gable and rose window, east tower then a ragged cut; timber braces behind; the real house (2 floors) with Noland's gold cellar; pier with diving winch + bell, Cricket's boat, Going Merry stamped; Saruyama camp (tents, monkey banners, fire, salvage); jungle with giant trees and a South Bird nest.

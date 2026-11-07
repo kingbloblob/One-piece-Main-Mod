@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/medicine_cabinet"
+    },
+    "facing=east": {
+      "model": "onepiece:block/medicine_cabinet",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/medicine_cabinet",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/medicine_cabinet",
+      "y": 270
+    }
+  }
+}

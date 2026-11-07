@@ -1,0 +1,1520 @@
+{
+  "_help": "The main story. Each saga has chapters; each chapter has goals. Goal types are listed in src/main/java/com/onepiecemod/story/StoryData.java. fruitTier = strongest boss fruit that leaves may drop during that saga.",
+  "sagas": [
+    {
+      "id": "romance_dawn",
+      "title": "Romance Dawn",
+      "fruitTier": 1,
+      "chapters": [
+        {
+          "id": "dream",
+          "title": "A Hat and a Dream",
+          "intro": "You wash up on a quiet beach with nothing but a dream: to find the One Piece. A boy in a straw hat lives in Foosha Village. Maybe he knows the way.",
+          "goals": [
+            {
+              "type": "race",
+              "text": "Pick your race"
+            },
+            {
+              "type": "reach",
+              "text": "Find Foosha Village",
+              "place": "foosha_village"
+            },
+            {
+              "type": "quest",
+              "text": "Bring Luffy the 16 steaks he's begging for",
+              "character": "luffy",
+              "step": 1
+            }
+          ],
+          "outro": "\"Shishishi! You're gonna be a great pirate. Go find Koby, he wants out of the Marines.\"",
+          "charts": [
+            "foosha_village"
+          ],
+          "reward": {
+            "berries": 30,
+            "items": [],
+            "xp": 100
+          }
+        },
+        {
+          "id": "koby",
+          "title": "The Marine Who Wanted Out",
+          "intro": "Koby swabs decks at the Shells Town Marine Base. Every pirate crew starts with a name and a first mate.",
+          "goals": [
+            {
+              "type": "talk",
+              "text": "Talk to Koby at Shells Town",
+              "character": "koby"
+            },
+            {
+              "type": "crew",
+              "text": "Start your crew with /crew create <name>"
+            },
+            {
+              "type": "crew",
+              "text": "Build a Pirate Tavern (/crew blueprint) and hire a swordsman there",
+              "role": "swordsman"
+            }
+          ],
+          "outro": "Your crew has a name now, and a sword at your side.",
+          "charts": [
+            "shells_town"
+          ],
+          "reward": {
+            "berries": 40,
+            "items": [],
+            "xp": 125
+          }
+        },
+        {
+          "id": "set_sail",
+          "title": "Set Sail",
+          "intro": "No pirate stays on land. Build a Shipwright's Bench, make a Ship's Wheel, and take to the sea.",
+          "goals": [
+            {
+              "type": "item",
+              "text": "Build a Shipwright's Bench",
+              "item": "onepiece:shipwright_bench"
+            },
+            {
+              "type": "item",
+              "text": "Make a Ship's Wheel at the bench",
+              "item": "onepiece:ships_wheel"
+            },
+            {
+              "type": "sail",
+              "text": "Sail 300 blocks in a boat or ship",
+              "count": 300
+            }
+          ],
+          "outro": "The wind fills your sails. East Blue is waiting.",
+          "charts": [],
+          "reward": {
+            "berries": 50,
+            "items": [],
+            "xp": 150
+          }
+        }
+      ]
+    },
+    {
+      "id": "east_blue",
+      "title": "East Blue Saga",
+      "fruitTier": 2,
+      "chapters": [
+        {
+          "id": "orange_town",
+          "title": "Orange Town",
+          "intro": "A clown called Buggy has taken over Orange Town, firing his Buggy Balls at anyone who laughs at his nose.",
+          "goals": [
+            {
+              "type": "boss",
+              "text": "Beat Buggy at his Big Top",
+              "boss": "buggy"
+            },
+            {
+              "type": "treasure",
+              "text": "Dig up a buried treasure (Buggy drops his treasure map)",
+              "count": 1
+            }
+          ],
+          "outro": "The Marines heard about it. You have your first bounty.",
+          "charts": [
+            "buggy_big_top"
+          ],
+          "reward": {
+            "berries": 60,
+            "items": [],
+            "xp": 175
+          }
+        },
+        {
+          "id": "syrup_village",
+          "title": "Syrup Village",
+          "intro": "In Syrup Village lives a boy who tells tall tales and never misses a shot.",
+          "goals": [
+            {
+              "type": "talk",
+              "text": "Meet Usopp in Syrup Village",
+              "character": "usopp"
+            },
+            {
+              "type": "crew",
+              "text": "Hire a sniper",
+              "role": "sniper"
+            },
+            {
+              "type": "sail",
+              "text": "Sail your own ship 200 blocks (build a hull, place the Ship's Wheel, right-click it)",
+              "count": 200,
+              "ship": true
+            }
+          ],
+          "outro": "Kaya gives you her gift: the Going Merry, with a sheep's head on the bow and the Straw Hat on her sail. Right-click deep sea to launch her.",
+          "charts": [
+            "syrup_village"
+          ],
+          "reward": {
+            "berries": 60,
+            "items": [
+              {
+                "item": "onepiece:going_merry",
+                "count": 1
+              }
+            ],
+            "xp": 200
+          }
+        },
+        {
+          "id": "baratie",
+          "title": "The Baratie",
+          "intro": "A floating restaurant where the cooks fight as hard as they cook. A crew that eats well sails far.",
+          "goals": [
+            {
+              "type": "talk",
+              "text": "Meet Sanji at the Baratie",
+              "character": "sanji"
+            },
+            {
+              "type": "item",
+              "text": "Build a Ship's Galley",
+              "item": "onepiece:ships_galley"
+            },
+            {
+              "type": "crew",
+              "text": "Hire a cook",
+              "role": "cook"
+            },
+            {
+              "type": "fish",
+              "text": "Catch 2 kinds of fish (/fishlog)",
+              "count": 2
+            },
+            {
+              "type": "item",
+              "text": "Cook Sea Bream Sashimi at the Ship's Galley",
+              "item": "onepiece:sea_bream_sashimi"
+            }
+          ],
+          "outro": "Sanji waves you off: \"Learn Black Leg from me any time. Sneak and right-click.\"",
+          "charts": [
+            "baratie"
+          ],
+          "reward": {
+            "berries": 70,
+            "items": [],
+            "xp": 225
+          }
+        },
+        {
+          "id": "arlong_park",
+          "title": "Arlong Park",
+          "intro": "Fish-Man pirates rule Cocoyasi Village from Arlong Park. A girl there draws the best sea charts in East Blue.",
+          "goals": [
+            {
+              "type": "kills",
+              "text": "Clear out 4 of Arlong's Fish-Men at Arlong Park",
+              "place": "arlong_park",
+              "count": 4
+            },
+            {
+              "type": "talk",
+              "text": "Meet Nami at Cocoyasi Village",
+              "character": "nami"
+            },
+            {
+              "type": "crew",
+              "text": "Hire a navigator",
+              "role": "navigator"
+            }
+          ],
+          "outro": "With a navigator aboard, you can build a Navigator's Desk and make Sea Charts and Log Poses.",
+          "charts": [
+            "arlong_park",
+            "cocoyasi_village"
+          ],
+          "reward": {
+            "berries": 80,
+            "items": [],
+            "xp": 250
+          }
+        },
+        {
+          "id": "loguetown",
+          "title": "Loguetown",
+          "intro": "The town of the beginning and the end, where Gol D. Roger was executed. Captain Smoker of the Marines is waiting.",
+          "goals": [
+            {
+              "type": "boss",
+              "text": "Beat Smoker at the Loguetown Execution Square",
+              "boss": "smoker"
+            },
+            {
+              "type": "bounty",
+              "text": "Reach a bounty of 30,000,000 (Luffy's first bounty)",
+              "amount": 30000000
+            }
+          ],
+          "outro": "Beating Smoker lets you make a Seastone Jitte at the Seastone Workbench. The Marines will hunt you harder now.",
+          "charts": [
+            "loguetown"
+          ],
+          "reward": {
+            "berries": 100,
+            "items": [],
+            "xp": 275
+          }
+        },
+        {
+          "id": "reverse_mountain",
+          "title": "Reverse Mountain",
+          "intro": "Compasses don't work in the Grand Line. Make a Log Pose, cross the Calm Belt where the Sea Kings nest, and find the lighthouse at the Twin Capes.",
+          "goals": [
+            {
+              "type": "item",
+              "text": "Make a Log Pose at the Navigator's Desk",
+              "item": "onepiece:log_pose"
+            },
+            {
+              "type": "sea",
+              "text": "Cross the Calm Belt (watch out for Sea Kings)",
+              "sea": "calm_belt"
+            },
+            {
+              "type": "reach",
+              "text": "Reach the Twin Capes Lighthouse",
+              "place": "twin_capes_lighthouse"
+            },
+            {
+              "type": "islands",
+              "text": "Record your first island with the Log Pose",
+              "count": 1
+            }
+          ],
+          "outro": "Welcome to the Grand Line, the pirate's graveyard.",
+          "charts": [
+            "twin_capes_lighthouse"
+          ],
+          "reward": {
+            "berries": 120,
+            "items": [],
+            "xp": 300
+          }
+        }
+      ]
+    },
+    {
+      "id": "paradise",
+      "title": "Paradise Saga",
+      "fruitTier": 3,
+      "chapters": [
+        {
+          "id": "drum_island",
+          "title": "Drum Island",
+          "intro": "Your crew is hurt and no ship sails far without a doctor. On a snowy island, a reindeer runs a castle hospital.",
+          "goals": [
+            {
+              "type": "talk",
+              "text": "Meet Chopper at Drum Castle",
+              "character": "chopper"
+            },
+            {
+              "type": "crew",
+              "text": "Hire a doctor",
+              "role": "doctor"
+            },
+            {
+              "type": "item",
+              "text": "Make a Rumble Ball at the Ship's Galley",
+              "item": "onepiece:rumble_ball"
+            }
+          ],
+          "outro": "",
+          "charts": [
+            "drum_castle"
+          ],
+          "reward": {
+            "berries": 150,
+            "items": [],
+            "xp": 325
+          }
+        },
+        {
+          "id": "alabasta",
+          "title": "Alabasta",
+          "intro": "Sir Crocodile, a Warlord of the Sea, is drying up a whole kingdom from his casino, Rain Dinners.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Visit Yuba Oasis",
+              "place": "yuba_oasis"
+            },
+            {
+              "type": "reach",
+              "text": "Visit Alubarna Palace",
+              "place": "alubarna_palace"
+            },
+            {
+              "type": "boss",
+              "text": "Beat Crocodile at Rain Dinners",
+              "boss": "crocodile"
+            }
+          ],
+          "outro": "Rain falls on Alabasta for the first time in three years.",
+          "charts": [
+            "yuba_oasis",
+            "alubarna_palace",
+            "rain_dinners"
+          ],
+          "reward": {
+            "berries": 180,
+            "items": [],
+            "xp": 350
+          }
+        },
+        {
+          "id": "sky_island",
+          "title": "Sky Island",
+          "intro": "Montblanc Cricket swears there's an island in the sky. Stand in his house and sneak: the Knock Up Stream will shoot you up there. A self-proclaimed god rules Shandora.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Reach the sky ruins of Shandora",
+              "place": "shandora"
+            },
+            {
+              "type": "boss",
+              "text": "Beat Enel",
+              "boss": "enel"
+            },
+            {
+              "type": "davyback",
+              "text": "Take on a crew in a Davy Back Fight, win or lose (Foxy waits at Long Ring Long Land)",
+              "count": 1
+            }
+          ],
+          "outro": "The golden bell of Shandora rings out over the clouds. You can ride the Knock Up Stream again any time.",
+          "charts": [
+            "cricket_house"
+          ],
+          "reward": {
+            "berries": 200,
+            "items": [],
+            "xp": 375
+          }
+        },
+        {
+          "id": "enies_lobby",
+          "title": "Water 7 and Enies Lobby",
+          "intro": "Your ship is falling apart. Water 7 has the best shipwrights in the world. But CP9 has taken a friend to the Tower of Justice.",
+          "goals": [
+            {
+              "type": "talk",
+              "text": "Meet Franky at the Galley-La Shipyard",
+              "character": "franky"
+            },
+            {
+              "type": "crew",
+              "text": "Hire a shipwright",
+              "role": "shipwright"
+            },
+            {
+              "type": "boss",
+              "text": "Beat Rob Lucci at the Tower of Justice",
+              "boss": "lucci"
+            }
+          ],
+          "outro": "You declared war on the World Government. Franky's gift waits in the harbour: the Thousand Sunny, built from Adam Wood. Right-click deep sea to launch her.",
+          "charts": [
+            "galley_la_dock",
+            "tower_of_justice"
+          ],
+          "reward": {
+            "berries": 250,
+            "items": [
+              {
+                "item": "onepiece:thousand_sunny",
+                "count": 1
+              }
+            ],
+            "xp": 400
+          }
+        },
+        {
+          "id": "thriller_bark",
+          "title": "Thriller Bark",
+          "intro": "A ghost ship drifts through the fog. Gecko Moria steals shadows there, and a skeleton with an afro wants his back.",
+          "goals": [
+            {
+              "type": "boss",
+              "text": "Beat Gecko Moria on Thriller Bark",
+              "boss": "moria"
+            },
+            {
+              "type": "crew",
+              "text": "Hire a musician",
+              "role": "musician"
+            }
+          ],
+          "outro": "",
+          "charts": [
+            "thriller_bark"
+          ],
+          "reward": {
+            "berries": 250,
+            "items": [],
+            "xp": 425
+          }
+        },
+        {
+          "id": "sabaody_arrival",
+          "title": "The Sabaody Archipelago",
+          "intro": "A forest of giant mangroves at the foot of the Red Line, full of floating bubbles. Every rookie with a big bounty ends up here, and so do the World Nobles. At the Human Auctioning House, people are sold like goods.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Reach the Sabaody Archipelago",
+              "place": "sabaody_park"
+            },
+            {
+              "type": "boss",
+              "text": "Basil Hawkins reads your fate in his cards. Prove them wrong",
+              "boss": "hawkins",
+              "place": "sabaody_park",
+              "summon": true
+            },
+            {
+              "type": "reach",
+              "text": "Find the Human Auctioning House",
+              "place": "auction_house"
+            },
+            {
+              "type": "event",
+              "text": "You punched a Celestial Dragon! Fight off 4 waves of Marines (a Pacifista comes last)",
+              "event": "auction_house_riot"
+            }
+          ],
+          "outro": "You walk out of the auction house with the Navy on your heels. An old man who was in the crowd says: 'Come to Shakky's bar. We should talk.'",
+          "charts": [
+            "sabaody_park",
+            "auction_house"
+          ],
+          "reward": {
+            "berries": 240,
+            "items": [],
+            "xp": 440
+          }
+        },
+        {
+          "id": "sabaody",
+          "title": "Sabaody: The Dark King",
+          "intro": "Silvers Rayleigh, the Dark King, was Gol D. Roger's first mate. He can coat your ship for the deep sea and tell you about Haki. But an Admiral is already on the island.",
+          "goals": [
+            {
+              "type": "talk",
+              "text": "Meet Silvers Rayleigh at Shakky's Rip-off Bar",
+              "character": "rayleigh"
+            },
+            {
+              "type": "event",
+              "text": "Survive Kizaru's attack on Sabaody (stay alive 2 minutes)",
+              "event": "kizaru_escape"
+            }
+          ],
+          "outro": "When you wake, you're on a strange island far from your crew. Rayleigh will train your Haki now: sneak and right-click him.",
+          "charts": [
+            "shakky_bar"
+          ],
+          "reward": {
+            "berries": 250,
+            "items": [],
+            "xp": 450
+          }
+        }
+      ]
+    },
+    {
+      "id": "summit_war",
+      "title": "Summit War Saga",
+      "fruitTier": 3,
+      "chapters": [
+        {
+          "id": "amazon_lily",
+          "title": "Amazon Lily",
+          "intro": "You land on an island of warrior women ruled by the Pirate Empress. She doesn't like visitors.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Reach Amazon Lily",
+              "place": "amazon_lily"
+            },
+            {
+              "type": "quest",
+              "text": "Bring Boa Hancock the roses she wants",
+              "character": "hancock",
+              "step": 1
+            }
+          ],
+          "outro": "Hancock agrees to sail you to Marineford.",
+          "charts": [
+            "amazon_lily"
+          ],
+          "reward": {
+            "berries": 300,
+            "items": [],
+            "xp": 475
+          }
+        },
+        {
+          "id": "impel_down",
+          "title": "Impel Down",
+          "intro": "Ace has been taken to Impel Down, the great prison under the sea. Its lowest levels burn and freeze deep in the Nether. Build a Nether portal and break in. (Read the Sea Charts once you're in the Nether.)",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Break into Blazing Hell (Level 4)",
+              "place": "blazing_hell_furnace"
+            },
+            {
+              "type": "reach",
+              "text": "Get through Freezing Hell (Level 5)",
+              "place": "freezing_hell_cells"
+            },
+            {
+              "type": "reach",
+              "text": "Find the hidden paradise of Newkama Land (Level 5.5)",
+              "place": "newkama_land"
+            },
+            {
+              "type": "talk",
+              "text": "Meet Emporio Ivankov in Newkama Land",
+              "character": "ivankov"
+            },
+            {
+              "type": "boss",
+              "text": "Beat Chief Warden Magellan in Blazing Hell",
+              "boss": "magellan"
+            }
+          ],
+          "outro": "You escape Impel Down with half the prison behind you. Next stop: Marineford.",
+          "charts": [
+            "blazing_hell_furnace",
+            "freezing_hell_cells",
+            "newkama_land"
+          ],
+          "reward": {
+            "berries": 300,
+            "items": [],
+            "xp": 500
+          }
+        },
+        {
+          "id": "marineford",
+          "title": "Marineford: The War Begins",
+          "intro": "Fire Fist Ace stands on the execution platform. Whitebeard's fleet comes up through the bay, and the whole Navy waits for them. Fight your way onto the plaza: hold it against 5 waves of Marines and survive Akainu's magma.",
+          "goals": [
+            {
+              "type": "event",
+              "text": "Hold Marineford against 5 waves of Marines",
+              "event": "marineford_siege"
+            }
+          ],
+          "outro": "The plaza is yours, but the platform is still far away. The Admirals have only just started.",
+          "charts": [
+            "marineford"
+          ],
+          "reward": {
+            "berries": 400,
+            "items": [],
+            "xp": 525
+          }
+        },
+        {
+          "id": "paramount_war",
+          "title": "The Paramount War",
+          "intro": "The Navy raises its siege wall and the Pacifista march out. Kuzan freezes the bay so no one can run. Somewhere on the platform, Ace is waiting for someone to get there first.",
+          "goals": [
+            {
+              "type": "event",
+              "text": "Break through to the execution platform: 4 waves of Vice Admirals and Pacifista (Akainu comes last, survive him)",
+              "event": "ace_rescue"
+            },
+            {
+              "type": "talk",
+              "text": "Marco covers your retreat. Talk to him before you go",
+              "character": "marco",
+              "place": "marineford",
+              "summon": true
+            },
+            {
+              "type": "bounty",
+              "text": "Have a bounty of at least 100,000,000 Berries",
+              "amount": 100000000
+            }
+          ],
+          "outro": "Ace is free for a moment, and then he isn't. Whitebeard stands his ground until the end and tells the whole world: 'The One Piece is real!' A new era begins, and you are not strong enough for it yet.",
+          "charts": [
+            "marineford"
+          ],
+          "reward": {
+            "berries": 450,
+            "items": [],
+            "xp": 535
+          }
+        },
+        {
+          "id": "training",
+          "title": "Two Years of Training",
+          "intro": "On Rusukaina the seasons change every week and the beasts are huge. Train until you're ready for the New World.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Reach the Rusukaina Training Grounds",
+              "place": "rusukaina"
+            },
+            {
+              "type": "haki",
+              "text": "Armament Haki level 3",
+              "kind": "armament",
+              "level": 3
+            },
+            {
+              "type": "haki",
+              "text": "Observation Haki level 3",
+              "kind": "observation",
+              "level": 3
+            },
+            {
+              "type": "styles",
+              "text": "Learn a fighting style",
+              "count": 1
+            },
+            {
+              "type": "any",
+              "text": "Reach 300 Devil Fruit mastery, or learn a second fighting style",
+              "of": [
+                {
+                  "type": "mastery",
+                  "text": "300 Devil Fruit mastery",
+                  "amount": 300
+                },
+                {
+                  "type": "styles",
+                  "text": "Two fighting styles",
+                  "count": 2
+                }
+              ]
+            }
+          ],
+          "outro": "Two years later, you're back. The New World is waiting.",
+          "charts": [
+            "rusukaina"
+          ],
+          "reward": {
+            "berries": 400,
+            "items": [],
+            "xp": 550
+          }
+        }
+      ]
+    },
+    {
+      "id": "new_world",
+      "title": "New World Saga",
+      "fruitTier": 4,
+      "chapters": [
+        {
+          "id": "fishman_island",
+          "title": "Fish-Man Island",
+          "intro": "The way to the New World runs 10,000 meters under the sea. Have your ship coated at Sabaody, take a submarine, or be a Fish-Man: the deep sea crushes anyone else.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Dive down to the Ryugu Palace",
+              "place": "ryugu_palace"
+            },
+            {
+              "type": "talk",
+              "text": "Meet Jinbe",
+              "character": "jinbe"
+            },
+            {
+              "type": "crew",
+              "text": "Hire a helmsman",
+              "role": "helmsman"
+            }
+          ],
+          "outro": "Jinbe warns you: Hody Jones and the New Fish-Man Pirates are planning something in the Fish-Man District.",
+          "charts": [
+            "ryugu_palace"
+          ],
+          "reward": {
+            "berries": 400,
+            "items": [],
+            "xp": 575
+          }
+        },
+        {
+          "id": "fishman_coup",
+          "title": "The New Fish-Man Pirates",
+          "intro": "Hody Jones hates humans more than Arlong ever did, and he takes Energy Steroids to grow strong. He wants to take the Ryugu Kingdom and drag every human down to the bottom of the sea. Queen Otohime gave her life for peace here.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Go to the Fish-Man District",
+              "place": "fishman_district"
+            },
+            {
+              "type": "event",
+              "text": "Defend the Ryugu Palace from 4 waves of the New Fish-Man Pirates",
+              "event": "ryugu_coup"
+            },
+            {
+              "type": "boss",
+              "text": "Beat Hody Jones at the Ryugu Palace (he comes for the king)",
+              "boss": "hody",
+              "place": "ryugu_palace",
+              "summon": true
+            }
+          ],
+          "outro": "Hody's steroids burn out and he falls. The Fish-Men and the humans who were watching stand on the same side for once. Jinbe will teach you Fish-Man Karate now: sneak and right-click him.",
+          "charts": [
+            "fishman_district"
+          ],
+          "reward": {
+            "berries": 450,
+            "items": [],
+            "xp": 585
+          }
+        },
+        {
+          "id": "punk_hazard",
+          "title": "Punk Hazard",
+          "intro": "Half fire, half ice. Trafalgar Law has a plan to take down an Emperor, and he needs your help.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Reach the Punk Hazard Laboratory",
+              "place": "punk_hazard_lab"
+            },
+            {
+              "type": "quest",
+              "text": "Finish Law's first job",
+              "character": "law",
+              "step": 1
+            }
+          ],
+          "outro": "",
+          "charts": [
+            "punk_hazard_lab"
+          ],
+          "reward": {
+            "berries": 400,
+            "items": [],
+            "xp": 600
+          }
+        },
+        {
+          "id": "dressrosa_colosseum",
+          "title": "Dressrosa: The Corrida Colosseum",
+          "intro": "The land of love, passion and toys. Doflamingo's Corrida Colosseum is giving away a real Devil Fruit to the winner: the Flame-Flame Fruit, Ace's fruit. A masked fighter called 'Lucy' isn't the only one who wants it.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Reach the Corrida Colosseum",
+              "place": "corrida_colosseum"
+            },
+            {
+              "type": "colosseum",
+              "text": "Win the Champion Cup at the Corrida Colosseum",
+              "level": 2
+            },
+            {
+              "type": "talk",
+              "text": "A familiar face in a top hat is waiting backstage",
+              "character": "sabo",
+              "place": "corrida_colosseum",
+              "summon": true
+            }
+          ],
+          "outro": "Sabo takes the Flame-Flame Fruit to keep it in the family. He tells you the toys of Dressrosa were people once, and the SMILE factory under the island is where Doflamingo makes his money.",
+          "charts": [
+            "corrida_colosseum"
+          ],
+          "reward": {
+            "berries": 450,
+            "items": [],
+            "xp": 610
+          }
+        },
+        {
+          "id": "smile_factory",
+          "title": "The SMILE Factory",
+          "intro": "Under the toy house, Doflamingo makes artificial Zoan fruit for Kaido. The toys who remember they were people are ready to fight. Destroy the factory and the Sugar who turns people into toys loses her hold.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Break into the SMILE Factory",
+              "place": "smile_factory"
+            },
+            {
+              "type": "event",
+              "text": "Wreck the factory: beat 4 waves of the Donquixote Family",
+              "event": "smile_factory_raid"
+            }
+          ],
+          "outro": "Every toy on the island turns back into a person at once, and they all remember. Doflamingo stops smiling, and drops a cage of strings over the whole country.",
+          "charts": [
+            "smile_factory",
+            "toy_house"
+          ],
+          "reward": {
+            "berries": 450,
+            "items": [],
+            "xp": 615
+          }
+        },
+        {
+          "id": "dressrosa",
+          "title": "Dressrosa: The Birdcage",
+          "intro": "The Birdcage of strings is closing in, cutting through everything it touches. Admiral Fujitora is here too, and he hasn't made up his mind. Fight up to the Royal Palace and break the cage.",
+          "goals": [
+            {
+              "type": "event",
+              "text": "Fight up the palace through the Birdcage: 4 waves (Fujitora rolls the dice on the last, survive him)",
+              "event": "birdcage"
+            },
+            {
+              "type": "boss",
+              "text": "Beat Donquixote Doflamingo at the Royal Palace",
+              "boss": "doflamingo"
+            }
+          ],
+          "outro": "The Birdcage falls apart, and Dressrosa is free. Fujitora bows to the people of Dressrosa on the front page of every paper in the world.",
+          "charts": [
+            "dressrosa_palace"
+          ],
+          "reward": {
+            "berries": 500,
+            "items": [],
+            "xp": 625
+          }
+        },
+        {
+          "id": "zou",
+          "title": "Zou",
+          "intro": "A whole island on the back of a giant elephant. The Minks guard a red stone with ancient writing on it: a Road Poneglyph. Only an archaeologist can read it, and copying it takes Paper and Kraken Ink (Krakens live in the deep ocean).",
+          "goals": [
+            {
+              "type": "crew",
+              "text": "Hire an archaeologist",
+              "role": "archaeologist"
+            },
+            {
+              "type": "item",
+              "text": "Copy the Road Poneglyph at Mokomo Dukedom (right-click it with Paper and Kraken Ink)",
+              "item": "onepiece:road_poneglyph_zou"
+            }
+          ],
+          "outro": "One of four. The other three are guarded by Emperors.",
+          "charts": [
+            "mokomo_dukedom"
+          ],
+          "reward": {
+            "berries": 400,
+            "items": [],
+            "xp": 650
+          }
+        },
+        {
+          "id": "totto_land",
+          "title": "Totto Land",
+          "intro": "Big Mom's country of sweets and talking homies. Her daughter is to marry Vinsmoke Sanji at a Tea Party, and Sanji doesn't look happy about it.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Reach Chocolate Town on Cacao Island",
+              "place": "chocolate_town"
+            },
+            {
+              "type": "talk",
+              "text": "Find Sanji in Chocolate Town",
+              "character": "sanji",
+              "place": "chocolate_town",
+              "summon": true
+            },
+            {
+              "type": "reach",
+              "text": "Sneak into Whole Cake Chateau",
+              "place": "whole_cake_chateau"
+            }
+          ],
+          "outro": "Sanji says he's going through with the wedding to save the Baratie. Nobody believes him. The Tea Party starts tomorrow.",
+          "charts": [
+            "chocolate_town",
+            "whole_cake_chateau"
+          ],
+          "reward": {
+            "berries": 450,
+            "items": [],
+            "xp": 655
+          }
+        },
+        {
+          "id": "tea_party",
+          "title": "The Tea Party",
+          "intro": "The whole Charlotte family sits at the Tea Party, and Big Mom's Road Poneglyph is hidden in the chateau. Copy it while everyone is busy, then crash the party.",
+          "goals": [
+            {
+              "type": "item",
+              "text": "Copy the Road Poneglyph in Whole Cake Chateau",
+              "item": "onepiece:road_poneglyph_whole_cake"
+            },
+            {
+              "type": "event",
+              "text": "Crash the Tea Party: 4 waves of Big Mom Pirates (Big Mom herself comes last, survive her)",
+              "event": "tea_party"
+            }
+          ],
+          "outro": "Big Mom screams for the photo of Mother Caramel and the chateau shakes apart. You run, with the whole Charlotte family behind you. Katakuri is waiting at the shore.",
+          "charts": [
+            "whole_cake_chateau"
+          ],
+          "reward": {
+            "berries": 500,
+            "items": [],
+            "xp": 665
+          }
+        },
+        {
+          "id": "whole_cake",
+          "title": "Whole Cake Island: The Escape",
+          "intro": "Big Mom's strongest son, Katakuri, can see the future. He traps you in the Mirror World. Beat him, then stand up to his mother.",
+          "goals": [
+            {
+              "type": "boss",
+              "text": "Beat Charlotte Katakuri in the Mirror Hall",
+              "boss": "katakuri"
+            },
+            {
+              "type": "boss",
+              "text": "Beat Big Mom at Whole Cake Chateau",
+              "boss": "big_mom"
+            }
+          ],
+          "outro": "Big Mom's Road Poneglyph is copied. Two of four. The third is in Wano, a country closed to the world.",
+          "charts": [
+            "mirror_hall",
+            "whole_cake_chateau"
+          ],
+          "reward": {
+            "berries": 700,
+            "items": [],
+            "xp": 675
+          }
+        }
+      ]
+    },
+    {
+      "id": "wano_country",
+      "title": "Wano Country Saga",
+      "fruitTier": 4,
+      "chapters": [
+        {
+          "id": "wano_arrival",
+          "title": "The Land of Wano",
+          "intro": "A waterfall climbs to a closed country of samurai. Twenty years ago Kaido and Orochi killed Kozuki Oden and took Wano. In Ebisu Town the poor laugh because Kaido's SMILE fruit took away their tears. Find Oden's old retainers.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Reach Ebisu Town in Wano",
+              "place": "ebisu_town"
+            },
+            {
+              "type": "talk",
+              "text": "Meet Kin'emon in the Flower Capital",
+              "character": "kinemon"
+            },
+            {
+              "type": "talk",
+              "text": "Find Yamato at the old samurai house. Kaido's own child wants Wano free",
+              "character": "yamato",
+              "place": "wano_house",
+              "summon": true
+            }
+          ],
+          "outro": "Kin'emon gathers the Red Scabbards. But many allies sit in Udon's prison mine, and Queen guards them.",
+          "charts": [
+            "ebisu_town",
+            "flower_capital",
+            "wano_house"
+          ],
+          "reward": {
+            "berries": 500,
+            "items": [],
+            "xp": 680
+          }
+        },
+        {
+          "id": "udon",
+          "title": "Udon Prison",
+          "intro": "Kaido's prisoners dig in the mines of Udon and starve on a bowl of soup a day. Free them and they'll fight for Wano. Queen the Plague, one of Kaido's three All-Stars, is coming to stop the riot.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Break into the Udon Prisoner Mine",
+              "place": "udon_prison"
+            },
+            {
+              "type": "boss",
+              "text": "Beat Queen the Plague at Udon (he comes once you're in)",
+              "boss": "queen",
+              "place": "udon_prison",
+              "summon": true
+            }
+          ],
+          "outro": "Udon's prisoners take the mine and join the raid. Thousands now march on Onigashima.",
+          "charts": [
+            "udon_prison"
+          ],
+          "reward": {
+            "berries": 700,
+            "items": [],
+            "xp": 690
+          }
+        },
+        {
+          "id": "wano",
+          "title": "The Raid on Onigashima",
+          "intro": "The Fire Festival night. Kaido's whole crew is drinking on Onigashima. Storm the island, cut through the Beast Pirates, and climb to the rooftop where Kaido waits.",
+          "goals": [
+            {
+              "type": "event",
+              "text": "Storm Onigashima: beat 4 waves of Beast Pirates",
+              "event": "onigashima_raid"
+            },
+            {
+              "type": "boss",
+              "text": "Beat King at his Flame Fortress",
+              "boss": "king"
+            },
+            {
+              "type": "boss",
+              "text": "Beat Kaido on Onigashima",
+              "boss": "kaido"
+            },
+            {
+              "type": "item",
+              "text": "Copy the Road Poneglyph on Onigashima",
+              "item": "onepiece:road_poneglyph_wano"
+            }
+          ],
+          "outro": "The dawn bell rings over a free Wano, and its Road Poneglyph is yours. Three of four. Your Devil Fruit can awaken now. In Oden's old castle you find his log: a page of the true history.",
+          "charts": [
+            "onigashima",
+            "flame_fortress"
+          ],
+          "reward": {
+            "berries": 900,
+            "items": [],
+            "xp": 700
+          }
+        }
+      ]
+    },
+    {
+      "id": "final_saga",
+      "title": "Final Saga",
+      "fruitTier": 5,
+      "chapters": [
+        {
+          "id": "egghead",
+          "title": "Egghead, Island of the Future",
+          "intro": "Dr. Vegapunk has moved his lab to Egghead, a future island hidden in a winter cloud. He wants to meet you, and the World Government wants him dead. CP0 is already on the island.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Reach Egghead Labophase",
+              "place": "egghead_lab"
+            },
+            {
+              "type": "talk",
+              "text": "Meet Dr. Vegapunk at Labophase (he comes to meet you)",
+              "character": "vegapunk",
+              "place": "egghead_lab",
+              "summon": true
+            },
+            {
+              "type": "boss",
+              "text": "Beat Rob Lucci on Hard. CP0's Awakened leopard came for Vegapunk",
+              "boss": "lucci",
+              "difficulty": 1,
+              "place": "egghead_lab",
+              "summon": true
+            }
+          ],
+          "outro": "Lucci falls, but the news reaches Mary Geoise. A Buster Call fleet and a Gorosei are on their way.",
+          "charts": [
+            "egghead_lab"
+          ],
+          "reward": {
+            "berries": 900,
+            "items": [],
+            "xp": 710
+          }
+        },
+        {
+          "id": "egghead_incident",
+          "title": "The Egghead Incident",
+          "intro": "The Navy surrounds Egghead. Pacifista and the Seraphim, children of Vegapunk's own science, turn on him, and Admiral Kizaru leads them. Hold Labophase while Vegapunk records his message to the world.",
+          "goals": [
+            {
+              "type": "event",
+              "text": "Hold Labophase against 4 waves (Kizaru joins the last)",
+              "event": "egghead_escape"
+            },
+            {
+              "type": "boss",
+              "text": "Beat Saint Jaygarcia Saturn, the Gorosei who came in person",
+              "boss": "saturn",
+              "place": "egghead_lab",
+              "summon": true
+            }
+          ],
+          "outro": "Every Den Den Mushi in the world starts to speak with Vegapunk's voice: the sea is rising, and the truth was hidden for 800 years. You sail out of the Navy's ring of ships with the broadcast still going. Your Den Den Mushi recorded every word: a page of the true history.",
+          "charts": [],
+          "reward": {
+            "berries": 1100,
+            "items": [],
+            "xp": 720
+          }
+        },
+        {
+          "id": "elbaph_arrival",
+          "title": "Elbaph, Land of the Giants",
+          "intro": "Egghead's broadcast is still echoing over the sea when a giant warship takes you aboard. Dorry and Brogy's homeland is the next stop: Elbaph, an island grown from one tree so big its roots reach the sea floor. Shanks has been waiting there for you.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Climb the Great Tree of Elbaph",
+              "place": "elbaph_tree"
+            },
+            {
+              "type": "talk",
+              "text": "Find Shanks under the Great Tree. He has a drink ready",
+              "character": "shanks",
+              "place": "elbaph_tree",
+              "summon": true
+            },
+            {
+              "type": "page",
+              "text": "Read the giants' oldest Poneglyph under the Great Tree (bring your archaeologist)",
+              "page": "elbaph"
+            }
+          ],
+          "outro": "The giants roar out a song about the Sun God. Shanks just listens, then looks out to sea. \"White sails. I knew they'd come.\"",
+          "charts": [
+            "elbaph_tree"
+          ],
+          "reward": {
+            "berries": 1100,
+            "items": [],
+            "xp": 722
+          }
+        },
+        {
+          "id": "holy_knights",
+          "title": "The Holy Knights",
+          "intro": "The World Government sends its own knights, the Holy Knights of Mary Geoise, to punish Elbaph for remembering Joy Boy. Saint Gunko leads the first attack. Behind her comes their commander, Figarland Shamrock, with the same red hair as Shanks and a sword called Cerberus.",
+          "goals": [
+            {
+              "type": "event",
+              "text": "Hold the Great Tree against 4 waves of Holy Knights, CP0 and Seraphim",
+              "event": "holy_knights_raid"
+            },
+            {
+              "type": "boss",
+              "text": "Beat Saint Gunko of the Holy Knights",
+              "boss": "gunko",
+              "place": "elbaph_tree",
+              "summon": true
+            },
+            {
+              "type": "boss",
+              "text": "Beat Figarland Shamrock, commander of the Holy Knights (watch out for Cerberus)",
+              "boss": "shamrock",
+              "place": "elbaph_tree",
+              "summon": true
+            }
+          ],
+          "outro": "Shamrock wipes the blood from his lip and calls Cerberus back to his side. \"Brother... so this is who you picked. The Holy Land will see you soon.\" The Holy Knights sail away. The giants of Elbaph offer to stand with you at the end, like they once stood with Joy Boy.",
+          "charts": [],
+          "reward": {
+            "berries": 1200,
+            "items": [
+              {
+                "item": "minecraft:totem_of_undying",
+                "count": 1
+              }
+            ],
+            "xp": 724
+          }
+        },
+        {
+          "id": "hachinosu",
+          "title": "Hachinosu",
+          "intro": "With Elbaph behind you, one Road Poneglyph is left. Blackbeard holds it on Pirate Island. He has two Devil Fruits and no mercy.",
+          "goals": [
+            {
+              "type": "boss",
+              "text": "Beat Marshall D. Teach on Hachinosu",
+              "boss": "blackbeard"
+            },
+            {
+              "type": "item",
+              "text": "Copy the Road Poneglyph on Hachinosu",
+              "item": "onepiece:road_poneglyph_hachinosu"
+            }
+          ],
+          "outro": "Four of four. Your archaeologist lays the rubbings side by side and finds the place where all four point.",
+          "charts": [
+            "hachinosu"
+          ],
+          "reward": {
+            "berries": 1200,
+            "items": [],
+            "xp": 725
+          }
+        },
+        {
+          "id": "final_island",
+          "title": "The Road to Laugh Tale",
+          "intro": "Four red stones, four sets of coordinates. Lay the rubbings side by side and your archaeologist can find the one island nobody has reached since Roger.",
+          "goals": [
+            {
+              "type": "item",
+              "text": "Carry the Zou rubbing",
+              "item": "onepiece:road_poneglyph_zou"
+            },
+            {
+              "type": "item",
+              "text": "Carry the Whole Cake rubbing",
+              "item": "onepiece:road_poneglyph_whole_cake"
+            },
+            {
+              "type": "item",
+              "text": "Carry the Wano rubbing",
+              "item": "onepiece:road_poneglyph_wano"
+            },
+            {
+              "type": "item",
+              "text": "Carry the Hachinosu rubbing",
+              "item": "onepiece:road_poneglyph_hachinosu"
+            }
+          ],
+          "outro": "Your archaeologist draws four lines across the chart. They cross at a speck of ocean that is not on any map. Roger's crew laughed when they got there. You're about to find out why. But you're not the only one who knows the way: Blackbeard copied the same stones.",
+          "charts": [],
+          "reward": {
+            "berries": 1500,
+            "items": [],
+            "xp": 735
+          }
+        },
+        {
+          "id": "laugh_tale",
+          "title": "Laugh Tale",
+          "intro": "The last island. Blackbeard is right behind you, the Ancient Guardians watch the shore, and a man is waiting at the end of the world.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Reach Laugh Tale",
+              "place": "laugh_tale"
+            },
+            {
+              "type": "event",
+              "text": "Hold the shore against 4 waves of Blackbeard Pirates (Teach joins the last)",
+              "event": "laugh_tale_race"
+            },
+            {
+              "type": "talk",
+              "text": "Talk to Gol D. Roger",
+              "character": "roger"
+            }
+          ],
+          "outro": "Roger laughs until he cries. \"So you found it. Wahahaha! What a funny story...\"",
+          "charts": [
+            "laugh_tale"
+          ],
+          "reward": {
+            "berries": 2500,
+            "items": [
+              {
+                "item": "onepiece:the_one_piece",
+                "count": 1
+              }
+            ],
+            "xp": 750
+          },
+          "goalsChanged": "2026-11-06"
+        }
+      ]
+    },
+    {
+      "id": "void_century",
+      "title": "Post-game: The Void Century",
+      "fruitTier": 5,
+      "chapters": [
+        {
+          "id": "red_line",
+          "title": "The Red Line",
+          "intro": "You found the One Piece, but Roger's treasure raised more questions than it answered. The answers are on the Red Line, where the World Nobles live above the clouds. Find a stronghold and its End portal. Read the Sea Chart once you're in the End.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Reach a Celestial Dragon's mansion on the Red Line",
+              "place": "celestial_mansion"
+            },
+            {
+              "type": "history",
+              "text": "Read 4 pages of the true history on Poneglyphs (/endgame history)",
+              "count": 4
+            }
+          ],
+          "outro": "",
+          "charts": [
+            "celestial_mansion"
+          ],
+          "reward": {
+            "berries": 800,
+            "items": [],
+            "xp": 775
+          }
+        },
+        {
+          "id": "void_century",
+          "title": "The Void Century",
+          "intro": "Somewhere on the heights lie ruins from the hundred years the World Government erased from history. Read the Sea Chart once you're in the End.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Find the Void Century ruins",
+              "place": "void_century_ruins"
+            },
+            {
+              "type": "history",
+              "text": "Read 12 pages of the true history (Poneglyphs, Oden's log and Vegapunk's broadcast; /endgame history)",
+              "count": 12
+            }
+          ],
+          "outro": "The stone tells of a great kingdom, and of the twenty kings who destroyed it. One of the twenty is still up there, on the throne.",
+          "charts": [
+            "void_century_ruins"
+          ],
+          "reward": {
+            "berries": 1000,
+            "items": [],
+            "xp": 800
+          }
+        },
+        {
+          "id": "god_knights",
+          "title": "The Gates of the Holy Land",
+          "intro": "Shamrock told you to come, so you did. The Holy Knights guard Pangaea Castle, and behind them waits the one who sends them. Read the Sea Chart once you're in the End.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Reach the gates of Pangaea Castle",
+              "place": "pangaea_castle"
+            },
+            {
+              "type": "event",
+              "text": "Break through 4 waves of Holy Knights at the castle gates",
+              "event": "pangaea_siege"
+            },
+            {
+              "type": "boss",
+              "text": "Beat Shamrock again, on Hard. He and Cerberus won't let you pass a second time",
+              "boss": "shamrock",
+              "difficulty": 1,
+              "place": "pangaea_castle",
+              "summon": true
+            }
+          ],
+          "outro": "Shamrock kneels at last. \"Go on, then. See what we've been guarding.\" The throne room doors are open.",
+          "charts": [
+            "pangaea_castle"
+          ],
+          "reward": {
+            "berries": 2000,
+            "items": [],
+            "xp": 815
+          }
+        },
+        {
+          "id": "empty_throne",
+          "title": "The Empty Throne",
+          "intro": "In Pangaea Castle stands a throne no one may sit on. But someone does.",
+          "goals": [
+            {
+              "type": "reach",
+              "text": "Enter Pangaea Castle",
+              "place": "pangaea_castle"
+            },
+            {
+              "type": "boss",
+              "text": "Beat Imu on the Empty Throne",
+              "boss": "imu"
+            }
+          ],
+          "outro": "The world will never be the same. Under the throne lies the last page of the true history. Take it back to Laugh Tale.",
+          "charts": [],
+          "reward": {
+            "berries": 2500,
+            "items": [],
+            "xp": 825
+          }
+        },
+        {
+          "id": "dawn",
+          "title": "The Dawn of the World",
+          "intro": "The pages of the true history are scattered over the world's Poneglyphs (type /endgame history to see which you still need). Gather all thirteen, then sail back to Laugh Tale and let your archaeologist read the last stone with the whole story beside it.",
+          "goals": [
+            {
+              "type": "history",
+              "text": "Gather all 13 pages of the true history",
+              "count": 13
+            },
+            {
+              "type": "event",
+              "text": "Read the last Poneglyph at Laugh Tale",
+              "event": "dawn"
+            }
+          ],
+          "outro": "The drums are still sounding. Joy Boy's promise is kept, eight hundred years late.",
+          "charts": [
+            "laugh_tale"
+          ],
+          "reward": {
+            "berries": 5000,
+            "items": [
+              {
+                "item": "onepiece:joy_boy_chest",
+                "count": 1
+              },
+              {
+                "item": "minecraft:nether_star",
+                "count": 2
+              },
+              {
+                "item": "minecraft:enchanted_golden_apple",
+                "count": 3
+              }
+            ],
+            "xp": 850
+          }
+        }
+      ]
+    }
+  ]
+}

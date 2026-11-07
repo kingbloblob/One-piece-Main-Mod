@@ -1,0 +1,70 @@
+{
+  "_comment": "Dungeon mini-bosses (com.onepiecemod.dungeon). id = the dungeon's structure id; kit = its NPC kit (npc_kits.json); the structure tags the boss onepiece_miniboss_<id>. health/damage/armor override the NPC kit (scaled by the npc_health/npc_damage settings). moves: slam, slash, dash, fire_ring, sandstorm, curse. minions: kit + how many come at 66% and 33% health. legendary: the signature blade, dropped with 'chance' per kill; after 'pity' kills without it, the next kill always drops it (counted per player). drops: always dropped (count min..max, chance).",
+  "bosses": [
+    {
+      "id": "sand_king_tomb", "kit": "tomb_warden", "name": "Tomb Warden Hassad", "title": "Warden of the Sand King's Tomb", "color": "yellow",
+      "health": 160, "damage": 9, "armor": 6, "scale": 1.2, "bounty": 25000000,
+      "moves": ["slam", "sandstorm", "dash"], "minions": {"kit": "tomb_guard", "count": 2},
+      "legendary": {"item": "onepiece:sandai_kitetsu", "chance": 0.25, "pity": 3},
+      "drops": [
+        {"item": "onepiece:berry", "min": 40, "max": 80},
+        {"item": "onepiece:shandora_gold_ingot", "min": 2, "max": 4},
+        {"item": "minecraft:gold_ingot", "min": 4, "max": 8},
+        {"item": "minecraft:diamond", "min": 1, "max": 2, "chance": 0.5}
+      ],
+      "lines": ["Grave robbers... you will join the king in his tomb!", "The sands answer to me!", "The king's gold stays buried!"]
+    },
+    {
+      "id": "ryuma_crypt", "kit": "sword_shade", "name": "Shade of the Sword God", "title": "Restless Guardian of Ryuma's Crypt", "color": "purple",
+      "health": 220, "damage": 11, "armor": 6, "scale": 1.1, "bounty": 60000000,
+      "moves": ["slash", "dash", "curse"], "minions": {"kit": "undead_pirate", "count": 3},
+      "legendary": {"item": "onepiece:shusui", "chance": 0.2, "pity": 3},
+      "drops": [
+        {"item": "onepiece:berry", "min": 60, "max": 120},
+        {"item": "minecraft:diamond", "min": 1, "max": 3},
+        {"item": "minecraft:experience_bottle", "min": 3, "max": 6},
+        {"item": "onepiece:dojo_scroll_santoryu", "min": 1, "max": 1, "chance": 0.15}
+      ],
+      "lines": ["Show me... the edge of your blade.", "Rise, my brothers!", "The blade... remembers its master!"]
+    },
+    {
+      "id": "kitetsu_forge", "kit": "cursed_smith", "name": "Kurogane the Cursed Smith", "title": "Keeper of the Cursed Forge", "color": "red",
+      "health": 320, "damage": 15, "armor": 10, "scale": 1.3, "bounty": 180000000,
+      "moves": ["slam", "fire_ring", "dash"], "minions": {"kit": "gifter", "count": 3},
+      "legendary": {"item": "onepiece:shodai_kitetsu", "chance": 0.12, "pity": 4},
+      "drops": [
+        {"item": "onepiece:berry", "min": 100, "max": 180},
+        {"item": "onepiece:kokuto_ingot", "min": 1, "max": 3},
+        {"item": "minecraft:netherite_scrap", "min": 1, "max": 2, "chance": 0.5},
+        {"item": "minecraft:diamond", "min": 2, "max": 4}
+      ],
+      "lines": ["Every Kitetsu drinks the blood of its owner. Yours will too!", "Stoke the fires!", "The forge burns hotter!"]
+    },
+    {
+      "id": "oden_shrine", "kit": "ronin_lord", "name": "Ronin Lord Kagemaru", "title": "Last Retainer of Oden's Shrine", "color": "pink",
+      "health": 320, "damage": 14, "armor": 8, "scale": 1.1, "bounty": 200000000,
+      "moves": ["slash", "dash", "slam"], "minions": {"kit": "ronin", "count": 3},
+      "legendary": {"item": "onepiece:ame_no_habakiri", "chance": 0.12, "pity": 4},
+      "drops": [
+        {"item": "onepiece:berry", "min": 100, "max": 200},
+        {"item": "onepiece:golden_koi_oden", "min": 1, "max": 1, "chance": 0.3},
+        {"item": "minecraft:diamond", "min": 2, "max": 4},
+        {"item": "onepiece:dojo_scroll_nitoryu", "min": 1, "max": 1, "chance": 0.2}
+      ],
+      "lines": ["Lord Oden's blade will not leave this shrine!", "Ronin, to me!", "I will boil with the ashes of my lord!"]
+    },
+    {
+      "id": "roger_vault", "kit": "rocks_captain", "name": "Gorvak the Undying", "title": "Last of the Rocks Pirates", "color": "red",
+      "health": 450, "damage": 17, "armor": 12, "scale": 1.35, "bounty": 500000000,
+      "moves": ["slam", "slash", "dash", "fire_ring"], "minions": {"kit": "rocks_pirate", "count": 3},
+      "legendary": {"item": "onepiece:ace", "chance": 0.1, "pity": 5},
+      "drops": [
+        {"item": "onepiece:berry", "min": 200, "max": 400},
+        {"item": "minecraft:gold_block", "min": 1, "max": 3},
+        {"item": "minecraft:diamond", "min": 3, "max": 6},
+        {"item": "minecraft:netherite_ingot", "min": 1, "max": 1, "chance": 0.25}
+      ],
+      "lines": ["Roger's treasure is MINE! I waited forty years for it!", "Rocks Pirates! Kill them all!", "I am the last of the Rocks! I do not fall!"]
+    }
+  ]
+}

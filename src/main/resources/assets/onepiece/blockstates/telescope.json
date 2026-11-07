@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/telescope"
+    },
+    "facing=east": {
+      "model": "onepiece:block/telescope",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/telescope",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/telescope",
+      "y": 270
+    }
+  }
+}

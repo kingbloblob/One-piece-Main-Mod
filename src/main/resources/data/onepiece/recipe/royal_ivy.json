@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:moss_carpet",
+    "minecraft:yellow_dye"
+  ],
+  "result": {
+    "id": "onepiece:royal_ivy",
+    "count": 2
+  }
+}

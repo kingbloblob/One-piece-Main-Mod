@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "onepiece:block/mikan_crate_top",
+    "side": "onepiece:block/mikan_crate"
+  }
+}

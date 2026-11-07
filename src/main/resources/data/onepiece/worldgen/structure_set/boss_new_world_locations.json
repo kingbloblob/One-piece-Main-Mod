@@ -1,0 +1,40 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:ice_fortress",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:corrida_colosseum",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:mirror_hall",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:victoria_punk",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:flame_fortress",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:withered_forest",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:dressrosa_palace",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "onepiece:ring_spread",
+    "spacing": 28,
+    "separation": 12,
+    "salt": 1408172033,
+    "min_distance": 3500,
+    "max_distance": 6000
+  }
+}

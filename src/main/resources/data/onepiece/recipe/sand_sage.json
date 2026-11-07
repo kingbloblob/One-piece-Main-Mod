@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:short_grass",
+    "minecraft:yellow_dye"
+  ],
+  "result": {
+    "id": "onepiece:sand_sage",
+    "count": 2
+  }
+}

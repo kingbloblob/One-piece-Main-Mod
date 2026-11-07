@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_uv_locked_x",
+  "textures": {
+    "end": "onepiece:block/stripped_yarukiman_log_top",
+    "side": "onepiece:block/stripped_yarukiman_log"
+  }
+}

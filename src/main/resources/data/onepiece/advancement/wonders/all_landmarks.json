@@ -1,0 +1,212 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:spyglass"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.all_landmarks.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.all_landmarks.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "baratie": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:baratie"
+            }
+          }
+        }
+      }
+    },
+    "arlong_park": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:arlong_park"
+            }
+          }
+        }
+      }
+    },
+    "alubarna_palace": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:alubarna_palace"
+            }
+          }
+        }
+      }
+    },
+    "galley_la_dock": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:galley_la_dock"
+            }
+          }
+        }
+      }
+    },
+    "tower_of_justice": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:tower_of_justice"
+            }
+          }
+        }
+      }
+    },
+    "thriller_bark": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:thriller_bark"
+            }
+          }
+        }
+      }
+    },
+    "moby_dick": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:moby_dick"
+            }
+          }
+        }
+      }
+    },
+    "marineford": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:marineford"
+            }
+          }
+        }
+      }
+    },
+    "onigashima": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:onigashima"
+            }
+          }
+        }
+      }
+    },
+    "whole_cake_chateau": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:whole_cake_chateau"
+            }
+          }
+        }
+      }
+    },
+    "ryugu_palace": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "onepiece:ryugu_palace"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "baratie"
+    ],
+    [
+      "arlong_park"
+    ],
+    [
+      "alubarna_palace"
+    ],
+    [
+      "galley_la_dock"
+    ],
+    [
+      "tower_of_justice"
+    ],
+    [
+      "thriller_bark"
+    ],
+    [
+      "moby_dick"
+    ],
+    [
+      "marineford"
+    ],
+    [
+      "onigashima"
+    ],
+    [
+      "whole_cake_chateau"
+    ],
+    [
+      "ryugu_palace"
+    ]
+  ],
+  "parent": "onepiece:wonders/marineford",
+  "rewards": {
+    "experience": 400
+  }
+}

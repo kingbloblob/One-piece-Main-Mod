@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:snowy_plains",
+    "minecraft:desert",
+    "minecraft:badlands",
+    "onepiece:egghead"
+  ]
+}

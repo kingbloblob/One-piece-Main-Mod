@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "minecraft:block/note_block",
+    "side": "minecraft:block/copper_block",
+    "top": "minecraft:block/jukebox_top",
+    "bottom": "minecraft:block/copper_block"
+  }
+}

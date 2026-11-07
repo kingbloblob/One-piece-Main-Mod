@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/marine_locker"
+    },
+    "facing=east": {
+      "model": "onepiece:block/marine_locker",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/marine_locker",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/marine_locker",
+      "y": 270
+    }
+  }
+}

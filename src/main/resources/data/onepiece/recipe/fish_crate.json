@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "onepiece:small_crate",
+    "minecraft:cod",
+    "minecraft:cod"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:fish_crate"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/kakejiku_scroll"
+    },
+    "facing=east": {
+      "model": "onepiece:block/kakejiku_scroll",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/kakejiku_scroll",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/kakejiku_scroll",
+      "y": 270
+    }
+  }
+}

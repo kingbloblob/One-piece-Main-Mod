@@ -1,0 +1,365 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:filled_map"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.all_islands.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.all_islands.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "east_blue": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:east_blue"
+            }
+          }
+        }
+      }
+    },
+    "dressrosa": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:dressrosa"
+            }
+          }
+        }
+      }
+    },
+    "zou": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:zou"
+            }
+          }
+        }
+      }
+    },
+    "sabaody": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:sabaody"
+            }
+          }
+        }
+      }
+    },
+    "whole_cake": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:whole_cake"
+            }
+          }
+        }
+      }
+    },
+    "wano": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:wano"
+            }
+          }
+        }
+      }
+    },
+    "drum_island": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:drum_island"
+            }
+          }
+        }
+      }
+    },
+    "elbaph": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:elbaph"
+            }
+          }
+        }
+      }
+    },
+    "egghead": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:egghead"
+            }
+          }
+        }
+      }
+    },
+    "alabasta": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:alabasta"
+            }
+          }
+        }
+      }
+    },
+    "jaya": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:jaya"
+            }
+          }
+        }
+      }
+    },
+    "skypiea": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:skypiea"
+            }
+          }
+        }
+      }
+    },
+    "fishman_reef": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:fishman_reef"
+            }
+          }
+        }
+      }
+    },
+    "amazon_lily": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:amazon_lily"
+            }
+          }
+        }
+      }
+    },
+    "punk_hazard_frozen": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:punk_hazard_frozen"
+            }
+          }
+        }
+      }
+    },
+    "punk_hazard_burning": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:punk_hazard_burning"
+            }
+          }
+        }
+      }
+    },
+    "little_garden": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:little_garden"
+            }
+          }
+        }
+      }
+    },
+    "thriller_bark": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:thriller_bark"
+            }
+          }
+        }
+      }
+    },
+    "onigashima": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:onigashima"
+            }
+          }
+        }
+      }
+    },
+    "red_line": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "onepiece:red_line"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "east_blue"
+    ],
+    [
+      "dressrosa"
+    ],
+    [
+      "zou"
+    ],
+    [
+      "sabaody"
+    ],
+    [
+      "whole_cake"
+    ],
+    [
+      "wano"
+    ],
+    [
+      "drum_island"
+    ],
+    [
+      "elbaph"
+    ],
+    [
+      "egghead"
+    ],
+    [
+      "alabasta"
+    ],
+    [
+      "jaya"
+    ],
+    [
+      "skypiea"
+    ],
+    [
+      "fishman_reef"
+    ],
+    [
+      "amazon_lily"
+    ],
+    [
+      "punk_hazard_frozen"
+    ],
+    [
+      "punk_hazard_burning"
+    ],
+    [
+      "little_garden"
+    ],
+    [
+      "thriller_bark"
+    ],
+    [
+      "onigashima"
+    ],
+    [
+      "red_line"
+    ]
+  ],
+  "parent": "onepiece:journey/land_ho",
+  "rewards": {
+    "experience": 300
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "onepiece:block/alabasta_tile_slab"
+    },
+    "type=double": {
+      "model": "onepiece:block/alabasta_tiles"
+    },
+    "type=top": {
+      "model": "onepiece:block/alabasta_tile_slab_top"
+    }
+  }
+}

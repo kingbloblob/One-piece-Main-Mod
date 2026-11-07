@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "onepiece:block/chocolate_block",
+    "side": "onepiece:block/chocolate_block",
+    "top": "onepiece:block/chocolate_block"
+  }
+}

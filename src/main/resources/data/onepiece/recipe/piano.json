@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "DDD",
+    "NQN"
+  ],
+  "key": {
+    "D": "minecraft:dark_oak_planks",
+    "N": "minecraft:note_block",
+    "Q": "minecraft:quartz"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:piano"
+  }
+}

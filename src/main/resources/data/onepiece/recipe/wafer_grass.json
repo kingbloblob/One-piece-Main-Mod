@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:short_grass",
+    "minecraft:white_dye"
+  ],
+  "result": {
+    "id": "onepiece:wafer_grass",
+    "count": 2
+  }
+}

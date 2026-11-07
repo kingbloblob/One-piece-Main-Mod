@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:is_ocean",
+    "onepiece:fishman_reef",
+    "onepiece:new_world_sea"
+  ]
+}

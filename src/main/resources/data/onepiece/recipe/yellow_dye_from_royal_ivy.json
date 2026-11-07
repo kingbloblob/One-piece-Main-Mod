@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:royal_ivy"
+  ],
+  "result": {
+    "id": "minecraft:yellow_dye",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "onepiece:spruce_table",
+    "minecraft:map"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:chart_table"
+  }
+}

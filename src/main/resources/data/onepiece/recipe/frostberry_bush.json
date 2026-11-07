@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bush",
+    "minecraft:light_blue_dye"
+  ],
+  "result": {
+    "id": "onepiece:frostberry_bush",
+    "count": 2
+  }
+}

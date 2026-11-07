@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "FFF",
+    "KCK",
+    "KKK"
+  ],
+  "key": {
+    "F": "onepiece:frosting_block",
+    "K": "onepiece:cookie_bricks",
+    "C": "minecraft:chest"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:cookie_cabinet"
+  }
+}

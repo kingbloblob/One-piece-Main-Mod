@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "onepiece:block/withered_bramble_bottom"
+    },
+    "half=upper": {
+      "model": "onepiece:block/withered_bramble_top"
+    }
+  }
+}

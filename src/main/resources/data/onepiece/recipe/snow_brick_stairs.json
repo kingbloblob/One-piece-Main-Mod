@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:snow_bricks"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:snow_brick_stairs"
+  }
+}

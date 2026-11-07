@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:marine_tiles"
+  },
+  "result": {
+    "count": 6,
+    "id": "onepiece:marine_tile_slab"
+  }
+}

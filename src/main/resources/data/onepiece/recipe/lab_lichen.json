@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:moss_carpet",
+    "minecraft:cyan_dye"
+  ],
+  "result": {
+    "id": "onepiece:lab_lichen",
+    "count": 2
+  }
+}

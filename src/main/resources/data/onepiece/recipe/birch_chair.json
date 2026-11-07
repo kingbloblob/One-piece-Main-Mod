@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "P  ",
+    "PPP",
+    "I I"
+  ],
+  "key": {
+    "P": "minecraft:birch_planks",
+    "I": "minecraft:stick"
+  },
+  "result": {
+    "count": 2,
+    "id": "onepiece:birch_chair"
+  }
+}

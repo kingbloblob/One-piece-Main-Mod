@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/tavern_bar"
+    },
+    "facing=east": {
+      "model": "onepiece:block/tavern_bar",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/tavern_bar",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/tavern_bar",
+      "y": 270
+    }
+  }
+}

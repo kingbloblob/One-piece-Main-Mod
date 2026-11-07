@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "onepiece:palm_log",
+    "onepiece:palm_wood",
+    "onepiece:stripped_palm_log",
+    "onepiece:stripped_palm_wood"
+  ]
+}

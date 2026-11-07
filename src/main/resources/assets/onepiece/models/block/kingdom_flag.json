@@ -1,0 +1,50 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "minecraft:block/dark_oak_log",
+    "pole": "minecraft:block/dark_oak_log",
+    "cap": "minecraft:block/gold_block",
+    "flag": "minecraft:block/black_wool",
+    "skull": "minecraft:block/white_wool"
+  },
+  "elements": [
+    {
+      "from": [7, 0, 7], "to": [9, 16, 9],
+      "faces": {
+        "north": {"uv": [7, 0, 9, 16], "texture": "#pole"},
+        "south": {"uv": [7, 0, 9, 16], "texture": "#pole"},
+        "east": {"uv": [7, 0, 9, 16], "texture": "#pole"},
+        "west": {"uv": [7, 0, 9, 16], "texture": "#pole"},
+        "down": {"uv": [7, 7, 9, 9], "texture": "#pole"}
+      }
+    },
+    {
+      "from": [6.5, 15, 6.5], "to": [9.5, 17, 9.5],
+      "faces": {
+        "north": {"uv": [0, 0, 3, 2], "texture": "#cap"},
+        "south": {"uv": [0, 0, 3, 2], "texture": "#cap"},
+        "east": {"uv": [0, 0, 3, 2], "texture": "#cap"},
+        "west": {"uv": [0, 0, 3, 2], "texture": "#cap"},
+        "up": {"uv": [0, 0, 3, 3], "texture": "#cap"},
+        "down": {"uv": [0, 0, 3, 3], "texture": "#cap"}
+      }
+    },
+    {
+      "from": [9, 8, 7.75], "to": [16, 15, 8.25],
+      "faces": {
+        "north": {"uv": [0, 0, 7, 7], "texture": "#flag"},
+        "south": {"uv": [0, 0, 7, 7], "texture": "#flag"},
+        "east": {"uv": [0, 0, 1, 7], "texture": "#flag"},
+        "up": {"uv": [0, 0, 7, 1], "texture": "#flag"},
+        "down": {"uv": [0, 0, 7, 1], "texture": "#flag"}
+      }
+    },
+    {
+      "from": [11.5, 10.5, 7.6], "to": [13.5, 12.5, 8.4],
+      "faces": {
+        "north": {"uv": [0, 0, 2, 2], "texture": "#skull"},
+        "south": {"uv": [0, 0, 2, 2], "texture": "#skull"}
+      }
+    }
+  ]
+}

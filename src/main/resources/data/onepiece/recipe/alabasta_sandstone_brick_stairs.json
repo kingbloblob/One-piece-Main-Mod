@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:alabasta_sandstone_bricks"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:alabasta_sandstone_brick_stairs"
+  }
+}

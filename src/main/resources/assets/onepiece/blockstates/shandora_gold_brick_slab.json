@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "onepiece:block/shandora_gold_brick_slab"
+    },
+    "type=double": {
+      "model": "onepiece:block/shandora_gold_bricks"
+    },
+    "type=top": {
+      "model": "onepiece:block/shandora_gold_brick_slab_top"
+    }
+  }
+}

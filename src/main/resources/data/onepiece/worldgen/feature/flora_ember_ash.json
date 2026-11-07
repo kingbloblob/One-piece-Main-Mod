@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:simple_block",
+  "to_place": {
+    "id": "onepiece:ember_ash",
+    "properties": {
+      "facing": "north",
+      "flower_amount": "3"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "minecraft:block/fletching_table_front",
+    "side": "minecraft:block/fletching_table_side",
+    "top": "minecraft:block/fletching_table_top",
+    "bottom": "minecraft:block/oak_planks"
+  }
+}

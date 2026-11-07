@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "onepiece:block/seastone_bricks",
+    "side": "onepiece:block/seastone_bricks",
+    "top": "onepiece:block/seastone_bricks"
+  }
+}

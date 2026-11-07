@@ -1,0 +1,8 @@
+{
+  "sound_event": "onepiece_sounds:music.final_battle",
+  "description": {
+    "translate": "jukebox_song.onepiece_sounds.final_battle"
+  },
+  "length_in_seconds": 80.0,
+  "comparator_output": 11
+}

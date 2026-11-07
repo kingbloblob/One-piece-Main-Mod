@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:dojo_scroll_rokushiki"
+    },
+    "title": {
+      "translate": "advancements.onepiece.powers.three_styles.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.powers.three_styles.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:powers/style"
+}

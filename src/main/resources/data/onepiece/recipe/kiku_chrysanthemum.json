@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:dandelion",
+    "minecraft:yellow_dye"
+  ],
+  "result": {
+    "id": "onepiece:kiku_chrysanthemum",
+    "count": 2
+  }
+}

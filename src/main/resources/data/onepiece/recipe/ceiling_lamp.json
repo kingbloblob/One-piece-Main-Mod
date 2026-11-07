@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PFP"
+  ],
+  "key": {
+    "P": "minecraft:dark_oak_slab",
+    "F": "minecraft:glowstone"
+  },
+  "result": {
+    "count": 2,
+    "id": "onepiece:ceiling_lamp"
+  }
+}

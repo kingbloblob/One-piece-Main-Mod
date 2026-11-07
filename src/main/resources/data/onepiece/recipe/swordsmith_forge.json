@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "minecraft:diamond",
+    "J": "onepiece:seastone_jitte",
+    "B": "minecraft:deepslate_bricks",
+    "F": "minecraft:blast_furnace",
+    "A": "minecraft:anvil"
+  },
+  "pattern": [
+    "DJD",
+    "BFB",
+    "BAB"
+  ],
+  "result": {
+    "id": "onepiece:swordsmith_forge"
+  }
+}

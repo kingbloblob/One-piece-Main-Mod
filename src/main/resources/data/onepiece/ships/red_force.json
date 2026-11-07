@@ -1,0 +1,16 @@
+{
+  "name": "Red Force",
+  "template": "onepiece:ships/red_force",
+  "bow": "east",
+  "waterline": 3.9,
+  "faction": "pirate",
+  "tiers": [
+    4,
+    5
+  ],
+  "crew": "Red Hair Pirates",
+  "length": 53,
+  "beam": 26,
+  "height": 50,
+  "blocks": 4088
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:lily_of_the_valley",
+    "minecraft:snowball"
+  ],
+  "result": {
+    "id": "onepiece:snow_lily",
+    "count": 2
+  }
+}

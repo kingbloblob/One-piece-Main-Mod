@@ -1,0 +1,48 @@
+{
+  "variants": {
+    "facing=north,lit=false": {
+      "model": "onepiece:block/mining_drill"
+    },
+    "facing=east,lit=false": {
+      "model": "onepiece:block/mining_drill",
+      "y": 90
+    },
+    "facing=south,lit=false": {
+      "model": "onepiece:block/mining_drill",
+      "y": 180
+    },
+    "facing=west,lit=false": {
+      "model": "onepiece:block/mining_drill",
+      "y": 270
+    },
+    "facing=up,lit=false": {
+      "model": "onepiece:block/mining_drill_vertical"
+    },
+    "facing=down,lit=false": {
+      "model": "onepiece:block/mining_drill_vertical",
+      "x": 180
+    },
+    "facing=north,lit=true": {
+      "model": "onepiece:block/mining_drill_on"
+    },
+    "facing=east,lit=true": {
+      "model": "onepiece:block/mining_drill_on",
+      "y": 90
+    },
+    "facing=south,lit=true": {
+      "model": "onepiece:block/mining_drill_on",
+      "y": 180
+    },
+    "facing=west,lit=true": {
+      "model": "onepiece:block/mining_drill_on",
+      "y": 270
+    },
+    "facing=up,lit=true": {
+      "model": "onepiece:block/mining_drill_vertical_on"
+    },
+    "facing=down,lit=true": {
+      "model": "onepiece:block/mining_drill_vertical_on",
+      "x": 180
+    }
+  }
+}

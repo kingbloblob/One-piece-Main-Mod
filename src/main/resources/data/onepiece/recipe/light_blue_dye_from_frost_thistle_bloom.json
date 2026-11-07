@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:frost_thistle_bloom"
+  ],
+  "result": {
+    "id": "minecraft:light_blue_dye",
+    "count": 1
+  }
+}

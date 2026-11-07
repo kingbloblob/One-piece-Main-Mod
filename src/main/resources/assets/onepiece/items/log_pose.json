@@ -1,0 +1,261 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "minecraft:has_component",
+    "component": "minecraft:lodestone_tracker",
+    "on_true": {
+      "type": "minecraft:range_dispatch",
+      "property": "minecraft:compass",
+      "target": "lodestone",
+      "scale": 16.0,
+      "entries": [
+        {
+          "threshold": 0.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_00"
+          }
+        },
+        {
+          "threshold": 0.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_01"
+          }
+        },
+        {
+          "threshold": 1.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_02"
+          }
+        },
+        {
+          "threshold": 2.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_03"
+          }
+        },
+        {
+          "threshold": 3.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_04"
+          }
+        },
+        {
+          "threshold": 4.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_05"
+          }
+        },
+        {
+          "threshold": 5.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_06"
+          }
+        },
+        {
+          "threshold": 6.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_07"
+          }
+        },
+        {
+          "threshold": 7.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_08"
+          }
+        },
+        {
+          "threshold": 8.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_09"
+          }
+        },
+        {
+          "threshold": 9.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_10"
+          }
+        },
+        {
+          "threshold": 10.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_11"
+          }
+        },
+        {
+          "threshold": 11.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_12"
+          }
+        },
+        {
+          "threshold": 12.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_13"
+          }
+        },
+        {
+          "threshold": 13.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_14"
+          }
+        },
+        {
+          "threshold": 14.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_15"
+          }
+        },
+        {
+          "threshold": 15.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_00"
+          }
+        }
+      ]
+    },
+    "on_false": {
+      "type": "minecraft:range_dispatch",
+      "property": "minecraft:compass",
+      "target": "none",
+      "scale": 16.0,
+      "entries": [
+        {
+          "threshold": 0.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_00"
+          }
+        },
+        {
+          "threshold": 0.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_01"
+          }
+        },
+        {
+          "threshold": 1.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_02"
+          }
+        },
+        {
+          "threshold": 2.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_03"
+          }
+        },
+        {
+          "threshold": 3.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_04"
+          }
+        },
+        {
+          "threshold": 4.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_05"
+          }
+        },
+        {
+          "threshold": 5.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_06"
+          }
+        },
+        {
+          "threshold": 6.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_07"
+          }
+        },
+        {
+          "threshold": 7.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_08"
+          }
+        },
+        {
+          "threshold": 8.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_09"
+          }
+        },
+        {
+          "threshold": 9.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_10"
+          }
+        },
+        {
+          "threshold": 10.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_11"
+          }
+        },
+        {
+          "threshold": 11.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_12"
+          }
+        },
+        {
+          "threshold": 12.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_13"
+          }
+        },
+        {
+          "threshold": 13.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_14"
+          }
+        },
+        {
+          "threshold": 14.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_15"
+          }
+        },
+        {
+          "threshold": 15.5,
+          "model": {
+            "type": "minecraft:model",
+            "model": "onepiece:item/log_pose_00"
+          }
+        }
+      ]
+    }
+  }
+}

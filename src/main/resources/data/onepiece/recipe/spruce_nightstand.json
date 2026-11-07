@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "S",
+    "C",
+    "P"
+  ],
+  "key": {
+    "S": "minecraft:spruce_slab",
+    "C": "minecraft:chest",
+    "P": "minecraft:spruce_planks"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:spruce_nightstand"
+  }
+}

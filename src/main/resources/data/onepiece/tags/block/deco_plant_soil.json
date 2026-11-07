@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:dirt",
+    "#minecraft:sand",
+    "#minecraft:terracotta",
+    "#minecraft:base_stone_overworld",
+    "minecraft:snow_block",
+    "minecraft:packed_ice",
+    "minecraft:blue_ice",
+    "minecraft:gravel",
+    "minecraft:blackstone",
+    "minecraft:basalt",
+    "minecraft:magma_block",
+    "onepiece:island_cloud"
+  ]
+}

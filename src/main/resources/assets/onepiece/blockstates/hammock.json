@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "onepiece:block/hammock"
+    },
+    "facing=east": {
+      "model": "onepiece:block/hammock",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "onepiece:block/hammock",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "onepiece:block/hammock",
+      "y": 270
+    }
+  }
+}

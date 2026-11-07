@@ -1,0 +1,23 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:impel_down",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:mary_geoise",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:laugh_tale",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "onepiece:ring_spread",
+    "spacing": 64,
+    "separation": 24,
+    "salt": 1408172004,
+    "min_distance": 5500
+  }
+}

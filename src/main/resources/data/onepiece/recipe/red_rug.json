@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "BCB"
+  ],
+  "key": {
+    "B": "minecraft:yellow_carpet",
+    "C": "minecraft:red_carpet"
+  },
+  "result": {
+    "count": 3,
+    "id": "onepiece:red_rug"
+  }
+}

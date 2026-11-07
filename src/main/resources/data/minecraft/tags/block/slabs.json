@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "onepiece:alabasta_sandstone_brick_slab",
+    "onepiece:alabasta_tile_slab",
+    "onepiece:wano_roof_tile_slab",
+    "onepiece:wano_lacquer_slab",
+    "onepiece:marine_brick_slab",
+    "onepiece:marine_tile_slab",
+    "onepiece:canal_brick_slab",
+    "onepiece:water7_cobble_slab",
+    "onepiece:dressrosa_mosaic_slab",
+    "onepiece:dressrosa_tile_slab",
+    "onepiece:dressrosa_stucco_slab",
+    "onepiece:coral_brick_slab",
+    "onepiece:pearl_slab",
+    "onepiece:cloud_brick_slab",
+    "onepiece:shandora_gold_brick_slab",
+    "onepiece:shandian_ruin_stone_slab",
+    "onepiece:snow_brick_slab",
+    "onepiece:frozen_stone_slab",
+    "onepiece:scorched_stone_slab",
+    "onepiece:seastone_brick_slab",
+    "onepiece:lab_panel_slab",
+    "onepiece:chocolate_slab",
+    "onepiece:cookie_brick_slab",
+    "onepiece:frosting_slab"
+  ]
+}

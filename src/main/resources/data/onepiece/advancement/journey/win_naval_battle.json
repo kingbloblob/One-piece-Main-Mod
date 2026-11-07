@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:cannon"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.win_naval_battle.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.win_naval_battle.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/sink_ship"
+}

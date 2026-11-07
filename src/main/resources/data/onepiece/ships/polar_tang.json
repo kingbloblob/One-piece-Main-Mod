@@ -1,0 +1,16 @@
+{
+  "name": "Polar Tang",
+  "template": "onepiece:ships/polar_tang",
+  "bow": "east",
+  "waterline": 2.9,
+  "faction": "pirate",
+  "tiers": [
+    2,
+    3
+  ],
+  "crew": "Heart Pirates",
+  "length": 38,
+  "beam": 18,
+  "height": 32,
+  "blocks": 1682
+}

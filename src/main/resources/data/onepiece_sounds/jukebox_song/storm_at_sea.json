@@ -1,0 +1,8 @@
+{
+  "sound_event": "onepiece_sounds:music.storm_at_sea",
+  "description": {
+    "translate": "jukebox_song.onepiece_sounds.storm_at_sea"
+  },
+  "length_in_seconds": 58.2,
+  "comparator_output": 12
+}

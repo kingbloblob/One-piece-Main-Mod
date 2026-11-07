@@ -1,0 +1,38 @@
+{
+  "mod": [
+    "mymod"
+  ],
+  "blocks": {
+    "mymod:copper_bricks": {
+      "kind": "bricks",
+      "family": "copper_bricks",
+      "display": "Copper Bricks",
+      "notes": ""
+    },
+    "mymod:copper_bricks_stairs": {
+      "kind": "stairs",
+      "family": "copper_bricks",
+      "states": {
+        "facing": [
+          "east",
+          "north"
+        ],
+        "half": [
+          "bottom",
+          "top"
+        ],
+        "shape": [
+          "inner_left",
+          "straight"
+        ]
+      },
+      "display": "Copper Brick Stairs",
+      "notes": ""
+    },
+    "mymod:glow_crystal": {
+      "kind": "block",
+      "family": "glow_crystal",
+      "notes": ""
+    }
+  }
+}

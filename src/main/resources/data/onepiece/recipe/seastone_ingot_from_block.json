@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "seastone_ingot",
+  "ingredients": [
+    "onepiece:seastone_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "onepiece:seastone_ingot"
+  }
+}

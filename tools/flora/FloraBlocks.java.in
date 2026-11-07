@@ -1,0 +1,85 @@
+package com.onepiecemod.flora;
+
+import java.util.function.Function;
+
+import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DoubleHighBlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+
+import com.onepiecemod.OnePieceMod;
+
+/**
+ * Flowers, tall plants, grass, shrubs, ground cover and soils for every island of the Grand Line.
+ *
+ * This file is made by tools/flora/gen_flora.py (together with the models, textures, loot tables,
+ * tags, recipes and the biome tags saying where each plant grows). To add a plant, add it to that
+ * script's tables and run it again rather than editing here.
+ */
+public class FloraBlocks {
+%%BLOCKS%%
+
+	public static void initialize() {
+		// Blocks register when this class loads.
+	}
+
+	// ---------------------------------------------------------------- helpers
+
+	private static Block flower(String name, Holder<MobEffect> stewEffect, float seconds, int light) {
+		return register(name, properties -> new FloraPlants.Flower(stewEffect, seconds, properties),
+				BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY).lightLevel(state -> light));
+	}
+
+	private static Block tall(String name, int light) {
+		return registerTall(name, FloraPlants.Tall::new, BlockBehaviour.Properties.ofFullCopy(Blocks.ROSE_BUSH).lightLevel(state -> light));
+	}
+
+	private static Block grass(String name, int light) {
+		return register(name, FloraPlants.Grass::new, BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS).lightLevel(state -> light));
+	}
+
+	private static Block shrub(String name) {
+		return register(name, FloraPlants.Shrub::new, BlockBehaviour.Properties.ofFullCopy(Blocks.BUSH));
+	}
+
+	private static Block cover(String name, int light) {
+		return register(name, FloraPlants.Cover::new, BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_PETALS).lightLevel(state -> light));
+	}
+
+	private static Block cube(String name, Block copy) {
+		return register(name, Block::new, BlockBehaviour.Properties.ofFullCopy(copy));
+	}
+
+	/** Registers a block and the item you hold to place it. */
+	private static Block register(String name, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties properties) {
+		Block block = registerBlockOnly(name, factory, properties);
+		registerItem(name, itemProperties -> new BlockItem(block, itemProperties));
+		return block;
+	}
+
+	/** Two-block plants use an item that places both halves. */
+	private static Block registerTall(String name, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties properties) {
+		Block block = registerBlockOnly(name, factory, properties);
+		registerItem(name, itemProperties -> new DoubleHighBlockItem(block, itemProperties));
+		return block;
+	}
+
+	private static Block registerBlockOnly(String name, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties properties) {
+		ResourceKey<Block> key = ResourceKey.create(Registries.BLOCK, OnePieceMod.id(name));
+		return Registry.register(BuiltInRegistries.BLOCK, key, factory.apply(properties.setId(key)));
+	}
+
+	private static void registerItem(String name, Function<Item.Properties, Item> factory) {
+		ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, OnePieceMod.id(name));
+		Registry.register(BuiltInRegistries.ITEM, key, factory.apply(new Item.Properties().useBlockDescriptionPrefix().setId(key)));
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": "onepiece:shandora_gold_bricks"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:shandora_gold_brick_stairs"
+  }
+}

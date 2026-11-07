@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:mikan"
+    },
+    "title": {
+      "translate": "advancements.onepiece.journey.east_blue.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.journey.east_blue.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:journey/baratie"
+}

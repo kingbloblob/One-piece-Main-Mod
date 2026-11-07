@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:cooked_beef",
+    "minecraft:cooked_beef",
+    "minecraft:bone"
+  ],
+  "result": {
+    "count": 1,
+    "id": "onepiece:meat_platter"
+  }
+}

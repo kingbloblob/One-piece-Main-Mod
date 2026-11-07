@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:kingdom_flag"
+    },
+    "title": {
+      "translate": "advancements.onepiece.pirate.kingdom.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.pirate.kingdom.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:pirate/crew_full"
+}

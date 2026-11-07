@@ -1,0 +1,24 @@
+{
+  "structures": [
+    {
+      "structure": "onepiece:alubarna_palace",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:galley_la_dock",
+      "weight": 1
+    },
+    {
+      "structure": "onepiece:thriller_bark",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "onepiece:ring_spread",
+    "spacing": 40,
+    "separation": 16,
+    "salt": 1408172023,
+    "min_distance": 1500,
+    "max_distance": 3500
+  }
+}

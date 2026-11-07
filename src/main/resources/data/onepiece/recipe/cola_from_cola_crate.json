@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:cola_crate"
+  ],
+  "result": {
+    "id": "onepiece:cola",
+    "count": 9
+  }
+}

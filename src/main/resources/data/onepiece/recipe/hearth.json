@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "BBB",
+    "B B",
+    "BCB"
+  ],
+  "key": {
+    "B": "minecraft:stone_bricks",
+    "C": "minecraft:campfire"
+  },
+  "result": {
+    "count": 1,
+    "id": "onepiece:hearth"
+  }
+}

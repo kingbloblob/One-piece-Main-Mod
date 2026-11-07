@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "onepiece:red_line_scrub"
+  ],
+  "result": {
+    "id": "minecraft:brown_dye",
+    "count": 1
+  }
+}

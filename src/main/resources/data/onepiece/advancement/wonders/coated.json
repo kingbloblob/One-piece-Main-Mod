@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "onepiece:ship_coating"
+    },
+    "title": {
+      "translate": "advancements.onepiece.wonders.coated.title"
+    },
+    "description": {
+      "translate": "advancements.onepiece.wonders.coated.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "onepiece:wonders/diving"
+}

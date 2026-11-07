@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "minecraft:dark_oak_planks",
+    "G": "minecraft:glass_pane",
+    "I": "minecraft:iron_ingot",
+    "B": "minecraft:bell",
+    "R": "minecraft:rail"
+  },
+  "pattern": [
+    "PBP",
+    "IGI",
+    "RRR"
+  ],
+  "result": {
+    "id": "onepiece:sea_train_booth"
+  }
+}

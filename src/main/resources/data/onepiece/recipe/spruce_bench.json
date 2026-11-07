@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "S  ",
+    "SSS",
+    "I I"
+  ],
+  "key": {
+    "S": "minecraft:spruce_slab",
+    "I": "minecraft:stick"
+  },
+  "result": {
+    "count": 2,
+    "id": "onepiece:spruce_bench"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/flowerbed_3",
+  "textures": {
+    "flowerbed": "onepiece:block/harbor_moss",
+    "stem": "onepiece:block/harbor_moss_stem"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:stone_bricks",
+    "X": "minecraft:vine"
+  },
+  "result": {
+    "count": 8,
+    "id": "onepiece:shandian_ruin_stone"
+  }
+}
