@@ -398,25 +398,24 @@ def imu_beast():
     v.box('body', (0.05, 1.35, -2), (0.75, 2.05, 0), ring_eye, mode='paint')
     # black neck from the cloak collar up to the head
     v.box('body', (-0.15, 3.9, -0.55), (0.15, 4.9, -0.2), BLACK)
-    # long white hair: strands start at the crown, sweep out over the shoulders and fall straight down
-    # in front of the cloak to a ragged edge, leaving the black face and the dotted front free
+    # long white hair like the chapter panel: two flat, dead-straight curtains either side of the black
+    # face and front, finely striped with thin dark lines, rounded over the top of the head and cut
+    # off in a ragged line at the waist
     rnd = random.Random(11)
-    HAIR, HAIR2 = hexc('#f4f3ee'), hexc('#cfcdc5')
+    HAIR = hexc('#f2f1ec')
+    PX = 0.05
     for s in SIDES:
-        for c in range(12):
-            x0 = s * (0.22 + c * 0.02)
-            xs = s * (0.42 + c * 0.085)
-            bottom = 2.2 + rnd.uniform(0, 0.5) + c * 0.04
-            z = -0.92 + c * 0.012
-            ph = rnd.uniform(0, 6.3)
-            pts = [V([x0, 6.0 - c * 0.02, -0.62]), V([(x0 + xs) * 0.55, 5.75, z + 0.05]), V([xs, 4.9, z])]
-            for k in range(1, 6):
-                y = 4.9 - (4.9 - bottom) * k / 5
-                pts.append(V([xs + s * 0.03 * math.sin(ph + k * 1.3), y, z - 0.02 * math.sin(ph + k)]))
-            col = HAIR2 if c % 4 == 3 else HAIR
-            v.tube('body', pts, [0.07] * (len(pts) - 1) + [0.03], col, per=3)
-        # a thick mass of hair at the back so it reads as one mane from the side
-        v.box('body', sx((0.45, 2.6, -0.75), s) if s > 0 else (-1.5, 2.6, -0.75), (1.5, 4.9, -0.35) if s > 0 else (-0.45, 4.9, -0.35), HAIR)
+        n = 20                                   # columns from the face outwards
+        for c in range(n):
+            x = s * (0.36 + c * PX)
+            t = c / (n - 1)
+            top = 6.05 - 0.55 * t * t            # rounds down over the crown towards the shoulder
+            bottom = 2.35 + 0.25 * t + rnd.choice((0, 0, 0.05, 0.1, 0.15))
+            col = LINE if c % 3 == 1 else HAIR
+            z0 = -0.92 + 0.15 * t * t           # outer edge sits a little further back
+            lo = (x if s > 0 else x - PX, bottom, z0)
+            hi = (x + PX if s > 0 else x, top, z0 + 0.45)
+            v.box('body', lo, hi, col)
     # black sleeves coming out of the cloak, black gloves with a white eye ring at the wrist
     for s, b, wr in ((1, 'arm_r', V([0.25, 3.15, -1.0])), (-1, 'arm_l', V([-0.25, 2.95, -1.0]))):
         sh, el = sx((0.55, 3.7, -0.2), s), sx((0.85, 3.3, -0.7), s)
