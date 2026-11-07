@@ -43,6 +43,8 @@ public class CharacterRenderer extends HumanoidMobRenderer<CharacterEntity, Char
 		public float formAge = -1;
 		/** 0 to 1 while an attack plays, otherwise -1. */
 		public float formAttack = -1;
+		/** For the eased giant forms: how far the drawn model trails behind the entity's real position. */
+		public float smoothX, smoothY, smoothZ;
 	}
 
 	@Override
@@ -119,6 +121,54 @@ public class CharacterRenderer extends HumanoidMobRenderer<CharacterEntity, Char
 	private static final java.util.Map<String, Float> SLOW_SWING = java.util.Map.of("imu_beast", 26.0f);
 	private static final java.util.Map<Integer, Float> SWING_START = new java.util.HashMap<>();
 
+	/**
+	 * Giant forms are drawn with their facing and position eased over a fraction of a second. On a 40-block body the
+	 * tick-to-tick wobble of a normal mob (the client re-guessing the body's turn, small path corrections) shows as a
+	 * fast shake (ryan: "super shaky, sways quite fast back and forth").
+	 */
+	private static final java.util.Set<String> SMOOTHED = java.util.Set.of("imu_beast", "nidhogg");
+	private static final float YAW_SECONDS = 0.6f;
+	private static final float MOVE_SECONDS = 0.35f;
+
+	private static final class Smooth {
+		double x, y, z;
+		float yaw;
+		long nanos;
+	}
+
+	private static final Map<Integer, Smooth> SMOOTH = new HashMap<>();
+
+	private static void smooth(int id, State state) {
+		long now = System.nanoTime();
+		float headYaw = state.bodyRot + state.yRot; // where it's looking, synced from the server and steady
+		Smooth s = SMOOTH.get(id);
+		float dt = s == null ? 0 : (now - s.nanos) / 1.0e9f;
+		if (s == null || dt > 1.0f || dt < 0 || Math.abs(s.x - state.x) + Math.abs(s.y - state.y) + Math.abs(s.z - state.z) > 12) {
+			if (SMOOTH.size() > 64) {
+				SMOOTH.clear();
+			}
+			s = new Smooth();
+			s.x = state.x;
+			s.y = state.y;
+			s.z = state.z;
+			s.yaw = state.bodyRot;
+			SMOOTH.put(id, s);
+		} else {
+			float yawStep = 1.0f - (float) Math.exp(-dt / YAW_SECONDS);
+			float moveStep = 1.0f - (float) Math.exp(-dt / MOVE_SECONDS);
+			s.yaw += net.minecraft.util.Mth.wrapDegrees(headYaw - s.yaw) * yawStep;
+			s.x += (state.x - s.x) * moveStep;
+			s.y += (state.y - s.y) * moveStep;
+			s.z += (state.z - s.z) * moveStep;
+		}
+		s.nanos = now;
+		state.smoothX = (float) (s.x - state.x);
+		state.smoothY = (float) (s.y - state.y);
+		state.smoothZ = (float) (s.z - state.z);
+		state.bodyRot = s.yaw;
+		state.yRot = net.minecraft.util.Mth.clamp(net.minecraft.util.Mth.wrapDegrees(headYaw - s.yaw), -30.0f, 30.0f);
+	}
+
 	@Override
 	public State createRenderState() {
 		return new State();
@@ -147,6 +197,9 @@ public class CharacterRenderer extends HumanoidMobRenderer<CharacterEntity, Char
 				state.formAttack = start != null && now - start <= slow ? (now - start) / slow : -1;
 			} else {
 				state.formAttack = swing > 0 ? swing : -1;
+			}
+			if (SMOOTHED.contains(state.form)) {
+				smooth(entity.getId(), state);
 			}
 		}
 		// Quest givers: "!" (a job for you), grey "?" (waiting on you) or gold "?" (ready to hand in) above the name.

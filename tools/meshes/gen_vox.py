@@ -373,18 +373,15 @@ def imu_beast():
     v.bone('wing_l', 'body', (-0.4, 4.1, 0.55))
     v.bone('halo', 'body', (0, 5.75, 0.45))
     v.bone('flame', 'head', (0, 5.25, -0.5))
-    # Slow, overlapping motions with different periods so it breathes and sways instead of holding still
-    # (ryan: it "spins too much" and moves "very stiff"). It is 40 blocks tall, so everything is slow and small.
-    v.anim('body', 'idle', 'up', 0.08, 4.0)
-    v.anim('body', 'idle', 'x', 1.2, 4.0, 0.5)
-    v.anim('body', 'idle', 'z', 1.2, 5.3, 0.7)
-    v.anim('body', 'idle', 'y', 1.5, 7.1, 1.9)
-    v.anim('body', 'walk', 'z', 2.0, 0.5)
-    v.anim('body', 'walk', 'x', 1.5, 1.0, 1.2)
+    # Slow, overlapping motions with different periods so it breathes instead of holding still (ryan: it "spins
+    # too much" and moves "very stiff", then "still super shaky, sways quite fast back and forth"). It is 40 blocks
+    # tall, so a 1-degree tilt moves its head half a block: every motion here is tiny and takes many seconds.
+    v.anim('body', 'idle', 'up', 0.05, 6.0)
+    v.anim('body', 'idle', 'x', 0.4, 9.0, 0.5)
+    v.anim('body', 'idle', 'z', 0.4, 11.0, 0.7)
     v.anim('head', 'look', 'y', 0.6)
     v.anim('head', 'look', 'x', 0.4)
-    v.anim('head', 'idle', 'x', 2.5, 4.6, 1.0)
-    v.anim('head', 'idle', 'z', 1.8, 6.2, 2.4)
+    v.anim('head', 'idle', 'x', 1.2, 9.0, 1.0)
     v.anim('head', 'roar', 'x', 15)
     # sword attack ('slash'): wind up, a fast diagonal cut across the body, then an eased recovery
     v.anim('arm_r', 'slash', 'x', -75)
@@ -394,20 +391,16 @@ def imu_beast():
     v.anim('body', 'slash', 'y', 18)
     v.anim('body', 'slash', 'x', 6)
     v.anim('head', 'slash', 'x', 8)
-    v.anim('arm_r', 'idle', 'x', 3, 3.9, 1.7)
-    v.anim('arm_r', 'idle', 'z', 2.5, 5.4, 0.3)
-    v.anim('arm_l', 'idle', 'x', 3, 4.3, 0.2)
-    v.anim('arm_l', 'idle', 'z', -2.5, 4.8, 0.6)
-    v.anim('arm_r', 'walk', 'x', 6, 1.0)
-    v.anim('arm_l', 'walk', 'x', -6, 1.0)
-    v.anim('flame', 'idle', 'y', 7, 2.4)
-    v.anim('flame', 'idle', 'z', 4, 1.7)
-    v.anim('flame', 'idle', 'x', 3, 2.1, 1.1)
-    v.anim('halo', 'idle', 'z', 3, 9.0)
+    v.anim('arm_r', 'idle', 'x', 1.5, 8.0, 1.7)
+    v.anim('arm_l', 'idle', 'x', 1.5, 8.6, 0.2)
+    v.anim('arm_r', 'walk', 'x', 3, 1.0)
+    v.anim('arm_l', 'walk', 'x', -3, 1.0)
+    v.anim('flame', 'idle', 'y', 4, 4.0)
+    v.anim('flame', 'idle', 'z', 2.5, 3.1)
+    v.anim('halo', 'idle', 'z', 2, 12.0)
     for s, b in ((1, 'wing_r'), (-1, 'wing_l')):
-        v.anim(b, 'idle', 'z', 8 * s, 3.4)
-        v.anim(b, 'idle', 'y', 4 * s, 5.0, 0.8)
-        v.anim(b, 'fly', 'z', 9 * s, 2.2)
+        v.anim(b, 'idle', 'z', 4 * s, 6.0)
+        v.anim(b, 'fly', 'z', 4 * s, 6.0, 1.5)
         v.anim(b, 'roar', 'z', 20 * s)
 
     # big white cloak with thin dark stripes, sharp wide shoulders, open down the front over a black body

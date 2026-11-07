@@ -163,7 +163,7 @@ public class CharacterEntity extends PathfinderMob implements Merchant {
 	 * The giant forms (Imu's last form, Nidhogg) turn slowly. A normal mob may turn up to 90 degrees a tick, which on a
 	 * 40-block model looks like it's spinning on the spot. Degrees per tick for the body, then for the head.
 	 */
-	private static final java.util.Map<String, float[]> FORM_TURN = java.util.Map.of("imu_beast", new float[] {3.0f, 5.0f},
+	private static final java.util.Map<String, float[]> FORM_TURN = java.util.Map.of("imu_beast", new float[] {2.0f, 3.5f},
 			"nidhogg", new float[] {3.5f, 6.0f});
 
 	@Override
@@ -482,6 +482,7 @@ public class CharacterEntity extends PathfinderMob implements Merchant {
 		if (TitanFight.isTitan(getCharacterId())) {
 			titan.tick(this, level, Math.max(1, phase), legendRung);
 		}
+		tickSwordSlash(level);
 		if (windupPower != null) {
 			tickWindup(level);
 			return;
@@ -703,16 +704,110 @@ public class CharacterEntity extends PathfinderMob implements Merchant {
 		}
 	}
 
+	// ---- Sword forms (Imu's last form): every attack is a swing of the long blade ----
+
+	/** Forms that fight with a sword: their swing is a long heavy slash (CharacterRenderer.SLOW_SWING, 26 ticks). */
+	private static final java.util.Set<String> SWORD_FORMS = java.util.Set.of("imu_beast");
+	/** Ticks from the start of the swing until the blade comes down (the strike peaks about 55% into the 26 ticks). */
+	private static final int SLASH_LEAD = 14;
+	/** How far the blade reaches from the body, in blocks: the sword is about as long as the arm is high. */
+	private static final double SLASH_REACH = 15.0;
+	private int slashCooldown = 40;
+	private int slashTimer = 0;
+
+	private boolean slashes() {
+		return SWORD_FORMS.contains(getForm());
+	}
+
+	private void swingSword() {
+		swing(net.minecraft.world.InteractionHand.MAIN_HAND, net.minecraft.world.item.component.SwingAnimation.DEFAULT); // Sent to clients, which play the slash.
+		playSound(SoundEvents.PLAYER_ATTACK_SWEEP, 3.0f, 0.5f);
+	}
+
+	/**
+	 * Between powers, a sword form cuts at anyone in front of it within the blade's reach: the swing starts, and
+	 * SLASH_LEAD ticks later the blade lands in a wide arc.
+	 */
+	private void tickSwordSlash(ServerLevel level) {
+		if (!slashes()) {
+			slashTimer = 0;
+			return;
+		}
+		if (slashTimer > 0) {
+			if (--slashTimer == 0) {
+				landSlash(level);
+			}
+			return;
+		}
+		if (slashCooldown > 0) {
+			slashCooldown--;
+			return;
+		}
+		LivingEntity target = getTarget();
+		if (windupPower != null || target == null || !target.isAlive() || com.onepiecemod.cutscene.BossIntros.holding(this)) {
+			return;
+		}
+		double dx = target.getX() - getX();
+		double dz = target.getZ() - getZ();
+		if (dx * dx + dz * dz > SLASH_REACH * SLASH_REACH || target.getY() > getY() + getBbHeight() || target.getY() < getY() - 4) {
+			return;
+		}
+		swingSword();
+		slashTimer = SLASH_LEAD;
+		slashCooldown = switch (difficulty) {
+			case EXPERT -> 30;
+			case HARD -> 40;
+			default -> 55;
+		};
+	}
+
+	/** The blade lands: everyone in a wide arc in front (or right at its feet) is cut and thrown back. */
+	private void landSlash(ServerLevel level) {
+		float yaw = this.yBodyRot * net.minecraft.util.Mth.DEG_TO_RAD;
+		Vec3 forward = new Vec3(-net.minecraft.util.Mth.sin(yaw), 0, net.minecraft.util.Mth.cos(yaw));
+		float damage = (float) getAttributeValue(Attributes.ATTACK_DAMAGE) * 1.5f;
+		LivingEntity target = getTarget();
+		for (LivingEntity victim : level.getEntitiesOfClass(LivingEntity.class, getBoundingBox().inflate(SLASH_REACH, 2.0, SLASH_REACH),
+				e -> e != this && e.isAlive() && (e == target || e instanceof Player p && !p.isCreative() && !p.isSpectator()))) {
+			Vec3 flat = new Vec3(victim.getX() - getX(), 0, victim.getZ() - getZ());
+			double distance = flat.length();
+			if (distance > SLASH_REACH + victim.getBbWidth() || (distance > 4.0 && flat.normalize().dot(forward) < 0.2)) {
+				continue; // Out of reach, or behind it.
+			}
+			if (victim.hurtServer(level, damageSources().mobAttack(this), damage)) {
+				Vec3 away = distance < 0.01 ? forward : flat.normalize();
+				victim.setDeltaMovement(away.x * 1.3, 0.45, away.z * 1.3);
+				Motion.sync(victim);
+			}
+		}
+		// The cut shows as a sweep across the ground in front of it.
+		Vec3 side = new Vec3(forward.z, 0, -forward.x);
+		for (int i = -6; i <= 6; i++) {
+			double reach = 4.0 + Math.cos(i / 6.0 * 1.2) * (SLASH_REACH - 4.0);
+			Vec3 at = position().add(forward.scale(reach)).add(side.scale(i * 1.6));
+			level.sendParticles(ParticleTypes.SWEEP_ATTACK, at.x, at.y + 1.2, at.z, 1, 0.0, 0.0, 0.0, 0.0);
+		}
+		Vec3 hit = position().add(forward.scale(SLASH_REACH * 0.6));
+		com.onepiecemod.fx.MoveFx.shockwave(level, hit, 5, 0xFFFFFFFF, 0xFF202020);
+		level.playSound(null, net.minecraft.core.BlockPos.containing(hit), SoundEvents.GENERIC_EXPLODE.value(), net.minecraft.sounds.SoundSource.HOSTILE, 1.5f, 0.6f);
+	}
+
 	/** Starts the next attack: a short wind-up with a warning circle, then the attack (see tickWindup). */
 	private void startWindup(LivingEntity target, ServerLevel level) {
 		// A fruit-user boss in the sea, cuffed, or hit by Seastone can't call on its fruit: it just fights with its fists.
 		if (com.onepiecemod.power.SeaWeakness.drainsFruitUser(this)) {
 			level.sendParticles(ParticleTypes.BUBBLE_POP, getX(), getY() + getBbHeight() * 0.7, getZ(), 12, 0.4, 0.4, 0.4, 0.02);
+			if (slashes()) {
+				swingSword();
+			}
 			return;
 		}
 		String power = nextPower();
 		if (power.equals(SIGNATURE)) {
 			// Signature moves draw their own warning circles and land a moment later.
+			if (slashes()) {
+				swingSword();
+			}
 			BossFightData fight = BossFightData.get(getCharacterId());
 			strikes.signature(fight.signature, this, target, level, (float) getAttributeValue(Attributes.ATTACK_DAMAGE), difficulty + (phase >= 3 ? 1 : 0));
 			return;
@@ -723,6 +818,9 @@ public class CharacterEntity extends PathfinderMob implements Merchant {
 			case HARD -> 16;
 			default -> 22;
 		} - (phase >= 3 ? 4 : 0);
+		if (windupTicks < SLASH_LEAD && slashes()) {
+			swingSword(); // A wind-up too short to wait for: start the swing now.
+		}
 		windupMark = BossAbility.areaRadius(power) > 0 || BossAbility.alwaysHits(power) ? null : target.position();
 		com.onepiecemod.anim.CombatAnims.play(this, com.onepiecemod.anim.Anim.POWER_UP, windupTicks);
 		level.sendParticles(ParticleTypes.ELECTRIC_SPARK, getX(), getY() + getBbHeight() * 0.7, getZ(), 12, 0.4, 0.4, 0.4, 0.05);
@@ -746,6 +844,9 @@ public class CharacterEntity extends PathfinderMob implements Merchant {
 			} else if (radius > 0) {
 				BossStrikes.ring(level, position(), radius, color);
 			}
+		}
+		if (windupTicks == SLASH_LEAD && slashes()) {
+			swingSword(); // The blade comes down just as the power fires.
 		}
 		if (windupTicks > 0) {
 			return;
