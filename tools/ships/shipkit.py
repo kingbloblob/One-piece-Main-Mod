@@ -414,15 +414,25 @@ class Ship(_CanvasB):
 
     def broadside(self, xs, y, cz, half_at, port=True, starboard=True, gunport=None, gunport_y=None):
         """Cannons along both sides at the given xs, standing on deck y at the edge. half_at(x) -> half width.
-        gunport = block painted on the hull outside each cannon (e.g. black concrete) at gunport_y."""
+        gunport = block painted on the hull outside each cannon (e.g. black concrete) at gunport_y.
+        A gunport at deck height becomes the cannon itself (onepiece:cannon[mounted=true]: dark port in the hull,
+        barrel out over the sea, carriage on deck behind it); tools/shipcombat/mount_cannons.py does the same to
+        finished .nbt files."""
         for x in xs:
             hw = int(round(half_at(x)))
+            gy = gunport_y if gunport_y is not None else y
+            mount = bool(gunport) and gy == y
             if starboard:
-                self.cannon(x, y, cz + hw - 1, "south")
+                if mount:
+                    self.set(x, y, cz + hw, "onepiece:cannon[facing=south,mounted=true]")
+                else:
+                    self.cannon(x, y, cz + hw - 1, "south")
             if port:
-                self.cannon(x, y, cz - hw + 1, "north")
-            if gunport:
-                gy = gunport_y if gunport_y is not None else y
+                if mount:
+                    self.set(x, y, cz - hw, "onepiece:cannon[facing=north,mounted=true]")
+                else:
+                    self.cannon(x, y, cz - hw + 1, "north")
+            if gunport and not mount:
                 self.set(x, gy, cz + hw, gunport)
                 self.set(x, gy, cz - hw, gunport)
 

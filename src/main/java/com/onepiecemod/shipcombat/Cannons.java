@@ -49,6 +49,8 @@ import com.onepiecemod.sound.ModSounds;
 public class Cannons {
 	/** How fast a cannonball leaves the barrel, in blocks per tick. */
 	public static final double MUZZLE_SPEED = 2.0;
+	/** The Cannon model's barrel reaches about 1.5 blocks out from the block's centre; shots start just past it. */
+	public static final double MUZZLE_REACH = 1.6;
 	/** Cannonballs fall like snowballs: this much speed lost to gravity per tick, and 1% to the air. */
 	public static final double GRAVITY = 0.03;
 	public static final double DRAG = 0.99;
@@ -109,8 +111,8 @@ public class Cannons {
 			}
 			Direction face = state.getValue(DecorBlock.FACING);
 			Vec3 facing = ship.rotate(new Vec3(face.getStepX(), 0, face.getStepZ()), 1.0f).normalize();
-			Vec3 centre = ship.position().add(ship.rotate(new Vec3(block.pos().getX(), block.pos().getY() + 0.4, block.pos().getZ()), 1.0f));
-			guns.add(new Gun(centre.add(facing.scale(0.9)), facing, block));
+			Vec3 centre = ship.position().add(ship.rotate(new Vec3(block.pos().getX(), block.pos().getY() + 0.6, block.pos().getZ()), 1.0f));
+			guns.add(new Gun(centre.add(facing.scale(MUZZLE_REACH)), facing, block)); // Just past the muzzle.
 		}
 		return guns;
 	}
@@ -227,7 +229,7 @@ public class Cannons {
 		Direction face = state.hasProperty(DecorBlock.FACING) ? state.getValue(DecorBlock.FACING) : player.getDirection();
 		double up = Math.max(-0.2, Math.min(0.8, player.getViewVector(1.0f).y + 0.1));
 		Vec3 direction = new Vec3(face.getStepX(), up, face.getStepZ()).normalize();
-		Vec3 muzzle = Vec3.atCenterOf(pos).add(face.getStepX() * 0.9, 0.0, face.getStepZ() * 0.9);
+		Vec3 muzzle = Vec3.atCenterOf(pos).add(face.getStepX() * MUZZLE_REACH, 0.1, face.getStepZ() * MUZZLE_REACH);
 		fire(level, muzzle, direction.scale(MUZZLE_SPEED * profile.speed()), player, null, ShipHull.CANNONBALL_DAMAGE * profile.damage(),
 				ammo == null ? ShipAmmo.CANNONBALL : ammo, shell);
 		if (!player.isCreative()) {

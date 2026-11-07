@@ -1,18 +1,33 @@
 {
   "variants": {
-    "facing=north": {
+    "facing=north,mounted=false": {
       "model": "onepiece:block/cannon"
     },
-    "facing=east": {
+    "facing=north,mounted=true": {
+      "model": "onepiece:block/cannon_mounted"
+    },
+    "facing=east,mounted=false": {
       "model": "onepiece:block/cannon",
       "y": 90
     },
-    "facing=south": {
+    "facing=east,mounted=true": {
+      "model": "onepiece:block/cannon_mounted",
+      "y": 90
+    },
+    "facing=south,mounted=false": {
       "model": "onepiece:block/cannon",
       "y": 180
     },
-    "facing=west": {
+    "facing=south,mounted=true": {
+      "model": "onepiece:block/cannon_mounted",
+      "y": 180
+    },
+    "facing=west,mounted=false": {
       "model": "onepiece:block/cannon",
+      "y": 270
+    },
+    "facing=west,mounted=true": {
+      "model": "onepiece:block/cannon_mounted",
       "y": 270
     }
   }
