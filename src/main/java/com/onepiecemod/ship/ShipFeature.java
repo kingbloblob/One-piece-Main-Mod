@@ -99,7 +99,7 @@ public class ShipFeature {
 	public static final Block FIGUREHEAD_MOBY = registerBlock("figurehead_moby",
 			properties -> new DecorBlock(properties, Block.box(2, 2, 0, 14, 14, 16)), wood());
 	public static final Block CANNON = registerBlock("cannon",
-			properties -> new DecorBlock(properties, Block.box(2, 0, 2, 14, 10, 14)), metal());
+			CannonBlock::new, metal());
 	public static final Block ANCHOR = registerBlock("anchor",
 			properties -> new DecorBlock(properties, Block.box(2, 0, 6, 14, 16, 10)), metal());
 	public static final Block PORTHOLE = registerBlock("porthole",
