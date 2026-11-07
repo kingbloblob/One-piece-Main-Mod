@@ -496,13 +496,25 @@ def imu_beast():
         return None
     hv.ball('head', (0, 5.3, -0.78), (0.34, 0.59, 0.41), face, mode='paint')
     hv.tube('head', [V([0, 4.85, -1.02]), V([0, 4.55, -1.08]), V([0.02, 4.25, -1.05])], [0.11, 0.07, 0.0], hexc('#3a3844'), per=4)
-    # white hood behind and around the black face; the horns come out of its sides
+    # white helmet (ryan's sketch): a dome cap over the top of the small head, sitting just above the
+    # eyes, with a rim and two curved cheek guards that come down the sides of the face and hook out at
+    # the bottom; the horns grow out of its sides
     HELM = hexc('#ecebe6')
-    hv.ball('head', (0, 5.5, -0.6), (0.44, 0.7, 0.4), HELM)
-    # thin crescent horns, open at the top and tilted forward so the tips lean towards the viewer
+    HC = V([0, 4.45, -0.78])                       # head centre after the shrink
+    v.ball('head', HC + V([0, 0.17, 0.08]), (0.36, 0.42, 0.37), HELM, cut=('y', 1, 4.62))
+    v.ball('head', HC + V([0, 0.2, 0.08]), (0.39, 0.04, 0.4), HELM)           # rim
     for s in SIDES:
-        hp = [V([0.36 * s, 5.85, -0.65]), V([0.85 * s, 5.85, -0.6]), V([1.35 * s, 6.15, -0.7]), V([1.6 * s, 6.8, -0.95]), V([1.5 * s, 7.45, -1.25]), V([1.2 * s, 7.9, -1.5])]
-        hornv.tube('head', hp, [0.13, 0.17, 0.16, 0.12, 0.07, 0.02], BLACK, per=5)
+        guard = [HC + V([0.3 * s, 0.13, -0.12]), HC + V([0.33 * s, -0.08, -0.2]), HC + V([0.29 * s, -0.28, -0.24]), HC + V([0.36 * s, -0.4, -0.22])]
+        v.tube('head', guard, [0.075, 0.07, 0.06, 0.035], HELM, per=4)
+    # horns attached to the helmet sides: they swoop out, DOWN and forward first, then curve up into
+    # tall points (a deep U on each side, like the drawing)
+    for s in SIDES:
+        hp = [HC + V([0.33 * s, 0.22, 0.0]), HC + V([0.6 * s, 0.0, -0.12]), HC + V([0.88 * s, -0.3, -0.3]),
+              HC + V([1.15 * s, -0.22, -0.36]), HC + V([1.32 * s, 0.2, -0.34]), HC + V([1.3 * s, 0.8, -0.34]), HC + V([1.1 * s, 1.35, -0.45])]
+        v.tube('head', hp, [0.12, 0.14, 0.135, 0.12, 0.09, 0.055, 0.015], BLACK, per=6)
+        # grey sheen along the inside front edge so the horns read against the dark wings
+        sheen = [q + V([-0.05 * s if i > 2 else 0.0, 0.05 if i <= 2 else 0.0, -0.08]) for i, q in enumerate(hp)]
+        v.tube('head', sheen, [0.07, 0.08, 0.08, 0.07, 0.05, 0.03, 0.01], hexc('#8c8a96'), per=6, mode='paint')
     # white flame above the head, between the horns
     for k in range(3):
         ph = k * 2.1
