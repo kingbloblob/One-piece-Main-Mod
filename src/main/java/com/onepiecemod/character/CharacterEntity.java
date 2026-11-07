@@ -65,7 +65,7 @@ public class CharacterEntity extends PathfinderMob implements Merchant {
 	private static final java.util.Map<String, float[]> FORM_SIZE = java.util.Map.of(
 			"seiryu", new float[] {3.0f, 3.2f}, "pteranodon", new float[] {2.6f, 2.4f}, "venom_demon", new float[] {2.6f, 4.8f},
 			"brachiosaurus", new float[] {3.2f, 6.5f}, "gyuki", new float[] {4.6f, 4.2f},
-			"imu_demon", new float[] {2.4f, 5.2f}, "imu_beast", new float[] {9.0f, 34.0f}, "nidhogg", new float[] {10.0f, 36.0f});
+			"imu_demon", new float[] {2.4f, 5.2f}, "imu_beast", new float[] {5.0f, 34.0f}, "nidhogg", new float[] {10.0f, 36.0f});
 
 	private ServerBossEvent bossBar;
 	private boolean goalsAdded = false;
@@ -157,6 +157,32 @@ public class CharacterEntity extends PathfinderMob implements Merchant {
 	/** Ticks since the monster form began (the renderer plays the roar during the first second or so). */
 	public int getFormAge() {
 		return this.tickCount - this.entityData.get(FORM_SINCE);
+	}
+
+	/**
+	 * The giant forms (Imu's last form, Nidhogg) turn slowly. A normal mob may turn up to 90 degrees a tick, which on a
+	 * 40-block model looks like it's spinning on the spot. Degrees per tick for the body, then for the head.
+	 */
+	private static final java.util.Map<String, float[]> FORM_TURN = java.util.Map.of("imu_beast", new float[] {3.0f, 5.0f},
+			"nidhogg", new float[] {3.5f, 6.0f});
+
+	@Override
+	public void tick() {
+		float yRot = getYRot();
+		float body = this.yBodyRot;
+		float head = this.yHeadRot;
+		super.tick();
+		float[] turn = FORM_TURN.get(getForm());
+		if (turn != null && isAlive() && level().isClientSide()) {
+			// The client works out the body's turn itself (it isn't sent), so it's eased here too.
+			this.yBodyRot = body + net.minecraft.util.Mth.clamp(net.minecraft.util.Mth.wrapDegrees(this.yBodyRot - body), -turn[0], turn[0]);
+		} else if (turn != null && isAlive()) {
+			setYRot(yRot + net.minecraft.util.Mth.clamp(net.minecraft.util.Mth.wrapDegrees(getYRot() - yRot), -turn[0], turn[0]));
+			this.yBodyRot = body + net.minecraft.util.Mth.clamp(net.minecraft.util.Mth.wrapDegrees(this.yBodyRot - body), -turn[0], turn[0]);
+			this.yHeadRot = head + net.minecraft.util.Mth.clamp(net.minecraft.util.Mth.wrapDegrees(this.yHeadRot - head), -turn[1], turn[1]);
+			// The head may look around, but never far from where the body faces.
+			this.yHeadRot = this.yBodyRot + net.minecraft.util.Mth.clamp(net.minecraft.util.Mth.wrapDegrees(this.yHeadRot - this.yBodyRot), -35.0f, 35.0f);
+		}
 	}
 
 	private void setForm(String form) {
@@ -327,7 +353,13 @@ public class CharacterEntity extends PathfinderMob implements Merchant {
 				}
 			});
 			this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 12.0f));
-			this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+			this.goalSelector.addGoal(8, new RandomLookAroundGoal(this) {
+				@Override
+				public boolean canUse() {
+					// The giant forms don't glance about at random: on a 40-block body it looks twitchy.
+					return !FORM_TURN.containsKey(getForm()) && super.canUse();
+				}
+			});
 			this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
 			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
 

@@ -115,6 +115,10 @@ public class CharacterRenderer extends HumanoidMobRenderer<CharacterEntity, Char
 		return CharacterSkinFormats.WIDE.contains(id) ? wideModel : normalModel;
 	}
 
+	/** Forms whose attack animation runs longer than a normal swing: ticks per swing. */
+	private static final java.util.Map<String, Float> SLOW_SWING = java.util.Map.of("imu_beast", 26.0f);
+	private static final java.util.Map<Integer, Float> SWING_START = new java.util.HashMap<>();
+
 	@Override
 	public State createRenderState() {
 		return new State();
@@ -128,7 +132,22 @@ public class CharacterRenderer extends HumanoidMobRenderer<CharacterEntity, Char
 		if (!state.form.isEmpty()) {
 			state.formAge = entity.getFormAge() + partialTick;
 			float swing = entity.getSwingAnimation(partialTick);
-			state.formAttack = swing > 0 ? swing : -1;
+			Float slow = SLOW_SWING.get(state.form);
+			if (slow != null) {
+				// Giants swing their weapon over a long, heavy arc instead of the normal quick 6-tick flick.
+				float now = entity.tickCount + partialTick;
+				Float start = SWING_START.get(entity.getId());
+				if (swing > 0 && (start == null || now - start > slow)) {
+					SWING_START.put(entity.getId(), now);
+					start = now;
+					if (SWING_START.size() > 256) {
+						SWING_START.clear();
+					}
+				}
+				state.formAttack = start != null && now - start <= slow ? (now - start) / slow : -1;
+			} else {
+				state.formAttack = swing > 0 ? swing : -1;
+			}
 		}
 		// Quest givers: "!" (a job for you), grey "?" (waiting on you) or gold "?" (ready to hand in) above the name.
 		Component marker = QuestMarkerClient.markerFor(entity.getId());

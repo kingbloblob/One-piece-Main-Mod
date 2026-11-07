@@ -367,43 +367,67 @@ def imu_beast():
     LINE = hexc('#2a2a32')
     v.bone('body', 'root', (0, 2.2, 0))
     v.bone('head', 'body', (0, 3.95, 0))
-    v.bone('arm_r', 'body', (0.75, 3.7, 0))
-    v.bone('arm_l', 'body', (-0.75, 3.7, 0))
+    v.bone('arm_r', 'body', (0.38, 3.7, -0.15))
+    v.bone('arm_l', 'body', (-0.38, 3.7, -0.15))
     v.bone('wing_r', 'body', (0.4, 4.1, 0.55))
     v.bone('wing_l', 'body', (-0.4, 4.1, 0.55))
     v.bone('halo', 'body', (0, 5.75, 0.45))
     v.bone('flame', 'head', (0, 5.25, -0.5))
+    # Slow, overlapping motions with different periods so it breathes and sways instead of holding still
+    # (ryan: it "spins too much" and moves "very stiff"). It is 40 blocks tall, so everything is slow and small.
     v.anim('body', 'idle', 'up', 0.08, 4.0)
+    v.anim('body', 'idle', 'x', 1.2, 4.0, 0.5)
+    v.anim('body', 'idle', 'z', 1.2, 5.3, 0.7)
+    v.anim('body', 'idle', 'y', 1.5, 7.1, 1.9)
+    v.anim('body', 'walk', 'z', 2.0, 0.5)
+    v.anim('body', 'walk', 'x', 1.5, 1.0, 1.2)
     v.anim('head', 'look', 'y', 0.6)
     v.anim('head', 'look', 'x', 0.4)
+    v.anim('head', 'idle', 'x', 2.5, 4.6, 1.0)
+    v.anim('head', 'idle', 'z', 1.8, 6.2, 2.4)
     v.anim('head', 'roar', 'x', 15)
-    v.anim('arm_r', 'attack', 'x', 85)
-    v.anim('arm_l', 'attack', 'x', 85)
-    v.anim('body', 'attack', 'y', -15)
-    v.anim('flame', 'idle', 'y', 25, 1.4)
-    v.anim('halo', 'idle', 'z', 6, 7.0)
+    # sword attack ('slash'): wind up, a fast diagonal cut across the body, then an eased recovery
+    v.anim('arm_r', 'slash', 'x', -75)
+    v.anim('arm_r', 'slash', 'y', 35)
+    v.anim('arm_r', 'slash', 'z', -25)
+    v.anim('arm_l', 'slash', 'x', -30)
+    v.anim('body', 'slash', 'y', 18)
+    v.anim('body', 'slash', 'x', 6)
+    v.anim('head', 'slash', 'x', 8)
+    v.anim('arm_r', 'idle', 'x', 3, 3.9, 1.7)
+    v.anim('arm_r', 'idle', 'z', 2.5, 5.4, 0.3)
+    v.anim('arm_l', 'idle', 'x', 3, 4.3, 0.2)
+    v.anim('arm_l', 'idle', 'z', -2.5, 4.8, 0.6)
+    v.anim('arm_r', 'walk', 'x', 6, 1.0)
+    v.anim('arm_l', 'walk', 'x', -6, 1.0)
+    v.anim('flame', 'idle', 'y', 7, 2.4)
+    v.anim('flame', 'idle', 'z', 4, 1.7)
+    v.anim('flame', 'idle', 'x', 3, 2.1, 1.1)
+    v.anim('halo', 'idle', 'z', 3, 9.0)
     for s, b in ((1, 'wing_r'), (-1, 'wing_l')):
-        v.anim(b, 'idle', 'z', 12 * s, 2.8)
-        v.anim(b, 'fly', 'z', 12 * s, 1.0)
+        v.anim(b, 'idle', 'z', 8 * s, 3.4)
+        v.anim(b, 'idle', 'y', 4 * s, 5.0, 0.8)
+        v.anim(b, 'fly', 'z', 9 * s, 2.2)
         v.anim(b, 'roar', 'z', 20 * s)
 
     # big white cloak with thin dark stripes, sharp wide shoulders, open down the front over a black body
-    rings = [(0.0, 1.6, 0.8, 0.85), (1.5, 1.45, 0.72, 0.8), (2.8, 1.45, 0.66, 0.75), (3.6, 1.8, 0.62, 0.7), (3.9, 1.85, 0.55, 0.6), (4.05, 1.0, 0.45, 0.5), (4.2, 0.45, 0.3, 0.35)]
+    # slim (ryan: half the old width)
+    rings = [(0.0, 0.8, 0.6, 0.65), (1.5, 0.72, 0.55, 0.6), (2.8, 0.72, 0.5, 0.56), (3.6, 0.9, 0.47, 0.52), (3.9, 0.92, 0.42, 0.46), (4.05, 0.5, 0.36, 0.4), (4.2, 0.25, 0.26, 0.3)]
 
     def open_w(y):
-        return 0.9 - min(max(y, 0), 4.6) / 4.6 * 0.5
+        return 0.45 - min(max(y, 0), 4.6) / 4.6 * 0.23
 
     def cloak_c(p, u):
         x, y, z = p
         if z < -0.05 and abs(x) < open_w(y):
             return BLACK
-        side = abs(x) > 1.3
+        side = abs(x) > 0.65
         coord = z if side else x
-        return LINE if int(math.floor(coord / 0.1)) % 3 == 0 else WHITE
+        return LINE if int(math.floor(coord / 0.07)) % 3 == 0 else WHITE
     loft(v, 'body', rings, cloak_c)
     # pointed shoulder tips
     for s in SIDES:
-        v.box('body', sx((1.75, 3.7, -0.35), s) if s > 0 else (-2.1, 3.7, -0.35), (2.1, 3.9, 0.4) if s > 0 else (-1.75, 3.9, 0.4), WHITE)
+        v.box('body', sx((0.85, 3.72, -0.3), s) if s > 0 else (-1.08, 3.72, -0.3), (1.08, 3.9, 0.32) if s > 0 else (-0.85, 3.9, 0.32), WHITE)
     # the column of white dots down the black front
     for i in range(14):
         y = 2.2 + i * 0.2
@@ -416,13 +440,13 @@ def imu_beast():
     v.box('body', (-0.15, 0.45, -1.2), (0.15, 0.52, 0), BLACK, mode='paint')
 
     def ring_eye(p, u):
-        r = math.hypot(p[0] - 0.4, p[1] - 1.7)
-        if r < 0.1:
+        r = math.hypot(p[0] - 0.16, p[1] - 1.7)
+        if r < 0.07:
             return BLACK
-        if r < 0.32:
-            return WHITE if r > 0.2 else BLACK
+        if r < 0.22:
+            return WHITE if r > 0.14 else BLACK
         return None
-    v.box('body', (0.05, 1.35, -2), (0.75, 2.05, 0), ring_eye, mode='paint')
+    v.box('body', (-0.08, 1.45, -2), (0.4, 1.95, 0), ring_eye, mode='paint')
     # black neck from the cloak collar up to the head
     v.box('body', (-0.15, 3.85, -0.55), (0.15, 4.15, -0.2), BLACK)
     # long white hair like the chapter panel (and ryan's sketch): thin separate strands that start at
@@ -434,8 +458,8 @@ def imu_beast():
         n = 9
         for i in range(n):
             t = i / (n - 1)
-            root = V([s * (0.28 + 0.03 * t), 4.62 - 0.12 * t, -0.8 + 0.08 * t])
-            end = V([s * (0.22 + 0.85 * t + rnd.uniform(-0.04, 0.04)), 2.3 + rnd.uniform(0, 0.35), -0.95 + 0.35 * t * t])
+            root = V([s * (0.27 + 0.02 * t), 4.62 - 0.12 * t, -0.8 + 0.06 * t])
+            end = V([s * (0.22 + 0.4 * t + rnd.uniform(-0.03, 0.03)), 2.3 + rnd.uniform(0, 0.35), -0.8 + 0.25 * t * t])
             mid = root + (end - root) * 0.5 + V([0, 0, -0.05])
             # a little grey: every third strand is grey, a few others get a grey streak part way down
             if i % 3 == 1:
@@ -449,16 +473,16 @@ def imu_beast():
             v.tube('body', [root, mid, end], [0.045, 0.04, 0.025], col, per=6)
         for k in range(3):
             y = rnd.uniform(2.8, 3.8)
-            x = s * rnd.uniform(0.5, 1.0)
-            v.tube('body', [V([x, y, -1.0]), V([x + s * 0.03, y - 0.25, -1.0])], [0.03, 0.02], HAIR, per=2)
+            x = s * rnd.uniform(0.3, 0.55)
+            v.tube('body', [V([x, y, -0.85]), V([x + s * 0.03, y - 0.25, -0.85])], [0.03, 0.02], HAIR, per=2)
     # black sleeves coming out of the cloak, black gloves with a white eye ring at the wrist
-    for s, b, wr in ((1, 'arm_r', V([0.25, 3.15, -1.0])), (-1, 'arm_l', V([-0.25, 2.95, -1.0]))):
-        sh, el = sx((0.55, 3.7, -0.2), s), sx((0.85, 3.3, -0.7), s)
-        v.tube(b, [sh, el, wr], [0.22, 0.2, 0.17], BLACK, per=4)
-        v.ball(b, wr + V([-s * 0.05, 0, -0.08]), (0.17, 0.15, 0.17), BLACK)
-        v.ball(b, wr + V([s * 0.12, 0.0, -0.05]), (0.1, 0.16, 0.16), WHITE, mode='paint')
+    for s, b, wr in ((1, 'arm_r', V([0.18, 3.15, -0.85])), (-1, 'arm_l', V([-0.18, 2.95, -0.85]))):
+        sh, el = sx((0.38, 3.7, -0.15), s), sx((0.5, 3.3, -0.55), s)
+        v.tube(b, [sh, el, wr], [0.14, 0.13, 0.11], BLACK, per=4)
+        v.ball(b, wr + V([-s * 0.04, 0, -0.06]), (0.12, 0.11, 0.12), BLACK)
+        v.ball(b, wr + V([s * 0.08, 0.0, -0.04]), (0.07, 0.11, 0.11), WHITE, mode='paint')
     # the long straight sword held across the body, blade up to his left, handle down to his right
-    hilt = V([0.05, 3.05, -1.15])
+    hilt = V([0.05, 3.05, -1.0])
     tip = V([-3.0, 4.2, -1.25])
     d = norm(tip - hilt)
     v.tube('arm_r', [hilt - d * 0.9, hilt + d * 0.2], 0.06, BLACK, smooth=False)
@@ -570,8 +594,8 @@ def imu_beast():
             return LINE
         return hexc('#ffffff') if k > 0.4 else (hexc('#c2beb5') if k < -0.4 else None)
     v.retex(['body'], [WHITE], cloth)
-    v.retex(['body'], [hexc('#ffffff')], lambda p, c: hexc('#c4c0b8') if int(p[0] / 0.05) % 5 == 0 and p[2] < -0.8 else None)
-    v.box('arm_r', V([0.05, 3.05, -1.15]) + V([-0.06, -0.2, -0.06]), V([0.05, 3.05, -1.15]) + V([0.06, 0.2, 0.06]), hexc('#d8d4cc'))
+    v.retex(['body'], [hexc('#ffffff')], lambda p, c: hexc('#c4c0b8') if int(p[0] / 0.05) % 5 == 0 and p[2] < -0.6 else None)
+    v.box('arm_r', V([0.05, 3.05, -1.0]) + V([-0.06, -0.2, -0.06]), V([0.05, 3.05, -1.15]) + V([0.06, 0.2, 0.06]), hexc('#d8d4cc'))
 
     return v
 
