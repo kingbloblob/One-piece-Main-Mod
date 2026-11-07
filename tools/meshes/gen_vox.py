@@ -332,6 +332,33 @@ def nika():
 
 # ---------------- Imu: chapter 1198 form ----------------
 
+class _Xf:
+    """Draws into a Vox with every point moved by p -> c + (p - c) * k + off (sizes scaled by k)."""
+    def __init__(self, v, c, k, off):
+        self.v, self.c, self.k, self.off = v, np.asarray(c, float), k, np.asarray(off, float)
+
+    def f(self, p):
+        return self.c + (np.asarray(p, float) - self.c) * self.k + self.off
+
+    def inv(self, p):
+        return self.c + (np.asarray(p, float) - self.off - self.c) / self.k
+
+    def _col(self, color):
+        if callable(color):
+            return lambda p, u: color(self.inv(p), u)
+        return color
+
+    def ball(self, bone, center, radii, color, **kw):
+        self.v.ball(bone, self.f(center), tuple(r * self.k for r in radii), self._col(color), **kw)
+
+    def box(self, bone, lo, hi, color, **kw):
+        self.v.box(bone, tuple(self.f(lo)), tuple(self.f(hi)), self._col(color), **kw)
+
+    def tube(self, bone, path, radius, color, **kw):
+        rad = [r * self.k for r in radius] if isinstance(radius, (list, tuple)) else radius * self.k
+        self.v.tube(bone, [self.f(q) for q in path], rad, self._col(color), **kw)
+
+
 def imu_beast():
     v = Vox(0.05, noise=0.04, seed=5)
     BLACK = hexc('#0e0d12')
@@ -339,13 +366,13 @@ def imu_beast():
     WHITE = hexc('#efede6')
     LINE = hexc('#2a2a32')
     v.bone('body', 'root', (0, 2.2, 0))
-    v.bone('head', 'body', (0, 4.5, 0))
+    v.bone('head', 'body', (0, 3.95, 0))
     v.bone('arm_r', 'body', (0.75, 3.7, 0))
     v.bone('arm_l', 'body', (-0.75, 3.7, 0))
     v.bone('wing_r', 'body', (0.4, 4.1, 0.55))
     v.bone('wing_l', 'body', (-0.4, 4.1, 0.55))
-    v.bone('halo', 'body', (0, 6.6, 0.45))
-    v.bone('flame', 'head', (0, 5.9, 0))
+    v.bone('halo', 'body', (0, 5.75, 0.45))
+    v.bone('flame', 'head', (0, 5.25, -0.5))
     v.anim('body', 'idle', 'up', 0.08, 4.0)
     v.anim('head', 'look', 'y', 0.6)
     v.anim('head', 'look', 'x', 0.4)
@@ -397,25 +424,30 @@ def imu_beast():
         return None
     v.box('body', (0.05, 1.35, -2), (0.75, 2.05, 0), ring_eye, mode='paint')
     # black neck from the cloak collar up to the head
-    v.box('body', (-0.15, 3.9, -0.55), (0.15, 4.9, -0.2), BLACK)
-    # long white hair like the chapter panel: two flat, dead-straight curtains either side of the black
-    # face and front, finely striped with thin dark lines, rounded over the top of the head and cut
-    # off in a ragged line at the waist
+    v.box('body', (-0.15, 3.85, -0.55), (0.15, 4.15, -0.2), BLACK)
+    # long white hair like the chapter panel: two straight curtains hugging the small head, draping over
+    # the shoulders and falling to the waist; mostly white with fine, uneven dark strand lines (some
+    # broken), denser near the face, and pointed ragged tips
     rnd = random.Random(11)
     HAIR = hexc('#f2f1ec')
     PX = 0.05
     for s in SIDES:
-        n = 20                                   # columns from the face outwards
+        n = 18
+        last = -3
         for c in range(n):
-            x = s * (0.36 + c * PX)
+            x = s * (0.24 + c * PX)
             t = c / (n - 1)
-            top = 6.05 - 0.55 * t * t            # rounds down over the crown towards the shoulder
-            bottom = 2.35 + 0.25 * t + rnd.choice((0, 0, 0.05, 0.1, 0.15))
-            col = LINE if c % 3 == 1 else HAIR
-            z0 = -0.92 + 0.15 * t * t           # outer edge sits a little further back
-            lo = (x if s > 0 else x - PX, bottom, z0)
-            hi = (x + PX if s > 0 else x, top, z0 + 0.45)
-            v.box('body', lo, hi, col)
+            top = 4.95 - 0.95 * t ** 1.4
+            bottom = 2.25 + 0.15 * t + rnd.choice((0, 0, 0.05, 0.1, 0.2, 0.3))
+            z0 = -0.88 + 0.12 * t
+            lo_x, hi_x = (x, x + PX) if s > 0 else (x - PX, x)
+            v.box('body', (lo_x, bottom, z0), (hi_x, top, z0 + 0.4), HAIR)
+            # strand line on the front face of this column?
+            if c - last >= 2 and rnd.random() < (0.45 if t < 0.4 else 0.3):
+                last = c
+                y0 = bottom + rnd.choice((0, 0, 0.1, 0.4))
+                y1 = top - rnd.choice((0, 0.05, 0.2, 0.5))
+                v.box('body', (lo_x, y0, z0 - 0.01), (hi_x, y1, z0 + 0.06), LINE, mode='paint')
     # black sleeves coming out of the cloak, black gloves with a white eye ring at the wrist
     for s, b, wr in ((1, 'arm_r', V([0.25, 3.15, -1.0])), (-1, 'arm_l', V([-0.25, 2.95, -1.0]))):
         sh, el = sx((0.55, 3.7, -0.2), s), sx((0.85, 3.3, -0.7), s)
@@ -432,10 +464,13 @@ def imu_beast():
     def blade(u, w):
         return hilt + d * (0.3 + u * (np.linalg.norm(tip - hilt) - 0.3)) + up * (w - 0.5) * 0.14 * (1 - u * 0.5)
     v.sheet('arm_r', blade, lambda p, u: hexc('#f4f6fa') if u < 0.97 else hexc('#b8c0d0'), nv=3)
+    # the head is modelled at its old size and shrunk/lowered onto the shoulders (short neck)
+    hv = _Xf(v, (0, 5.3, -0.78), 0.72, (0, -0.85, 0))
+    hornv = _Xf(v, (0, 5.3, -0.78), 1.0, (0, -0.85, 0))
     # small narrow black head with a neck, a face like the chapter image: almond eyes, a scar down his
     # left eye, a thin smile, a pointed goatee, and the light catching the right side of his face
-    v.box('head', (-0.12, 4.8, -0.5), (0.12, 5.2, -0.2), BLACK)
-    v.ball('head', (0, 5.3, -0.78), (0.33, 0.58, 0.4), BLACK)
+    hv.box('head', (-0.12, 4.8, -0.5), (0.12, 5.2, -0.2), BLACK)
+    hv.ball('head', (0, 5.3, -0.78), (0.33, 0.58, 0.4), BLACK)
     LIT = hexc('#cfccc4')
     SCAR = glow('#ffffff')
 
@@ -443,35 +478,35 @@ def imu_beast():
         x, y, z = p
         if z > -0.82:
             return None
-        if abs(x - 0.15) < 0.03 and 5.02 < y < 5.85:
+        if abs(x - 0.15) < 0.045 and 5.02 < y < 5.85:
             return SCAR
         for ex in (0.15, -0.15):
-            dx, dy = (x - ex) / 0.11, (y - 5.36) / 0.055
+            dx, dy = (x - ex) / 0.12, (y - 5.36) / 0.07
             if dx * dx + dy * dy <= 1.0:
-                return BLACK if abs(x - ex) < 0.03 else glow('#f4f4f4')
-        if abs(x) < 0.13 and 4.95 < y < 5.0:
+                return BLACK if abs(x - ex) < 0.045 else glow('#f4f4f4')
+        if abs(x) < 0.13 and 4.93 < y < 5.0:
             return glow('#e8e6e0')
         if 0.12 < abs(x) < 0.17 and 5.0 < y < 5.05:
             return glow('#e8e6e0')
         if x < -0.22 and y > 4.9:
             return LIT
         return None
-    v.ball('head', (0, 5.3, -0.78), (0.34, 0.59, 0.41), face, mode='paint')
-    v.tube('head', [V([0, 4.85, -1.02]), V([0, 4.55, -1.08]), V([0.02, 4.25, -1.05])], [0.11, 0.07, 0.0], hexc('#3a3844'), per=4)
+    hv.ball('head', (0, 5.3, -0.78), (0.34, 0.59, 0.41), face, mode='paint')
+    hv.tube('head', [V([0, 4.85, -1.02]), V([0, 4.55, -1.08]), V([0.02, 4.25, -1.05])], [0.11, 0.07, 0.0], hexc('#3a3844'), per=4)
     # white hood behind and around the black face; the horns come out of its sides
     HELM = hexc('#ecebe6')
-    v.ball('head', (0, 5.5, -0.6), (0.44, 0.7, 0.4), HELM)
+    hv.ball('head', (0, 5.5, -0.6), (0.44, 0.7, 0.4), HELM)
     # thin crescent horns, open at the top and tilted forward so the tips lean towards the viewer
     for s in SIDES:
         hp = [V([0.36 * s, 5.85, -0.65]), V([0.85 * s, 5.85, -0.6]), V([1.35 * s, 6.15, -0.7]), V([1.6 * s, 6.8, -0.95]), V([1.5 * s, 7.45, -1.25]), V([1.2 * s, 7.9, -1.5])]
-        v.tube('head', hp, [0.13, 0.17, 0.16, 0.12, 0.07, 0.02], BLACK, per=5)
+        hornv.tube('head', hp, [0.13, 0.17, 0.16, 0.12, 0.07, 0.02], BLACK, per=5)
     # white flame above the head, between the horns
     for k in range(3):
         ph = k * 2.1
         pts = [V([0.3 * math.sin(ph + t * 5) * (1 - t * 0.5), 6.0 + t * 1.6, -0.4 + 0.2 * math.cos(ph + t * 5) * (1 - t * 0.5)]) for t in np.linspace(0, 1, 8)]
-        v.tube('flame', pts, [0.22, 0.24, 0.2, 0.16, 0.12, 0.08, 0.05, 0.02], glow('#f8f8ff'), per=2)
+        hv.tube('flame', pts, [0.22, 0.24, 0.2, 0.16, 0.12, 0.08, 0.05, 0.02], glow('#f8f8ff'), per=2)
     # ring of eyes behind him
-    hcen = V([0, 6.6, 0.45])
+    hcen = V([0, 5.75, 0.45])
     ring = [hcen + V([math.sin(a) * 3.0, math.cos(a) * 3.0, 0]) for a in np.linspace(0, 2 * math.pi, 57)]
     # the ring is a band of black fire: a thin core with flame tongues licking outwards (and a few inwards)
     FIRE, FIRE2 = hexc('#0b0a10'), hexc('#2a2338')
