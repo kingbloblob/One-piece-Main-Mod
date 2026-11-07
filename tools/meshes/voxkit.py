@@ -150,6 +150,17 @@ class Vox:
         for (i, j, k), c in list(src.items()):
             dst[(-i - 1, j, k)] = c
 
+    def retex(self, bones, match, fn):
+        """Repaint pixels whose colour is in match: fn(centre, colour) -> new colour (or None to keep)."""
+        match = {tuple(_col(m)) for m in match}
+        for b in bones:
+            cells = self.cells.get(b, {})
+            for key, c in cells.items():
+                if tuple(c) in match:
+                    n = fn((np.asarray(key) + 0.5) * self.px, c)
+                    if n is not None:
+                        cells[key] = _col(n)
+
     def count(self):
         return sum(len(c) for c in self.cells.values())
 

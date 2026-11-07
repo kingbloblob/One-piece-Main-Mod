@@ -333,7 +333,7 @@ def nika():
 # ---------------- Imu: chapter 1198 form ----------------
 
 def imu_beast():
-    v = Vox(0.1, noise=0.04, seed=5)
+    v = Vox(0.05, noise=0.04, seed=5)
     BLACK = hexc('#0e0d12')
     DARK = hexc('#1e1c26')
     WHITE = hexc('#efede6')
@@ -399,12 +399,12 @@ def imu_beast():
     # long white veil of hair falling from the head over the shoulders, ragged at the bottom
     rnd = random.Random(11)
     for s in SIDES:
-        for c in range(3, 9):
+        for c in range(4, 10):
             x = s * (c * 0.1 + 0.05)
-            bottom = 2.6 + rnd.uniform(0, 0.45) + (c - 3) * 0.05
+            bottom = 2.6 + rnd.uniform(0, 0.45) + (c - 4) * 0.05
             col = LINE if c == 6 else WHITE
             z0 = -0.95
-            v.box('body', (x - 0.04, bottom, z0), (x + 0.04, 5.6 - (c - 3) * 0.05, z0 + 0.2), col)
+            v.box('body', (x - 0.04, bottom, z0), (x + 0.04, 5.6 - (c - 4) * 0.05, z0 + 0.2), col)
         # the veil's outer edge wraps back round the side of the head
         v.box('body', sx((0.85, 3.0, -0.75), s) if s > 0 else (-0.95, 3.0, -0.75), (0.95, 5.2, -0.1) if s > 0 else (-0.85, 5.2, -0.1), WHITE)
     # black sleeves coming out of the cloak, black gloves with a white eye ring at the wrist
@@ -423,16 +423,47 @@ def imu_beast():
     def blade(u, w):
         return hilt + d * (0.3 + u * (np.linalg.norm(tip - hilt) - 0.3)) + up * (w - 0.5) * 0.14 * (1 - u * 0.5)
     v.sheet('arm_r', blade, lambda p, u: hexc('#f4f6fa') if u < 0.97 else hexc('#b8c0d0'), nv=3)
-    # small narrow black head with a neck; glowing slit eyes and a white mark on the forehead
+    # small narrow black head with a neck, a face like the chapter image: almond eyes, a scar down his
+    # left eye, a thin smile, a pointed goatee, and the light catching the right side of his face
     v.box('head', (-0.12, 4.8, -0.5), (0.12, 5.2, -0.2), BLACK)
-    v.ball('head', (0, 5.35, -0.75), (0.32, 0.52, 0.35), BLACK)
+    v.ball('head', (0, 5.3, -0.75), (0.4, 0.6, 0.4), BLACK)
+    LIT = hexc('#cfccc4')
+    SCAR = glow('#ffffff')
+
+    def face(p, u):
+        x, y, z = p
+        if z > -0.82:
+            return None
+        if abs(x - 0.15) < 0.03 and 5.02 < y < 5.85:
+            return SCAR
+        for ex in (0.15, -0.15):
+            dx, dy = (x - ex) / 0.11, (y - 5.36) / 0.055
+            if dx * dx + dy * dy <= 1.0:
+                return BLACK if abs(x - ex) < 0.03 else glow('#f4f4f4')
+        if abs(x) < 0.13 and 4.95 < y < 5.0:
+            return glow('#e8e6e0')
+        if 0.12 < abs(x) < 0.17 and 5.0 < y < 5.05:
+            return glow('#e8e6e0')
+        if x < -0.26 and y > 4.9:
+            return LIT
+        return None
+    v.ball('head', (0, 5.3, -0.75), (0.41, 0.61, 0.41), face, mode='paint')
+    v.tube('head', [V([0, 4.85, -1.02]), V([0, 4.55, -1.08]), V([0.02, 4.25, -1.05])], [0.11, 0.07, 0.0], hexc('#3a3844'), per=4)
+    # white helmet over the top of the head; the horns grow out of its sides
+    HELM = hexc('#ecebe6')
+    HELM2 = hexc('#c9c6be')
+    helm_c = lambda p, u: HELM2 if p[1] < 5.52 else HELM
+    v.ball('head', (0, 5.6, -0.72), (0.48, 0.45, 0.46), helm_c, cut=('y', 1, 5.47))
+    v.ball('head', (0, 5.9, -0.72), (0.36, 0.22, 0.36), helm_c)  # crown, where the flame rises
     for s in SIDES:
-        v.box('head', sx((0.1, 5.3, -1.2), s) if s > 0 else (-0.2, 5.3, -1.2), (0.2, 5.38, -0.9) if s > 0 else (-0.1, 5.38, -0.9), glow('#ffffff'), mode='paint')
-    v.box('head', (-0.04, 5.5, -1.2), (0.04, 5.75, -0.9), glow('#ffffff'), mode='paint')
-    # huge black crescent horns, open at the top
+        v.ball('head', (0.38 * s, 5.75, -0.68), (0.2, 0.3, 0.26), helm_c)  # side plates that become the horn roots
+        v.ball('head', (0.42 * s, 5.35, -0.7), (0.08, 0.18, 0.2), helm_c)  # cheek guards down the sides of the face
+    # huge black crescent horns, open at the top, rising out of the helmet
     for s in SIDES:
-        hp = [V([0.22 * s, 6.0, -0.7]), V([0.8 * s, 5.95, -0.4]), V([1.4 * s, 6.25, -0.4]), V([1.7 * s, 6.9, -0.4]), V([1.6 * s, 7.55, -0.4]), V([1.3 * s, 8.0, -0.4])]
-        v.tube('head', hp, [0.18, 0.26, 0.26, 0.2, 0.12, 0.04], BLACK, per=5)
+        hp = [V([0.38 * s, 5.8, -0.68]), V([0.85 * s, 5.9, -0.5]), V([1.4 * s, 6.25, -0.4]), V([1.7 * s, 6.9, -0.4]), V([1.6 * s, 7.55, -0.4]), V([1.3 * s, 8.0, -0.4])]
+        v.tube('head', hp, [0.22, 0.27, 0.26, 0.2, 0.12, 0.04], BLACK, per=5)
+        # white collar where each horn leaves the helmet
+        v.tube('head', [V([0.5 * s, 5.82, -0.64]), V([0.62 * s, 5.85, -0.58])], 0.3, helm_c, smooth=False)
     # white flame above the head, between the horns
     for k in range(3):
         ph = k * 2.1
@@ -463,6 +494,17 @@ def imu_beast():
                 ex = s * (wx - 0.9 + j * 0.6)
                 v.ball(b, V([ex, wy, -0.05]), (0.17, 0.12, 0.08), WHITE)
                 v.ball(b, V([ex, wy, -0.1]), (0.07, 0.07, 0.06), BLACK)
+    # finer detail for the 40-block giant: cloth folds and fine strands in the white, a dark hem
+    def cloth(p, c):
+        x, y, z = p
+        k = math.sin(x * 9.0 + y * 0.6) * 0.5 + math.sin(z * 11.0) * 0.3
+        if y < 0.2:
+            return LINE
+        return hexc('#ffffff') if k > 0.4 else (hexc('#c2beb5') if k < -0.4 else None)
+    v.retex(['body'], [WHITE], cloth)
+    v.retex(['body'], [hexc('#ffffff')], lambda p, c: hexc('#c4c0b8') if int(p[0] / 0.05) % 5 == 0 and p[2] < -0.8 else None)
+    v.box('arm_r', V([0.05, 3.05, -1.15]) + V([-0.06, -0.2, -0.06]), V([0.05, 3.05, -1.15]) + V([0.06, 0.2, 0.06]), hexc('#d8d4cc'))
+
     return v
 
 
@@ -585,8 +627,8 @@ def imu_demon():
 
 # ---------------- Loki: Nidhogg hybrid ----------------
 
-def nidhogg():
-    v = Vox(0.125, noise=0.05, seed=11)
+def nidhogg(px=0.0625):
+    v = Vox(px, noise=0.05, seed=11)
     OBS = hexc('#121218')
     OBS2 = hexc('#22222c')
     BELLY = hexc('#4a3e38')
@@ -739,13 +781,30 @@ def nidhogg():
         v.tube('tail', [p + upv * r * 0.7, p + upv * (r + 0.45) - d * 0.15], [0.16, 0.0], OBS2, smooth=False)
     for s, b in ((1, 'wing_r'), (-1, 'wing_l')):
         bat_wing(v, b, s, sx((0.9, 6.8, 1.0), s), 1.05, OBS, hexc('#2a181c'), CLAW)
+    # finer detail for the 40-block giant: overlapping dragon scales on the black hide, plates on the belly
+    EDGE = hexc('#07070b')
+    SHINE = hexc('#2e2e3a')
+
+    def scales(p, c):
+        x, y, z = p
+        row = math.floor(y / 0.19)
+        off = 0.5 if row % 2 else 0.0
+        u = (x + z) / 0.24 + off
+        fu, fy = u - math.floor(u), y / 0.19 - row
+        if fy < 0.2 or abs(fu - 0.5) > 0.5 - 0.12 * (1 - fy):
+            return EDGE
+        return SHINE if fy > 0.75 else None
+    v.retex(['body', 'head', 'arm_r', 'arm_l', 'leg_r', 'leg_l', 'tail'], [OBS, OBS2], scales)
+    v.retex(['body'], [BELLY], lambda p, c: hexc('#2c241f') if (p[1] / 0.3) % 1 < 0.2 else (hexc('#5c4e46') if (p[1] / 0.3) % 1 > 0.8 else None))
+    v.retex(['body', 'arm_r', 'arm_l', 'head'], [FUR], lambda p, c: FUR2 if int(p[1] / 0.0625 + p[0] / 0.0625 * 0.5) % 4 == 0 else None)
+
     return v
 
 
 # ---------------- Loki: his own look ----------------
 
 def loki():
-    v = Vox(0.125, scale=4.44, noise=0.05, seed=13)
+    v = Vox(0.0625, scale=4.44, noise=0.05, seed=13)
     SKIN = hexc('#c99a7a')
     HAIR = hexc('#e294c8')
     HAIR2 = hexc('#b86aa0')
@@ -821,10 +880,29 @@ def loki():
         path = [hb, hb + V([0.25 * s, 0.6, 0.02]), hb + V([0.33 * s, 1.3, -0.05]), hb + V([0.22 * s, 1.95, -0.12])]
         col = (lambda p, u: BAND if 0.06 < u < 0.82 and int(u * 18) % 2 == 0 else HELM) if s < 0 else HELM
         v.tube('head', path, [0.18, 0.15, 0.1, 0.0], col, per=6)
+    # finer detail for the 33-block giant
+    v.retex(['body'], [TUNIC], lambda p, c: hexc('#4a241c') if (int(p[0] / 0.0625) + int(p[1] / 0.0625)) % 4 == 0 else (hexc('#6a3a2e') if abs(abs(p[0]) - 0.45) < 0.04 else None))
+    v.retex(['head'], [HAIR, HAIR2], lambda p, c: hexc('#f0b4dc') if int(p[0] / 0.0625 * 3 + p[2] / 0.0625) % 5 == 0 else None)
+    v.retex(['leg_r', 'leg_l'], [LEATHER], lambda p, c: hexc('#261c16') if (p[1] / 0.35) % 1 < 0.12 else None)
+    for s in SIDES:
+        pts = [V([0.95 * s, 6.05, -0.5]), V([0.35 * s, 5.4, -0.74]), V([-0.3 * s, 4.75, -0.72]), V([-0.75 * s, 4.25, -0.6])]
+        v.tube('body', pts, 0.09, LEATHER, per=6)
+        for t in (0.15, 0.4, 0.65, 0.9):
+            q = catmull(pts, 6)[int(t * (len(catmull(pts, 6)) - 1))]
+            v.ball('body', q + V([0, 0, -0.06]), (0.06, 0.06, 0.05), GOLD)
+    v.ball('body', V([0, 5.05, -0.78]), (0.16, 0.16, 0.08), GOLD)  # where the straps cross
+    v.ball('head', hc + V([0, 0.28, 0]), (0.58, 0.06, 0.61), GOLD, cut=('y', 1, hc[1] + 0.22))
+    for a in np.linspace(0, 2 * math.pi, 13)[:-1]:
+        v.ball('head', hc + V([math.sin(a) * 0.6, 0.29, -math.cos(a) * 0.62]), (0.05, 0.05, 0.05), hexc('#f4e4a8'))
+    # brows over the bandage and a scar down the left cheek
+    v.box('head', hc + V([-0.36, 0.24, -0.62]), hc + V([0.36, 0.3, -0.45]), hexc('#7a4a5e'), mode='paint')
+    v.tube('head', [hc + V([-0.25, 0.0, -0.5]), hc + V([-0.3, -0.35, -0.44])], 0.035, hexc('#8a5a4a'), smooth=False)
+
     return v
 
 
-MODELS = {'nika_wild': nika, 'imu_beast': imu_beast, 'imu_demon': imu_demon, 'nidhogg': nidhogg, 'character/loki': loki}
+# nidhogg_player: the same dragon with bigger pixels, for players in the fruit's form (drawn small, so far fewer faces)
+MODELS = {'nika_wild': nika, 'imu_beast': imu_beast, 'imu_demon': imu_demon, 'nidhogg': nidhogg, 'nidhogg_player': lambda: nidhogg(0.125), 'character/loki': loki}
 
 
 def main():
