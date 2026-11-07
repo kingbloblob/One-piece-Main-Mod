@@ -425,29 +425,40 @@ def imu_beast():
     v.box('body', (0.05, 1.35, -2), (0.75, 2.05, 0), ring_eye, mode='paint')
     # black neck from the cloak collar up to the head
     v.box('body', (-0.15, 3.85, -0.55), (0.15, 4.15, -0.2), BLACK)
-    # long white hair like the chapter panel: two straight curtains hugging the small head, draping over
-    # the shoulders and falling to the waist; mostly white with fine, uneven dark strand lines (some
-    # broken), denser near the face, and pointed ragged tips
-    rnd = random.Random(11)
-    HAIR = hexc('#f2f1ec')
+    # long white hair like the chapter panel: two tall straight curtains starting level with the top of
+    # the head, outer edges dead vertical (not sloping over the shoulders), falling to the waist.
+    # Built from strands 2 px wide that sit at slightly different depths, so the hair reads as many
+    # straight locks from the light and shade; soft grey parting lines between some locks and a few
+    # darker ones; each lock ends in a point, giving the ragged pointed hem in the drawing
+    rnd = random.Random(1198)
+    HAIR, PART, DEEP = hexc('#f4f3ee'), hexc('#c4c2ba'), hexc('#5a5a62')
     PX = 0.05
     for s in SIDES:
-        n = 18
-        last = -3
-        for c in range(n):
-            x = s * (0.24 + c * PX)
-            t = c / (n - 1)
-            top = 4.95 - 0.95 * t ** 1.4
-            bottom = 2.25 + 0.15 * t + rnd.choice((0, 0, 0.05, 0.1, 0.2, 0.3))
-            z0 = -0.88 + 0.12 * t
-            lo_x, hi_x = (x, x + PX) if s > 0 else (x - PX, x)
-            v.box('body', (lo_x, bottom, z0), (hi_x, top, z0 + 0.4), HAIR)
-            # strand line on the front face of this column?
-            if c - last >= 2 and rnd.random() < (0.45 if t < 0.4 else 0.3):
-                last = c
-                y0 = bottom + rnd.choice((0, 0, 0.1, 0.4))
-                y1 = top - rnd.choice((0, 0.05, 0.2, 0.5))
-                v.box('body', (lo_x, y0, z0 - 0.01), (hi_x, y1, z0 + 0.06), LINE, mode='paint')
+        c = 0
+        while c < 18:
+            w = 2 if c < 16 else 18 - c
+            depth = rnd.choice((0.0, 0.05, 0.05, 0.1))      # some locks stand out one pixel more
+            tip = 2.2 + rnd.uniform(0, 0.35) + 0.01 * c
+            for j in range(w):
+                cc = c + j
+                x = s * (0.24 + cc * PX)
+                t = cc / 17
+                top = 4.92 - 0.12 * t * t                 # nearly flat crown, gently rounded
+                bottom = tip + (0.12 if (w == 2 and j != (0 if s > 0 else 1)) else 0)   # pointed lock end
+                z0 = -0.9 - depth + 0.5 * t * t           # curtain curves back round the shoulders
+                lo_x, hi_x = (x, x + PX) if s > 0 else (x - PX, x)
+                v.box('body', (lo_x, bottom, z0), (hi_x, top, z0 + 0.2), HAIR)
+            # parting line on the outer side of the lock (soft grey, sometimes dark, sometimes broken)
+            if c + w < 18 and rnd.random() < 0.7:
+                cc = c + w - 1
+                x = s * (0.24 + cc * PX)
+                lo_x, hi_x = (x, x + PX) if s > 0 else (x - PX, x)
+                col = DEEP if rnd.random() < 0.25 else PART
+                y1 = 4.85 - rnd.choice((0, 0, 0.3, 0.8))
+                y0 = tip + rnd.choice((0.1, 0.3, 0.6))
+                zl = -1.0 + 0.5 * (cc / 17) ** 2
+                v.box('body', (lo_x, y0, zl), (hi_x, y1, zl + 0.12), col, mode='paint')
+            c += w
     # black sleeves coming out of the cloak, black gloves with a white eye ring at the wrist
     for s, b, wr in ((1, 'arm_r', V([0.25, 3.15, -1.0])), (-1, 'arm_l', V([-0.25, 2.95, -1.0]))):
         sh, el = sx((0.55, 3.7, -0.2), s), sx((0.85, 3.3, -0.7), s)
