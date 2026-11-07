@@ -40,6 +40,9 @@ public final class BossForms {
 	private static final java.util.Set<String> MESH_FLIES = java.util.Set.of("imu_beast");
 
 	/** The animation inputs for a smooth-mesh form or look. */
+	/** How much bigger than its model a mesh form is drawn: ryan wants Nidhogg and Imu's last form 40 blocks tall. */
+	private static final java.util.Map<String, Float> MESH_SIZE = java.util.Map.of("nidhogg", 40f / 11f, "imu_beast", 5.0f);
+
 	static MeshForms.Input input(CharacterRenderer.State state, boolean flying) {
 		MeshForms.Input in = new MeshForms.Input();
 		in.ageInTicks = state.ageInTicks;
@@ -88,7 +91,7 @@ public final class BossForms {
 		if (mesh != null) {
 			if (!state.isInvisible) {
 				RenderGuard.run("boss mesh " + state.form, poseStack, () -> MeshForms.submit(mesh, input(state, MESH_FLIES.contains(state.form)),
-						poseStack, collector, state.bodyRot, 1.0f, state.deathTime, state.lightCoords,
+						poseStack, collector, state.bodyRot, MESH_SIZE.getOrDefault(state.form, 1.0f), state.deathTime, state.lightCoords,
 						OverlayTexture.pack(OverlayTexture.u(0.0f), OverlayTexture.v(state.hasRedOverlay))));
 			}
 			return true;

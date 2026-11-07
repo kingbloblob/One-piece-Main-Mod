@@ -14,7 +14,7 @@ SYNC=$P/.github-last-sync
 DRY=0; [ "$1" = --dry-run ] && DRY=1
 [ -d "$R/.git" ] || git clone "$URL" "$R"
 cd "$R"
-git fetch -q origin main
+git fetch -q origin "+main:refs/remotes/origin/main"
 LAST=$(cat "$SYNC" 2>/dev/null || true)
 if [ -z "$LAST" ] || ! git cat-file -e "$LAST^{commit}" 2>/dev/null; then
 	echo "No sync record. Do a full two-way merge first (see docs/github-sync.md)."; exit 1

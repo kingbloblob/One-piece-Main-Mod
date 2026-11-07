@@ -22,7 +22,7 @@ if [ ! -d "$R/.git" ]; then
 fi
 cd "$R"
 B=${2:-main}
-if git fetch -q origin "$B" 2>/dev/null; then
+if git fetch -q origin "+$B:refs/remotes/origin/$B" 2>/dev/null; then
 	git checkout -q -f -B "$B" "origin/$B"
 else
 	# Branch does not exist on GitHub yet (e.g. a brand new empty repo): start it fresh, nothing to guard.

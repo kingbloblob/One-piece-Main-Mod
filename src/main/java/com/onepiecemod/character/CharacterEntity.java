@@ -65,7 +65,7 @@ public class CharacterEntity extends PathfinderMob implements Merchant {
 	private static final java.util.Map<String, float[]> FORM_SIZE = java.util.Map.of(
 			"seiryu", new float[] {3.0f, 3.2f}, "pteranodon", new float[] {2.6f, 2.4f}, "venom_demon", new float[] {2.6f, 4.8f},
 			"brachiosaurus", new float[] {3.2f, 6.5f}, "gyuki", new float[] {4.6f, 4.2f},
-			"imu_demon", new float[] {2.4f, 5.2f}, "imu_beast", new float[] {3.6f, 7.5f}, "nidhogg", new float[] {4.0f, 9.5f});
+			"imu_demon", new float[] {2.4f, 5.2f}, "imu_beast", new float[] {9.0f, 34.0f}, "nidhogg", new float[] {10.0f, 36.0f});
 
 	private ServerBossEvent bossBar;
 	private boolean goalsAdded = false;
@@ -386,6 +386,10 @@ public class CharacterEntity extends PathfinderMob implements Merchant {
 	public boolean hurtServer(ServerLevel level, DamageSource source, float amount) {
 		// Friendly characters can't be hurt (except by /kill).
 		if (!isBoss() && !source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
+			return false;
+		}
+		// Bosses never choke inside walls: the giant ones (Loki, Imu) are taller than most places they stand.
+		if (source.is(net.minecraft.world.damagesource.DamageTypes.IN_WALL)) {
 			return false;
 		}
 		com.onepiecemod.cutscene.BossIntros.interrupt(this); // A hit ends the intro: the fight is on.

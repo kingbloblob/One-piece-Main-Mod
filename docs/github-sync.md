@@ -7,7 +7,7 @@ _Written 2026-11-01, after the "Merge shared source with GitHub main" thread._
 The mod lives in two places:
 
 - **Shared source**: the `source/` folder in the project files. The playable jar is built from this.
-- **GitHub main**: `ryanmTCG/one-piece-mod`. Pull requests land here.
+- **GitHub main**: `kingbloblob/One-piece-Main-Mod` (since 7 November 2026; before that `ryanmTCG/one-piece-mod`). Pull requests land here.
 
 Nothing kept the two in step, so by 1 November 229 files differed. Three things caused it:
 
@@ -68,3 +68,25 @@ a pull request.
 
 Cloud build tip: Maven Central often answers 429. Put a mirror in `~/.gradle/init.d/` that rewrites
 `repo.maven.apache.org` to `https://maven-central.storage-download.googleapis.com/maven2/`.
+
+## 6 November 2026: PRs #62 to #70
+
+`pull-github.sh` flagged 7 files (OnePieceMod.java, StationPayloads.java, the axe/pickaxe tags,
+item_descriptions, item_sources, station_recipes). Every one held the same entries on both sides,
+just in a different order (the Java file only reordered three init lines, StationPayloads differed in
+a comment). GitHub's copies were taken so the next sync is clean, then #68 merged and was pulled in.
+Compiled, server reached Done (2146 advancements, no mixin failures), jar zip rebuilt, sync point
+moved to 6afd370. Tip: before hand-merging, compare JSON as sorted sets; most "conflicts" are order only.
+
+## 7 November 2026: moved to a new GitHub repo
+
+ryan had access problems with `ryanmTCG/one-piece-mod`, so the project moved to
+**https://github.com/kingbloblob/One-piece-Main-Mod**. The new repo started empty, and the full shared
+source (including the PR #71 to #75 work, the Merry figurehead, the Imu face and the tornado) was pushed
+to its `main` as one snapshot commit with `tools/push-github.sh`. Older pull request history stays on the
+old repo, which was left untouched.
+
+`push-github.sh` and `pull-github.sh` now clone `https://github.com/kingbloblob/one-piece-main-mod` into
+`/home/user/one-piece-main-mod` (override with `OP_URL` / `OP_REPO`). `push-github.sh` also handles a
+branch that does not exist yet on GitHub (a fresh empty repo) by starting it from the shared source.
+The sync point in `.github-last-sync` now refers to a commit in the new repo.
