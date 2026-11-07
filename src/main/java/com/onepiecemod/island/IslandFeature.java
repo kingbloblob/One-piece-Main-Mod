@@ -132,7 +132,9 @@ public class IslandFeature {
 		visit.titledBiome = biome;
 		visit.titledAt = now;
 		player.connection.send(new ClientboundSetTitlesAnimationPacket(15, 70, 25));
-		player.connection.send(new ClientboundSetSubtitleTextPacket(Component.literal(island.subtitle).withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC)));
+		player.connection.send(new ClientboundSetSubtitleTextPacket(Component.literal(island.subtitle).withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC)
+				.append(Component.literal("  ·  ").withStyle(ChatFormatting.DARK_GRAY))
+				.append(com.onepiecemod.season.Seasons.label(player.level(), player.blockPosition()))));
 		player.connection.send(new ClientboundSetTitleTextPacket(Component.literal(island.name).withStyle(ChatFormatting.GOLD)));
 		player.level().playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.AMBIENT, 1.0f, 0.7f);
 

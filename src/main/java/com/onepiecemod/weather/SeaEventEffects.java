@@ -76,6 +76,7 @@ public class SeaEventEffects {
 			case WATERSPOUT -> waterspout(level, event, time);
 			case ROGUE_WAVE -> rogueWave(level, event, time);
 			case HAILSTORM -> hailstorm(level, time, inside);
+			case CYCLONE -> cyclone(level, event, time, inside);
 		}
 	}
 
@@ -102,6 +103,17 @@ public class SeaEventEffects {
 					}
 				}
 			}
+			case CYCLONE -> {
+				// The storm leaves wreckage behind: whoever rode it out finds things floating in its wake.
+				for (ServerPlayer player : level.players()) {
+					if (event.distance(player.getX(), player.getZ()) <= event.radius + 20 && !player.isSpectator()) {
+						for (int i = 0; i < 3; i++) {
+							dropTreasure(level, player.position().add(0, 2, 0), 0.5);
+						}
+						com.onepiecemod.advancement.AdvancementFeature.grant(player, "journey/cyclone_survivor");
+					}
+				}
+			}
 			case FLORIAN_MIST -> {
 				// The lost souls fade away with the mist.
 				AABB area = new AABB(event.x - event.radius - 40, level.getMinY(), event.z - event.radius - 40,
@@ -113,6 +125,83 @@ public class SeaEventEffects {
 			}
 			default -> {
 			}
+		}
+	}
+
+	// ---- Great Cyclone ----
+
+	private static void cyclone(ServerLevel level, SeaEvent event, long time, List<ServerPlayer> inside) {
+		RandomSource random = level.getRandom();
+		double sea = level.getSeaLevel();
+		List<ServerPlayer> wall = new java.util.ArrayList<>();
+		for (ServerPlayer player : inside) {
+			if (event.inFunnel(player.getX(), player.getZ())) {
+				if (event.reachedFunnel.add(player.getUUID())) {
+					player.sendSystemMessage(Component.literal("You're INSIDE THE FUNNEL! The roar is deafening, the sea is lifting into the sky... "
+							+ "and so is everything that sank here.").withStyle(ChatFormatting.DARK_PURPLE, ChatFormatting.BOLD));
+					com.onepiecemod.advancement.AdvancementFeature.grant(player, "journey/eye_of_the_storm");
+				}
+				// The funnel lifts and whirls anyone not tied to a ship, and the crew aboard get dizzy.
+				if (time % 4 == 0 && !player.isPassenger()) {
+					shove(player, SeaForces.push(event, player.getX(), player.getZ(), time).scale(3).add(0, 0.35, 0));
+				}
+				if (time % 40 == 0) {
+					player.addEffect(new MobEffectInstance(MobEffects.NAUSEA, 120, 0));
+					if (player.getVehicle() instanceof ShipEntity ship) {
+						strainHull(level, ship, 0.03f, ship.position().add(0, 2, 0));
+					}
+				}
+				// Treasure sucked up off the sea bed rains down around you: the reward for daring the funnel.
+				if (time % 50 == 0 && random.nextFloat() < 0.5f) {
+					dropTreasure(level, player.position().add((random.nextDouble() - 0.5) * 8, 10, (random.nextDouble() - 0.5) * 8), 0.3);
+				}
+			}
+			wall.add(player);
+			if (time % 3 == 0) {
+				level.sendParticles(ParticleTypes.SPLASH, player.getX(), sea + 1, player.getZ(), 30, 10, 0.6, 10, 0.5);
+			}
+			// Swimmers are whirled around and pulled under.
+			if (time % 5 == 0 && player.isInWater() && !player.isPassenger()) {
+				shove(player, SeaForces.push(event, player.getX(), player.getZ(), time).scale(2.5).add(0, -0.08, 0));
+			}
+		}
+
+		// Huge waves break over every ship in the storm wall now and then.
+		if (time % 140 == 0) {
+			AABB area = new AABB(event.x - event.radius, sea - 12, event.z - event.radius, event.x + event.radius, sea + 16, event.z + event.radius);
+			for (ShipEntity ship : level.getEntitiesOfClass(ShipEntity.class, area,
+					s -> event.isInside(s.getX(), s.getZ()))) {
+				strainHull(level, ship, 0.025f, ship.position().add(0, 2, 0));
+				for (Entity rider : ship.getPassengers()) {
+					if (rider instanceof ServerPlayer player) {
+						player.sendOverlayMessage(Component.literal("A huge wave breaks over the deck!").withStyle(ChatFormatting.DARK_PURPLE));
+					}
+				}
+			}
+		}
+
+		// Lightning, more than a normal storm: about every second and a half, on the wall, near a player.
+		if (!wall.isEmpty() && time % 30 == 0) {
+			ServerPlayer near = wall.get(random.nextInt(wall.size()));
+			Vec3 strike;
+			if (near.getVehicle() instanceof ShipEntity ship && random.nextFloat() < 0.3f) {
+				// Lightning hits the mast: the hull takes it.
+				strike = ship.position().add(0, 6, 0);
+				strainHull(level, ship, 0.02f, strike);
+			} else {
+				double angle = random.nextDouble() * Mth.TWO_PI;
+				double distance = 8 + random.nextDouble() * 30;
+				strike = new Vec3(near.getX() + Math.cos(angle) * distance, 0, near.getZ() + Math.sin(angle) * distance);
+				strike = new Vec3(strike.x, level.getHeight(Heightmap.Types.MOTION_BLOCKING, Mth.floor(strike.x), Mth.floor(strike.z)), strike.z);
+			}
+			ServerPlayer target = nearestPlayer(wall, strike, 4);
+			if (target != null && target.getMainHandItem().getItem() instanceof ClimaTactItem) {
+				target.sendOverlayMessage(Component.literal("Your Clima-Tact pulls the lightning away!").withStyle(ChatFormatting.YELLOW));
+				strike = strike.add(8, 0, 8);
+			}
+			LightningBolt bolt = new LightningBolt(EntityTypes.LIGHTNING_BOLT, level);
+			bolt.setPos(strike);
+			level.addFreshEntity(bolt);
 		}
 	}
 

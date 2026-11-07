@@ -85,6 +85,7 @@ public class SeaEvents {
 		boolean changed = false;
 
 		for (SeaEvent event : ACTIVE) {
+			event.advance(time); // The Great Cyclone drifts across the sea.
 			if (time >= event.endTime) {
 				ACTIVE.remove(event);
 				finish(level, event);
@@ -140,10 +141,19 @@ public class SeaEvents {
 		}
 		RandomSource random = level.getRandom();
 		CalmBelt.Sea sea = CalmBelt.seaAt(level, player.blockPosition());
+		// Seasons: storm season in autumn, calmer seas in spring (see season.Seasons).
+		com.onepiecemod.season.Season season = com.onepiecemod.season.Seasons.seasonAt(level, player.blockPosition());
+		float seasonal = com.onepiecemod.season.Seasons.seaChance(season);
 		SeaEventType type = null;
 		if (sea != null && sea.grandLine()) {
-			if (random.nextFloat() < (sea == CalmBelt.Sea.NEW_WORLD ? NEW_WORLD_CHANCE : GRAND_LINE_CHANCE)) {
-				type = pickGrandLineEvent(level, random);
+			if (random.nextFloat() < (sea == CalmBelt.Sea.NEW_WORLD ? NEW_WORLD_CHANCE : GRAND_LINE_CHANCE) * seasonal) {
+				type = com.onepiecemod.season.Seasons.seasonalPick(season, random, sea == CalmBelt.Sea.NEW_WORLD);
+				if (type == null) {
+					type = pickGrandLineEvent(level, random);
+				}
+				if (type == SeaEventType.CYCLONE && ShipEntity.aboard(player) == null) {
+					type = SeaEventType.STORM; // A Great Cyclone only comes for ships out at sea.
+				}
 			}
 		} else if (sea == CalmBelt.Sea.CALM_BELT) {
 			boolean atSea = ShipEntity.aboard(player) != null || player.isInWater();
@@ -151,7 +161,7 @@ public class SeaEvents {
 				type = SeaEventType.CALM_BELT_AMBUSH;
 			}
 		} else if (sea == CalmBelt.Sea.BLUE) {
-			if (random.nextFloat() < BLUE_SEA_STORM_CHANCE) {
+			if (random.nextFloat() < BLUE_SEA_STORM_CHANCE * seasonal) {
 				// The calm East Blue still has its rough days.
 				int roll = random.nextInt(10);
 				type = roll < 6 ? SeaEventType.STORM : roll < 8 ? SeaEventType.HAILSTORM : SeaEventType.ROGUE_WAVE;
@@ -259,6 +269,20 @@ public class SeaEvents {
 				x += (random.nextDouble() - 0.5) * 60;
 				z += (random.nextDouble() - 0.5) * 60;
 			}
+			case CYCLONE -> {
+				if (CalmBelt.seaAt(level, player.blockPosition()) == null) {
+					return "A Great Cyclone only forms out at sea.";
+				}
+				if (heading != null) {
+					angle = heading;
+				}
+				// It starts upwind and drifts over the player, so they see the black wall coming and can run or ride it out.
+				// The middle passes a little to one side, so not every ship gets the calm eye.
+				double back = type.drift * 20 * type.seconds / 2;
+				double offside = (random.nextDouble() - 0.5) * 50;
+				x -= Math.cos(angle) * back + Math.sin(angle) * offside;
+				z -= Math.sin(angle) * back - Math.cos(angle) * offside;
+			}
 			case WHIRLPOOL -> {
 				BlockPos spot = findWhirlpoolSpot(level, player, random);
 				if (spot == null) {
@@ -283,6 +307,7 @@ public class SeaEvents {
 
 		CrewmateEntity navigator = findNavigator(level, player);
 		int warning = type == SeaEventType.AQUA_LAGUNA ? AQUA_LAGUNA_WARNING_SECONDS
+				: type == SeaEventType.CYCLONE ? (navigator != null ? 60 : 30)
 				: type == SeaEventType.ROGUE_WAVE ? (navigator != null ? 20 : 10)
 				: navigator != null ? NAVIGATOR_WARNING_SECONDS : WARNING_SECONDS;
 		long now = level.getGameTime();
@@ -320,7 +345,7 @@ public class SeaEvents {
 	/** The first event within this many blocks of its edge, or null. */
 	public static SeaEvent eventNear(double x, double z, double extra) {
 		for (SeaEvent event : ACTIVE) {
-			if (event.distance(x, z) <= event.radius + extra) {
+			if (event.distance(x, z) <= event.radius + extra + (event.type == SeaEventType.CYCLONE ? event.type.drift * 20 * event.type.seconds : 0)) {
 				return event;
 			}
 		}
@@ -348,9 +373,20 @@ public class SeaEvents {
 
 	private static void tellNearbyPlayers(ServerLevel level, SeaEvent event, long time) {
 		boolean active = event.isActive(time);
+		double seenFrom = event.radius + (event.type == SeaEventType.CYCLONE ? 90 : 30);
 		for (ServerPlayer player : level.players()) {
-			if (event.distance(player.getX(), player.getZ()) > event.radius + 30) {
+			if (event.distance(player.getX(), player.getZ()) > seenFrom) {
 				continue;
+			}
+			if (active && !event.isInside(player.getX(), player.getZ()) && !event.toldStart.contains(player.getUUID())) {
+				if (event.type == SeaEventType.CYCLONE && !event.told.contains(player.getUUID())) {
+					event.told.add(player.getUUID());
+					player.sendSystemMessage(Component.literal("A Great Cyclone is crossing the sea nearby. Keep clear of the black wall!")
+							.withStyle(event.type.color, ChatFormatting.ITALIC));
+				}
+				if (event.type == SeaEventType.CYCLONE) {
+					continue; // The full "it hits!" message waits until it really reaches you.
+				}
 			}
 			UUID id = player.getUUID();
 			if (!active && event.told.add(id)) {
@@ -392,6 +428,8 @@ public class SeaEvents {
 			case WATERSPOUT -> "Captain! A waterspout is forming. Watch where it goes and steer around it!";
 			case ROGUE_WAVE -> "Captain! A rogue wave from the " + from + "! Turn the bow into it, now!";
 			case HAILSTORM -> "Captain, those clouds mean hail. Everyone below deck or put a helmet on!";
+			case CYCLONE -> "Captain! The barometer just fell off the scale. A GREAT CYCLONE, moving from the " + compass(event.angle + Mth.PI)
+					+ "! Sail out of its path, and whatever you do, keep away from the funnel!";
 		};
 	}
 

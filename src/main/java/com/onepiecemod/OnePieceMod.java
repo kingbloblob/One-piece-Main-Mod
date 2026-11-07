@@ -102,6 +102,7 @@ public class OnePieceMod implements ModInitializer {
 		com.onepiecemod.voyage.VoyageFeature.initialize(); // After treasure and ship combat: sea monsters, wandering ships, flotsam, bottles.
 		com.onepiecemod.cuisine.CuisineFeature.initialize(); // Fishing by sea, Sanji's dishes with long buffs, the All Blue.
 		com.onepiecemod.farm.FarmFeature.initialize(); // After cuisine: island crops, Seed Vault, sprinklers, ranch troughs, crew farm plots.
+		com.onepiecemod.season.Seasons.initialize(); // After farming: seasons that speed up or slow down crops and change the sea weather.
 		com.onepiecemod.hideout.HideoutFeature.initialize(); // Pirate hideouts: claim an island, your crew lives there, the Navy attacks it.
 		com.onepiecemod.crewship.CrewShipFeature.initialize(); // Home ships: a Ship's Log makes a ship the crew's home, with rooms, bunks and levels.
 		com.onepiecemod.vegapunk.VegapunkFeature.initialize(); // After NPCs and story: Pacifista/Seraphim hunts, cyborg upgrades.

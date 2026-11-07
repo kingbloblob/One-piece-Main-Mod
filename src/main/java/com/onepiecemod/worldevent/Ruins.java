@@ -70,6 +70,8 @@ public class Ruins {
 		final ArrayDeque<long[]> scars = new ArrayDeque<>(); // {pos, state index}
 		final Set<Long> taken = new HashSet<>();
 		boolean announced = false;
+		/** What made the craters, for the "rebuilding after the ..." message (not saved: after a restart it says Buster Call). */
+		String cause = "Buster Call";
 
 		Live(String island, long restoreAt) {
 			this.island = island;
@@ -245,7 +247,7 @@ public class Ruins {
 				live.announced = true;
 				tellNearby(level, live, Component.literal("The people of ").withStyle(ChatFormatting.GREEN)
 						.append(IslandTrouble.islandName(live.island).copy().withStyle(ChatFormatting.GREEN))
-						.append(Component.literal(" are rebuilding after the Buster Call.").withStyle(ChatFormatting.GREEN)));
+						.append(Component.literal(" are rebuilding after the " + live.cause + ".").withStyle(ChatFormatting.GREEN)));
 			}
 			int checks = budget * 4;
 			while (budget > 0 && checks-- > 0 && !live.scars.isEmpty()) {

@@ -53,6 +53,7 @@
 		"onepiece.worldgen.mixins.json",
 		"onepiece.ship.mixins.json",
 		"onepiece.lifeskill.mixins.json",
+		"onepiece.season.mixins.json",
 		{
 			"config": "onepiece.multiplayer.mixins.json",
 			"environment": "server"

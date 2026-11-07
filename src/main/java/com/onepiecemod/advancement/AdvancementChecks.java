@@ -158,6 +158,7 @@ public final class AdvancementChecks {
 		seaEvent("journey/waterspout", SeaEventType.WATERSPOUT);
 		seaEvent("journey/rogue_wave", SeaEventType.ROGUE_WAVE);
 		seaEvent("journey/hailstorm", SeaEventType.HAILSTORM);
+		seaEvent("journey/cyclone", SeaEventType.CYCLONE);
 		check("journey/all_weather", player -> hasAll(player, "journey/storm", "journey/whirlpool", "journey/aqua_laguna",
 				"journey/florian_mist", "journey/blizzard", "journey/heat_wave", "journey/sea_king_ambush"));
 
