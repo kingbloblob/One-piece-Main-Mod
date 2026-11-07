@@ -429,7 +429,7 @@ def imu_beast():
     # the sides of the head and fan out downwards in a narrow cone, open between them so the cloak
     # shows through, plus a few short loose wisps
     rnd = random.Random(1198)
-    HAIR = hexc('#f4f3ee')
+    HAIR, GREY = hexc('#f4f3ee'), hexc('#9e9c96')
     for s in SIDES:
         n = 9
         for i in range(n):
@@ -437,7 +437,16 @@ def imu_beast():
             root = V([s * (0.28 + 0.03 * t), 4.62 - 0.12 * t, -0.8 + 0.08 * t])
             end = V([s * (0.22 + 0.85 * t + rnd.uniform(-0.04, 0.04)), 2.3 + rnd.uniform(0, 0.35), -0.95 + 0.35 * t * t])
             mid = root + (end - root) * 0.5 + V([0, 0, -0.05])
-            v.tube('body', [root, mid, end], [0.045, 0.04, 0.025], HAIR, per=6)
+            # a little grey: every third strand is grey, a few others get a grey streak part way down
+            if i % 3 == 1:
+                col = GREY
+            elif rnd.random() < 0.4:
+                y0 = rnd.uniform(2.6, 3.6)
+                y1 = y0 + rnd.uniform(0.4, 0.9)
+                col = (lambda y0, y1: lambda p, u: GREY if y0 < p[1] < y1 else HAIR)(y0, y1)
+            else:
+                col = HAIR
+            v.tube('body', [root, mid, end], [0.045, 0.04, 0.025], col, per=6)
         for k in range(3):
             y = rnd.uniform(2.8, 3.8)
             x = s * rnd.uniform(0.5, 1.0)
