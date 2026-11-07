@@ -48,7 +48,9 @@ public class SeaKingEntity extends Monster implements com.onepiecemod.pet.Pet {
 	private static final EntityDataAccessor<Integer> DATA_VARIANT = SynchedEntityData.defineId(SeaKingEntity.class, EntityDataSerializers.INT);
 	/** Body styles from the show (see SeaKingModel.createBodyLayer): serpent, horned, whiskered, frilled, toad-headed, armoured. */
 	public static final int STYLES = 6;
-	public static final String[] STYLE_NAMES = {"Serpent", "Horned", "Whiskered", "Frilled", "Toad-Headed", "Armoured"};
+	/** All body models, including the two only the Egghead sea bosses have (6 Mecha-Shark, 7 Sea Beast Weapon). */
+	public static final int MODEL_STYLES = 8;
+	public static final String[] STYLE_NAMES = {"Serpent", "Horned", "Whiskered", "Frilled", "Toad-Headed", "Armoured", "Mecha-Shark", "Cyborg"};
 	private static final EntityDataAccessor<Integer> DATA_STYLE = SynchedEntityData.defineId(SeaKingEntity.class, EntityDataSerializers.INT);
 
 	private final ServerBossEvent bossBar = new ServerBossEvent(
@@ -101,10 +103,16 @@ public class SeaKingEntity extends Monster implements com.onepiecemod.pet.Pet {
 	}
 
 	public void setStyle(int style) {
-		this.entityData.set(DATA_STYLE, Math.floorMod(style, STYLES));
+		this.entityData.set(DATA_STYLE, Math.floorMod(style, MODEL_STYLES));
 	}
 
-	/** True for the four named sea bosses (SeaBosses). */
+	/** Sets the texture and body style together (used for Lilith's cyborg brood). */
+	public void setLook(int variant, int style) {
+		this.entityData.set(DATA_VARIANT, variant);
+		setStyle(style);
+	}
+
+	/** True for the named sea bosses (SeaBosses). */
 	public boolean isSeaBoss() {
 		return !seaBoss.isEmpty();
 	}
@@ -451,7 +459,7 @@ public class SeaKingEntity extends Monster implements com.onepiecemod.pet.Pet {
 	protected void readAdditionalSaveData(ValueInput input) {
 		super.readAdditionalSaveData(input);
 		this.entityData.set(DATA_VARIANT, input.getIntOr("Variant", 0));
-		this.entityData.set(DATA_STYLE, Math.floorMod(input.getIntOr("Style", getStyle()), STYLES));
+		this.entityData.set(DATA_STYLE, Math.floorMod(input.getIntOr("Style", getStyle()), MODEL_STYLES));
 		String owner = input.getStringOr("Owner", "");
 		ownerId = owner.isEmpty() ? null : java.util.UUID.fromString(owner);
 		staying = input.getBooleanOr("Staying", false);

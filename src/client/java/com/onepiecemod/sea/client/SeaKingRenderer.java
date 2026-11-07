@@ -30,7 +30,7 @@ public class SeaKingRenderer extends MobRenderer<SeaKingEntity, SeaKingRenderer.
 	}
 
 	/** One model per body style; the renderer swaps to the right one before drawing each Sea King. */
-	private final SeaKingModel[] styles = new SeaKingModel[com.onepiecemod.sea.SeaKingEntity.STYLES];
+	private final SeaKingModel[] styles = new SeaKingModel[com.onepiecemod.sea.SeaKingEntity.MODEL_STYLES];
 
 	public SeaKingRenderer(EntityRendererProvider.Context context) {
 		super(context, new SeaKingModel(context.bakeLayer(SeaKingModel.LAYER)), 8.0f);

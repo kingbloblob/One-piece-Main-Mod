@@ -385,7 +385,7 @@ public class StoryEvents {
 
 	// ---- Helpers ----
 
-	static void setFlag(ServerPlayer player, String flag) {
+	public static void setFlag(ServerPlayer player, String flag) {
 		StoryProgress.set(player, StoryProgress.orStart(player).withFlag(flag));
 	}
 
