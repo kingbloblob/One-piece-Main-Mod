@@ -116,7 +116,7 @@ class Mesh:
         return name
 
     def anim(self, bone, state, axis, amp, period=1.0, phase=0.0):
-        states = {'idle': 0, 'walk': 1, 'attack': 2, 'roar': 3, 'fly': 4, 'rest': 5, 'look': 6}
+        states = {'idle': 0, 'walk': 1, 'attack': 2, 'roar': 3, 'fly': 4, 'rest': 5, 'look': 6, 'slash': 7}
         axes = {'x': 0, 'y': 1, 'z': 2, 'up': 3}
         self.anims[bone].append((states[state], axes[axis], float(amp), float(period), float(phase)))
 

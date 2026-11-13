@@ -44,6 +44,8 @@ public final class ZoanClient {
 
 	/** Smooth-mesh forms (MeshForms) are modelled at their boss size; players are drawn this much of it. */
 	private static final Map<String, Float> MESH_SIZE = Map.of("nidhogg", 0.3f);
+	/** A lighter copy of a mesh for players: the 40-block boss model has far more faces than a player-sized form needs. */
+	private static final Map<String, String> MESH_NAME = Map.of("nidhogg", "nidhogg_player");
 
 	private static final Map<String, ModelLayerLocation> LAYERS = new HashMap<>();
 	private static final Map<String, ZoanModel> MODELS = new HashMap<>();
@@ -90,7 +92,7 @@ public final class ZoanClient {
 		if (data == null || avatar.isInvisible && avatar.isInvisibleToPlayer) {
 			return data != null;
 		}
-		MeshForms.Mesh mesh = MeshForms.get(data.form());
+		MeshForms.Mesh mesh = MeshForms.get(MESH_NAME.getOrDefault(data.form(), data.form()));
 		if (mesh != null) {
 			RenderGuard.run("zoan mesh " + data.form(), poseStack, () -> {
 				MeshForms.Input in = new MeshForms.Input();

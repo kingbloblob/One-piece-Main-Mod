@@ -153,8 +153,28 @@ public final class MeshForms {
 			case 4 -> in.flying ? a.amp * Mth.sin(Mth.TWO_PI * t / a.period + a.phase) : 0;
 			case 5 -> in.flying ? 0 : a.amp;
 			case 6 -> a.amp * (a.axis == 1 ? -in.headYaw : -in.headPitch);
+			case 7 -> in.attack >= 0 ? a.amp * slash(in.attack) : 0;
 			default -> 0;
 		};
+	}
+
+	/**
+	 * A heavy weapon swing over 0..1: a slow wind-up the other way, a fast strike through, a short hold,
+	 * then an eased return. Peaks at 1, dips to -0.4 during the wind-up.
+	 */
+	static float slash(float t) {
+		if (t < 0.35f) {
+			return -0.4f * smooth(t / 0.35f);
+		}
+		if (t < 0.55f) {
+			float u = 1.0f - (t - 0.35f) / 0.2f;
+			return -0.4f + 1.4f * (1.0f - u * u * u);
+		}
+		return 1.0f - smooth(Math.min(1.0f, (t - 0.55f) / 0.45f));
+	}
+
+	private static float smooth(float x) {
+		return x * x * (3.0f - 2.0f * x);
 	}
 
 	/**

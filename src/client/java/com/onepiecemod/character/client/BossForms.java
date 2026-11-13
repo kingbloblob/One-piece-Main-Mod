@@ -90,9 +90,18 @@ public final class BossForms {
 		MeshForms.Mesh mesh = MeshForms.get(state.form);
 		if (mesh != null) {
 			if (!state.isInvisible) {
-				RenderGuard.run("boss mesh " + state.form, poseStack, () -> MeshForms.submit(mesh, input(state, MESH_FLIES.contains(state.form)),
-						poseStack, collector, state.bodyRot, MESH_SIZE.getOrDefault(state.form, 1.0f), state.deathTime, state.lightCoords,
-						OverlayTexture.pack(OverlayTexture.u(0.0f), OverlayTexture.v(state.hasRedOverlay))));
+				float size = MESH_SIZE.getOrDefault(state.form, 1.0f);
+				MeshForms.Input in = input(state, MESH_FLIES.contains(state.form));
+				// A giant takes long, slow strides: without this its legs and robe flick as fast as a person's.
+				in.walkPos /= size;
+				RenderGuard.run("boss mesh " + state.form, poseStack, () -> {
+					poseStack.pushPose();
+					// Eased position (CharacterRenderer.smooth): the giant glides instead of jittering with each path step.
+					poseStack.translate(state.smoothX, state.smoothY, state.smoothZ);
+					MeshForms.submit(mesh, in, poseStack, collector, state.bodyRot, size, state.deathTime, state.lightCoords,
+							OverlayTexture.pack(OverlayTexture.u(0.0f), OverlayTexture.v(state.hasRedOverlay)));
+					poseStack.popPose();
+				});
 			}
 			return true;
 		}

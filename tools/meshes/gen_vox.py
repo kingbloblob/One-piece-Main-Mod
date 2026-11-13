@@ -332,51 +332,95 @@ def nika():
 
 # ---------------- Imu: chapter 1198 form ----------------
 
+class _Xf:
+    """Draws into a Vox with every point moved by p -> c + (p - c) * k + off (sizes scaled by k)."""
+    def __init__(self, v, c, k, off):
+        self.v, self.c, self.k, self.off = v, np.asarray(c, float), k, np.asarray(off, float)
+
+    def f(self, p):
+        return self.c + (np.asarray(p, float) - self.c) * self.k + self.off
+
+    def inv(self, p):
+        return self.c + (np.asarray(p, float) - self.off - self.c) / self.k
+
+    def _col(self, color):
+        if callable(color):
+            return lambda p, u: color(self.inv(p), u)
+        return color
+
+    def ball(self, bone, center, radii, color, **kw):
+        self.v.ball(bone, self.f(center), tuple(r * self.k for r in radii), self._col(color), **kw)
+
+    def box(self, bone, lo, hi, color, **kw):
+        self.v.box(bone, tuple(self.f(lo)), tuple(self.f(hi)), self._col(color), **kw)
+
+    def tube(self, bone, path, radius, color, **kw):
+        rad = [r * self.k for r in radius] if isinstance(radius, (list, tuple)) else radius * self.k
+        self.v.tube(bone, [self.f(q) for q in path], rad, self._col(color), **kw)
+
+
 def imu_beast():
-    v = Vox(0.1, noise=0.04, seed=5)
+    v = Vox(0.05, noise=0.04, seed=5)
     BLACK = hexc('#0e0d12')
     DARK = hexc('#1e1c26')
     WHITE = hexc('#efede6')
     LINE = hexc('#2a2a32')
     v.bone('body', 'root', (0, 2.2, 0))
-    v.bone('head', 'body', (0, 4.5, 0))
-    v.bone('arm_r', 'body', (0.75, 4.2, 0))
-    v.bone('arm_l', 'body', (-0.75, 4.2, 0))
+    v.bone('head', 'body', (0, 3.95, 0))
+    v.bone('arm_r', 'body', (0.38, 3.7, -0.15))
+    v.bone('arm_l', 'body', (-0.38, 3.7, -0.15))
     v.bone('wing_r', 'body', (0.4, 4.1, 0.55))
     v.bone('wing_l', 'body', (-0.4, 4.1, 0.55))
-    v.bone('halo', 'body', (0, 6.6, 0.45))
-    v.bone('flame', 'head', (0, 5.9, 0))
-    v.anim('body', 'idle', 'up', 0.08, 4.0)
+    v.bone('halo', 'body', (0, 5.75, 0.45))
+    v.bone('flame', 'head', (0, 5.25, -0.5))
+    # Slow, overlapping motions with different periods so it breathes instead of holding still (ryan: it "spins
+    # too much" and moves "very stiff", then "still super shaky, sways quite fast back and forth"). It is 40 blocks
+    # tall, so a 1-degree tilt moves its head half a block: every motion here is tiny and takes many seconds.
+    v.anim('body', 'idle', 'up', 0.05, 6.0)
+    v.anim('body', 'idle', 'x', 0.4, 9.0, 0.5)
+    v.anim('body', 'idle', 'z', 0.4, 11.0, 0.7)
     v.anim('head', 'look', 'y', 0.6)
     v.anim('head', 'look', 'x', 0.4)
+    v.anim('head', 'idle', 'x', 1.2, 9.0, 1.0)
     v.anim('head', 'roar', 'x', 15)
-    v.anim('arm_r', 'attack', 'x', 85)
-    v.anim('arm_l', 'attack', 'x', 85)
-    v.anim('body', 'attack', 'y', -15)
-    v.anim('flame', 'idle', 'y', 25, 1.4)
-    v.anim('halo', 'idle', 'z', 6, 7.0)
+    # sword attack ('slash'): wind up, a fast diagonal cut across the body, then an eased recovery
+    v.anim('arm_r', 'slash', 'x', -75)
+    v.anim('arm_r', 'slash', 'y', 35)
+    v.anim('arm_r', 'slash', 'z', -25)
+    v.anim('arm_l', 'slash', 'x', -30)
+    v.anim('body', 'slash', 'y', 18)
+    v.anim('body', 'slash', 'x', 6)
+    v.anim('head', 'slash', 'x', 8)
+    v.anim('arm_r', 'idle', 'x', 1.5, 8.0, 1.7)
+    v.anim('arm_l', 'idle', 'x', 1.5, 8.6, 0.2)
+    v.anim('arm_r', 'walk', 'x', 3, 1.0)
+    v.anim('arm_l', 'walk', 'x', -3, 1.0)
+    v.anim('flame', 'idle', 'y', 4, 4.0)
+    v.anim('flame', 'idle', 'z', 2.5, 3.1)
+    v.anim('halo', 'idle', 'z', 2, 12.0)
     for s, b in ((1, 'wing_r'), (-1, 'wing_l')):
-        v.anim(b, 'idle', 'z', 12 * s, 2.8)
-        v.anim(b, 'fly', 'z', 12 * s, 1.0)
+        v.anim(b, 'idle', 'z', 4 * s, 6.0)
+        v.anim(b, 'fly', 'z', 4 * s, 6.0, 1.5)
         v.anim(b, 'roar', 'z', 20 * s)
 
     # big white cloak with thin dark stripes, sharp wide shoulders, open down the front over a black body
-    rings = [(0.0, 1.6, 0.8, 0.85), (1.5, 1.45, 0.72, 0.8), (3.2, 1.45, 0.66, 0.75), (4.3, 1.8, 0.62, 0.7), (4.65, 1.85, 0.55, 0.6), (4.85, 1.0, 0.45, 0.5), (5.0, 0.45, 0.3, 0.35)]
+    # slim (ryan: half the old width)
+    rings = [(0.0, 0.8, 0.6, 0.65), (1.5, 0.72, 0.55, 0.6), (2.8, 0.72, 0.5, 0.56), (3.6, 0.9, 0.47, 0.52), (3.9, 0.92, 0.42, 0.46), (4.05, 0.5, 0.36, 0.4), (4.2, 0.25, 0.26, 0.3)]
 
     def open_w(y):
-        return 0.9 - min(max(y, 0), 4.6) / 4.6 * 0.5
+        return 0.45 - min(max(y, 0), 4.6) / 4.6 * 0.23
 
     def cloak_c(p, u):
         x, y, z = p
         if z < -0.05 and abs(x) < open_w(y):
             return BLACK
-        side = abs(x) > 1.3
+        side = abs(x) > 0.65
         coord = z if side else x
-        return LINE if int(math.floor(coord / 0.1)) % 3 == 0 else WHITE
+        return LINE if int(math.floor(coord / 0.07)) % 3 == 0 else WHITE
     loft(v, 'body', rings, cloak_c)
     # pointed shoulder tips
     for s in SIDES:
-        v.box('body', sx((1.75, 4.45, -0.35), s) if s > 0 else (-2.1, 4.45, -0.35), (2.1, 4.65, 0.4) if s > 0 else (-1.75, 4.65, 0.4), WHITE)
+        v.box('body', sx((0.85, 3.72, -0.3), s) if s > 0 else (-1.08, 3.72, -0.3), (1.08, 3.9, 0.32) if s > 0 else (-0.85, 3.9, 0.32), WHITE)
     # the column of white dots down the black front
     for i in range(14):
         y = 2.2 + i * 0.2
@@ -389,32 +433,49 @@ def imu_beast():
     v.box('body', (-0.15, 0.45, -1.2), (0.15, 0.52, 0), BLACK, mode='paint')
 
     def ring_eye(p, u):
-        r = math.hypot(p[0] - 0.4, p[1] - 1.7)
-        if r < 0.1:
+        r = math.hypot(p[0] - 0.16, p[1] - 1.7)
+        if r < 0.07:
             return BLACK
-        if r < 0.32:
-            return WHITE if r > 0.2 else BLACK
+        if r < 0.22:
+            return WHITE if r > 0.14 else BLACK
         return None
-    v.box('body', (0.05, 1.35, -2), (0.75, 2.05, 0), ring_eye, mode='paint')
-    # long white veil of hair falling from the head over the shoulders, ragged at the bottom
-    rnd = random.Random(11)
+    v.box('body', (-0.08, 1.45, -2), (0.4, 1.95, 0), ring_eye, mode='paint')
+    # black neck from the cloak collar up to the head
+    v.box('body', (-0.15, 3.85, -0.55), (0.15, 4.15, -0.2), BLACK)
+    # long white hair like the chapter panel (and ryan's sketch): thin separate strands that start at
+    # the sides of the head and fan out downwards in a narrow cone, open between them so the cloak
+    # shows through, plus a few short loose wisps
+    rnd = random.Random(1198)
+    HAIR, GREY = hexc('#f4f3ee'), hexc('#9e9c96')
     for s in SIDES:
-        for c in range(3, 9):
-            x = s * (c * 0.1 + 0.05)
-            bottom = 2.6 + rnd.uniform(0, 0.45) + (c - 3) * 0.05
-            col = LINE if c == 6 else WHITE
-            z0 = -0.95
-            v.box('body', (x - 0.04, bottom, z0), (x + 0.04, 5.6 - (c - 3) * 0.05, z0 + 0.2), col)
-        # the veil's outer edge wraps back round the side of the head
-        v.box('body', sx((0.85, 3.0, -0.75), s) if s > 0 else (-0.95, 3.0, -0.75), (0.95, 5.2, -0.1) if s > 0 else (-0.85, 5.2, -0.1), WHITE)
+        n = 9
+        for i in range(n):
+            t = i / (n - 1)
+            root = V([s * (0.27 + 0.02 * t), 4.62 - 0.12 * t, -0.8 + 0.06 * t])
+            end = V([s * (0.22 + 0.4 * t + rnd.uniform(-0.03, 0.03)), 2.3 + rnd.uniform(0, 0.35), -0.8 + 0.25 * t * t])
+            mid = root + (end - root) * 0.5 + V([0, 0, -0.05])
+            # a little grey: every third strand is grey, a few others get a grey streak part way down
+            if i % 3 == 1:
+                col = GREY
+            elif rnd.random() < 0.4:
+                y0 = rnd.uniform(2.6, 3.6)
+                y1 = y0 + rnd.uniform(0.4, 0.9)
+                col = (lambda y0, y1: lambda p, u: GREY if y0 < p[1] < y1 else HAIR)(y0, y1)
+            else:
+                col = HAIR
+            v.tube('body', [root, mid, end], [0.045, 0.04, 0.025], col, per=6)
+        for k in range(3):
+            y = rnd.uniform(2.8, 3.8)
+            x = s * rnd.uniform(0.3, 0.55)
+            v.tube('body', [V([x, y, -0.85]), V([x + s * 0.03, y - 0.25, -0.85])], [0.03, 0.02], HAIR, per=2)
     # black sleeves coming out of the cloak, black gloves with a white eye ring at the wrist
-    for s, b, wr in ((1, 'arm_r', V([0.25, 3.15, -1.0])), (-1, 'arm_l', V([-0.25, 2.95, -1.0]))):
-        sh, el = sx((0.55, 4.3, -0.2), s), sx((0.8, 3.5, -0.7), s)
-        v.tube(b, [sh, el, wr], [0.22, 0.2, 0.17], BLACK, per=4)
-        v.ball(b, wr + V([-s * 0.05, 0, -0.08]), (0.17, 0.15, 0.17), BLACK)
-        v.ball(b, wr + V([s * 0.12, 0.0, -0.05]), (0.1, 0.16, 0.16), WHITE, mode='paint')
+    for s, b, wr in ((1, 'arm_r', V([0.18, 3.15, -0.85])), (-1, 'arm_l', V([-0.18, 2.95, -0.85]))):
+        sh, el = sx((0.38, 3.7, -0.15), s), sx((0.5, 3.3, -0.55), s)
+        v.tube(b, [sh, el, wr], [0.14, 0.13, 0.11], BLACK, per=4)
+        v.ball(b, wr + V([-s * 0.04, 0, -0.06]), (0.12, 0.11, 0.12), BLACK)
+        v.ball(b, wr + V([s * 0.08, 0.0, -0.04]), (0.07, 0.11, 0.11), WHITE, mode='paint')
     # the long straight sword held across the body, blade up to his left, handle down to his right
-    hilt = V([0.05, 3.05, -1.15])
+    hilt = V([0.05, 3.05, -1.0])
     tip = V([-3.0, 4.2, -1.25])
     d = norm(tip - hilt)
     v.tube('arm_r', [hilt - d * 0.9, hilt + d * 0.2], 0.06, BLACK, smooth=False)
@@ -423,25 +484,80 @@ def imu_beast():
     def blade(u, w):
         return hilt + d * (0.3 + u * (np.linalg.norm(tip - hilt) - 0.3)) + up * (w - 0.5) * 0.14 * (1 - u * 0.5)
     v.sheet('arm_r', blade, lambda p, u: hexc('#f4f6fa') if u < 0.97 else hexc('#b8c0d0'), nv=3)
-    # small narrow black head with a neck; glowing slit eyes and a white mark on the forehead
-    v.box('head', (-0.12, 4.8, -0.5), (0.12, 5.2, -0.2), BLACK)
-    v.ball('head', (0, 5.35, -0.75), (0.32, 0.52, 0.35), BLACK)
+    # the head is modelled at its old size and shrunk/lowered onto the shoulders (short neck)
+    hv = _Xf(v, (0, 5.3, -0.78), 0.72, (0, -0.85, 0))
+    hornv = _Xf(v, (0, 5.3, -0.78), 1.0, (0, -0.85, 0))
+    # small narrow black head with a neck, a face like the chapter image: almond eyes, a scar down his
+    # left eye, a thin smile, a pointed goatee, and the light catching the right side of his face
+    hv.box('head', (-0.12, 4.8, -0.5), (0.12, 5.2, -0.2), BLACK)
+    hv.ball('head', (0, 5.3, -0.78), (0.33, 0.58, 0.4), BLACK)
+    LIT = hexc('#cfccc4')
+    SCAR = glow('#ffffff')
+
+    def face(p, u):
+        x, y, z = p
+        if z > -0.82:
+            return None
+        if abs(x - 0.15) < 0.045 and 5.02 < y < 5.85:
+            return SCAR
+        for ex in (0.15, -0.15):
+            dx, dy = (x - ex) / 0.12, (y - 5.36) / 0.07
+            if dx * dx + dy * dy <= 1.0:
+                return BLACK if abs(x - ex) < 0.045 else glow('#f4f4f4')
+        if abs(x) < 0.13 and 4.93 < y < 5.0:
+            return glow('#e8e6e0')
+        if 0.12 < abs(x) < 0.17 and 5.0 < y < 5.05:
+            return glow('#e8e6e0')
+        if x < -0.22 and y > 4.9:
+            return LIT
+        return None
+    hv.ball('head', (0, 5.3, -0.78), (0.34, 0.59, 0.41), face, mode='paint')
+    hv.tube('head', [V([0, 4.85, -1.02]), V([0, 4.55, -1.08]), V([0.02, 4.25, -1.05])], [0.11, 0.07, 0.0], hexc('#3a3844'), per=4)
+    # white helmet (ryan's sketch): a dome cap over the top of the small head, sitting just above the
+    # eyes, with a rim and two curved cheek guards that come down the sides of the face and hook out at
+    # the bottom; the horns grow out of its sides
+    HELM = hexc('#ecebe6')
+    HC = V([0, 4.45, -0.78])                       # head centre after the shrink
+    v.ball('head', HC + V([0, 0.17, 0.08]), (0.36, 0.42, 0.37), HELM, cut=('y', 1, 4.62))
+    v.ball('head', HC + V([0, 0.2, 0.08]), (0.39, 0.04, 0.4), HELM)           # rim
     for s in SIDES:
-        v.box('head', sx((0.1, 5.3, -1.2), s) if s > 0 else (-0.2, 5.3, -1.2), (0.2, 5.38, -0.9) if s > 0 else (-0.1, 5.38, -0.9), glow('#ffffff'), mode='paint')
-    v.box('head', (-0.04, 5.5, -1.2), (0.04, 5.75, -0.9), glow('#ffffff'), mode='paint')
-    # huge black crescent horns, open at the top
+        guard = [HC + V([0.3 * s, 0.13, -0.12]), HC + V([0.33 * s, -0.08, -0.2]), HC + V([0.29 * s, -0.28, -0.24]), HC + V([0.36 * s, -0.4, -0.22])]
+        v.tube('head', guard, [0.075, 0.07, 0.06, 0.035], HELM, per=4)
+    # horns attached to the helmet sides: they swoop out, DOWN and forward first, then curve up into
+    # tall points (a deep U on each side, like the drawing)
     for s in SIDES:
-        hp = [V([0.22 * s, 6.0, -0.7]), V([0.8 * s, 5.95, -0.4]), V([1.4 * s, 6.25, -0.4]), V([1.7 * s, 6.9, -0.4]), V([1.6 * s, 7.55, -0.4]), V([1.3 * s, 8.0, -0.4])]
-        v.tube('head', hp, [0.18, 0.26, 0.26, 0.2, 0.12, 0.04], BLACK, per=5)
+        hp = [HC + V([0.33 * s, 0.22, 0.0]), HC + V([0.6 * s, 0.0, -0.12]), HC + V([0.88 * s, -0.3, -0.3]),
+              HC + V([1.15 * s, -0.22, -0.36]), HC + V([1.32 * s, 0.2, -0.34]), HC + V([1.3 * s, 0.8, -0.34]), HC + V([1.1 * s, 1.35, -0.45])]
+        v.tube('head', hp, [0.12, 0.14, 0.135, 0.12, 0.09, 0.055, 0.015], BLACK, per=6)
+        # grey sheen along the inside front edge so the horns read against the dark wings
+        sheen = [q + V([-0.05 * s if i > 2 else 0.0, 0.05 if i <= 2 else 0.0, -0.08]) for i, q in enumerate(hp)]
+        v.tube('head', sheen, [0.07, 0.08, 0.08, 0.07, 0.05, 0.03, 0.01], hexc('#8c8a96'), per=6, mode='paint')
     # white flame above the head, between the horns
     for k in range(3):
         ph = k * 2.1
         pts = [V([0.3 * math.sin(ph + t * 5) * (1 - t * 0.5), 6.0 + t * 1.6, -0.4 + 0.2 * math.cos(ph + t * 5) * (1 - t * 0.5)]) for t in np.linspace(0, 1, 8)]
-        v.tube('flame', pts, [0.22, 0.24, 0.2, 0.16, 0.12, 0.08, 0.05, 0.02], glow('#f8f8ff'), per=2)
+        hv.tube('flame', pts, [0.22, 0.24, 0.2, 0.16, 0.12, 0.08, 0.05, 0.02], glow('#f8f8ff'), per=2)
     # ring of eyes behind him
-    hcen = V([0, 6.6, 0.45])
+    hcen = V([0, 5.75, 0.45])
     ring = [hcen + V([math.sin(a) * 3.0, math.cos(a) * 3.0, 0]) for a in np.linspace(0, 2 * math.pi, 57)]
-    v.tube('halo', ring, 0.17, hexc('#2a2733'), per=1, smooth=False)
+    # the ring is a band of black fire: a thin core with flame tongues licking outwards (and a few inwards)
+    FIRE, FIRE2 = hexc('#0b0a10'), hexc('#2a2338')
+    v.tube('halo', ring, 0.2, FIRE, per=1, smooth=False)
+    rng = np.random.default_rng(1198)
+    for layer, (n, lmin, lmax, base, col) in enumerate([(30, 0.7, 1.25, 0.3, FIRE2), (40, 0.4, 0.8, 0.24, FIRE), (24, 0.15, 0.35, 0.16, FIRE)]):
+        for i in range(n):
+            a = 2 * math.pi * (i + 0.5 * layer) / n + rng.uniform(-0.05, 0.05)
+            out = -1 if layer == 2 else 1             # the smallest licks point inwards
+            ln = rng.uniform(lmin, lmax)
+            ph = rng.uniform(0, 6.3)
+            pts = []
+            for t in np.linspace(0, 1, 9):
+                r = 3.0 + out * ln * t
+                # S-shaped wobble that grows towards the tip, like a flickering flame
+                b = a + (0.09 * math.sin(ph + t * 7.5) * t + 0.08 * t * t) / r * 3.0
+                pts.append(hcen + V([math.sin(b) * r, math.cos(b) * r, 0.05 * math.sin(ph + t * 5) - 0.02 * layer]))
+            rad = [base * (1 - t) ** 0.8 + 0.01 for t in np.linspace(0, 1, 9)]
+            v.tube('halo', pts, rad, col, per=1)
     for i in range(12):
         a = 2 * math.pi * (i + 0.5) / 12
         c = hcen + V([math.sin(a) * 3.0, math.cos(a) * 3.0, -0.2])
@@ -463,6 +579,17 @@ def imu_beast():
                 ex = s * (wx - 0.9 + j * 0.6)
                 v.ball(b, V([ex, wy, -0.05]), (0.17, 0.12, 0.08), WHITE)
                 v.ball(b, V([ex, wy, -0.1]), (0.07, 0.07, 0.06), BLACK)
+    # finer detail for the 40-block giant: cloth folds and fine strands in the white, a dark hem
+    def cloth(p, c):
+        x, y, z = p
+        k = math.sin(x * 9.0 + y * 0.6) * 0.5 + math.sin(z * 11.0) * 0.3
+        if y < 0.2:
+            return LINE
+        return hexc('#ffffff') if k > 0.4 else (hexc('#c2beb5') if k < -0.4 else None)
+    v.retex(['body'], [WHITE], cloth)
+    v.retex(['body'], [hexc('#ffffff')], lambda p, c: hexc('#c4c0b8') if int(p[0] / 0.05) % 5 == 0 and p[2] < -0.6 else None)
+    v.box('arm_r', V([0.05, 3.05, -1.0]) + V([-0.06, -0.2, -0.06]), V([0.05, 3.05, -1.15]) + V([0.06, 0.2, 0.06]), hexc('#d8d4cc'))
+
     return v
 
 
@@ -585,8 +712,8 @@ def imu_demon():
 
 # ---------------- Loki: Nidhogg hybrid ----------------
 
-def nidhogg():
-    v = Vox(0.125, noise=0.05, seed=11)
+def nidhogg(px=0.0625):
+    v = Vox(px, noise=0.05, seed=11)
     OBS = hexc('#121218')
     OBS2 = hexc('#22222c')
     BELLY = hexc('#4a3e38')
@@ -739,13 +866,30 @@ def nidhogg():
         v.tube('tail', [p + upv * r * 0.7, p + upv * (r + 0.45) - d * 0.15], [0.16, 0.0], OBS2, smooth=False)
     for s, b in ((1, 'wing_r'), (-1, 'wing_l')):
         bat_wing(v, b, s, sx((0.9, 6.8, 1.0), s), 1.05, OBS, hexc('#2a181c'), CLAW)
+    # finer detail for the 40-block giant: overlapping dragon scales on the black hide, plates on the belly
+    EDGE = hexc('#07070b')
+    SHINE = hexc('#2e2e3a')
+
+    def scales(p, c):
+        x, y, z = p
+        row = math.floor(y / 0.19)
+        off = 0.5 if row % 2 else 0.0
+        u = (x + z) / 0.24 + off
+        fu, fy = u - math.floor(u), y / 0.19 - row
+        if fy < 0.2 or abs(fu - 0.5) > 0.5 - 0.12 * (1 - fy):
+            return EDGE
+        return SHINE if fy > 0.75 else None
+    v.retex(['body', 'head', 'arm_r', 'arm_l', 'leg_r', 'leg_l', 'tail'], [OBS, OBS2], scales)
+    v.retex(['body'], [BELLY], lambda p, c: hexc('#2c241f') if (p[1] / 0.3) % 1 < 0.2 else (hexc('#5c4e46') if (p[1] / 0.3) % 1 > 0.8 else None))
+    v.retex(['body', 'arm_r', 'arm_l', 'head'], [FUR], lambda p, c: FUR2 if int(p[1] / 0.0625 + p[0] / 0.0625 * 0.5) % 4 == 0 else None)
+
     return v
 
 
 # ---------------- Loki: his own look ----------------
 
 def loki():
-    v = Vox(0.125, scale=4.44, noise=0.05, seed=13)
+    v = Vox(0.0625, scale=4.44, noise=0.05, seed=13)
     SKIN = hexc('#c99a7a')
     HAIR = hexc('#e294c8')
     HAIR2 = hexc('#b86aa0')
@@ -821,10 +965,29 @@ def loki():
         path = [hb, hb + V([0.25 * s, 0.6, 0.02]), hb + V([0.33 * s, 1.3, -0.05]), hb + V([0.22 * s, 1.95, -0.12])]
         col = (lambda p, u: BAND if 0.06 < u < 0.82 and int(u * 18) % 2 == 0 else HELM) if s < 0 else HELM
         v.tube('head', path, [0.18, 0.15, 0.1, 0.0], col, per=6)
+    # finer detail for the 33-block giant
+    v.retex(['body'], [TUNIC], lambda p, c: hexc('#4a241c') if (int(p[0] / 0.0625) + int(p[1] / 0.0625)) % 4 == 0 else (hexc('#6a3a2e') if abs(abs(p[0]) - 0.45) < 0.04 else None))
+    v.retex(['head'], [HAIR, HAIR2], lambda p, c: hexc('#f0b4dc') if int(p[0] / 0.0625 * 3 + p[2] / 0.0625) % 5 == 0 else None)
+    v.retex(['leg_r', 'leg_l'], [LEATHER], lambda p, c: hexc('#261c16') if (p[1] / 0.35) % 1 < 0.12 else None)
+    for s in SIDES:
+        pts = [V([0.95 * s, 6.05, -0.5]), V([0.35 * s, 5.4, -0.74]), V([-0.3 * s, 4.75, -0.72]), V([-0.75 * s, 4.25, -0.6])]
+        v.tube('body', pts, 0.09, LEATHER, per=6)
+        for t in (0.15, 0.4, 0.65, 0.9):
+            q = catmull(pts, 6)[int(t * (len(catmull(pts, 6)) - 1))]
+            v.ball('body', q + V([0, 0, -0.06]), (0.06, 0.06, 0.05), GOLD)
+    v.ball('body', V([0, 5.05, -0.78]), (0.16, 0.16, 0.08), GOLD)  # where the straps cross
+    v.ball('head', hc + V([0, 0.28, 0]), (0.58, 0.06, 0.61), GOLD, cut=('y', 1, hc[1] + 0.22))
+    for a in np.linspace(0, 2 * math.pi, 13)[:-1]:
+        v.ball('head', hc + V([math.sin(a) * 0.6, 0.29, -math.cos(a) * 0.62]), (0.05, 0.05, 0.05), hexc('#f4e4a8'))
+    # brows over the bandage and a scar down the left cheek
+    v.box('head', hc + V([-0.36, 0.24, -0.62]), hc + V([0.36, 0.3, -0.45]), hexc('#7a4a5e'), mode='paint')
+    v.tube('head', [hc + V([-0.25, 0.0, -0.5]), hc + V([-0.3, -0.35, -0.44])], 0.035, hexc('#8a5a4a'), smooth=False)
+
     return v
 
 
-MODELS = {'nika_wild': nika, 'imu_beast': imu_beast, 'imu_demon': imu_demon, 'nidhogg': nidhogg, 'character/loki': loki}
+# nidhogg_player: the same dragon with bigger pixels, for players in the fruit's form (drawn small, so far fewer faces)
+MODELS = {'nika_wild': nika, 'imu_beast': imu_beast, 'imu_demon': imu_demon, 'nidhogg': nidhogg, 'nidhogg_player': lambda: nidhogg(0.125), 'character/loki': loki}
 
 
 def main():
